@@ -1,7 +1,12 @@
-﻿namespace FastenUp.Runtime
+﻿using UnityEngine;
+
+namespace FastenUp.Runtime
 {
-    public class Temp
+    public class Temp : MonoBehaviour
     {
-        
+        static string GetStringFromSourceGenerator()
+        {
+            return ExampleSourceGenerated.ExampleSourceGenerated.GetTestText();
+        }
     }
 }
