@@ -13,11 +13,15 @@ namespace FastenUp.Tests
         [Test]
         public void TempConcept()
         {
+            //Arrange 
             var bindingPoint = Substitute.For<IBindingPoint<bool>>();
+            bindingPoint.Name.Returns("Visibility");
+            bindingPoint.CanBind<bool>().Returns(true);
             bindingPoint.As<bool>().Returns(bindingPoint);
             bindingPoint.Value.Returns(true);
-            
-            var mediator = new GameObject().AddComponent<TestMediator>();
+            //Act
+            var mediator = new GameObject().AddComponent<TestMediator>(); 
+            //Assert
             mediator.Visibility.Value.Should().BeFalse();
             mediator.UpdateProxies(bindingPoint);
             mediator.Visibility.Value.Should().BeTrue();
@@ -25,20 +29,11 @@ namespace FastenUp.Tests
             mediator.Visibility.Value.Should().BeFalse();
             bindingPoint.Received(1).Value = false;
         }
+    }
 
-        public sealed partial class TestMediator : MonoBehaviour, IMediator
-        {
-            public DataProxy<bool> Visibility;
-        }
-
-        //Will be generated
-        public sealed partial class TestMediator : IInternalMediator
-        {
-            /// <inheritdoc />
-            public void UpdateProxies(IBindingPoint bindingPoint)
-            {
-                Visibility.Bind(bindingPoint.As<bool>());
-            }
-        }
+    public partial class TestMediator : MonoBehaviour, IMediator
+    {
+        public DataProxy<bool> Visibility;
+        public DataProxy<int> IntValue;
     }
 }

@@ -7,6 +7,9 @@
     
     public interface IBindingPoint
     {
+        string Name { get; }
         IBindingPoint<T> As<T>();
+        
+        bool CanBind<T>();
     }
 }
