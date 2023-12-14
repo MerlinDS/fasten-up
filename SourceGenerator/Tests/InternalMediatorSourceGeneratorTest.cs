@@ -65,11 +65,9 @@ namespace Test
 {
     public partial class TestMediator : IInternalMediator
     {
-        public void UpdateProxies()
+        public void UpdateProxies(IBindingPoint bindingPoint)
         {
-            
         }
-
     }
 }
 ")
@@ -87,16 +85,37 @@ namespace Test
 {
     public partial class TestMediator : IInternalMediator
     {
-        public void UpdateProxies()
+        public void UpdateProxies(IBindingPoint bindingPoint)
         {
             Visibility.UpdateProxy(""Visibility"", bindingPoint);
-
         }
-
     }
 }
 ")
-                    .SetName("One mediator with proxy");
+                    .SetName("One mediator with one proxy field");
+                yield return new TestCaseData(@"
+namespace Test
+{
+    public partial class TestMediator : FastenUp.Runtime.Base.IMediator
+    {
+        public DataProxy<bool> Visibility;
+        public DataProxy<int> IntValue;
+    }
+}",
+                        @"
+namespace Test
+{
+    public partial class TestMediator : IInternalMediator
+    {
+        public void UpdateProxies(IBindingPoint bindingPoint)
+        {
+            Visibility.UpdateProxy(""Visibility"", bindingPoint);
+            IntValue.UpdateProxy(""IntValue"", bindingPoint);
+        }
+    }
+}
+")
+                    .SetName("One mediator with two proxy fields");
             }
         }
 
@@ -104,7 +123,7 @@ namespace Test
         public void Generate(string source, string expected)
         {
             //Arrange
-            expected = Imports + expected;
+            expected = (Imports + expected).TrimEnd('\r', '\n');
             var expectedCount = string.IsNullOrEmpty(expected) ? 0 : 1;
             var inputCompilation = CreateCompilation(Source + source);
             var sut = CSharpGeneratorDriver.Create(new InternalMediatorSourceGenerator());
@@ -114,7 +133,7 @@ namespace Test
             //Assert
             actual.GeneratedTrees.Should().HaveCount(expectedCount, "because we have one mediator declaration");
             if (expectedCount > 0)
-                actual.GeneratedTrees[0].GetRoot().ToFullString().Should().Be(expected);
+                actual.GeneratedTrees[0].GetRoot().ToFullString().TrimEnd('\r', '\n').Should().Be(expected);
         }
 
         private static Compilation CreateCompilation(string source)

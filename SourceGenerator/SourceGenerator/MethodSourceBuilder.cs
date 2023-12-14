@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.CodeAnalysis;
 
 namespace FastenUp.SourceGenerator
 {
@@ -7,8 +9,8 @@ namespace FastenUp.SourceGenerator
     {
         private readonly StringBuilder _builder = new StringBuilder();
         public string Name { get; set; }
-        public string ReturnType { get; set; }
-        public AccessModifier AccessModifier { get; set; }
+        public string ReturnType { get; set; } = Templates.Void;
+        public Accessibility Accessibility { get; set; } = Accessibility.Public;
 
         public ISourceBuilder Body { get; set; }
         public List<ISourceBuilder> Parameters { get; } = new List<ISourceBuilder>();
@@ -37,7 +39,7 @@ namespace FastenUp.SourceGenerator
         private void AppendAccessModifier()
         {
             _builder.Append(Templates.Tab).Append(Templates.Tab);
-            _builder.Append(AccessModifier.ToString().ToLower()).Append(Templates.Space);
+            _builder.Append(Accessibility.ToString().ToLower()).Append(Templates.Space);
         }
 
         private void AppendReturnType()
@@ -60,10 +62,16 @@ namespace FastenUp.SourceGenerator
         private void AppendBody()
         {
             _builder.Append(Templates.Tab).Append(Templates.Tab).AppendLine(Templates.OpenBracket);
-            var body = Body?.Build() ?? string.Empty;
-            foreach (var line in body.Split('\n'))
-                _builder.Append(Templates.Tab).Append(Templates.Tab).Append(Templates.Tab).AppendLine(line);
-            _builder.Append(Templates.Tab).Append(Templates.Tab).AppendLine(Templates.CloseBracket);
+            var lines = Body?.Build().Split('\n') ?? Array.Empty<string>();
+            foreach (var line in lines)
+            {
+                if (line.Length <= 0)
+                    continue;
+
+                _builder.Append(Templates.Tab).Append(Templates.Tab).Append(Templates.Tab).AppendLine(line.Trim());
+            }
+
+            _builder.Append(Templates.Tab).Append(Templates.Tab).Append(Templates.CloseBracket);
         }
     }
 }

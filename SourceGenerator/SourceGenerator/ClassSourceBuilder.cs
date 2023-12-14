@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Text;
+using Microsoft.CodeAnalysis;
 
 namespace FastenUp.SourceGenerator
 {
@@ -16,7 +17,7 @@ namespace FastenUp.SourceGenerator
 
         public bool IsAbstract { get; set; }
         
-        public AccessModifier AccessModifier { get; set; }
+        public Accessibility Accessibility { get; set; } = Accessibility.Public;
 
         public List<string> Imports { get; } = new List<string>();
 
@@ -69,7 +70,7 @@ namespace FastenUp.SourceGenerator
         
         private void AppendAccessModifier()
         {
-            _builder.Append(AccessModifier.ToString().ToLower()).Append(Templates.Space);
+            _builder.Append(Accessibility.ToString().ToLower()).Append(Templates.Space);
         }
 
         private void AppendModifiers()
