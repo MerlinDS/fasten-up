@@ -11,6 +11,8 @@ namespace FastenUp.SourceGenerator
         public const string Semicolon = ";";
         public const string Comma = ",";
         public const string Colon = ":";
+        public const string Dot = ".";
+        public const string Quote = "\"";
         
         
         public const string Namespace = "namespace";
