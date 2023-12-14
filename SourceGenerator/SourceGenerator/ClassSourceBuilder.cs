@@ -15,6 +15,8 @@ namespace FastenUp.SourceGenerator
         public bool IsStatic { get; set; }
 
         public bool IsAbstract { get; set; }
+        
+        public AccessModifier AccessModifier { get; set; }
 
         public List<string> Imports { get; } = new List<string>();
 
@@ -58,11 +60,16 @@ namespace FastenUp.SourceGenerator
         private void AppendClassHeader()
         {
             _builder.AppendLine(Templates.OpenBracket).Append(Templates.Tab);
-            _builder.Append(Templates.Public).Append(Templates.Space);
+            AppendAccessModifier();
             AppendModifiers();
             _builder.Append(Templates.Class).Append(Templates.Space).Append(ClassName);
             AppendInheritance();
             _builder.AppendLine();
+        }
+        
+        private void AppendAccessModifier()
+        {
+            _builder.Append(AccessModifier.ToString().ToLower()).Append(Templates.Space);
         }
 
         private void AppendModifiers()

@@ -14,7 +14,6 @@ namespace FastenUp.SourceGenerator
         
         
         public const string Namespace = "namespace";
-        public const string Public = "public";
         public const string Class = "class";
         public const string Static = "static";
         public const string Abstract = "abstract";
