@@ -19,7 +19,7 @@ namespace FastenUp.SourceGenerator
         {
             foreach (var mediatorSymbol in GetMediatorSymbols(context.Compilation))
             {
-                GenerateInternalMediatorClass(mediatorSymbol, context);
+                GenerateInternalMediatorClass(context, mediatorSymbol);
             }
         }
 
@@ -48,40 +48,52 @@ namespace FastenUp.SourceGenerator
             }
         }
 
-        private static void GenerateInternalMediatorClass(INamedTypeSymbol mediatorSymbol,
-            GeneratorExecutionContext context)
+        private static void GenerateInternalMediatorClass(GeneratorExecutionContext context, 
+            INamespaceOrTypeSymbol sourceSymbol)
         {
-            var mediatorName = mediatorSymbol.Name;
-            var mediatorNamespace = mediatorSymbol.ContainingNamespace.ToDisplayString();
-            var internalMediatorName = $"Internal{mediatorName}";
-            var internalMediatorFullName = $"{mediatorNamespace}.{internalMediatorName}";
-            var dataProxySymbol = context.Compilation.GetTypeByMetadataName("FastenUp.Runtime.Proxies.DataProxy`1");
-
-            var sourceBuilder = new StringBuilder();
-            sourceBuilder.AppendLine("using FastenUp.Runtime.Base;");
-            sourceBuilder.AppendLine("using FastenUp.Runtime.Bindings;");
-            sourceBuilder.AppendLine("using FastenUp.Runtime.Proxies;");
-            sourceBuilder.AppendLine("using FastenUp.Runtime.Extensions;");
-            sourceBuilder.AppendLine();
-            sourceBuilder.AppendLine($"namespace {mediatorNamespace}");
-            sourceBuilder.AppendLine("{");
-            sourceBuilder.AppendLine($"    public partial class {mediatorName} : IInternalMediator");
-            sourceBuilder.AppendLine("    {");
-            sourceBuilder.AppendLine("        /// <inheritdoc />");
-            sourceBuilder.AppendLine("        public void UpdateProxies(IBindingPoint bindingPoint)");
-            sourceBuilder.AppendLine("        {");
-
-            foreach (var fieldSymbol in GetFieldSymbols(mediatorSymbol, dataProxySymbol))
+            
+            var sourceName = sourceSymbol.Name;
+            var sourceNamespace = sourceSymbol.ContainingNamespace.ToDisplayString();
+            var outputFillName = $"{sourceNamespace}.Internal{sourceName}";
+            var outputBuilder = new ClassSourceBuilder
             {
-                sourceBuilder.AppendLine($"                {fieldSymbol.Name}.UpdateProxy(\"{fieldSymbol.Name}\", bindingPoint);");
+                Namespace = sourceNamespace,
+                ClassName = sourceName,
+                IsPartial = true,
+                AccessModifier = AccessModifier.Public // TODO: Get access modifier from sourceSymbol,
+            };
+            outputBuilder.Imports.Add("FastenUp.Runtime.Base");
+            outputBuilder.Imports.Add("FastenUp.Runtime.Bindings");
+            outputBuilder.Imports.Add("FastenUp.Runtime.Proxies");
+            outputBuilder.Imports.Add("FastenUp.Runtime.Extensions");
+            outputBuilder.Inheritance.Add("IInternalMediator");
+            
+            outputBuilder.Methods.Add(new MethodSourceBuilder
+            {
+                Name = "UpdateProxies",
+                AccessModifier = AccessModifier.Public,
+                Body = BuildUpdateProxiesBody(context, sourceSymbol),
+            });
+            
+            context.AddSource($"{outputFillName}.cs", outputBuilder.Build());
+        }
+
+        private static string BuildUpdateProxiesBody(GeneratorExecutionContext context, 
+            INamespaceOrTypeSymbol sourceSymbol)
+        {
+            var sourceBuilder = new StringBuilder();
+            var dataProxySymbol = context.Compilation.GetTypeByMetadataName("FastenUp.Runtime.Proxies.DataProxy`1");
+            foreach (var fieldSymbol in GetFieldSymbols(sourceSymbol, dataProxySymbol))
+            {
+                sourceBuilder.Append(fieldSymbol.Name).Append(Templates.Dot)
+                    .Append("UpdateProxy")
+                    .Append(Templates.OpenParenthesis)
+                    .Append(Templates.Quote).Append(fieldSymbol.Name).Append(Templates.Quote)
+                    .Append(Templates.Comma).Append(Templates.Space).Append("bindingPoint")
+                    .Append(Templates.CloseParenthesis).AppendLine(Templates.Semicolon);
             }
 
-
-            sourceBuilder.AppendLine("        }");
-            sourceBuilder.AppendLine("    }");
-            sourceBuilder.AppendLine("}");
-
-            context.AddSource($"{internalMediatorFullName}.cs", sourceBuilder.ToString());
+            return sourceBuilder.ToString();
         }
 
         private static IEnumerable<IFieldSymbol> GetFieldSymbols(INamespaceOrTypeSymbol mediatorSymbol,
