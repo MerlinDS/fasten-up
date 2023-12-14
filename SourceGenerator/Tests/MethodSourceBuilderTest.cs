@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using FluentAssertions;
+using Microsoft.CodeAnalysis;
 using NSubstitute;
 using NUnit.Framework;
 
@@ -42,7 +43,7 @@ namespace FastenUp.SourceGenerator.Tests
                 {
                     Name = "MethodName",
                     Body = body,
-                    AccessModifier = AccessModifier.Internal
+                    Accessibility = Accessibility.Internal
                 };
                 expected = @"        internal void MethodName()
         {
@@ -99,9 +100,7 @@ namespace FastenUp.SourceGenerator.Tests
                 };
                 expected = @"        public void MethodName()
         {
-            
-        }
-";
+        }";
                 yield return new TestCaseData(sut, expected).SetName("Method without body");
             }
         }
@@ -109,8 +108,12 @@ namespace FastenUp.SourceGenerator.Tests
         [TestCaseSource(nameof(TestCases))]
         public void Build(MethodSourceBuilder sut, string expected)
         {
-            // Act & Assert
-            sut.Build().Should().Be(expected);
+            // Arrange
+            expected = expected.TrimEnd('\r', '\n');
+            // Act
+            var actual = sut.Build();
+            // Assert
+            actual.Should().Be(expected);
         }
     }
 }
