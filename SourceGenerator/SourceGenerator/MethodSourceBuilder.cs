@@ -10,7 +10,7 @@ namespace FastenUp.SourceGenerator
         public string ReturnType { get; set; }
         public AccessModifier AccessModifier { get; set; }
 
-        public string Body { get; set; }
+        public ISourceBuilder Body { get; set; }
         public List<ISourceBuilder> Parameters { get; } = new List<ISourceBuilder>();
 
         public string Build()
@@ -44,23 +44,25 @@ namespace FastenUp.SourceGenerator
         {
             _builder.Append(string.IsNullOrEmpty(ReturnType) ? Templates.Void : ReturnType).Append(Templates.Space);
         }
-        
+
         private void AppendParameters()
         {
             _builder.Append(Name).Append(Templates.OpenParenthesis);
-            
+
             foreach (var builder in Parameters)
                 _builder.Append(builder.Build()).Append(Templates.Comma).Append(Templates.Space);
             if (Parameters.Count > 0)
                 _builder.Remove(_builder.Length - 2, 2);
-            
+
             _builder.Append(Templates.CloseParenthesis).AppendLine();
         }
-        
+
         private void AppendBody()
         {
             _builder.Append(Templates.Tab).Append(Templates.Tab).AppendLine(Templates.OpenBracket);
-            _builder.Append(Templates.Tab).Append(Templates.Tab).Append(Templates.Tab).AppendLine(Body);
+            var body = Body?.Build() ?? string.Empty;
+            foreach (var line in body.Split('\n'))
+                _builder.Append(Templates.Tab).Append(Templates.Tab).Append(Templates.Tab).AppendLine(line);
             _builder.Append(Templates.Tab).Append(Templates.Tab).AppendLine(Templates.CloseBracket);
         }
     }

@@ -13,10 +13,12 @@ namespace FastenUp.SourceGenerator.Tests
         {
             get
             {
+                var body = Substitute.For<ISourceBuilder>();
+                body.Build().Returns("//Method body");
                 var sut = new MethodSourceBuilder
                 {
                     Name = "MethodName",
-                    Body = "//Method body"
+                    Body = body
                 };
                 var expected = @"        public void MethodName()
         {
@@ -27,7 +29,7 @@ namespace FastenUp.SourceGenerator.Tests
                 sut = new MethodSourceBuilder
                 {
                     Name = "MethodName",
-                    Body = "//Method body",
+                    Body = body,
                     ReturnType = "int"
                 };
                 expected = @"        public int MethodName()
@@ -39,7 +41,7 @@ namespace FastenUp.SourceGenerator.Tests
                 sut = new MethodSourceBuilder
                 {
                     Name = "MethodName",
-                    Body = "//Method body",
+                    Body = body,
                     AccessModifier = AccessModifier.Internal
                 };
                 expected = @"        internal void MethodName()
@@ -53,7 +55,7 @@ namespace FastenUp.SourceGenerator.Tests
                 sut = new MethodSourceBuilder
                 {
                     Name = "MethodName",
-                    Body = "//Method body",
+                    Body = body,
                 };
                 sut.Parameters.Add(mockParameterA);
                 expected = @"        public void MethodName(int a)
@@ -67,7 +69,7 @@ namespace FastenUp.SourceGenerator.Tests
                 sut = new MethodSourceBuilder
                 {
                     Name = "MethodName",
-                    Body = "//Method body",
+                    Body = body,
                 };
                 sut.Parameters.Add(mockParameterA);
                 sut.Parameters.Add(mockParameterB);
@@ -77,6 +79,30 @@ namespace FastenUp.SourceGenerator.Tests
         }
 ";
                 yield return new TestCaseData(sut, expected).SetName("Method with multiple parameters");
+                body = Substitute.For<ISourceBuilder>();
+                body.Build().Returns("//First line\n//Second line");
+                sut = new MethodSourceBuilder
+                {
+                    Name = "MethodName",
+                    Body = body,
+                };
+                expected = @"        public void MethodName()
+        {
+            //First line
+            //Second line
+        }
+";
+                yield return new TestCaseData(sut, expected).SetName("Method with multiple lines");
+                sut = new MethodSourceBuilder
+                {
+                    Name = "MethodName",
+                };
+                expected = @"        public void MethodName()
+        {
+            
+        }
+";
+                yield return new TestCaseData(sut, expected).SetName("Method without body");
             }
         }
 
