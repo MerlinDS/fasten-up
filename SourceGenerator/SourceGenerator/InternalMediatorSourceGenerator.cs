@@ -17,39 +17,29 @@ namespace FastenUp.SourceGenerator
         /// <inheritdoc />
         public void Execute(GeneratorExecutionContext context)
         {
-            foreach (var mediatorSymbol in GetMediatorSymbols(context.Compilation))
+            var iMediatorSymbol = context.Compilation.GetTypeByMetadataName("FastenUp.Runtime.Base.IMediator");
+            var proxyTypeSymbol = context.Compilation.GetTypeByMetadataName("FastenUp.Runtime.Proxies.DataProxy`1");
+
+            foreach (var mediatorSymbol in GetMediatorSymbols(context.Compilation, iMediatorSymbol))
             {
-                GenerateInternalMediatorClass(context, mediatorSymbol);
+                GenerateInternalMediatorClass(context, mediatorSymbol, proxyTypeSymbol);
             }
         }
 
-        private static IEnumerable<INamedTypeSymbol> GetMediatorSymbols(Compilation compilation)
+        private static IEnumerable<INamedTypeSymbol> GetMediatorSymbols(Compilation compilation,
+            INamedTypeSymbol iMediatorSymbol)
         {
-            var iMediatorSymbol = compilation.GetTypeByMetadataName("FastenUp.Runtime.Base.IMediator");
-            foreach (var syntaxTree in compilation.SyntaxTrees)
-            {
-                //Get the semantic model for the syntax tree
-                var semanticModel = compilation.GetSemanticModel(syntaxTree);
-
-                // Get all class declarations in the syntax tree
-                var classDeclarations = syntaxTree.GetRoot().DescendantNodes()
-                    .OfType<ClassDeclarationSyntax>();
-
-                // Iterate over all class declarations
-                foreach (var classDeclaration in classDeclarations)
-                {
-                    // Get the symbol for the class
-                    var symbol = semanticModel.GetDeclaredSymbol(classDeclaration);
-                    if (symbol is INamedTypeSymbol classSymbol && classSymbol.Interfaces.Contains(iMediatorSymbol))
-                    {
-                        yield return classSymbol;
-                    }
-                }
-            }
+            return compilation.SyntaxTrees
+                .SelectMany(syntaxTree => syntaxTree.GetRoot().DescendantNodes().OfType<ClassDeclarationSyntax>())
+                .Select(classDeclaration => compilation.GetSemanticModel(classDeclaration.SyntaxTree)
+                    .GetDeclaredSymbol(classDeclaration))
+                .OfType<INamedTypeSymbol>()
+                .Where(classSymbol => classSymbol.Interfaces.Contains(iMediatorSymbol));
         }
 
         private static void GenerateInternalMediatorClass(GeneratorExecutionContext context,
-            INamespaceOrTypeSymbol sourceSymbol)
+            INamespaceOrTypeSymbol sourceSymbol,
+            ISymbol proxyTypeSymbol)
         {
             var sourceName = sourceSymbol.Name;
             var sourceNamespace = sourceSymbol.ContainingNamespace.ToDisplayString();
@@ -61,15 +51,14 @@ namespace FastenUp.SourceGenerator
                 IsPartial = true,
                 Accessibility = sourceSymbol.DeclaredAccessibility
             };
-            
+
             outputBuilder.Imports.Add("FastenUp.Runtime.Base");
             outputBuilder.Imports.Add("FastenUp.Runtime.Bindings");
             outputBuilder.Imports.Add("FastenUp.Runtime.Proxies");
             outputBuilder.Imports.Add("FastenUp.Runtime.Extensions");
             outputBuilder.Inheritance.Add("IInternalMediator");
 
-            var target = context.Compilation.GetTypeByMetadataName("FastenUp.Runtime.Proxies.DataProxy`1");
-            var proxyNames = GetFieldSymbols(sourceSymbol, target).Select(x => x.Name);
+            var proxyNames = GetFieldSymbols(sourceSymbol, proxyTypeSymbol).Select(x => x.Name);
             outputBuilder.Methods.Add(new MethodSourceBuilder
             {
                 Name = "UpdateProxies",
@@ -92,6 +81,12 @@ namespace FastenUp.SourceGenerator
 
             context.AddSource($"{outputFillName}.cs", outputBuilder.Build());
         }
+        
+        private static IEnumerable<IFieldSymbol> GetFieldSymbols(INamespaceOrTypeSymbol mediatorSymbol, ISymbol target)
+        {
+            return mediatorSymbol.GetMembers().OfType<IFieldSymbol>()
+                .Where(symbol => symbol.Type.OriginalDefinition.Name == target.Name);
+        }
 
         private class UpdateProxiesBodyBuilder : ISourceBuilder
         {
@@ -106,31 +101,18 @@ namespace FastenUp.SourceGenerator
             {
                 var sourceBuilder = new StringBuilder();
                 foreach (var proxyName in ProxyNames)
-                {
-                    sourceBuilder.Append(proxyName).Append(Templates.Dot)
-                        .Append(InvocationName)
-                        .Append(Templates.OpenParenthesis)
-                        .Append(Templates.Quote).Append(proxyName).Append(Templates.Quote)
-                        .Append(Templates.Comma).Append(Templates.Space).Append(ParameterName)
-                        .Append(Templates.CloseParenthesis).AppendLine(Templates.Semicolon);
-                }
+                    AppendLine(sourceBuilder, proxyName);
 
                 return sourceBuilder.ToString();
             }
-        }
 
-        private static IEnumerable<IFieldSymbol> GetFieldSymbols(INamespaceOrTypeSymbol mediatorSymbol,
-            ISymbol target = null)
-        {
-            foreach (var symbol in mediatorSymbol.GetMembers())
+            private void AppendLine(StringBuilder sourceBuilder, string proxyName)
             {
-                if (!(symbol is IFieldSymbol fieldSymbol))
-                    continue;
-
-                if (target != null && fieldSymbol.Type.OriginalDefinition.Name != target.Name)
-                    continue;
-
-                yield return fieldSymbol;
+                sourceBuilder.Append(proxyName).Append(Templates.Dot).Append(InvocationName)
+                    .Append(Templates.OpenParenthesis);
+                sourceBuilder.Append(Templates.Quote).Append(proxyName).Append(Templates.Quote);
+                sourceBuilder.Append(Templates.Comma).Append(Templates.Space).Append(ParameterName);
+                sourceBuilder.Append(Templates.CloseParenthesis).AppendLine(Templates.Semicolon);
             }
         }
     }
