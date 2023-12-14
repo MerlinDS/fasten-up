@@ -72,7 +72,7 @@ namespace FastenUp.SourceGenerator
             {
                 Name = "UpdateProxies",
                 AccessModifier = AccessModifier.Public,
-                Body = BuildUpdateProxiesBody(context, sourceSymbol),
+                // BodyOld = BuildUpdateProxiesBody(context, sourceSymbol),
             });
             
             context.AddSource($"{outputFillName}.cs", outputBuilder.Build());
