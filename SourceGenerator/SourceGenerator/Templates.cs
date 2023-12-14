@@ -13,6 +13,7 @@ namespace FastenUp.SourceGenerator
         public const string Colon = ":";
         public const string Dot = ".";
         public const string Quote = "\"";
+        public const string Equal = "=";
         
         
         public const string Namespace = "namespace";
