@@ -9,6 +9,18 @@ namespace FastenUp.SourceGenerator
     [Generator]
     public class InternalMediatorSourceGenerator : ISourceGenerator
     {
+        private const string MediatorMetadataName = "FastenUp.Runtime.Base.IMediator";
+        private const string InternalMediatorMetadataName = "FastenUp.Runtime.Base.IInternalMediator";
+        private const string DataProxyMetadataName = "FastenUp.Runtime.Proxies.DataProxy`1";
+
+        private static readonly string[] Namespaces =
+        {
+            "FastenUp.Runtime.Base",
+            "FastenUp.Runtime.Bindings",
+            "FastenUp.Runtime.Proxies",
+            "FastenUp.Runtime.Extensions"
+        };
+
         /// <inheritdoc />
         public void Initialize(GeneratorInitializationContext context)
         {
@@ -17,14 +29,50 @@ namespace FastenUp.SourceGenerator
         /// <inheritdoc />
         public void Execute(GeneratorExecutionContext context)
         {
-            var iMediatorSymbol = context.Compilation.GetTypeByMetadataName("FastenUp.Runtime.Base.IMediator");
-            var proxyTypeSymbol = context.Compilation.GetTypeByMetadataName("FastenUp.Runtime.Proxies.DataProxy`1");
+            if (!Validate(context))
+                return;
+
+            var iMediatorSymbol = context.Compilation.GetTypeByMetadataName(MediatorMetadataName);
+            var proxyTypeSymbol = context.Compilation.GetTypeByMetadataName(DataProxyMetadataName);
 
             foreach (var mediatorSymbol in GetMediatorSymbols(context.Compilation, iMediatorSymbol))
             {
                 GenerateInternalMediatorClass(context, mediatorSymbol, proxyTypeSymbol);
             }
         }
+
+        private static bool Validate(GeneratorExecutionContext context)
+        {
+            var symbol = context.Compilation.GetTypeByMetadataName(MediatorMetadataName);
+            if (symbol is null)
+                return false;
+            
+            symbol = context.Compilation.GetTypeByMetadataName(InternalMediatorMetadataName);
+            if (symbol is null)
+                return false;
+
+            symbol = context.Compilation.GetTypeByMetadataName(DataProxyMetadataName);
+            if (symbol is null)
+                return false;
+
+            return Namespaces.All(ns => ContainsNamespace(context, ns));
+        }
+
+        private static bool ContainsNamespace(GeneratorExecutionContext context, string @namespace)
+        {
+            var namespaceSymbol = context.Compilation.GlobalNamespace;
+            foreach (var name in @namespace.Split('.'))
+            {
+                namespaceSymbol = namespaceSymbol.GetNamespaceMembers()
+                    .FirstOrDefault(x => x.Name == name);
+                    
+                if (namespaceSymbol is null)
+                    return false;
+            }
+
+            return true;
+        }
+
 
         private static IEnumerable<INamedTypeSymbol> GetMediatorSymbols(Compilation compilation,
             INamedTypeSymbol iMediatorSymbol)
@@ -49,14 +97,12 @@ namespace FastenUp.SourceGenerator
                 Namespace = sourceNamespace,
                 ClassName = sourceName,
                 IsPartial = true,
-                Accessibility = sourceSymbol.DeclaredAccessibility
+                Accessibility = sourceSymbol.DeclaredAccessibility,
             };
 
-            outputBuilder.Imports.Add("FastenUp.Runtime.Base");
-            outputBuilder.Imports.Add("FastenUp.Runtime.Bindings");
-            outputBuilder.Imports.Add("FastenUp.Runtime.Proxies");
-            outputBuilder.Imports.Add("FastenUp.Runtime.Extensions");
-            outputBuilder.Inheritance.Add("IInternalMediator");
+            foreach (var ns in Namespaces)
+                outputBuilder.Imports.Add(ns);
+            outputBuilder.Inheritance.Add(InternalMediatorMetadataName);
 
             var proxyNames = GetFieldSymbols(sourceSymbol, proxyTypeSymbol).Select(x => x.Name);
             outputBuilder.Methods.Add(new MethodSourceBuilder
@@ -81,7 +127,7 @@ namespace FastenUp.SourceGenerator
 
             context.AddSource($"{outputFillName}.cs", outputBuilder.Build());
         }
-        
+
         private static IEnumerable<IFieldSymbol> GetFieldSymbols(INamespaceOrTypeSymbol mediatorSymbol, ISymbol target)
         {
             return mediatorSymbol.GetMembers().OfType<IFieldSymbol>()

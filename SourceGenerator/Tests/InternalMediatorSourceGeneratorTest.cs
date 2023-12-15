@@ -49,7 +49,7 @@ using FastenUp.Runtime.Proxies;
 using FastenUp.Runtime.Extensions;
 ";
 
-        private static IEnumerable<TestCaseData> TestCases
+        private static IEnumerable<TestCaseData> SuccessGenerationTestCases
         {
             get
             {
@@ -63,7 +63,7 @@ namespace Test
                         @"
 namespace Test
 {
-    public partial class TestMediator : IInternalMediator
+    public partial class TestMediator : FastenUp.Runtime.Base.IInternalMediator
     {
         public void UpdateProxies(IBindingPoint bindingPoint)
         {
@@ -83,7 +83,7 @@ namespace Test
                         @"
 namespace Test
 {
-    public partial class TestMediator : IInternalMediator
+    public partial class TestMediator : FastenUp.Runtime.Base.IInternalMediator
     {
         public void UpdateProxies(IBindingPoint bindingPoint)
         {
@@ -105,7 +105,7 @@ namespace Test
                         @"
 namespace Test
 {
-    public partial class TestMediator : IInternalMediator
+    public partial class TestMediator : FastenUp.Runtime.Base.IInternalMediator
     {
         public void UpdateProxies(IBindingPoint bindingPoint)
         {
@@ -119,7 +119,7 @@ namespace Test
             }
         }
 
-        [TestCaseSource(nameof(TestCases))]
+        [TestCaseSource(nameof(SuccessGenerationTestCases))]
         public void Generate(string source, string expected)
         {
             //Arrange
@@ -134,6 +134,219 @@ namespace Test
             actual.GeneratedTrees.Should().HaveCount(expectedCount, "because we have one mediator declaration");
             if (expectedCount > 0)
                 actual.GeneratedTrees[0].GetRoot().ToFullString().TrimEnd('\r', '\n').Should().Be(expected);
+        }
+
+        private static IEnumerable<TestCaseData> FailedGenerationTestCases
+        {
+            get
+            {
+                yield return new TestCaseData(@"
+namespace FastenUp.Runtime.Extensions{}
+
+namespace FastenUp.Runtime.Bindings
+{
+    public interface IBindingPoint<T> : IBindingPoint
+    {
+    }
+
+    public interface IBindingPoint
+    {
+    }
+}
+
+namespace FastenUp.Runtime.Base
+{
+    public interface IMediator{}
+
+    public interface IInternalMediator
+    {
+        void UpdateProxies(FastenUp.Runtime.Bindings.IBindingPoint bindingPoint);
+    }
+}
+
+namespace Test
+{
+    public partial class TestMediator : FastenUp.Runtime.Base.IMediator
+    {
+    }
+}
+").SetName("Without proxy namespace");
+                
+                yield return new TestCaseData(@"
+namespace FastenUp.Runtime.Proxies
+{
+    public struct DataProxy<T>
+    {
+    }
+}
+namespace FastenUp.Runtime.Bindings
+{
+    public interface IBindingPoint<T> : IBindingPoint
+    {
+    }
+
+    public interface IBindingPoint
+    {
+    }
+}
+
+namespace FastenUp.Runtime.Base
+{
+    public interface IMediator{}
+
+    public interface IInternalMediator
+    {
+        void UpdateProxies(FastenUp.Runtime.Bindings.IBindingPoint bindingPoint);
+    }
+}
+
+namespace Test
+{
+    public partial class TestMediator : FastenUp.Runtime.Base.IMediator
+    {
+    }
+}
+").SetName("Without extensions namespace");
+                
+                yield return new TestCaseData(@"
+namespace FastenUp.Runtime.Extensions{}
+namespace FastenUp.Runtime.Proxies
+{
+    public struct DataProxy<T>
+    {
+    }
+}
+
+namespace FastenUp.Runtime.Base
+{
+    public interface IMediator{}
+
+    public interface IInternalMediator
+    {
+        void UpdateProxies(FastenUp.Runtime.Bindings.IBindingPoint bindingPoint);
+    }
+}
+
+namespace Test
+{
+    public partial class TestMediator : FastenUp.Runtime.Base.IMediator
+    {
+    }
+}
+").SetName("Without bindings namespace");
+                
+                yield return new TestCaseData(@"
+namespace FastenUp.Runtime.Extensions{}
+namespace FastenUp.Runtime.Proxies{}
+namespace FastenUp.Runtime.Bindings
+{
+    public interface IBindingPoint<T> : IBindingPoint
+    {
+    }
+
+    public interface IBindingPoint
+    {
+    }
+}
+
+namespace FastenUp.Runtime.Base
+{
+    public interface IMediator{}
+
+    public interface IInternalMediator
+    {
+        void UpdateProxies(FastenUp.Runtime.Bindings.IBindingPoint bindingPoint);
+    }
+}
+
+namespace Test
+{
+    public partial class TestMediator : FastenUp.Runtime.Base.IMediator
+    {
+    }
+}
+").SetName("Without DataProxy");
+                
+                yield return new TestCaseData(@"
+namespace FastenUp.Runtime.Extensions{}
+namespace FastenUp.Runtime.Proxies
+{
+    public struct DataProxy<T>
+    {
+    }
+}
+namespace FastenUp.Runtime.Bindings
+{
+    public interface IBindingPoint<T> : IBindingPoint
+    {
+    }
+
+    public interface IBindingPoint
+    {
+    }
+}
+
+namespace FastenUp.Runtime.Base
+{
+
+    public interface IInternalMediator
+    {
+        void UpdateProxies(FastenUp.Runtime.Bindings.IBindingPoint bindingPoint);
+    }
+}
+
+namespace Test
+{
+    public partial class TestMediator : FastenUp.Runtime.Base.IMediator
+    {
+    }
+}
+").SetName("Without Mediator");
+                yield return new TestCaseData(@"
+namespace FastenUp.Runtime.Extensions{}
+namespace FastenUp.Runtime.Proxies
+{
+    public struct DataProxy<T>
+    {
+    }
+}
+namespace FastenUp.Runtime.Bindings
+{
+    public interface IBindingPoint<T> : IBindingPoint
+    {
+    }
+
+    public interface IBindingPoint
+    {
+    }
+}
+
+namespace FastenUp.Runtime.Base
+{
+    public interface IMediator{}
+}
+
+namespace Test
+{
+    public partial class TestMediator : FastenUp.Runtime.Base.IMediator
+    {
+    }
+}
+").SetName("Without Internal mediator");
+            }
+        }
+
+        [TestCaseSource(nameof(FailedGenerationTestCases))]
+        public void Generate_When_compilation_has_no_symbol_should_not_generate(string source)
+        {
+            //Arrange
+            var inputCompilation = CreateCompilation(source);
+            var sut = CSharpGeneratorDriver.Create(new InternalMediatorSourceGenerator());
+            //Act
+            var generators = sut.RunGenerators(inputCompilation);
+            var actual = generators.GetRunResult();
+            //Assert
+            actual.GeneratedTrees.Should().BeEmpty();
         }
 
         private static Compilation CreateCompilation(string source)
