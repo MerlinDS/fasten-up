@@ -6,7 +6,6 @@ using FastenUp.Runtime.Delegates;
 using FluentAssertions;
 using NSubstitute;
 using NUnit.Framework;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.TestTools;
 using UnityTestingAssist.Runtime;
@@ -124,7 +123,9 @@ namespace FastenUp.Tests.Bindables
             //Arrange
             const string expected = nameof(TestingBehaviour);
             var test = TestingBehaviour.Create();
-            test.component.SetName(expected);
+            test.component.EditSerializable()
+                .Field(nameof(test.component.Name), expected)
+                .Apply();
             //Act
             //Assert
             test.component.Name.Should().Be(expected);
@@ -134,16 +135,6 @@ namespace FastenUp.Tests.Bindables
         {
             public static MonoBehaviourTest<TestingBehaviour> Create() =>
                 new(false);
-
-            public void SetName(string bindingName)
-            {
-                //TODO: Move to UnityTestingAssist package
-                var serializedObject = new SerializedObject(this);
-                var property = serializedObject.FindProperty("<Name>k__BackingField");
-                property.stringValue = bindingName;
-                serializedObject.ApplyModifiedProperties();
-                serializedObject.Dispose();
-            }
 
             public void SetParent(GameObject parent) =>
                 transform.SetParent(parent.transform);
