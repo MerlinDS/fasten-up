@@ -16,9 +16,5 @@ namespace FastenUp.Runtime.Bindables
         /// <inheritdoc />
         public void SetValue(string value) =>
             _component.text = value;
-
-        /// <inheritdoc />
-        public string GetValue() =>
-            _component.text;
     }
 }

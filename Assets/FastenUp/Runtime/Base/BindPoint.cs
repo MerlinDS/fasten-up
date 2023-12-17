@@ -30,8 +30,10 @@ namespace FastenUp.Runtime.Base
                 throw new FastenUpException("Bindable already added to bind point.");
 
             bindable.SetValue(_value);
-            bindable.OnBindableChanged += OnValueChangedHandler;
             _bindables.Add(bindable);
+
+            if (bindable is IGettableBindable<T> bindableGettable)
+                bindableGettable.OnBindableChanged += OnValueChangedHandler;
         }
 
         void IInternalBindPoint<T>.Remove(IBindable<T> bindable)
@@ -39,13 +41,15 @@ namespace FastenUp.Runtime.Base
             if (!_bindables.Contains(bindable))
                 throw new FastenUpException("Bindable not found in bind point.");
 
-            bindable.OnBindableChanged -= OnValueChangedHandler;
             _bindables.Remove(bindable);
+            
+            if (bindable is IGettableBindable<T> bindableGettable)
+                bindableGettable.OnBindableChanged -= OnValueChangedHandler;
         }
 
         private void OnValueChangedHandler(IBindable bindable)
         {
-            if (bindable is IBindable<T> bindableT)
+            if (bindable is IGettableBindable<T> bindableT)
                 ChangeValue(bindableT.GetValue());
         }
 
