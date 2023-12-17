@@ -1,6 +1,6 @@
 using FastenUp.Runtime.Delegates;
 
-namespace FastenUp.Runtime.Base
+namespace FastenUp.Runtime.Bindables
 {
     public interface IBindable
     {

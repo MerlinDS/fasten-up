@@ -1,3 +1,5 @@
+using FastenUp.Runtime.Bindables;
+
 namespace FastenUp.Runtime.Base
 {
     /// <summary>

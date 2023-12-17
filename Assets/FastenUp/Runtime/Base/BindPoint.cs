@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using FastenUp.Runtime.Bindables;
 
 namespace FastenUp.Runtime.Base
 {   
