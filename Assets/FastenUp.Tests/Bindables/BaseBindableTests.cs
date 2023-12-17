@@ -119,7 +119,7 @@ namespace FastenUp.Tests.Bindables
         {
             //Arrange
             var test = TestingBehaviour.Create();
-            Action act = () => test.component.InvokeValueChanged<string>();
+            Action act = () => test.component.InvokeValueChanged();
             //Act & Assert
             act.Should().NotThrow<FastenUpBindableException>();
         }
@@ -129,12 +129,12 @@ namespace FastenUp.Tests.Bindables
         {
             //Arrange
             var test = TestingBehaviour.Create();
-            var subscriber = Substitute.For<OnValueChanged>();
-            test.component.OnValueChanged += subscriber;
+            var subscriber = Substitute.For<OnBindableChanged>();
+            test.component.OnBindableChanged += subscriber;
             //Act
-            test.component.InvokeValueChanged<string>();
+            test.component.InvokeValueChanged();
             //Assert
-            subscriber.Received(1).Invoke(test.component, typeof(string));
+            subscriber.Received(1).Invoke(test.component);
         }
 
         [Test]
@@ -156,14 +156,14 @@ namespace FastenUp.Tests.Bindables
             public static MonoBehaviourTest<TestingBehaviour> Create() =>
                 new(false);
             
-            public void SetName(string name) =>
-                this.EditSerializable().Field(nameof(Name), name).Apply();
+            public void SetName(string bindableName) =>
+                this.EditSerializable().Field(nameof(Name), bindableName).Apply();
 
             public void SetParent(GameObject parent) =>
                 transform.SetParent(parent.transform);
 
-            public new void InvokeValueChanged<TValue>() =>
-                base.InvokeValueChanged<TValue>();
+            public new void InvokeValueChanged() =>
+                base.InvokeOnBindableChanged();
 
             /// <inheritdoc />
             [ExcludeFromCodeCoverage]
