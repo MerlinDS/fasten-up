@@ -119,7 +119,7 @@ namespace FastenUp.Tests.Bindables
         {
             //Arrange
             var test = TestingBehaviour.Create();
-            Action act = () => test.component.InvokeValueChanged();
+            Action act = () => test.component.InvokeOnBindableChanged();
             //Act & Assert
             act.Should().NotThrow<FastenUpBindableException>();
         }
@@ -132,7 +132,7 @@ namespace FastenUp.Tests.Bindables
             var subscriber = Substitute.For<OnBindableChanged>();
             test.component.OnBindableChanged += subscriber;
             //Act
-            test.component.InvokeValueChanged();
+            test.component.InvokeOnBindableChanged();
             //Assert
             subscriber.Received(1).Invoke(test.component);
         }
@@ -162,7 +162,7 @@ namespace FastenUp.Tests.Bindables
             public void SetParent(GameObject parent) =>
                 transform.SetParent(parent.transform);
 
-            public new void InvokeValueChanged() =>
+            public new void InvokeOnBindableChanged() =>
                 base.InvokeOnBindableChanged();
 
             /// <inheritdoc />
