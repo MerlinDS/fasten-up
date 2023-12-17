@@ -11,15 +11,7 @@ namespace FastenUp.SourceGenerator
     {
         private const string MediatorMetadataName = "FastenUp.Runtime.Base.IMediator";
         private const string InternalMediatorMetadataName = "FastenUp.Runtime.Base.IInternalMediator";
-        private const string DataProxyMetadataName = "FastenUp.Runtime.Proxies.DataProxy`1";
-
-        private static readonly string[] Namespaces =
-        {
-            "FastenUp.Runtime.Base",
-            "FastenUp.Runtime.Bindings",
-            "FastenUp.Runtime.Proxies",
-            "FastenUp.Runtime.Extensions"
-        };
+        private const string BindPointMetadataName = "FastenUp.Runtime.Base.IInternalBindPoint`1";
 
         /// <inheritdoc />
         public void Initialize(GeneratorInitializationContext context)
@@ -33,7 +25,7 @@ namespace FastenUp.SourceGenerator
                 return;
 
             var iMediatorSymbol = context.Compilation.GetTypeByMetadataName(MediatorMetadataName);
-            var proxyTypeSymbol = context.Compilation.GetTypeByMetadataName(DataProxyMetadataName);
+            var proxyTypeSymbol = context.Compilation.GetTypeByMetadataName(BindPointMetadataName);
 
             foreach (var mediatorSymbol in GetMediatorSymbols(context.Compilation, iMediatorSymbol))
             {
@@ -46,33 +38,14 @@ namespace FastenUp.SourceGenerator
             var symbol = context.Compilation.GetTypeByMetadataName(MediatorMetadataName);
             if (symbol is null)
                 return false;
-            
+
             symbol = context.Compilation.GetTypeByMetadataName(InternalMediatorMetadataName);
             if (symbol is null)
                 return false;
 
-            symbol = context.Compilation.GetTypeByMetadataName(DataProxyMetadataName);
-            if (symbol is null)
-                return false;
-
-            return Namespaces.All(ns => ContainsNamespace(context, ns));
+            symbol = context.Compilation.GetTypeByMetadataName(BindPointMetadataName);
+            return !(symbol is null);
         }
-
-        private static bool ContainsNamespace(GeneratorExecutionContext context, string @namespace)
-        {
-            var namespaceSymbol = context.Compilation.GlobalNamespace;
-            foreach (var name in @namespace.Split('.'))
-            {
-                namespaceSymbol = namespaceSymbol.GetNamespaceMembers()
-                    .FirstOrDefault(x => x.Name == name);
-                    
-                if (namespaceSymbol is null)
-                    return false;
-            }
-
-            return true;
-        }
-
 
         private static IEnumerable<INamedTypeSymbol> GetMediatorSymbols(Compilation compilation,
             INamedTypeSymbol iMediatorSymbol)
@@ -100,27 +73,45 @@ namespace FastenUp.SourceGenerator
                 Accessibility = sourceSymbol.DeclaredAccessibility,
             };
 
-            foreach (var ns in Namespaces)
-                outputBuilder.Imports.Add(ns);
             outputBuilder.Inheritance.Add(InternalMediatorMetadataName);
 
-            var proxyNames = GetFieldSymbols(sourceSymbol, proxyTypeSymbol).Select(x => x.Name);
+            var names = GetFieldSymbols(sourceSymbol, proxyTypeSymbol)
+                .Select(x => x.Name).ToArray();
             outputBuilder.Methods.Add(new MethodSourceBuilder
             {
-                Name = "UpdateProxies",
+                Name = "Bind",
                 Accessibility = Accessibility.Public,
-                Body = new UpdateProxiesBodyBuilder
+                Body = new BindBodyBuilder
                 {
-                    InvocationName = "UpdateProxy",
-                    ParameterName = "bindingPoint",
-                    ProxyNames = proxyNames.ToArray()
+                    InvocationName = "FastenUp.Runtime.Extensions.TryBindExtensions.TryBind",
+                    ParameterName = "bindable",
+                    BindPointNames = names
                 },
                 Parameters =
                 {
                     new ParameterBuilder
                     {
-                        Name = "bindingPoint",
-                        Type = "IBindingPoint"
+                        Name = "bindable",
+                        Type = "FastenUp.Runtime.Bindables.IBindable"
+                    }
+                }
+            });
+            outputBuilder.Methods.Add(new MethodSourceBuilder
+            {
+                Name = "Unbind",
+                Accessibility = Accessibility.Public,
+                Body = new BindBodyBuilder
+                {
+                    InvocationName = "FastenUp.Runtime.Extensions.TryBindExtensions.TryUnbind",
+                    ParameterName = "bindable",
+                    BindPointNames = names
+                },
+                Parameters =
+                {
+                    new ParameterBuilder
+                    {
+                        Name = "bindable",
+                        Type = "FastenUp.Runtime.Bindables.IBindable"
                     }
                 }
             });
@@ -128,15 +119,20 @@ namespace FastenUp.SourceGenerator
             context.AddSource($"{outputFillName}.cs", outputBuilder.Build());
         }
 
-        private static IEnumerable<IFieldSymbol> GetFieldSymbols(INamespaceOrTypeSymbol mediatorSymbol, ISymbol target)
+        private static IEnumerable<IPropertySymbol> GetFieldSymbols(INamespaceOrTypeSymbol mediatorSymbol, ISymbol target)
         {
-            return mediatorSymbol.GetMembers().OfType<IFieldSymbol>()
-                .Where(symbol => symbol.Type.OriginalDefinition.Name == target.Name);
+            var fieldSymbols = mediatorSymbol.GetMembers().OfType<IPropertySymbol>();
+            foreach (var symbol in fieldSymbols)
+            {
+                if (symbol.Type.Interfaces.Any(x => x.OriginalDefinition.Equals(target,
+                        SymbolEqualityComparer.Default)))
+                    yield return symbol;
+            }
         }
 
-        private class UpdateProxiesBodyBuilder : ISourceBuilder
+        private class BindBodyBuilder : ISourceBuilder
         {
-            public string[] ProxyNames { get; set; }
+            public string[] BindPointNames { get; set; }
 
             public string InvocationName { get; set; }
 
@@ -146,19 +142,19 @@ namespace FastenUp.SourceGenerator
             public string Build()
             {
                 var sourceBuilder = new StringBuilder();
-                foreach (var proxyName in ProxyNames)
-                    AppendLine(sourceBuilder, proxyName);
+                foreach (var bindPointName in BindPointNames)
+                    AppendLine(sourceBuilder, bindPointName);
 
                 return sourceBuilder.ToString();
             }
 
-            private void AppendLine(StringBuilder sourceBuilder, string proxyName)
+            private void AppendLine(StringBuilder sourceBuilder, string bindPointName)
             {
-                sourceBuilder.Append(proxyName).Append(Templates.Dot).Append(InvocationName)
-                    .Append(Templates.OpenParenthesis);
-                sourceBuilder.Append(Templates.Quote).Append(proxyName).Append(Templates.Quote);
-                sourceBuilder.Append(Templates.Comma).Append(Templates.Space).Append(ParameterName);
-                sourceBuilder.Append(Templates.CloseParenthesis).AppendLine(Templates.Semicolon);
+                sourceBuilder.Append(InvocationName).Append(Templates.OpenParenthesis);
+                sourceBuilder.Append(bindPointName).Append(Templates.Comma).Append(Templates.Space);
+                sourceBuilder.Append("nameof").Append(Templates.OpenParenthesis).Append(bindPointName)
+                    .Append(Templates.CloseParenthesis).Append(Templates.Comma).Append(Templates.Space);
+                sourceBuilder.Append(ParameterName).Append(Templates.CloseParenthesis).AppendLine(Templates.Semicolon);
             }
         }
     }
