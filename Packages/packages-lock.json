@@ -7,6 +7,13 @@
       "dependencies": {},
       "hash": "ac405b32a618bf9d9880e4fc1b63c5e45036c72c"
     },
+    "com.merlinds.unity-testing-assist": {
+      "version": "https://github.com/merlinds/UnityTestingAssist.git?path=/Assets/UnityTestingAssist#v0.1.0",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "58856cecbaf30de5115dba8ce583382e6af5546b"
+    },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
       "depth": 1,
@@ -48,6 +55,15 @@
       "dependencies": {
         "com.unity.test-framework": "1.0.16",
         "com.unity.settings-manager": "1.0.1"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.textmeshpro": {
+      "version": "3.0.6",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.ugui": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },

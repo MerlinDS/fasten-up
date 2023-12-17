@@ -6,7 +6,8 @@
         "UnityEditor.TestRunner",
         "BoundfoxStudios.FluentAssertions",
         "TNRD.NSubstitute",
-        "FastenUp.Runtime"
+        "FastenUp.Runtime",
+        "UnityTestingAssist.Runtime"
     ],
     "includePlatforms": [
         "Editor"
