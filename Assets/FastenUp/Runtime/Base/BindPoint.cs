@@ -1,43 +1,58 @@
 ﻿using System;
 using System.Collections.Generic;
 using FastenUp.Runtime.Bindables;
+using FastenUp.Runtime.Exceptions;
 
 namespace FastenUp.Runtime.Base
-{   
-    public sealed class BindPoint<T>
+{
+    public sealed class BindPoint<T> : IBindPoint<T>, IInternalBindPoint<T>
     {
-        private List<IBindable> _bindables;
+        private readonly HashSet<IBindable<T>> _bindables = new(1);
+
         private T _value;
-        
+
         public T Value
         {
-            get => throw new NotImplementedException();
-            set => throw new NotImplementedException();
+            get => _value;
+            set
+            {
+                _value = value;
+                foreach (var bindable in _bindables)
+                    bindable.SetValue(value);
+            }
         }
 
         public event Action<T> OnValueChanged;
 
-        internal void Add(IBindable bindable)
+        void IInternalBindPoint<T>.Add(IBindable<T> bindable)
         {
-            bindable.OnValueChanged += OnValueChangedHandler;
-            throw new NotImplementedException();
+            if (_bindables.Contains(bindable))
+                throw new FastenUpException("Bindable already added to bind point.");
+
+            bindable.SetValue(_value);
+            bindable.OnBindableChanged += OnValueChangedHandler;
+            _bindables.Add(bindable);
         }
-        
-        internal void Remove(IBindable bindable)
+
+        void IInternalBindPoint<T>.Remove(IBindable<T> bindable)
         {
-            throw new NotImplementedException();
+            if (!_bindables.Contains(bindable))
+                throw new FastenUpException("Bindable not found in bind point.");
+
+            bindable.OnBindableChanged -= OnValueChangedHandler;
+            _bindables.Remove(bindable);
         }
-        
-        private void OnValueChangedHandler(IBindable bindable, Type valueType)
+
+        private void OnValueChangedHandler(IBindable bindable)
         {
-            _value = ((IBindable<T>) bindable).GetValue();
-            NotifyValueChanged();
-            throw new NotImplementedException();
+            if (bindable is IBindable<T> bindableT)
+                ChangeValue(bindableT.GetValue());
         }
-        
-        private void NotifyValueChanged()
+
+        private void ChangeValue(T value)
         {
-            OnValueChanged?.Invoke(_value);
+            _value = value;
+            OnValueChanged?.Invoke(value);
         }
     }
 }
