@@ -6,6 +6,7 @@ using UnityEngine;
 
 namespace FastenUp.Runtime.Bindables
 {
+    [Serializable]
     public abstract class BaseBindable : MonoBehaviour, IBindable
     {
         private IInternalMediator _mediator;

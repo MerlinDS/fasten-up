@@ -8,11 +8,11 @@
       "hash": "ac405b32a618bf9d9880e4fc1b63c5e45036c72c"
     },
     "com.merlinds.unity-testing-assist": {
-      "version": "https://github.com/merlinds/UnityTestingAssist.git?path=/Assets/UnityTestingAssist#v0.1.0",
+      "version": "https://github.com/merlinds/UnityTestingAssist.git?path=/Assets/UnityTestingAssist#v0.1.1",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "58856cecbaf30de5115dba8ce583382e6af5546b"
+      "hash": "e94ac03452e4cc650ce390c135a1dfcb927a9302"
     },
     "com.unity.ext.nunit": {
       "version": "1.0.6",
