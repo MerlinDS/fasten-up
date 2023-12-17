@@ -7,7 +7,8 @@
         "BoundfoxStudios.FluentAssertions",
         "TNRD.NSubstitute",
         "FastenUp.Runtime",
-        "UnityTestingAssist.Runtime"
+        "UnityTestingAssist.Runtime",
+        "Unity.TextMeshPro"
     ],
     "includePlatforms": [
         "Editor"
