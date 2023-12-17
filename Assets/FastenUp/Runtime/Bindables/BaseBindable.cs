@@ -2,6 +2,7 @@
 using System.Diagnostics.CodeAnalysis;
 using FastenUp.Runtime.Base;
 using FastenUp.Runtime.Delegates;
+using FastenUp.Runtime.Exceptions;
 using UnityEngine;
 
 namespace FastenUp.Runtime.Bindables
@@ -13,7 +14,6 @@ namespace FastenUp.Runtime.Bindables
 
         [field: SerializeField] public string Name { get; [ExcludeFromCodeCoverage] private set; }
 
-
         /// <inheritdoc />
         public event OnValueChanged OnValueChanged;
 
@@ -22,18 +22,27 @@ namespace FastenUp.Runtime.Bindables
 
         private void OnEnable()
         {
-            //TODO: Validate name
-            _mediator ??=
-                GetComponentInParent<IInternalMediator>(); //Cache mediator to avoid GetComponentInParent calls
-            if (_mediator is null)
-                throw new Exception("No mediator found"); //TODO: Change exception type to custom
+            ValidateName();
+            CacheMediator();
             _mediator.Bind(this);
         }
 
         private void OnDisable()
         {
             _mediator?.Unbind(this);
-            OnValueChanged = null;
+        }
+        
+        private void ValidateName()
+        {
+            if (string.IsNullOrEmpty(Name))
+               throw new FastenUpBindableException("Bindable name is null or empty.", gameObject);
+        }
+
+        private void CacheMediator()
+        {
+            _mediator ??= GetComponentInParent<IInternalMediator>();
+            if (_mediator is null)
+                throw  new FastenUpBindableException("Mediator not found", gameObject);
         }
     }
 }

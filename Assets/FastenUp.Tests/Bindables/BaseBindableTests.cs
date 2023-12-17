@@ -3,6 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 using FastenUp.Runtime.Base;
 using FastenUp.Runtime.Bindables;
 using FastenUp.Runtime.Delegates;
+using FastenUp.Runtime.Exceptions;
 using FluentAssertions;
 using NSubstitute;
 using NUnit.Framework;
@@ -23,6 +24,7 @@ namespace FastenUp.Tests.Bindables
             var mockMediator = Substitute.For<IInternalMediator>();
             var test = TestingBehaviour.Create();
             test.component.gameObject.AddComponent<MockMediator>().Set(mockMediator);
+            test.component.SetName("Test");
             //Act
             test.component.ExecuteOnEnable();
             //Assert
@@ -38,6 +40,7 @@ namespace FastenUp.Tests.Bindables
             var parent = new GameObject(nameof(BaseBindableTests));
             parent.AddComponent<MockMediator>().Set(mockMediator);
             test.component.SetParent(parent);
+            test.component.SetName("Test");
             //Act
             test.component.ExecuteOnEnable();
             //Assert
@@ -49,9 +52,24 @@ namespace FastenUp.Tests.Bindables
         {
             //Arrange
             var test = TestingBehaviour.Create();
+            test.component.SetName("Test");
             Action act = () => test.component.ExecuteOnEnable();
             //Act & Assert
-            act.Should().Throw<Exception>();
+            act.Should().Throw<FastenUpBindableException>()
+                .WithMessage("Mediator not found")
+                .Which.GameObject.Should().Be(test.component.gameObject);
+        }
+
+        [Test]
+        public void OnEnable_When_has_no_name_Should_throw_exception()
+        {
+            //Arrange
+            var test = TestingBehaviour.Create();
+            Action act = () => test.component.ExecuteOnEnable();
+            //Act & Assert
+            act.Should().Throw<FastenUpBindableException>()
+                .WithMessage("Bindable name is null or empty.")
+                .Which.GameObject.Should().Be(test.component.gameObject);
         }
 
         [Test]
@@ -61,6 +79,7 @@ namespace FastenUp.Tests.Bindables
             var mockMediator = Substitute.For<IInternalMediator>();
             var test = TestingBehaviour.Create();
             test.component.gameObject.AddComponent<MockMediator>().Set(mockMediator);
+            test.component.SetName("Test");
             test.component.ExecuteOnEnable();
             //Act
             test.component.ExecuteOnDisable();
@@ -76,6 +95,7 @@ namespace FastenUp.Tests.Bindables
             var test = TestingBehaviour.Create();
             var parent = new GameObject(nameof(BaseBindableTests));
             parent.AddComponent<MockMediator>().Set(mockMediator);
+            test.component.SetName("Test");
             test.component.SetParent(parent);
             test.component.ExecuteOnEnable();
             //Act
@@ -91,7 +111,7 @@ namespace FastenUp.Tests.Bindables
             var test = TestingBehaviour.Create();
             Action act = () => test.component.ExecuteOnDisable();
             //Act & Assert
-            act.Should().NotThrow<Exception>();
+            act.Should().NotThrow<FastenUpBindableException>();
         }
 
         [Test]
@@ -101,7 +121,7 @@ namespace FastenUp.Tests.Bindables
             var test = TestingBehaviour.Create();
             Action act = () => test.component.InvokeValueChanged<string>();
             //Act & Assert
-            act.Should().NotThrow<Exception>();
+            act.Should().NotThrow<FastenUpBindableException>();
         }
 
         [Test]
@@ -135,6 +155,9 @@ namespace FastenUp.Tests.Bindables
         {
             public static MonoBehaviourTest<TestingBehaviour> Create() =>
                 new(false);
+            
+            public void SetName(string name) =>
+                this.EditSerializable().Field(nameof(Name), name).Apply();
 
             public void SetParent(GameObject parent) =>
                 transform.SetParent(parent.transform);
