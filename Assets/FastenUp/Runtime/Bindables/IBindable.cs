@@ -4,7 +4,8 @@ namespace FastenUp.Runtime.Bindables
 {
     public interface IBindable
     {
-        public event OnValueChanged OnValueChanged;
+        public event OnBindableChanged OnBindableChanged;
+        string Name { get; }
     }
     
     public interface IBindable<T> : IBindable

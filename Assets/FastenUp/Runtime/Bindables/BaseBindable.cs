@@ -15,10 +15,10 @@ namespace FastenUp.Runtime.Bindables
         [field: SerializeField] public string Name { get; [ExcludeFromCodeCoverage] private set; }
 
         /// <inheritdoc />
-        public event OnValueChanged OnValueChanged;
+        public event OnBindableChanged OnBindableChanged;
 
-        protected void InvokeValueChanged<TValue>() =>
-            OnValueChanged?.Invoke(this, typeof(TValue));
+        protected void InvokeOnBindableChanged() =>
+            OnBindableChanged?.Invoke(this);
 
         private void OnEnable()
         {
