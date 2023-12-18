@@ -9,15 +9,13 @@ namespace FastenUp.Runtime.Bindables
 
         private void Awake()
         {
-            if (ImageAdapter.TryCreate(gameObject, out _adapter))
-                return;
-
-            SpriteRendererAdapter.TryCreate(gameObject, out _adapter);
+            _adapter = ImageAdapter.Create<Sprite>(gameObject) ??
+                       SpriteRendererAdapter.Create<Sprite>(gameObject);
         }
 
         public void SetValue(Sprite value)
         {
-            if (_adapter is not null) 
+            if (_adapter is not null)
                 _adapter.Value = value;
         }
     }

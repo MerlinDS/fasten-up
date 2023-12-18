@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using JetBrains.Annotations;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace FastenUp.Runtime.Adapters
@@ -6,8 +7,9 @@ namespace FastenUp.Runtime.Adapters
     public sealed class ImageAdapter : ComponentFieldAdapter<Image>,
         IComponentFieldAdapter<Sprite>
     {
-        public static bool TryCreate<T>(GameObject gameObject, out IComponentFieldAdapter<T> adapter) =>
-            TryCreate<ImageAdapter, T>(gameObject, out adapter);
+        [CanBeNull]
+        public static IComponentFieldAdapter<T> Create<T>(GameObject gameObject) =>
+            Create<ImageAdapter, T>(gameObject);
 
         /// <inheritdoc />
         public ImageAdapter(Image component) : base(component)
