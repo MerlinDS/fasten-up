@@ -18,10 +18,4 @@ namespace FastenUp.Runtime.Base
         /// </summary>
         event Action<T> OnValueChanged;
     }
-
-    internal interface IInternalBindPoint<out T>
-    {
-        internal void Add(IBindable<T> bindable);
-        internal void Remove(IBindable<T> bindable);
-    }
 }
