@@ -14,10 +14,8 @@ namespace FastenUp.Runtime.Bindables
 
         private void Awake()
         {
-            if (GraphicAdapter.TryCreate(gameObject, out _adapter))
-                return;
-
-            SpriteRendererAdapter.TryCreate(gameObject, out _adapter);
+            _adapter = GraphicAdapter.Create<Color>(gameObject) ??
+                       SpriteRendererAdapter.Create<Color>(gameObject);
         }
 
         /// <inheritdoc />

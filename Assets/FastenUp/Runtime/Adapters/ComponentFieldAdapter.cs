@@ -1,4 +1,5 @@
 using System;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace FastenUp.Runtime.Adapters
@@ -6,19 +7,14 @@ namespace FastenUp.Runtime.Adapters
     public abstract class ComponentFieldAdapter<TComponent>
         where TComponent : Component
     {
-        protected static bool TryCreate<TAdapter, T>(GameObject gameObject,
-            out IComponentFieldAdapter<T> adapter)
+        [CanBeNull]
+        protected static IComponentFieldAdapter<T> Create<TAdapter, T>(GameObject gameObject)
         {
-            adapter = null;
             if (!gameObject.TryGetComponent(out TComponent component))
-                return false;
+                return null;
 
-            var instance = Activator.CreateInstance(typeof(TAdapter), new object[] { component });
-            if (instance is not IComponentFieldAdapter<T> adapterT)
-                return false;
-
-            adapter = adapterT;
-            return true;
+            var adapter = Activator.CreateInstance(typeof(TAdapter), new object[] { component });
+            return adapter as IComponentFieldAdapter<T>;
         }
 
         protected ComponentFieldAdapter(TComponent component)

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using JetBrains.Annotations;
+using UnityEngine;
 
 namespace FastenUp.Runtime.Adapters
 {
@@ -8,8 +9,9 @@ namespace FastenUp.Runtime.Adapters
     {
         private Color _value;
 
-        public static bool TryCreate<T>(GameObject gameObject, out IComponentFieldAdapter<T> adapter) => 
-            TryCreate<SpriteRendererAdapter, T>(gameObject, out adapter);
+        [CanBeNull]
+        public static IComponentFieldAdapter<T> Create<T>(GameObject gameObject) => 
+            Create<SpriteRendererAdapter, T>(gameObject);
         
 
         /// <inheritdoc />
