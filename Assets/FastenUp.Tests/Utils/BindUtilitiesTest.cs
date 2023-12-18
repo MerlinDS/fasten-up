@@ -1,15 +1,15 @@
 ﻿using FastenUp.Runtime.Base;
 using FastenUp.Runtime.Bindables;
-using FastenUp.Runtime.Extensions;
+using FastenUp.Runtime.Utils;
 using FluentAssertions;
 using NSubstitute;
 using NUnit.Framework;
 
-namespace FastenUp.Tests.Extensions
+namespace FastenUp.Tests.Utils
 {
     [TestFixture]
-    [TestOf(typeof(TryBindExtensions))]
-    public class TryBindExtensionsTest
+    [TestOf(typeof(BindUtilities))]
+    public class BindUtilitiesTest
     {
         [Test]
         public void TryBind_When_point_and_bindable_are_suited_Should_Add_bindable_to_point()
@@ -19,7 +19,7 @@ namespace FastenUp.Tests.Extensions
             bindable.Name.Returns("Test");
             var point = Substitute.For<IInternalBindPoint<bool>>();
             //Act
-            point.TryBind("Test", bindable);
+            BindUtilities.TryBind(point,"Test", bindable);
             //Assert
             point.Received(1).Add(bindable.As<IBindable<bool>>());
         }
@@ -32,7 +32,7 @@ namespace FastenUp.Tests.Extensions
             bindable.Name.Returns("Test");
             var point = Substitute.For<IInternalBindPoint<bool>>();
             //Act
-            point.TryBind("Test2", bindable);
+            BindUtilities.TryBind(point,"Test2", bindable);
             //Assert
             point.DidNotReceive().Add(bindable.As<IBindable<bool>>());
         }
@@ -45,7 +45,7 @@ namespace FastenUp.Tests.Extensions
             bindable.Name.Returns("Test");
             var point = Substitute.For<IInternalBindPoint<int>>();
             //Act
-            point.TryBind("Test", bindable);
+            BindUtilities.TryBind(point,"Test", bindable);
             //Assert
             point.DidNotReceive().Add(Arg.Any<IBindable<int>>());
         }
@@ -56,7 +56,7 @@ namespace FastenUp.Tests.Extensions
             //Arrange
             var point = Substitute.For<IInternalBindPoint<bool>>();
             //Act
-            point.TryBind("Test", null);
+            BindUtilities.TryBind(point,"Test", null);
             //Assert
             point.DidNotReceive().Add(Arg.Any<IBindable<bool>>());
         }
@@ -69,7 +69,7 @@ namespace FastenUp.Tests.Extensions
             bindable.Name.Returns("Test");
             var point = Substitute.For<IInternalBindPoint<bool>>();
             //Act
-            point.TryUnbind("Test", bindable);
+            BindUtilities.TryBind(point,"Test", bindable);
             //Assert
             point.Received(1).Remove(bindable.As<IBindable<bool>>());
         }
@@ -82,7 +82,7 @@ namespace FastenUp.Tests.Extensions
             bindable.Name.Returns("Test");
             var point = Substitute.For<IInternalBindPoint<bool>>();
             //Act
-            point.TryUnbind("Test2", bindable);
+            BindUtilities.TryBind(point,"Test2", bindable);
             //Assert
             point.DidNotReceive().Remove(bindable.As<IBindable<bool>>());
         }
@@ -95,7 +95,7 @@ namespace FastenUp.Tests.Extensions
             bindable.Name.Returns("Test");
             var point = Substitute.For<IInternalBindPoint<int>>();
             //Act
-            point.TryUnbind("Test", bindable);
+            BindUtilities.TryBind(point,"Test", bindable);
             //Assert
             point.DidNotReceive().Remove(Arg.Any<IBindable<int>>());
         }
@@ -106,7 +106,7 @@ namespace FastenUp.Tests.Extensions
             //Arrange
             var point = Substitute.For<IInternalBindPoint<bool>>();
             //Act
-            point.TryUnbind("Test", null);
+            BindUtilities.TryBind(point,"Test", null);
             //Assert
             point.DidNotReceive().Remove(Arg.Any<IBindable<bool>>());
         }

@@ -83,7 +83,7 @@ namespace FastenUp.SourceGenerator
                 Accessibility = Accessibility.Public,
                 Body = new BindBodyBuilder
                 {
-                    InvocationName = "FastenUp.Runtime.Extensions.TryBindExtensions.TryBind",
+                    InvocationName = "FastenUp.Runtime.Utils.BindUtilities.TryBind",
                     ParameterName = "bindable",
                     BindPointNames = names
                 },
@@ -102,7 +102,7 @@ namespace FastenUp.SourceGenerator
                 Accessibility = Accessibility.Public,
                 Body = new BindBodyBuilder
                 {
-                    InvocationName = "FastenUp.Runtime.Extensions.TryBindExtensions.TryUnbind",
+                    InvocationName = "FastenUp.Runtime.Utils.BindUtilities.TryUnbind",
                     ParameterName = "bindable",
                     BindPointNames = names
                 },

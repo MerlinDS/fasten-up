@@ -14,13 +14,13 @@ namespace FastenUp.SourceGenerator.Tests
         private const string Source = @"
 using System;
 
-namespace FastenUp.Runtime.Extensions
+namespace FastenUp.Runtime.Utils
 {
-    public static class TryBindExtensions
+    public static class BindUtilities
     {
-        internal static void TryBind<T>(this IInternalBindPoint<T> bindPoint,
+        internal static void TryBind<T>(IInternalBindPoint<T> bindPoint,
             ReadOnlySpan<char> name, IBindable bindable){}
-        internal static void TryUnbind<T>(this IInternalBindPoint<T> bindPoint,
+        internal static void TryUnbind<T>(IInternalBindPoint<T> bindPoint,
             ReadOnlySpan<char> name, IBindable bindable){}
     }
 }
@@ -88,11 +88,11 @@ namespace Test
     {
         public void Bind(FastenUp.Runtime.Bindables.IBindable bindable)
         {
-            FastenUp.Runtime.Extensions.TryBindExtensions.TryBind(Visibility, nameof(Visibility), bindable);
+            FastenUp.Runtime.Utils.BindUtilities.TryBind(Visibility, nameof(Visibility), bindable);
         }
         public void Unbind(FastenUp.Runtime.Bindables.IBindable bindable)
         {
-            FastenUp.Runtime.Extensions.TryBindExtensions.TryUnbind(Visibility, nameof(Visibility), bindable);
+            FastenUp.Runtime.Utils.BindUtilities.TryUnbind(Visibility, nameof(Visibility), bindable);
         }
     }
 }
@@ -114,13 +114,13 @@ namespace Test
     {
         public void Bind(FastenUp.Runtime.Bindables.IBindable bindable)
         {
-            FastenUp.Runtime.Extensions.TryBindExtensions.TryBind(Visibility, nameof(Visibility), bindable);
-            FastenUp.Runtime.Extensions.TryBindExtensions.TryBind(IntValue, nameof(IntValue), bindable);
+            FastenUp.Runtime.Utils.BindUtilities.TryBind(Visibility, nameof(Visibility), bindable);
+            FastenUp.Runtime.Utils.BindUtilities.TryBind(IntValue, nameof(IntValue), bindable);
         }
         public void Unbind(FastenUp.Runtime.Bindables.IBindable bindable)
         {
-            FastenUp.Runtime.Extensions.TryBindExtensions.TryUnbind(Visibility, nameof(Visibility), bindable);
-            FastenUp.Runtime.Extensions.TryBindExtensions.TryUnbind(IntValue, nameof(IntValue), bindable);
+            FastenUp.Runtime.Utils.BindUtilities.TryUnbind(Visibility, nameof(Visibility), bindable);
+            FastenUp.Runtime.Utils.BindUtilities.TryUnbind(IntValue, nameof(IntValue), bindable);
         }
     }
 }
@@ -153,13 +153,13 @@ namespace Test
                 yield return new TestCaseData(@"
 using System;
 
-namespace FastenUp.Runtime.Extensions
+namespace FastenUp.Runtime.Utils
 {
-    public static class TryBindExtensions
+    public static class BindUtilities
     {
-        internal static void TryBind<T>(this IInternalBindPoint<T> bindPoint,
+        internal static void TryBind<T>(IInternalBindPoint<T> bindPoint,
             ReadOnlySpan<char> name, IBindable bindable){}
-        internal static void TryUnbind<T>(this IInternalBindPoint<T> bindPoint,
+        internal static void TryUnbind<T>(IInternalBindPoint<T> bindPoint,
             ReadOnlySpan<char> name, IBindable bindable){}
     }
 }
@@ -186,13 +186,13 @@ namespace FastenUp.Runtime.Base
                 yield return new TestCaseData(@"
 using System;
 
-namespace FastenUp.Runtime.Extensions
+namespace FastenUp.Runtime.Utils
 {
-    public static class TryBindExtensions
+    public static class BindUtilities
     {
-        internal static void TryBind<T>(this IInternalBindPoint<T> bindPoint,
+        internal static void TryBind<T>(IInternalBindPoint<T> bindPoint,
             ReadOnlySpan<char> name, IBindable bindable){}
-        internal static void TryUnbind<T>(this IInternalBindPoint<T> bindPoint,
+        internal static void TryUnbind<T>(IInternalBindPoint<T> bindPoint,
             ReadOnlySpan<char> name, IBindable bindable){}
     }
 }
@@ -218,13 +218,13 @@ namespace FastenUp.Runtime.Base
                 yield return new TestCaseData(@"
 using System;
 
-namespace FastenUp.Runtime.Extensions
+namespace FastenUp.Runtime.Utils
 {
-    public static class TryBindExtensions
+    public static class BindUtilities
     {
-        internal static void TryBind<T>(this IInternalBindPoint<T> bindPoint,
+        internal static void TryBind<T>(IInternalBindPoint<T> bindPoint,
             ReadOnlySpan<char> name, IBindable bindable){}
-        internal static void TryUnbind<T>(this IInternalBindPoint<T> bindPoint,
+        internal static void TryUnbind<T>(IInternalBindPoint<T> bindPoint,
             ReadOnlySpan<char> name, IBindable bindable){}
     }
 }
