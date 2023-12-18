@@ -14,20 +14,19 @@ namespace FastenUp.Runtime.Bindables
 
         [field: SerializeField] public string Name { get; [ExcludeFromCodeCoverage] private set; }
 
-        /// <inheritdoc />
         public event OnBindableChanged OnBindableChanged;
 
         protected void InvokeOnBindableChanged() =>
             OnBindableChanged?.Invoke(this);
 
-        private void OnEnable()
+        protected virtual void OnEnable()
         {
             ValidateName();
             CacheMediator();
             _mediator.Bind(this);
         }
 
-        private void OnDisable()
+        protected virtual void OnDisable()
         {
             _mediator?.Unbind(this);
         }
