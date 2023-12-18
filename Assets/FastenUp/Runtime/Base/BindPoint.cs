@@ -16,9 +16,9 @@ namespace FastenUp.Runtime.Base
             get => _value;
             set
             {
-                _value = value;
                 foreach (var bindable in _bindables)
                     bindable.SetValue(value);
+                ChangeValue(value);
             }
         }
 
