@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace FastenUp.Runtime.Adapters
 {
-    public sealed class ImageAdapter : ComponentFieldAdapter<Image>,
+    internal sealed class ImageAdapter : ComponentFieldAdapter<Image>,
         IComponentFieldAdapter<Sprite>
     {
         [CanBeNull]

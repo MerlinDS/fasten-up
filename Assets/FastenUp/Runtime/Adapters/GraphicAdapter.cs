@@ -4,13 +4,17 @@ using UnityEngine.UI;
 
 namespace FastenUp.Runtime.Adapters
 {
-    public sealed class GraphicAdapter : ComponentFieldAdapter<Graphic>,
+    /// <summary>
+    /// This adapter is used to adapt components that inherit from <see cref="Graphic"/>,
+    /// such as <see cref="Image"/>, <see cref="RawImage"/>, <see cref="Text"/>, etc.
+    /// </summary>
+    internal sealed class GraphicAdapter : ComponentFieldAdapter<Graphic>,
         IComponentFieldAdapter<Color>
     {
         [CanBeNull]
-        public static IComponentFieldAdapter<T> Create<T>(GameObject gameObject) => 
+        public static IComponentFieldAdapter<T> Create<T>(GameObject gameObject) =>
             Create<GraphicAdapter, T>(gameObject);
-        
+
         /// <inheritdoc />
         public GraphicAdapter(Graphic component) : base(component)
         {
