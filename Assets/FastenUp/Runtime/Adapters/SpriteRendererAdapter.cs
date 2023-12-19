@@ -7,7 +7,6 @@ namespace FastenUp.Runtime.Adapters
         IComponentFieldAdapter<Sprite>,
         IComponentFieldAdapter<Color>
     {
-        private Color _value;
 
         [CanBeNull]
         public static IComponentFieldAdapter<T> Create<T>(GameObject gameObject) => 
@@ -15,7 +14,7 @@ namespace FastenUp.Runtime.Adapters
         
 
         /// <inheritdoc />
-        private SpriteRendererAdapter(SpriteRenderer component) : base(component)
+        public SpriteRendererAdapter(SpriteRenderer component) : base(component)
         {
         }
 
@@ -26,15 +25,15 @@ namespace FastenUp.Runtime.Adapters
             set
             {
                 Component.sprite = value;
-                Component.enabled = value != null;
+                Component.enabled = value is not null;
             }
         }
 
         /// <inheritdoc />
         Color IComponentFieldAdapter<Color>.Value
         {
-            get => _value;
-            set => _value = value;
+            get => Component.color;
+            set => Component.color = value;
         }
     }
 }
