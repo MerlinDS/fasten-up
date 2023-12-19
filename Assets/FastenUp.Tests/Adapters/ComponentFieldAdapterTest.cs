@@ -1,4 +1,5 @@
-﻿using FastenUp.Runtime.Adapters;
+﻿using System.Diagnostics.CodeAnalysis;
+using FastenUp.Runtime.Adapters;
 using FluentAssertions;
 using NUnit.Framework;
 using UnityEngine;
@@ -22,11 +23,11 @@ namespace FastenUp.Tests.Adapters
             adapter.Should().NotBeNull();
             adapter.Value.Should().Be(component.Value);
         }
-        
+
         [Test]
         public void Create_When_gameObject_has_no_component_Should_return_null()
         {
-            //Arrange
+            //Arrange 
             var gameObject = new GameObject(nameof(ComponentFieldAdapterTest));
             //Act
             var adapter = TestAdapter.Create(gameObject);
@@ -40,6 +41,7 @@ namespace FastenUp.Tests.Adapters
         {
             public static IComponentFieldAdapter<string> Create(GameObject gameObject) =>
                 Create<TestAdapter, string>(gameObject);
+
             public TestAdapter(TestComponent component) : base(component)
             {
             }
@@ -48,7 +50,7 @@ namespace FastenUp.Tests.Adapters
             public string Value
             {
                 get => Component.Value;
-                set => Component.Value = value;
+                [ExcludeFromCodeCoverage] set => Component.Value = value;
             }
         }
 
