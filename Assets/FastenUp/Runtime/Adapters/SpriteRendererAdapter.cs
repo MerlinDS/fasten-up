@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace FastenUp.Runtime.Adapters
 {
-    public sealed class SpriteRendererAdapter : ComponentFieldAdapter<SpriteRenderer>,
+    internal sealed class SpriteRendererAdapter : ComponentFieldAdapter<SpriteRenderer>,
         IComponentFieldAdapter<Sprite>,
         IComponentFieldAdapter<Color>
     {
