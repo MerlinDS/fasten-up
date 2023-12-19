@@ -69,7 +69,7 @@ namespace FastenUp.Tests.Utils
             bindable.Name.Returns("Test");
             var point = Substitute.For<IInternalBindPoint<bool>>();
             //Act
-            BindUtilities.TryBind(point,"Test", bindable);
+            BindUtilities.TryUnbind(point,"Test", bindable);
             //Assert
             point.Received(1).Remove(bindable.As<IBindable<bool>>());
         }
