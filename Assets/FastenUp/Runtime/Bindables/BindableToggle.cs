@@ -1,9 +1,14 @@
-﻿using UnityEngine;
+﻿using FastenUp.Runtime.Utils;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace FastenUp.Runtime.Bindables
 {
+    /// <summary>
+    /// The two-way <see cref="IBindable"/> binds a value to the component with <see cref="Toggle"/> component.
+    /// </summary>
     [RequireComponent(typeof(Toggle))]
+    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + nameof(BindableToggle) , 8)]
     public sealed class BindableToggle : BaseBindable, IGettableBindable<bool>
     {
         private Toggle _toggle;
