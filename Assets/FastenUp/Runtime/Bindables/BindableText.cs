@@ -13,11 +13,15 @@ namespace FastenUp.Runtime.Bindables
     {
         private TextMeshProUGUI _component;
 
-        private void Awake() =>
-            TryGetComponent(out _component);
+        private void Awake()
+        {
+            _component = GetComponent<TextMeshProUGUI>();
+        }
 
         /// <inheritdoc />
-        public void SetValue(string value) =>
+        public void SetValue(string value)
+        {
             _component.text = value;
+        }
     }
 }

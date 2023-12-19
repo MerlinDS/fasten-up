@@ -16,7 +16,7 @@ namespace FastenUp.Runtime.Bindables
 
         private void Awake()
         {
-            TryGetComponent(out _component);
+            _component = GetComponent<Button>();
         }
 
         /// <inheritdoc />
