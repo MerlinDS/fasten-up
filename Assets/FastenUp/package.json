@@ -6,6 +6,9 @@
   "type": "library",
   "description": "Minimalist UI data binding framework for Unity.",
   "keywords": ["Data Binding", "UI", "MVVM", "Unity", "Framework"],
+  "dependencies": {
+    "com.unity.textmeshpro": "3.0.6",
+  },
   "license": "MIT",
   "documentationUrl": "https://github.com/MerlinDS/fasten-up/wiki",
   "changelogUrl": "https://github.com/MerlinDS/fasten-up/releases",
