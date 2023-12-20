@@ -1,5 +1,4 @@
 using FastenUp.Runtime.Base;
-using FastenUp.Runtime.Delegates;
 
 namespace FastenUp.Runtime.Bindables
 {
@@ -18,14 +17,5 @@ namespace FastenUp.Runtime.Bindables
     public interface IBindable<in T> : IBindable
     {
         void SetValue(T value);
-    }
-
-    /// <remarks>Provides two-way binding</remarks>
-    /// <typeparam name="T">Type of the value that will be set or get by the bindable component</typeparam>
-    /// <inheritdoc cref="IBindable"/>
-    public interface IGettableBindable<T> : IBindable<T>
-    {
-        public event OnBindableChanged OnBindableChanged;
-        T GetValue();
     }
 }

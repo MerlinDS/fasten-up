@@ -11,7 +11,7 @@ namespace FastenUp.SourceGenerator
     {
         private const string MediatorMetadataName = "FastenUp.Runtime.Base.IMediator";
         private const string InternalMediatorMetadataName = "FastenUp.Runtime.Base.IInternalMediator";
-        private const string BindPointMetadataName = "FastenUp.Runtime.Base.IInternalBindPoint`1";
+        private const string BindPointMetadataName = "FastenUp.Runtime.Base.IInternalBind";
 
         /// <inheritdoc />
         public void Initialize(GeneratorInitializationContext context)
@@ -75,7 +75,7 @@ namespace FastenUp.SourceGenerator
 
             outputBuilder.Inheritance.Add(InternalMediatorMetadataName);
 
-            var names = GetFieldSymbols(sourceSymbol, proxyTypeSymbol)
+            var names = GetBindSymbols(sourceSymbol, proxyTypeSymbol)
                 .Select(x => x.Name).ToArray();
             outputBuilder.Methods.Add(new MethodSourceBuilder
             {
@@ -119,13 +119,23 @@ namespace FastenUp.SourceGenerator
             context.AddSource($"{outputFillName}.cs", outputBuilder.Build());
         }
 
-        private static IEnumerable<IPropertySymbol> GetFieldSymbols(INamespaceOrTypeSymbol mediatorSymbol, ISymbol target)
+        private static IEnumerable<IPropertySymbol> GetBindSymbols(INamespaceOrTypeSymbol mediatorSymbol,
+            ISymbol target)
         {
             var fieldSymbols = mediatorSymbol.GetMembers().OfType<IPropertySymbol>();
             foreach (var symbol in fieldSymbols)
             {
-                if (symbol.Type.Interfaces.Any(x => x.OriginalDefinition.Equals(target,
-                        SymbolEqualityComparer.Default)))
+                var inheritsTarget = false;
+                foreach (var @interface in symbol.Type.Interfaces)
+                {
+                    inheritsTarget = @interface.OriginalDefinition.Interfaces
+                        .Any(x => x.OriginalDefinition.Equals(target, SymbolEqualityComparer.Default));
+                    
+                    if (inheritsTarget)
+                        break;
+                }
+
+                if (inheritsTarget)
                     yield return symbol;
             }
         }
