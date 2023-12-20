@@ -9,8 +9,8 @@ namespace FastenUp.Runtime.Bindables
     /// The one-way <see cref="IBindable"/> binds a value to the component with <see cref="UnityAction"/> field.
     /// </summary>
     [RequireComponent(typeof(Button))]
-    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + nameof(BindableButton) , 2)]
-    public class BindableButton : BaseBindable, IBindable<UnityAction>
+    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + nameof(BindableButton), 2)]
+    public class BindableButton : BaseBindable, IBindableListener<UnityAction>
     {
         private Button _component;
 
@@ -20,12 +20,17 @@ namespace FastenUp.Runtime.Bindables
         }
 
         /// <inheritdoc />
-        public void SetValue(UnityAction value)
-        {   
-            if(value is null)
-                return;
-            
-            _component.onClick.AddListener(value);
+        public void AddListener(UnityAction action)
+        {
+            if (action is not null)
+                _component.onClick.AddListener(action);
+        }
+
+        /// <inheritdoc />
+        public void RemoveListener(UnityAction action)
+        {
+            if (action is not null)
+                _component.onClick.RemoveListener(action);
         }
 
         /// <inheritdoc />
