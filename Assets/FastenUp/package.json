@@ -5,9 +5,16 @@
   "unity": "2022.3",
   "type": "library",
   "description": "Minimalist UI data binding framework for Unity.",
+  "samples": [
+    {
+      "displayName": "Faster Up Example",
+      "description": "Example code showing use of the Faster Up.",
+      "path": "Samples~"
+    }
+  ],
   "keywords": ["Data Binding", "UI", "MVVM", "Unity", "Framework"],
   "dependencies": {
-    "com.unity.textmeshpro": "3.0.6",
+    "com.unity.textmeshpro": "3.0.6"
   },
   "license": "MIT",
   "documentationUrl": "https://github.com/MerlinDS/fasten-up/wiki",
