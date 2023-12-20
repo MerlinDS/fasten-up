@@ -9,7 +9,7 @@ namespace FastenUp.Runtime.Bindables
     /// </summary>
     [RequireComponent(typeof(TMP_Dropdown))]
     [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Bindable Dropdown", 6)]
-    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#bindable-dropdown")]
+    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#dropdown")]
     public sealed partial class BindableDropdown : BaseBindable, IGettableBindable<int>
     {
         private TMP_Dropdown _dropdown;

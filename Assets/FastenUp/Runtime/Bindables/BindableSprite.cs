@@ -8,7 +8,7 @@ namespace FastenUp.Runtime.Bindables
     /// The one-way <see cref="IBindable"/> binds a value to the component with <see cref="Sprite"/> field.
     /// </summary>
     [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Bindable Sprite" , 2)]
-    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#bindable-sprite")]
+    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#sprite")]
     public sealed partial class BindableSprite : BaseBindable, IBindable<Sprite>
     {
         private IComponentFieldAdapter<Sprite> _adapter;

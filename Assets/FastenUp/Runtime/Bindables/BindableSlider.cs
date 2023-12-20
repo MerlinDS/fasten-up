@@ -9,7 +9,7 @@ namespace FastenUp.Runtime.Bindables
     /// </summary>
     [RequireComponent(typeof(Slider))]
     [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Bindable Slider" , 5)]
-    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#bindable-slider")]
+    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#slider")]
     public sealed partial class BindableSlider : BaseBindable, IGettableBindable<float>, IBindable<Vector2>
     {
         private Slider _slider;
