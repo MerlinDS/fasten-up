@@ -22,6 +22,10 @@ namespace FastenUp.Runtime.Utils
             ReadOnlySpan<char> name, IBindable bindable){}
         internal static void TryUnbind<T>(IInternalBindPoint<T> bindPoint,
             ReadOnlySpan<char> name, IBindable bindable){}
+        internal static void TryBind<T>(IInternalBindAction<T> bindPoint,
+            ReadOnlySpan<char> name, IBindable bindable){}
+        internal static void TryUnbind<T>(IInternalBindAction<T> bindAction,
+            ReadOnlySpan<char> name, IBindable bindable){}
     }
 }
 namespace FastenUp.Runtime.Bindables
@@ -33,9 +37,16 @@ namespace FastenUp.Runtime.Bindables
 namespace FastenUp.Runtime.Base
 {
     public interface IMediator{}
-    internal interface IInternalBindPoint<out T>{}
+    public interface IInternalBind{}
+    public interface IInternalBindPoint<out T> : IInternalBind
+    {
+    }
+    public interface IInternalBindAction<out T> : IInternalBind
+    {
+    }
     public interface IBindPoint<T>{}
     public class BindPoint<T> : IBindPoint<T>, IInternalBindPoint<T>{}
+    public class BindAction<T> : IInternalBindAction<T>{}
 
     public interface IInternalMediator
     {
@@ -126,6 +137,34 @@ namespace Test
 }
 ")
                     .SetName("One mediator with two proxy fields");
+                yield return new TestCaseData(@"
+namespace Test
+{
+    public partial class TestMediator : FastenUp.Runtime.Base.IMediator
+    {
+        private FastenUp.Runtime.Base.BindPoint<bool> Visibility { get; } = new();
+        private FastenUp.Runtime.Base.BindAction<int> IntAction { get; } = new();
+    }
+}",
+                        @"
+namespace Test
+{
+    public partial class TestMediator : FastenUp.Runtime.Base.IInternalMediator
+    {
+        public void Bind(FastenUp.Runtime.Bindables.IBindable bindable)
+        {
+            FastenUp.Runtime.Utils.BindUtilities.TryBind(Visibility, nameof(Visibility), bindable);
+            FastenUp.Runtime.Utils.BindUtilities.TryBind(IntAction, nameof(IntAction), bindable);
+        }
+        public void Unbind(FastenUp.Runtime.Bindables.IBindable bindable)
+        {
+            FastenUp.Runtime.Utils.BindUtilities.TryUnbind(Visibility, nameof(Visibility), bindable);
+            FastenUp.Runtime.Utils.BindUtilities.TryUnbind(IntAction, nameof(IntAction), bindable);
+        }
+    }
+}
+")
+                    .SetName("One mediator with action and property");
             }
         }
 

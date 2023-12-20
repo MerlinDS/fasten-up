@@ -19,5 +19,19 @@ namespace FastenUp.Runtime.Utils
             if (name.SequenceEqual(bindable?.Name) && bindable is IBindable<T> bindableT)
                 bindPoint.Remove(bindableT);
         }
+        
+        public static void TryBind<T>(IInternalBindAction<T> bindAction,
+            ReadOnlySpan<char> name, IBindable bindable)
+        {
+            if (name.SequenceEqual(bindable?.Name) && bindable is IBindableListener<T> bindableT)
+                bindAction.AddListener(bindableT);
+        }
+        
+        public static void TryUnbind<T>(IInternalBindAction<T> bindAction,
+            ReadOnlySpan<char> name, IBindable bindable)
+        {
+            if (name.SequenceEqual(bindable?.Name) && bindable is IBindableListener<T> bindableT)
+                bindAction.RemoveListener(bindableT);
+        }
     }
 }
