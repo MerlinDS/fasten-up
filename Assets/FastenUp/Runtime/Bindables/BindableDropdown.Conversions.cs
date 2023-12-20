@@ -1,23 +1,39 @@
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 
 namespace FastenUp.Runtime.Bindables
 {
-    public sealed partial class BindableDropdown : IBindable<List<string>>, 
+    public sealed partial class BindableDropdown : IBindable<string[]>,
         IBindable<List<TMP_Dropdown.OptionData>>
     {
         /// <inheritdoc />
-        public void SetValue(List<string> value)
+        public void SetValue(string[] value)
         {
-            _dropdown.ClearOptions();
-            _dropdown.AddOptions(value);
+            if (value is not { Length: > 0 })
+            {
+                ClearOptions();
+                return;
+            }
+
+            SetValue(value.Select(option => new TMP_Dropdown.OptionData(option)).ToList());
         }
-         
+
         /// <inheritdoc />
         public void SetValue(List<TMP_Dropdown.OptionData> value)
         {
+            if (value is not { Count: > 0 })
+            {
+                ClearOptions();
+                return;
+            }
+
+            _dropdown.options = value;
+        }
+
+        private void ClearOptions()
+        {
             _dropdown.ClearOptions();
-            _dropdown.AddOptions(value);
         }
     }
 }

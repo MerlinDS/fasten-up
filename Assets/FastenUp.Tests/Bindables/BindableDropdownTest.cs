@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using FastenUp.Runtime.Bindables;
 using FastenUp.Runtime.Delegates;
 using FluentAssertions;
@@ -14,7 +15,6 @@ namespace FastenUp.Tests.Bindables
     [TestOf(typeof(BindableDropdown))]
     public class BindableDropdownTest
     {
-
         [Test]
         public void SetValue_When_type_is_int_Should_set_value_to_dropdown_silently()
         {
@@ -22,7 +22,7 @@ namespace FastenUp.Tests.Bindables
             const int expected = 4;
             var sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
-            dropdown.AddOptions(new List<string> {"1", "2", "3", "4", "5"});
+            dropdown.AddOptions(new List<string> { "1", "2", "3", "4", "5" });
             var onValueChanged = Substitute.For<OnBindableChanged>();
             sut.OnBindableChanged += onValueChanged;
             // Act
@@ -31,12 +31,12 @@ namespace FastenUp.Tests.Bindables
             dropdown.value.Should().Be(expected);
             onValueChanged.DidNotReceive().Invoke(sut);
         }
-        
+
         [Test]
-        public void SetValue_When_type_is_list_of_strings_Should_set_options_to_dropdown_silently()
+        public void SetValue_When_type_is_array_of_strings_Should_set_options_to_dropdown_silently()
         {
             // Arrange
-            var expected = new List<string> {"1", "2", "3", "4", "5"};
+            var expected = new[] { "1", "2", "3", "4", "5" };
             var sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
             var onValueChanged = Substitute.For<OnBindableChanged>();
@@ -44,12 +44,44 @@ namespace FastenUp.Tests.Bindables
             // Act
             sut.SetValue(expected);
             // Assert
-            dropdown.options.Should().HaveCount(expected.Count);
-            foreach (var option in dropdown.options) 
+            dropdown.options.Should().HaveCount(expected.Length);
+            foreach (var option in dropdown.options)
                 expected.Should().Contain(option.text);
             onValueChanged.DidNotReceive().Invoke(sut);
         }
-        
+
+        [Test]
+        public void SetValue_When_type_is_array_of_strings_but_value_is_null_Should_clear_options()
+        {
+            // Arrange
+            var sut = CreateSut();
+            var dropdown = sut.GetComponent<TMP_Dropdown>();
+            dropdown.AddOptions(new List<string> { "1", "2", "3", "4", "5" });
+            var onValueChanged = Substitute.For<OnBindableChanged>();
+            sut.OnBindableChanged += onValueChanged;
+            // Act
+            sut.SetValue((string[])null);
+            // Assert
+            dropdown.options.Should().BeEmpty();
+            onValueChanged.DidNotReceive().Invoke(sut);
+        }
+
+        [Test]
+        public void SetValue_When_type_is_array_of_strings_but_value_is_empty_Should_clean_options()
+        {
+            // Arrange
+            var sut = CreateSut();
+            var dropdown = sut.GetComponent<TMP_Dropdown>();
+            dropdown.AddOptions(new List<string> { "1", "2", "3", "4", "5" });
+            var onValueChanged = Substitute.For<OnBindableChanged>();
+            sut.OnBindableChanged += onValueChanged;
+            // Act
+            sut.SetValue(Array.Empty<string>());
+            // Assert
+            dropdown.options.Should().BeEmpty();
+            onValueChanged.DidNotReceive().Invoke(sut);
+        }
+
         [Test]
         public void SetValue_When_type_is_list_of_option_data_Should_set_options_to_dropdown_silently()
         {
@@ -72,7 +104,39 @@ namespace FastenUp.Tests.Bindables
             dropdown.options.Should().BeEquivalentTo(expected);
             onValueChanged.DidNotReceive().Invoke(sut);
         }
-        
+
+        [Test]
+        public void SetValue_When_type_is_list_of_option_data_but_value_is_null_Should_clear_options()
+        {
+            // Arrange
+            var sut = CreateSut();
+            var dropdown = sut.GetComponent<TMP_Dropdown>();
+            dropdown.AddOptions(new List<string> { "1", "2", "3", "4", "5" });
+            var onValueChanged = Substitute.For<OnBindableChanged>();
+            sut.OnBindableChanged += onValueChanged;
+            // Act
+            sut.SetValue((List<TMP_Dropdown.OptionData>)null);
+            // Assert
+            dropdown.options.Should().BeEmpty();
+            onValueChanged.DidNotReceive().Invoke(sut);
+        }
+
+        [Test]
+        public void SetValue_When_type_is_list_of_option_data_but_value_is_empty_Should_clear_options()
+        {
+            // Arrange
+            var sut = CreateSut();
+            var dropdown = sut.GetComponent<TMP_Dropdown>();
+            dropdown.AddOptions(new List<string> { "1", "2", "3", "4", "5" });
+            var onValueChanged = Substitute.For<OnBindableChanged>();
+            sut.OnBindableChanged += onValueChanged;
+            // Act
+            sut.SetValue(new List<TMP_Dropdown.OptionData>());
+            // Assert
+            dropdown.options.Should().BeEmpty();
+            onValueChanged.DidNotReceive().Invoke(sut);
+        }
+
         [Test]
         public void GetValue_When_type_is_int_Should_return_value_from_dropdown()
         {
@@ -80,21 +144,21 @@ namespace FastenUp.Tests.Bindables
             const int expected = 4;
             var sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
-            dropdown.AddOptions(new List<string> {"1", "2", "3", "4", "5"});
+            dropdown.AddOptions(new List<string> { "1", "2", "3", "4", "5" });
             dropdown.SetValueWithoutNotify(5);
             // Act
             var result = sut.GetValue();
             // Assert
             result.Should().Be(expected);
         }
-        
+
         [Test]
         public void OnBindableChanged_When_dropdown_value_changed_Should_invoke_OnBindableChanged()
         {
             // Arrange
             var sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
-            dropdown.AddOptions(new List<string> {"1", "2", "3", "4", "5"});
+            dropdown.AddOptions(new List<string> { "1", "2", "3", "4", "5" });
             var onValueChanged = Substitute.For<OnBindableChanged>();
             sut.OnBindableChanged += onValueChanged;
             // Act
@@ -102,14 +166,14 @@ namespace FastenUp.Tests.Bindables
             // Assert
             onValueChanged.Received(1).Invoke(sut);
         }
-        
+
         [Test]
         public void OnBindableChanged_When_disabled_Should_not_invoke_OnBindableChanged()
         {
             // Arrange
             var sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
-            dropdown.AddOptions(new List<string> {"1", "2", "3", "4", "5"});
+            dropdown.AddOptions(new List<string> { "1", "2", "3", "4", "5" });
             var onValueChanged = Substitute.For<OnBindableChanged>();
             sut.OnBindableChanged += onValueChanged;
             sut.ExecuteOnDisable();
@@ -118,7 +182,7 @@ namespace FastenUp.Tests.Bindables
             // Assert
             onValueChanged.DidNotReceive().Invoke(sut);
         }
-        
+
         private static BindableDropdown CreateSut()
         {
             var gameObject = new GameObject();
