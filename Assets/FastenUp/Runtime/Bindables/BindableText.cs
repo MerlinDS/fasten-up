@@ -9,7 +9,7 @@ namespace FastenUp.Runtime.Bindables
     /// </summary>
     [RequireComponent(typeof(TextMeshProUGUI))]
     [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Bindable Text" , 1)]
-    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#bindable-text")]
+    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#text")]
     public sealed partial class BindableText : BaseBindable, IBindable<string>
     {
         private TextMeshProUGUI _component;

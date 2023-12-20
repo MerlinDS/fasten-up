@@ -9,7 +9,7 @@ namespace FastenUp.Runtime.Bindables
     /// </summary> 
     [RequireComponent(typeof(TMP_InputField))]
     [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Bindable Input Field" , 7)]
-    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#bindable-input-field")]
+    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#input-field")]
     public class BindableInputField : BaseBindable, IGettableBindable<string>
     {
         private TMP_InputField _inputField;

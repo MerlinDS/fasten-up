@@ -8,7 +8,7 @@ namespace FastenUp.Runtime.Bindables.Pointers
     /// This class is used to bind to the <see cref="IPointerClickHandler"/> interface.
     /// </summary> 
     [AddComponentMenu(FastenUpComponentMenu.EventHandlersMenu + "Pointer Click Handler", 0)]
-    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#bindable-pointer-click")]
+    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#pointer-click")]
     public sealed class BindablePointerClick : BindablePointer, IPointerClickHandler
     {
         /// <inheritdoc />

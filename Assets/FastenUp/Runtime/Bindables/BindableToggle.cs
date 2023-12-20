@@ -9,7 +9,7 @@ namespace FastenUp.Runtime.Bindables
     /// </summary>
     [RequireComponent(typeof(Toggle))]
     [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Bindable Toggle" , 4)]
-    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#bindable-toggle")]
+    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#toggle")]
     public sealed class BindableToggle : BaseBindable, IGettableBindable<bool>
     {
         private Toggle _toggle;

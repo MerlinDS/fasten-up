@@ -10,7 +10,7 @@ namespace FastenUp.Runtime.Bindables
     /// </summary>
     [RequireComponent(typeof(Button))]
     [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Bindable Button", 0)]
-    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#bindable-button")]
+    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#button")]
     public class BindableButton : BaseBindable, IBindableListener<UnityAction>
     {
         private Button _component;
