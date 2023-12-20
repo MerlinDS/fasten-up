@@ -8,13 +8,13 @@ namespace FastenUp.Runtime.Base
         /// <inheritdoc />
         void IInternalBindAction<UnityAction<T>>.AddListener(IBindableListener<UnityAction<T>> listener)
         {
-            AddListener(listener);
+            AddBindableListener(listener);
         }
 
         /// <inheritdoc />
         void IInternalBindAction<UnityAction<T>>.RemoveListener(IBindableListener<UnityAction<T>> listener)
         {
-            RemoveListener(listener);
+            RemoveBindableListener(listener);
         }
     }
 
@@ -23,13 +23,13 @@ namespace FastenUp.Runtime.Base
         /// <inheritdoc />
         void IInternalBindAction<UnityAction>.AddListener(IBindableListener<UnityAction> listener)
         {
-            AddListener(listener);
+            AddBindableListener(listener);
         }
 
         /// <inheritdoc />
         void IInternalBindAction<UnityAction>.RemoveListener(IBindableListener<UnityAction> listener)
         {
-            RemoveListener(listener);
+            RemoveBindableListener(listener);
         }
     }
 }
