@@ -15,42 +15,65 @@ namespace FastenUp.Tests.Bindables
     public class BindableButtonTest
     {
         [Test]
-        public void Set_Value_When_value_is_action_Should_add_listener_to_click()
+        public void AddListener_When_listener_is_null_Should_not_throw_exception()
         {
-            //Arrange
-            var expected = Substitute.For<UnityAction>();
+            // Arrange
             var sut = CreateSut();
-            var button = sut.GetComponent<Button>();
-            //Act
-            sut.SetValue(expected);
-            //Assert
-            button.onClick.Invoke();
-            expected.Received(1).Invoke();
+            Action act = () => sut.AddListener(null);
+            // Act & Assert
+            act.Should().NotThrow<Exception>();
+        }
+
+
+        [Test]
+        public void OnClick_When_has_listener_button_clicked_Should_invoke_on_click()
+        {
+            // Arrange
+            var actual = Substitute.For<UnityAction>();
+            var sut = CreateSut();
+            sut.AddListener(actual);
+            // Act
+            sut.GetComponent<Button>().onClick.Invoke();
+            // Assert
+            actual.Received(1).Invoke();
         }
 
         [Test]
-        public void Set_Value_When_value_is_null_Should_not_throw_exceptions()
+        public void RemoveListener_When_listener_is_null_Should_not_throw_exception()
         {
-            //Arrange
+            // Arrange
             var sut = CreateSut();
-            Action act = () => sut.SetValue(null);
-            //Act & Assert
-            act.Should().NotThrow();
+            Action act = () => sut.RemoveListener(null);
+            // Act & Assert
+            act.Should().NotThrow<Exception>();
         }
 
         [Test]
-        public void OnDisable_Should_remove_all_listeners()
+        public void RemoveListener_When_listener_is_not_null_Should_remove_listener()
         {
-            //Arrange
+            // Arrange
+            var actual = Substitute.For<UnityAction>();
             var sut = CreateSut();
-            var button = sut.GetComponent<Button>();
-            var action = Substitute.For<UnityAction>();
-            sut.SetValue(action);
-            //Act
+            sut.AddListener(actual);
+            // Act
+            sut.RemoveListener(actual);
+            sut.GetComponent<Button>().onClick.Invoke();
+            // Assert
+            actual.DidNotReceive().Invoke();
+        }
+
+        [Test]
+        public void OnDisable_When_has_listener_Should_remove_all_listeners()
+        {
+            // Arrange
+            var actual = Substitute.For<UnityAction>();
+            var sut = CreateSut();
+            sut.AddListener(actual);
+            // Act
             sut.ExecuteOnDisable();
-            //Assert
-            button.onClick.Invoke();
-            action.DidNotReceive().Invoke();
+            sut.GetComponent<Button>().onClick.Invoke();
+            // Assert
+            actual.DidNotReceive().Invoke();
         }
 
         private static BindableButton CreateSut()
