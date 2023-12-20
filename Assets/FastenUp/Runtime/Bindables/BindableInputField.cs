@@ -8,7 +8,8 @@ namespace FastenUp.Runtime.Bindables
     /// The two-way <see cref="IBindable"/> binds a value to the component with <see cref="TMP_InputField"/> field.
     /// </summary> 
     [RequireComponent(typeof(TMP_InputField))]
-    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + nameof(BindableInputField) , 8)]
+    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Bindable Input Field" , 7)]
+    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#bindable-input-field")]
     public class BindableInputField : BaseBindable, IGettableBindable<string>
     {
         private TMP_InputField _inputField;

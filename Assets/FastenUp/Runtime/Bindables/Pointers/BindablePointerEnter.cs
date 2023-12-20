@@ -7,7 +7,8 @@ namespace FastenUp.Runtime.Bindables.Pointers
     /// <summary>
     /// This class is used to bind to the <see cref="IPointerEnterHandler"/> interface.
     /// </summary> 
-    [AddComponentMenu(FastenUpComponentMenu.PointerMenu + nameof(BindablePointerEnter), 0)]
+    [AddComponentMenu(FastenUpComponentMenu.EventHandlersMenu + "Pointer Enter Handler", 1)]
+    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#bindable-pointer-enter")]
     public sealed class BindablePointerEnter : BindablePointer, IPointerEnterHandler
     {
         /// <inheritdoc />

@@ -9,7 +9,8 @@ namespace FastenUp.Runtime.Bindables
     /// The one-way <see cref="IBindable"/> binds a value to the component with <see cref="UnityAction"/> field.
     /// </summary>
     [RequireComponent(typeof(Button))]
-    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + nameof(BindableButton), 2)]
+    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Bindable Button", 0)]
+    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#bindable-button")]
     public class BindableButton : BaseBindable, IBindableListener<UnityAction>
     {
         private Button _component;

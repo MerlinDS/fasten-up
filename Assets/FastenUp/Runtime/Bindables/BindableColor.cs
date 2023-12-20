@@ -7,7 +7,8 @@ namespace FastenUp.Runtime.Bindables
     /// <summary>
     /// The one-way <see cref="IBindable"/> binds a value to the component with <see cref="Color"/> field.
     /// </summary>
-    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + nameof(BindableColor), 1)]
+    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Bindable Color", 3)]
+    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#bindable-color")]
     public class BindableColor : BaseBindable, IBindable<Color>
     {
         private IComponentFieldAdapter<Color> _adapter;

@@ -7,7 +7,8 @@ namespace FastenUp.Runtime.Bindables.Pointers
     /// <summary>
     /// This class is used to bind to the <see cref="IPointerExitHandler"/> interface.
     /// </summary> 
-    [AddComponentMenu(FastenUpComponentMenu.PointerMenu + nameof(BindablePointerExit), 0)]
+    [AddComponentMenu(FastenUpComponentMenu.EventHandlersMenu + "Pointer Exit Handler", 2)]
+    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#bindable-pointer-exit")]
     public sealed class BindablePointerExit : BindablePointer, IPointerExitHandler
     {
         /// <inheritdoc />
