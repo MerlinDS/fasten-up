@@ -8,7 +8,8 @@ namespace FastenUp.Runtime.Bindables
     /// The two-way <see cref="IBindable"/> binds a value to the component with <see cref="Slider"/> component.
     /// </summary>
     [RequireComponent(typeof(Slider))]
-    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + nameof(BindableSlider) , 3)]
+    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Bindable Slider" , 5)]
+    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#bindable-slider")]
     public sealed partial class BindableSlider : BaseBindable, IGettableBindable<float>, IBindable<Vector2>
     {
         private Slider _slider;

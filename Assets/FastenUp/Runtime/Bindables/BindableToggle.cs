@@ -8,7 +8,8 @@ namespace FastenUp.Runtime.Bindables
     /// The two-way <see cref="IBindable"/> binds a value to the component with <see cref="Toggle"/> component.
     /// </summary>
     [RequireComponent(typeof(Toggle))]
-    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + nameof(BindableToggle) , 8)]
+    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Bindable Toggle" , 4)]
+    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#bindable-toggle")]
     public sealed class BindableToggle : BaseBindable, IGettableBindable<bool>
     {
         private Toggle _toggle;
