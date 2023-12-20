@@ -43,7 +43,7 @@ namespace FastenUp.Runtime.Base
             _actions.Clear();
         }
         
-        protected void AddListener(IBindableListener<T> listener)
+        protected void AddBindableListener(IBindableListener<T> listener)
         {
             if (_listeners.Contains(listener))
                 throw new FastenUpException("Bindable already added to bind point.");
@@ -53,7 +53,7 @@ namespace FastenUp.Runtime.Base
             _listeners.Add(listener);
         }
 
-        protected void RemoveListener(IBindableListener<T> listener)
+        protected void RemoveBindableListener(IBindableListener<T> listener)
         {
             if (!_listeners.Contains(listener))
                 throw new FastenUpException("Bindable not found in bind point.");
