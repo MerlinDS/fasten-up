@@ -30,6 +30,38 @@ namespace FastenUp.Tests.Bindables
             //Assert
             mockMediator.Received(1).Bind(test.component);
         }
+        
+        [Test]
+        public void OnEnable_When_has_two_mediators_Should_bind_to_both_mediators()
+        {
+            //Arrange
+            var mockMediatorA = Substitute.For<IInternalMediator>();
+            var mockMediatorB = Substitute.For<IInternalMediator>();
+            var test = TestingBehaviour.Create();
+            test.component.gameObject.AddComponent<MockMediator>().Set(mockMediatorA);
+            test.component.gameObject.AddComponent<MockMediator>().Set(mockMediatorB);
+            test.component.SetName("Test");
+            //Act
+            test.component.ExecuteOnEnable();
+            //Assert
+            mockMediatorA.Received(1).Bind(test.component);
+            mockMediatorB.Received(1).Bind(test.component);
+        }
+        
+        [Test]
+        public void OnEnable_When_mediator_was_cached_Should_not_bind_to_mediator_twice()
+        {
+            //Arrange
+            var mockMediator = Substitute.For<IInternalMediator>();
+            var test = TestingBehaviour.Create();
+            test.component.gameObject.AddComponent<MockMediator>().Set(mockMediator);
+            test.component.SetName("Test");
+            test.component.ExecuteOnEnable();
+            //Act
+            test.component.ExecuteOnEnable();
+            //Assert
+            mockMediator.Received(1).Bind(test.component);
+        }
 
         [Test]
         public void OnEnable_When_has_mediator_in_parent_object_Should_bind_to_mediator()
@@ -48,28 +80,28 @@ namespace FastenUp.Tests.Bindables
         }
 
         [Test]
-        public void OnEnable_When_has_no_mediators_Should_throw_exception()
+        public void OnEnable_When_has_no_mediators_Should_log_error()
         {
             //Arrange
             var test = TestingBehaviour.Create();
             test.component.SetName("Test");
-            Action act = () => test.component.ExecuteOnEnable();
-            //Act & Assert
-            act.Should().Throw<FastenUpBindableException>()
-                .WithMessage("Mediator not found")
-                .Which.GameObject.Should().Be(test.component.gameObject);
+            //Act
+            test.component.ExecuteOnEnable();
+            //Assert
+            LogAssert.Expect(LogType.Error,
+                $"{test.component.name} will be ignored: {nameof(IMediator)} was not found!");
         }
 
         [Test]
-        public void OnEnable_When_has_no_name_Should_throw_exception()
+        public void OnEnable_When_name_was_not_set_Should_log_error()
         {
             //Arrange
             var test = TestingBehaviour.Create();
-            Action act = () => test.component.ExecuteOnEnable();
-            //Act & Assert
-            act.Should().Throw<FastenUpBindableException>()
-                .WithMessage("Bindable name is null or empty.")
-                .Which.GameObject.Should().Be(test.component.gameObject);
+            //Act
+            test.component.ExecuteOnEnable();
+            //Assert
+            LogAssert.Expect(LogType.Error,
+                $"{test.component.name} will be ignored: name for binding was not set!");
         }
 
         [Test]
@@ -111,7 +143,7 @@ namespace FastenUp.Tests.Bindables
             var test = TestingBehaviour.Create();
             Action act = () => test.component.ExecuteOnDisable();
             //Act & Assert
-            act.Should().NotThrow<FastenUpBindableException>();
+            act.Should().NotThrow<Exception>();
         }
 
         [Test]
@@ -121,7 +153,7 @@ namespace FastenUp.Tests.Bindables
             var test = TestingBehaviour.Create();
             Action act = () => test.component.InvokeOnBindableChanged();
             //Act & Assert
-            act.Should().NotThrow<FastenUpBindableException>();
+            act.Should().NotThrow<Exception>();
         }
 
         [Test]
@@ -155,7 +187,7 @@ namespace FastenUp.Tests.Bindables
         {
             public static MonoBehaviourTest<TestingBehaviour> Create() =>
                 new(false);
-            
+
             public void SetName(string bindableName) =>
                 this.EditSerializable().Field(nameof(Name), bindableName).Apply();
 

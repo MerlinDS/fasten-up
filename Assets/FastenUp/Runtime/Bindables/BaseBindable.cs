@@ -1,16 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using FastenUp.Runtime.Base;
 using FastenUp.Runtime.Delegates;
-using FastenUp.Runtime.Exceptions;
 using UnityEngine;
 
 namespace FastenUp.Runtime.Bindables
 {
+    /// <summary>
+    /// Base class for all bindables.
+    /// </summary>
+    /// <remarks>
+    /// This class is provide basic functionality for all bindables, like name validation and binding to mediators.
+    /// </remarks>
     [Serializable]
     public abstract class BaseBindable : MonoBehaviour, IBindable
     {
-        private IInternalMediator _mediator;
+        private readonly List<IInternalMediator> _mediators = new(1);//One mediator is enough for most cases
 
         [field: SerializeField] public string Name { get; [ExcludeFromCodeCoverage] private set; }
 
@@ -21,27 +27,43 @@ namespace FastenUp.Runtime.Bindables
 
         protected virtual void OnEnable()
         {
-            ValidateName();
-            CacheMediator();
-            _mediator.Bind(this);
+            if (!ValidateName())
+                return;
+
+            if (!TryCacheMediator())
+                return;
+
+            foreach (var mediator in _mediators) 
+                mediator.Bind(this);
         }
 
         protected virtual void OnDisable()
         {
-            _mediator?.Unbind(this);
-        }
-        
-        private void ValidateName()
-        {
-            if (string.IsNullOrEmpty(Name))
-               throw new FastenUpBindableException("Bindable name is null or empty.", gameObject);
+            foreach (var mediator in _mediators)
+                mediator.Unbind(this);
         }
 
-        private void CacheMediator()
+        private bool ValidateName()
         {
-            _mediator ??= GetComponentInParent<IInternalMediator>();
-            if (_mediator is null)
-                throw  new FastenUpBindableException("Mediator not found", gameObject);
+            if (!string.IsNullOrEmpty(Name))
+                return true;
+
+            Debug.LogError($"{name} will be ignored: name for binding was not set!", gameObject);
+            return false;
+        }
+
+        private bool TryCacheMediator()
+        {
+            if (_mediators.Count > 0)//Already cached
+                return false;
+            
+            _mediators.AddRange(GetComponentsInParent<IInternalMediator>());
+            if (_mediators.Count > 0)
+                return true;
+            
+            Debug.LogError($"{name} will be ignored: {nameof(IMediator)} was not found!", gameObject);
+            return false;
+
         }
     }
 }
