@@ -58,7 +58,7 @@ namespace FastenUp.Tests.Base
             sut.As<IInternalBindPoint<bool>>().Add(bindable);
             Action act = () => sut.As<IInternalBindPoint<bool>>().Remove(bindable);
             //Act & Assert
-            act.Should().NotThrow<FastenUpBindableException>();
+            act.Should().NotThrow<Exception>();
         }
 
         [Test]
