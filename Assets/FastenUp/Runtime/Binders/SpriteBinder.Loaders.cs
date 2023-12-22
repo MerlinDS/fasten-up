@@ -1,8 +1,9 @@
+using FastenUp.Runtime.Bindables;
 using UnityEngine;
 
-namespace FastenUp.Runtime.Bindables
+namespace FastenUp.Runtime.Binders
 {
-    public sealed partial class BindableSprite : IBindable<string>
+    public sealed partial class SpriteBinder : IBindable<string>
     {
         /// <inheritdoc />
         public void SetValue(string value)
