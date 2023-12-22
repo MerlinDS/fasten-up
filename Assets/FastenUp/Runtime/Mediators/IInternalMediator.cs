@@ -1,4 +1,4 @@
-﻿using FastenUp.Runtime.Bindables;
+﻿using FastenUp.Runtime.Binders;
 
 namespace FastenUp.Runtime.Mediators
 {
@@ -8,7 +8,7 @@ namespace FastenUp.Runtime.Mediators
     /// </summary>
     public interface IInternalMediator
     {
-        void Bind(IBindable bindable);
-        void Unbind(IBindable bindable);
+        void Bind(IBinder binder);
+        void Unbind(IBinder binder);
     }
 }

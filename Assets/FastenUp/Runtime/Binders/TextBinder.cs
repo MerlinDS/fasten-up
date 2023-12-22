@@ -1,17 +1,16 @@
-﻿using FastenUp.Runtime.Bindables;
-using FastenUp.Runtime.Utils;
+﻿using FastenUp.Runtime.Utils;
 using TMPro;
 using UnityEngine;
 
 namespace FastenUp.Runtime.Binders
 {
     /// <summary>
-    /// The one-way <see cref="IBindable"/> binds a value to the text component.
+    /// The one-way <see cref="IBinder"/> binds a value to the text component.
     /// </summary>
     [RequireComponent(typeof(TextMeshProUGUI))]
     [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Text Binders" , 1)]
     [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#text")]
-    public sealed partial class TextBinder : BaseBindable, IBindable<string>
+    public sealed partial class TextBinder : BaseBinder, IBinder<string>
     {
         private TextMeshProUGUI _component;
 

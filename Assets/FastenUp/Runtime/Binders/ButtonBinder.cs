@@ -1,5 +1,4 @@
-﻿using FastenUp.Runtime.Bindables;
-using FastenUp.Runtime.Utils;
+﻿using FastenUp.Runtime.Utils;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -7,12 +6,12 @@ using UnityEngine.UI;
 namespace FastenUp.Runtime.Binders
 {
     /// <summary>
-    /// The one-way <see cref="IBindable"/> binds a value to the component with <see cref="UnityAction"/> field.
+    /// The one-way <see cref="IBinder"/> binds a value to the component with <see cref="UnityAction"/> field.
     /// </summary>
     [RequireComponent(typeof(Button))]
     [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Button Binder", 0)]
     [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#button")]
-    public class ButtonBinder : BaseBindable, IBindableListener<UnityAction>
+    public class ButtonBinder : BaseBinder, IEventBinder<UnityAction>
     {
         private Button _component;
 

@@ -1,6 +1,6 @@
 ﻿using System;
 using FastenUp.Runtime.Base;
-using FastenUp.Runtime.Bindables;
+using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Exceptions;
 using FluentAssertions;
 using NSubstitute;
@@ -17,7 +17,7 @@ namespace FastenUp.Tests.Base
         public void AddBindableListener_When_listener_already_added_Should_throw_exception()
         {
             //Arrange
-            var bindableListener = Substitute.For<IBindableListener<UnityAction>>();
+            var bindableListener = Substitute.For<IEventBinder<UnityAction>>();
             var sut = new BindAction();
             Action act = ()=>
             {
@@ -32,7 +32,7 @@ namespace FastenUp.Tests.Base
         public void AddBindableListener_When_listener_not_added_Should_not_throw_exception()
         {
             //Arrange
-            var bindableListener = Substitute.For<IBindableListener<UnityAction>>();
+            var bindableListener = Substitute.For<IEventBinder<UnityAction>>();
             var sut = new BindAction();
             Action act = ()=> sut.As<IInternalBindAction<UnityAction>>().AddListener(bindableListener);
             //Act & Assert
@@ -43,7 +43,7 @@ namespace FastenUp.Tests.Base
         public void RemoveBindableListener_When_listener_not_added_Should_throw_exception()
         {
             //Arrange
-            var bindableListener = Substitute.For<IBindableListener<UnityAction>>();
+            var bindableListener = Substitute.For<IEventBinder<UnityAction>>();
             var sut = new BindAction();
             Action act = ()=> sut.As<IInternalBindAction<UnityAction>>().RemoveListener(bindableListener);
             //Act & Assert
@@ -54,7 +54,7 @@ namespace FastenUp.Tests.Base
         public void RemoveBindableListener_When_listener_added_Should_not_throw_exception()
         {
             //Arrange
-            var bindableListener = Substitute.For<IBindableListener<UnityAction>>();
+            var bindableListener = Substitute.For<IEventBinder<UnityAction>>();
             var sut = new BindAction();
             Action act = ()=>
             {

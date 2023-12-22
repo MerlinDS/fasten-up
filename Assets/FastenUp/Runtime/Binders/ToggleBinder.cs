@@ -1,17 +1,16 @@
-﻿using FastenUp.Runtime.Bindables;
-using FastenUp.Runtime.Utils;
+﻿using FastenUp.Runtime.Utils;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace FastenUp.Runtime.Binders
 {
     /// <summary>
-    /// The two-way <see cref="IBindable"/> binds a value to the component with <see cref="Toggle"/> component.
+    /// The two-way <see cref="IBinder"/> binds a value to the component with <see cref="Toggle"/> component.
     /// </summary>
     [RequireComponent(typeof(Toggle))]
     [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Toggle Binder" , 4)]
     [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#toggle")]
-    public sealed class ToggleBinder : BaseBindable, IGettableBindable<bool>
+    public sealed class ToggleBinder : BaseBinder, IGettableBinder<bool>
     {
         private Toggle _toggle;
 

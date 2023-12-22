@@ -1,5 +1,5 @@
 ﻿using FastenUp.Runtime.Base;
-using FastenUp.Runtime.Bindables;
+using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Mediators;
 using NSubstitute;
 using NUnit.Framework;
@@ -14,7 +14,7 @@ namespace FastenUp.Tests.Mediators
         public void Test()
         {
             //Arrange
-            var bindable = Substitute.For<IBindable<string>>();
+            var bindable = Substitute.For<IBinder<string>>();
             bindable.Name.Returns("Text");
             var mediator = new TestMediator("Test");
             //Act & Assert
@@ -40,13 +40,13 @@ namespace FastenUp.Tests.Mediators
 
         //TODO: Remove after source generator update
         /// <inheritdoc />
-        public void Bind(IBindable bindable)
+        public void Bind(IBinder binder)
         {
             throw new System.NotImplementedException();
         }
 
         /// <inheritdoc />
-        public void Unbind(IBindable bindable)
+        public void Unbind(IBinder binder)
         {
             throw new System.NotImplementedException();
         }
