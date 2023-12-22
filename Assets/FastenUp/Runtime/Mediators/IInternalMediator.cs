@@ -1,6 +1,6 @@
-using FastenUp.Runtime.Bindables;
+﻿using FastenUp.Runtime.Bindables;
 
-namespace FastenUp.Runtime.Base
+namespace FastenUp.Runtime.Mediators
 {
     /// <summary>
     /// Internal mediator interface for internal use only.

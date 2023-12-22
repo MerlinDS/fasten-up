@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using FastenUp.Runtime.Base;
 using FastenUp.Runtime.Delegates;
+using FastenUp.Runtime.Mediators;
 using UnityEngine;
 
 namespace FastenUp.Runtime.Bindables
