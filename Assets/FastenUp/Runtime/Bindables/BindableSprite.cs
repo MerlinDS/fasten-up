@@ -1,28 +1,28 @@
-﻿using FastenUp.Runtime.Adapters;
-using FastenUp.Runtime.Utils;
+﻿using FastenUp.Runtime.Utils;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace FastenUp.Runtime.Bindables
 {
     /// <summary>
     /// The one-way <see cref="IBindable"/> binds a value to the component with <see cref="Sprite"/> field.
     /// </summary>
-    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Bindable Sprite" , 2)]
+    [RequireComponent(typeof(Image))]
+    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Bindable Sprite", 2)]
     [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#sprite")]
     public sealed partial class BindableSprite : BaseBindable, IBindable<Sprite>
     {
-        private IComponentFieldAdapter<Sprite> _adapter;
+        private Image _component;
 
         private void Awake()
         {
-            _adapter = ImageAdapter.Create<Sprite>(gameObject) ??
-                       SpriteRendererAdapter.Create<Sprite>(gameObject);
+            _component = GetComponent<Image>();
         }
 
         public void SetValue(Sprite value)
         {
-            if (_adapter is not null)
-                _adapter.Value = value;
+            _component.sprite = value;
+            _component.enabled = value != null;
         }
     }
 }
