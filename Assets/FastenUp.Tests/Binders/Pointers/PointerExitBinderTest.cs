@@ -1,15 +1,15 @@
-﻿using FastenUp.Runtime.Bindables.Pointers;
+﻿using FastenUp.Runtime.Binders.Pointers;
 using NSubstitute;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-namespace FastenUp.Tests.Bindables.Pointers
+namespace FastenUp.Tests.Binders.Pointers
 {
     [TestFixture]
-    [TestOf(typeof(BindablePointerExit))]
-    public class BindablePointerExitTest
+    [TestOf(typeof(PointerExitBinder))]
+    public class PointerExitBinderTest
     {
         [Test]
         public void OnPointerExit_When_has_listener_Should_invoke_event()
@@ -24,7 +24,7 @@ namespace FastenUp.Tests.Bindables.Pointers
             actual.Received(1).Invoke(Arg.Any<PointerEventData>());
         }
         
-        private static BindablePointerExit CreateSut() => 
-            new GameObject().AddComponent<BindablePointerExit>();
+        private static PointerExitBinder CreateSut() => 
+            new GameObject().AddComponent<PointerExitBinder>();
     }
 }
