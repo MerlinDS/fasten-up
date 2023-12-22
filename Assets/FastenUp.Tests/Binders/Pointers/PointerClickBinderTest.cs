@@ -1,15 +1,15 @@
-﻿using FastenUp.Runtime.Bindables.Pointers;
+﻿using FastenUp.Runtime.Binders.Pointers;
 using NSubstitute;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-namespace FastenUp.Tests.Bindables.Pointers
+namespace FastenUp.Tests.Binders.Pointers
 {
     [TestFixture]
-    [TestOf(typeof(BindablePointerClick))]
-    public class BindablePointerClickTest
+    [TestOf(typeof(PointerClickBinder))]
+    public class PointerClickBinderTest
     {
         [Test]
         public void OnPointerClick_When_has_listener_Should_invoke_on_click()
@@ -24,10 +24,10 @@ namespace FastenUp.Tests.Bindables.Pointers
             actual.Received(1).Invoke(Arg.Any<PointerEventData>());
         }
 
-        private static BindablePointerClick CreateSut()
+        private static PointerClickBinder CreateSut()
         {
             var go = new GameObject();
-            return go.AddComponent<BindablePointerClick>();
+            return go.AddComponent<PointerClickBinder>();
         }
     }
 }
