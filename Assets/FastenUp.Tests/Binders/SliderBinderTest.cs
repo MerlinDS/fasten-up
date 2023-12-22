@@ -6,12 +6,13 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityTestingAssist.Runtime;
+using SliderBinder = FastenUp.Runtime.Binders.SliderBinder;
 
-namespace FastenUp.Tests.Bindables
+namespace FastenUp.Tests.Binders
 {
     [TestFixture]
-    [TestOf(typeof(BindableSlider))]
-    public class BindableSliderTest
+    [TestOf(typeof(SliderBinder))]
+    public class SliderBinderTest
     {
         [Test]
         public void Set_Value_When_type_float_Should_set_value_to_slider_silently()
@@ -134,10 +135,10 @@ namespace FastenUp.Tests.Bindables
         }
 
 
-        private static BindableSlider CreateSut()
+        private static SliderBinder CreateSut()
         {
-            var gameObject = new GameObject(nameof(BindableSliderTest));
-            var sut = gameObject.AddComponent<BindableSlider>();
+            var gameObject = new GameObject(nameof(SliderBinderTest));
+            var sut = gameObject.AddComponent<SliderBinder>();
             sut.ExecuteAwake();
             return sut;
         }

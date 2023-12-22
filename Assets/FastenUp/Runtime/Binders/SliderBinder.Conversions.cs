@@ -1,8 +1,9 @@
+using FastenUp.Runtime.Bindables;
 using UnityEngine;
 
-namespace FastenUp.Runtime.Bindables
+namespace FastenUp.Runtime.Binders
 {
-    public sealed partial class BindableSlider : IGettableBindable<int>, IBindable<Vector2Int>
+    public sealed partial class SliderBinder : IGettableBindable<int>, IBindable<Vector2Int>
     {
         /// <inheritdoc />
         public void SetValue(int value)
