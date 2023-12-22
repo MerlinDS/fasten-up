@@ -10,17 +10,17 @@ using NUnit.Framework;
 namespace FastenUp.Tests.Base
 {
     [TestFixture]
-    [TestOf(typeof(BindPoint<>))]
-    public class BindPointTests
+    [TestOf(typeof(Bindable<>))]
+    public class BindableTests
     {
         [Test]
         public void Add_When_bindable_was_not_added_Should_set_value()
         {
             //Arrange
             var bindable = Substitute.For<IBinder<bool>>();
-            var sut = new BindPoint<bool>();
+            var sut = new Bindable<bool>();
             //Act & Assert
-            sut.As<IInternalBindPoint<bool>>().Add(bindable);
+            sut.As<IInternalBindable<bool>>().Add(bindable);
             bindable.Received(1).SetValue(false);
         }
 
@@ -29,9 +29,9 @@ namespace FastenUp.Tests.Base
         {
             //Arrange
             var bindable = Substitute.For<IGettableBinder<bool>>();
-            var sut = new BindPoint<bool>();
+            var sut = new Bindable<bool>();
             //Act & Assert
-            sut.As<IInternalBindPoint<bool>>().Add(bindable);
+            sut.As<IInternalBindable<bool>>().Add(bindable);
             bindable.Received(1).SetValue(false);
             bindable.Received(1).OnBinderChanged += Arg.Any<OnBinderChanged>();
         }
@@ -41,9 +41,9 @@ namespace FastenUp.Tests.Base
         {
             //Arrange
             var bindable = Substitute.For<IBinder<bool>>();
-            var sut = new BindPoint<bool>();
-            sut.As<IInternalBindPoint<bool>>().Add(bindable);
-            Action act = () => sut.As<IInternalBindPoint<bool>>().Add(bindable);
+            var sut = new Bindable<bool>();
+            sut.As<IInternalBindable<bool>>().Add(bindable);
+            Action act = () => sut.As<IInternalBindable<bool>>().Add(bindable);
             //Act & Assert
             act.Should().Throw<FastenUpException>()
                 .WithMessage("Bindable already added to bind point.");
@@ -54,9 +54,9 @@ namespace FastenUp.Tests.Base
         {
             //Arrange
             var bindable = Substitute.For<IBinder<bool>>();
-            var sut = new BindPoint<bool>();
-            sut.As<IInternalBindPoint<bool>>().Add(bindable);
-            Action act = () => sut.As<IInternalBindPoint<bool>>().Remove(bindable);
+            var sut = new Bindable<bool>();
+            sut.As<IInternalBindable<bool>>().Add(bindable);
+            Action act = () => sut.As<IInternalBindable<bool>>().Remove(bindable);
             //Act & Assert
             act.Should().NotThrow<Exception>();
         }
@@ -66,10 +66,10 @@ namespace FastenUp.Tests.Base
         {
             //Arrange
             var bindable = Substitute.For<IGettableBinder<bool>>();
-            var sut = new BindPoint<bool>();
-            sut.As<IInternalBindPoint<bool>>().Add(bindable);
+            var sut = new Bindable<bool>();
+            sut.As<IInternalBindable<bool>>().Add(bindable);
             //Act
-            sut.As<IInternalBindPoint<bool>>().Remove(bindable);
+            sut.As<IInternalBindable<bool>>().Remove(bindable);
             //Assert
             bindable.Received(1).OnBinderChanged -= Arg.Any<OnBinderChanged>();
         }
@@ -79,8 +79,8 @@ namespace FastenUp.Tests.Base
         {
             //Arrange
             var bindable = Substitute.For<IBinder<bool>>();
-            var sut = new BindPoint<bool>();
-            Action act = () => sut.As<IInternalBindPoint<bool>>().Remove(bindable);
+            var sut = new Bindable<bool>();
+            Action act = () => sut.As<IInternalBindable<bool>>().Remove(bindable);
             //Act & Assert
             act.Should().Throw<FastenUpException>()
                 .WithMessage("Bindable not found in bind point.");
@@ -92,9 +92,9 @@ namespace FastenUp.Tests.Base
             //Arrange
             var bindable1 = Substitute.For<IBinder<bool>>();
             var bindable2 = Substitute.For<IBinder<bool>>();
-            var sut = new BindPoint<bool>();
-            sut.As<IInternalBindPoint<bool>>().Add(bindable1);
-            sut.As<IInternalBindPoint<bool>>().Add(bindable2);
+            var sut = new Bindable<bool>();
+            sut.As<IInternalBindable<bool>>().Add(bindable1);
+            sut.As<IInternalBindable<bool>>().Add(bindable2);
             //Act
             sut.Value = true;
             //Assert
@@ -109,8 +109,8 @@ namespace FastenUp.Tests.Base
             var bindable = Substitute.For<IGettableBinder<bool>>();
             bindable.GetValue().Returns(true);
 
-            var sut = new BindPoint<bool>();
-            sut.As<IInternalBindPoint<bool>>().Add(bindable);
+            var sut = new Bindable<bool>();
+            sut.As<IInternalBindable<bool>>().Add(bindable);
             //Act
             bindable.OnBinderChanged += Raise.Event<OnBinderChanged>(bindable);
             //Assert

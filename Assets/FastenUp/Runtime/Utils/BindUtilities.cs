@@ -6,32 +6,32 @@ namespace FastenUp.Runtime.Utils
 {
     public static class BindUtilities
     {
-        public static void TryBind<T>(IInternalBindPoint<T> bindPoint,
+        public static void TryBind<T>(IInternalBindable<T> bindable,
             ReadOnlySpan<char> name, IBinder binder)
         {
             if (name.SequenceEqual(binder?.Name) && binder is IBinder<T> bindableT)
-                bindPoint.Add(bindableT);
+                bindable.Add(bindableT);
         }
 
-        public static void TryUnbind<T>(IInternalBindPoint<T> bindPoint,
+        public static void TryUnbind<T>(IInternalBindable<T> bindable,
             ReadOnlySpan<char> name, IBinder binder)
         {
             if (name.SequenceEqual(binder?.Name) && binder is IBinder<T> bindableT)
-                bindPoint.Remove(bindableT);
+                bindable.Remove(bindableT);
         }
         
-        public static void TryBind<T>(IInternalBindAction<T> bindAction,
+        public static void TryBind<T>(IInternalBindableEvent<T> bindableEvent,
             ReadOnlySpan<char> name, IBinder binder)
         {
             if (name.SequenceEqual(binder?.Name) && binder is IEventBinder<T> bindableT)
-                bindAction.AddListener(bindableT);
+                bindableEvent.Add(bindableT);
         }
         
-        public static void TryUnbind<T>(IInternalBindAction<T> bindAction,
+        public static void TryUnbind<T>(IInternalBindableEvent<T> bindableEvent,
             ReadOnlySpan<char> name, IBinder binder)
         {
             if (name.SequenceEqual(binder?.Name) && binder is IEventBinder<T> bindableT)
-                bindAction.RemoveListener(bindableT);
+                bindableEvent.Remove(bindableT);
         }
     }
 }

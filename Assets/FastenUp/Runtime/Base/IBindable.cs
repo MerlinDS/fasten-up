@@ -8,7 +8,7 @@ namespace FastenUp.Runtime.Base
     /// This interface is used to bind <see cref="IBinder{T}"/>s to a <see cref="IMediator"/>.
     /// </summary>
     /// <typeparam name="T">Type of the value that will be set or get by the bindable component</typeparam>
-    public interface IBindPoint<T>
+    public interface IBindable<T>
     {
         /// <summary>
         /// The value that will be set or get by the bindable component.

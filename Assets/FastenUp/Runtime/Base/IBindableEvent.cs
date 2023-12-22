@@ -6,7 +6,7 @@ namespace FastenUp.Runtime.Base
     /// 
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public interface IBindAction<in T> : IDisposable
+    public interface IBindableEvent<in T> : IDisposable
     {
         /// <summary>
         /// Checks if bind action has listeners.
