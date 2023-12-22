@@ -1,15 +1,15 @@
-﻿using FastenUp.Runtime.Bindables;
-using FluentAssertions;
+﻿using FluentAssertions;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityTestingAssist.Runtime;
+using SpriteBinder = FastenUp.Runtime.Binders.SpriteBinder;
 
-namespace FastenUp.Tests.Bindables
+namespace FastenUp.Tests.Binders
 {
     [TestFixture]
-    [TestOf(typeof(BindableSprite))]
-    public class BindableSpriteTest
+    [TestOf(typeof(SpriteBinder))]
+    public class SpriteBinderTest
     {
 
         [Test]
@@ -48,10 +48,10 @@ namespace FastenUp.Tests.Bindables
             sut.GetComponent<Image>().sprite.Should().BeNull();
         }
 
-        private static BindableSprite CreateSut()
+        private static SpriteBinder CreateSut()
         {
-            var gameObject = new GameObject(nameof(BindableSpriteTest));
-            var sut = gameObject.AddComponent<BindableSprite>();
+            var gameObject = new GameObject(nameof(SpriteBinderTest));
+            var sut = gameObject.AddComponent<SpriteBinder>();
             sut.ExecuteAwake();
             return sut;
         }
