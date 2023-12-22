@@ -68,7 +68,7 @@ namespace FastenUp.SourceGenerator
                 if (line.Length <= 0)
                     continue;
 
-                _builder.Append(Templates.Tab).Append(Templates.Tab).Append(Templates.Tab).AppendLine(line.Trim());
+                _builder.Append(Templates.Tab).Append(Templates.Tab).Append(Templates.Tab).AppendLine(line.TrimEnd());
             }
 
             _builder.Append(Templates.Tab).Append(Templates.Tab).Append(Templates.CloseBracket);

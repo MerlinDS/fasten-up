@@ -1,4 +1,5 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System;
+using System.Runtime.CompilerServices;
 using FastenUp.Runtime.Bindables;
 using FastenUp.Runtime.Binders;
 
@@ -6,6 +7,10 @@ namespace FastenUp.Runtime.Utils
 {
     public static class BindUtilities
     {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static bool NameEquals(ReadOnlySpan<char> name, IBinder binder) => 
+            binder is not null && name.SequenceEqual(binder.Name);
+
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void TryBind<T>(IInternalBindable<T> bindable, IBinder binder)
         {
