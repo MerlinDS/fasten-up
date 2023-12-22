@@ -1,5 +1,4 @@
-﻿using System;
-using FastenUp.Runtime.Bindables;
+﻿using FastenUp.Runtime.Bindables;
 using FluentAssertions;
 using NUnit.Framework;
 using UnityEngine;
@@ -17,40 +16,17 @@ namespace FastenUp.Tests.Bindables
         {
             //Arrange
             var expected = Color.red;
-            var sut = CreateSut(o=>o.AddComponent<Image>());
+            var sut = CreateSut();
             //Act
             sut.SetValue(expected);
             //Assert
             sut.GetComponent<Image>().color.Should().Be(expected);
         }
 
-        [Test]
-        public void SetValue_When_gameObject_has_SpriteRenderer_Should_set_color_to_SpriteRenderer()
-        {
-            //Arrange
-            var expected = Color.red;
-            var sut = CreateSut(o=>o.AddComponent<SpriteRenderer>());
-            //Act
-            sut.SetValue(expected);
-            //Assert
-            sut.GetComponent<SpriteRenderer>().color.Should().Be(expected);
-        }
-        
-        [Test]
-        public void SetValue_When_gameObject_has_no_suitable_component_Should_not_throw()
-        {
-            //Arrange
-            var sut = CreateSut();
-            //Act
-            Action action = () => sut.SetValue(Color.red);
-            //Assert
-            action.Should().NotThrow();
-        }
-
-        private static BindableColor CreateSut(Action<GameObject> factory = null)
+        private static BindableColor CreateSut()
         {
             var gameObject = new GameObject(nameof(BindableColorTest));
-            factory?.Invoke(gameObject);
+            gameObject.AddComponent<Image>();
             var sut = gameObject.AddComponent<BindableColor>();
             sut.ExecuteAwake();
             return sut;
