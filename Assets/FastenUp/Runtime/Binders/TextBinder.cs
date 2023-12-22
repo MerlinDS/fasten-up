@@ -8,7 +8,7 @@ namespace FastenUp.Runtime.Binders
     /// The one-way <see cref="IBinder"/> binds a value to the text component.
     /// </summary>
     [RequireComponent(typeof(TextMeshProUGUI))]
-    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Text Binders" , 1)]
+    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Text Binder" , 1)]
     [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#text")]
     public sealed partial class TextBinder : BaseBinder, IBinder<string>
     {
