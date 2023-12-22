@@ -1,22 +1,17 @@
-﻿using System.Linq;
-using FastenUp.Runtime.Bindables;
-using FastenUp.Runtime.Binders;
-using FastenUp.Runtime.Mediators;
-using FastenUp.Runtime.Utils;
-using NSubstitute;
+﻿using NSubstitute;
 using NUnit.Framework;
 
 namespace FastenUp.Tests.Mediators
 {
     [TestFixture]
-    [TestOf(typeof(IInternalMediator))]
+    [TestOf(typeof(FastenUp.Runtime.Mediators.IInternalMediator))]
     public class MediatorGenerationTests
     {
         [Test]
         public void Test()
         {
             //Arrange
-            var bindable = Substitute.For<IBinder<string>>();
+            var bindable = Substitute.For<FastenUp.Runtime.Binders.IBinder<string>>();
             bindable.Name.Returns("Text");
             var mediator = new TestMediator("Test");
             //Act & Assert
@@ -30,9 +25,9 @@ namespace FastenUp.Tests.Mediators
         }
     }
 
-    internal sealed partial class TestMediator : IMediator
+    internal sealed partial class TestMediator : FastenUp.Runtime.Mediators.IMediator
     {
-        private Bindable<string> Text { get; } = new();
+        private FastenUp.Runtime.Bindables.Bindable<string> Text { get; } = new();
 
         public TestMediator(string text) =>
             Text.Value = text;
@@ -41,21 +36,23 @@ namespace FastenUp.Tests.Mediators
             Text.Value = text;
     }
 
-    //TODO: Remove after source generator update
-    internal partial class TestMediator : IInternalMediator
+    //Generated code will look like this:
+    /*
+    internal partial class TestMediator : FastenUp.Runtime.Mediators.IInternalMediator
     {
         /// <inheritdoc />
-        public void Bind(IBinder binder)
+        public void Bind(FastenUp.Runtime.Binders.IBinder binder)
         {
-            if (nameof(Text).SequenceEqual(binder.Name))
-                BindUtilities.TryBind(Text, binder);
+            if (Runtime.Utils.BindUtilities.NameEquals(nameof(Text), binder))
+                Runtime.Utils.BindUtilities.TryBind(Text, binder);
         }
 
         /// <inheritdoc />
-        public void Unbind(IBinder binder)
+        public void Unbind(FastenUp.Runtime.Binders.IBinder binder)
         {
-            if (nameof(Text).SequenceEqual(binder.Name))
-                BindUtilities.TryUnbind(Text, binder);
+            if (Runtime.Utils.BindUtilities.NameEquals(nameof(Text), binder))
+                Runtime.Utils.BindUtilities.TryUnbind(Text, binder);
         }
     }
+    /**/
 }

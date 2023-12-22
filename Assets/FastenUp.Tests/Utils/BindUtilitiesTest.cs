@@ -12,6 +12,39 @@ namespace FastenUp.Tests.Utils
     public class BindUtilitiesTest
     {
         [Test]
+        public void NameEquals_When_binder_has_same_name_Should_return_true()
+        {
+            //Arrange
+            var binder = Substitute.For<IBinder>();
+            binder.Name.Returns("Test");
+            //Act
+            var result = BindUtilities.NameEquals("Test", binder);
+            //Assert
+            result.Should().BeTrue();
+        }
+        
+        [Test]
+        public void NameEquals_When_binder_has_different_name_Should_return_false()
+        {
+            //Arrange
+            var binder = Substitute.For<IBinder>();
+            binder.Name.Returns("Test");
+            //Act
+            var result = BindUtilities.NameEquals("Test2", binder);
+            //Assert
+            result.Should().BeFalse();
+        }
+        
+        [Test]
+        public void NameEquals_When_binder_is_null_Should_return_false()
+        {
+            //Act
+            var result = BindUtilities.NameEquals("Test", null);
+            //Assert
+            result.Should().BeFalse();
+        }
+        
+        [Test]
         public void TryBind_When_binder_has_valid_type_Should_bind()
         {
             //Arrange

@@ -14,44 +14,42 @@ namespace FastenUp.SourceGenerator.Tests
         private const string Source = @"
 using System;
 
+namespace FastenUp.Runtime.Binders
+{
+    public interface IBinder{}
+    public interface IBinder<in T> : IBinder{}
+    public interface IEventBinder<out T> : IBinder{}
+
+    public class BaseBinder : IBinder{}
+}
+namespace FastenUp.Runtime.Bindables
+{
+    public interface IInternalBindable{}
+    public interface IInternalBindable<out T> : IInternalBindable{}
+    public interface IInternalBindableEvent<out T> : IInternalBindable{}
+
+    public sealed class Bindable<T> : IBindable<T>, IInternalBindable<T>{}
+
+    public interface IBindableEvent<in T> : IDisposable{}
+    public abstract class BaseBindableEvent<T> : IBindableEvent<T>, IInternalBindableEvent<T>{}
+    public sealed class BindableEvent : BaseBindableEvent<UnityAction>{}
+    public sealed class BindableEvent<T> : BaseBindableEvent<UnityAction<T>>{}
+}
+
+namespace FastenUp.Runtime.Mediators
+{
+    public interface IMediator{}
+    public interface IInternalMediator{}
+}
+
 namespace FastenUp.Runtime.Utils
 {
     public static class BindUtilities
     {
-        internal static void TryBind<T>(IInternalBindPoint<T> bindPoint,
-            ReadOnlySpan<char> name, IBindable bindable){}
-        internal static void TryUnbind<T>(IInternalBindPoint<T> bindPoint,
-            ReadOnlySpan<char> name, IBindable bindable){}
-        internal static void TryBind<T>(IInternalBindAction<T> bindPoint,
-            ReadOnlySpan<char> name, IBindable bindable){}
-        internal static void TryUnbind<T>(IInternalBindAction<T> bindAction,
-            ReadOnlySpan<char> name, IBindable bindable){}
-    }
-}
-namespace FastenUp.Runtime.Bindables
-{
-    public interface IBindable{
-    }
-}
-
-namespace FastenUp.Runtime.Base
-{
-    public interface IMediator{}
-    public interface IInternalBind{}
-    public interface IInternalBindPoint<out T> : IInternalBind
-    {
-    }
-    public interface IInternalBindAction<out T> : IInternalBind
-    {
-    }
-    public interface IBindPoint<T>{}
-    public class BindPoint<T> : IBindPoint<T>, IInternalBindPoint<T>{}
-    public class BindAction<T> : IInternalBindAction<T>{}
-
-    public interface IInternalMediator
-    {
-        void Bind(FastenUp.Runtime.Bindables.IBindable bindable);
-        void Unbind(FastenUp.Runtime.Bindables.IBindable bindable);
+        public static void TryBind<T>(IInternalBindable<T> bindable, IBinder binder){}
+        public static void TryUnbind<T>(IInternalBindable<T> bindable, IBinder binder){}
+        public static void TryBind<T>(IInternalBindableEvent<T> bindableEvent, IBinder eventBinder){}
+        public static void TryUnbind<T>(IInternalBindableEvent<T> bindableEvent, IBinder eventBinder){}
     }
 }
 ";
@@ -65,106 +63,116 @@ namespace FastenUp.Runtime.Base
                 yield return new TestCaseData(@"
 namespace Test
 {
-    public partial class TestMediator : FastenUp.Runtime.Base.IMediator
+    public partial class TestMediator : FastenUp.Runtime.Mediators.IMediator
     {
     }
 }",
                         @"
 namespace Test
 {
-    public partial class TestMediator : FastenUp.Runtime.Base.IInternalMediator
+    public partial class TestMediator : FastenUp.Runtime.Mediators.IInternalMediator
     {
-        public void Bind(FastenUp.Runtime.Bindables.IBindable bindable)
+        public void Bind(FastenUp.Runtime.Binders.IBinder binder)
         {
         }
-        public void Unbind(FastenUp.Runtime.Bindables.IBindable bindable)
+        public void Unbind(FastenUp.Runtime.Binders.IBinder binder)
         {
         }
     }
 }
 ")
-                    .SetName("One mediator without proxies");
+                    .SetName("One mediator without properties");
                 yield return new TestCaseData(@"
 namespace Test
 {
-    public partial class TestMediator : FastenUp.Runtime.Base.IMediator
+    public partial class TestMediator : FastenUp.Runtime.Mediators.IMediator
     {
-        private FastenUp.Runtime.Base.BindPoint<bool> Visibility { get; } = new();
+        private FastenUp.Runtime.Bindables.Bindable<bool> Visibility { get; } = new();
     }
 }",
                         @"
 namespace Test
 {
-    public partial class TestMediator : FastenUp.Runtime.Base.IInternalMediator
+    public partial class TestMediator : FastenUp.Runtime.Mediators.IInternalMediator
     {
-        public void Bind(FastenUp.Runtime.Bindables.IBindable bindable)
+        public void Bind(FastenUp.Runtime.Binders.IBinder binder)
         {
-            FastenUp.Runtime.Utils.BindUtilities.TryBind(Visibility, nameof(Visibility), bindable);
+            if (Runtime.Utils.BindUtilities.NameEquals(nameof(Visibility), binder))
+                Runtime.Utils.BindUtilities.TryBind(Visibility, binder);
         }
-        public void Unbind(FastenUp.Runtime.Bindables.IBindable bindable)
+        public void Unbind(FastenUp.Runtime.Binders.IBinder binder)
         {
-            FastenUp.Runtime.Utils.BindUtilities.TryUnbind(Visibility, nameof(Visibility), bindable);
+            if (Runtime.Utils.BindUtilities.NameEquals(nameof(Visibility), binder))
+                Runtime.Utils.BindUtilities.TryUnbind(Visibility, binder);
         }
     }
 }
 ")
-                    .SetName("One mediator with one proxy field");
+                    .SetName("One mediator with one property");
                 yield return new TestCaseData(@"
 namespace Test
 {
-    public partial class TestMediator : FastenUp.Runtime.Base.IMediator
+    public partial class TestMediator : FastenUp.Runtime.Mediators.IMediator
     {
-        private FastenUp.Runtime.Base.BindPoint<bool> Visibility { get; } = new();
-        private FastenUp.Runtime.Base.BindPoint<int> IntValue { get; } = new();
+        private FastenUp.Runtime.Bindables.Bindable<bool> Visibility { get; } = new();
+        private FastenUp.Runtime.Bindables.Bindable<int> IntValue { get; } = new();
     }
 }",
                         @"
 namespace Test
 {
-    public partial class TestMediator : FastenUp.Runtime.Base.IInternalMediator
+    public partial class TestMediator : FastenUp.Runtime.Mediators.IInternalMediator
     {
-        public void Bind(FastenUp.Runtime.Bindables.IBindable bindable)
+        public void Bind(FastenUp.Runtime.Binders.IBinder binder)
         {
-            FastenUp.Runtime.Utils.BindUtilities.TryBind(Visibility, nameof(Visibility), bindable);
-            FastenUp.Runtime.Utils.BindUtilities.TryBind(IntValue, nameof(IntValue), bindable);
+            if (Runtime.Utils.BindUtilities.NameEquals(nameof(Visibility), binder))
+                Runtime.Utils.BindUtilities.TryBind(Visibility, binder);
+            if (Runtime.Utils.BindUtilities.NameEquals(nameof(IntValue), binder))
+                Runtime.Utils.BindUtilities.TryBind(IntValue, binder);
         }
-        public void Unbind(FastenUp.Runtime.Bindables.IBindable bindable)
+        public void Unbind(FastenUp.Runtime.Binders.IBinder binder)
         {
-            FastenUp.Runtime.Utils.BindUtilities.TryUnbind(Visibility, nameof(Visibility), bindable);
-            FastenUp.Runtime.Utils.BindUtilities.TryUnbind(IntValue, nameof(IntValue), bindable);
+            if (Runtime.Utils.BindUtilities.NameEquals(nameof(Visibility), binder))
+                Runtime.Utils.BindUtilities.TryUnbind(Visibility, binder);
+            if (Runtime.Utils.BindUtilities.NameEquals(nameof(IntValue), binder))
+                Runtime.Utils.BindUtilities.TryUnbind(IntValue, binder);
         }
     }
 }
 ")
-                    .SetName("One mediator with two proxy fields");
+                    .SetName("One mediator with two properties");
                 yield return new TestCaseData(@"
 namespace Test
 {
-    public partial class TestMediator : FastenUp.Runtime.Base.IMediator
+    public partial class TestMediator : FastenUp.Runtime.Mediators.IMediator
     {
-        private FastenUp.Runtime.Base.BindPoint<bool> Visibility { get; } = new();
-        private FastenUp.Runtime.Base.BindAction<int> IntAction { get; } = new();
+        private FastenUp.Runtime.Bindables.Bindable<bool> Visibility { get; } = new();
+        private FastenUp.Runtime.Bindables.BindableEvent<int> OnValueChanged { get; } = new();
     }
 }",
                         @"
 namespace Test
 {
-    public partial class TestMediator : FastenUp.Runtime.Base.IInternalMediator
+    public partial class TestMediator : FastenUp.Runtime.Mediators.IInternalMediator
     {
-        public void Bind(FastenUp.Runtime.Bindables.IBindable bindable)
+        public void Bind(FastenUp.Runtime.Binders.IBinder binder)
         {
-            FastenUp.Runtime.Utils.BindUtilities.TryBind(Visibility, nameof(Visibility), bindable);
-            FastenUp.Runtime.Utils.BindUtilities.TryBind(IntAction, nameof(IntAction), bindable);
+            if (Runtime.Utils.BindUtilities.NameEquals(nameof(Visibility), binder))
+                Runtime.Utils.BindUtilities.TryBind(Visibility, binder);
+            if (Runtime.Utils.BindUtilities.NameEquals(nameof(OnValueChanged), binder))
+                Runtime.Utils.BindUtilities.TryBind(OnValueChanged, binder);
         }
-        public void Unbind(FastenUp.Runtime.Bindables.IBindable bindable)
+        public void Unbind(FastenUp.Runtime.Binders.IBinder binder)
         {
-            FastenUp.Runtime.Utils.BindUtilities.TryUnbind(Visibility, nameof(Visibility), bindable);
-            FastenUp.Runtime.Utils.BindUtilities.TryUnbind(IntAction, nameof(IntAction), bindable);
+            if (Runtime.Utils.BindUtilities.NameEquals(nameof(Visibility), binder))
+                Runtime.Utils.BindUtilities.TryUnbind(Visibility, binder);
+            if (Runtime.Utils.BindUtilities.NameEquals(nameof(OnValueChanged), binder))
+                Runtime.Utils.BindUtilities.TryUnbind(OnValueChanged, binder);
         }
     }
 }
 ")
-                    .SetName("One mediator with action and property");
+                    .SetName("One mediator with one property and one event");
             }
         }
 
@@ -192,93 +200,96 @@ namespace Test
                 yield return new TestCaseData(@"
 using System;
 
-namespace FastenUp.Runtime.Utils
+namespace FastenUp.Runtime.Binders
 {
-    public static class BindUtilities
-    {
-        internal static void TryBind<T>(IInternalBindPoint<T> bindPoint,
-            ReadOnlySpan<char> name, IBindable bindable){}
-        internal static void TryUnbind<T>(IInternalBindPoint<T> bindPoint,
-            ReadOnlySpan<char> name, IBindable bindable){}
-    }
+    public interface IBinder{}
+    public interface IBinder<in T> : IBinder{}
+    public interface IEventBinder<out T> : IBinder{}
+
+    public class BaseBinder : IBinder{}
 }
 namespace FastenUp.Runtime.Bindables
 {
-    public interface IBindable{
-    }
+
 }
 
-namespace FastenUp.Runtime.Base
+namespace FastenUp.Runtime.Mediators
 {
     public interface IMediator{}
-    public interface IBindPoint<T>{}
-    public class BindPoint<T> : IBindPoint<T>
-
-    public interface IInternalMediator
-    {
-        void Bind(FastenUp.Runtime.Bindables.IBindable bindable);
-        void Unbind(FastenUp.Runtime.Bindables.IBindable bindable);
-    }
+    public interface IInternalMediator{}
 }
-").SetName("Without IInternalBindPoint");
+").SetName("Without IInternalBindable");
                 
                 yield return new TestCaseData(@"
 using System;
 
+namespace FastenUp.Runtime.Binders
+{
+    public interface IBinder{}
+    public interface IBinder<in T> : IBinder{}
+    public interface IEventBinder<out T> : IBinder{}
+
+    public class BaseBinder : IBinder{}
+}
+namespace FastenUp.Runtime.Bindables
+{
+    public interface IInternalBindable{}
+    public interface IInternalBindable<out T> : IInternalBindable{}
+
+    public sealed class Bindable<T> : IBindable<T>, IInternalBindable<T>{}
+    public sealed class BindableEvent : BaseBindableEvent<UnityAction>{}
+}
+
+namespace FastenUp.Runtime.Mediators
+{
+    public interface IInternalMediator{}
+}
+
 namespace FastenUp.Runtime.Utils
 {
     public static class BindUtilities
     {
-        internal static void TryBind<T>(IInternalBindPoint<T> bindPoint,
-            ReadOnlySpan<char> name, IBindable bindable){}
-        internal static void TryUnbind<T>(IInternalBindPoint<T> bindPoint,
-            ReadOnlySpan<char> name, IBindable bindable){}
-    }
-}
-namespace FastenUp.Runtime.Bindables
-{
-    public interface IBindable{
-    }
-}
-
-namespace FastenUp.Runtime.Base
-{
-    internal interface IInternalBindPoint<out T>{}
-    public interface IBindPoint<T>{}
-    public class BindPoint<T> : IBindPoint<T>, IInternalBindPoint<T>{}
-
-    public interface IInternalMediator
-    {
-        void Bind(FastenUp.Runtime.Bindables.IBindable bindable);
-        void Unbind(FastenUp.Runtime.Bindables.IBindable bindable);
+        public static void TryBind<T>(IInternalBindable<T> bindable, IBinder binder){}
+        public static void TryUnbind<T>(IInternalBindable<T> bindable, IBinder binder){}
+        public static void TryBind<T>(IInternalBindableEvent<T> bindableEvent, IBinder eventBinder){}
+        public static void TryUnbind<T>(IInternalBindableEvent<T> bindableEvent, IBinder eventBinder){}
     }
 }
 ").SetName("Without Mediator");
                 yield return new TestCaseData(@"
 using System;
 
+namespace FastenUp.Runtime.Binders
+{
+    public interface IBinder{}
+    public interface IBinder<in T> : IBinder{}
+    public interface IEventBinder<out T> : IBinder{}
+
+    public class BaseBinder : IBinder{}
+}
+namespace FastenUp.Runtime.Bindables
+{
+    public interface IInternalBindable{}
+    public interface IInternalBindable<out T> : IInternalBindable{}
+
+    public sealed class Bindable<T> : IBindable<T>, IInternalBindable<T>{}
+    public sealed class BindableEvent : BaseBindableEvent<UnityAction>{}
+}
+
+namespace FastenUp.Runtime.Mediators
+{
+    public interface IMediator{}
+}
+
 namespace FastenUp.Runtime.Utils
 {
     public static class BindUtilities
     {
-        internal static void TryBind<T>(IInternalBindPoint<T> bindPoint,
-            ReadOnlySpan<char> name, IBindable bindable){}
-        internal static void TryUnbind<T>(IInternalBindPoint<T> bindPoint,
-            ReadOnlySpan<char> name, IBindable bindable){}
+        public static void TryBind<T>(IInternalBindable<T> bindable, IBinder binder){}
+        public static void TryUnbind<T>(IInternalBindable<T> bindable, IBinder binder){}
+        public static void TryBind<T>(IInternalBindableEvent<T> bindableEvent, IBinder eventBinder){}
+        public static void TryUnbind<T>(IInternalBindableEvent<T> bindableEvent, IBinder eventBinder){}
     }
-}
-namespace FastenUp.Runtime.Bindables
-{
-    public interface IBindable{
-    }
-}
-
-namespace FastenUp.Runtime.Base
-{
-    public interface IMediator{}
-    internal interface IInternalBindPoint<out T>{}
-    public interface IBindPoint<T>{}
-    public class BindPoint<T> : IBindPoint<T>, IInternalBindPoint<T>{}
 }
 ").SetName("Without Internal mediator");
             }

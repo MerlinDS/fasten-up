@@ -9,9 +9,9 @@ namespace FastenUp.SourceGenerator
     [Generator]
     public class InternalMediatorSourceGenerator : ISourceGenerator
     {
-        private const string MediatorMetadataName = "FastenUp.Runtime.Base.IMediator";
-        private const string InternalMediatorMetadataName = "FastenUp.Runtime.Base.IInternalMediator";
-        private const string BindPointMetadataName = "FastenUp.Runtime.Base.IInternalBind";
+        private const string MediatorMetadataName = "FastenUp.Runtime.Mediators.IMediator";
+        private const string InternalMediatorMetadataName = "FastenUp.Runtime.Mediators.IInternalMediator";
+        private const string BindPointMetadataName = "FastenUp.Runtime.Bindables.IInternalBindable";
 
         /// <inheritdoc />
         public void Initialize(GeneratorInitializationContext context)
@@ -77,23 +77,25 @@ namespace FastenUp.SourceGenerator
 
             var names = GetBindSymbols(sourceSymbol, proxyTypeSymbol)
                 .Select(x => x.Name).ToArray();
+            var parameterBuilder = new ParameterBuilder
+            {
+                Name = "binder",
+                Type = "FastenUp.Runtime.Binders.IBinder"
+            };
             outputBuilder.Methods.Add(new MethodSourceBuilder
             {
                 Name = "Bind",
                 Accessibility = Accessibility.Public,
                 Body = new BindBodyBuilder
                 {
-                    InvocationName = "FastenUp.Runtime.Utils.BindUtilities.TryBind",
-                    ParameterName = "bindable",
+                    NameCheckMethod = "Runtime.Utils.BindUtilities.NameEquals",
+                    BindMethod = "Runtime.Utils.BindUtilities.TryBind",
+                    ParameterName = "binder",
                     BindPointNames = names
                 },
                 Parameters =
                 {
-                    new ParameterBuilder
-                    {
-                        Name = "bindable",
-                        Type = "FastenUp.Runtime.Bindables.IBindable"
-                    }
+                    parameterBuilder
                 }
             });
             outputBuilder.Methods.Add(new MethodSourceBuilder
@@ -102,17 +104,14 @@ namespace FastenUp.SourceGenerator
                 Accessibility = Accessibility.Public,
                 Body = new BindBodyBuilder
                 {
-                    InvocationName = "FastenUp.Runtime.Utils.BindUtilities.TryUnbind",
-                    ParameterName = "bindable",
+                    NameCheckMethod = "Runtime.Utils.BindUtilities.NameEquals",
+                    BindMethod = "Runtime.Utils.BindUtilities.TryUnbind",
+                    ParameterName = "binder",
                     BindPointNames = names
                 },
                 Parameters =
                 {
-                    new ParameterBuilder
-                    {
-                        Name = "bindable",
-                        Type = "FastenUp.Runtime.Bindables.IBindable"
-                    }
+                    parameterBuilder
                 }
             });
 
@@ -125,26 +124,38 @@ namespace FastenUp.SourceGenerator
             var fieldSymbols = mediatorSymbol.GetMembers().OfType<IPropertySymbol>();
             foreach (var symbol in fieldSymbols)
             {
-                var inheritsTarget = false;
-                foreach (var @interface in symbol.Type.Interfaces)
-                {
-                    inheritsTarget = @interface.OriginalDefinition.Interfaces
-                        .Any(x => x.OriginalDefinition.Equals(target, SymbolEqualityComparer.Default));
-                    
-                    if (inheritsTarget)
-                        break;
-                }
-
-                if (inheritsTarget)
+                if (IsInheritedFrom(symbol.Type, target))
                     yield return symbol;
             }
+        }
+
+        private static bool IsInheritedFrom(ITypeSymbol typeSymbol, ISymbol target)
+        {
+            var symbols = new Queue<ITypeSymbol>();
+            symbols.Enqueue(typeSymbol);
+
+            while (symbols.Count > 0)
+            {
+                var symbol = symbols.Dequeue();
+                if (symbol.OriginalDefinition.Equals(target, SymbolEqualityComparer.Default))
+                    return true;
+
+                if (symbol.BaseType != null)
+                    symbols.Enqueue(symbol.BaseType);
+
+                foreach (var s in symbol.Interfaces)
+                    symbols.Enqueue(s);
+            }
+
+            return false;
         }
 
         private class BindBodyBuilder : ISourceBuilder
         {
             public string[] BindPointNames { get; set; }
 
-            public string InvocationName { get; set; }
+            public string NameCheckMethod { get; set; }
+            public string BindMethod { get; set; }
 
             public string ParameterName { get; set; }
 
@@ -160,10 +171,17 @@ namespace FastenUp.SourceGenerator
 
             private void AppendLine(StringBuilder sourceBuilder, string bindPointName)
             {
-                sourceBuilder.Append(InvocationName).Append(Templates.OpenParenthesis);
+                //Append if(NameEquals(nameof(bindPointName), binder))
+                sourceBuilder.Append("if").Append(Templates.Space)
+                    .Append(Templates.OpenParenthesis).Append(NameCheckMethod)
+                    .Append(Templates.OpenParenthesis).Append("nameof").Append(Templates.OpenParenthesis)
+                    .Append(bindPointName).Append(Templates.CloseParenthesis).Append(Templates.Comma)
+                    .Append(Templates.Space).Append(ParameterName).Append(Templates.CloseParenthesis)
+                    .AppendLine(Templates.CloseParenthesis);
+                
+                //Append TryBind(bindPointName, nameof(bindPointName), binder);
+                sourceBuilder.Append(Templates.Tab).Append(BindMethod).Append(Templates.OpenParenthesis);
                 sourceBuilder.Append(bindPointName).Append(Templates.Comma).Append(Templates.Space);
-                sourceBuilder.Append("nameof").Append(Templates.OpenParenthesis).Append(bindPointName)
-                    .Append(Templates.CloseParenthesis).Append(Templates.Comma).Append(Templates.Space);
                 sourceBuilder.Append(ParameterName).Append(Templates.CloseParenthesis).AppendLine(Templates.Semicolon);
             }
         }
