@@ -1,4 +1,5 @@
-﻿using FastenUp.Runtime.Bindables;
+﻿using System.Linq;
+using FastenUp.Runtime.Bindables;
 using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Mediators;
 using FastenUp.Runtime.Utils;
@@ -28,17 +29,16 @@ namespace FastenUp.Tests.Mediators
             bindable.DidNotReceive().SetValue("Test3");
         }
     }
-    
+
     internal sealed partial class TestMediator : IMediator
     {
         private Bindable<string> Text { get; } = new();
 
-        public TestMediator(string text) => 
+        public TestMediator(string text) =>
             Text.Value = text;
 
-        public void SetText(string text) => 
+        public void SetText(string text) =>
             Text.Value = text;
-        
     }
 
     //TODO: Remove after source generator update
@@ -47,13 +47,15 @@ namespace FastenUp.Tests.Mediators
         /// <inheritdoc />
         public void Bind(IBinder binder)
         {
-            BindUtilities.TryBind(Text, nameof(Text), binder);
+            if (nameof(Text).SequenceEqual(binder.Name))
+                BindUtilities.TryBind(Text, binder);
         }
 
         /// <inheritdoc />
         public void Unbind(IBinder binder)
         {
-            BindUtilities.TryUnbind(Text, nameof(Text), binder);
+            if (nameof(Text).SequenceEqual(binder.Name))
+                BindUtilities.TryUnbind(Text, binder);
         }
     }
 }
