@@ -88,8 +88,8 @@ namespace FastenUp.SourceGenerator
                 Accessibility = Accessibility.Public,
                 Body = new BindBodyBuilder
                 {
-                    NameCheckMethod = "Runtime.Utils.BindUtilities.NameEquals",
-                    BindMethod = "Runtime.Utils.BindUtilities.TryBind",
+                    NameCheckMethod = "FastenUp.Runtime.Utils.BindUtilities.NameEquals",
+                    BindMethod = "FastenUp.Runtime.Utils.BindUtilities.TryBind",
                     ParameterName = "binder",
                     BindPointNames = names
                 },
@@ -104,8 +104,8 @@ namespace FastenUp.SourceGenerator
                 Accessibility = Accessibility.Public,
                 Body = new BindBodyBuilder
                 {
-                    NameCheckMethod = "Runtime.Utils.BindUtilities.NameEquals",
-                    BindMethod = "Runtime.Utils.BindUtilities.TryUnbind",
+                    NameCheckMethod = "FastenUp.Runtime.Utils.BindUtilities.NameEquals",
+                    BindMethod = "FastenUp.Runtime.Utils.BindUtilities.TryUnbind",
                     ParameterName = "binder",
                     BindPointNames = names
                 },
