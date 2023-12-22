@@ -1,8 +1,9 @@
 ﻿using System.Globalization;
+using FastenUp.Runtime.Bindables;
 
-namespace FastenUp.Runtime.Bindables
+namespace FastenUp.Runtime.Binders
 {
-    public partial class BindableText : IBindable<int>, IBindable<float>
+    public partial class TextBinder : IBindable<int>, IBindable<float>
     {
         /// <inheritdoc />
         public void SetValue(int value)

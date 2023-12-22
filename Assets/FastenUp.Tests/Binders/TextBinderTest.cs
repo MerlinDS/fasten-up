@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using FastenUp.Runtime.Bindables;
 using FluentAssertions;
 using NUnit.Framework;
 using TMPro;
 using UnityEngine;
 using UnityTestingAssist.Runtime;
+using TextBinder = FastenUp.Runtime.Binders.TextBinder;
 
-namespace FastenUp.Tests.Bindables
+namespace FastenUp.Tests.Binders
 {
     [TestFixture]
-    [TestOf(typeof(BindableText))]
-    public class BindableTextTest
+    [TestOf(typeof(TextBinder))]
+    public class TextBinderTest
     {
         private static IEnumerable<TestCaseData> SeValueTestCases
         {
@@ -25,7 +25,7 @@ namespace FastenUp.Tests.Bindables
                 yield return Create(sut => sut.SetValue(1.1f), "1.1").SetName("Set value to 1.1");
                 yield break;
 
-                TestCaseData Create(Action<BindableText> action, string expected)
+                TestCaseData Create(Action<TextBinder> action, string expected)
                 {
                     return new TestCaseData(action, expected);
                 }
@@ -33,7 +33,7 @@ namespace FastenUp.Tests.Bindables
         }
 
         [TestCaseSource(nameof(SeValueTestCases))]
-        public void SetValue(Action<BindableText> setAction, string expected)
+        public void SetValue(Action<TextBinder> setAction, string expected)
         {
             //Arrange
             var sut = CreateSut();
@@ -43,10 +43,10 @@ namespace FastenUp.Tests.Bindables
             sut.GetComponent<TextMeshProUGUI>().text.Should().Be(expected);
         }
 
-        private static BindableText CreateSut()
+        private static TextBinder CreateSut()
         {
-            var gameObject = new GameObject(nameof(BindableTextTest));
-            var sut = gameObject.AddComponent<BindableText>();
+            var gameObject = new GameObject(nameof(TextBinderTest));
+            var sut = gameObject.AddComponent<TextBinder>();
             sut.ExecuteAwake();
             return sut;
         }
