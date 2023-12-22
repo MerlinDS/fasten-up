@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using FastenUp.Runtime.Bindables;
+using FastenUp.Runtime.Binders;
 using FluentAssertions;
 using NSubstitute;
 using NUnit.Framework;
@@ -10,17 +10,17 @@ using UnityEngine.UI;
 using UnityTestingAssist.Runtime;
 using Object = UnityEngine.Object;
 
-namespace FastenUp.Tests.Bindables
+namespace FastenUp.Tests.Binders
 {
     [TestFixture]
-    [TestOf(typeof(BindableVisibility))]
-    public class BindableVisibilityTest
+    [TestOf(typeof(VisibilityBinder))]
+    public class VisibilityBinderTest
     {
         [Test]
         public void Awake_When_default_is_true_Should_set_value_to_true()
         {
             //Arrange
-            var sut = new GameObject(nameof(BindableVisibilityTest)).AddComponent<BindableVisibility>();
+            var sut = new GameObject(nameof(VisibilityBinderTest)).AddComponent<VisibilityBinder>();
             //Act
             sut.ExecuteAwake();
             //Assert
@@ -31,7 +31,7 @@ namespace FastenUp.Tests.Bindables
         public void Awake_When_default_is_false_Should_set_value_to_false()
         {
             //Arrange
-            var sut = new GameObject(nameof(BindableVisibilityTest)).AddComponent<BindableVisibility>();
+            var sut = new GameObject(nameof(VisibilityBinderTest)).AddComponent<VisibilityBinder>();
             sut.EditSerializable().Field("_defaultVisibility", 1).Apply();
             //Act
             sut.ExecuteAwake();
@@ -114,7 +114,7 @@ namespace FastenUp.Tests.Bindables
 
                     sut.BehaviourChildren.Returns(behaviours);
 
-                    var childGameObject = CreateGameObject(nameof(BindableVisibilityTest) + "Child", container);
+                    var childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", container);
                     var childVisibilityBehaviours = new[]
                     {
                         CreateGameObject(nameof(TestGraphic), childGameObject)
@@ -122,10 +122,10 @@ namespace FastenUp.Tests.Bindables
                         CreateGameObject(nameof(TestLayoutElement), childGameObject)
                             .AddComponent<TestLayoutElement>().Delegate
                     };
-                    var childVisibility = CreateBindableVisibility(childGameObject);
+                    var childVisibility = CreateBinder(childGameObject);
 
                     var child = Substitute.For<ITestCaseSut>();
-                    child.Visibility.Returns(childVisibility);
+                    child.VisibilityBinder.Returns(childVisibility);
                     child.BehaviourChildren.Returns(childVisibilityBehaviours);
 
                     sut.BehaviourChildren.Returns(behaviours);
@@ -138,7 +138,7 @@ namespace FastenUp.Tests.Bindables
 
                     foreach (var child in sut.Children)
                     {
-                        child.Visibility.GetValue().Should()
+                        child.VisibilityBinder.GetValue().Should()
                             .BeTrue("child visibility value should not be changed by parent");
                         foreach (var childBehaviour in child.BehaviourChildren)
                             childBehaviour.Received().OnDisable();
@@ -153,7 +153,7 @@ namespace FastenUp.Tests.Bindables
 
                     foreach (var child in sut.Children)
                     {
-                        child.Visibility.GetValue().Should()
+                        child.VisibilityBinder.GetValue().Should()
                             .BeTrue("child visibility value should not be changed by parent");
                         foreach (var childBehaviour in child.BehaviourChildren)
                             childBehaviour.Received().OnEnable();
@@ -172,7 +172,7 @@ namespace FastenUp.Tests.Bindables
 
                     sut.BehaviourChildren.Returns(behaviours);
 
-                    var childGameObject = CreateGameObject(nameof(BindableVisibilityTest) + "Child", container);
+                    var childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", container);
                     var childVisibilityBehaviours = new[]
                     {
                         CreateGameObject(nameof(TestGraphic), childGameObject)
@@ -180,14 +180,14 @@ namespace FastenUp.Tests.Bindables
                         CreateGameObject(nameof(TestLayoutElement), childGameObject)
                             .AddComponent<TestLayoutElement>().Delegate
                     };
-                    var childVisibility = CreateBindableVisibility(childGameObject);
+                    var childVisibility = CreateBinder(childGameObject);
                     childVisibility.SetValue(false);
 
                     foreach (var behaviour in childVisibilityBehaviours)
                         behaviour.ClearReceivedCalls();
 
                     var child = Substitute.For<ITestCaseSut>();
-                    child.Visibility.Returns(childVisibility);
+                    child.VisibilityBinder.Returns(childVisibility);
                     child.BehaviourChildren.Returns(childVisibilityBehaviours);
 
                     sut.BehaviourChildren.Returns(behaviours);
@@ -201,7 +201,7 @@ namespace FastenUp.Tests.Bindables
 
                     foreach (var child in sut.Children)
                     {
-                        child.Visibility.GetValue().Should()
+                        child.VisibilityBinder.GetValue().Should()
                             .BeFalse("child visibility value should not be changed by parent");
                         foreach (var childBehaviour in child.BehaviourChildren)
                             childBehaviour.DidNotReceive().OnDisable();
@@ -216,7 +216,7 @@ namespace FastenUp.Tests.Bindables
 
                     foreach (var child in sut.Children)
                     {
-                        child.Visibility.GetValue().Should()
+                        child.VisibilityBinder.GetValue().Should()
                             .BeFalse("child visibility value should not be changed by parent");
                         foreach (var childBehaviour in child.BehaviourChildren)
                             childBehaviour.DidNotReceive().OnEnable();
@@ -232,7 +232,7 @@ namespace FastenUp.Tests.Bindables
             //Arrange
             var sut = builder.Build();
             if (value)
-                sut.Visibility.SetValue(false);
+                sut.VisibilityBinder.SetValue(false);
 
             if (sut.BehaviourChildren != null)
             {
@@ -241,9 +241,9 @@ namespace FastenUp.Tests.Bindables
             }
 
             //Act
-            sut.Visibility.SetValue(value);
+            sut.VisibilityBinder.SetValue(value);
             //Assert
-            sut.Visibility.GetValue().Should().Be(value);
+            sut.VisibilityBinder.GetValue().Should().Be(value);
             assert(sut);
         }
 
@@ -251,9 +251,9 @@ namespace FastenUp.Tests.Bindables
         public void SetValue_When_value_true_and_parent_not_visible_Should_not_enable_children()
         {
             //Arrange
-            var parent = CreateBindableVisibility(CreateGameObject(nameof(BindableVisibilityTest)));
+            var parent = CreateBinder(CreateGameObject(nameof(VisibilityBinderTest)));
             parent.SetValue(false);
-            var childGameObject = CreateGameObject(nameof(BindableVisibilityTest) + "Child", parent.gameObject);
+            var childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", parent.gameObject);
             var childVisibilityBehaviours = new[]
             {
                 CreateGameObject(nameof(TestGraphic), childGameObject)
@@ -261,7 +261,7 @@ namespace FastenUp.Tests.Bindables
                 CreateGameObject(nameof(TestLayoutElement), childGameObject)
                     .AddComponent<TestLayoutElement>().Delegate
             };
-            var sut = CreateBindableVisibility(childGameObject);
+            var sut = CreateBinder(childGameObject);
             sut.SetValue(false);
 
             foreach (var behaviour in childVisibilityBehaviours)
@@ -278,8 +278,8 @@ namespace FastenUp.Tests.Bindables
         public void SetValue_When_value_false_and_children_gameObjects_disabled_Should_not_enable_children()
         {
             //Arrange
-            var gameObject = CreateGameObject(nameof(BindableVisibilityTest));
-            var childGameObject = CreateGameObject(nameof(BindableVisibilityTest) + "Child", gameObject);
+            var gameObject = CreateGameObject(nameof(VisibilityBinderTest));
+            var childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", gameObject);
 
             var behaviours = new[]
             {
@@ -287,7 +287,7 @@ namespace FastenUp.Tests.Bindables
                 childGameObject.AddComponent<TestLayoutElement>().Delegate
             };
             childGameObject.SetActive(false);
-            var sut = CreateBindableVisibility(gameObject);
+            var sut = CreateBinder(gameObject);
 
             foreach (var behaviour in behaviours)
                 behaviour.ClearReceivedCalls();
@@ -303,10 +303,10 @@ namespace FastenUp.Tests.Bindables
         public void SetValue_When_child_gameObject_with_behaviour_was_destroyed_and_cache_not_rebuilt_Should_log_error()
         {
             //Arrange
-            var gameObject = CreateGameObject(nameof(BindableVisibilityTest));
-            var childGameObject = CreateGameObject(nameof(BindableVisibilityTest) + "Child", gameObject);
+            var gameObject = CreateGameObject(nameof(VisibilityBinderTest));
+            var childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", gameObject);
             childGameObject.AddComponent<TestGraphic>();
-            var sut = CreateBindableVisibility(gameObject);
+            var sut = CreateBinder(gameObject);
             //Act
             Object.DestroyImmediate(childGameObject);
             sut.SetValue(false);
@@ -319,10 +319,10 @@ namespace FastenUp.Tests.Bindables
             SetValue_When_child_gameObject_with_visibility_was_destroyed_and_cache_not_rebuilt_Should_log_error()
         {
             //Arrange
-            var gameObject = CreateGameObject(nameof(BindableVisibilityTest));
-            var childGameObject = CreateGameObject(nameof(BindableVisibilityTest) + "Child", gameObject);
-            childGameObject.AddComponent<BindableVisibility>();
-            var sut = CreateBindableVisibility(gameObject);
+            var gameObject = CreateGameObject(nameof(VisibilityBinderTest));
+            var childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", gameObject);
+            childGameObject.AddComponent<VisibilityBinder>();
+            var sut = CreateBinder(gameObject);
             //Act
             Object.DestroyImmediate(childGameObject);
             sut.SetValue(false);
@@ -334,10 +334,10 @@ namespace FastenUp.Tests.Bindables
         public void SetValue_When_child_gameObject_with_behaviour_was_destroyed_and_cache_rebuilt_Should_not_log_error()
         {
             //Arrange
-            var gameObject = CreateGameObject(nameof(BindableVisibilityTest));
-            var childGameObject = CreateGameObject(nameof(BindableVisibilityTest) + "Child", gameObject);
+            var gameObject = CreateGameObject(nameof(VisibilityBinderTest));
+            var childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", gameObject);
             childGameObject.AddComponent<TestGraphic>();
-            var sut = CreateBindableVisibility(gameObject);
+            var sut = CreateBinder(gameObject);
             //Act
             Object.DestroyImmediate(childGameObject);
             sut.RebuildCache();
@@ -350,10 +350,10 @@ namespace FastenUp.Tests.Bindables
         public void SetValue_When_child_gameObject_with_visibility_was_destroyed_and_cache_rebuilt_Should_not_log_error()
         {
             //Arrange
-            var gameObject = CreateGameObject(nameof(BindableVisibilityTest));
-            var childGameObject = CreateGameObject(nameof(BindableVisibilityTest) + "Child", gameObject);
-            childGameObject.AddComponent<BindableVisibility>();
-            var sut = CreateBindableVisibility(gameObject);
+            var gameObject = CreateGameObject(nameof(VisibilityBinderTest));
+            var childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", gameObject);
+            childGameObject.AddComponent<VisibilityBinder>();
+            var sut = CreateBinder(gameObject);
             //Act
             Object.DestroyImmediate(childGameObject);
             sut.RebuildCache();
@@ -368,18 +368,18 @@ namespace FastenUp.Tests.Bindables
             builder.Build().Returns(_ =>
             {
                 var sut = Substitute.For<ITestCaseSut>();
-                var container = CreateGameObject(nameof(BindableVisibilityTest));
+                var container = CreateGameObject(nameof(VisibilityBinderTest));
                 build(sut, container);
-                var visibility = CreateBindableVisibility(container);
-                sut.Visibility.Returns(visibility);
+                var visibility = CreateBinder(container);
+                sut.VisibilityBinder.Returns(visibility);
                 return sut;
             });
             return builder;
         }
 
-        private static BindableVisibility CreateBindableVisibility(GameObject gameObject)
+        private static VisibilityBinder CreateBinder(GameObject gameObject)
         {
-            var visibility = gameObject.AddComponent<BindableVisibility>();
+            var visibility = gameObject.AddComponent<VisibilityBinder>();
             visibility.ExecuteAwake();
             return visibility;
         }
@@ -401,7 +401,7 @@ namespace FastenUp.Tests.Bindables
         public interface ITestCaseSut
         {
             Canvas Canvas { get; }
-            BindableVisibility Visibility { get; }
+            VisibilityBinder VisibilityBinder { get; }
             IBehaviourDelegate[] BehaviourChildren { get; }
             ITestCaseSut[] Children { get; }
         }
