@@ -97,13 +97,13 @@ namespace Test
     {
         public void Bind(FastenUp.Runtime.Binders.IBinder binder)
         {
-            if (Runtime.Utils.BindUtilities.NameEquals(nameof(Visibility), binder))
-                Runtime.Utils.BindUtilities.TryBind(Visibility, binder);
+            if (FastenUp.Runtime.Utils.BindUtilities.NameEquals(nameof(Visibility), binder))
+                FastenUp.Runtime.Utils.BindUtilities.TryBind(Visibility, binder);
         }
         public void Unbind(FastenUp.Runtime.Binders.IBinder binder)
         {
-            if (Runtime.Utils.BindUtilities.NameEquals(nameof(Visibility), binder))
-                Runtime.Utils.BindUtilities.TryUnbind(Visibility, binder);
+            if (FastenUp.Runtime.Utils.BindUtilities.NameEquals(nameof(Visibility), binder))
+                FastenUp.Runtime.Utils.BindUtilities.TryUnbind(Visibility, binder);
         }
     }
 }
@@ -125,17 +125,17 @@ namespace Test
     {
         public void Bind(FastenUp.Runtime.Binders.IBinder binder)
         {
-            if (Runtime.Utils.BindUtilities.NameEquals(nameof(Visibility), binder))
-                Runtime.Utils.BindUtilities.TryBind(Visibility, binder);
-            if (Runtime.Utils.BindUtilities.NameEquals(nameof(IntValue), binder))
-                Runtime.Utils.BindUtilities.TryBind(IntValue, binder);
+            if (FastenUp.Runtime.Utils.BindUtilities.NameEquals(nameof(Visibility), binder))
+                FastenUp.Runtime.Utils.BindUtilities.TryBind(Visibility, binder);
+            if (FastenUp.Runtime.Utils.BindUtilities.NameEquals(nameof(IntValue), binder))
+                FastenUp.Runtime.Utils.BindUtilities.TryBind(IntValue, binder);
         }
         public void Unbind(FastenUp.Runtime.Binders.IBinder binder)
         {
-            if (Runtime.Utils.BindUtilities.NameEquals(nameof(Visibility), binder))
-                Runtime.Utils.BindUtilities.TryUnbind(Visibility, binder);
-            if (Runtime.Utils.BindUtilities.NameEquals(nameof(IntValue), binder))
-                Runtime.Utils.BindUtilities.TryUnbind(IntValue, binder);
+            if (FastenUp.Runtime.Utils.BindUtilities.NameEquals(nameof(Visibility), binder))
+                FastenUp.Runtime.Utils.BindUtilities.TryUnbind(Visibility, binder);
+            if (FastenUp.Runtime.Utils.BindUtilities.NameEquals(nameof(IntValue), binder))
+                FastenUp.Runtime.Utils.BindUtilities.TryUnbind(IntValue, binder);
         }
     }
 }
@@ -157,17 +157,17 @@ namespace Test
     {
         public void Bind(FastenUp.Runtime.Binders.IBinder binder)
         {
-            if (Runtime.Utils.BindUtilities.NameEquals(nameof(Visibility), binder))
-                Runtime.Utils.BindUtilities.TryBind(Visibility, binder);
-            if (Runtime.Utils.BindUtilities.NameEquals(nameof(OnValueChanged), binder))
-                Runtime.Utils.BindUtilities.TryBind(OnValueChanged, binder);
+            if (FastenUp.Runtime.Utils.BindUtilities.NameEquals(nameof(Visibility), binder))
+                FastenUp.Runtime.Utils.BindUtilities.TryBind(Visibility, binder);
+            if (FastenUp.Runtime.Utils.BindUtilities.NameEquals(nameof(OnValueChanged), binder))
+                FastenUp.Runtime.Utils.BindUtilities.TryBind(OnValueChanged, binder);
         }
         public void Unbind(FastenUp.Runtime.Binders.IBinder binder)
         {
-            if (Runtime.Utils.BindUtilities.NameEquals(nameof(Visibility), binder))
-                Runtime.Utils.BindUtilities.TryUnbind(Visibility, binder);
-            if (Runtime.Utils.BindUtilities.NameEquals(nameof(OnValueChanged), binder))
-                Runtime.Utils.BindUtilities.TryUnbind(OnValueChanged, binder);
+            if (FastenUp.Runtime.Utils.BindUtilities.NameEquals(nameof(Visibility), binder))
+                FastenUp.Runtime.Utils.BindUtilities.TryUnbind(Visibility, binder);
+            if (FastenUp.Runtime.Utils.BindUtilities.NameEquals(nameof(OnValueChanged), binder))
+                FastenUp.Runtime.Utils.BindUtilities.TryUnbind(OnValueChanged, binder);
         }
     }
 }
