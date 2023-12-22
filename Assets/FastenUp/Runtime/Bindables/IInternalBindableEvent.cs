@@ -9,7 +9,7 @@ namespace FastenUp.Runtime.Bindables
     /// <typeparam name="T"></typeparam>
     public interface IInternalBindableEvent<out T> : IInternalBindable
     {
-        internal void Add(IEventBinder<T> eventBinder);
-        internal void Remove(IEventBinder<T> eventBinder);
+        internal void Bind(IEventBinder<T> eventBinder);
+        internal void Unbind(IEventBinder<T> eventBinder);
     }
 }

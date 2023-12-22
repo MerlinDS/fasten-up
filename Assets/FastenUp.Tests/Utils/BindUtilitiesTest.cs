@@ -20,7 +20,7 @@ namespace FastenUp.Tests.Utils
             //Act
             BindUtilities.TryBind(bindable, binder);
             //Assert
-            bindable.Received(1).Add(binder.As<IBinder<bool>>());
+            bindable.Received(1).Bind(binder.As<IBinder<bool>>());
         }
 
         [Test]
@@ -32,7 +32,7 @@ namespace FastenUp.Tests.Utils
             //Act
             BindUtilities.TryBind(bindable, binder);
             //Assert
-            bindable.DidNotReceive().Add(Arg.Any<IBinder<int>>());
+            bindable.DidNotReceive().Bind(Arg.Any<IBinder<int>>());
         }
 
         [Test]
@@ -43,7 +43,7 @@ namespace FastenUp.Tests.Utils
             //Act
             BindUtilities.TryBind(bindable, null);
             //Assert
-            bindable.DidNotReceive().Add(Arg.Any<IBinder<bool>>());
+            bindable.DidNotReceive().Bind(Arg.Any<IBinder<bool>>());
         }
         
         [Test]
@@ -55,7 +55,7 @@ namespace FastenUp.Tests.Utils
             //Act
             BindUtilities.TryUnbind(bindable, binder);
             //Assert
-            bindable.Received(1).Remove(binder.As<IBinder<bool>>());
+            bindable.Received(1).Unbind(binder.As<IBinder<bool>>());
         }
         
         [Test]
@@ -67,7 +67,7 @@ namespace FastenUp.Tests.Utils
             //Act
             BindUtilities.TryBind(bindable, binder);
             //Assert
-            bindable.DidNotReceive().Remove(Arg.Any<IBinder<int>>());
+            bindable.DidNotReceive().Unbind(Arg.Any<IBinder<int>>());
         }
         
         [Test]
@@ -78,7 +78,7 @@ namespace FastenUp.Tests.Utils
             //Act
             BindUtilities.TryBind(bindable, null);
             //Assert
-            bindable.DidNotReceive().Remove(Arg.Any<IBinder<bool>>());
+            bindable.DidNotReceive().Unbind(Arg.Any<IBinder<bool>>());
         }
         
         [Test]
@@ -90,7 +90,7 @@ namespace FastenUp.Tests.Utils
             //Act
             BindUtilities.TryBind(bindableEvent, eventBinder);
             //Assert
-            bindableEvent.Received(1).Add(eventBinder.As<IEventBinder<bool>>());
+            bindableEvent.Received(1).Bind(eventBinder.As<IEventBinder<bool>>());
         }
         
         [Test]
@@ -102,7 +102,7 @@ namespace FastenUp.Tests.Utils
             //Act
             BindUtilities.TryBind(bindableEvent, eventBinder);
             //Assert
-            bindableEvent.DidNotReceive().Add(eventBinder.As<IEventBinder<int>>());
+            bindableEvent.DidNotReceive().Bind(eventBinder.As<IEventBinder<int>>());
         }
         
         [Test]
@@ -113,7 +113,7 @@ namespace FastenUp.Tests.Utils
             //Act
             BindUtilities.TryBind(bindableEvent, null);
             //Assert
-            bindableEvent.DidNotReceive().Add(Arg.Any<IEventBinder<bool>>());
+            bindableEvent.DidNotReceive().Bind(Arg.Any<IEventBinder<bool>>());
         }
         
         [Test]
@@ -125,7 +125,7 @@ namespace FastenUp.Tests.Utils
             //Act
             BindUtilities.TryUnbind(bindableEvent, eventBinder);
             //Assert
-            bindableEvent.Received(1).Remove(eventBinder.As<IEventBinder<bool>>());
+            bindableEvent.Received(1).Unbind(eventBinder.As<IEventBinder<bool>>());
         }
         
         [Test]
@@ -137,7 +137,7 @@ namespace FastenUp.Tests.Utils
             //Act
             BindUtilities.TryBind(bindableEvent, eventBinder);
             //Assert
-            bindableEvent.DidNotReceive().Remove(Arg.Any<IEventBinder<int>>());
+            bindableEvent.DidNotReceive().Unbind(Arg.Any<IEventBinder<int>>());
         }
         
         [Test]
@@ -148,7 +148,7 @@ namespace FastenUp.Tests.Utils
             //Act
             BindUtilities.TryBind(bindableEvent, null);
             //Assert
-            bindableEvent.DidNotReceive().Remove(Arg.Any<IEventBinder<bool>>());
+            bindableEvent.DidNotReceive().Unbind(Arg.Any<IEventBinder<bool>>());
         }
         
     }

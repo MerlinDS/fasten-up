@@ -25,10 +25,10 @@ namespace FastenUp.Runtime.Bindables
 
         public event Action<T> OnValueChanged;
 
-        void IInternalBindable<T>.Add(IBinder<T> binder)
+        void IInternalBindable<T>.Bind(IBinder<T> binder)
         {
             if (_bindables.Contains(binder))
-                throw new FastenUpException($"{nameof(binder)} already added to the {nameof(Bindable<T>)}.");
+                throw new FastenUpException($"{nameof(binder)} already bind to the {nameof(Bindable<T>)}.");
 
             binder.SetValue(_value);
             _bindables.Add(binder);
@@ -37,10 +37,10 @@ namespace FastenUp.Runtime.Bindables
                 bindableGettable.OnBinderChanged += OnValueChangedHandler;
         }
 
-        void IInternalBindable<T>.Remove(IBinder<T> binder)
+        void IInternalBindable<T>.Unbind(IBinder<T> binder)
         {
             if (!_bindables.Contains(binder))
-                throw new FastenUpException($"{nameof(binder)} not found in the {nameof(Bindable<T>)}.");
+                throw new FastenUpException($"{nameof(binder)} not bind to the {nameof(Bindable<T>)}.");
 
             _bindables.Remove(binder);
             
