@@ -23,8 +23,8 @@ namespace FastenUp.Tests.Binders
             var sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
             dropdown.AddOptions(new List<string> { "1", "2", "3", "4", "5" });
-            var onValueChanged = Substitute.For<OnBindableChanged>();
-            sut.OnBindableChanged += onValueChanged;
+            var onValueChanged = Substitute.For<OnBinderChanged>();
+            sut.OnBinderChanged += onValueChanged;
             // Act
             sut.SetValue(expected);
             // Assert
@@ -39,8 +39,8 @@ namespace FastenUp.Tests.Binders
             var expected = new[] { "1", "2", "3", "4", "5" };
             var sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
-            var onValueChanged = Substitute.For<OnBindableChanged>();
-            sut.OnBindableChanged += onValueChanged;
+            var onValueChanged = Substitute.For<OnBinderChanged>();
+            sut.OnBinderChanged += onValueChanged;
             // Act
             sut.SetValue(expected);
             // Assert
@@ -57,8 +57,8 @@ namespace FastenUp.Tests.Binders
             var sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
             dropdown.AddOptions(new List<string> { "1", "2", "3", "4", "5" });
-            var onValueChanged = Substitute.For<OnBindableChanged>();
-            sut.OnBindableChanged += onValueChanged;
+            var onValueChanged = Substitute.For<OnBinderChanged>();
+            sut.OnBinderChanged += onValueChanged;
             // Act
             sut.SetValue((string[])null);
             // Assert
@@ -73,8 +73,8 @@ namespace FastenUp.Tests.Binders
             var sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
             dropdown.AddOptions(new List<string> { "1", "2", "3", "4", "5" });
-            var onValueChanged = Substitute.For<OnBindableChanged>();
-            sut.OnBindableChanged += onValueChanged;
+            var onValueChanged = Substitute.For<OnBinderChanged>();
+            sut.OnBinderChanged += onValueChanged;
             // Act
             sut.SetValue(Array.Empty<string>());
             // Assert
@@ -96,8 +96,8 @@ namespace FastenUp.Tests.Binders
             };
             var sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
-            var onValueChanged = Substitute.For<OnBindableChanged>();
-            sut.OnBindableChanged += onValueChanged;
+            var onValueChanged = Substitute.For<OnBinderChanged>();
+            sut.OnBinderChanged += onValueChanged;
             // Act
             sut.SetValue(expected);
             // Assert
@@ -112,8 +112,8 @@ namespace FastenUp.Tests.Binders
             var sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
             dropdown.AddOptions(new List<string> { "1", "2", "3", "4", "5" });
-            var onValueChanged = Substitute.For<OnBindableChanged>();
-            sut.OnBindableChanged += onValueChanged;
+            var onValueChanged = Substitute.For<OnBinderChanged>();
+            sut.OnBinderChanged += onValueChanged;
             // Act
             sut.SetValue((List<TMP_Dropdown.OptionData>)null);
             // Assert
@@ -128,8 +128,8 @@ namespace FastenUp.Tests.Binders
             var sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
             dropdown.AddOptions(new List<string> { "1", "2", "3", "4", "5" });
-            var onValueChanged = Substitute.For<OnBindableChanged>();
-            sut.OnBindableChanged += onValueChanged;
+            var onValueChanged = Substitute.For<OnBinderChanged>();
+            sut.OnBinderChanged += onValueChanged;
             // Act
             sut.SetValue(new List<TMP_Dropdown.OptionData>());
             // Assert
@@ -153,14 +153,14 @@ namespace FastenUp.Tests.Binders
         }
 
         [Test]
-        public void OnBindableChanged_When_dropdown_value_changed_Should_invoke_OnBindableChanged()
+        public void OnBinderChanged_When_dropdown_value_changed_Should_invoke_OnBinderChanged()
         {
             // Arrange
             var sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
             dropdown.AddOptions(new List<string> { "1", "2", "3", "4", "5" });
-            var onValueChanged = Substitute.For<OnBindableChanged>();
-            sut.OnBindableChanged += onValueChanged;
+            var onValueChanged = Substitute.For<OnBinderChanged>();
+            sut.OnBinderChanged += onValueChanged;
             // Act
             dropdown.value = 4;
             // Assert
@@ -168,14 +168,14 @@ namespace FastenUp.Tests.Binders
         }
 
         [Test]
-        public void OnBindableChanged_When_disabled_Should_not_invoke_OnBindableChanged()
+        public void OnBinderChanged_When_disabled_Should_not_invoke_OnBinderChanged()
         {
             // Arrange
             var sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
             dropdown.AddOptions(new List<string> { "1", "2", "3", "4", "5" });
-            var onValueChanged = Substitute.For<OnBindableChanged>();
-            sut.OnBindableChanged += onValueChanged;
+            var onValueChanged = Substitute.For<OnBinderChanged>();
+            sut.OnBinderChanged += onValueChanged;
             sut.ExecuteOnDisable();
             // Act
             dropdown.value = 4;

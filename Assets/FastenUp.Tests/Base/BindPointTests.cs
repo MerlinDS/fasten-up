@@ -33,7 +33,7 @@ namespace FastenUp.Tests.Base
             //Act & Assert
             sut.As<IInternalBindPoint<bool>>().Add(bindable);
             bindable.Received(1).SetValue(false);
-            bindable.Received(1).OnBindableChanged += Arg.Any<OnBindableChanged>();
+            bindable.Received(1).OnBinderChanged += Arg.Any<OnBinderChanged>();
         }
 
         [Test]
@@ -71,7 +71,7 @@ namespace FastenUp.Tests.Base
             //Act
             sut.As<IInternalBindPoint<bool>>().Remove(bindable);
             //Assert
-            bindable.Received(1).OnBindableChanged -= Arg.Any<OnBindableChanged>();
+            bindable.Received(1).OnBinderChanged -= Arg.Any<OnBinderChanged>();
         }
 
         [Test]
@@ -112,7 +112,7 @@ namespace FastenUp.Tests.Base
             var sut = new BindPoint<bool>();
             sut.As<IInternalBindPoint<bool>>().Add(bindable);
             //Act
-            bindable.OnBindableChanged += Raise.Event<OnBindableChanged>(bindable);
+            bindable.OnBinderChanged += Raise.Event<OnBinderChanged>(bindable);
             //Assert
             sut.Value.Should().BeTrue();
         }

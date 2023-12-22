@@ -45,6 +45,6 @@ namespace FastenUp.Runtime.Binders
         }
 
         private void OnValueChanged(float _) =>
-            InvokeOnBindableChanged();
+            InvokeOnBinderChanged();
     }
 }

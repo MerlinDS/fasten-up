@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using FastenUp.Runtime.Binders;
 using FluentAssertions;
 using NUnit.Framework;
 using TMPro;
 using UnityEngine;
 using UnityTestingAssist.Runtime;
-using TextBinder = FastenUp.Runtime.Binders.TextBinder;
 
 namespace FastenUp.Tests.Binders
 {

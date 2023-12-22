@@ -40,13 +40,13 @@ namespace FastenUp.Tests.Binders
         }
         
         [Test]
-        public void OnBindableChanged_When_input_field_value_changed_Should_invoke_OnBindableChanged()
+        public void OnBinderChanged_When_input_field_value_changed_Should_invoke_OnBinderChanged()
         {
             // Arrange
             const string expected = "Test";
             var sut = CreateSut();
-            var onValueChanged = Substitute.For<OnBindableChanged>();
-            sut.OnBindableChanged += onValueChanged;
+            var onValueChanged = Substitute.For<OnBinderChanged>();
+            sut.OnBinderChanged += onValueChanged;
             // Act
             sut.GetComponent<TMP_InputField>().text = expected;
             // Assert
@@ -54,13 +54,13 @@ namespace FastenUp.Tests.Binders
         }
         
         [Test]
-        public void OnBindableChanged_When_disabled_Should_not_invoke_OnBindableChanged()
+        public void OnBinderChanged_When_disabled_Should_not_invoke_OnBinderChanged()
         {
             // Arrange
             const string expected = "Test";
             var sut = CreateSut();
-            var onValueChanged = Substitute.For<OnBindableChanged>();
-            sut.OnBindableChanged += onValueChanged;
+            var onValueChanged = Substitute.For<OnBinderChanged>();
+            sut.OnBinderChanged += onValueChanged;
             sut.ExecuteOnDisable();
             // Act
             sut.GetComponent<TMP_InputField>().text = expected;

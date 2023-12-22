@@ -2,5 +2,5 @@
 
 namespace FastenUp.Runtime.Delegates
 {
-    public delegate void OnBindableChanged(IBinder binder);
+    public delegate void OnBinderChanged(IBinder binder);
 }
