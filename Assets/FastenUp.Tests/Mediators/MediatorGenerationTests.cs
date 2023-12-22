@@ -1,6 +1,7 @@
-﻿using FastenUp.Runtime.Base;
+﻿using FastenUp.Runtime.Bindables;
 using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Mediators;
+using FastenUp.Runtime.Utils;
 using NSubstitute;
 using NUnit.Framework;
 
@@ -28,7 +29,7 @@ namespace FastenUp.Tests.Mediators
         }
     }
     
-    internal sealed partial class TestMediator : IMediator, IInternalMediator
+    internal sealed partial class TestMediator : IMediator
     {
         private Bindable<string> Text { get; } = new();
 
@@ -37,18 +38,22 @@ namespace FastenUp.Tests.Mediators
 
         public void SetText(string text) => 
             Text.Value = text;
+        
+    }
 
-        //TODO: Remove after source generator update
+    //TODO: Remove after source generator update
+    internal partial class TestMediator : IInternalMediator
+    {
         /// <inheritdoc />
         public void Bind(IBinder binder)
         {
-            throw new System.NotImplementedException();
+            BindUtilities.TryBind(Text, nameof(Text), binder);
         }
 
         /// <inheritdoc />
         public void Unbind(IBinder binder)
         {
-            throw new System.NotImplementedException();
+            BindUtilities.TryUnbind(Text, nameof(Text), binder);
         }
     }
 }

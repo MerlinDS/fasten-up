@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Exceptions;
 
-namespace FastenUp.Runtime.Base
+namespace FastenUp.Runtime.Bindables
 {
     public sealed class Bindable<T> : IBindable<T>, IInternalBindable<T>
     {

@@ -1,4 +1,4 @@
-﻿using FastenUp.Runtime.Base;
+﻿using FastenUp.Runtime.Bindables;
 using FastenUp.Runtime.Mediators;
 
 namespace FastenUp.Runtime.Binders
