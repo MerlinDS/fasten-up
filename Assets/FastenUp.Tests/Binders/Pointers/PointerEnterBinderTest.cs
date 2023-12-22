@@ -1,15 +1,15 @@
-﻿using FastenUp.Runtime.Bindables.Pointers;
+﻿using FastenUp.Runtime.Binders.Pointers;
 using NSubstitute;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-namespace FastenUp.Tests.Bindables.Pointers
+namespace FastenUp.Tests.Binders.Pointers
 {
     [TestFixture]
-    [TestOf(typeof(BindablePointerEnter))]
-    public class BindablePointerEnterTest
+    [TestOf(typeof(PointerEnterBinder))]
+    public class PointerEnterBinderTest
     {
         [Test]
         public void OnPointerEnter_When_has_listener_Should_invoke_event()
@@ -24,7 +24,7 @@ namespace FastenUp.Tests.Bindables.Pointers
             actual.Received(1).Invoke(Arg.Any<PointerEventData>());
         }
         
-        private static BindablePointerEnter CreateSut() => 
-            new GameObject().AddComponent<BindablePointerEnter>();
+        private static PointerEnterBinder CreateSut() => 
+            new GameObject().AddComponent<PointerEnterBinder>();
     }
 }
