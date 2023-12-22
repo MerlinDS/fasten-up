@@ -14,52 +14,52 @@ namespace FastenUp.Tests.Bindables
     public class GenericBindActionTest
     {
         [Test]
-        public void Add_When_eventBinder_already_added_Should_throw_exception()
+        public void Bind_When_eventBinder_already_bind_Should_throw_exception()
         {
             //Arrange
             var eventBinder = Substitute.For<IEventBinder<UnityAction<int>>>();
             var sut = new BindableEvent<int>();
             Action act = () =>
             {
-                sut.As<IInternalBindableEvent<UnityAction<int>>>().Add(eventBinder);
-                sut.As<IInternalBindableEvent<UnityAction<int>>>().Add(eventBinder);
+                sut.As<IInternalBindableEvent<UnityAction<int>>>().Bind(eventBinder);
+                sut.As<IInternalBindableEvent<UnityAction<int>>>().Bind(eventBinder);
             };
             //Act & Assert
             act.Should().Throw<FastenUpException>();
         }
         
         [Test]
-        public void Add_When_eventBinder_not_added_Should_not_throw_exception()
+        public void Bind_When_eventBinder_not_bind_Should_not_throw_exception()
         {
             //Arrange
             var eventBinder = Substitute.For<IEventBinder<UnityAction<int>>>();
             var sut = new BindableEvent<int>();
-            Action act = ()=> sut.As<IInternalBindableEvent<UnityAction<int>>>().Add(eventBinder);
+            Action act = ()=> sut.As<IInternalBindableEvent<UnityAction<int>>>().Bind(eventBinder);
             //Act & Assert
             act.Should().NotThrow<FastenUpException>();
         }
         
         [Test]
-        public void Remove_When_eventBinder_not_added_Should_throw_exception()
+        public void Unbind_When_eventBinder_not_bind_Should_throw_exception()
         {
             //Arrange
             var bindableListener = Substitute.For<IEventBinder<UnityAction<int>>>();
             var sut = new BindableEvent<int>();
-            Action act = ()=> sut.As<IInternalBindableEvent<UnityAction<int>>>().Remove(bindableListener);
+            Action act = ()=> sut.As<IInternalBindableEvent<UnityAction<int>>>().Unbind(bindableListener);
             //Act & Assert
             act.Should().Throw<FastenUpException>();
         }
         
         [Test]
-        public void Remove_When_eventBinder_added_Should_not_throw_exception()
+        public void Unbind_When_eventBinder_bind_Should_not_throw_exception()
         {
             //Arrange
             var eventBinder = Substitute.For<IEventBinder<UnityAction<int>>>();
             var sut = new BindableEvent<int>();
             Action act = ()=>
             {
-                sut.As<IInternalBindableEvent<UnityAction<int>>>().Add(eventBinder);
-                sut.As<IInternalBindableEvent<UnityAction<int>>>().Remove(eventBinder);
+                sut.As<IInternalBindableEvent<UnityAction<int>>>().Bind(eventBinder);
+                sut.As<IInternalBindableEvent<UnityAction<int>>>().Unbind(eventBinder);
             };
             //Act & Assert
             act.Should().NotThrow<FastenUpException>();

@@ -14,72 +14,72 @@ namespace FastenUp.Tests.Bindables
     public class BindableTests
     {
         [Test]
-        public void Add_When_bindable_was_not_added_Should_set_value()
+        public void Bind_When_bindable_was_not_bind_Should_set_value()
         {
             //Arrange
             var bindable = Substitute.For<IBinder<bool>>();
             var sut = new Bindable<bool>();
             //Act & Assert
-            sut.As<IInternalBindable<bool>>().Add(bindable);
+            sut.As<IInternalBindable<bool>>().Bind(bindable);
             bindable.Received(1).SetValue(false);
         }
 
         [Test]
-        public void Add_When_gettable_bindable_was_not_added_Should_set_value_and_subscribe_to_bindable()
+        public void Bind_When_gettable_bindable_was_not_bind_Should_set_value_and_subscribe_to_bindable()
         {
             //Arrange
             var bindable = Substitute.For<IGettableBinder<bool>>();
             var sut = new Bindable<bool>();
             //Act & Assert
-            sut.As<IInternalBindable<bool>>().Add(bindable);
+            sut.As<IInternalBindable<bool>>().Bind(bindable);
             bindable.Received(1).SetValue(false);
             bindable.Received(1).OnBinderChanged += Arg.Any<OnBinderChanged>();
         }
 
         [Test]
-        public void Add_When_bindable_already_was_added_Should_throw_exception()
+        public void Bind_When_bindable_already_was_bind_Should_throw_exception()
         {
             //Arrange
             var bindable = Substitute.For<IBinder<bool>>();
             var sut = new Bindable<bool>();
-            sut.As<IInternalBindable<bool>>().Add(bindable);
-            Action act = () => sut.As<IInternalBindable<bool>>().Add(bindable);
+            sut.As<IInternalBindable<bool>>().Bind(bindable);
+            Action act = () => sut.As<IInternalBindable<bool>>().Bind(bindable);
             //Act & Assert
             act.Should().Throw<FastenUpException>();
         }
 
         [Test]
-        public void Remove_When_bindable_was_added_Should_not_throw_exception()
+        public void Unbind_When_bindable_was_bind_Should_not_throw_exception()
         {
             //Arrange
             var bindable = Substitute.For<IBinder<bool>>();
             var sut = new Bindable<bool>();
-            sut.As<IInternalBindable<bool>>().Add(bindable);
-            Action act = () => sut.As<IInternalBindable<bool>>().Remove(bindable);
+            sut.As<IInternalBindable<bool>>().Bind(bindable);
+            Action act = () => sut.As<IInternalBindable<bool>>().Unbind(bindable);
             //Act & Assert
             act.Should().NotThrow<Exception>();
         }
 
         [Test]
-        public void Remove_When_gettable_bindable_was_added_Should_unsubscribe_from_bindable()
+        public void Unbind_When_gettable_bindable_was_bind_Should_unsubscribe_from_bindable()
         {
             //Arrange
             var bindable = Substitute.For<IGettableBinder<bool>>();
             var sut = new Bindable<bool>();
-            sut.As<IInternalBindable<bool>>().Add(bindable);
+            sut.As<IInternalBindable<bool>>().Bind(bindable);
             //Act
-            sut.As<IInternalBindable<bool>>().Remove(bindable);
+            sut.As<IInternalBindable<bool>>().Unbind(bindable);
             //Assert
             bindable.Received(1).OnBinderChanged -= Arg.Any<OnBinderChanged>();
         }
 
         [Test]
-        public void Remove_When_bindable_was_not_added_Should_throw_exception()
+        public void Unbind_When_bindable_was_not_bind_Should_throw_exception()
         {
             //Arrange
             var bindable = Substitute.For<IBinder<bool>>();
             var sut = new Bindable<bool>();
-            Action act = () => sut.As<IInternalBindable<bool>>().Remove(bindable);
+            Action act = () => sut.As<IInternalBindable<bool>>().Unbind(bindable);
             //Act & Assert
             act.Should().Throw<FastenUpException>();
         }
@@ -91,8 +91,8 @@ namespace FastenUp.Tests.Bindables
             var bindable1 = Substitute.For<IBinder<bool>>();
             var bindable2 = Substitute.For<IBinder<bool>>();
             var sut = new Bindable<bool>();
-            sut.As<IInternalBindable<bool>>().Add(bindable1);
-            sut.As<IInternalBindable<bool>>().Add(bindable2);
+            sut.As<IInternalBindable<bool>>().Bind(bindable1);
+            sut.As<IInternalBindable<bool>>().Bind(bindable2);
             //Act
             sut.Value = true;
             //Assert
@@ -108,7 +108,7 @@ namespace FastenUp.Tests.Bindables
             bindable.GetValue().Returns(true);
 
             var sut = new Bindable<bool>();
-            sut.As<IInternalBindable<bool>>().Add(bindable);
+            sut.As<IInternalBindable<bool>>().Bind(bindable);
             //Act
             bindable.OnBinderChanged += Raise.Event<OnBinderChanged>(bindable);
             //Assert

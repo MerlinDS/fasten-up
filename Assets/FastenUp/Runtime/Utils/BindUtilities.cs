@@ -8,25 +8,25 @@ namespace FastenUp.Runtime.Utils
         public static void TryBind<T>(IInternalBindable<T> bindable, IBinder binder)
         {
             if (binder is IBinder<T> bindableT)
-                bindable.Add(bindableT);
+                bindable.Bind(bindableT);
         }
         
         public static void TryUnbind<T>(IInternalBindable<T> bindable, IBinder binder)
         {
             if (binder is IBinder<T> bindableT)
-                bindable.Remove(bindableT);
+                bindable.Unbind(bindableT);
         }
         
         public static void TryBind<T>(IInternalBindableEvent<T> bindableEvent, IBinder eventBinder)
         {
             if (eventBinder is IEventBinder<T> bindableT)
-                bindableEvent.Add(bindableT);
+                bindableEvent.Bind(bindableT);
         }
         
         public static void TryUnbind<T>(IInternalBindableEvent<T> bindableEvent, IBinder eventBinder)
         {
             if (eventBinder is IEventBinder<T> bindableT)
-                bindableEvent.Remove(bindableT);
+                bindableEvent.Unbind(bindableT);
         }
     }
 }

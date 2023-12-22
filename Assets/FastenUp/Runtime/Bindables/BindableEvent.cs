@@ -40,7 +40,7 @@ namespace FastenUp.Runtime.Bindables
         }
 
         /// <inheritdoc />
-        void IInternalBindableEvent<T>.Add(IEventBinder<T> eventBinder)
+        void IInternalBindableEvent<T>.Bind(IEventBinder<T> eventBinder)
         {
             if (_listeners.Contains(eventBinder))
                 throw new FastenUpException($"{nameof(eventBinder)} already added to the {nameof(BindableEvent)}.");
@@ -51,7 +51,7 @@ namespace FastenUp.Runtime.Bindables
         }
 
         /// <inheritdoc />
-        void IInternalBindableEvent<T>.Remove(IEventBinder<T> eventBinder)
+        void IInternalBindableEvent<T>.Unbind(IEventBinder<T> eventBinder)
         {
             if (!_listeners.Contains(eventBinder))
                 throw new FastenUpException($"{nameof(eventBinder)} not found in the {nameof(BindableEvent)}.");
