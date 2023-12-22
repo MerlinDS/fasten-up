@@ -1,4 +1,4 @@
-﻿namespace FastenUp.Runtime.Bindables
+﻿namespace FastenUp.Runtime.Binders
 {
     public interface IHierarchyCache
     {

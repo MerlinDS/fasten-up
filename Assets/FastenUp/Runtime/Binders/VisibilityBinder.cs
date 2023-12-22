@@ -1,22 +1,23 @@
 ﻿using System.Collections.Generic;
+using FastenUp.Runtime.Bindables;
 using FastenUp.Runtime.Utils;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace FastenUp.Runtime.Bindables
+namespace FastenUp.Runtime.Binders
 {
     /// <summary>
-    /// The two-way <see cref="IBindable"/> that controls visibility of UI components.
+    /// The two-way <see cref="IBindable"/> that controls visibility of UI components. 
     /// </summary>
-    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Bindable Visibility", 0)]
-    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#visibility")]
-    public sealed class BindableVisibility : BaseBindable, IGettableBindable<bool>, IHierarchyCache
+    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Visibility", 0)]
+    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#visibility")]
+    public sealed class VisibilityBinder : BaseBindable, IGettableBindable<bool>, IHierarchyCache
     {
         private readonly Queue<Transform> _transformQueue = new();
         private readonly List<Component> _componentBuffer = new();
         private readonly HashSet<Behaviour> _behaviourCache = new();
-        private readonly HashSet<BindableVisibility> _childrenCache = new();
+        private readonly HashSet<VisibilityBinder> _childrenCache = new();
 
         private enum DefaultVisibility : byte
         {
@@ -28,7 +29,7 @@ namespace FastenUp.Runtime.Bindables
 
         [SerializeField] private DefaultVisibility _defaultVisibility;
         private bool _value = true;
-        private BindableVisibility _parent;
+        private VisibilityBinder _parent;
 
         /// <summary>
         /// Checks if this component can be visible.
@@ -131,7 +132,7 @@ namespace FastenUp.Runtime.Bindables
             }
 
             if (transform.parent != null)
-                _parent = transform.parent.GetComponentInParent<BindableVisibility>();
+                _parent = transform.parent.GetComponentInParent<VisibilityBinder>();
         }
 
         private void EnqueueChildrenOf(Transform source, bool onlyVisibilities = false)
@@ -143,7 +144,7 @@ namespace FastenUp.Runtime.Bindables
                 if (!child.gameObject.activeInHierarchy) //Do not touch disabled objects
                     continue;
 
-                if (child.TryGetComponent<BindableVisibility>(out var childVisibility))
+                if (child.TryGetComponent<VisibilityBinder>(out var childVisibility))
                 {
                     _childrenCache.Add(childVisibility);
                     continue;
