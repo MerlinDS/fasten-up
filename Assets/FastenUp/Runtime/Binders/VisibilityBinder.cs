@@ -10,7 +10,7 @@ namespace FastenUp.Runtime.Binders
     /// <summary>
     /// The two-way <see cref="IBindable"/> that controls visibility of UI components. 
     /// </summary>
-    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Visibility", 0)]
+    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Visibility Binder", 1)]
     [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#visibility")]
     public sealed class VisibilityBinder : BaseBindable, IGettableBindable<bool>, IHierarchyCache
     {
