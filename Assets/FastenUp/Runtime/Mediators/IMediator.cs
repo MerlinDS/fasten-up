@@ -1,4 +1,6 @@
-﻿namespace FastenUp.Runtime.Mediators
+﻿using FastenUp.Runtime.Binders;
+
+namespace FastenUp.Runtime.Mediators
 {
     /// <summary>
     /// The IMediator interface is the base interface for ViewModels.
@@ -23,7 +25,7 @@
     /// }
     /// </code>
     /// </example>
-    /// <seealso cref="FastenUp.Runtime.Bindables.IBindable"/>
+    /// <seealso cref="IBinder"/>
     public interface IMediator
     {
     }

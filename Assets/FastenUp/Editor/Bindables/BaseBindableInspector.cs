@@ -1,10 +1,10 @@
-﻿using FastenUp.Runtime.Bindables;
+﻿using FastenUp.Runtime.Binders;
 using UnityEditor;
 using UnityEngine;
 
 namespace FastenUp.Editor.Bindables
 {
-    [CustomEditor(typeof(BaseBindable), true)]
+    [CustomEditor(typeof(BaseBinder), true)]
     public class BaseBindableInspector : UnityEditor.Editor
     {
         private SerializedProperty _nameProperty;

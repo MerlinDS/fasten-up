@@ -1,17 +1,16 @@
-﻿using FastenUp.Runtime.Bindables;
-using FastenUp.Runtime.Utils;
+﻿using FastenUp.Runtime.Utils;
 using TMPro;
 using UnityEngine;
 
 namespace FastenUp.Runtime.Binders
 {
     /// <summary>
-    /// The two-way <see cref="IBindable"/> binds a value to the component with <see cref="TMP_InputField"/> field.
+    /// The two-way <see cref="IBinder"/> binds a value to the component with <see cref="TMP_InputField"/> field.
     /// </summary> 
     [RequireComponent(typeof(TMP_InputField))]
     [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Input Field Binder" , 7)]
     [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#input-field")]
-    public class InputFieldBinder : BaseBindable, IGettableBindable<string>
+    public class InputFieldBinder : BaseBinder, IGettableBinder<string>
     {
         private TMP_InputField _inputField;
         

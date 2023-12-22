@@ -1,17 +1,16 @@
-﻿using FastenUp.Runtime.Bindables;
-using FastenUp.Runtime.Utils;
+﻿using FastenUp.Runtime.Utils;
 using TMPro;
 using UnityEngine;
 
 namespace FastenUp.Runtime.Binders
 {
     /// <summary>
-    /// The two-way <see cref="IBindable"/> binds a value to the component with <see cref="TMP_Dropdown"/> field.
+    /// The two-way <see cref="IBinder"/> binds a value to the component with <see cref="TMP_Dropdown"/> field.
     /// </summary>
     [RequireComponent(typeof(TMP_Dropdown))]
     [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Dropdown Binder", 6)]
     [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#dropdown")]
-    public sealed partial class DropdownBinder : BaseBindable, IGettableBindable<int>
+    public sealed partial class DropdownBinder : BaseBinder, IGettableBinder<int>
     {
         private TMP_Dropdown _dropdown;
         

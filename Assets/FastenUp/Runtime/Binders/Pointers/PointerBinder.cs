@@ -1,12 +1,11 @@
-﻿using FastenUp.Runtime.Bindables;
-using UnityEngine.Events;
+﻿using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 namespace FastenUp.Runtime.Binders.Pointers
 {
-    public abstract class PointerBinder : BaseBindable,
-        IBindableListener<UnityAction>,
-        IBindableListener<UnityAction<PointerEventData>>
+    public abstract class PointerBinder : BaseBinder,
+        IEventBinder<UnityAction>,
+        IEventBinder<UnityAction<PointerEventData>>
     {
         private readonly UnityEvent _event = new();
         private readonly UnityEvent<PointerEventData> _eventWithData = new();

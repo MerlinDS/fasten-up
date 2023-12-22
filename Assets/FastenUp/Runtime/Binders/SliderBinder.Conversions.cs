@@ -1,9 +1,8 @@
-using FastenUp.Runtime.Bindables;
 using UnityEngine;
 
 namespace FastenUp.Runtime.Binders
 {
-    public sealed partial class SliderBinder : IGettableBindable<int>, IBindable<Vector2Int>
+    public sealed partial class SliderBinder : IGettableBinder<int>, IBinder<Vector2Int>
     {
         /// <inheritdoc />
         public void SetValue(int value)
@@ -12,7 +11,7 @@ namespace FastenUp.Runtime.Binders
         }
 
         /// <inheritdoc />
-        int IGettableBindable<int>.GetValue()
+        int IGettableBinder<int>.GetValue()
         {
             return (int)GetValue();
         }

@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using FastenUp.Runtime.Bindables;
 using FastenUp.Runtime.Utils;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -8,11 +7,11 @@ using UnityEngine.UI;
 namespace FastenUp.Runtime.Binders
 {
     /// <summary>
-    /// The two-way <see cref="IBindable"/> that controls visibility of UI components. 
+    /// The two-way <see cref="IBinder"/> that controls visibility of UI components. 
     /// </summary>
     [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Visibility Binder", 1)]
     [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#visibility")]
-    public sealed class VisibilityBinder : BaseBindable, IGettableBindable<bool>, IHierarchyCache
+    public sealed class VisibilityBinder : BaseBinder, IGettableBinder<bool>, IHierarchyCache
     {
         private readonly Queue<Transform> _transformQueue = new();
         private readonly List<Component> _componentBuffer = new();

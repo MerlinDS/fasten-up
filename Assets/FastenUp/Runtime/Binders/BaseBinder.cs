@@ -1,12 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
-using FastenUp.Runtime.Base;
 using FastenUp.Runtime.Delegates;
 using FastenUp.Runtime.Mediators;
 using UnityEngine;
 
-namespace FastenUp.Runtime.Bindables
+namespace FastenUp.Runtime.Binders
 {
     /// <summary>
     /// Base class for all bindables.
@@ -15,7 +14,7 @@ namespace FastenUp.Runtime.Bindables
     /// This class is provide basic functionality for all bindables, like name validation and binding to mediators.
     /// </remarks>
     [Serializable]
-    public abstract class BaseBindable : MonoBehaviour, IBindable
+    public abstract class BaseBinder : MonoBehaviour, IBinder
     {
         private readonly List<IInternalMediator> _mediators = new(1);//One mediator is enough for most cases
 

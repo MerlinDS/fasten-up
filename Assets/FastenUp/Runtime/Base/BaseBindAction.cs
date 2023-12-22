@@ -1,12 +1,12 @@
 using System.Collections.Generic;
-using FastenUp.Runtime.Bindables;
+using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Exceptions;
 
 namespace FastenUp.Runtime.Base
 {
     public abstract class BaseBindAction<T> : IBindAction<T>
     {
-        private readonly HashSet<IBindableListener<T>> _listeners = new(1);
+        private readonly HashSet<IEventBinder<T>> _listeners = new(1);
 
         private readonly List<T> _actions = new(1);
 
@@ -43,7 +43,7 @@ namespace FastenUp.Runtime.Base
             _actions.Clear();
         }
         
-        protected void AddBindableListener(IBindableListener<T> listener)
+        protected void AddBindableListener(IEventBinder<T> listener)
         {
             if (_listeners.Contains(listener))
                 throw new FastenUpException("Bindable already added to bind point.");
@@ -53,7 +53,7 @@ namespace FastenUp.Runtime.Base
             _listeners.Add(listener);
         }
 
-        protected void RemoveBindableListener(IBindableListener<T> listener)
+        protected void RemoveBindableListener(IEventBinder<T> listener)
         {
             if (!_listeners.Contains(listener))
                 throw new FastenUpException("Bindable not found in bind point.");

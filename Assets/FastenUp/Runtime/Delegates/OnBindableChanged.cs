@@ -1,6 +1,6 @@
-﻿using FastenUp.Runtime.Bindables;
+﻿using FastenUp.Runtime.Binders;
 
 namespace FastenUp.Runtime.Delegates
 {
-    public delegate void OnBindableChanged(IBindable bindable);
+    public delegate void OnBindableChanged(IBinder binder);
 }

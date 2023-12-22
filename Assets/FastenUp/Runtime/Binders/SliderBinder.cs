@@ -1,17 +1,16 @@
-﻿using FastenUp.Runtime.Bindables;
-using FastenUp.Runtime.Utils;
+﻿using FastenUp.Runtime.Utils;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace FastenUp.Runtime.Binders
 {
     /// <summary>
-    /// The two-way <see cref="IBindable"/> binds a value to the component with <see cref="Slider"/> component.
+    /// The two-way <see cref="IBinder"/> binds a value to the component with <see cref="Slider"/> component.
     /// </summary>
     [RequireComponent(typeof(Slider))]
     [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Slider Binder" , 5)]
     [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#slider")]
-    public sealed partial class SliderBinder : BaseBindable, IGettableBindable<float>, IBindable<Vector2>
+    public sealed partial class SliderBinder : BaseBinder, IGettableBinder<float>, IBinder<Vector2>
     {
         private Slider _slider;
 

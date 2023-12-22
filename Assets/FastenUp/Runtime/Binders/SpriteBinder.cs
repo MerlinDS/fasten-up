@@ -1,17 +1,16 @@
-﻿using FastenUp.Runtime.Bindables;
-using FastenUp.Runtime.Utils;
+﻿using FastenUp.Runtime.Utils;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace FastenUp.Runtime.Binders
 {
     /// <summary>
-    /// The one-way <see cref="IBindable"/> binds a value to the component with <see cref="Sprite"/> field.
+    /// The one-way <see cref="IBinder"/> binds a value to the component with <see cref="Sprite"/> field.
     /// </summary>
     [RequireComponent(typeof(Image))]
     [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Sprite Binder", 2)]
     [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#sprite")]
-    public sealed partial class SpriteBinder : BaseBindable, IBindable<Sprite>
+    public sealed partial class SpriteBinder : BaseBinder, IBinder<Sprite>
     {
         private Image _component;
 

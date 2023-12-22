@@ -1,4 +1,4 @@
-﻿using FastenUp.Runtime.Bindables;
+﻿using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Delegates;
 using FluentAssertions;
 using NSubstitute;
@@ -6,7 +6,6 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityTestingAssist.Runtime;
-using SliderBinder = FastenUp.Runtime.Binders.SliderBinder;
 
 namespace FastenUp.Tests.Binders
 {
@@ -102,7 +101,7 @@ namespace FastenUp.Tests.Binders
             slider.wholeNumbers = true;
             slider.SetValueWithoutNotify(expected);
             // Act
-            var actual = sut.As<IGettableBindable<int>>().GetValue();
+            var actual = sut.As<IGettableBinder<int>>().GetValue();
             // Assert
             actual.Should().Be(expected);
         }

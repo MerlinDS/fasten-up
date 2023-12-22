@@ -1,11 +1,11 @@
 ﻿using System;
-using FastenUp.Runtime.Bindables;
+using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Mediators;
 
 namespace FastenUp.Runtime.Base
 {
     /// <summary>
-    /// This interface is used to bind <see cref="IBindable{T}"/>s to a <see cref="IMediator"/>.
+    /// This interface is used to bind <see cref="IBinder{T}"/>s to a <see cref="IMediator"/>.
     /// </summary>
     /// <typeparam name="T">Type of the value that will be set or get by the bindable component</typeparam>
     public interface IBindPoint<T>

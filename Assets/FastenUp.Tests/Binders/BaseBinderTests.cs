@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
-using FastenUp.Runtime.Bindables;
+using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Delegates;
 using FastenUp.Runtime.Mediators;
 using FluentAssertions;
@@ -10,11 +10,11 @@ using UnityEngine;
 using UnityEngine.TestTools;
 using UnityTestingAssist.Runtime;
 
-namespace FastenUp.Tests.Bindables
+namespace FastenUp.Tests.Binders
 {
     [TestFixture]
-    [TestOf(typeof(BaseBindable))]
-    public class BaseBindableTests
+    [TestOf(typeof(BaseBinder))]
+    public class BaseBinderTests
     {
         [Test]
         public void OnEnable_When_has_mediator_Should_bind_to_mediator()
@@ -68,7 +68,7 @@ namespace FastenUp.Tests.Bindables
             //Arrange
             var mockMediator = Substitute.For<IInternalMediator>();
             var test = TestingBehaviour.Create();
-            var parent = new GameObject(nameof(BaseBindableTests));
+            var parent = new GameObject(nameof(BaseBinderTests));
             parent.AddComponent<MockMediator>().Set(mockMediator);
             test.component.SetParent(parent);
             test.component.SetName("Test");
@@ -124,7 +124,7 @@ namespace FastenUp.Tests.Bindables
             //Arrange
             var mockMediator = Substitute.For<IInternalMediator>();
             var test = TestingBehaviour.Create();
-            var parent = new GameObject(nameof(BaseBindableTests));
+            var parent = new GameObject(nameof(BaseBinderTests));
             parent.AddComponent<MockMediator>().Set(mockMediator);
             test.component.SetName("Test");
             test.component.SetParent(parent);
@@ -182,13 +182,13 @@ namespace FastenUp.Tests.Bindables
             test.component.Name.Should().Be(expected);
         }
 
-        private class TestingBehaviour : BaseBindable, IMonoBehaviourTest
+        private class TestingBehaviour : BaseBinder, IMonoBehaviourTest
         {
             public static MonoBehaviourTest<TestingBehaviour> Create() =>
                 new(false);
 
-            public void SetName(string bindableName) =>
-                this.EditSerializable().Field(nameof(Name), bindableName).Apply();
+            public void SetName(string binderName) =>
+                this.EditSerializable().Field(nameof(Name), binderName).Apply();
 
             public void SetParent(GameObject parent) =>
                 transform.SetParent(parent.transform);
@@ -209,12 +209,12 @@ namespace FastenUp.Tests.Bindables
                 _mediator = mediator;
 
             /// <inheritdoc />
-            public void Bind(IBindable bindable) =>
-                _mediator.Bind(bindable);
+            public void Bind(IBinder binder) =>
+                _mediator.Bind(binder);
 
             /// <inheritdoc />
-            public void Unbind(IBindable bindable) =>
-                _mediator.Unbind(bindable);
+            public void Unbind(IBinder binder) =>
+                _mediator.Unbind(binder);
         }
     }
 }
