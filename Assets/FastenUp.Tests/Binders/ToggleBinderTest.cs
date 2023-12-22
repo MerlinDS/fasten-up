@@ -1,4 +1,4 @@
-﻿using FastenUp.Runtime.Bindables;
+﻿using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Delegates;
 using FluentAssertions;
 using NSubstitute;
@@ -7,11 +7,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityTestingAssist.Runtime;
 
-namespace FastenUp.Tests.Bindables
+namespace FastenUp.Tests.Binders
 {
     [TestFixture]
-    [TestOf(typeof(BindableToggle))]
-    public class BindableToggleTest
+    [TestOf(typeof(ToggleBinder))]
+    public class ToggleBinderTest
     {
         [Test]
         public void Set_Value_When_called_Should_set_isOn_and_not_invoke_onValueChanged()
@@ -68,10 +68,10 @@ namespace FastenUp.Tests.Bindables
             onValueChanged.DidNotReceive().Invoke(sut);
         }
 
-        private static BindableToggle CreateSut()
+        private static ToggleBinder CreateSut()
         {
-            var gameObject = new GameObject(nameof(BindableToggleTest));
-            var sut = gameObject.AddComponent<BindableToggle>();
+            var gameObject = new GameObject(nameof(ToggleBinderTest));
+            var sut = gameObject.AddComponent<ToggleBinder>();
             sut.ExecuteAwake();
             return sut;
         }
