@@ -1,4 +1,4 @@
-﻿using FastenUp.Runtime.Bindables;
+﻿using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Delegates;
 using FluentAssertions;
 using NSubstitute;
@@ -7,11 +7,11 @@ using TMPro;
 using UnityEngine;
 using UnityTestingAssist.Runtime;
 
-namespace FastenUp.Tests.Bindables
+namespace FastenUp.Tests.Binders
 {
     [TestFixture]
-    [TestOf(typeof(BindableInputField))]
-    public class BindableInputFieldTest
+    [TestOf(typeof(InputFieldBinder))]
+    public class InputFieldBinderTest
     {
 
         [Test]
@@ -68,10 +68,10 @@ namespace FastenUp.Tests.Bindables
             onValueChanged.DidNotReceive().Invoke(sut);
         }
         
-        private static BindableInputField CreateSut()
+        private static InputFieldBinder CreateSut()
         {
-            var gameObject = new GameObject(nameof(BindableInputFieldTest));
-            var sut = gameObject.AddComponent<BindableInputField>();
+            var gameObject = new GameObject(nameof(InputFieldBinderTest));
+            var sut = gameObject.AddComponent<InputFieldBinder>();
             sut.ExecuteAwake();
             return sut;
         }
