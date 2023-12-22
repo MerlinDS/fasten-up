@@ -1,15 +1,15 @@
-﻿using FastenUp.Runtime.Bindables;
+﻿using FastenUp.Runtime.Binders;
 using FluentAssertions;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityTestingAssist.Runtime;
 
-namespace FastenUp.Tests.Bindables
+namespace FastenUp.Tests.Binders
 {
     [TestFixture]
-    [TestOf(typeof(BindableColor))]
-    public class BindableColorTest
+    [TestOf(typeof(ColorBinder))]
+    public class ColorBinderTest
     {
         [Test]
         public void SetValue_When_gameObject_has_Image_Should_set_color_to_Image()
@@ -23,11 +23,11 @@ namespace FastenUp.Tests.Bindables
             sut.GetComponent<Image>().color.Should().Be(expected);
         }
 
-        private static BindableColor CreateSut()
+        private static ColorBinder CreateSut()
         {
-            var gameObject = new GameObject(nameof(BindableColorTest));
+            var gameObject = new GameObject(nameof(ColorBinderTest));
             gameObject.AddComponent<Image>();
-            var sut = gameObject.AddComponent<BindableColor>();
+            var sut = gameObject.AddComponent<ColorBinder>();
             sut.ExecuteAwake();
             return sut;
         }

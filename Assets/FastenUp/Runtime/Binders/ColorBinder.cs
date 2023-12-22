@@ -1,16 +1,17 @@
-﻿using FastenUp.Runtime.Utils;
+﻿using FastenUp.Runtime.Bindables;
+using FastenUp.Runtime.Utils;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace FastenUp.Runtime.Bindables
+namespace FastenUp.Runtime.Binders
 {
     /// <summary>
     /// The one-way <see cref="IBindable"/> binds a value to the component with <see cref="Color"/> field.
     /// </summary>
     [RequireComponent(typeof(Graphic))]
-    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Bindable Color", 3)]
-    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#color")]
-    public class BindableColor : BaseBindable, IBindable<Color>
+    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Color Binder", 3)]
+    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#color")]
+    public class ColorBinder : BaseBindable, IBindable<Color>
     {
         private Graphic _component;
 
