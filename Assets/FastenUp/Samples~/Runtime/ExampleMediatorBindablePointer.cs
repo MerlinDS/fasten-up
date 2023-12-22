@@ -1,4 +1,5 @@
-﻿using FastenUp.Runtime.Base;
+﻿using FastenUp.Runtime.Bindables;
+using FastenUp.Runtime.Mediators;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -7,17 +8,17 @@ namespace FastenUp.Examples.Runtime
 {
     internal partial class ExampleMediatorBindablePointer : MonoBehaviour, IMediator
     {
-        private BindAction<PointerEventData> OnClick { get; } = new();
-        private BindAction<PointerEventData> OnEnter { get; } = new();
-        private BindAction<PointerEventData> OnExit { get; } = new();
+        private BindableEvent<PointerEventData> OnClick { get; } = new();
+        private BindableEvent<PointerEventData> OnEnter { get; } = new();
+        private BindableEvent<PointerEventData> OnExit { get; } = new();
         
-        private BindAction<PointerEventData> OnDown { get; } = new();
+        private BindableEvent<PointerEventData> OnDown { get; } = new();
         
-        private BindAction<PointerEventData> OnUp { get; } = new();
+        private BindableEvent<PointerEventData> OnUp { get; } = new();
         
-        private BindAction<PointerEventData> OnMove { get; } = new();
+        private BindableEvent<PointerEventData> OnMove { get; } = new();
         
-        private BindPoint<string> PointerAction { get; } = new();
+        private Bindable<string> PointerAction { get; } = new();
         
         private void Awake()
         {
@@ -56,7 +57,7 @@ namespace FastenUp.Examples.Runtime
             SwitchListener(OnMove, OnMoveHandler);
         }
         
-        private static void SwitchListener(BindAction<PointerEventData> bind, UnityAction<PointerEventData> action)
+        private static void SwitchListener(BindableEvent<PointerEventData> bind, UnityAction<PointerEventData> action)
         {
             if (!bind.HasListeners(action))
             {

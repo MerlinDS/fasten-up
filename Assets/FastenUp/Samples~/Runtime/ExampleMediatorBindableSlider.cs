@@ -1,14 +1,15 @@
-﻿using FastenUp.Runtime.Base;
+﻿using FastenUp.Runtime.Bindables;
+using FastenUp.Runtime.Mediators;
 using UnityEngine;
 
 namespace FastenUp.Examples.Runtime
 {
     internal partial class ExampleMediatorBindableSlider : MonoBehaviour, IMediator
     {
-        private BindPoint<Vector2Int> Slider { get; } = new();
-        private BindPoint<int> SliderValue { get; } = new();
+        private Bindable<Vector2Int> Slider { get; } = new();
+        private Bindable<int> SliderValue { get; } = new();
         
-        private BindPoint<int> Text { get; } = new();
+        private Bindable<int> Text { get; } = new();
         
         private void Awake()
         {

@@ -1,11 +1,12 @@
-﻿using FastenUp.Runtime.Base;
+﻿using FastenUp.Runtime.Bindables;
+using FastenUp.Runtime.Mediators;
 using UnityEngine;
 
 namespace FastenUp.Examples.Runtime
 {
     internal partial class ExampleMediatorBindableColor : MonoBehaviour, IMediator
     {
-        private BindPoint<Color> Color { get; } = new() { Value = UnityEngine.Color.yellow };
+        private Bindable<Color> Color { get; } = new() { Value = UnityEngine.Color.yellow };
 
         public void ChangeColorToRed()
         {
