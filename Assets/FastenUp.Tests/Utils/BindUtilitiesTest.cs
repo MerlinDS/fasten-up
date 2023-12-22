@@ -17,7 +17,7 @@ namespace FastenUp.Tests.Utils
             //Arrange
             var bindable = Substitute.For<IBinder, IBinder<bool>>();
             bindable.Name.Returns("Test");
-            var point = Substitute.For<IInternalBindPoint<bool>>();
+            var point = Substitute.For<IInternalBindable<bool>>();
             //Act
             BindUtilities.TryBind(point,"Test", bindable);
             //Assert
@@ -30,7 +30,7 @@ namespace FastenUp.Tests.Utils
             //Arrange
             var bindable = Substitute.For<IBinder, IBinder<bool>>();
             bindable.Name.Returns("Test");
-            var point = Substitute.For<IInternalBindPoint<bool>>();
+            var point = Substitute.For<IInternalBindable<bool>>();
             //Act
             BindUtilities.TryBind(point,"Test2", bindable);
             //Assert
@@ -43,7 +43,7 @@ namespace FastenUp.Tests.Utils
             //Arrange
             var bindable = Substitute.For<IBinder, IBinder<bool>>();
             bindable.Name.Returns("Test");
-            var point = Substitute.For<IInternalBindPoint<int>>();
+            var point = Substitute.For<IInternalBindable<int>>();
             //Act
             BindUtilities.TryBind(point,"Test", bindable);
             //Assert
@@ -54,7 +54,7 @@ namespace FastenUp.Tests.Utils
         public void TryBind_When_bindable_is_null_Should_not_Add_bindable_to_point()
         {
             //Arrange
-            var point = Substitute.For<IInternalBindPoint<bool>>();
+            var point = Substitute.For<IInternalBindable<bool>>();
             //Act
             BindUtilities.TryBind(point,"Test", null);
             //Assert
@@ -67,7 +67,7 @@ namespace FastenUp.Tests.Utils
             //Arrange
             var bindable = Substitute.For<IBinder, IBinder<bool>>();
             bindable.Name.Returns("Test");
-            var point = Substitute.For<IInternalBindPoint<bool>>();
+            var point = Substitute.For<IInternalBindable<bool>>();
             //Act
             BindUtilities.TryUnbind(point,"Test", bindable);
             //Assert
@@ -80,7 +80,7 @@ namespace FastenUp.Tests.Utils
             //Arrange
             var bindable = Substitute.For<IBinder, IBinder<bool>>();
             bindable.Name.Returns("Test");
-            var point = Substitute.For<IInternalBindPoint<bool>>();
+            var point = Substitute.For<IInternalBindable<bool>>();
             //Act
             BindUtilities.TryBind(point,"Test2", bindable);
             //Assert
@@ -93,7 +93,7 @@ namespace FastenUp.Tests.Utils
             //Arrange
             var bindable = Substitute.For<IBinder, IBinder<bool>>();
             bindable.Name.Returns("Test");
-            var point = Substitute.For<IInternalBindPoint<int>>();
+            var point = Substitute.For<IInternalBindable<int>>();
             //Act
             BindUtilities.TryBind(point,"Test", bindable);
             //Assert
@@ -104,7 +104,7 @@ namespace FastenUp.Tests.Utils
         public void TryUnbind_When_bindable_is_null_Should_not_Remove_bindable_from_point()
         {
             //Arrange
-            var point = Substitute.For<IInternalBindPoint<bool>>();
+            var point = Substitute.For<IInternalBindable<bool>>();
             //Act
             BindUtilities.TryBind(point,"Test", null);
             //Assert
@@ -117,11 +117,11 @@ namespace FastenUp.Tests.Utils
             //Arrange
             var bindable = Substitute.For<IBinder, IEventBinder<bool>>();
             bindable.Name.Returns("Test");
-            var action = Substitute.For<IInternalBindAction<bool>>();
+            var action = Substitute.For<IInternalBindableEvent<bool>>();
             //Act
             BindUtilities.TryBind(action,"Test", bindable);
             //Assert
-            action.Received(1).AddListener(bindable.As<IEventBinder<bool>>());
+            action.Received(1).Add(bindable.As<IEventBinder<bool>>());
         }
         
         [Test]
@@ -130,11 +130,11 @@ namespace FastenUp.Tests.Utils
             //Arrange
             var bindable = Substitute.For<IBinder, IEventBinder<bool>>();
             bindable.Name.Returns("Test");
-            var action = Substitute.For<IInternalBindAction<bool>>();
+            var action = Substitute.For<IInternalBindableEvent<bool>>();
             //Act
             BindUtilities.TryBind(action,"Test2", bindable);
             //Assert
-            action.DidNotReceive().AddListener(bindable.As<IEventBinder<bool>>());
+            action.DidNotReceive().Add(bindable.As<IEventBinder<bool>>());
         }
         
         [Test]
@@ -143,22 +143,22 @@ namespace FastenUp.Tests.Utils
             //Arrange
             var bindable = Substitute.For<IBinder, IEventBinder<bool>>();
             bindable.Name.Returns("Test");
-            var action = Substitute.For<IInternalBindAction<int>>();
+            var action = Substitute.For<IInternalBindableEvent<int>>();
             //Act
             BindUtilities.TryBind(action,"Test", bindable);
             //Assert
-            action.DidNotReceive().AddListener(Arg.Any<IEventBinder<int>>());
+            action.DidNotReceive().Add(Arg.Any<IEventBinder<int>>());
         }
         
         [Test]
         public void TryBind_When_bindable_is_null_Should_not_Add_bindable_to_action()
         {
             //Arrange
-            var action = Substitute.For<IInternalBindAction<bool>>();
+            var action = Substitute.For<IInternalBindableEvent<bool>>();
             //Act
             BindUtilities.TryBind(action,"Test", null);
             //Assert
-            action.DidNotReceive().AddListener(Arg.Any<IEventBinder<bool>>());
+            action.DidNotReceive().Add(Arg.Any<IEventBinder<bool>>());
         }
         
         [Test]
@@ -167,11 +167,11 @@ namespace FastenUp.Tests.Utils
             //Arrange
             var bindable = Substitute.For<IBinder, IEventBinder<bool>>();
             bindable.Name.Returns("Test");
-            var action = Substitute.For<IInternalBindAction<bool>>();
+            var action = Substitute.For<IInternalBindableEvent<bool>>();
             //Act
             BindUtilities.TryUnbind(action,"Test", bindable);
             //Assert
-            action.Received(1).RemoveListener(bindable.As<IEventBinder<bool>>());
+            action.Received(1).Remove(bindable.As<IEventBinder<bool>>());
         }
         
         [Test]
@@ -180,11 +180,11 @@ namespace FastenUp.Tests.Utils
             //Arrange
             var bindable = Substitute.For<IBinder, IEventBinder<bool>>();
             bindable.Name.Returns("Test");
-            var action = Substitute.For<IInternalBindAction<bool>>();
+            var action = Substitute.For<IInternalBindableEvent<bool>>();
             //Act
             BindUtilities.TryBind(action,"Test2", bindable);
             //Assert
-            action.DidNotReceive().RemoveListener(bindable.As<IEventBinder<bool>>());
+            action.DidNotReceive().Remove(bindable.As<IEventBinder<bool>>());
         }
         
         [Test]
@@ -193,22 +193,22 @@ namespace FastenUp.Tests.Utils
             //Arrange
             var bindable = Substitute.For<IBinder, IEventBinder<bool>>();
             bindable.Name.Returns("Test");
-            var action = Substitute.For<IInternalBindAction<int>>();
+            var action = Substitute.For<IInternalBindableEvent<int>>();
             //Act
             BindUtilities.TryBind(action,"Test", bindable);
             //Assert
-            action.DidNotReceive().RemoveListener(Arg.Any<IEventBinder<int>>());
+            action.DidNotReceive().Remove(Arg.Any<IEventBinder<int>>());
         }
         
         [Test]
         public void TryUnbind_When_bindable_is_null_Should_not_Remove_bindable_from_action()
         {
             //Arrange
-            var action = Substitute.For<IInternalBindAction<bool>>();
+            var action = Substitute.For<IInternalBindableEvent<bool>>();
             //Act
             BindUtilities.TryBind(action,"Test", null);
             //Assert
-            action.DidNotReceive().RemoveListener(Arg.Any<IEventBinder<bool>>());
+            action.DidNotReceive().Remove(Arg.Any<IEventBinder<bool>>());
         }
         
     }

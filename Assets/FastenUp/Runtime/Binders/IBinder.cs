@@ -4,7 +4,7 @@ using FastenUp.Runtime.Mediators;
 namespace FastenUp.Runtime.Binders
 {
     /// <summary>
-    /// Implementations of this interface will be bound to an <see cref="IBindPoint{T}"/>.
+    /// Implementations of this interface will be bound to an <see cref="IBindable{T}"/>.
     /// It provides communication between the unity components and bindable property in a <see cref="IMediator"/>.
     /// </summary>
     public interface IBinder

@@ -5,7 +5,7 @@ using FastenUp.Runtime.Exceptions;
 
 namespace FastenUp.Runtime.Base
 {
-    public sealed class BindPoint<T> : IBindPoint<T>, IInternalBindPoint<T>
+    public sealed class Bindable<T> : IBindable<T>, IInternalBindable<T>
     {
         private readonly HashSet<IBinder<T>> _bindables = new(1);
 
@@ -25,10 +25,10 @@ namespace FastenUp.Runtime.Base
 
         public event Action<T> OnValueChanged;
 
-        void IInternalBindPoint<T>.Add(IBinder<T> binder)
+        void IInternalBindable<T>.Add(IBinder<T> binder)
         {
             if (_bindables.Contains(binder))
-                throw new FastenUpException("Bindable already added to bind point.");
+                throw new FastenUpException($"{nameof(binder)} already added to the {nameof(Bindable<T>)}.");
 
             binder.SetValue(_value);
             _bindables.Add(binder);
@@ -37,10 +37,10 @@ namespace FastenUp.Runtime.Base
                 bindableGettable.OnBinderChanged += OnValueChangedHandler;
         }
 
-        void IInternalBindPoint<T>.Remove(IBinder<T> binder)
+        void IInternalBindable<T>.Remove(IBinder<T> binder)
         {
             if (!_bindables.Contains(binder))
-                throw new FastenUpException("Bindable not found in bind point.");
+                throw new FastenUpException($"{nameof(binder)} not found in the {nameof(Bindable<T>)}.");
 
             _bindables.Remove(binder);
             

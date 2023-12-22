@@ -30,7 +30,7 @@ namespace FastenUp.Tests.Mediators
     
     internal sealed partial class TestMediator : IMediator, IInternalMediator
     {
-        private BindPoint<string> Text { get; } = new();
+        private Bindable<string> Text { get; } = new();
 
         public TestMediator(string text) => 
             Text.Value = text;

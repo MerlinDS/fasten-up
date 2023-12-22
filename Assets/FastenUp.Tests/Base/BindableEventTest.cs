@@ -10,19 +10,19 @@ using UnityEngine.Events;
 namespace FastenUp.Tests.Base
 {
     [TestFixture]
-    [TestOf(typeof(BindAction))]
-    public class BindActionTest
+    [TestOf(typeof(BindableEvent))]
+    public class BindableEventTest
     {
         [Test]
         public void AddBindableListener_When_listener_already_added_Should_throw_exception()
         {
             //Arrange
             var bindableListener = Substitute.For<IEventBinder<UnityAction>>();
-            var sut = new BindAction();
+            var sut = new BindableEvent();
             Action act = ()=>
             {
-                sut.As<IInternalBindAction<UnityAction>>().AddListener(bindableListener);
-                sut.As<IInternalBindAction<UnityAction>>().AddListener(bindableListener);
+                sut.As<IInternalBindableEvent<UnityAction>>().Add(bindableListener);
+                sut.As<IInternalBindableEvent<UnityAction>>().Add(bindableListener);
             };
             //Act & Assert
             act.Should().Throw<FastenUpException>();
@@ -33,8 +33,8 @@ namespace FastenUp.Tests.Base
         {
             //Arrange
             var bindableListener = Substitute.For<IEventBinder<UnityAction>>();
-            var sut = new BindAction();
-            Action act = ()=> sut.As<IInternalBindAction<UnityAction>>().AddListener(bindableListener);
+            var sut = new BindableEvent();
+            Action act = ()=> sut.As<IInternalBindableEvent<UnityAction>>().Add(bindableListener);
             //Act & Assert
             act.Should().NotThrow<FastenUpException>();
         }
@@ -44,8 +44,8 @@ namespace FastenUp.Tests.Base
         {
             //Arrange
             var bindableListener = Substitute.For<IEventBinder<UnityAction>>();
-            var sut = new BindAction();
-            Action act = ()=> sut.As<IInternalBindAction<UnityAction>>().RemoveListener(bindableListener);
+            var sut = new BindableEvent();
+            Action act = ()=> sut.As<IInternalBindableEvent<UnityAction>>().Remove(bindableListener);
             //Act & Assert
             act.Should().Throw<FastenUpException>();
         }
@@ -55,11 +55,11 @@ namespace FastenUp.Tests.Base
         {
             //Arrange
             var bindableListener = Substitute.For<IEventBinder<UnityAction>>();
-            var sut = new BindAction();
+            var sut = new BindableEvent();
             Action act = ()=>
             {
-                sut.As<IInternalBindAction<UnityAction>>().AddListener(bindableListener);
-                sut.As<IInternalBindAction<UnityAction>>().RemoveListener(bindableListener);
+                sut.As<IInternalBindableEvent<UnityAction>>().Add(bindableListener);
+                sut.As<IInternalBindableEvent<UnityAction>>().Remove(bindableListener);
             };
             //Act & Assert
             act.Should().NotThrow<FastenUpException>();

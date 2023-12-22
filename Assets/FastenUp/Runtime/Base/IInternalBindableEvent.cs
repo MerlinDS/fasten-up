@@ -7,9 +7,9 @@ namespace FastenUp.Runtime.Base
     /// Used to bind <see cref="IEventBinder{T}"/>s to a <see cref="IMediator"/>.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public interface IInternalBindAction<out T> : IInternalBind
+    public interface IInternalBindableEvent<out T> : IInternalBindable
     {
-        internal void AddListener(IEventBinder<T> listener);
-        internal void RemoveListener(IEventBinder<T> listener);
+        internal void Add(IEventBinder<T> eventBinder);
+        internal void Remove(IEventBinder<T> eventBinder);
     }
 }
