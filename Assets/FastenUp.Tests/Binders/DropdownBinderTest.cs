@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using FastenUp.Runtime.Bindables;
+using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Delegates;
 using FluentAssertions;
 using NSubstitute;
@@ -9,11 +9,11 @@ using TMPro;
 using UnityEngine;
 using UnityTestingAssist.Runtime;
 
-namespace FastenUp.Tests.Bindables
+namespace FastenUp.Tests.Binders
 {
     [TestFixture]
-    [TestOf(typeof(BindableDropdown))]
-    public class BindableDropdownTest
+    [TestOf(typeof(DropdownBinder))]
+    public class DropdownBinderTest
     {
         [Test]
         public void SetValue_When_type_is_int_Should_set_value_to_dropdown_silently()
@@ -183,10 +183,10 @@ namespace FastenUp.Tests.Bindables
             onValueChanged.DidNotReceive().Invoke(sut);
         }
 
-        private static BindableDropdown CreateSut()
+        private static DropdownBinder CreateSut()
         {
             var gameObject = new GameObject();
-            var sut = gameObject.AddComponent<BindableDropdown>();
+            var sut = gameObject.AddComponent<DropdownBinder>();
             sut.ExecuteAwake();
             return sut;
         }
