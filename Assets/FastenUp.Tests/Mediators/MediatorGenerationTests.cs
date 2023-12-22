@@ -1,11 +1,13 @@
 ﻿using FastenUp.Runtime.Base;
 using FastenUp.Runtime.Bindables;
+using FastenUp.Runtime.Mediators;
 using NSubstitute;
 using NUnit.Framework;
 
-namespace FastenUp.Tests.Base
+namespace FastenUp.Tests.Mediators
 {
     [TestFixture]
+    [TestOf(typeof(IInternalMediator))]
     public class MediatorGenerationTests
     {
         [Test]
@@ -26,7 +28,7 @@ namespace FastenUp.Tests.Base
         }
     }
     
-    internal sealed partial class TestMediator : IMediator
+    internal sealed partial class TestMediator : IMediator, IInternalMediator
     {
         private BindPoint<string> Text { get; } = new();
 
@@ -35,5 +37,18 @@ namespace FastenUp.Tests.Base
 
         public void SetText(string text) => 
             Text.Value = text;
+
+        //TODO: Remove after source generator update
+        /// <inheritdoc />
+        public void Bind(IBindable bindable)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        /// <inheritdoc />
+        public void Unbind(IBindable bindable)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

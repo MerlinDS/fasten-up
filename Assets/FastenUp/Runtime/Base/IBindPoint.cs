@@ -1,5 +1,6 @@
 ﻿using System;
 using FastenUp.Runtime.Bindables;
+using FastenUp.Runtime.Mediators;
 
 namespace FastenUp.Runtime.Base
 {
