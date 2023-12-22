@@ -1,5 +1,5 @@
 ﻿using System;
-using FastenUp.Runtime.Bindables.Pointers;
+using FastenUp.Runtime.Binders.Pointers;
 using FluentAssertions;
 using NSubstitute;
 using NUnit.Framework;
@@ -8,11 +8,11 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityTestingAssist.Runtime;
 
-namespace FastenUp.Tests.Bindables.Pointers
+namespace FastenUp.Tests.Binders.Pointers
 {
     [TestFixture]
-    [TestOf(typeof(BindablePointer))]
-    public class BindablePointerTest
+    [TestOf(typeof(PointerBinder))]
+    public class PointerBinderTest
     {
         [Test]
         public void AddListener_When_type_not_generic_listener_is_null_Should_not_throw_exception()
@@ -122,13 +122,13 @@ namespace FastenUp.Tests.Bindables.Pointers
             actual.DidNotReceive().Invoke(Arg.Any<PointerEventData>());
         }
 
-        private static TestBindablePointer CreateSut()
+        private static TestPointerBinder CreateSut()
         {
             var gameObject = new GameObject();
-            return gameObject.AddComponent<TestBindablePointer>();
+            return gameObject.AddComponent<TestPointerBinder>();
         }
 
-        private sealed class TestBindablePointer : BindablePointer
+        private sealed class TestPointerBinder : PointerBinder
         {
             public new void OnPointerEvent(PointerEventData eventData)
             {
