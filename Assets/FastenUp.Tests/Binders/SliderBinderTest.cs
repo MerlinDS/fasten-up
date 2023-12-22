@@ -19,8 +19,8 @@ namespace FastenUp.Tests.Binders
             // Arrange
             const float expected = 0.5f;
             var sut = CreateSut();
-            var onValueChanged = Substitute.For<OnBindableChanged>();
-            sut.OnBindableChanged += onValueChanged;
+            var onValueChanged = Substitute.For<OnBinderChanged>();
+            sut.OnBinderChanged += onValueChanged;
             // Act
             sut.SetValue(expected);
             // Assert
@@ -37,8 +37,8 @@ namespace FastenUp.Tests.Binders
             var slider = sut.GetComponent<Slider>();
             slider.maxValue = 10;
             slider.wholeNumbers = true;
-            var onValueChanged = Substitute.For<OnBindableChanged>();
-            sut.OnBindableChanged += onValueChanged;
+            var onValueChanged = Substitute.For<OnBinderChanged>();
+            sut.OnBinderChanged += onValueChanged;
             // Act
             sut.SetValue(expected);
             // Assert
@@ -107,30 +107,30 @@ namespace FastenUp.Tests.Binders
         }
 
         [Test]
-        public void OnValueChanged_When_slider_value_changed_Should_invoke_OnBindableChanged()
+        public void OnValueChanged_When_slider_value_changed_Should_invoke_OnBinderChanged()
         {
             // Arrange
             var sut = CreateSut();
-            var onBindableChanged = Substitute.For<OnBindableChanged>();
-            sut.OnBindableChanged += onBindableChanged;
+            var onBinderChanged = Substitute.For<OnBinderChanged>();
+            sut.OnBinderChanged += onBinderChanged;
             // Act
             sut.GetComponent<Slider>().value = 0.5f;
             // Assert
-            onBindableChanged.Received(1).Invoke(sut);
+            onBinderChanged.Received(1).Invoke(sut);
         }
 
         [Test]
-        public void OnValueChanged_When_slider_value_changed_Should_not_invoke_OnBindableChanged_if_disabled()
+        public void OnValueChanged_When_slider_value_changed_Should_not_invoke_OnBinderChanged_if_disabled()
         {
             // Arrange
             var sut = CreateSut();
-            var onBindableChanged = Substitute.For<OnBindableChanged>();
-            sut.OnBindableChanged += onBindableChanged;
+            var onBinderChanged = Substitute.For<OnBinderChanged>();
+            sut.OnBinderChanged += onBinderChanged;
             sut.ExecuteOnDisable();
             // Act
             sut.GetComponent<Slider>().value = 0.5f;
             // Assert
-            onBindableChanged.DidNotReceive().Invoke(sut);
+            onBinderChanged.DidNotReceive().Invoke(sut);
         }
 
 

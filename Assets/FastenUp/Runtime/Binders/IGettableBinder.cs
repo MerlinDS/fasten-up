@@ -7,7 +7,7 @@ namespace FastenUp.Runtime.Binders
     /// <inheritdoc cref="IBinder"/>
     public interface IGettableBinder<T> : IBinder<T>
     {
-        public event OnBindableChanged OnBindableChanged;
+        public event OnBinderChanged OnBinderChanged;
         T GetValue();
     }
 }

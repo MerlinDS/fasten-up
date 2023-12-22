@@ -34,7 +34,7 @@ namespace FastenUp.Runtime.Base
             _bindables.Add(binder);
 
             if (binder is IGettableBinder<T> bindableGettable)
-                bindableGettable.OnBindableChanged += OnValueChangedHandler;
+                bindableGettable.OnBinderChanged += OnValueChangedHandler;
         }
 
         void IInternalBindPoint<T>.Remove(IBinder<T> binder)
@@ -45,7 +45,7 @@ namespace FastenUp.Runtime.Base
             _bindables.Remove(binder);
             
             if (binder is IGettableBinder<T> bindableGettable)
-                bindableGettable.OnBindableChanged -= OnValueChangedHandler;
+                bindableGettable.OnBinderChanged -= OnValueChangedHandler;
         }
 
         private void OnValueChangedHandler(IBinder binder)

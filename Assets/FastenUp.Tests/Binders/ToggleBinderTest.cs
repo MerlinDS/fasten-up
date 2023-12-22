@@ -19,8 +19,8 @@ namespace FastenUp.Tests.Binders
             //Arrange
             var sut = CreateSut();
             var toggle = sut.GetComponent<Toggle>();
-            var onValueChanged = Substitute.For<OnBindableChanged>();
-            sut.OnBindableChanged += onValueChanged;
+            var onValueChanged = Substitute.For<OnBinderChanged>();
+            sut.OnBinderChanged += onValueChanged;
             //Act
             sut.SetValue(true);
             //Assert
@@ -40,17 +40,17 @@ namespace FastenUp.Tests.Binders
         }
 
         [Test]
-        public void OnBindableChanged_When_toggle_change_isOn_Should_invoke_event()
+        public void OnBinderChanged_When_toggle_change_isOn_Should_invoke_event()
         {
             //Arrange
             var sut = CreateSut();
             var toggle = sut.GetComponent<Toggle>();
-            var onValueChanged = Substitute.For<OnBindableChanged>();
-            sut.OnBindableChanged += onValueChanged;
+            var onBinderChanged = Substitute.For<OnBinderChanged>();
+            sut.OnBinderChanged += onBinderChanged;
             //Act
             toggle.isOn = true;
             //Assert
-            onValueChanged.Received(1).Invoke(sut);
+            onBinderChanged.Received(1).Invoke(sut);
         }
 
         [Test]
@@ -59,8 +59,8 @@ namespace FastenUp.Tests.Binders
             //Arrange
             var sut = CreateSut();
             var toggle = sut.GetComponent<Toggle>();
-            var onValueChanged = Substitute.For<OnBindableChanged>();
-            sut.OnBindableChanged += onValueChanged;
+            var onValueChanged = Substitute.For<OnBinderChanged>();
+            sut.OnBinderChanged += onValueChanged;
             //Act
             sut.ExecuteOnDisable();
             //Assert

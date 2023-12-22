@@ -8,10 +8,10 @@ using UnityEngine;
 namespace FastenUp.Runtime.Binders
 {
     /// <summary>
-    /// Base class for all bindables.
+    /// Base class for all binders.
     /// </summary>
     /// <remarks>
-    /// This class is provide basic functionality for all bindables, like name validation and binding to mediators.
+    /// This class is provide basic functionality for all binders, like name validation and binding to mediators.
     /// </remarks>
     [Serializable]
     public abstract class BaseBinder : MonoBehaviour, IBinder
@@ -20,10 +20,10 @@ namespace FastenUp.Runtime.Binders
 
         [field: SerializeField] public string Name { get; [ExcludeFromCodeCoverage] private set; }
 
-        public event OnBindableChanged OnBindableChanged;
+        public event OnBinderChanged OnBinderChanged;
 
-        protected void InvokeOnBindableChanged() =>
-            OnBindableChanged?.Invoke(this);
+        protected void InvokeOnBinderChanged() =>
+            OnBinderChanged?.Invoke(this);
 
         protected virtual void OnEnable()
         {
