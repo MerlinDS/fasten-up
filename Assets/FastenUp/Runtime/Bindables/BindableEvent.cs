@@ -3,7 +3,7 @@ using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Exceptions;
 using UnityEngine.Events;
 
-namespace FastenUp.Runtime.Base
+namespace FastenUp.Runtime.Bindables
 {
     public sealed class BindableEvent<T> : BaseBindableEvent<UnityAction<T>>
     {

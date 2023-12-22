@@ -1,5 +1,5 @@
 ﻿using System;
-using FastenUp.Runtime.Base;
+using FastenUp.Runtime.Bindables;
 using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Exceptions;
 using FluentAssertions;
@@ -7,7 +7,7 @@ using NSubstitute;
 using NUnit.Framework;
 using UnityEngine.Events;
 
-namespace FastenUp.Tests.Base
+namespace FastenUp.Tests.Bindables
 {
     [TestFixture]
     [TestOf(typeof(BaseBindableEvent<>))]

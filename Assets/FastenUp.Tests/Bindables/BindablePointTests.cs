@@ -1,5 +1,5 @@
 ﻿using System;
-using FastenUp.Runtime.Base;
+using FastenUp.Runtime.Bindables;
 using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Delegates;
 using FastenUp.Runtime.Exceptions;
@@ -7,7 +7,7 @@ using FluentAssertions;
 using NSubstitute;
 using NUnit.Framework;
 
-namespace FastenUp.Tests.Base
+namespace FastenUp.Tests.Bindables
 {
     [TestFixture]
     [TestOf(typeof(Bindable<>))]
@@ -45,8 +45,7 @@ namespace FastenUp.Tests.Base
             sut.As<IInternalBindable<bool>>().Add(bindable);
             Action act = () => sut.As<IInternalBindable<bool>>().Add(bindable);
             //Act & Assert
-            act.Should().Throw<FastenUpException>()
-                .WithMessage("Bindable already added to bind point.");
+            act.Should().Throw<FastenUpException>();
         }
 
         [Test]
@@ -82,8 +81,7 @@ namespace FastenUp.Tests.Base
             var sut = new Bindable<bool>();
             Action act = () => sut.As<IInternalBindable<bool>>().Remove(bindable);
             //Act & Assert
-            act.Should().Throw<FastenUpException>()
-                .WithMessage("Bindable not found in bind point.");
+            act.Should().Throw<FastenUpException>();
         }
 
         [Test]

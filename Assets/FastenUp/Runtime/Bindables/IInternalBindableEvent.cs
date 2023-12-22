@@ -1,7 +1,7 @@
-using FastenUp.Runtime.Binders;
+﻿using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Mediators;
 
-namespace FastenUp.Runtime.Base
+namespace FastenUp.Runtime.Bindables
 {
     /// <summary>
     /// Used to bind <see cref="IEventBinder{T}"/>s to a <see cref="IMediator"/>.
