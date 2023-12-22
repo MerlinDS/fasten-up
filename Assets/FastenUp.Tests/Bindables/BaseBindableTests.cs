@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Diagnostics.CodeAnalysis;
-using FastenUp.Runtime.Base;
 using FastenUp.Runtime.Bindables;
 using FastenUp.Runtime.Delegates;
 using FastenUp.Runtime.Mediators;

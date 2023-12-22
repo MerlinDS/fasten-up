@@ -1,5 +1,4 @@
-﻿using FastenUp.Runtime.Bindables.Pointers;
-using FastenUp.Runtime.Utils;
+﻿using FastenUp.Runtime.Utils;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -10,7 +9,7 @@ namespace FastenUp.Runtime.Binders.Pointers
     /// </summary> 
     [AddComponentMenu(FastenUpComponentMenu.EventHandlersMenu + "Pointer Exit Binder", 2)]
     [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#pointer-exit")]
-    public sealed class PointerExitBinder : BindablePointer, IPointerExitHandler
+    public sealed class PointerExitBinder : PointerBinder, IPointerExitHandler
     {
         /// <inheritdoc />
         public void OnPointerExit(PointerEventData eventData)

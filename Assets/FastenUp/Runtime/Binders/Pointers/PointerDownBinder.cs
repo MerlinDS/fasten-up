@@ -1,5 +1,4 @@
-﻿using FastenUp.Runtime.Bindables.Pointers;
-using FastenUp.Runtime.Utils;
+﻿using FastenUp.Runtime.Utils;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -10,7 +9,7 @@ namespace FastenUp.Runtime.Binders.Pointers
     /// </summary>
     [AddComponentMenu(FastenUpComponentMenu.EventHandlersMenu + "Pointer Down Binder", 4)]
     [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#pointer-down")]
-    public sealed class PointerDownBinder : BindablePointer, IPointerDownHandler
+    public sealed class PointerDownBinder : PointerBinder, IPointerDownHandler
     {
         /// <inheritdoc />
         public void OnPointerDown(PointerEventData eventData)
