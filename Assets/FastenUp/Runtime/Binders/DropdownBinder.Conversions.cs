@@ -1,10 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
+using FastenUp.Runtime.Bindables;
 using TMPro;
 
-namespace FastenUp.Runtime.Bindables
+namespace FastenUp.Runtime.Binders
 {
-    public sealed partial class BindableDropdown : IBindable<string[]>,
+    public sealed partial class DropdownBinder : IBindable<string[]>,
         IBindable<List<TMP_Dropdown.OptionData>>
     {
         /// <inheritdoc />
