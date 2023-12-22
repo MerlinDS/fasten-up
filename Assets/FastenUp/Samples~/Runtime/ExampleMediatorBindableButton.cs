@@ -1,12 +1,13 @@
-﻿using FastenUp.Runtime.Base;
+﻿using FastenUp.Runtime.Bindables;
+using FastenUp.Runtime.Mediators;
 using UnityEngine;
 
 namespace FastenUp.Examples.Runtime
 {
     internal partial class ExampleMediatorBindableButton : MonoBehaviour, IMediator
     {
-        private BindAction OnClick { get; } = new();
-        private BindPoint<int> ClickCount { get; } = new();
+        private BindableEvent OnClick { get; } = new();
+        private Bindable<int> ClickCount { get; } = new();
 
         private void Awake()
         {

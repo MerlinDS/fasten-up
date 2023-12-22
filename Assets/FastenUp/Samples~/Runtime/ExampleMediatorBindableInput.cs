@@ -1,12 +1,13 @@
-using FastenUp.Runtime.Base;
+using FastenUp.Runtime.Bindables;
+using FastenUp.Runtime.Mediators;
 using UnityEngine;
 
 namespace FastenUp.Examples.Runtime
 {
     internal partial class ExampleMediatorBindableInput : MonoBehaviour, IMediator
     {
-        private BindPoint<string> InputText { get; } = new();
-        private BindPoint<string> OutputText { get; } = new();
+        private Bindable<string> InputText { get; } = new();
+        private Bindable<string> OutputText { get; } = new();
 
         private void Awake()
         {

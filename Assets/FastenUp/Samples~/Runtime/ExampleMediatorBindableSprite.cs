@@ -1,12 +1,13 @@
-﻿using FastenUp.Runtime.Base;
+﻿using FastenUp.Runtime.Bindables;
+using FastenUp.Runtime.Mediators;
 using UnityEngine;
 
 namespace FastenUp.Examples.Runtime
 {
     internal partial class ExampleMediatorBindableSprite : MonoBehaviour, IMediator
     {
-        private BindPoint<Sprite> Sprite { get; } = new();
-        private BindPoint<string> Path { get; } = new();
+        private Bindable<Sprite> Sprite { get; } = new();
+        private Bindable<string> Path { get; } = new();
         
         private void Awake()
         {
