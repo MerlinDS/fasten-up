@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using FastenUp.Runtime.Utils;
+using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,14 +11,22 @@ namespace FastenUp.Runtime.Bindables
     /// </summary>
     [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Bindable Visibility", 0)]
     [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Core-Functionalities#visibility")]
-    public sealed class BindableVisibility : BaseBindable, IGettableBindable<bool>
+    public sealed class BindableVisibility : BaseBindable, IGettableBindable<bool>, IHierarchyCache
     {
         private readonly Queue<Transform> _transformQueue = new();
         private readonly List<Component> _componentBuffer = new();
         private readonly HashSet<Behaviour> _behaviourCache = new();
         private readonly HashSet<BindableVisibility> _childrenCache = new();
 
-        [SerializeField] private bool _default = true;
+        private enum DefaultVisibility : byte
+        {
+            Visible,
+
+            [UsedImplicitly(ImplicitUseTargetFlags.Itself)]
+            Hidden
+        }
+
+        [SerializeField] private DefaultVisibility _defaultVisibility;
         private bool _value = true;
         private BindableVisibility _parent;
 
@@ -31,26 +40,16 @@ namespace FastenUp.Runtime.Bindables
         private void Awake()
         {
             UpdateCache();
-            SetValue(_default);
+            SetValue(_defaultVisibility == DefaultVisibility.Visible);
         }
 
-        /// <summary>
-        /// Rebuilds internal cache.
-        /// <remarks>MUST be called after hierarchy was changed.</remarks>
-        /// </summary>
-        [ContextMenu("RebuildCache")]
+        /// <inheritdoc />
         public void RebuildCache()
         {
             _behaviourCache.Clear();
             _childrenCache.Clear();
 
             UpdateCache();
-        }
-
-        [ContextMenu("Test")]
-        private void Test()
-        {
-            SetValue(!_value);
         }
 
         /// <inheritdoc />
@@ -105,7 +104,7 @@ namespace FastenUp.Runtime.Bindables
             if (@object != null)
                 return true;
 
-            Debug.LogWarning("Hierarchy was changed. But RefreshCache was not called.", this);
+            Debug.LogError("Hierarchy was changed. But RefreshCache was not called.", this);
             return false;
         }
 
@@ -115,8 +114,8 @@ namespace FastenUp.Runtime.Bindables
             while (_transformQueue.TryDequeue(out var source))
             {
                 var hasCanvas = source.TryGetComponent<Canvas>(out var canvas);
-                EnqueueChildrenOf(source,
-                    hasCanvas); //If source has Canvas, then ignore its children except visibilities
+                //If source has Canvas, then ignore its children except visibilities
+                EnqueueChildrenOf(source, hasCanvas);
                 if (hasCanvas)
                 {
                     /*
