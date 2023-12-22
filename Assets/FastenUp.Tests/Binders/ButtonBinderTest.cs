@@ -1,5 +1,5 @@
 ﻿using System;
-using FastenUp.Runtime.Bindables;
+using FastenUp.Runtime.Binders;
 using FluentAssertions;
 using NSubstitute;
 using NUnit.Framework;
@@ -8,11 +8,11 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityTestingAssist.Runtime;
 
-namespace FastenUp.Tests.Bindables
+namespace FastenUp.Tests.Binders
 {
     [TestFixture]
-    [TestOf(typeof(BindableButton))]
-    public class BindableButtonTest
+    [TestOf(typeof(ButtonBinder))]
+    public class ButtonBinderTest
     {
         [Test]
         public void AddListener_When_listener_is_null_Should_not_throw_exception()
@@ -76,10 +76,10 @@ namespace FastenUp.Tests.Bindables
             actual.DidNotReceive().Invoke();
         }
 
-        private static BindableButton CreateSut()
+        private static ButtonBinder CreateSut()
         {
-            var gameObject = new GameObject(nameof(BindableButtonTest));
-            var sut = gameObject.AddComponent<BindableButton>();
+            var gameObject = new GameObject(nameof(ButtonBinderTest));
+            var sut = gameObject.AddComponent<ButtonBinder>();
             sut.ExecuteAwake();
             return sut;
         }
