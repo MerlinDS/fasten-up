@@ -1,5 +1,5 @@
-﻿using FastenUp.Runtime.Base;
-using FastenUp.Runtime.Bindables;
+﻿using FastenUp.Runtime.Bindables;
+using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Utils;
 using FluentAssertions;
 using NSubstitute;
@@ -12,203 +12,176 @@ namespace FastenUp.Tests.Utils
     public class BindUtilitiesTest
     {
         [Test]
-        public void TryBind_When_point_and_bindable_are_suited_Should_Add_bindable_to_point()
+        public void NameEquals_When_binder_has_same_name_Should_return_true()
         {
             //Arrange
-            var bindable = Substitute.For<IBindable, IBindable<bool>>();
-            bindable.Name.Returns("Test");
-            var point = Substitute.For<IInternalBindPoint<bool>>();
+            var binder = Substitute.For<IBinder>();
+            binder.Name.Returns("Test");
             //Act
-            BindUtilities.TryBind(point,"Test", bindable);
+            var result = BindUtilities.NameEquals("Test", binder);
             //Assert
-            point.Received(1).Add(bindable.As<IBindable<bool>>());
+            result.Should().BeTrue();
+        }
+        
+        [Test]
+        public void NameEquals_When_binder_has_different_name_Should_return_false()
+        {
+            //Arrange
+            var binder = Substitute.For<IBinder>();
+            binder.Name.Returns("Test");
+            //Act
+            var result = BindUtilities.NameEquals("Test2", binder);
+            //Assert
+            result.Should().BeFalse();
+        }
+        
+        [Test]
+        public void NameEquals_When_binder_is_null_Should_return_false()
+        {
+            //Act
+            var result = BindUtilities.NameEquals("Test", null);
+            //Assert
+            result.Should().BeFalse();
+        }
+        
+        [Test]
+        public void TryBind_When_binder_has_valid_type_Should_bind()
+        {
+            //Arrange
+            var binder = Substitute.For<IBinder, IBinder<bool>>();
+            var bindable = Substitute.For<IInternalBindable<bool>>();
+            //Act
+            BindUtilities.TryBind(bindable, binder);
+            //Assert
+            bindable.Received(1).Bind(binder.As<IBinder<bool>>());
         }
 
         [Test]
-        public void TryBind_When_point_and_bindable_have_different_names_Should_not_Add_bindable_to_point()
+        public void TryBind_When_binder_has_invalid_type_Should_not_bind()
         {
             //Arrange
-            var bindable = Substitute.For<IBindable, IBindable<bool>>();
-            bindable.Name.Returns("Test");
-            var point = Substitute.For<IInternalBindPoint<bool>>();
+            var binder = Substitute.For<IBinder, IBinder<bool>>();
+            var bindable = Substitute.For<IInternalBindable<int>>();
             //Act
-            BindUtilities.TryBind(point,"Test2", bindable);
+            BindUtilities.TryBind(bindable, binder);
             //Assert
-            point.DidNotReceive().Add(bindable.As<IBindable<bool>>());
+            bindable.DidNotReceive().Bind(Arg.Any<IBinder<int>>());
         }
 
         [Test]
-        public void TryBind_When_point_and_bindable_have_different_types_Should_not_Add_bindable_to_point()
+        public void TryBind_When_binder_is_null_Should_not_bind()
         {
             //Arrange
-            var bindable = Substitute.For<IBindable, IBindable<bool>>();
-            bindable.Name.Returns("Test");
-            var point = Substitute.For<IInternalBindPoint<int>>();
+            var bindable = Substitute.For<IInternalBindable<bool>>();
             //Act
-            BindUtilities.TryBind(point,"Test", bindable);
+            BindUtilities.TryBind(bindable, null);
             //Assert
-            point.DidNotReceive().Add(Arg.Any<IBindable<int>>());
-        }
-
-        [Test]
-        public void TryBind_When_bindable_is_null_Should_not_Add_bindable_to_point()
-        {
-            //Arrange
-            var point = Substitute.For<IInternalBindPoint<bool>>();
-            //Act
-            BindUtilities.TryBind(point,"Test", null);
-            //Assert
-            point.DidNotReceive().Add(Arg.Any<IBindable<bool>>());
+            bindable.DidNotReceive().Bind(Arg.Any<IBinder<bool>>());
         }
         
         [Test]
-        public void TryUnbind_When_point_and_bindable_are_suited_Should_Remove_bindable_from_point()
+        public void TryUnbind_When_binder_has_valid_type_Should_unbind()
         {
             //Arrange
-            var bindable = Substitute.For<IBindable, IBindable<bool>>();
-            bindable.Name.Returns("Test");
-            var point = Substitute.For<IInternalBindPoint<bool>>();
+            var binder = Substitute.For<IBinder, IBinder<bool>>();
+            var bindable = Substitute.For<IInternalBindable<bool>>();
             //Act
-            BindUtilities.TryUnbind(point,"Test", bindable);
+            BindUtilities.TryUnbind(bindable, binder);
             //Assert
-            point.Received(1).Remove(bindable.As<IBindable<bool>>());
+            bindable.Received(1).Unbind(binder.As<IBinder<bool>>());
         }
         
         [Test]
-        public void TryUnbind_When_point_and_bindable_have_different_names_Should_not_Remove_bindable_from_point()
+        public void TryUnbind_When_binder_has_invalid_type_Should_not_unbind()
         {
             //Arrange
-            var bindable = Substitute.For<IBindable, IBindable<bool>>();
-            bindable.Name.Returns("Test");
-            var point = Substitute.For<IInternalBindPoint<bool>>();
+            var binder = Substitute.For<IBinder, IBinder<bool>>();
+            var bindable = Substitute.For<IInternalBindable<int>>();
             //Act
-            BindUtilities.TryBind(point,"Test2", bindable);
+            BindUtilities.TryBind(bindable, binder);
             //Assert
-            point.DidNotReceive().Remove(bindable.As<IBindable<bool>>());
+            bindable.DidNotReceive().Unbind(Arg.Any<IBinder<int>>());
         }
         
         [Test]
-        public void TryUnbind_When_point_and_bindable_have_different_types_Should_not_Remove_bindable_from_point()
+        public void TryUnbind_When_binder_is_null_Should_not_unbind()
         {
             //Arrange
-            var bindable = Substitute.For<IBindable, IBindable<bool>>();
-            bindable.Name.Returns("Test");
-            var point = Substitute.For<IInternalBindPoint<int>>();
+            var bindable = Substitute.For<IInternalBindable<bool>>();
             //Act
-            BindUtilities.TryBind(point,"Test", bindable);
+            BindUtilities.TryBind(bindable, null);
             //Assert
-            point.DidNotReceive().Remove(Arg.Any<IBindable<int>>());
+            bindable.DidNotReceive().Unbind(Arg.Any<IBinder<bool>>());
         }
         
         [Test]
-        public void TryUnbind_When_bindable_is_null_Should_not_Remove_bindable_from_point()
+        public void TryBind_When_eventBinder_has_valid_type_Should_bind()
         {
             //Arrange
-            var point = Substitute.For<IInternalBindPoint<bool>>();
+            var eventBinder = Substitute.For<IBinder, IEventBinder<bool>>();
+            var bindableEvent = Substitute.For<IInternalBindableEvent<bool>>();
             //Act
-            BindUtilities.TryBind(point,"Test", null);
+            BindUtilities.TryBind(bindableEvent, eventBinder);
             //Assert
-            point.DidNotReceive().Remove(Arg.Any<IBindable<bool>>());
+            bindableEvent.Received(1).Bind(eventBinder.As<IEventBinder<bool>>());
         }
         
         [Test]
-        public void TryBind_When_action_and_bindable_are_suited_Should_Add_bindable_to_action()
+        public void TryBind_When_eventBinder_has_invalid_type_Should_not_bind()
         {
             //Arrange
-            var bindable = Substitute.For<IBindable, IBindableListener<bool>>();
-            bindable.Name.Returns("Test");
-            var action = Substitute.For<IInternalBindAction<bool>>();
+            var eventBinder = Substitute.For<IBinder, IEventBinder<bool>>();
+            var bindableEvent = Substitute.For<IInternalBindableEvent<int>>();
             //Act
-            BindUtilities.TryBind(action,"Test", bindable);
+            BindUtilities.TryBind(bindableEvent, eventBinder);
             //Assert
-            action.Received(1).AddListener(bindable.As<IBindableListener<bool>>());
+            bindableEvent.DidNotReceive().Bind(eventBinder.As<IEventBinder<int>>());
         }
         
         [Test]
-        public void TryBind_When_action_and_bindable_have_different_names_Should_not_Add_bindable_to_action()
+        public void TryBind_When_eventBinder_is_null_Should_not_bind()
         {
             //Arrange
-            var bindable = Substitute.For<IBindable, IBindableListener<bool>>();
-            bindable.Name.Returns("Test");
-            var action = Substitute.For<IInternalBindAction<bool>>();
+            var bindableEvent = Substitute.For<IInternalBindableEvent<bool>>();
             //Act
-            BindUtilities.TryBind(action,"Test2", bindable);
+            BindUtilities.TryBind(bindableEvent, null);
             //Assert
-            action.DidNotReceive().AddListener(bindable.As<IBindableListener<bool>>());
+            bindableEvent.DidNotReceive().Bind(Arg.Any<IEventBinder<bool>>());
         }
         
         [Test]
-        public void TryBind_When_action_and_bindable_have_different_types_Should_not_Add_bindable_to_action()
+        public void TryUnbind_When_eventBinder_has_valid_type_Should_unbind()
         {
             //Arrange
-            var bindable = Substitute.For<IBindable, IBindableListener<bool>>();
-            bindable.Name.Returns("Test");
-            var action = Substitute.For<IInternalBindAction<int>>();
+            var eventBinder = Substitute.For<IBinder, IEventBinder<bool>>();
+            var bindableEvent = Substitute.For<IInternalBindableEvent<bool>>();
             //Act
-            BindUtilities.TryBind(action,"Test", bindable);
+            BindUtilities.TryUnbind(bindableEvent, eventBinder);
             //Assert
-            action.DidNotReceive().AddListener(Arg.Any<IBindableListener<int>>());
+            bindableEvent.Received(1).Unbind(eventBinder.As<IEventBinder<bool>>());
         }
         
         [Test]
-        public void TryBind_When_bindable_is_null_Should_not_Add_bindable_to_action()
+        public void TryUnbind_When_eventBinder_has_invalid_type_Should_not_unbind()
         {
             //Arrange
-            var action = Substitute.For<IInternalBindAction<bool>>();
+            var eventBinder = Substitute.For<IBinder, IEventBinder<bool>>();
+            var bindableEvent = Substitute.For<IInternalBindableEvent<int>>();
             //Act
-            BindUtilities.TryBind(action,"Test", null);
+            BindUtilities.TryBind(bindableEvent, eventBinder);
             //Assert
-            action.DidNotReceive().AddListener(Arg.Any<IBindableListener<bool>>());
+            bindableEvent.DidNotReceive().Unbind(Arg.Any<IEventBinder<int>>());
         }
         
         [Test]
-        public void TryUnbind_When_action_and_bindable_are_suited_Should_Remove_bindable_from_action()
+        public void TryUnbind_When_eventBinder_is_null_Should_not_unbind()
         {
             //Arrange
-            var bindable = Substitute.For<IBindable, IBindableListener<bool>>();
-            bindable.Name.Returns("Test");
-            var action = Substitute.For<IInternalBindAction<bool>>();
+            var bindableEvent = Substitute.For<IInternalBindableEvent<bool>>();
             //Act
-            BindUtilities.TryUnbind(action,"Test", bindable);
+            BindUtilities.TryBind(bindableEvent, null);
             //Assert
-            action.Received(1).RemoveListener(bindable.As<IBindableListener<bool>>());
-        }
-        
-        [Test]
-        public void TryUnbind_When_action_and_bindable_have_different_names_Should_not_Remove_bindable_from_action()
-        {
-            //Arrange
-            var bindable = Substitute.For<IBindable, IBindableListener<bool>>();
-            bindable.Name.Returns("Test");
-            var action = Substitute.For<IInternalBindAction<bool>>();
-            //Act
-            BindUtilities.TryBind(action,"Test2", bindable);
-            //Assert
-            action.DidNotReceive().RemoveListener(bindable.As<IBindableListener<bool>>());
-        }
-        
-        [Test]
-        public void TryUnbind_When_action_and_bindable_have_different_types_Should_not_Remove_bindable_from_action()
-        {
-            //Arrange
-            var bindable = Substitute.For<IBindable, IBindableListener<bool>>();
-            bindable.Name.Returns("Test");
-            var action = Substitute.For<IInternalBindAction<int>>();
-            //Act
-            BindUtilities.TryBind(action,"Test", bindable);
-            //Assert
-            action.DidNotReceive().RemoveListener(Arg.Any<IBindableListener<int>>());
-        }
-        
-        [Test]
-        public void TryUnbind_When_bindable_is_null_Should_not_Remove_bindable_from_action()
-        {
-            //Arrange
-            var action = Substitute.For<IInternalBindAction<bool>>();
-            //Act
-            BindUtilities.TryBind(action,"Test", null);
-            //Assert
-            action.DidNotReceive().RemoveListener(Arg.Any<IBindableListener<bool>>());
+            bindableEvent.DidNotReceive().Unbind(Arg.Any<IEventBinder<bool>>());
         }
         
     }

@@ -1,13 +1,13 @@
-﻿using System;
-using FastenUp.Runtime.Base;
+﻿using FastenUp.Runtime.Bindables;
+using FastenUp.Runtime.Mediators;
 using UnityEngine;
 
 namespace FastenUp.Examples.Runtime
 {
     internal partial class ExampleMediatorBindableToggle : MonoBehaviour, IMediator
     {
-        private BindPoint<bool> Toggle { get; } = new();
-        private BindPoint<string> Text { get; } = new();
+        private Bindable<bool> Toggle { get; } = new();
+        private Bindable<string> Text { get; } = new();
 
         private void Awake()
         {

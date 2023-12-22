@@ -1,21 +1,22 @@
-using FastenUp.Runtime.Base;
+﻿using System;
+using FastenUp.Runtime.Binders;
+using FastenUp.Runtime.Mediators;
 
 namespace FastenUp.Runtime.Bindables
 {
     /// <summary>
-    /// Implementations of this interface will be bound to an <see cref="IBindPoint{T}"/>.
-    /// It provides communication between the unity components and bind points in a <see cref="IMediator"/>.
+    /// This interface is used to bind <see cref="IBinder{T}"/>s to a <see cref="IMediator"/>.
     /// </summary>
-    public interface IBindable
+    /// <typeparam name="T">Type of the value that will be set or get by the bindable component</typeparam>
+    public interface IBindable<T>
     {
-        string Name { get; }
-    }
-
-    /// <remarks>Provides one-way binding</remarks>
-    /// <typeparam name="T">Type of the value that will be set by the bindable component</typeparam>
-    /// <inheritdoc cref="IBindable"/>
-    public interface IBindable<in T> : IBindable
-    {
-        void SetValue(T value);
+        /// <summary>
+        /// The value that will be set or get by the bindable component.
+        /// </summary>
+        T Value { get; set; }
+        /// <summary>
+        /// Event that will be invoked when the value of the bind point changes.
+        /// </summary>
+        event Action<T> OnValueChanged;
     }
 }
