@@ -75,6 +75,7 @@ namespace FastenUp.Runtime.Binders
 
             SetBehaviourVisibility(value);
             SetChildrenVisibility(value);
+            InvokeOnBinderChanged();
         }
 
         private void SetBehaviourVisibility(bool value)
