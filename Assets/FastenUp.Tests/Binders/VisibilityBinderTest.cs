@@ -17,29 +17,6 @@ namespace FastenUp.Tests.Binders
     [TestOf(typeof(VisibilityBinder))]
     public class VisibilityBinderTest
     {
-        [Test]
-        public void Awake_When_default_is_true_Should_set_value_to_true()
-        {
-            //Arrange
-            var sut = new GameObject(nameof(VisibilityBinderTest)).AddComponent<VisibilityBinder>();
-            //Act
-            sut.ExecuteAwake();
-            //Assert
-            sut.GetValue().Should().BeTrue();
-        }
-
-        [Test]
-        public void Awake_When_default_is_false_Should_set_value_to_false()
-        {
-            //Arrange
-            var sut = new GameObject(nameof(VisibilityBinderTest)).AddComponent<VisibilityBinder>();
-            sut.EditSerializable().Field("_defaultVisibility", 1).Apply();
-            //Act
-            sut.ExecuteAwake();
-            //Assert
-            sut.GetValue().Should().BeFalse();
-        }
-
         private static IEnumerable<TestCaseData> SetValueTestCases
         {
             get
@@ -346,9 +323,10 @@ namespace FastenUp.Tests.Binders
             //Assert
             LogAssert.NoUnexpectedReceived();
         }
-        
+
         [Test]
-        public void SetValue_When_child_gameObject_with_visibility_was_destroyed_and_cache_rebuilt_Should_not_log_error()
+        public void
+            SetValue_When_child_gameObject_with_visibility_was_destroyed_and_cache_rebuilt_Should_not_log_error()
         {
             //Arrange
             var gameObject = CreateGameObject(nameof(VisibilityBinderTest));
@@ -362,7 +340,7 @@ namespace FastenUp.Tests.Binders
             //Assert
             LogAssert.NoUnexpectedReceived();
         }
-        
+
         [Test]
         public void OnBinderChanged_When_visibility_changed_Should_call_SetValue()
         {
@@ -377,6 +355,22 @@ namespace FastenUp.Tests.Binders
             parent.SetValue(false);
             //Assert
             handler.Received(1).Invoke(sut);
+        }
+
+        [Test]
+        public void SetValue_When_value_the_same_Should_not_update_children()
+        {
+            //Arrange
+            var gameObject = new GameObject(nameof(VisibilityBinderTest));
+            var childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", gameObject);
+            var sut = CreateBinder(childGameObject);
+            var parent = CreateBinder(gameObject);
+            var handler = Substitute.For<OnBinderChanged>();
+            sut.OnBinderChanged += handler;
+            //Act
+            parent.SetValue(true);
+            //Assert
+            handler.DidNotReceive().Invoke(sut);
         }
 
         private static ITestCaseBuilder CreateBuilder(Action<ITestCaseSut, GameObject> build)
@@ -423,7 +417,7 @@ namespace FastenUp.Tests.Binders
             ITestCaseSut[] Children { get; }
         }
 
-        private class TestGraphic : Graphic, ITestingDelegate
+        private class TestGraphic : Graphic
         {
             public IBehaviourDelegate Delegate { get; } = Substitute.For<IBehaviourDelegate>();
 
@@ -442,7 +436,7 @@ namespace FastenUp.Tests.Binders
             }
         }
 
-        private class TestLayoutElement : LayoutElement, ITestingDelegate
+        private class TestLayoutElement : LayoutElement
         {
             public IBehaviourDelegate Delegate { get; } = Substitute.For<IBehaviourDelegate>();
 
@@ -459,11 +453,6 @@ namespace FastenUp.Tests.Binders
                 Delegate.OnDisable();
                 base.OnDisable();
             }
-        }
-
-        public interface ITestingDelegate
-        {
-            IBehaviourDelegate Delegate { get; }
         }
 
         public interface IBehaviourDelegate
