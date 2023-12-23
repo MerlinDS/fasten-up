@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using FastenUp.Runtime.Binders;
+using FastenUp.Runtime.Delegates;
 using FluentAssertions;
 using NSubstitute;
 using NUnit.Framework;
@@ -360,6 +361,22 @@ namespace FastenUp.Tests.Binders
             sut.SetValue(false);
             //Assert
             LogAssert.NoUnexpectedReceived();
+        }
+        
+        [Test]
+        public void OnBinderChanged_When_visibility_changed_Should_call_SetValue()
+        {
+            //Arrange
+            var gameObject = new GameObject(nameof(VisibilityBinderTest));
+            var childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", gameObject);
+            var sut = CreateBinder(childGameObject);
+            var parent = CreateBinder(gameObject);
+            var handler = Substitute.For<OnBinderChanged>();
+            sut.OnBinderChanged += handler;
+            //Act
+            parent.SetValue(false);
+            //Assert
+            handler.Received(1).Invoke(sut);
         }
 
         private static ITestCaseBuilder CreateBuilder(Action<ITestCaseSut, GameObject> build)
