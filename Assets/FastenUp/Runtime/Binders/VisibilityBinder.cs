@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using FastenUp.Runtime.Utils;
-using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,15 +18,6 @@ namespace FastenUp.Runtime.Binders
         private readonly HashSet<Behaviour> _behaviourCache = new();
         private readonly HashSet<VisibilityBinder> _childrenCache = new();
 
-        private enum DefaultVisibility : byte
-        {
-            Visible,
-
-            [UsedImplicitly(ImplicitUseTargetFlags.Itself)]
-            Hidden
-        }
-
-        [SerializeField] private DefaultVisibility _defaultVisibility;
         private bool _value = true;
         private VisibilityBinder _parent;
 
@@ -41,7 +31,6 @@ namespace FastenUp.Runtime.Binders
         private void Awake()
         {
             UpdateCache();
-            SetValue(_defaultVisibility == DefaultVisibility.Visible);
         }
 
         /// <inheritdoc />
