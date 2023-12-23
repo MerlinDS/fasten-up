@@ -102,6 +102,21 @@ namespace FastenUp.Tests.Binders
             LogAssert.Expect(LogType.Error,
                 $"{test.component.name} will be ignored: name for binding was not set!");
         }
+        
+        [Test]
+        public void OnEnable_When_name_starts_with_hashtag_Should_not_log_error_and_bind_to_mediator()
+        {
+            //Arrange
+            var mockMediator = Substitute.For<IInternalMediator>();
+            var test = TestingBehaviour.Create();
+            test.component.SetName("#Test");
+            test.component.gameObject.AddComponent<MockMediator>().Set(mockMediator);
+            //Act
+            test.component.ExecuteOnEnable();
+            //Assert
+            LogAssert.NoUnexpectedReceived();
+            mockMediator.DidNotReceive().Bind(test.component);
+        }
 
         [Test]
         public void OnDisable_When_has_mediator_Should_unbind_from_mediator()

@@ -44,9 +44,9 @@ namespace FastenUp.Runtime.Binders
         }
 
         private bool ValidateName()
-        {
+        {            
             if (!string.IsNullOrEmpty(Name))
-                return true;
+                return !Name.StartsWith('#');//Name that starts with '#' must be ignored
 
             Debug.LogError($"{name} will be ignored: name for binding was not set!", gameObject);
             return false;
