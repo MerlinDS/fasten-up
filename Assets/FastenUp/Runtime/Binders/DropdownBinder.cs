@@ -10,7 +10,7 @@ namespace FastenUp.Runtime.Binders
     [RequireComponent(typeof(TMP_Dropdown))]
     [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Dropdown Binder", 6)]
     [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#dropdown")]
-    public sealed partial class DropdownBinder : BaseBinder, IGettableBinder<int>
+    public sealed partial class DropdownBinder : BaseBinder, IValueProvider<int>
     {
         private TMP_Dropdown _dropdown;
         

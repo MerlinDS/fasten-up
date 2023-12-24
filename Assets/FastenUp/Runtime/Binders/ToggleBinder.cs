@@ -10,7 +10,7 @@ namespace FastenUp.Runtime.Binders
     [RequireComponent(typeof(Toggle))]
     [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Toggle Binder" , 4)]
     [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#toggle")]
-    public sealed class ToggleBinder : BaseBinder, IGettableBinder<bool>
+    public sealed class ToggleBinder : BaseBinder, IValueProvider<bool>
     {
         private Toggle _toggle;
 

@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace FastenUp.Runtime.Binders
 {
-    public sealed partial class SliderBinder : IGettableBinder<int>, IValueReceiver<Vector2Int>
+    public sealed partial class SliderBinder : IValueProvider<int>, IValueReceiver<Vector2Int>
     {
         /// <inheritdoc />
         public void SetValue(int value)
@@ -11,7 +11,7 @@ namespace FastenUp.Runtime.Binders
         }
 
         /// <inheritdoc />
-        int IGettableBinder<int>.GetValue()
+        int IValueProvider<int>.GetValue()
         {
             return (int)GetValue();
         }
