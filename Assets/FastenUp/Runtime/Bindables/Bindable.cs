@@ -6,7 +6,7 @@ using FastenUp.Runtime.Exceptions;
 
 namespace FastenUp.Runtime.Bindables
 {
-    public sealed class Bindable<T> : IBindable<T>, IInternalBindable<T>
+    public sealed class Bindable<T> : IInternalBindable<T>
     {
         private readonly HashSet<IBinder<T>> _binders = new(1);
 
