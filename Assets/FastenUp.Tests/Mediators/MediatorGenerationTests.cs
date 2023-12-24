@@ -1,6 +1,7 @@
 ﻿using FastenUp.Runtime.Bindables;
 using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Binders.Actions;
+using FastenUp.Runtime.Binders.Events;
 using FastenUp.Runtime.Mediators;
 using FluentAssertions;
 using NSubstitute;

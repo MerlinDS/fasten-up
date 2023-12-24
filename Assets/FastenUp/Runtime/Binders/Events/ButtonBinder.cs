@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace FastenUp.Runtime.Binders
+namespace FastenUp.Runtime.Binders.Events
 {
     /// <summary>
     /// The one-way <see cref="IBinder"/> binds a value to the component with <see cref="UnityAction"/> field.

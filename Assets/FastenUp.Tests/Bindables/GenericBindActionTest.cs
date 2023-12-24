@@ -1,6 +1,7 @@
 ﻿using System;
 using FastenUp.Runtime.Bindables;
 using FastenUp.Runtime.Binders;
+using FastenUp.Runtime.Binders.Events;
 using FastenUp.Runtime.Exceptions;
 using FluentAssertions;
 using NSubstitute;

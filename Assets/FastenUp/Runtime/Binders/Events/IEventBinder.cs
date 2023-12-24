@@ -1,6 +1,6 @@
 ﻿using FastenUp.Runtime.Mediators;
 
-namespace FastenUp.Runtime.Binders
+namespace FastenUp.Runtime.Binders.Events
 {
     /// <summary>
     /// Implementations of this interface will be bound to an <see cref="FastenUp.Runtime.Bindables.IBindableEvent{T}"/>.

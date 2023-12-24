@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using FastenUp.Runtime.Binders;
+using FastenUp.Runtime.Binders.Events;
 using FastenUp.Runtime.Exceptions;
 
 namespace FastenUp.Runtime.Bindables
