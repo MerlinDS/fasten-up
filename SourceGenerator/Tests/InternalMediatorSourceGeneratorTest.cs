@@ -24,14 +24,14 @@ namespace FastenUp.Runtime.Binders
 }
 namespace FastenUp.Runtime.Bindables
 {
-    public interface IInternalBindable{}
-    public interface IInternalBindable<out T> : IInternalBindable{}
-    public interface IInternalBindableEvent<out T> : IInternalBindable{}
+    public interface IBindable{}
+    public interface IBindable<out T> : IBindable{}
+    public interface IBindableEvent<out T> : IBindable{}
 
-    public sealed class Bindable<T> : IBindable<T>, IInternalBindable<T>{}
+    public sealed class Bindable<T> : IBindable<T>, IBindable<T>{}
 
     public interface IBindableEvent<in T> : IDisposable{}
-    public abstract class BaseBindableEvent<T> : IBindableEvent<T>, IInternalBindableEvent<T>{}
+    public abstract class BaseBindableEvent<T> : IBindableEvent<T>, IBindableEvent<T>{}
     public sealed class BindableEvent : BaseBindableEvent<UnityAction>{}
     public sealed class BindableEvent<T> : BaseBindableEvent<UnityAction<T>>{}
 }
@@ -46,10 +46,10 @@ namespace FastenUp.Runtime.Utils
 {
     public static class BindUtilities
     {
-        public static void TryBind<T>(IInternalBindable<T> bindable, IBinder binder){}
-        public static void TryUnbind<T>(IInternalBindable<T> bindable, IBinder binder){}
-        public static void TryBind<T>(IInternalBindableEvent<T> bindableEvent, IBinder eventBinder){}
-        public static void TryUnbind<T>(IInternalBindableEvent<T> bindableEvent, IBinder eventBinder){}
+        public static void TryBind<T>(IBindable<T> bindable, IBinder binder){}
+        public static void TryUnbind<T>(IBindable<T> bindable, IBinder binder){}
+        public static void TryBind<T>(IBindableEvent<T> bindableEvent, IBinder eventBinder){}
+        public static void TryUnbind<T>(IBindableEvent<T> bindableEvent, IBinder eventBinder){}
     }
 }
 ";
@@ -218,7 +218,7 @@ namespace FastenUp.Runtime.Mediators
     public interface IMediator{}
     public interface IInternalMediator{}
 }
-").SetName("Without IInternalBindable");
+").SetName("Without IBindable");
                 
                 yield return new TestCaseData(@"
 using System;
@@ -233,10 +233,10 @@ namespace FastenUp.Runtime.Binders
 }
 namespace FastenUp.Runtime.Bindables
 {
-    public interface IInternalBindable{}
-    public interface IInternalBindable<out T> : IInternalBindable{}
+    public interface IBindable{}
+    public interface IBindable<out T> : IBindable{}
 
-    public sealed class Bindable<T> : IBindable<T>, IInternalBindable<T>{}
+    public sealed class Bindable<T> : IBindable<T>, IBindable<T>{}
     public sealed class BindableEvent : BaseBindableEvent<UnityAction>{}
 }
 
@@ -249,10 +249,10 @@ namespace FastenUp.Runtime.Utils
 {
     public static class BindUtilities
     {
-        public static void TryBind<T>(IInternalBindable<T> bindable, IBinder binder){}
-        public static void TryUnbind<T>(IInternalBindable<T> bindable, IBinder binder){}
-        public static void TryBind<T>(IInternalBindableEvent<T> bindableEvent, IBinder eventBinder){}
-        public static void TryUnbind<T>(IInternalBindableEvent<T> bindableEvent, IBinder eventBinder){}
+        public static void TryBind<T>(IBindable<T> bindable, IBinder binder){}
+        public static void TryUnbind<T>(IBindable<T> bindable, IBinder binder){}
+        public static void TryBind<T>(IBindableEvent<T> bindableEvent, IBinder eventBinder){}
+        public static void TryUnbind<T>(IBindableEvent<T> bindableEvent, IBinder eventBinder){}
     }
 }
 ").SetName("Without Mediator");
@@ -269,10 +269,10 @@ namespace FastenUp.Runtime.Binders
 }
 namespace FastenUp.Runtime.Bindables
 {
-    public interface IInternalBindable{}
-    public interface IInternalBindable<out T> : IInternalBindable{}
+    public interface IBindable{}
+    public interface IBindable<out T> : IBindable{}
 
-    public sealed class Bindable<T> : IBindable<T>, IInternalBindable<T>{}
+    public sealed class Bindable<T> : IBindable<T>, IBindable<T>{}
     public sealed class BindableEvent : BaseBindableEvent<UnityAction>{}
 }
 
@@ -285,10 +285,10 @@ namespace FastenUp.Runtime.Utils
 {
     public static class BindUtilities
     {
-        public static void TryBind<T>(IInternalBindable<T> bindable, IBinder binder){}
-        public static void TryUnbind<T>(IInternalBindable<T> bindable, IBinder binder){}
-        public static void TryBind<T>(IInternalBindableEvent<T> bindableEvent, IBinder eventBinder){}
-        public static void TryUnbind<T>(IInternalBindableEvent<T> bindableEvent, IBinder eventBinder){}
+        public static void TryBind<T>(IBindable<T> bindable, IBinder binder){}
+        public static void TryUnbind<T>(IBindable<T> bindable, IBinder binder){}
+        public static void TryBind<T>(IBindableEvent<T> bindableEvent, IBinder eventBinder){}
+        public static void TryUnbind<T>(IBindableEvent<T> bindableEvent, IBinder eventBinder){}
     }
 }
 ").SetName("Without Internal mediator");

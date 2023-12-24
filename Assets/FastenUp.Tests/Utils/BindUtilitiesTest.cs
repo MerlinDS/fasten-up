@@ -49,7 +49,7 @@ namespace FastenUp.Tests.Utils
         {
             //Arrange
             var binder = Substitute.For<IBinder, IBinder<bool>>();
-            var bindable = Substitute.For<IInternalBindable<bool>>();
+            var bindable = Substitute.For<IBindable<bool>>();
             //Act
             BindUtilities.TryBind(bindable, binder);
             //Assert
@@ -61,7 +61,7 @@ namespace FastenUp.Tests.Utils
         {
             //Arrange
             var binder = Substitute.For<IBinder, IBinder<bool>>();
-            var bindable = Substitute.For<IInternalBindable<int>>();
+            var bindable = Substitute.For<IBindable<int>>();
             //Act
             BindUtilities.TryBind(bindable, binder);
             //Assert
@@ -72,7 +72,7 @@ namespace FastenUp.Tests.Utils
         public void TryBind_When_binder_is_null_Should_not_bind()
         {
             //Arrange
-            var bindable = Substitute.For<IInternalBindable<bool>>();
+            var bindable = Substitute.For<IBindable<bool>>();
             //Act
             BindUtilities.TryBind(bindable, null);
             //Assert
@@ -84,7 +84,7 @@ namespace FastenUp.Tests.Utils
         {
             //Arrange
             var binder = Substitute.For<IBinder, IBinder<bool>>();
-            var bindable = Substitute.For<IInternalBindable<bool>>();
+            var bindable = Substitute.For<IBindable<bool>>();
             //Act
             BindUtilities.TryUnbind(bindable, binder);
             //Assert
@@ -96,7 +96,7 @@ namespace FastenUp.Tests.Utils
         {
             //Arrange
             var binder = Substitute.For<IBinder, IBinder<bool>>();
-            var bindable = Substitute.For<IInternalBindable<int>>();
+            var bindable = Substitute.For<IBindable<int>>();
             //Act
             BindUtilities.TryBind(bindable, binder);
             //Assert
@@ -107,7 +107,7 @@ namespace FastenUp.Tests.Utils
         public void TryUnbind_When_binder_is_null_Should_not_unbind()
         {
             //Arrange
-            var bindable = Substitute.For<IInternalBindable<bool>>();
+            var bindable = Substitute.For<IBindable<bool>>();
             //Act
             BindUtilities.TryBind(bindable, null);
             //Assert
@@ -119,7 +119,7 @@ namespace FastenUp.Tests.Utils
         {
             //Arrange
             var eventBinder = Substitute.For<IBinder, IEventBinder<bool>>();
-            var bindableEvent = Substitute.For<IInternalBindableEvent<bool>>();
+            var bindableEvent = Substitute.For<IBindableEvent<bool>>();
             //Act
             BindUtilities.TryBind(bindableEvent, eventBinder);
             //Assert
@@ -131,7 +131,7 @@ namespace FastenUp.Tests.Utils
         {
             //Arrange
             var eventBinder = Substitute.For<IBinder, IEventBinder<bool>>();
-            var bindableEvent = Substitute.For<IInternalBindableEvent<int>>();
+            var bindableEvent = Substitute.For<IBindableEvent<int>>();
             //Act
             BindUtilities.TryBind(bindableEvent, eventBinder);
             //Assert
@@ -142,7 +142,7 @@ namespace FastenUp.Tests.Utils
         public void TryBind_When_eventBinder_is_null_Should_not_bind()
         {
             //Arrange
-            var bindableEvent = Substitute.For<IInternalBindableEvent<bool>>();
+            var bindableEvent = Substitute.For<IBindableEvent<bool>>();
             //Act
             BindUtilities.TryBind(bindableEvent, null);
             //Assert
@@ -154,7 +154,7 @@ namespace FastenUp.Tests.Utils
         {
             //Arrange
             var eventBinder = Substitute.For<IBinder, IEventBinder<bool>>();
-            var bindableEvent = Substitute.For<IInternalBindableEvent<bool>>();
+            var bindableEvent = Substitute.For<IBindableEvent<bool>>();
             //Act
             BindUtilities.TryUnbind(bindableEvent, eventBinder);
             //Assert
@@ -166,7 +166,7 @@ namespace FastenUp.Tests.Utils
         {
             //Arrange
             var eventBinder = Substitute.For<IBinder, IEventBinder<bool>>();
-            var bindableEvent = Substitute.For<IInternalBindableEvent<int>>();
+            var bindableEvent = Substitute.For<IBindableEvent<int>>();
             //Act
             BindUtilities.TryBind(bindableEvent, eventBinder);
             //Assert
@@ -177,7 +177,7 @@ namespace FastenUp.Tests.Utils
         public void TryUnbind_When_eventBinder_is_null_Should_not_unbind()
         {
             //Arrange
-            var bindableEvent = Substitute.For<IInternalBindableEvent<bool>>();
+            var bindableEvent = Substitute.For<IBindableEvent<bool>>();
             //Act
             BindUtilities.TryBind(bindableEvent, null);
             //Assert

@@ -14,7 +14,7 @@ namespace FastenUp.Runtime.Bindables
     {
     }
     
-    public abstract class BaseBindableEvent<T> : IInternalBindableEvent<T>, IDisposable
+    public abstract class BaseBindableEvent<T> : IBindableEvent<T>, IDisposable
     {
         private readonly HashSet<IEventBinder<T>> _listeners = new(1);
 
@@ -38,7 +38,7 @@ namespace FastenUp.Runtime.Bindables
         }
 
         /// <inheritdoc />
-        void IInternalBindableEvent<T>.Bind(IEventBinder<T> eventBinder)
+        void IBindableEvent<T>.Bind(IEventBinder<T> eventBinder)
         {
             if (_listeners.Contains(eventBinder))
                 throw new FastenUpException($"{nameof(eventBinder)} already added to the {nameof(BindableEvent)}.");
@@ -49,7 +49,7 @@ namespace FastenUp.Runtime.Bindables
         }
 
         /// <inheritdoc />
-        void IInternalBindableEvent<T>.Unbind(IEventBinder<T> eventBinder)
+        void IBindableEvent<T>.Unbind(IEventBinder<T> eventBinder)
         {
             if (!_listeners.Contains(eventBinder))
                 throw new FastenUpException($"{nameof(eventBinder)} not found in the {nameof(BindableEvent)}.");

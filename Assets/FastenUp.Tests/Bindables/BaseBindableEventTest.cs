@@ -21,8 +21,8 @@ namespace FastenUp.Tests.Bindables
             var sut = Substitute.ForPartsOf<BaseBindableEvent<UnityAction>>();
             Action act = ()=>
             {
-                sut.As<IInternalBindableEvent<UnityAction>>().Bind(eventBinder);
-                sut.As<IInternalBindableEvent<UnityAction>>().Bind(eventBinder);
+                sut.As<IBindableEvent<UnityAction>>().Bind(eventBinder);
+                sut.As<IBindableEvent<UnityAction>>().Bind(eventBinder);
             };
             //Act & Assert
             act.Should().Throw<FastenUpException>();
@@ -34,7 +34,7 @@ namespace FastenUp.Tests.Bindables
             //Arrange
             var eventBinder = Substitute.For<IEventBinder<UnityAction>>();
             var sut = Substitute.ForPartsOf<BaseBindableEvent<UnityAction>>();
-            Action act = ()=> sut.As<IInternalBindableEvent<UnityAction>>().Bind(eventBinder);
+            Action act = ()=> sut.As<IBindableEvent<UnityAction>>().Bind(eventBinder);
             //Act & Assert
             act.Should().NotThrow<FastenUpException>();
         }
@@ -48,7 +48,7 @@ namespace FastenUp.Tests.Bindables
             var listener = Substitute.For<UnityAction>();
             sut.AddListener(listener);
             //Act
-            sut.As<IInternalBindableEvent<UnityAction>>().Bind(eventBinder);
+            sut.As<IBindableEvent<UnityAction>>().Bind(eventBinder);
             //Assert
             eventBinder.Received(1).AddListener(listener);
         }
@@ -59,7 +59,7 @@ namespace FastenUp.Tests.Bindables
             //Arrange
             var eventBinder = Substitute.For<IEventBinder<UnityAction>>();
             var sut = Substitute.ForPartsOf<BaseBindableEvent<UnityAction>>();
-            Action act = ()=> sut.As<IInternalBindableEvent<UnityAction>>().Unbind(eventBinder);
+            Action act = ()=> sut.As<IBindableEvent<UnityAction>>().Unbind(eventBinder);
             //Act & Assert
             act.Should().Throw<FastenUpException>();
         }
@@ -72,8 +72,8 @@ namespace FastenUp.Tests.Bindables
             var sut = Substitute.ForPartsOf<BaseBindableEvent<UnityAction>>();
             Action act = ()=>
             {
-                sut.As<IInternalBindableEvent<UnityAction>>().Bind(eventBinder);
-                sut.As<IInternalBindableEvent<UnityAction>>().Unbind(eventBinder);
+                sut.As<IBindableEvent<UnityAction>>().Bind(eventBinder);
+                sut.As<IBindableEvent<UnityAction>>().Unbind(eventBinder);
             };
             //Act & Assert
             act.Should().NotThrow<FastenUpException>();
@@ -86,10 +86,10 @@ namespace FastenUp.Tests.Bindables
             var eventBinder = Substitute.For<IEventBinder<UnityAction>>();
             var sut = Substitute.ForPartsOf<BaseBindableEvent<UnityAction>>();
             var listener = Substitute.For<UnityAction>();
-            sut.As<IInternalBindableEvent<UnityAction>>().Bind(eventBinder);
+            sut.As<IBindableEvent<UnityAction>>().Bind(eventBinder);
             sut.AddListener(listener);
             //Act
-            sut.As<IInternalBindableEvent<UnityAction>>().Unbind(eventBinder);
+            sut.As<IBindableEvent<UnityAction>>().Unbind(eventBinder);
             //Assert
             eventBinder.Received(1).RemoveListener(listener);
         }
@@ -100,7 +100,7 @@ namespace FastenUp.Tests.Bindables
             //Arrange
             var eventBinder = Substitute.For<IEventBinder<UnityAction>>();
             var sut = Substitute.ForPartsOf<BaseBindableEvent<UnityAction>>();
-            sut.As<IInternalBindableEvent<UnityAction>>().Bind(eventBinder);
+            sut.As<IBindableEvent<UnityAction>>().Bind(eventBinder);
             var listener = Substitute.For<UnityAction>();
             //Act
             sut.AddListener(listener);
@@ -114,7 +114,7 @@ namespace FastenUp.Tests.Bindables
             //Arrange
             var eventBinder = Substitute.For<IEventBinder<UnityAction>>();
             var sut = Substitute.ForPartsOf<BaseBindableEvent<UnityAction>>();
-            sut.As<IInternalBindableEvent<UnityAction>>().Bind(eventBinder);
+            sut.As<IBindableEvent<UnityAction>>().Bind(eventBinder);
             var listener = Substitute.For<UnityAction>();
             //Act
             sut.RemoveListener(listener);
@@ -128,7 +128,7 @@ namespace FastenUp.Tests.Bindables
             //Arrange
             var eventBinder = Substitute.For<IEventBinder<UnityAction>>();
             var sut = Substitute.ForPartsOf<BaseBindableEvent<UnityAction>>();
-            sut.As<IInternalBindableEvent<UnityAction>>().Bind(eventBinder);
+            sut.As<IBindableEvent<UnityAction>>().Bind(eventBinder);
             var listener = Substitute.For<UnityAction>();
             sut.AddListener(listener);
             //Act
@@ -143,7 +143,7 @@ namespace FastenUp.Tests.Bindables
             //Arrange
             var eventBinder = Substitute.For<IEventBinder<UnityAction>>();
             var sut = Substitute.ForPartsOf<BaseBindableEvent<UnityAction>>();
-            sut.As<IInternalBindableEvent<UnityAction>>().Bind(eventBinder);
+            sut.As<IBindableEvent<UnityAction>>().Bind(eventBinder);
             var listener = Substitute.For<UnityAction>();
             sut.AddListener(listener);
             //Act
