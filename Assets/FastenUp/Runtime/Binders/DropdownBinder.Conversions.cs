@@ -4,8 +4,8 @@ using TMPro;
 
 namespace FastenUp.Runtime.Binders
 {
-    public sealed partial class DropdownBinder : IBinder<string[]>,
-        IBinder<List<TMP_Dropdown.OptionData>>
+    public sealed partial class DropdownBinder : IValueReceiver<string[]>, 
+        IValueReceiver<List<TMP_Dropdown.OptionData>>
     {
         /// <inheritdoc />
         public void SetValue(string[] value)

@@ -23,12 +23,10 @@ namespace FastenUp.Runtime.Binders
         /// </summary>
         public event OnBinderChanged OnBinderChanged;
     }
-
-    /// <remarks>Provides one-way binding</remarks>
-    /// <typeparam name="T">Type of the value that will be set by the binder component</typeparam>
-    /// <inheritdoc cref="IBinder"/>
-    public interface IBinder<in T> : IBinder
+    
+    /// <inheritdoc/>
+    /// <typeparam name="T">The type of the bindable property in the <see cref="IMediator"/>.</typeparam>
+    public interface IBinder<T> : IBinder
     {
-        void SetValue(T value);
     }
 }

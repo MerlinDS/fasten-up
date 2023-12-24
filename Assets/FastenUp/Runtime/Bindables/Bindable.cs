@@ -35,9 +35,10 @@ namespace FastenUp.Runtime.Bindables
             if (_binders.Contains(binder))
                 throw new FastenUpException($"{nameof(binder)} already bind to the {nameof(Bindable<T>)}.");
 
-            binder.SetValue(_value);
+            if(binder is IValueReceiver<T> valueReceiver)
+                valueReceiver.SetValue(_value);
+            
             _binders.Add(binder);
-
             binder.OnBinderChanged += OnValueChangedHandler;
         }
 
@@ -67,10 +68,10 @@ namespace FastenUp.Runtime.Bindables
         {
             foreach (var bindable in _binders)
             {
-                if (bindable == ignored)
+                if (bindable == ignored || bindable is not IValueReceiver<T> valueReceiver)
                     continue;
 
-                bindable.SetValue(value);
+                valueReceiver.SetValue(value);
             }
         }
 

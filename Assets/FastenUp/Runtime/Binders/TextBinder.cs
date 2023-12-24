@@ -10,7 +10,7 @@ namespace FastenUp.Runtime.Binders
     [RequireComponent(typeof(TextMeshProUGUI))]
     [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Text Binder" , 1)]
     [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#text")]
-    public sealed partial class TextBinder : BaseBinder, IBinder<string>
+    public sealed partial class TextBinder : BaseBinder, IValueReceiver<string>
     {
         private TextMeshProUGUI _component;
 

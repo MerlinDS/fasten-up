@@ -1,17 +1,20 @@
-﻿using NSubstitute;
+﻿using FastenUp.Runtime.Bindables;
+using FastenUp.Runtime.Binders;
+using FastenUp.Runtime.Mediators;
+using NSubstitute;
 using NUnit.Framework;
 
 namespace FastenUp.Tests.Mediators
 {
     [TestFixture]
-    [TestOf(typeof(FastenUp.Runtime.Mediators.IInternalMediator))]
+    [TestOf(typeof(IInternalMediator))]
     public class MediatorGenerationTests
     {
         [Test]
         public void Test()
         {
             //Arrange
-            var bindable = Substitute.For<FastenUp.Runtime.Binders.IBinder<string>>();
+            var bindable = Substitute.For<IValueReceiver<string>>();
             bindable.Name.Returns("Text");
             var mediator = new TestMediator("Test");
             //Act & Assert
@@ -25,9 +28,9 @@ namespace FastenUp.Tests.Mediators
         }
     }
 
-    internal sealed partial class TestMediator : FastenUp.Runtime.Mediators.IMediator
+    internal sealed partial class TestMediator : IMediator
     {
-        private FastenUp.Runtime.Bindables.Bindable<string> Text { get; } = new();
+        private Bindable<string> Text { get; } = new();
 
         public TestMediator(string text) =>
             Text.Value = text;
