@@ -28,11 +28,11 @@ namespace FastenUp.Tests.Bindables
         public void Bind_When_gettable_bindable_was_not_bind_Should_set_value_and_subscribe_to_bindable()
         {
             //Arrange
-            var binder = Substitute.For<IValueProvider<bool>>();
+            var binder = Substitute.For<IValueProvider<bool>, IValueReceiver<bool>>();
             var sut = new Bindable<bool>();
             //Act & Assert
             sut.As<IInternalBindable<bool>>().Bind(binder);
-            binder.Received(1).SetValue(false);
+            binder.Received(1).As<IValueReceiver<bool>>().SetValue(false);
             binder.Received(1).OnBinderChanged += Arg.Any<OnBinderChanged>();
         }
 
@@ -137,7 +137,7 @@ namespace FastenUp.Tests.Bindables
         {
             //Arrange
             var other = Substitute.For<IValueReceiver<bool>>();
-            var binder = Substitute.For<IValueProvider<bool>>();
+            var binder = Substitute.For<IValueProvider<bool>, IValueReceiver<bool>>();
             binder.GetValue().Returns(true);
 
             var sut = new Bindable<bool>();
@@ -146,7 +146,7 @@ namespace FastenUp.Tests.Bindables
             //Act
             binder.OnBinderChanged += Raise.Event<OnBinderChanged>(binder);
             //Assert
-            binder.DidNotReceive().SetValue(true);
+            binder.As<IValueReceiver<bool>>().DidNotReceive().SetValue(true);
             other.Received(1).SetValue(true);
         }
     }

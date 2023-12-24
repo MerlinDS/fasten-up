@@ -8,9 +8,10 @@ namespace FastenUp.Runtime.Binders
     /// The two-way <see cref="IBinder"/> binds a value to the component with <see cref="Slider"/> component.
     /// </summary>
     [RequireComponent(typeof(Slider))]
-    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Slider Binder" , 5)]
+    [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Slider Binder", 5)]
     [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#slider")]
-    public sealed partial class SliderBinder : BaseBinder, IValueProvider<float>, IValueReceiver<Vector2>
+    public sealed partial class SliderBinder : BaseBinder,
+        IValueReceiver<float>, IValueProvider<float>, IValueReceiver<Vector2>
     {
         private Slider _slider;
 
