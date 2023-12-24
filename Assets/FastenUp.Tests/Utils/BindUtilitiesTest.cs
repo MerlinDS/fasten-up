@@ -1,9 +1,11 @@
 ﻿using FastenUp.Runtime.Bindables;
 using FastenUp.Runtime.Binders;
+using FastenUp.Runtime.Binders.Actions;
 using FastenUp.Runtime.Utils;
 using FluentAssertions;
 using NSubstitute;
 using NUnit.Framework;
+using UnityEngine.Events;
 
 namespace FastenUp.Tests.Utils
 {
@@ -22,7 +24,7 @@ namespace FastenUp.Tests.Utils
             //Assert
             result.Should().BeTrue();
         }
-        
+
         [Test]
         public void NameEquals_When_binder_has_different_name_Should_return_false()
         {
@@ -34,7 +36,7 @@ namespace FastenUp.Tests.Utils
             //Assert
             result.Should().BeFalse();
         }
-        
+
         [Test]
         public void NameEquals_When_binder_is_null_Should_return_false()
         {
@@ -43,7 +45,7 @@ namespace FastenUp.Tests.Utils
             //Assert
             result.Should().BeFalse();
         }
-        
+
         [Test]
         public void TryBind_When_binder_has_valid_type_Should_bind()
         {
@@ -78,7 +80,7 @@ namespace FastenUp.Tests.Utils
             //Assert
             bindable.DidNotReceive().Bind(Arg.Any<IBinder<bool>>());
         }
-        
+
         [Test]
         public void TryUnbind_When_binder_has_valid_type_Should_unbind()
         {
@@ -90,7 +92,7 @@ namespace FastenUp.Tests.Utils
             //Assert
             bindable.Received(1).Unbind(binder.As<IBinder<bool>>());
         }
-        
+
         [Test]
         public void TryUnbind_When_binder_has_invalid_type_Should_not_unbind()
         {
@@ -102,7 +104,7 @@ namespace FastenUp.Tests.Utils
             //Assert
             bindable.DidNotReceive().Unbind(Arg.Any<IBinder<int>>());
         }
-        
+
         [Test]
         public void TryUnbind_When_binder_is_null_Should_not_unbind()
         {
@@ -113,7 +115,7 @@ namespace FastenUp.Tests.Utils
             //Assert
             bindable.DidNotReceive().Unbind(Arg.Any<IBinder<bool>>());
         }
-        
+
         [Test]
         public void TryBind_When_eventBinder_has_valid_type_Should_bind()
         {
@@ -125,7 +127,7 @@ namespace FastenUp.Tests.Utils
             //Assert
             bindableEvent.Received(1).Bind(eventBinder.As<IEventBinder<bool>>());
         }
-        
+
         [Test]
         public void TryBind_When_eventBinder_has_invalid_type_Should_not_bind()
         {
@@ -137,7 +139,7 @@ namespace FastenUp.Tests.Utils
             //Assert
             bindableEvent.DidNotReceive().Bind(eventBinder.As<IEventBinder<int>>());
         }
-        
+
         [Test]
         public void TryBind_When_eventBinder_is_null_Should_not_bind()
         {
@@ -148,7 +150,7 @@ namespace FastenUp.Tests.Utils
             //Assert
             bindableEvent.DidNotReceive().Bind(Arg.Any<IEventBinder<bool>>());
         }
-        
+
         [Test]
         public void TryUnbind_When_eventBinder_has_valid_type_Should_unbind()
         {
@@ -160,7 +162,7 @@ namespace FastenUp.Tests.Utils
             //Assert
             bindableEvent.Received(1).Unbind(eventBinder.As<IEventBinder<bool>>());
         }
-        
+
         [Test]
         public void TryUnbind_When_eventBinder_has_invalid_type_Should_not_unbind()
         {
@@ -172,7 +174,7 @@ namespace FastenUp.Tests.Utils
             //Assert
             bindableEvent.DidNotReceive().Unbind(Arg.Any<IEventBinder<int>>());
         }
-        
+
         [Test]
         public void TryUnbind_When_eventBinder_is_null_Should_not_unbind()
         {
@@ -183,6 +185,99 @@ namespace FastenUp.Tests.Utils
             //Assert
             bindableEvent.DidNotReceive().Unbind(Arg.Any<IEventBinder<bool>>());
         }
+
+        [Test]
+        public void TryBind_When_actionBinder_has_valid_type_Should_bind()
+        {
+            //Arrange
+            var actionBinder = Substitute.For<IBinder, IActionBinder<UnityEvent>>();
+            var bindableAction = Substitute.For<IBindableAction<UnityEvent>>();
+            //Act
+            BindUtilities.TryBind(bindableAction, actionBinder);
+            //Assert
+            bindableAction.Received(1).Bind(actionBinder.As<IActionBinder<UnityEvent>>());
+        }
+
+        [Test]
+        public void TryBind_When_actionBinder_has_invalid_type_Should_not_bind()
+        {
+            //Arrange
+            var actionBinder = Substitute.For<IBinder, IActionBinder<UnityEvent<int>>>();
+            var bindableAction = Substitute.For<IBindableAction<UnityEvent>>();
+            //Act
+            BindUtilities.TryBind(bindableAction, actionBinder);
+            //Assert
+            bindableAction.DidNotReceive().Bind(actionBinder.As<IActionBinder<UnityEvent>>());
+        }
+
+        [Test]
+        public void TryBind_When_actionBinder_is_null_Should_not_bind()
+        {
+            //Arrange
+            var bindableAction = Substitute.For<IBindableAction<UnityEvent>>();
+            //Act
+            BindUtilities.TryBind(bindableAction, null);
+            //Assert
+            bindableAction.DidNotReceive().Bind(Arg.Any<IActionBinder<UnityEvent>>());
+        }
+
+        [Test]
+        public void TryUnbind_When_actionBinder_has_valid_type_Should_unbind()
+        {
+            //Arrange
+            var actionBinder = Substitute.For<IBinder, IActionBinder<UnityEvent>>();
+            var bindableAction = Substitute.For<IBindableAction<UnityEvent>>();
+            //Act
+            BindUtilities.TryUnbind(bindableAction, actionBinder);
+            //Assert
+            bindableAction.Received(1).Unbind(actionBinder.As<IActionBinder<UnityEvent>>());
+        }
+
+        [Test]
+        public void TryUnbind_When_actionBinder_has_invalid_type_Should_not_unbind()
+        {
+            //Arrange
+            var actionBinder = Substitute.For<IBinder, IActionBinder<UnityEvent<int>>>();
+            var bindableAction = Substitute.For<IBindableAction<UnityEvent>>();
+            //Act
+            BindUtilities.TryBind(bindableAction, actionBinder);
+            //Assert
+            bindableAction.DidNotReceive().Unbind(Arg.Any<IActionBinder<UnityEvent>>());
+        }
+
+        [Test]
+        public void TryUnbind_When_actionBinder_is_null_Should_not_unbind()
+        {
+            //Arrange
+            var bindableAction = Substitute.For<IBindableAction<UnityEvent>>();
+            //Act
+            BindUtilities.TryBind(bindableAction, null);
+            //Assert
+            bindableAction.DidNotReceive().Unbind(Arg.Any<IActionBinder<UnityEvent>>());
+        }
+
+        [Test]
+        public void TryBind_When_actionBinder_has_valid_generic_type_Should_bind()
+        {
+            //Arrange
+            var actionBinder = Substitute.For<IBinder, IActionBinder<UnityEvent<bool>>>();
+            var bindableAction = Substitute.For<IBindableAction<UnityEvent<bool>>>();
+            //Act
+            BindUtilities.TryBind(bindableAction, actionBinder);
+            //Assert
+            bindableAction.Received(1).Bind(actionBinder.As<IActionBinder<UnityEvent<bool>>>());
+        }
         
+        [Test]
+        public void TryBind_When_actionBinder_has_invalid_generic_type_Should_not_bind()
+        {
+            //Arrange
+            var actionBinder = Substitute.For<IBinder, IActionBinder<UnityEvent<int>>>();
+            var bindableAction = Substitute.For<IBindableAction<UnityEvent<bool>>>();
+            //Act
+            BindUtilities.TryBind(bindableAction, actionBinder);
+            //Assert
+            bindableAction.DidNotReceive().Bind(actionBinder.As<IActionBinder<UnityEvent<bool>>>());
+        }
     }
 }
