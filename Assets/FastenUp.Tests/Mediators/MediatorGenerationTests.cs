@@ -1,8 +1,10 @@
 ﻿using FastenUp.Runtime.Bindables;
 using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Mediators;
+using FluentAssertions;
 using NSubstitute;
 using NUnit.Framework;
+using UnityEngine.Events;
 
 namespace FastenUp.Tests.Mediators
 {
@@ -11,51 +13,50 @@ namespace FastenUp.Tests.Mediators
     public class MediatorGenerationTests
     {
         [Test]
-        public void Test()
+        public void Bind()
         {
             //Arrange
-            var bindable = Substitute.For<IValueReceiver<string>>();
-            bindable.Name.Returns("Text");
-            var mediator = new TestMediator("Test");
-            //Act & Assert
-            mediator.Bind(bindable);
-            bindable.Received(1).SetValue("Test");
-            mediator.SetText("Test2");
-            bindable.Received(1).SetValue("Test2");
-            mediator.Unbind(bindable);
-            mediator.SetText("Test3");
-            bindable.DidNotReceive().SetValue("Test3");
+            var binders = new[]
+            {
+                CreateBinder<IValueReceiver<int>>("Property"),
+                CreateBinder<IValueProvider<TestReference>>("Reference"),
+                CreateBinder<IEventBinder<UnityAction>>("Event"),
+                // CreateBinder<IActionBinder>("Action")
+            };
+
+            var testReference = Substitute.For<TestReference>();
+            var mockAction = Substitute.For<UnityAction>();
+            binders[1].As<IValueProvider<TestReference>>().GetValue().Returns(testReference);
+            var mediator = new IntegrationTestMediator();
+            //Act
+            foreach (var binder in binders)
+                mediator.Bind(binder);
+
+            mediator.Property.Value = 1;
+            mediator.Event.AddListener(mockAction);
+            //Assert
+            mediator.Reference.Value.Should().Be(testReference, "Reference should provided by binder");
+            binders[0].As<IValueReceiver<int>>().Received().SetValue(1);
+            binders[2].As<IEventBinder<UnityAction>>().Received().AddListener(mockAction);
         }
-    }
 
-    internal sealed partial class TestMediator : IMediator
-    {
-        private Bindable<string> Text { get; } = new();
-
-        public TestMediator(string text) =>
-            Text.Value = text;
-
-        public void SetText(string text) =>
-            Text.Value = text;
-    }
-
-    //Generated code will look like this:
-    /*
-    internal partial class TestMediator : FastenUp.Runtime.Mediators.IInternalMediator
-    {
-        /// <inheritdoc />
-        public void Bind(FastenUp.Runtime.Binders.IBinder binder)
+        private static IBinder CreateBinder<T>(string name)
+            where T : class, IBinder
         {
-            if (Runtime.Utils.BindUtilities.NameEquals(nameof(Text), binder))
-                Runtime.Utils.BindUtilities.TryBind(Text, binder);
-        }
-
-        /// <inheritdoc />
-        public void Unbind(FastenUp.Runtime.Binders.IBinder binder)
-        {
-            if (Runtime.Utils.BindUtilities.NameEquals(nameof(Text), binder))
-                Runtime.Utils.BindUtilities.TryUnbind(Text, binder);
+            var binder = Substitute.For<T>();
+            binder.Name.Returns(name);
+            return binder;
         }
     }
-    /**/
+
+    internal sealed partial class IntegrationTestMediator : IMediator
+    {
+        public Bindable<int> Property { get; } = new();
+        public BindableRef<TestReference> Reference { get; } = new();
+        public BindableEvent Event { get; } = new();
+    }
+
+    internal abstract class TestReference
+    {
+    }
 }
