@@ -10,7 +10,7 @@ namespace FastenUp.Runtime.Binders
     [RequireComponent(typeof(TMP_InputField))]
     [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Input Field Binder" , 7)]
     [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#input-field")]
-    public class InputFieldBinder : BaseBinder, IGettableBinder<string>
+    public class InputFieldBinder : BaseBinder, IValueProvider<string>
     {
         private TMP_InputField _inputField;
         

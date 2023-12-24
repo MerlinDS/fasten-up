@@ -101,7 +101,7 @@ namespace FastenUp.Tests.Binders
             slider.wholeNumbers = true;
             slider.SetValueWithoutNotify(expected);
             // Act
-            var actual = sut.As<IGettableBinder<int>>().GetValue();
+            var actual = sut.As<IValueProvider<int>>().GetValue();
             // Assert
             actual.Should().Be(expected);
         }

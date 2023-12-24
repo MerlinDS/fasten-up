@@ -28,7 +28,7 @@ namespace FastenUp.Tests.Bindables
         public void Bind_When_gettable_bindable_was_not_bind_Should_set_value_and_subscribe_to_bindable()
         {
             //Arrange
-            var binder = Substitute.For<IGettableBinder<bool>>();
+            var binder = Substitute.For<IValueProvider<bool>>();
             var sut = new Bindable<bool>();
             //Act & Assert
             sut.As<IInternalBindable<bool>>().Bind(binder);
@@ -64,7 +64,7 @@ namespace FastenUp.Tests.Bindables
         public void Unbind_When_gettable_bindable_was_bind_Should_unsubscribe_from_bindable()
         {
             //Arrange
-            var binder = Substitute.For<IGettableBinder<bool>>();
+            var binder = Substitute.For<IValueProvider<bool>>();
             var sut = new Bindable<bool>();
             sut.As<IInternalBindable<bool>>().Bind(binder);
             //Act
@@ -104,7 +104,7 @@ namespace FastenUp.Tests.Bindables
         public void OnValueChanged_When_gettable_bindable_value_changed_Should_update_value_and_invoke_event()
         {
             //Arrange
-            var binder = Substitute.For<IGettableBinder<bool>>();
+            var binder = Substitute.For<IValueProvider<bool>>();
             binder.GetValue().Returns(true);
 
             var sut = new Bindable<bool>();
@@ -120,7 +120,7 @@ namespace FastenUp.Tests.Bindables
             OnValueChanged_When_gettable_bindable_value_changed_but_sent_invalid_date_Should_not_update_value_and_invoke_event()
         {
             //Arrange
-            var binder = Substitute.For<IGettableBinder<bool>>();
+            var binder = Substitute.For<IValueProvider<bool>>();
             binder.GetValue().Returns(true);
 
             var sut = new Bindable<bool>();
@@ -137,7 +137,7 @@ namespace FastenUp.Tests.Bindables
         {
             //Arrange
             var other = Substitute.For<IValueReceiver<bool>>();
-            var binder = Substitute.For<IGettableBinder<bool>>();
+            var binder = Substitute.For<IValueProvider<bool>>();
             binder.GetValue().Returns(true);
 
             var sut = new Bindable<bool>();

@@ -55,11 +55,11 @@ namespace FastenUp.Runtime.Bindables
 
         private void OnValueChangedHandler(IBinder binder)
         {
-            if (binder is not IGettableBinder<T> bindableT)
+            if (binder is not IValueProvider<T> valueProvider)
                 return;
 
-            var value = bindableT.GetValue();
-            UpdateBinders(value, bindableT);
+            var value = valueProvider.GetValue();
+            UpdateBinders(value, valueProvider);
             ChangeValueAndNotify(value);
         }
 
