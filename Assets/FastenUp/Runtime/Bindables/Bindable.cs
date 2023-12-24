@@ -6,6 +6,10 @@ using FastenUp.Runtime.Exceptions;
 
 namespace FastenUp.Runtime.Bindables
 {
+    /// <summary>
+    /// Bindable that provides the ability to bind values in the Unity components.
+    /// </summary>
+    /// <typeparam name="T">Type of the value</typeparam>
     public sealed class Bindable<T> : IBindable<T>
     {
         private readonly HashSet<IBinder<T>> _binders = new(1);
@@ -17,6 +21,9 @@ namespace FastenUp.Runtime.Bindables
             _value = value;
         }
 
+        /// <summary>
+        /// The value that will be bind to the Unity components.
+        /// </summary>
         public T Value
         {
             get => _value;
@@ -27,6 +34,9 @@ namespace FastenUp.Runtime.Bindables
             }
         }
 
+        /// <summary>
+        /// The event that will be invoked when the value is changed.
+        /// </summary>
         public event Action<T> OnValueChanged;
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
