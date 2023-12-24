@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Diagnostics.CodeAnalysis;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace FastenUp.Runtime.Binders.Actions
@@ -11,6 +12,7 @@ namespace FastenUp.Runtime.Binders.Actions
         where T : UnityEventBase, new()
     {
         /// <inheritdoc />
-        [field: SerializeField] public T OnAction { get; private set; } = new();
+        [field: SerializeField]
+        public T OnAction { get; [ExcludeFromCodeCoverage] private set; } = new();
     }
 }
