@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Exceptions;
 using UnityEngine.Events;
@@ -13,17 +14,15 @@ namespace FastenUp.Runtime.Bindables
     {
     }
     
-    public abstract class BaseBindableEvent<T> : IBindableEvent<T>, IInternalBindableEvent<T>
+    public abstract class BaseBindableEvent<T> : IInternalBindableEvent<T>, IDisposable
     {
         private readonly HashSet<IEventBinder<T>> _listeners = new(1);
 
         private readonly List<T> _actions = new(1);
 
-        /// <inheritdoc />
         public bool HasListeners(T action) =>
             _actions.Contains(action);
 
-        /// <inheritdoc />
         public void AddListener(T action)
         {
             _actions.Add(action);
@@ -31,7 +30,6 @@ namespace FastenUp.Runtime.Bindables
                 listener.AddListener(action);
         }
 
-        /// <inheritdoc />
         public void RemoveListener(T action)
         {
             _actions.Remove(action);
@@ -61,7 +59,6 @@ namespace FastenUp.Runtime.Bindables
             _listeners.Remove(eventBinder);
         }
 
-        /// <inheritdoc />
         public void Dispose()
         {
             foreach (var listener in _listeners)
