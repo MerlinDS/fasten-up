@@ -1,5 +1,5 @@
 ﻿using System;
-using FastenUp.Runtime.Binders;
+using FastenUp.Runtime.Binders.Events;
 using FluentAssertions;
 using NSubstitute;
 using NUnit.Framework;
@@ -8,7 +8,7 @@ using UnityEngine.Events;
 using UnityEngine.UI;
 using UnityTestingAssist.Runtime;
 
-namespace FastenUp.Tests.Binders
+namespace FastenUp.Tests.Binders.Events
 {
     [TestFixture]
     [TestOf(typeof(ButtonBinder))]

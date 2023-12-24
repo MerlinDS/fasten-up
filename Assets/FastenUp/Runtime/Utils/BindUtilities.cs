@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 using FastenUp.Runtime.Bindables;
 using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Binders.Actions;
+using FastenUp.Runtime.Binders.Events;
 
 namespace FastenUp.Runtime.Utils
 {
