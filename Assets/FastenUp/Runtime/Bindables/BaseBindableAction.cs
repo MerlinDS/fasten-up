@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using FastenUp.Runtime.Binders.Actions;
+using FastenUp.Runtime.Exceptions;
 using UnityEngine.Events;
 
 namespace FastenUp.Runtime.Bindables
@@ -20,6 +21,9 @@ namespace FastenUp.Runtime.Bindables
         /// <inheritdoc />
         void IBindableAction<T>.Bind(IActionBinder<T> actionBinder)
         {
+            if(_binders.Contains(actionBinder))
+                throw new FastenUpException($"{nameof(actionBinder)} already bind to {this}.");
+            
             if(actionBinder.OnAction == null)
                 return;
 
@@ -29,6 +33,9 @@ namespace FastenUp.Runtime.Bindables
         /// <inheritdoc />
         void IBindableAction<T>.Unbind(IActionBinder<T> actionBinder)
         {
+            if(!_binders.Contains(actionBinder))
+                throw new FastenUpException($"{nameof(actionBinder)} not bind to {this}.");
+            
             _binders.Remove(actionBinder);
         }
     }
