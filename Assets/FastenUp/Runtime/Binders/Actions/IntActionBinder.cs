@@ -3,7 +3,7 @@
     /// <summary>
     /// <see cref="ActionBinder{T}"/> for <see cref="int"/> type.
     /// </summary>
-    public class ActionIntBinder : ActionBinder<int>
+    public class IntActionBinder : ActionBinder<int>
     {
         
     }
