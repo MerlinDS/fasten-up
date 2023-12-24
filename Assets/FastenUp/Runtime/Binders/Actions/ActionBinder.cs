@@ -1,4 +1,6 @@
-﻿using UnityEngine.Events;
+﻿using FastenUp.Runtime.Utils;
+using UnityEngine;
+using UnityEngine.Events;
 
 namespace FastenUp.Runtime.Binders.Actions
 {
@@ -6,6 +8,8 @@ namespace FastenUp.Runtime.Binders.Actions
     /// Binders that provides the ability to invoke the <see cref="UnityEvent"/> in the bind Unity components through the
     /// <see cref="FastenUp.Runtime.Bindables.BindableAction"/>
     /// </summary>
+    [AddComponentMenu(FastenUpComponentMenu.Actions + "Action Binder", 0)]
+    [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Actions#action")]
     public sealed class ActionBinder : BaseActionBinder<UnityEvent>
     {
     }
