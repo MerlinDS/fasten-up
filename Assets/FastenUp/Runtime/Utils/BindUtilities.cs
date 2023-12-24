@@ -2,6 +2,7 @@
 using System.Runtime.CompilerServices;
 using FastenUp.Runtime.Bindables;
 using FastenUp.Runtime.Binders;
+using FastenUp.Runtime.Binders.Actions;
 
 namespace FastenUp.Runtime.Utils
 {
@@ -37,6 +38,22 @@ namespace FastenUp.Runtime.Utils
         {
             if (eventBinder is IEventBinder<T> eventBinderT)
                 bindableEvent.Unbind(eventBinderT);
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void TryBind<T>(IBindableAction<T> bindableAction, IBinder actionBinder)
+            where T : UnityEngine.Events.UnityEventBase, new()
+        {
+            if (actionBinder is IActionBinder<T> actionBinderT)
+                bindableAction.Bind(actionBinderT);
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void TryUnbind<T>(IBindableAction<T> bindableAction, IBinder actionBinder)
+            where T : UnityEngine.Events.UnityEventBase, new()
+        {
+            if (actionBinder is IActionBinder<T> actionBinderT)
+                bindableAction.Unbind(actionBinderT);
         }
     }
 }
