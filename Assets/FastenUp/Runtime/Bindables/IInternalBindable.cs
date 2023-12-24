@@ -15,7 +15,7 @@ namespace FastenUp.Runtime.Bindables
     /// Used to bind <see cref="IBinder{T}"/>s to a <see cref="IMediator"/>.
     /// </summary>
     /// <typeparam name="T">Type of the value that will be set by the binder component</typeparam>
-    public interface IInternalBindable<out T> : IInternalBindable
+    public interface IInternalBindable<T> : IInternalBindable
     {
         internal void Bind(IBinder<T> binder);
         internal void Unbind(IBinder<T> binder);

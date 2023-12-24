@@ -2,7 +2,7 @@
 
 namespace FastenUp.Runtime.Binders
 {
-    public partial class TextBinder : IBinder<int>, IBinder<float>
+    public partial class TextBinder : IValueReceiver<int>, IValueReceiver<float>
     {
         /// <inheritdoc />
         public void SetValue(int value)

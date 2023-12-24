@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace FastenUp.Runtime.Binders
 {
-    public sealed partial class SpriteBinder : IBinder<string>
+    public sealed partial class SpriteBinder : IValueReceiver<string>
     {
         /// <inheritdoc />
         public void SetValue(string value)

@@ -10,7 +10,7 @@ namespace FastenUp.Runtime.Binders
     [RequireComponent(typeof(Image))]
     [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Sprite Binder", 2)]
     [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#sprite")]
-    public sealed partial class SpriteBinder : BaseBinder, IBinder<Sprite>
+    public sealed partial class SpriteBinder : BaseBinder, IValueReceiver<Sprite>
     {
         private Image _component;
 

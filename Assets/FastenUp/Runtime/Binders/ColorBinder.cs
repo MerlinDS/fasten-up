@@ -10,7 +10,7 @@ namespace FastenUp.Runtime.Binders
     [RequireComponent(typeof(Graphic))]
     [AddComponentMenu(FastenUpComponentMenu.BaseMenu + "Color Binder", 3)]
     [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#color")]
-    public class ColorBinder : BaseBinder, IBinder<Color>
+    public class ColorBinder : BaseBinder, IValueReceiver<Color>
     {
         private Graphic _component;
 

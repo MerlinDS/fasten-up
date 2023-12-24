@@ -17,7 +17,7 @@ namespace FastenUp.Tests.Bindables
         public void Bind_When_bindable_was_not_bind_Should_set_value()
         {
             //Arrange
-            var binder = Substitute.For<IBinder<bool>>();
+            var binder = Substitute.For<IValueReceiver<bool>>();
             var sut = new Bindable<bool>();
             //Act & Assert
             sut.As<IInternalBindable<bool>>().Bind(binder);
@@ -88,8 +88,8 @@ namespace FastenUp.Tests.Bindables
         public void Value_When_set_Should_notify_all_bindables()
         {
             //Arrange
-            var binder1 = Substitute.For<IBinder<bool>>();
-            var binder2 = Substitute.For<IBinder<bool>>();
+            var binder1 = Substitute.For<IValueReceiver<bool>>();
+            var binder2 = Substitute.For<IValueReceiver<bool>>();
             var sut = new Bindable<bool>();
             sut.As<IInternalBindable<bool>>().Bind(binder1);
             sut.As<IInternalBindable<bool>>().Bind(binder2);
@@ -136,7 +136,7 @@ namespace FastenUp.Tests.Bindables
         public void OnValueChanged_When_gettable_bindable_value_changed_Should_notify_other_binders()
         {
             //Arrange
-            var other = Substitute.For<IBinder<bool>>();
+            var other = Substitute.For<IValueReceiver<bool>>();
             var binder = Substitute.For<IGettableBinder<bool>>();
             binder.GetValue().Returns(true);
 
