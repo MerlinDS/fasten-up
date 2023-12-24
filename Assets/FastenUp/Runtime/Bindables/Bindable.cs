@@ -6,7 +6,7 @@ using FastenUp.Runtime.Exceptions;
 
 namespace FastenUp.Runtime.Bindables
 {
-    public sealed class Bindable<T> : IInternalBindable<T>
+    public sealed class Bindable<T> : IBindable<T>
     {
         private readonly HashSet<IBinder<T>> _binders = new(1);
 
@@ -30,7 +30,7 @@ namespace FastenUp.Runtime.Bindables
         public event Action<T> OnValueChanged;
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        void IInternalBindable<T>.Bind(IBinder<T> binder)
+        void IBindable<T>.Bind(IBinder<T> binder)
         {
             if (_binders.Contains(binder))
                 throw new FastenUpException($"{nameof(binder)} already bind to the {nameof(Bindable<T>)}.");
@@ -43,7 +43,7 @@ namespace FastenUp.Runtime.Bindables
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        void IInternalBindable<T>.Unbind(IBinder<T> binder)
+        void IBindable<T>.Unbind(IBinder<T> binder)
         {
             if (!_binders.Contains(binder))
                 throw new FastenUpException($"{nameof(binder)} not bind to the {nameof(Bindable<T>)}.");

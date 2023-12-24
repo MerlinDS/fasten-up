@@ -11,7 +11,7 @@ namespace FastenUp.SourceGenerator
     {
         private const string MediatorMetadataName = "FastenUp.Runtime.Mediators.IMediator";
         private const string InternalMediatorMetadataName = "FastenUp.Runtime.Mediators.IInternalMediator";
-        private const string BindPointMetadataName = "FastenUp.Runtime.Bindables.IInternalBindable";
+        private const string BindPointMetadataName = "FastenUp.Runtime.Bindables.IBindable";
 
         /// <inheritdoc />
         public void Initialize(GeneratorInitializationContext context)

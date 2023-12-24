@@ -20,7 +20,7 @@ namespace FastenUp.Tests.Bindables
             var binder = Substitute.For<IValueReceiver<bool>>();
             var sut = new Bindable<bool>();
             //Act & Assert
-            sut.As<IInternalBindable<bool>>().Bind(binder);
+            sut.As<IBindable<bool>>().Bind(binder);
             binder.Received(1).SetValue(false);
         }
 
@@ -31,7 +31,7 @@ namespace FastenUp.Tests.Bindables
             var binder = Substitute.For<IValueProvider<bool>, IValueReceiver<bool>>();
             var sut = new Bindable<bool>();
             //Act & Assert
-            sut.As<IInternalBindable<bool>>().Bind(binder);
+            sut.As<IBindable<bool>>().Bind(binder);
             binder.Received(1).As<IValueReceiver<bool>>().SetValue(false);
             binder.Received(1).OnBinderChanged += Arg.Any<OnBinderChanged>();
         }
@@ -42,8 +42,8 @@ namespace FastenUp.Tests.Bindables
             //Arrange
             var binder = Substitute.For<IBinder<bool>>();
             var sut = new Bindable<bool>();
-            sut.As<IInternalBindable<bool>>().Bind(binder);
-            Action act = () => sut.As<IInternalBindable<bool>>().Bind(binder);
+            sut.As<IBindable<bool>>().Bind(binder);
+            Action act = () => sut.As<IBindable<bool>>().Bind(binder);
             //Act & Assert
             act.Should().Throw<FastenUpException>();
         }
@@ -54,8 +54,8 @@ namespace FastenUp.Tests.Bindables
             //Arrange
             var binder = Substitute.For<IBinder<bool>>();
             var sut = new Bindable<bool>();
-            sut.As<IInternalBindable<bool>>().Bind(binder);
-            Action act = () => sut.As<IInternalBindable<bool>>().Unbind(binder);
+            sut.As<IBindable<bool>>().Bind(binder);
+            Action act = () => sut.As<IBindable<bool>>().Unbind(binder);
             //Act & Assert
             act.Should().NotThrow<Exception>();
         }
@@ -66,9 +66,9 @@ namespace FastenUp.Tests.Bindables
             //Arrange
             var binder = Substitute.For<IValueProvider<bool>>();
             var sut = new Bindable<bool>();
-            sut.As<IInternalBindable<bool>>().Bind(binder);
+            sut.As<IBindable<bool>>().Bind(binder);
             //Act
-            sut.As<IInternalBindable<bool>>().Unbind(binder);
+            sut.As<IBindable<bool>>().Unbind(binder);
             //Assert
             binder.Received(1).OnBinderChanged -= Arg.Any<OnBinderChanged>();
         }
@@ -79,7 +79,7 @@ namespace FastenUp.Tests.Bindables
             //Arrange
             var binder = Substitute.For<IBinder<bool>>();
             var sut = new Bindable<bool>();
-            Action act = () => sut.As<IInternalBindable<bool>>().Unbind(binder);
+            Action act = () => sut.As<IBindable<bool>>().Unbind(binder);
             //Act & Assert
             act.Should().Throw<FastenUpException>();
         }
@@ -91,8 +91,8 @@ namespace FastenUp.Tests.Bindables
             var binder1 = Substitute.For<IValueReceiver<bool>>();
             var binder2 = Substitute.For<IValueReceiver<bool>>();
             var sut = new Bindable<bool>();
-            sut.As<IInternalBindable<bool>>().Bind(binder1);
-            sut.As<IInternalBindable<bool>>().Bind(binder2);
+            sut.As<IBindable<bool>>().Bind(binder1);
+            sut.As<IBindable<bool>>().Bind(binder2);
             //Act
             sut.Value = true;
             //Assert
@@ -108,7 +108,7 @@ namespace FastenUp.Tests.Bindables
             binder.GetValue().Returns(true);
 
             var sut = new Bindable<bool>();
-            sut.As<IInternalBindable<bool>>().Bind(binder);
+            sut.As<IBindable<bool>>().Bind(binder);
             //Act
             binder.OnBinderChanged += Raise.Event<OnBinderChanged>(binder);
             //Assert
@@ -124,7 +124,7 @@ namespace FastenUp.Tests.Bindables
             binder.GetValue().Returns(true);
 
             var sut = new Bindable<bool>();
-            sut.As<IInternalBindable<bool>>().Bind(binder);
+            sut.As<IBindable<bool>>().Bind(binder);
             //Act
             binder.OnBinderChanged += Raise.Event<OnBinderChanged>
                 (Substitute.For<IBinder>());
@@ -141,8 +141,8 @@ namespace FastenUp.Tests.Bindables
             binder.GetValue().Returns(true);
 
             var sut = new Bindable<bool>();
-            sut.As<IInternalBindable<bool>>().Bind(binder);
-            sut.As<IInternalBindable<bool>>().Bind(other);
+            sut.As<IBindable<bool>>().Bind(binder);
+            sut.As<IBindable<bool>>().Bind(other);
             //Act
             binder.OnBinderChanged += Raise.Event<OnBinderChanged>(binder);
             //Assert

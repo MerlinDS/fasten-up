@@ -21,8 +21,8 @@ namespace FastenUp.Tests.Bindables
             var sut = new BindableEvent<int>();
             Action act = () =>
             {
-                sut.As<IInternalBindableEvent<UnityAction<int>>>().Bind(eventBinder);
-                sut.As<IInternalBindableEvent<UnityAction<int>>>().Bind(eventBinder);
+                sut.As<IBindableEvent<UnityAction<int>>>().Bind(eventBinder);
+                sut.As<IBindableEvent<UnityAction<int>>>().Bind(eventBinder);
             };
             //Act & Assert
             act.Should().Throw<FastenUpException>();
@@ -34,7 +34,7 @@ namespace FastenUp.Tests.Bindables
             //Arrange
             var eventBinder = Substitute.For<IEventBinder<UnityAction<int>>>();
             var sut = new BindableEvent<int>();
-            Action act = ()=> sut.As<IInternalBindableEvent<UnityAction<int>>>().Bind(eventBinder);
+            Action act = ()=> sut.As<IBindableEvent<UnityAction<int>>>().Bind(eventBinder);
             //Act & Assert
             act.Should().NotThrow<FastenUpException>();
         }
@@ -45,7 +45,7 @@ namespace FastenUp.Tests.Bindables
             //Arrange
             var bindableListener = Substitute.For<IEventBinder<UnityAction<int>>>();
             var sut = new BindableEvent<int>();
-            Action act = ()=> sut.As<IInternalBindableEvent<UnityAction<int>>>().Unbind(bindableListener);
+            Action act = ()=> sut.As<IBindableEvent<UnityAction<int>>>().Unbind(bindableListener);
             //Act & Assert
             act.Should().Throw<FastenUpException>();
         }
@@ -58,8 +58,8 @@ namespace FastenUp.Tests.Bindables
             var sut = new BindableEvent<int>();
             Action act = ()=>
             {
-                sut.As<IInternalBindableEvent<UnityAction<int>>>().Bind(eventBinder);
-                sut.As<IInternalBindableEvent<UnityAction<int>>>().Unbind(eventBinder);
+                sut.As<IBindableEvent<UnityAction<int>>>().Bind(eventBinder);
+                sut.As<IBindableEvent<UnityAction<int>>>().Unbind(eventBinder);
             };
             //Act & Assert
             act.Should().NotThrow<FastenUpException>();
