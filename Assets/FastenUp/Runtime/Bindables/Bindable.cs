@@ -38,8 +38,7 @@ namespace FastenUp.Runtime.Bindables
             binder.SetValue(_value);
             _binders.Add(binder);
 
-            if (binder is IGettableBinder<T> bindableGettable)
-                bindableGettable.OnBinderChanged += OnValueChangedHandler;
+            binder.OnBinderChanged += OnValueChangedHandler;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -50,8 +49,7 @@ namespace FastenUp.Runtime.Bindables
 
             _binders.Remove(binder);
             
-            if (binder is IGettableBinder<T> bindableGettable)
-                bindableGettable.OnBinderChanged -= OnValueChangedHandler;
+            binder.OnBinderChanged -= OnValueChangedHandler;
         }
 
         private void OnValueChangedHandler(IBinder binder)
