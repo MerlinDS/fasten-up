@@ -16,11 +16,21 @@ namespace FastenUp.Runtime.Binders
     [Serializable]
     public abstract class BaseBinder : MonoBehaviour, IBinder
     {
-        private readonly List<IInternalMediator> _mediators = new(1);//One mediator is enough for most cases
+        private readonly List<IInternalMediator> _mediators = new(1); //One mediator is enough for most cases
 
         [field: SerializeField] public string Name { get; [ExcludeFromCodeCoverage] private set; }
 
         public event OnBinderChanged OnBinderChanged;
+        
+        /// <summary>
+        /// Checks if game object of this binder should be included in search for <see cref="IMediator"/>.
+        /// True by default.
+        /// </summary>
+        /// <remarks>
+        /// To prevent search for <see cref="IMediator"/> in game object of this binder, override this property and return <see langword="false"/>.
+        /// </remarks>
+        protected virtual bool IncludeOwnGameObjectInFind => true;
+
 
         protected void InvokeOnBinderChanged() =>
             OnBinderChanged?.Invoke(this);
@@ -33,7 +43,7 @@ namespace FastenUp.Runtime.Binders
             if (!TryCacheMediator())
                 return;
 
-            foreach (var mediator in _mediators) 
+            foreach (var mediator in _mediators)
                 mediator.Bind(this);
         }
 
@@ -44,9 +54,9 @@ namespace FastenUp.Runtime.Binders
         }
 
         private bool ValidateName()
-        {            
+        {
             if (!string.IsNullOrEmpty(Name))
-                return !Name.StartsWith('#');//Name that starts with '#' must be ignored
+                return !Name.StartsWith('#'); //Name that starts with '#' must be ignored
 
             Debug.LogError($"{name} will be ignored: name for binding was not set!", gameObject);
             return false;
@@ -54,16 +64,26 @@ namespace FastenUp.Runtime.Binders
 
         private bool TryCacheMediator()
         {
-            if (_mediators.Count > 0)//Already cached
-                return false;
-            
-            _mediators.AddRange(GetComponentsInParent<IInternalMediator>());
+            if (_mediators.Count > 0) //Already cached
+                return true;
+
+            _mediators.AddRange(FindMediators());
             if (_mediators.Count > 0)
                 return true;
-            
+
             Debug.LogError($"{name} will be ignored: {nameof(IMediator)} was not found!", gameObject);
             return false;
+        }
 
+        private IEnumerable<IInternalMediator> FindMediators()
+        {
+            if (IncludeOwnGameObjectInFind)
+                return GetComponentsInParent<IInternalMediator>();
+
+            var parent = transform.parent;
+            return parent == null
+                ? Array.Empty<IInternalMediator>()
+                : parent.GetComponentsInParent<IInternalMediator>();
         }
     }
 }
