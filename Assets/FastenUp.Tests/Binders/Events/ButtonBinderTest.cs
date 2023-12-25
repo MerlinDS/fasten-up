@@ -75,6 +75,53 @@ namespace FastenUp.Tests.Binders.Events
             // Assert
             actual.DidNotReceive().Invoke();
         }
+        
+        [Test]
+        public void RemoveListener_When_has_no_listener_Should_not_remove_listener()
+        {
+            // Arrange
+            var actual = Substitute.For<UnityAction>();
+            var sut = CreateSut();
+            // Act
+            sut.RemoveListener(actual);
+            // Assert
+            actual.DidNotReceive().Invoke();
+        }
+        
+        [Test]
+        public void Awake_When_called_Should_set_component_interactable_to_false()
+        {
+            // Arrange
+            var sut = CreateSut();
+            // Act
+            sut.ExecuteAwake();
+            // Assert
+            sut.GetComponent<Button>().interactable.Should().BeFalse();
+        }
+        
+        [Test]
+        public void AddListener_When_called_Should_set_component_interactable_to_true()
+        {
+            // Arrange
+            var sut = CreateSut();
+            // Act
+            sut.AddListener(Substitute.For<UnityAction>());
+            // Assert
+            sut.GetComponent<Button>().interactable.Should().BeTrue();
+        }
+        
+        [Test]
+        public void RemoveListener_When_called_Should_set_component_interactable_to_false()
+        {
+            // Arrange
+            var sut = CreateSut();
+            var actual = Substitute.For<UnityAction>();
+            sut.AddListener(actual);
+            // Act
+            sut.RemoveListener(actual);
+            // Assert
+            sut.GetComponent<Button>().interactable.Should().BeFalse();
+        }
 
         private static ButtonBinder CreateSut()
         {
