@@ -1,5 +1,4 @@
 ﻿using System;
-using FastenUp.Runtime.Binders;
 
 namespace FastenUp.Runtime.Bindables
 {
@@ -8,7 +7,7 @@ namespace FastenUp.Runtime.Bindables
     /// It can be used, for example, to bind the reference of one mediator to another mediator.
     /// </summary>
     /// <typeparam name="T">The type of the referenced object.</typeparam>
-    public sealed class BindableRef<T> : IBindable<T>
+    public sealed class BindableRef<T> : IBindableRef<T>
         where T : class
     {
         /// <summary>
@@ -20,26 +19,17 @@ namespace FastenUp.Runtime.Bindables
         /// The referenced object.
         /// </summary>
         public T Value { get; private set; }
-
+        
         /// <inheritdoc />
-        void IBindable<T>.Bind(IBinder<T> binder)
+        void IBindableRef<T>.Bind(T reference)
         {
-            if (binder is not IValueProvider<T> valueReceiver)
-                return;
-
-            Value = valueReceiver.GetValue();
+            Value = reference;
             OnRefChanged?.Invoke();
         }
 
         /// <inheritdoc />
-        void IBindable<T>.Unbind(IBinder<T> binder)
+        void IBindableRef<T>.Unbind(T reference)
         {
-            if (binder is not IValueProvider<T> valueReceiver)
-                return;
-
-            if (Value is null || Value != valueReceiver.GetValue())
-                return;
-
             Value = null;
             OnRefChanged?.Invoke();
         }
