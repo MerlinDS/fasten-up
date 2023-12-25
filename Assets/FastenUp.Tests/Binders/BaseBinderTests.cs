@@ -228,7 +228,7 @@ namespace FastenUp.Tests.Binders
             //Arrange
             var test = TestingBehaviour.Create();
             //Act & Assert
-            test.component.PublicIncludeOwnGameObjectInFind.Should().BeTrue();
+            test.component.DefaultIncludeOwnGameObjectInFind.Should().BeTrue();
         }
 
         private class TestingBehaviour : BaseBinder, IMonoBehaviourTest
@@ -250,6 +250,8 @@ namespace FastenUp.Tests.Binders
             protected override bool IncludeOwnGameObjectInFind => PublicIncludeOwnGameObjectInFind;
 
             public bool PublicIncludeOwnGameObjectInFind { get; set; } = true;
+            
+            public bool DefaultIncludeOwnGameObjectInFind => base.IncludeOwnGameObjectInFind;
 
             /// <inheritdoc /> 
             [ExcludeFromCodeCoverage]
