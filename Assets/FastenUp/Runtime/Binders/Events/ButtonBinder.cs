@@ -14,24 +14,32 @@ namespace FastenUp.Runtime.Binders.Events
     public class ButtonBinder : BaseBinder, IEventBinder<UnityAction>
     {
         private Button _component;
+        private int _listenerCount;
 
         private void Awake()
         {
             _component = GetComponent<Button>();
+            _component.interactable = false;
         }
 
         /// <inheritdoc />
         public void AddListener(UnityAction action)
         {
-            if (action is not null)
-                _component.onClick.AddListener(action);
+            if (action is null)
+                return;
+
+            _component.onClick.AddListener(action);
+            _component.interactable = ++_listenerCount > 0;
         }
 
         /// <inheritdoc />
         public void RemoveListener(UnityAction action)
         {
-            if (action is not null)
-                _component.onClick.RemoveListener(action);
+            if (action is null)
+                return;
+
+            _component.onClick.RemoveListener(action);
+            _component.interactable = --_listenerCount > 0;
         }
 
         /// <inheritdoc />
