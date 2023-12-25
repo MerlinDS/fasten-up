@@ -9,6 +9,7 @@ using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
 using UnityTestingAssist.Runtime;
+using Object = UnityEngine.Object;
 
 namespace FastenUp.Tests.Binders
 {
@@ -29,7 +30,7 @@ namespace FastenUp.Tests.Binders
             //Assert
             mockMediator.Received(1).Bind(test.component);
         }
-        
+
         [Test]
         public void OnEnable_When_has_two_mediators_Should_bind_to_both_mediators()
         {
@@ -46,16 +47,19 @@ namespace FastenUp.Tests.Binders
             mockMediatorA.Received(1).Bind(test.component);
             mockMediatorB.Received(1).Bind(test.component);
         }
-        
+
         [Test]
-        public void OnEnable_When_mediator_was_cached_Should_not_bind_to_mediator_twice()
+        public void OnEnable_When_mediator_was_cached_Should_use_cached_mediator()
         {
             //Arrange
             var mockMediator = Substitute.For<IInternalMediator>();
             var test = TestingBehaviour.Create();
-            test.component.gameObject.AddComponent<MockMediator>().Set(mockMediator);
+            var mediatorComponent = test.component.gameObject.AddComponent<MockMediator>();
+            mediatorComponent.Set(mockMediator);
             test.component.SetName("Test");
             test.component.ExecuteOnEnable();
+            mockMediator.ClearReceivedCalls();
+            Object.DestroyImmediate(mediatorComponent);
             //Act
             test.component.ExecuteOnEnable();
             //Assert
@@ -76,6 +80,27 @@ namespace FastenUp.Tests.Binders
             test.component.ExecuteOnEnable();
             //Assert
             mockMediator.Received(1).Bind(test.component);
+        }
+
+        [Test]
+        public void
+            OnEnable_When_has_mediator_in_own_object_and_in_parent_and_includeOwnGameObjectInFind_is_false_Should_bind_to_mediator_from_parent()
+        {
+            //Arrange
+            var parentMediator = Substitute.For<IInternalMediator>();
+            var ownMediator = Substitute.For<IInternalMediator>();
+            var test = TestingBehaviour.Create();
+            var parent = new GameObject(nameof(BaseBinderTests));
+            parent.AddComponent<MockMediator>().Set(parentMediator);
+            test.component.SetParent(parent);
+            test.component.gameObject.AddComponent<MockMediator>().Set(ownMediator);
+            test.component.SetName("Test");
+            test.component.PublicIncludeOwnGameObjectInFind = false;
+            //Act
+            test.component.ExecuteOnEnable();
+            //Assert
+            ownMediator.DidNotReceive().Bind(test.component);
+            parentMediator.Received(1).Bind(test.component);
         }
 
         [Test]
@@ -102,7 +127,7 @@ namespace FastenUp.Tests.Binders
             LogAssert.Expect(LogType.Error,
                 $"{test.component.name} will be ignored: name for binding was not set!");
         }
-        
+
         [Test]
         public void OnEnable_When_name_starts_with_hashtag_Should_not_log_error_and_bind_to_mediator()
         {
@@ -197,6 +222,15 @@ namespace FastenUp.Tests.Binders
             test.component.Name.Should().Be(expected);
         }
 
+        [Test]
+        public void IncludeOwnGameObjectInFind_getter_When_has_default_Should_return_true()
+        {
+            //Arrange
+            var test = TestingBehaviour.Create();
+            //Act & Assert
+            test.component.PublicIncludeOwnGameObjectInFind.Should().BeTrue();
+        }
+
         private class TestingBehaviour : BaseBinder, IMonoBehaviourTest
         {
             public static MonoBehaviourTest<TestingBehaviour> Create() =>
@@ -211,7 +245,13 @@ namespace FastenUp.Tests.Binders
             public new void InvokeOnBinderChanged() =>
                 base.InvokeOnBinderChanged();
 
+
             /// <inheritdoc />
+            protected override bool IncludeOwnGameObjectInFind => PublicIncludeOwnGameObjectInFind;
+
+            public bool PublicIncludeOwnGameObjectInFind { get; set; } = true;
+
+            /// <inheritdoc /> 
             [ExcludeFromCodeCoverage]
             public bool IsTestFinished => true;
         }
