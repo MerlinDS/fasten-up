@@ -1,11 +1,11 @@
-﻿using FastenUp.Runtime.Binders;
+﻿using FastenUp.Runtime.Binders.Behaviours;
 using FluentAssertions;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityTestingAssist.Runtime;
 
-namespace FastenUp.Tests.Binders
+namespace FastenUp.Tests.Binders.Behaviours
 {
     [TestFixture]
     [TestOf(typeof(ColorBinder))]

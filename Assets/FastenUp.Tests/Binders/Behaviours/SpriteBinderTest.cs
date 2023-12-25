@@ -1,11 +1,11 @@
-﻿using FluentAssertions;
+﻿using FastenUp.Runtime.Binders.Behaviours;
+using FluentAssertions;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityTestingAssist.Runtime;
-using SpriteBinder = FastenUp.Runtime.Binders.SpriteBinder;
 
-namespace FastenUp.Tests.Binders
+namespace FastenUp.Tests.Binders.Behaviours
 {
     [TestFixture]
     [TestOf(typeof(SpriteBinder))]
@@ -22,30 +22,6 @@ namespace FastenUp.Tests.Binders
             sut.SetValue(expected);
             // Assert
             sut.GetComponent<Image>().sprite.Should().Be(expected);
-        }
-
-        [Test]
-        public void Set_Value_When_type_is_string_Should_load_sprite_from_resources()
-        {
-            // Arrange
-            const string path = "FastenUp - Icon";
-            var expected = Resources.Load<Sprite>(path);
-            var sut = CreateSut();
-            // Act
-            sut.SetValue(path);
-            // Assert
-            sut.GetComponent<Image>().sprite.Should().Be(expected);
-        }
-
-        [Test]
-        public void Set_Value_When_type_is_string_and_value_is_null_or_empty_Should_set_null_to_sprite()
-        {
-            // Arrange
-            var sut = CreateSut();
-            // Act
-            sut.SetValue(string.Empty);
-            // Assert
-            sut.GetComponent<Image>().sprite.Should().BeNull();
         }
 
         private static SpriteBinder CreateSut()

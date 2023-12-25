@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 
-namespace FastenUp.Runtime.Binders
+namespace FastenUp.Runtime.Binders.Behaviours
 {
     public sealed partial class DropdownBinder : IValueReceiver<string[]>, 
         IValueReceiver<List<TMP_Dropdown.OptionData>>

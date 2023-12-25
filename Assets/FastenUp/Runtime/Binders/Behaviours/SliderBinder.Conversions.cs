@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace FastenUp.Runtime.Binders
+namespace FastenUp.Runtime.Binders.Behaviours
 {
     public sealed partial class SliderBinder : 
         IValueReceiver<int>, IValueProvider<int>, IValueReceiver<Vector2Int>

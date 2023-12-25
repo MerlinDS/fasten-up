@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using FastenUp.Runtime.Binders;
+using FastenUp.Runtime.Binders.Behaviours;
 using FastenUp.Runtime.Delegates;
 using FluentAssertions;
 using NSubstitute;
@@ -11,7 +11,7 @@ using UnityEngine.UI;
 using UnityTestingAssist.Runtime;
 using Object = UnityEngine.Object;
 
-namespace FastenUp.Tests.Binders
+namespace FastenUp.Tests.Binders.Behaviours
 {
     [TestFixture]
     [TestOf(typeof(VisibilityBinder))]
