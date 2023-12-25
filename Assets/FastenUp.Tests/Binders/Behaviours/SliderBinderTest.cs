@@ -1,4 +1,5 @@
 ﻿using FastenUp.Runtime.Binders;
+using FastenUp.Runtime.Binders.Behaviours;
 using FastenUp.Runtime.Delegates;
 using FluentAssertions;
 using NSubstitute;
@@ -7,7 +8,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityTestingAssist.Runtime;
 
-namespace FastenUp.Tests.Binders
+namespace FastenUp.Tests.Binders.Behaviours
 {
     [TestFixture]
     [TestOf(typeof(SliderBinder))]

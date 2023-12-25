@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 
-namespace FastenUp.Runtime.Binders
+namespace FastenUp.Runtime.Binders.Behaviours
 {
     public partial class TextBinder : IValueReceiver<int>, IValueReceiver<float>
     {

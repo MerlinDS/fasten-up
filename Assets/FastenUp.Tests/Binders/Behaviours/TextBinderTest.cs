@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using FastenUp.Runtime.Binders;
 using FluentAssertions;
 using NUnit.Framework;
 using TMPro;
 using UnityEngine;
 using UnityTestingAssist.Runtime;
+using FastenUp.Runtime.Binders.Behaviours;
 
-namespace FastenUp.Tests.Binders
+namespace FastenUp.Tests.Binders.Behaviours
 {
     [TestFixture]
     [TestOf(typeof(TextBinder))]

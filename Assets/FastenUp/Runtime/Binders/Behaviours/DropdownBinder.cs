@@ -2,7 +2,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace FastenUp.Runtime.Binders
+namespace FastenUp.Runtime.Binders.Behaviours
 {
     /// <summary>
     /// The two-way <see cref="IBinder"/> binds a value to the component with <see cref="TMP_Dropdown"/> field.
