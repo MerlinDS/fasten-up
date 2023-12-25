@@ -2,6 +2,7 @@
 using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Binders.Actions;
 using FastenUp.Runtime.Binders.Events;
+using FastenUp.Runtime.Binders.References;
 using FastenUp.Runtime.Utils;
 using FluentAssertions;
 using NSubstitute;
@@ -279,6 +280,69 @@ namespace FastenUp.Tests.Utils
             BindUtilities.TryBind(bindableAction, actionBinder);
             //Assert
             bindableAction.DidNotReceive().Bind(actionBinder.As<IActionBinder<UnityEvent<bool>>>());
+        }
+        
+        [Test]
+        public void TryBind_When_refBinder_has_valid_type_Should_bind()
+        {
+            //Arrange
+            var refBinder = Substitute.For<IBinder, IRefBinder>();
+            var bindableRef = Substitute.For<IBindableRef<TestReference>>();
+            refBinder.As<IRefBinder>().TryGetReference(out Arg.Any<TestReference>()).Returns(x =>
+            {
+                x[0] = Substitute.For<TestReference>();
+                return true;
+            });
+            //Act
+            BindUtilities.TryBind(bindableRef, refBinder);
+            //Assert
+            bindableRef.Received(1).Bind(Arg.Any<TestReference>());
+        }
+        
+        [Test]
+        public void TryBind_When_refBinder_has_invalid_type_Should_not_bind()
+        {
+            //Arrange
+            var refBinder = Substitute.For<IBinder, IRefBinder>();
+            var bindableRef = Substitute.For<IBindableRef<TestReference>>();
+            refBinder.As<IRefBinder>().TryGetReference(out Arg.Any<TestReference>()).Returns(false);
+            //Act
+            BindUtilities.TryBind(bindableRef, refBinder);
+            //Assert
+            bindableRef.DidNotReceive().Bind(Arg.Any<TestReference>());
+        }
+        
+        [Test]
+        public void TryBind_When_refBinder_is_null_Should_not_bind()
+        {
+            //Arrange
+            var bindableRef = Substitute.For<IBindableRef<TestReference>>();
+            //Act
+            BindUtilities.TryBind(bindableRef, null);
+            //Assert
+            bindableRef.DidNotReceive().Bind(Arg.Any<TestReference>());
+        }
+        
+        [Test]
+        public void TryUnbind_When_refBinder_has_valid_type_Should_unbind()
+        {
+            //Arrange
+            var refBinder = Substitute.For<IBinder, IRefBinder>();
+            var bindableRef = Substitute.For<IBindableRef<TestReference>>();
+            refBinder.As<IRefBinder>().TryGetReference(out Arg.Any<TestReference>()).Returns(x =>
+            {
+                x[0] = Substitute.For<TestReference>();
+                return true;
+            });
+            //Act
+            BindUtilities.TryUnbind(bindableRef, refBinder);
+            //Assert
+            bindableRef.Received(1).Unbind(Arg.Any<TestReference>());
+        }
+        
+        internal class TestReference
+        {
+            
         }
     }
 }
