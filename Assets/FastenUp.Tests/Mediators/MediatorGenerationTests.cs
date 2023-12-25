@@ -2,6 +2,7 @@
 using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Binders.Actions;
 using FastenUp.Runtime.Binders.Events;
+using FastenUp.Runtime.Binders.References;
 using FastenUp.Runtime.Mediators;
 using FluentAssertions;
 using NSubstitute;
@@ -21,7 +22,7 @@ namespace FastenUp.Tests.Mediators
             var binders = new[]
             {
                 CreateBinder<IValueReceiver<int>>("Property"),
-                CreateBinder<IValueProvider<TestReference>>("Reference"),
+                CreateBinder<IRefBinder>("Reference"),
                 CreateBinder<IEventBinder<UnityAction>>("Event"),
                 CreateBinder<IActionBinder<UnityEvent>>("Action")
             };
@@ -29,7 +30,11 @@ namespace FastenUp.Tests.Mediators
             var testReference = Substitute.For<TestReference>();
             var mockAction = Substitute.For<UnityAction>();
             var mockEvent = Substitute.For<UnityEvent>();
-            binders[1].As<IValueProvider<TestReference>>().GetValue().Returns(testReference);
+            binders[1].As<IRefBinder>().TryGetReference(out Arg.Any<TestReference>()).Returns(x =>
+            {
+                x[0] = testReference;
+                return true;
+            });
             binders[3].As<IActionBinder<UnityEvent>>().OnAction.Returns(mockEvent);
             var mediator = new IntegrationTestMediator();
             //Act
