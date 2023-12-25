@@ -4,6 +4,7 @@ using FastenUp.Runtime.Bindables;
 using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Binders.Actions;
 using FastenUp.Runtime.Binders.Events;
+using FastenUp.Runtime.Binders.References;
 
 namespace FastenUp.Runtime.Utils
 {
@@ -28,33 +29,47 @@ namespace FastenUp.Runtime.Utils
         }
         
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void TryBind<T>(IBindableEvent<T> bindableEvent, IBinder eventBinder)
+        public static void TryBind<T>(IBindableEvent<T> bindableEvent, IBinder binder)
         {
-            if (eventBinder is IEventBinder<T> eventBinderT)
-                bindableEvent.Bind(eventBinderT);
+            if (binder is IEventBinder<T> eventBinder)
+                bindableEvent.Bind(eventBinder);
         }
         
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void TryUnbind<T>(IBindableEvent<T> bindableEvent, IBinder eventBinder)
+        public static void TryUnbind<T>(IBindableEvent<T> bindableEvent, IBinder binder)
         {
-            if (eventBinder is IEventBinder<T> eventBinderT)
-                bindableEvent.Unbind(eventBinderT);
+            if (binder is IEventBinder<T> eventBinder)
+                bindableEvent.Unbind(eventBinder);
         }
         
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void TryBind<T>(IBindableAction<T> bindableAction, IBinder actionBinder)
+        public static void TryBind<T>(IBindableAction<T> bindableAction, IBinder binder)
             where T : UnityEngine.Events.UnityEventBase, new()
         {
-            if (actionBinder is IActionBinder<T> actionBinderT)
+            if (binder is IActionBinder<T> actionBinderT)
                 bindableAction.Bind(actionBinderT);
         }
         
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void TryUnbind<T>(IBindableAction<T> bindableAction, IBinder actionBinder)
+        public static void TryUnbind<T>(IBindableAction<T> bindableAction, IBinder binder)
             where T : UnityEngine.Events.UnityEventBase, new()
         {
-            if (actionBinder is IActionBinder<T> actionBinderT)
-                bindableAction.Unbind(actionBinderT);
+            if (binder is IActionBinder<T> actionBinder)
+                bindableAction.Unbind(actionBinder);
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void TryBind<T>(IBindableRef<T> bindableRef, IBinder binder)
+        {
+            if (binder is IRefBinder refBinder && refBinder.TryGetReference(out T value))
+                bindableRef.Bind(value);
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void TryUnbind<T>(IBindableRef<T> bindableRef, IBinder binder)
+        {
+            if (binder is IRefBinder refBinder && refBinder.TryGetReference(out T value))
+                bindableRef.Unbind(value);
         }
     }
 }
