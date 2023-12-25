@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace FastenUp.Editor.Bindables
 {
+    [CanEditMultipleObjects]
     [CustomEditor(typeof(BaseBinder), true)]
     public class BaseBindableInspector : UnityEditor.Editor
     {
