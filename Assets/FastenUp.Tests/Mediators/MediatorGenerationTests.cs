@@ -24,7 +24,8 @@ namespace FastenUp.Tests.Mediators
                 CreateBinder<IValueReceiver<int>>("Property"),
                 CreateBinder<IRefBinder>("Reference"),
                 CreateBinder<IEventBinder<UnityAction>>("Event"),
-                CreateBinder<IActionBinder<UnityEvent>>("Action")
+                CreateBinder<IActionBinder<UnityEvent>>("Action"),
+                CreateBinder<IValueReceiver<float>>("Setup"),
             };
 
             var testReference = Substitute.For<TestReference>();
@@ -42,11 +43,13 @@ namespace FastenUp.Tests.Mediators
                 mediator.Bind(binder);
 
             mediator.Property.Value = 1;
+            mediator.Setup.Value = 1F;
             mediator.Event.AddListener(mockAction);
             mediator.Action.Invoke();
             //Assert
             mediator.Reference.Value.Should().Be(testReference, "Reference should provided by binder");
             binders[0].As<IValueReceiver<int>>().Received().SetValue(1);
+            binders[4].As<IValueReceiver<float>>().Received().SetValue(1F);
             binders[2].As<IEventBinder<UnityAction>>().Received().AddListener(mockAction);
             mockEvent.Received().Invoke();
         }
@@ -63,6 +66,8 @@ namespace FastenUp.Tests.Mediators
     internal sealed partial class IntegrationTestMediator : IMediator
     {
         public Bindable<int> Property { get; } = new();
+        
+        public BindableSetup<float> Setup { get; } = new();
         public BindableRef<TestReference> Reference { get; } = new();
         public BindableEvent Event { get; } = new();
 
