@@ -66,5 +66,20 @@ namespace FastenUp.Tests.Bindables
             // Assert
             act.Should().Throw<FastenUpException>();
         }
+        
+        [Test]
+        public void Clear_When_called_Should_clears_set()
+        {
+            // Arrange
+            var binder = Substitute.For<IBinder>();
+            var sut = new BinderSet<IBinder>();
+            sut.Add(binder);
+            // Act
+            sut.Clear();
+            // Assert
+            var enumerator = sut.GetEnumerator();
+            using var disposable = enumerator as IDisposable;
+            enumerator.MoveNext().Should().BeFalse();
+        }
     }
 }
