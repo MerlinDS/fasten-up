@@ -52,5 +52,13 @@ namespace FastenUp.Runtime.Bindables
         {
             return _binder.GetEnumerator();
         }
+        
+        /// <summary>
+        /// Clears the collection without exceptions.
+        /// </summary>
+        public void Clear()
+        {
+            _binder.Clear();
+        }
     }
 }

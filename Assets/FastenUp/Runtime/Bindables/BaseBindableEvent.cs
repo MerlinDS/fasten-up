@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using FastenUp.Runtime.Binders.Events;
-using FastenUp.Runtime.Exceptions;
 
 namespace FastenUp.Runtime.Bindables
 {
@@ -11,7 +10,7 @@ namespace FastenUp.Runtime.Bindables
     /// <typeparam name="T">Type of the delegate to subscribe that is used in the bind Unity components.</typeparam>
     public abstract class BaseBindableEvent<T> : IBindableEvent<T>, IDisposable
     {
-        private readonly HashSet<IEventBinder<T>> _listeners = new(1);
+        private readonly BinderSet<IEventBinder<T>> _binders = new();
 
         private readonly List<T> _actions = new(1);
 
@@ -30,7 +29,7 @@ namespace FastenUp.Runtime.Bindables
         public void AddListener(T action)
         {
             _actions.Add(action);
-            foreach (var listener in _listeners)
+            foreach (var listener in _binders)
                 listener.AddListener(action);
         }
 
@@ -41,43 +40,37 @@ namespace FastenUp.Runtime.Bindables
         public void RemoveListener(T action)
         {
             _actions.Remove(action);
-            foreach (var listener in _listeners)
+            foreach (var listener in _binders)
                 listener.RemoveListener(action);
         }
 
         /// <inheritdoc />
         void IBindableEvent<T>.Bind(IEventBinder<T> eventBinder)
         {
-            if (_listeners.Contains(eventBinder))
-                throw new FastenUpException($"{nameof(eventBinder)} already added to the {nameof(BindableEvent)}.");
-
+            _binders.Add(eventBinder);
             foreach (var action in _actions)
                 eventBinder.AddListener(action);
-            _listeners.Add(eventBinder);
         }
 
         /// <inheritdoc />
         void IBindableEvent<T>.Unbind(IEventBinder<T> eventBinder)
         {
-            if (!_listeners.Contains(eventBinder))
-                throw new FastenUpException($"{nameof(eventBinder)} not found in the {nameof(BindableEvent)}.");
-
+            _binders.Remove(eventBinder);
             foreach (var action in _actions)
                 eventBinder.RemoveListener(action);
-            _listeners.Remove(eventBinder);
         }
 
         /// <inheritdoc />
         public void Dispose()
         {
-            foreach (var listener in _listeners)
+            foreach (var binder in _binders)
             {
                 foreach (var action in _actions)
-                    listener.RemoveListener(action);
+                    binder.RemoveListener(action);
             }
 
-            _listeners.Clear();
             _actions.Clear();
+            _binders.Clear();
         }
     }
 }
