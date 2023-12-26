@@ -1,6 +1,7 @@
 ﻿using FastenUp.Runtime.Bindables;
 using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Binders.Actions;
+using FastenUp.Runtime.Binders.Collections;
 using FastenUp.Runtime.Binders.Events;
 using FastenUp.Runtime.Binders.References;
 using FastenUp.Runtime.Mediators;
@@ -26,6 +27,7 @@ namespace FastenUp.Tests.Mediators
                 CreateBinder<IEventBinder<UnityAction>>("Event"),
                 CreateBinder<IActionBinder<UnityEvent>>("Action"),
                 CreateBinder<IValueReceiver<float>>("Setup"),
+                CreateBinder<ICollectionBinder<object>>("Collection")
             };
 
             var testReference = Substitute.For<TestReference>();
@@ -46,11 +48,13 @@ namespace FastenUp.Tests.Mediators
             mediator.Setup.Value = 1F;
             mediator.Event.AddListener(mockAction);
             mediator.Action.Invoke();
+            mediator.Collection.Add(new object());
             //Assert
             mediator.Reference.Value.Should().Be(testReference, "Reference should provided by binder");
             binders[0].As<IValueReceiver<int>>().Received().SetValue(1);
             binders[4].As<IValueReceiver<float>>().Received().SetValue(1F);
             binders[2].As<IEventBinder<UnityAction>>().Received().AddListener(mockAction);
+            binders[5].As<ICollectionBinder<object>>().Received().Add(Arg.Any<object>());
             mockEvent.Received().Invoke();
         }
 
@@ -72,6 +76,8 @@ namespace FastenUp.Tests.Mediators
         public BindableEvent Event { get; } = new();
 
         public BindableAction Action { get; } = new();
+        
+        public BindableCollection<object> Collection { get; } = new(); 
     }
 
     internal abstract class TestReference
