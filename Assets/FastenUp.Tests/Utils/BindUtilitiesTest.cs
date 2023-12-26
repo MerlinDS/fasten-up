@@ -1,6 +1,7 @@
 ﻿using FastenUp.Runtime.Bindables;
 using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Binders.Actions;
+using FastenUp.Runtime.Binders.Collections;
 using FastenUp.Runtime.Binders.Events;
 using FastenUp.Runtime.Binders.References;
 using FastenUp.Runtime.Utils;
@@ -338,6 +339,76 @@ namespace FastenUp.Tests.Utils
             BindUtilities.TryUnbind(bindableRef, refBinder);
             //Assert
             bindableRef.Received(1).Unbind(Arg.Any<TestReference>());
+        }
+        
+        [Test]
+        public void TryBind_When_collectionBinder_has_valid_type_Should_bind()
+        {
+            //Arrange
+            var collectionBinder = Substitute.For<IBinder, ICollectionBinder<TestReference>>();
+            var bindableCollection = Substitute.For<IBindableCollection<TestReference>>();
+            //Act
+            BindUtilities.TryBind(bindableCollection, collectionBinder);
+            //Assert
+            bindableCollection.Received(1).Bind(collectionBinder.As<ICollectionBinder<TestReference>>());
+        }
+        
+        [Test]
+        public void TryBind_When_collectionBinder_has_invalid_type_Should_not_bind()
+        {
+            //Arrange
+            var collectionBinder = Substitute.For<IBinder, ICollectionBinder<TestReference>>();
+            var bindableCollection = Substitute.For<IBindableCollection<int>>();
+            //Act
+            BindUtilities.TryBind(bindableCollection, collectionBinder);
+            //Assert
+            bindableCollection.DidNotReceive().Bind(Arg.Any<ICollectionBinder<int>>());
+        }
+        
+        [Test]
+        public void TryBind_When_collectionBinder_is_null_Should_not_bind()
+        {
+            //Arrange
+            var bindableCollection = Substitute.For<IBindableCollection<TestReference>>();
+            //Act
+            BindUtilities.TryBind(bindableCollection, null);
+            //Assert
+            bindableCollection.DidNotReceive().Bind(Arg.Any<ICollectionBinder<TestReference>>());
+        }
+        
+        [Test]
+        public void TryUnbind_When_collectionBinder_has_valid_type_Should_unbind()
+        {
+            //Arrange
+            var collectionBinder = Substitute.For<IBinder, ICollectionBinder<TestReference>>();
+            var bindableCollection = Substitute.For<IBindableCollection<TestReference>>();
+            //Act
+            BindUtilities.TryUnbind(bindableCollection, collectionBinder);
+            //Assert
+            bindableCollection.Received(1).Unbind(collectionBinder.As<ICollectionBinder<TestReference>>());
+        }
+        
+        [Test]
+        public void TryUnbind_When_collectionBinder_has_invalid_type_Should_not_unbind()
+        {
+            //Arrange
+            var collectionBinder = Substitute.For<IBinder, ICollectionBinder<TestReference>>();
+            var bindableCollection = Substitute.For<IBindableCollection<int>>();
+            //Act
+            BindUtilities.TryBind(bindableCollection, collectionBinder);
+            //Assert
+            bindableCollection.DidNotReceive().Unbind(Arg.Any<ICollectionBinder<int>>());
+        }
+        
+        [Test]
+        public void TryUnbind_When_collectionBinder_is_null_Should_not_unbind()
+        {
+            //Arrange
+            var bindableCollection = Substitute.For<IBindableCollection<TestReference>>();
+            //Act
+            BindUtilities.TryBind(bindableCollection, null);
+            //Assert
+            bindableCollection.DidNotReceive().Unbind(Arg.Any<ICollectionBinder<TestReference>>());
         }
         
         internal class TestReference

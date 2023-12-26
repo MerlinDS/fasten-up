@@ -3,6 +3,7 @@ using System.Runtime.CompilerServices;
 using FastenUp.Runtime.Bindables;
 using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Binders.Actions;
+using FastenUp.Runtime.Binders.Collections;
 using FastenUp.Runtime.Binders.Events;
 using FastenUp.Runtime.Binders.References;
 
@@ -70,6 +71,20 @@ namespace FastenUp.Runtime.Utils
         {
             if (binder is IRefBinder refBinder && refBinder.TryGetReference(out T value))
                 bindableRef.Unbind(value);
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void TryBind<T>(IBindableCollection<T> bindableCollection, IBinder binder)
+        {
+            if (binder is ICollectionBinder<T> collectionBinder)
+                bindableCollection.Bind(collectionBinder);
+        }
+        
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void TryUnbind<T>(IBindableCollection<T> bindableCollection, IBinder binder)
+        {
+            if (binder is ICollectionBinder<T> collectionBinder)
+                bindableCollection.Unbind(collectionBinder);
         }
     }
 }
