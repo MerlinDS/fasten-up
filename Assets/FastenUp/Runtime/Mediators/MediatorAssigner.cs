@@ -8,10 +8,11 @@ namespace FastenUp.Runtime.Mediators
     /// <summary>
     /// Used to bind external <see cref="IMediator"/> to the binders.
     /// </summary>
+    [DefaultExecutionOrder(-1000)]
     public sealed class MediatorAssigner : MonoBehaviour, IInternalMediator
     {
         private readonly List<IBinder> _binders = new();
-        
+
         private IInternalMediator _mediator;
 
         /// <summary>
@@ -23,9 +24,9 @@ namespace FastenUp.Runtime.Mediators
         {
             if (mediator is null)
                 throw new ArgumentNullException(nameof(mediator), "Mediator cannot be null.");
-            
+
             Release();
-            
+
             _mediator = mediator;
             foreach (var binder in _binders)
                 _mediator.Bind(binder);
@@ -44,11 +45,11 @@ namespace FastenUp.Runtime.Mediators
         {
             if (_mediator is null)
                 return;
-            
+
             foreach (var binder in _binders)
                 _mediator.Unbind(binder);
-            
-            if(_mediator is IDisposable disposable)
+
+            if (_mediator is IDisposable disposable)
                 disposable.Dispose();
             _mediator = null;
         }

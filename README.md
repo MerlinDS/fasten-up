@@ -41,7 +41,7 @@ openupm install com.merlinds.fasten-up
 
 - [TextMeshPro](https://docs.unity3d.com/Manual/upm-ui-giturl.html) - for `Text` components binding.
 
-## Usage example
+## 🌱 Usage example
 
 Mediator class is a bridge between the game data and the UI components.
 
@@ -69,14 +69,14 @@ Add the `MyMediator` component to the GameObject.
 
 Then add the `TextMeshPro` component with the `TextBinder` component to the child GameObject.
 
-![text_binder_example.png](https://merlinds.github.io/fasten-up/resources//samples_installation.png)
+![text_binder_example.png](https://merlinds.github.io/fasten-up/resources/text_binder_example.png)
 
 Now the `TextMeshPro` component will be bound to the `Text` property of the `MyMediator` class,
 and the text will be updated when the `Text` property changes.
 
 More examples can be found in the `Samples~` folder.
 
-![smaples screen](https://merlinds.github.io/fasten-up/resources//smaples_screen.png)
+![smaples screen](https://merlinds.github.io/fasten-up/resources/smaples_screen.png)
 
 ![samples installation](https://merlinds.github.io/fasten-up/resources/samples_installation.png)
 

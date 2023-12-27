@@ -77,13 +77,22 @@ namespace FastenUp.Runtime.Binders
 
         private IEnumerable<IInternalMediator> FindMediators()
         {
-            if (IncludeOwnGameObjectInFind)
-                return GetComponentsInParent<IInternalMediator>();
+            //Traversal up the hierarchy to find mediators
+            var transforms = IncludeOwnGameObjectInFind ? transform : transform.parent;
+            while (transforms != null)
+            {
+                var mediatorsFound = false;
+                foreach (var mediator in transforms.GetComponents<IInternalMediator>())
+                {
+                    mediatorsFound = true;
+                    yield return mediator;
+                }
+                
+                if (mediatorsFound)//Stop traversal if mediators found
+                    break;
 
-            var parent = transform.parent;
-            return parent == null
-                ? Array.Empty<IInternalMediator>()
-                : parent.GetComponentsInParent<IInternalMediator>();
+                transforms = transforms.parent;
+            }
         }
     }
 }
