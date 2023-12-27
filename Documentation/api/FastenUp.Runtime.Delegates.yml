@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Delegates
+  commentId: N:FastenUp.Runtime.Delegates
+  id: FastenUp.Runtime.Delegates
+  children:
+  - FastenUp.Runtime.Delegates.OnBinderChanged
+  langs:
+  - csharp
+  - vb
+  name: FastenUp.Runtime.Delegates
+  nameWithType: FastenUp.Runtime.Delegates
+  fullName: FastenUp.Runtime.Delegates
+  type: Namespace
+  assemblies:
+  - FastenUp.Runtime
+references:
+- uid: FastenUp.Runtime.Delegates.OnBinderChanged
+  commentId: T:FastenUp.Runtime.Delegates.OnBinderChanged
+  parent: FastenUp.Runtime.Delegates
+  href: FastenUp.Runtime.Delegates.OnBinderChanged.html
+  name: OnBinderChanged
+  nameWithType: OnBinderChanged
+  fullName: FastenUp.Runtime.Delegates.OnBinderChanged
+- uid: FastenUp.Runtime.Delegates
+  commentId: N:FastenUp.Runtime.Delegates
+  href: FastenUp.html
+  name: FastenUp.Runtime.Delegates
+  nameWithType: FastenUp.Runtime.Delegates
+  fullName: FastenUp.Runtime.Delegates
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Delegates
+    name: Delegates
+    href: FastenUp.Runtime.Delegates.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Delegates
+    name: Delegates
+    href: FastenUp.Runtime.Delegates.html

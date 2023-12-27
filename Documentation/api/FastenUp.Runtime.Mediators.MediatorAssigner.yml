@@ -1,0 +1,389 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Mediators.MediatorAssigner
+  commentId: T:FastenUp.Runtime.Mediators.MediatorAssigner
+  id: MediatorAssigner
+  parent: FastenUp.Runtime.Mediators
+  children:
+  - FastenUp.Runtime.Mediators.MediatorAssigner.Assign``1(``0)
+  - FastenUp.Runtime.Mediators.MediatorAssigner.Bind(FastenUp.Runtime.Binders.IBinder)
+  - FastenUp.Runtime.Mediators.MediatorAssigner.Release
+  - FastenUp.Runtime.Mediators.MediatorAssigner.Unbind(FastenUp.Runtime.Binders.IBinder)
+  langs:
+  - csharp
+  - vb
+  name: MediatorAssigner
+  nameWithType: MediatorAssigner
+  fullName: FastenUp.Runtime.Mediators.MediatorAssigner
+  type: Class
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Mediators/MediatorAssigner.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: MediatorAssigner
+    path: ../Assets/FastenUp/Runtime/Mediators/MediatorAssigner.cs
+    startLine: 10
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Mediators
+  summary: Used to bind external <xref href="FastenUp.Runtime.Mediators.IMediator" data-throw-if-not-resolved="false"></xref> to the binders.
+  example: []
+  syntax:
+    content: 'public sealed class MediatorAssigner : MonoBehaviour, IInternalMediator'
+    content.vb: Public NotInheritable Class MediatorAssigner Inherits MonoBehaviour Implements IInternalMediator
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  implements:
+  - FastenUp.Runtime.Mediators.IInternalMediator
+- uid: FastenUp.Runtime.Mediators.MediatorAssigner.Assign``1(``0)
+  commentId: M:FastenUp.Runtime.Mediators.MediatorAssigner.Assign``1(``0)
+  id: Assign``1(``0)
+  parent: FastenUp.Runtime.Mediators.MediatorAssigner
+  langs:
+  - csharp
+  - vb
+  name: Assign<T>(T)
+  nameWithType: MediatorAssigner.Assign<T>(T)
+  fullName: FastenUp.Runtime.Mediators.MediatorAssigner.Assign<T>(T)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Mediators/MediatorAssigner.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: Assign
+    path: ../Assets/FastenUp/Runtime/Mediators/MediatorAssigner.cs
+    startLine: 21
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Mediators
+  summary: Binds external mediator to the binders.
+  example: []
+  syntax:
+    content: 'public void Assign<T>(T mediator) where T : IInternalMediator'
+    parameters:
+    - id: mediator
+      type: '{T}'
+      description: Object that implements <xref href="FastenUp.Runtime.Mediators.IMediator" data-throw-if-not-resolved="false"></xref> interface.
+    typeParameters:
+    - id: T
+      description: Type of the mediator.
+    content.vb: Public Sub Assign(Of T As IInternalMediator)(mediator As T)
+  overload: FastenUp.Runtime.Mediators.MediatorAssigner.Assign*
+  nameWithType.vb: MediatorAssigner.Assign(Of T)(T)
+  fullName.vb: FastenUp.Runtime.Mediators.MediatorAssigner.Assign(Of T)(T)
+  name.vb: Assign(Of T)(T)
+- uid: FastenUp.Runtime.Mediators.MediatorAssigner.Release
+  commentId: M:FastenUp.Runtime.Mediators.MediatorAssigner.Release
+  id: Release
+  parent: FastenUp.Runtime.Mediators.MediatorAssigner
+  langs:
+  - csharp
+  - vb
+  name: Release()
+  nameWithType: MediatorAssigner.Release()
+  fullName: FastenUp.Runtime.Mediators.MediatorAssigner.Release()
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Mediators/MediatorAssigner.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: Release
+    path: ../Assets/FastenUp/Runtime/Mediators/MediatorAssigner.cs
+    startLine: 42
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Mediators
+  summary: Unbinds all binders from the external mediator.
+  example: []
+  syntax:
+    content: public void Release()
+    content.vb: Public Sub Release()
+  overload: FastenUp.Runtime.Mediators.MediatorAssigner.Release*
+- uid: FastenUp.Runtime.Mediators.MediatorAssigner.Bind(FastenUp.Runtime.Binders.IBinder)
+  commentId: M:FastenUp.Runtime.Mediators.MediatorAssigner.Bind(FastenUp.Runtime.Binders.IBinder)
+  id: Bind(FastenUp.Runtime.Binders.IBinder)
+  parent: FastenUp.Runtime.Mediators.MediatorAssigner
+  langs:
+  - csharp
+  - vb
+  name: Bind(IBinder)
+  nameWithType: MediatorAssigner.Bind(IBinder)
+  fullName: FastenUp.Runtime.Mediators.MediatorAssigner.Bind(FastenUp.Runtime.Binders.IBinder)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Mediators/MediatorAssigner.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: Bind
+    path: ../Assets/FastenUp/Runtime/Mediators/MediatorAssigner.cs
+    startLine: 56
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Mediators
+  example: []
+  syntax:
+    content: public void Bind(IBinder binder)
+    parameters:
+    - id: binder
+      type: FastenUp.Runtime.Binders.IBinder
+    content.vb: Public Sub Bind(binder As IBinder)
+  overload: FastenUp.Runtime.Mediators.MediatorAssigner.Bind*
+  implements:
+  - FastenUp.Runtime.Mediators.IInternalMediator.Bind(FastenUp.Runtime.Binders.IBinder)
+- uid: FastenUp.Runtime.Mediators.MediatorAssigner.Unbind(FastenUp.Runtime.Binders.IBinder)
+  commentId: M:FastenUp.Runtime.Mediators.MediatorAssigner.Unbind(FastenUp.Runtime.Binders.IBinder)
+  id: Unbind(FastenUp.Runtime.Binders.IBinder)
+  parent: FastenUp.Runtime.Mediators.MediatorAssigner
+  langs:
+  - csharp
+  - vb
+  name: Unbind(IBinder)
+  nameWithType: MediatorAssigner.Unbind(IBinder)
+  fullName: FastenUp.Runtime.Mediators.MediatorAssigner.Unbind(FastenUp.Runtime.Binders.IBinder)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Mediators/MediatorAssigner.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: Unbind
+    path: ../Assets/FastenUp/Runtime/Mediators/MediatorAssigner.cs
+    startLine: 63
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Mediators
+  example: []
+  syntax:
+    content: public void Unbind(IBinder binder)
+    parameters:
+    - id: binder
+      type: FastenUp.Runtime.Binders.IBinder
+    content.vb: Public Sub Unbind(binder As IBinder)
+  overload: FastenUp.Runtime.Mediators.MediatorAssigner.Unbind*
+  implements:
+  - FastenUp.Runtime.Mediators.IInternalMediator.Unbind(FastenUp.Runtime.Binders.IBinder)
+references:
+- uid: FastenUp.Runtime.Mediators.IMediator
+  commentId: T:FastenUp.Runtime.Mediators.IMediator
+  href: FastenUp.Runtime.Mediators.IMediator.html
+  name: IMediator
+  nameWithType: IMediator
+  fullName: FastenUp.Runtime.Mediators.IMediator
+- uid: FastenUp.Runtime.Mediators
+  commentId: N:FastenUp.Runtime.Mediators
+  href: FastenUp.html
+  name: FastenUp.Runtime.Mediators
+  nameWithType: FastenUp.Runtime.Mediators
+  fullName: FastenUp.Runtime.Mediators
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Mediators
+    name: Mediators
+    href: FastenUp.Runtime.Mediators.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Mediators
+    name: Mediators
+    href: FastenUp.Runtime.Mediators.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: FastenUp.Runtime.Mediators.IInternalMediator
+  commentId: T:FastenUp.Runtime.Mediators.IInternalMediator
+  parent: FastenUp.Runtime.Mediators
+  href: FastenUp.Runtime.Mediators.IInternalMediator.html
+  name: IInternalMediator
+  nameWithType: IInternalMediator
+  fullName: FastenUp.Runtime.Mediators.IInternalMediator
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: FastenUp.Runtime.Mediators.MediatorAssigner.Assign*
+  commentId: Overload:FastenUp.Runtime.Mediators.MediatorAssigner.Assign
+  href: FastenUp.Runtime.Mediators.MediatorAssigner.html#FastenUp_Runtime_Mediators_MediatorAssigner_Assign__1___0_
+  name: Assign
+  nameWithType: MediatorAssigner.Assign
+  fullName: FastenUp.Runtime.Mediators.MediatorAssigner.Assign
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: FastenUp.Runtime.Mediators.MediatorAssigner.Release*
+  commentId: Overload:FastenUp.Runtime.Mediators.MediatorAssigner.Release
+  href: FastenUp.Runtime.Mediators.MediatorAssigner.html#FastenUp_Runtime_Mediators_MediatorAssigner_Release
+  name: Release
+  nameWithType: MediatorAssigner.Release
+  fullName: FastenUp.Runtime.Mediators.MediatorAssigner.Release
+- uid: FastenUp.Runtime.Mediators.MediatorAssigner.Bind*
+  commentId: Overload:FastenUp.Runtime.Mediators.MediatorAssigner.Bind
+  href: FastenUp.Runtime.Mediators.MediatorAssigner.html#FastenUp_Runtime_Mediators_MediatorAssigner_Bind_FastenUp_Runtime_Binders_IBinder_
+  name: Bind
+  nameWithType: MediatorAssigner.Bind
+  fullName: FastenUp.Runtime.Mediators.MediatorAssigner.Bind
+- uid: FastenUp.Runtime.Mediators.IInternalMediator.Bind(FastenUp.Runtime.Binders.IBinder)
+  commentId: M:FastenUp.Runtime.Mediators.IInternalMediator.Bind(FastenUp.Runtime.Binders.IBinder)
+  parent: FastenUp.Runtime.Mediators.IInternalMediator
+  href: FastenUp.Runtime.Mediators.IInternalMediator.html#FastenUp_Runtime_Mediators_IInternalMediator_Bind_FastenUp_Runtime_Binders_IBinder_
+  name: Bind(IBinder)
+  nameWithType: IInternalMediator.Bind(IBinder)
+  fullName: FastenUp.Runtime.Mediators.IInternalMediator.Bind(FastenUp.Runtime.Binders.IBinder)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Mediators.IInternalMediator.Bind(FastenUp.Runtime.Binders.IBinder)
+    name: Bind
+    href: FastenUp.Runtime.Mediators.IInternalMediator.html#FastenUp_Runtime_Mediators_IInternalMediator_Bind_FastenUp_Runtime_Binders_IBinder_
+  - name: (
+  - uid: FastenUp.Runtime.Binders.IBinder
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder.html
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Mediators.IInternalMediator.Bind(FastenUp.Runtime.Binders.IBinder)
+    name: Bind
+    href: FastenUp.Runtime.Mediators.IInternalMediator.html#FastenUp_Runtime_Mediators_IInternalMediator_Bind_FastenUp_Runtime_Binders_IBinder_
+  - name: (
+  - uid: FastenUp.Runtime.Binders.IBinder
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder.html
+  - name: )
+- uid: FastenUp.Runtime.Binders.IBinder
+  commentId: T:FastenUp.Runtime.Binders.IBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.IBinder.html
+  name: IBinder
+  nameWithType: IBinder
+  fullName: FastenUp.Runtime.Binders.IBinder
+- uid: FastenUp.Runtime.Binders
+  commentId: N:FastenUp.Runtime.Binders
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders
+  nameWithType: FastenUp.Runtime.Binders
+  fullName: FastenUp.Runtime.Binders
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+- uid: FastenUp.Runtime.Mediators.MediatorAssigner.Unbind*
+  commentId: Overload:FastenUp.Runtime.Mediators.MediatorAssigner.Unbind
+  href: FastenUp.Runtime.Mediators.MediatorAssigner.html#FastenUp_Runtime_Mediators_MediatorAssigner_Unbind_FastenUp_Runtime_Binders_IBinder_
+  name: Unbind
+  nameWithType: MediatorAssigner.Unbind
+  fullName: FastenUp.Runtime.Mediators.MediatorAssigner.Unbind
+- uid: FastenUp.Runtime.Mediators.IInternalMediator.Unbind(FastenUp.Runtime.Binders.IBinder)
+  commentId: M:FastenUp.Runtime.Mediators.IInternalMediator.Unbind(FastenUp.Runtime.Binders.IBinder)
+  parent: FastenUp.Runtime.Mediators.IInternalMediator
+  href: FastenUp.Runtime.Mediators.IInternalMediator.html#FastenUp_Runtime_Mediators_IInternalMediator_Unbind_FastenUp_Runtime_Binders_IBinder_
+  name: Unbind(IBinder)
+  nameWithType: IInternalMediator.Unbind(IBinder)
+  fullName: FastenUp.Runtime.Mediators.IInternalMediator.Unbind(FastenUp.Runtime.Binders.IBinder)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Mediators.IInternalMediator.Unbind(FastenUp.Runtime.Binders.IBinder)
+    name: Unbind
+    href: FastenUp.Runtime.Mediators.IInternalMediator.html#FastenUp_Runtime_Mediators_IInternalMediator_Unbind_FastenUp_Runtime_Binders_IBinder_
+  - name: (
+  - uid: FastenUp.Runtime.Binders.IBinder
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder.html
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Mediators.IInternalMediator.Unbind(FastenUp.Runtime.Binders.IBinder)
+    name: Unbind
+    href: FastenUp.Runtime.Mediators.IInternalMediator.html#FastenUp_Runtime_Mediators_IInternalMediator_Unbind_FastenUp_Runtime_Binders_IBinder_
+  - name: (
+  - uid: FastenUp.Runtime.Binders.IBinder
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder.html
+  - name: )

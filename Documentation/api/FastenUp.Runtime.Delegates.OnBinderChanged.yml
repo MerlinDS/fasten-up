@@ -1,0 +1,99 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Delegates.OnBinderChanged
+  commentId: T:FastenUp.Runtime.Delegates.OnBinderChanged
+  id: OnBinderChanged
+  parent: FastenUp.Runtime.Delegates
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: OnBinderChanged
+  nameWithType: OnBinderChanged
+  fullName: FastenUp.Runtime.Delegates.OnBinderChanged
+  type: Delegate
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Delegates/OnBinderChanged.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: OnBinderChanged
+    path: ../Assets/FastenUp/Runtime/Delegates/OnBinderChanged.cs
+    startLine: 4
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Delegates
+  syntax:
+    content: public delegate void OnBinderChanged(IBinder binder)
+    parameters:
+    - id: binder
+      type: FastenUp.Runtime.Binders.IBinder
+    content.vb: Public Delegate Sub OnBinderChanged(binder As IBinder)
+references:
+- uid: FastenUp.Runtime.Delegates
+  commentId: N:FastenUp.Runtime.Delegates
+  href: FastenUp.html
+  name: FastenUp.Runtime.Delegates
+  nameWithType: FastenUp.Runtime.Delegates
+  fullName: FastenUp.Runtime.Delegates
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Delegates
+    name: Delegates
+    href: FastenUp.Runtime.Delegates.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Delegates
+    name: Delegates
+    href: FastenUp.Runtime.Delegates.html
+- uid: FastenUp.Runtime.Binders.IBinder
+  commentId: T:FastenUp.Runtime.Binders.IBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.IBinder.html
+  name: IBinder
+  nameWithType: IBinder
+  fullName: FastenUp.Runtime.Binders.IBinder
+- uid: FastenUp.Runtime.Binders
+  commentId: N:FastenUp.Runtime.Binders
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders
+  nameWithType: FastenUp.Runtime.Binders
+  fullName: FastenUp.Runtime.Binders
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html

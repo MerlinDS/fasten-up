@@ -1,0 +1,301 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Bindables.BindableAction`1
+  commentId: T:FastenUp.Runtime.Bindables.BindableAction`1
+  id: BindableAction`1
+  parent: FastenUp.Runtime.Bindables
+  children:
+  - FastenUp.Runtime.Bindables.BindableAction`1.Invoke(`0)
+  langs:
+  - csharp
+  - vb
+  name: BindableAction<T>
+  nameWithType: BindableAction<T>
+  fullName: FastenUp.Runtime.Bindables.BindableAction<T>
+  type: Class
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BindableAction.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: BindableAction
+    path: ../Assets/FastenUp/Runtime/Bindables/BindableAction.cs
+    startLine: 20
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  summary: Bindable action that provides the ability to invoke the <xref href="UnityEngine.Events.UnityEvent%601" data-throw-if-not-resolved="false"></xref> in the bind Unity components.
+  example: []
+  syntax:
+    content: 'public sealed class BindableAction<T> : BaseBindableAction<UnityEvent<T>>, IBindableAction<UnityEvent<T>>, IBindable'
+    typeParameters:
+    - id: T
+    content.vb: Public NotInheritable Class BindableAction(Of T) Inherits BaseBindableAction(Of UnityEvent(Of T)) Implements IBindableAction(Of UnityEvent(Of T)), IBindable
+  inheritance:
+  - System.Object
+  - FastenUp.Runtime.Bindables.BaseBindableAction{UnityEngine.Events.UnityEvent{{T}}}
+  implements:
+  - FastenUp.Runtime.Bindables.IBindableAction{UnityEngine.Events.UnityEvent{{T}}}
+  - FastenUp.Runtime.Bindables.IBindable
+  nameWithType.vb: BindableAction(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.BindableAction(Of T)
+  name.vb: BindableAction(Of T)
+- uid: FastenUp.Runtime.Bindables.BindableAction`1.Invoke(`0)
+  commentId: M:FastenUp.Runtime.Bindables.BindableAction`1.Invoke(`0)
+  id: Invoke(`0)
+  parent: FastenUp.Runtime.Bindables.BindableAction`1
+  langs:
+  - csharp
+  - vb
+  name: Invoke(T)
+  nameWithType: BindableAction<T>.Invoke(T)
+  fullName: FastenUp.Runtime.Bindables.BindableAction<T>.Invoke(T)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BindableAction.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: Invoke
+    path: ../Assets/FastenUp/Runtime/Bindables/BindableAction.cs
+    startLine: 23
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  example: []
+  syntax:
+    content: public void Invoke(T arg)
+    parameters:
+    - id: arg
+      type: '{T}'
+    content.vb: Public Sub Invoke(arg As T)
+  overload: FastenUp.Runtime.Bindables.BindableAction`1.Invoke*
+  nameWithType.vb: BindableAction(Of T).Invoke(T)
+  fullName.vb: FastenUp.Runtime.Bindables.BindableAction(Of T).Invoke(T)
+references:
+- uid: UnityEngine.Events.UnityEvent`1
+  commentId: T:UnityEngine.Events.UnityEvent`1
+  isExternal: true
+  name: UnityEvent<T0>
+  nameWithType: UnityEvent<T0>
+  fullName: UnityEngine.Events.UnityEvent<T0>
+  nameWithType.vb: UnityEvent(Of T0)
+  fullName.vb: UnityEngine.Events.UnityEvent(Of T0)
+  name.vb: UnityEvent(Of T0)
+  spec.csharp:
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: <
+  - name: T0
+  - name: '>'
+  spec.vb:
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T0
+  - name: )
+- uid: FastenUp.Runtime.Bindables
+  commentId: N:FastenUp.Runtime.Bindables
+  href: FastenUp.html
+  name: FastenUp.Runtime.Bindables
+  nameWithType: FastenUp.Runtime.Bindables
+  fullName: FastenUp.Runtime.Bindables
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Bindables
+    name: Bindables
+    href: FastenUp.Runtime.Bindables.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Bindables
+    name: Bindables
+    href: FastenUp.Runtime.Bindables.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: FastenUp.Runtime.Bindables.BaseBindableAction{UnityEngine.Events.UnityEvent{{T}}}
+  commentId: T:FastenUp.Runtime.Bindables.BaseBindableAction{UnityEngine.Events.UnityEvent{`0}}
+  parent: FastenUp.Runtime.Bindables
+  definition: FastenUp.Runtime.Bindables.BaseBindableAction`1
+  href: FastenUp.Runtime.Bindables.BaseBindableAction-1.html
+  name: BaseBindableAction<UnityEvent<T>>
+  nameWithType: BaseBindableAction<UnityEvent<T>>
+  fullName: FastenUp.Runtime.Bindables.BaseBindableAction<UnityEngine.Events.UnityEvent<T>>
+  nameWithType.vb: BaseBindableAction(Of UnityEvent(Of T))
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableAction(Of UnityEngine.Events.UnityEvent(Of T))
+  name.vb: BaseBindableAction(Of UnityEvent(Of T))
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableAction`1
+    name: BaseBindableAction
+    href: FastenUp.Runtime.Bindables.BaseBindableAction-1.html
+  - name: <
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableAction`1
+    name: BaseBindableAction
+    href: FastenUp.Runtime.Bindables.BaseBindableAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindableAction{UnityEngine.Events.UnityEvent{{T}}}
+  commentId: T:FastenUp.Runtime.Bindables.IBindableAction{UnityEngine.Events.UnityEvent{`0}}
+  parent: FastenUp.Runtime.Bindables
+  definition: FastenUp.Runtime.Bindables.IBindableAction`1
+  href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  name: IBindableAction<UnityEvent<T>>
+  nameWithType: IBindableAction<UnityEvent<T>>
+  fullName: FastenUp.Runtime.Bindables.IBindableAction<UnityEngine.Events.UnityEvent<T>>
+  nameWithType.vb: IBindableAction(Of UnityEvent(Of T))
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableAction(Of UnityEngine.Events.UnityEvent(Of T))
+  name.vb: IBindableAction(Of UnityEvent(Of T))
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindableAction`1
+    name: IBindableAction
+    href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  - name: <
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindableAction`1
+    name: IBindableAction
+    href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindable
+  commentId: T:FastenUp.Runtime.Bindables.IBindable
+  parent: FastenUp.Runtime.Bindables
+  href: FastenUp.Runtime.Bindables.IBindable.html
+  name: IBindable
+  nameWithType: IBindable
+  fullName: FastenUp.Runtime.Bindables.IBindable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: FastenUp.Runtime.Bindables.BaseBindableAction`1
+  commentId: T:FastenUp.Runtime.Bindables.BaseBindableAction`1
+  href: FastenUp.Runtime.Bindables.BaseBindableAction-1.html
+  name: BaseBindableAction<T>
+  nameWithType: BaseBindableAction<T>
+  fullName: FastenUp.Runtime.Bindables.BaseBindableAction<T>
+  nameWithType.vb: BaseBindableAction(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableAction(Of T)
+  name.vb: BaseBindableAction(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableAction`1
+    name: BaseBindableAction
+    href: FastenUp.Runtime.Bindables.BaseBindableAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableAction`1
+    name: BaseBindableAction
+    href: FastenUp.Runtime.Bindables.BaseBindableAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindableAction`1
+  commentId: T:FastenUp.Runtime.Bindables.IBindableAction`1
+  href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  name: IBindableAction<T>
+  nameWithType: IBindableAction<T>
+  fullName: FastenUp.Runtime.Bindables.IBindableAction<T>
+  nameWithType.vb: IBindableAction(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableAction(Of T)
+  name.vb: IBindableAction(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindableAction`1
+    name: IBindableAction
+    href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindableAction`1
+    name: IBindableAction
+    href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.BindableAction`1.Invoke*
+  commentId: Overload:FastenUp.Runtime.Bindables.BindableAction`1.Invoke
+  href: FastenUp.Runtime.Bindables.BindableAction-1.html#FastenUp_Runtime_Bindables_BindableAction_1_Invoke__0_
+  name: Invoke
+  nameWithType: BindableAction<T>.Invoke
+  fullName: FastenUp.Runtime.Bindables.BindableAction<T>.Invoke
+  nameWithType.vb: BindableAction(Of T).Invoke
+  fullName.vb: FastenUp.Runtime.Bindables.BindableAction(Of T).Invoke
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

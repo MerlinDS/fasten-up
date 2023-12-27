@@ -1,0 +1,244 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Bindables.BindableRef`1
+  commentId: T:FastenUp.Runtime.Bindables.BindableRef`1
+  id: BindableRef`1
+  parent: FastenUp.Runtime.Bindables
+  children:
+  - FastenUp.Runtime.Bindables.BindableRef`1.OnRefChanged
+  - FastenUp.Runtime.Bindables.BindableRef`1.Value
+  langs:
+  - csharp
+  - vb
+  name: BindableRef<T>
+  nameWithType: BindableRef<T>
+  fullName: FastenUp.Runtime.Bindables.BindableRef<T>
+  type: Class
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BindableRef.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: BindableRef
+    path: ../Assets/FastenUp/Runtime/Bindables/BindableRef.cs
+    startLine: 9
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  summary: >-
+    Bindable reference is used to bind the reference of the specific type to the mediator.
+
+    It can be used, for example, to bind the reference of one mediator to another mediator.
+  example: []
+  syntax:
+    content: 'public sealed class BindableRef<T> : IBindableRef<T>, IBindable where T : class'
+    typeParameters:
+    - id: T
+      description: The type of the referenced object.
+    content.vb: Public NotInheritable Class BindableRef(Of T As Class) Implements IBindableRef(Of T), IBindable
+  inheritance:
+  - System.Object
+  implements:
+  - FastenUp.Runtime.Bindables.IBindableRef{{T}}
+  - FastenUp.Runtime.Bindables.IBindable
+  nameWithType.vb: BindableRef(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.BindableRef(Of T)
+  name.vb: BindableRef(Of T)
+- uid: FastenUp.Runtime.Bindables.BindableRef`1.OnRefChanged
+  commentId: E:FastenUp.Runtime.Bindables.BindableRef`1.OnRefChanged
+  id: OnRefChanged
+  parent: FastenUp.Runtime.Bindables.BindableRef`1
+  langs:
+  - csharp
+  - vb
+  name: OnRefChanged
+  nameWithType: BindableRef<T>.OnRefChanged
+  fullName: FastenUp.Runtime.Bindables.BindableRef<T>.OnRefChanged
+  type: Event
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BindableRef.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: OnRefChanged
+    path: ../Assets/FastenUp/Runtime/Bindables/BindableRef.cs
+    startLine: 15
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  summary: This event will be invoked when the referenced object is changed.
+  example: []
+  syntax:
+    content: public event Action OnRefChanged
+    return:
+      type: System.Action
+    content.vb: Public Event OnRefChanged As Action
+  nameWithType.vb: BindableRef(Of T).OnRefChanged
+  fullName.vb: FastenUp.Runtime.Bindables.BindableRef(Of T).OnRefChanged
+- uid: FastenUp.Runtime.Bindables.BindableRef`1.Value
+  commentId: P:FastenUp.Runtime.Bindables.BindableRef`1.Value
+  id: Value
+  parent: FastenUp.Runtime.Bindables.BindableRef`1
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: BindableRef<T>.Value
+  fullName: FastenUp.Runtime.Bindables.BindableRef<T>.Value
+  type: Property
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BindableRef.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: Value
+    path: ../Assets/FastenUp/Runtime/Bindables/BindableRef.cs
+    startLine: 20
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  summary: The referenced object.
+  example: []
+  syntax:
+    content: public T Value { get; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: Public Property Value As T
+  overload: FastenUp.Runtime.Bindables.BindableRef`1.Value*
+  nameWithType.vb: BindableRef(Of T).Value
+  fullName.vb: FastenUp.Runtime.Bindables.BindableRef(Of T).Value
+references:
+- uid: FastenUp.Runtime.Bindables
+  commentId: N:FastenUp.Runtime.Bindables
+  href: FastenUp.html
+  name: FastenUp.Runtime.Bindables
+  nameWithType: FastenUp.Runtime.Bindables
+  fullName: FastenUp.Runtime.Bindables
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Bindables
+    name: Bindables
+    href: FastenUp.Runtime.Bindables.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Bindables
+    name: Bindables
+    href: FastenUp.Runtime.Bindables.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: FastenUp.Runtime.Bindables.IBindableRef{{T}}
+  commentId: T:FastenUp.Runtime.Bindables.IBindableRef{`0}
+  parent: FastenUp.Runtime.Bindables
+  definition: FastenUp.Runtime.Bindables.IBindableRef`1
+  href: FastenUp.Runtime.Bindables.IBindableRef-1.html
+  name: IBindableRef<T>
+  nameWithType: IBindableRef<T>
+  fullName: FastenUp.Runtime.Bindables.IBindableRef<T>
+  nameWithType.vb: IBindableRef(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableRef(Of T)
+  name.vb: IBindableRef(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindableRef`1
+    name: IBindableRef
+    href: FastenUp.Runtime.Bindables.IBindableRef-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindableRef`1
+    name: IBindableRef
+    href: FastenUp.Runtime.Bindables.IBindableRef-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindable
+  commentId: T:FastenUp.Runtime.Bindables.IBindable
+  parent: FastenUp.Runtime.Bindables
+  href: FastenUp.Runtime.Bindables.IBindable.html
+  name: IBindable
+  nameWithType: IBindable
+  fullName: FastenUp.Runtime.Bindables.IBindable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: FastenUp.Runtime.Bindables.IBindableRef`1
+  commentId: T:FastenUp.Runtime.Bindables.IBindableRef`1
+  href: FastenUp.Runtime.Bindables.IBindableRef-1.html
+  name: IBindableRef<T>
+  nameWithType: IBindableRef<T>
+  fullName: FastenUp.Runtime.Bindables.IBindableRef<T>
+  nameWithType.vb: IBindableRef(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableRef(Of T)
+  name.vb: IBindableRef(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindableRef`1
+    name: IBindableRef
+    href: FastenUp.Runtime.Bindables.IBindableRef-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindableRef`1
+    name: IBindableRef
+    href: FastenUp.Runtime.Bindables.IBindableRef-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Action
+  commentId: T:System.Action
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action
+  name: Action
+  nameWithType: Action
+  fullName: System.Action
+- uid: FastenUp.Runtime.Bindables.BindableRef`1.Value*
+  commentId: Overload:FastenUp.Runtime.Bindables.BindableRef`1.Value
+  href: FastenUp.Runtime.Bindables.BindableRef-1.html#FastenUp_Runtime_Bindables_BindableRef_1_Value
+  name: Value
+  nameWithType: BindableRef<T>.Value
+  fullName: FastenUp.Runtime.Bindables.BindableRef<T>.Value
+  nameWithType.vb: BindableRef(Of T).Value
+  fullName.vb: FastenUp.Runtime.Bindables.BindableRef(Of T).Value
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

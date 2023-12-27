@@ -1,0 +1,120 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Mediators.IMediator
+  commentId: T:FastenUp.Runtime.Mediators.IMediator
+  id: IMediator
+  parent: FastenUp.Runtime.Mediators
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IMediator
+  nameWithType: IMediator
+  fullName: FastenUp.Runtime.Mediators.IMediator
+  type: Interface
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Mediators/IMediator.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: IMediator
+    path: ../Assets/FastenUp/Runtime/Mediators/IMediator.cs
+    startLine: 28
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Mediators
+  summary: >-
+    The IMediator interface is the base interface for ViewModels.
+
+    It is a marker for Binders that the class contains bindable properties.
+  remarks: For the sake of code generation, the implementation of this interface must marked as partial.
+  example:
+  - >-
+    This example shows how to implement a mediator that can be used to bind values.
+
+    <pre><code class="lang-csharp">public partial class MyMediator : MonoBehaviour, IMediator
+
+    {
+        public Bindable{string} Text = new ();
+        public BindableEvent OnClick = new ();
+
+        private void Awake()
+        {
+            Text.Value = "Hello World!";
+            OnClick.AddListener(() =&gt; Debug.Log("Clicked!"));
+        }
+    }</code></pre>
+  syntax:
+    content: public interface IMediator
+    content.vb: Public Interface IMediator
+  seealso:
+  - linkId: FastenUp.Runtime.Binders.IBinder
+    commentId: T:FastenUp.Runtime.Binders.IBinder
+references:
+- uid: FastenUp.Runtime.Binders.IBinder
+  commentId: T:FastenUp.Runtime.Binders.IBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.IBinder.html
+  name: IBinder
+  nameWithType: IBinder
+  fullName: FastenUp.Runtime.Binders.IBinder
+- uid: FastenUp.Runtime.Mediators
+  commentId: N:FastenUp.Runtime.Mediators
+  href: FastenUp.html
+  name: FastenUp.Runtime.Mediators
+  nameWithType: FastenUp.Runtime.Mediators
+  fullName: FastenUp.Runtime.Mediators
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Mediators
+    name: Mediators
+    href: FastenUp.Runtime.Mediators.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Mediators
+    name: Mediators
+    href: FastenUp.Runtime.Mediators.html
+- uid: FastenUp.Runtime.Binders
+  commentId: N:FastenUp.Runtime.Binders
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders
+  nameWithType: FastenUp.Runtime.Binders
+  fullName: FastenUp.Runtime.Binders
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html

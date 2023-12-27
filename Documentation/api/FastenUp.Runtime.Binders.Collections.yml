@@ -1,0 +1,49 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Binders.Collections
+  commentId: N:FastenUp.Runtime.Binders.Collections
+  id: FastenUp.Runtime.Binders.Collections
+  children:
+  - FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+  - FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder
+  langs:
+  - csharp
+  - vb
+  name: FastenUp.Runtime.Binders.Collections
+  nameWithType: FastenUp.Runtime.Binders.Collections
+  fullName: FastenUp.Runtime.Binders.Collections
+  type: Namespace
+  assemblies:
+  - FastenUp.Runtime
+references:
+- uid: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder
+  commentId: T:FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder
+  href: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.html
+  name: MediatorCollectionBinder
+  nameWithType: MediatorCollectionBinder
+  fullName: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder
+- uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+  commentId: T:FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+  href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html
+  name: ICollectionBinder<T>
+  nameWithType: ICollectionBinder<T>
+  fullName: FastenUp.Runtime.Binders.Collections.ICollectionBinder<T>
+  nameWithType.vb: ICollectionBinder(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.Collections.ICollectionBinder(Of T)
+  name.vb: ICollectionBinder(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+    name: ICollectionBinder
+    href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+    name: ICollectionBinder
+    href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

@@ -1,0 +1,143 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Binders.IValueProvider`1
+  commentId: T:FastenUp.Runtime.Binders.IValueProvider`1
+  id: IValueProvider`1
+  parent: FastenUp.Runtime.Binders
+  children:
+  - FastenUp.Runtime.Binders.IValueProvider`1.GetValue
+  langs:
+  - csharp
+  - vb
+  name: IValueProvider<T>
+  nameWithType: IValueProvider<T>
+  fullName: FastenUp.Runtime.Binders.IValueProvider<T>
+  type: Interface
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/IValueProvider.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: IValueProvider
+    path: ../Assets/FastenUp/Runtime/Binders/IValueProvider.cs
+    startLine: 6
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders
+  summary: Binder that can provide a value.
+  example: []
+  syntax:
+    content: 'public interface IValueProvider<T> : IBinder<T>, IBinder'
+    typeParameters:
+    - id: T
+      description: Type of the value that will be provided by the binder component
+    content.vb: Public Interface IValueProvider(Of T) Inherits IBinder(Of T), IBinder
+  inheritedMembers:
+  - FastenUp.Runtime.Binders.IBinder.Name
+  - FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+  nameWithType.vb: IValueProvider(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.IValueProvider(Of T)
+  name.vb: IValueProvider(Of T)
+- uid: FastenUp.Runtime.Binders.IValueProvider`1.GetValue
+  commentId: M:FastenUp.Runtime.Binders.IValueProvider`1.GetValue
+  id: GetValue
+  parent: FastenUp.Runtime.Binders.IValueProvider`1
+  langs:
+  - csharp
+  - vb
+  name: GetValue()
+  nameWithType: IValueProvider<T>.GetValue()
+  fullName: FastenUp.Runtime.Binders.IValueProvider<T>.GetValue()
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/IValueProvider.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: GetValue
+    path: ../Assets/FastenUp/Runtime/Binders/IValueProvider.cs
+    startLine: 12
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders
+  summary: Gets the value from the binder.
+  example: []
+  syntax:
+    content: T GetValue()
+    return:
+      type: '{T}'
+      description: The value that was provided by the binder.
+    content.vb: Function GetValue() As T
+  overload: FastenUp.Runtime.Binders.IValueProvider`1.GetValue*
+  nameWithType.vb: IValueProvider(Of T).GetValue()
+  fullName.vb: FastenUp.Runtime.Binders.IValueProvider(Of T).GetValue()
+references:
+- uid: FastenUp.Runtime.Binders
+  commentId: N:FastenUp.Runtime.Binders
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders
+  nameWithType: FastenUp.Runtime.Binders
+  fullName: FastenUp.Runtime.Binders
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+- uid: FastenUp.Runtime.Binders.IBinder.Name
+  commentId: P:FastenUp.Runtime.Binders.IBinder.Name
+  parent: FastenUp.Runtime.Binders.IBinder
+  href: FastenUp.Runtime.Binders.IBinder.html#FastenUp_Runtime_Binders_IBinder_Name
+  name: Name
+  nameWithType: IBinder.Name
+  fullName: FastenUp.Runtime.Binders.IBinder.Name
+- uid: FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+  commentId: E:FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+  parent: FastenUp.Runtime.Binders.IBinder
+  href: FastenUp.Runtime.Binders.IBinder.html#FastenUp_Runtime_Binders_IBinder_OnBinderChanged
+  name: OnBinderChanged
+  nameWithType: IBinder.OnBinderChanged
+  fullName: FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+- uid: FastenUp.Runtime.Binders.IBinder
+  commentId: T:FastenUp.Runtime.Binders.IBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.IBinder.html
+  name: IBinder
+  nameWithType: IBinder
+  fullName: FastenUp.Runtime.Binders.IBinder
+- uid: FastenUp.Runtime.Binders.IValueProvider`1.GetValue*
+  commentId: Overload:FastenUp.Runtime.Binders.IValueProvider`1.GetValue
+  href: FastenUp.Runtime.Binders.IValueProvider-1.html#FastenUp_Runtime_Binders_IValueProvider_1_GetValue
+  name: GetValue
+  nameWithType: IValueProvider<T>.GetValue
+  fullName: FastenUp.Runtime.Binders.IValueProvider<T>.GetValue
+  nameWithType.vb: IValueProvider(Of T).GetValue
+  fullName.vb: FastenUp.Runtime.Binders.IValueProvider(Of T).GetValue
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

@@ -1,0 +1,68 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Mediators
+  commentId: N:FastenUp.Runtime.Mediators
+  id: FastenUp.Runtime.Mediators
+  children:
+  - FastenUp.Runtime.Mediators.IInternalMediator
+  - FastenUp.Runtime.Mediators.IMediator
+  - FastenUp.Runtime.Mediators.MediatorAssigner
+  langs:
+  - csharp
+  - vb
+  name: FastenUp.Runtime.Mediators
+  nameWithType: FastenUp.Runtime.Mediators
+  fullName: FastenUp.Runtime.Mediators
+  type: Namespace
+  assemblies:
+  - FastenUp.Runtime
+references:
+- uid: FastenUp.Runtime.Mediators.IInternalMediator
+  commentId: T:FastenUp.Runtime.Mediators.IInternalMediator
+  parent: FastenUp.Runtime.Mediators
+  href: FastenUp.Runtime.Mediators.IInternalMediator.html
+  name: IInternalMediator
+  nameWithType: IInternalMediator
+  fullName: FastenUp.Runtime.Mediators.IInternalMediator
+- uid: FastenUp.Runtime.Mediators.MediatorAssigner
+  commentId: T:FastenUp.Runtime.Mediators.MediatorAssigner
+  href: FastenUp.Runtime.Mediators.MediatorAssigner.html
+  name: MediatorAssigner
+  nameWithType: MediatorAssigner
+  fullName: FastenUp.Runtime.Mediators.MediatorAssigner
+- uid: FastenUp.Runtime.Mediators.IMediator
+  commentId: T:FastenUp.Runtime.Mediators.IMediator
+  href: FastenUp.Runtime.Mediators.IMediator.html
+  name: IMediator
+  nameWithType: IMediator
+  fullName: FastenUp.Runtime.Mediators.IMediator
+- uid: FastenUp.Runtime.Mediators
+  commentId: N:FastenUp.Runtime.Mediators
+  href: FastenUp.html
+  name: FastenUp.Runtime.Mediators
+  nameWithType: FastenUp.Runtime.Mediators
+  fullName: FastenUp.Runtime.Mediators
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Mediators
+    name: Mediators
+    href: FastenUp.Runtime.Mediators.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Mediators
+    name: Mediators
+    href: FastenUp.Runtime.Mediators.html

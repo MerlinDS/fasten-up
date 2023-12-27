@@ -1,0 +1,406 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Binders.References.MediatorRefBinder
+  commentId: T:FastenUp.Runtime.Binders.References.MediatorRefBinder
+  id: MediatorRefBinder
+  parent: FastenUp.Runtime.Binders.References
+  children:
+  - FastenUp.Runtime.Binders.References.MediatorRefBinder.IncludeOwnGameObjectInFind
+  langs:
+  - csharp
+  - vb
+  name: MediatorRefBinder
+  nameWithType: MediatorRefBinder
+  fullName: FastenUp.Runtime.Binders.References.MediatorRefBinder
+  type: Class
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/References/MediatorRefBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: MediatorRefBinder
+    path: ../Assets/FastenUp/Runtime/Binders/References/MediatorRefBinder.cs
+    startLine: 9
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.References
+  summary: Binds object references of type <xref href="FastenUp.Runtime.Mediators.IMediator" data-throw-if-not-resolved="false"></xref> to a parent <xref href="FastenUp.Runtime.Mediators.IMediator" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: >-
+      [AddComponentMenu("UI/Fasten Up/References/Mediator Reference Binder", 0)]
+
+      public sealed class MediatorRefBinder : BaseRefBinder<IMediator>, IRefBinder, IBinder
+    content.vb: >-
+      <AddComponentMenu("UI/Fasten Up/References/Mediator Reference Binder", 0)>
+
+      Public NotInheritable Class MediatorRefBinder Inherits BaseRefBinder(Of IMediator) Implements IRefBinder, IBinder
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - FastenUp.Runtime.Binders.BaseBinder
+  - FastenUp.Runtime.Binders.References.BaseRefBinder{FastenUp.Runtime.Mediators.IMediator}
+  implements:
+  - FastenUp.Runtime.Binders.References.IRefBinder
+  - FastenUp.Runtime.Binders.IBinder
+  inheritedMembers:
+  - FastenUp.Runtime.Binders.References.BaseRefBinder{FastenUp.Runtime.Mediators.IMediator}.TryGetReference``1({T}@)
+  - FastenUp.Runtime.Binders.BaseBinder.Name
+  - FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  attributes:
+  - type: UnityEngine.AddComponentMenu
+    ctor: UnityEngine.AddComponentMenu.#ctor(System.String,System.Int32)
+    arguments:
+    - type: System.String
+      value: UI/Fasten Up/References/Mediator Reference Binder
+    - type: System.Int32
+      value: 0
+- uid: FastenUp.Runtime.Binders.References.MediatorRefBinder.IncludeOwnGameObjectInFind
+  commentId: P:FastenUp.Runtime.Binders.References.MediatorRefBinder.IncludeOwnGameObjectInFind
+  id: IncludeOwnGameObjectInFind
+  parent: FastenUp.Runtime.Binders.References.MediatorRefBinder
+  langs:
+  - csharp
+  - vb
+  name: IncludeOwnGameObjectInFind
+  nameWithType: MediatorRefBinder.IncludeOwnGameObjectInFind
+  fullName: FastenUp.Runtime.Binders.References.MediatorRefBinder.IncludeOwnGameObjectInFind
+  type: Property
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/References/MediatorRefBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: IncludeOwnGameObjectInFind
+    path: ../Assets/FastenUp/Runtime/Binders/References/MediatorRefBinder.cs
+    startLine: 14
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.References
+  summary: >-
+    Checks if game object of this binder should be included in search for <xref href="FastenUp.Runtime.Mediators.IMediator" data-throw-if-not-resolved="false"></xref>.
+
+    True by default.
+  remarks: To prevent search for <xref href="FastenUp.Runtime.Mediators.IMediator" data-throw-if-not-resolved="false"></xref> in game object of this binder, override this property and return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+  example: []
+  syntax:
+    content: protected override bool IncludeOwnGameObjectInFind { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Protected Overrides ReadOnly Property IncludeOwnGameObjectInFind As Boolean
+  overridden: FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+  overload: FastenUp.Runtime.Binders.References.MediatorRefBinder.IncludeOwnGameObjectInFind*
+references:
+- uid: FastenUp.Runtime.Mediators.IMediator
+  commentId: T:FastenUp.Runtime.Mediators.IMediator
+  href: FastenUp.Runtime.Mediators.IMediator.html
+  name: IMediator
+  nameWithType: IMediator
+  fullName: FastenUp.Runtime.Mediators.IMediator
+- uid: FastenUp.Runtime.Binders.References
+  commentId: N:FastenUp.Runtime.Binders.References
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders.References
+  nameWithType: FastenUp.Runtime.Binders.References
+  fullName: FastenUp.Runtime.Binders.References
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.References
+    name: References
+    href: FastenUp.Runtime.Binders.References.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.References
+    name: References
+    href: FastenUp.Runtime.Binders.References.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: FastenUp.Runtime.Binders.BaseBinder
+  commentId: T:FastenUp.Runtime.Binders.BaseBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.BaseBinder.html
+  name: BaseBinder
+  nameWithType: BaseBinder
+  fullName: FastenUp.Runtime.Binders.BaseBinder
+- uid: FastenUp.Runtime.Binders.References.BaseRefBinder{FastenUp.Runtime.Mediators.IMediator}
+  commentId: T:FastenUp.Runtime.Binders.References.BaseRefBinder{FastenUp.Runtime.Mediators.IMediator}
+  parent: FastenUp.Runtime.Binders.References
+  definition: FastenUp.Runtime.Binders.References.BaseRefBinder`1
+  href: FastenUp.Runtime.Binders.References.BaseRefBinder-1.html
+  name: BaseRefBinder<IMediator>
+  nameWithType: BaseRefBinder<IMediator>
+  fullName: FastenUp.Runtime.Binders.References.BaseRefBinder<FastenUp.Runtime.Mediators.IMediator>
+  nameWithType.vb: BaseRefBinder(Of IMediator)
+  fullName.vb: FastenUp.Runtime.Binders.References.BaseRefBinder(Of FastenUp.Runtime.Mediators.IMediator)
+  name.vb: BaseRefBinder(Of IMediator)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.References.BaseRefBinder`1
+    name: BaseRefBinder
+    href: FastenUp.Runtime.Binders.References.BaseRefBinder-1.html
+  - name: <
+  - uid: FastenUp.Runtime.Mediators.IMediator
+    name: IMediator
+    href: FastenUp.Runtime.Mediators.IMediator.html
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.References.BaseRefBinder`1
+    name: BaseRefBinder
+    href: FastenUp.Runtime.Binders.References.BaseRefBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: FastenUp.Runtime.Mediators.IMediator
+    name: IMediator
+    href: FastenUp.Runtime.Mediators.IMediator.html
+  - name: )
+- uid: FastenUp.Runtime.Binders.References.IRefBinder
+  commentId: T:FastenUp.Runtime.Binders.References.IRefBinder
+  parent: FastenUp.Runtime.Binders.References
+  href: FastenUp.Runtime.Binders.References.IRefBinder.html
+  name: IRefBinder
+  nameWithType: IRefBinder
+  fullName: FastenUp.Runtime.Binders.References.IRefBinder
+- uid: FastenUp.Runtime.Binders.IBinder
+  commentId: T:FastenUp.Runtime.Binders.IBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.IBinder.html
+  name: IBinder
+  nameWithType: IBinder
+  fullName: FastenUp.Runtime.Binders.IBinder
+- uid: FastenUp.Runtime.Binders.References.BaseRefBinder{FastenUp.Runtime.Mediators.IMediator}.TryGetReference``1({T}@)
+  commentId: M:FastenUp.Runtime.Binders.References.BaseRefBinder{FastenUp.Runtime.Mediators.IMediator}.TryGetReference``1(``0@)
+  parent: FastenUp.Runtime.Binders.References.BaseRefBinder{FastenUp.Runtime.Mediators.IMediator}
+  definition: FastenUp.Runtime.Binders.References.BaseRefBinder`1.TryGetReference``1(``0@)
+  href: FastenUp.Runtime.Binders.References.BaseRefBinder-1.html#FastenUp_Runtime_Binders_References_BaseRefBinder_1_TryGetReference__1___0__
+  name: TryGetReference<T>(out T)
+  nameWithType: BaseRefBinder<IMediator>.TryGetReference<T>(out T)
+  fullName: FastenUp.Runtime.Binders.References.BaseRefBinder<FastenUp.Runtime.Mediators.IMediator>.TryGetReference<T>(out T)
+  nameWithType.vb: BaseRefBinder(Of IMediator).TryGetReference(Of T)(T)
+  fullName.vb: FastenUp.Runtime.Binders.References.BaseRefBinder(Of FastenUp.Runtime.Mediators.IMediator).TryGetReference(Of T)(T)
+  name.vb: TryGetReference(Of T)(T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.References.BaseRefBinder{FastenUp.Runtime.Mediators.IMediator}.TryGetReference``1(``0@)
+    name: TryGetReference
+    href: FastenUp.Runtime.Binders.References.BaseRefBinder-1.html#FastenUp_Runtime_Binders_References_BaseRefBinder_1_TryGetReference__1___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: out
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.References.BaseRefBinder{FastenUp.Runtime.Mediators.IMediator}.TryGetReference``1(``0@)
+    name: TryGetReference
+    href: FastenUp.Runtime.Binders.References.BaseRefBinder-1.html#FastenUp_Runtime_Binders_References_BaseRefBinder_1_TryGetReference__1___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders.BaseBinder.Name
+  commentId: P:FastenUp.Runtime.Binders.BaseBinder.Name
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_Name
+  name: Name
+  nameWithType: BaseBinder.Name
+  fullName: FastenUp.Runtime.Binders.BaseBinder.Name
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  commentId: E:FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnBinderChanged
+  name: OnBinderChanged
+  nameWithType: BaseBinder.OnBinderChanged
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: FastenUp.Runtime.Binders
+  commentId: N:FastenUp.Runtime.Binders
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders
+  nameWithType: FastenUp.Runtime.Binders
+  fullName: FastenUp.Runtime.Binders
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+- uid: FastenUp.Runtime.Binders.References.BaseRefBinder`1
+  commentId: T:FastenUp.Runtime.Binders.References.BaseRefBinder`1
+  href: FastenUp.Runtime.Binders.References.BaseRefBinder-1.html
+  name: BaseRefBinder<TRef>
+  nameWithType: BaseRefBinder<TRef>
+  fullName: FastenUp.Runtime.Binders.References.BaseRefBinder<TRef>
+  nameWithType.vb: BaseRefBinder(Of TRef)
+  fullName.vb: FastenUp.Runtime.Binders.References.BaseRefBinder(Of TRef)
+  name.vb: BaseRefBinder(Of TRef)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.References.BaseRefBinder`1
+    name: BaseRefBinder
+    href: FastenUp.Runtime.Binders.References.BaseRefBinder-1.html
+  - name: <
+  - name: TRef
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.References.BaseRefBinder`1
+    name: BaseRefBinder
+    href: FastenUp.Runtime.Binders.References.BaseRefBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TRef
+  - name: )
+- uid: FastenUp.Runtime.Binders.References.BaseRefBinder`1.TryGetReference``1(``0@)
+  commentId: M:FastenUp.Runtime.Binders.References.BaseRefBinder`1.TryGetReference``1(``0@)
+  href: FastenUp.Runtime.Binders.References.BaseRefBinder-1.html#FastenUp_Runtime_Binders_References_BaseRefBinder_1_TryGetReference__1___0__
+  name: TryGetReference<T>(out T)
+  nameWithType: BaseRefBinder<TRef>.TryGetReference<T>(out T)
+  fullName: FastenUp.Runtime.Binders.References.BaseRefBinder<TRef>.TryGetReference<T>(out T)
+  nameWithType.vb: BaseRefBinder(Of TRef).TryGetReference(Of T)(T)
+  fullName.vb: FastenUp.Runtime.Binders.References.BaseRefBinder(Of TRef).TryGetReference(Of T)(T)
+  name.vb: TryGetReference(Of T)(T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.References.BaseRefBinder`1.TryGetReference``1(``0@)
+    name: TryGetReference
+    href: FastenUp.Runtime.Binders.References.BaseRefBinder-1.html#FastenUp_Runtime_Binders_References_BaseRefBinder_1_TryGetReference__1___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: out
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.References.BaseRefBinder`1.TryGetReference``1(``0@)
+    name: TryGetReference
+    href: FastenUp.Runtime.Binders.References.BaseRefBinder-1.html#FastenUp_Runtime_Binders_References_BaseRefBinder_1_TryGetReference__1___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+  commentId: P:FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_IncludeOwnGameObjectInFind
+  name: IncludeOwnGameObjectInFind
+  nameWithType: BaseBinder.IncludeOwnGameObjectInFind
+  fullName: FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+- uid: FastenUp.Runtime.Binders.References.MediatorRefBinder.IncludeOwnGameObjectInFind*
+  commentId: Overload:FastenUp.Runtime.Binders.References.MediatorRefBinder.IncludeOwnGameObjectInFind
+  href: FastenUp.Runtime.Binders.References.MediatorRefBinder.html#FastenUp_Runtime_Binders_References_MediatorRefBinder_IncludeOwnGameObjectInFind
+  name: IncludeOwnGameObjectInFind
+  nameWithType: MediatorRefBinder.IncludeOwnGameObjectInFind
+  fullName: FastenUp.Runtime.Binders.References.MediatorRefBinder.IncludeOwnGameObjectInFind
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean

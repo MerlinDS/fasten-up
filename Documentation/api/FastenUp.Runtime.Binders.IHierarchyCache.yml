@@ -1,0 +1,97 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Binders.IHierarchyCache
+  commentId: T:FastenUp.Runtime.Binders.IHierarchyCache
+  id: IHierarchyCache
+  parent: FastenUp.Runtime.Binders
+  children:
+  - FastenUp.Runtime.Binders.IHierarchyCache.RebuildCache
+  langs:
+  - csharp
+  - vb
+  name: IHierarchyCache
+  nameWithType: IHierarchyCache
+  fullName: FastenUp.Runtime.Binders.IHierarchyCache
+  type: Interface
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/IHierarchyCache.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: IHierarchyCache
+    path: ../Assets/FastenUp/Runtime/Binders/IHierarchyCache.cs
+    startLine: 2
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders
+  syntax:
+    content: public interface IHierarchyCache
+    content.vb: Public Interface IHierarchyCache
+- uid: FastenUp.Runtime.Binders.IHierarchyCache.RebuildCache
+  commentId: M:FastenUp.Runtime.Binders.IHierarchyCache.RebuildCache
+  id: RebuildCache
+  parent: FastenUp.Runtime.Binders.IHierarchyCache
+  langs:
+  - csharp
+  - vb
+  name: RebuildCache()
+  nameWithType: IHierarchyCache.RebuildCache()
+  fullName: FastenUp.Runtime.Binders.IHierarchyCache.RebuildCache()
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/IHierarchyCache.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: RebuildCache
+    path: ../Assets/FastenUp/Runtime/Binders/IHierarchyCache.cs
+    startLine: 8
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders
+  summary: >-
+    Rebuilds hierarchy cache.
+
+    <remarks>MUST be called after hierarchy was changed.</remarks>
+  example: []
+  syntax:
+    content: void RebuildCache()
+    content.vb: Sub RebuildCache()
+  overload: FastenUp.Runtime.Binders.IHierarchyCache.RebuildCache*
+references:
+- uid: FastenUp.Runtime.Binders
+  commentId: N:FastenUp.Runtime.Binders
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders
+  nameWithType: FastenUp.Runtime.Binders
+  fullName: FastenUp.Runtime.Binders
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+- uid: FastenUp.Runtime.Binders.IHierarchyCache.RebuildCache*
+  commentId: Overload:FastenUp.Runtime.Binders.IHierarchyCache.RebuildCache
+  href: FastenUp.Runtime.Binders.IHierarchyCache.html#FastenUp_Runtime_Binders_IHierarchyCache_RebuildCache
+  name: RebuildCache
+  nameWithType: IHierarchyCache.RebuildCache
+  fullName: FastenUp.Runtime.Binders.IHierarchyCache.RebuildCache

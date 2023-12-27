@@ -1,0 +1,122 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Binders.Actions
+  commentId: N:FastenUp.Runtime.Binders.Actions
+  id: FastenUp.Runtime.Binders.Actions
+  children:
+  - FastenUp.Runtime.Binders.Actions.ActionBinder
+  - FastenUp.Runtime.Binders.Actions.ActionBinder`1
+  - FastenUp.Runtime.Binders.Actions.BaseActionBinder`1
+  - FastenUp.Runtime.Binders.Actions.BooleanActionBinder
+  - FastenUp.Runtime.Binders.Actions.FloatActionBinder
+  - FastenUp.Runtime.Binders.Actions.IActionBinder`1
+  - FastenUp.Runtime.Binders.Actions.IntActionBinder
+  langs:
+  - csharp
+  - vb
+  name: FastenUp.Runtime.Binders.Actions
+  nameWithType: FastenUp.Runtime.Binders.Actions
+  fullName: FastenUp.Runtime.Binders.Actions
+  type: Namespace
+  assemblies:
+  - FastenUp.Runtime
+references:
+- uid: FastenUp.Runtime.Binders.Actions.IntActionBinder
+  commentId: T:FastenUp.Runtime.Binders.Actions.IntActionBinder
+  href: FastenUp.Runtime.Binders.Actions.IntActionBinder.html
+  name: IntActionBinder
+  nameWithType: IntActionBinder
+  fullName: FastenUp.Runtime.Binders.Actions.IntActionBinder
+- uid: FastenUp.Runtime.Binders.Actions.BooleanActionBinder
+  commentId: T:FastenUp.Runtime.Binders.Actions.BooleanActionBinder
+  href: FastenUp.Runtime.Binders.Actions.BooleanActionBinder.html
+  name: BooleanActionBinder
+  nameWithType: BooleanActionBinder
+  fullName: FastenUp.Runtime.Binders.Actions.BooleanActionBinder
+- uid: FastenUp.Runtime.Binders.Actions.IActionBinder`1
+  commentId: T:FastenUp.Runtime.Binders.Actions.IActionBinder`1
+  href: FastenUp.Runtime.Binders.Actions.IActionBinder-1.html
+  name: IActionBinder<T>
+  nameWithType: IActionBinder<T>
+  fullName: FastenUp.Runtime.Binders.Actions.IActionBinder<T>
+  nameWithType.vb: IActionBinder(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.Actions.IActionBinder(Of T)
+  name.vb: IActionBinder(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Actions.IActionBinder`1
+    name: IActionBinder
+    href: FastenUp.Runtime.Binders.Actions.IActionBinder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Actions.IActionBinder`1
+    name: IActionBinder
+    href: FastenUp.Runtime.Binders.Actions.IActionBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders.Actions.BaseActionBinder`1
+  commentId: T:FastenUp.Runtime.Binders.Actions.BaseActionBinder`1
+  href: FastenUp.Runtime.Binders.Actions.BaseActionBinder-1.html
+  name: BaseActionBinder<T>
+  nameWithType: BaseActionBinder<T>
+  fullName: FastenUp.Runtime.Binders.Actions.BaseActionBinder<T>
+  nameWithType.vb: BaseActionBinder(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.Actions.BaseActionBinder(Of T)
+  name.vb: BaseActionBinder(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Actions.BaseActionBinder`1
+    name: BaseActionBinder
+    href: FastenUp.Runtime.Binders.Actions.BaseActionBinder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Actions.BaseActionBinder`1
+    name: BaseActionBinder
+    href: FastenUp.Runtime.Binders.Actions.BaseActionBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders.Actions.FloatActionBinder
+  commentId: T:FastenUp.Runtime.Binders.Actions.FloatActionBinder
+  href: FastenUp.Runtime.Binders.Actions.FloatActionBinder.html
+  name: FloatActionBinder
+  nameWithType: FloatActionBinder
+  fullName: FastenUp.Runtime.Binders.Actions.FloatActionBinder
+- uid: FastenUp.Runtime.Binders.Actions.ActionBinder
+  commentId: T:FastenUp.Runtime.Binders.Actions.ActionBinder
+  href: FastenUp.Runtime.Binders.Actions.ActionBinder.html
+  name: ActionBinder
+  nameWithType: ActionBinder
+  fullName: FastenUp.Runtime.Binders.Actions.ActionBinder
+- uid: FastenUp.Runtime.Binders.Actions.ActionBinder`1
+  commentId: T:FastenUp.Runtime.Binders.Actions.ActionBinder`1
+  href: FastenUp.Runtime.Binders.Actions.ActionBinder-1.html
+  name: ActionBinder<T>
+  nameWithType: ActionBinder<T>
+  fullName: FastenUp.Runtime.Binders.Actions.ActionBinder<T>
+  nameWithType.vb: ActionBinder(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.Actions.ActionBinder(Of T)
+  name.vb: ActionBinder(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Actions.ActionBinder`1
+    name: ActionBinder
+    href: FastenUp.Runtime.Binders.Actions.ActionBinder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Actions.ActionBinder`1
+    name: ActionBinder
+    href: FastenUp.Runtime.Binders.Actions.ActionBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

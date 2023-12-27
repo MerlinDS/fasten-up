@@ -1,0 +1,493 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1
+  commentId: T:FastenUp.Runtime.Bindables.BaseBindable`1
+  id: BaseBindable`1
+  parent: FastenUp.Runtime.Bindables
+  children:
+  - FastenUp.Runtime.Bindables.BaseBindable`1.#ctor(`0)
+  - FastenUp.Runtime.Bindables.BaseBindable`1.PostBind(FastenUp.Runtime.Binders.IBinder{`0})
+  - FastenUp.Runtime.Bindables.BaseBindable`1.PostUnbind(FastenUp.Runtime.Binders.IBinder{`0})
+  - FastenUp.Runtime.Bindables.BaseBindable`1.SetValueSilently(`0)
+  - FastenUp.Runtime.Bindables.BaseBindable`1.UpdateBinders(`0,FastenUp.Runtime.Binders.IBinder{`0})
+  - FastenUp.Runtime.Bindables.BaseBindable`1.Value
+  langs:
+  - csharp
+  - vb
+  name: BaseBindable<T>
+  nameWithType: BaseBindable<T>
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>
+  type: Class
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BaseBindable.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: BaseBindable
+    path: ../Assets/FastenUp/Runtime/Bindables/BaseBindable.cs
+    startLine: 9
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  summary: Base class for the bindable.
+  example: []
+  syntax:
+    content: 'public abstract class BaseBindable<T> : IBindable<T>, IBindable'
+    typeParameters:
+    - id: T
+      description: Type of the value
+    content.vb: Public MustInherit Class BaseBindable(Of T) Implements IBindable(Of T), IBindable
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - FastenUp.Runtime.Bindables.BindableSetup`1
+  - FastenUp.Runtime.Bindables.Bindable`1
+  implements:
+  - FastenUp.Runtime.Bindables.IBindable{{T}}
+  - FastenUp.Runtime.Bindables.IBindable
+  nameWithType.vb: BaseBindable(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T)
+  name.vb: BaseBindable(Of T)
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.#ctor(`0)
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindable`1.#ctor(`0)
+  id: '#ctor(`0)'
+  parent: FastenUp.Runtime.Bindables.BaseBindable`1
+  langs:
+  - csharp
+  - vb
+  name: BaseBindable(T)
+  nameWithType: BaseBindable<T>.BaseBindable(T)
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.BaseBindable(T)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BaseBindable.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: .ctor
+    path: ../Assets/FastenUp/Runtime/Bindables/BaseBindable.cs
+    startLine: 15
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  syntax:
+    content: protected BaseBindable(T value)
+    parameters:
+    - id: value
+      type: '{T}'
+    content.vb: Protected Sub New(value As T)
+  overload: FastenUp.Runtime.Bindables.BaseBindable`1.#ctor*
+  nameWithType.vb: BaseBindable(Of T).New(T)
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).New(T)
+  name.vb: New(T)
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.Value
+  commentId: P:FastenUp.Runtime.Bindables.BaseBindable`1.Value
+  id: Value
+  parent: FastenUp.Runtime.Bindables.BaseBindable`1
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: BaseBindable<T>.Value
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.Value
+  type: Property
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BaseBindable.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: Value
+    path: ../Assets/FastenUp/Runtime/Bindables/BaseBindable.cs
+    startLine: 23
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  summary: The value that will be bind to the Unity components.
+  example: []
+  syntax:
+    content: public virtual T Value { get; set; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: Public Overridable Property Value As T
+  overload: FastenUp.Runtime.Bindables.BaseBindable`1.Value*
+  nameWithType.vb: BaseBindable(Of T).Value
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).Value
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.UpdateBinders(`0,FastenUp.Runtime.Binders.IBinder{`0})
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindable`1.UpdateBinders(`0,FastenUp.Runtime.Binders.IBinder{`0})
+  id: UpdateBinders(`0,FastenUp.Runtime.Binders.IBinder{`0})
+  parent: FastenUp.Runtime.Bindables.BaseBindable`1
+  langs:
+  - csharp
+  - vb
+  name: UpdateBinders(T, IBinder<T>)
+  nameWithType: BaseBindable<T>.UpdateBinders(T, IBinder<T>)
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.UpdateBinders(T, FastenUp.Runtime.Binders.IBinder<T>)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BaseBindable.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: UpdateBinders
+    path: ../Assets/FastenUp/Runtime/Bindables/BaseBindable.cs
+    startLine: 47
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  syntax:
+    content: protected void UpdateBinders(T value, IBinder<T> ignored = null)
+    parameters:
+    - id: value
+      type: '{T}'
+    - id: ignored
+      type: FastenUp.Runtime.Binders.IBinder{{T}}
+    content.vb: Protected Sub UpdateBinders(value As T, ignored As IBinder(Of T) = Nothing)
+  overload: FastenUp.Runtime.Bindables.BaseBindable`1.UpdateBinders*
+  nameWithType.vb: BaseBindable(Of T).UpdateBinders(T, IBinder(Of T))
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).UpdateBinders(T, FastenUp.Runtime.Binders.IBinder(Of T))
+  name.vb: UpdateBinders(T, IBinder(Of T))
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.SetValueSilently(`0)
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindable`1.SetValueSilently(`0)
+  id: SetValueSilently(`0)
+  parent: FastenUp.Runtime.Bindables.BaseBindable`1
+  langs:
+  - csharp
+  - vb
+  name: SetValueSilently(T)
+  nameWithType: BaseBindable<T>.SetValueSilently(T)
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.SetValueSilently(T)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BaseBindable.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: SetValueSilently
+    path: ../Assets/FastenUp/Runtime/Bindables/BaseBindable.cs
+    startLine: 59
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  syntax:
+    content: protected void SetValueSilently(T value)
+    parameters:
+    - id: value
+      type: '{T}'
+    content.vb: Protected Sub SetValueSilently(value As T)
+  overload: FastenUp.Runtime.Bindables.BaseBindable`1.SetValueSilently*
+  nameWithType.vb: BaseBindable(Of T).SetValueSilently(T)
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).SetValueSilently(T)
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.PostBind(FastenUp.Runtime.Binders.IBinder{`0})
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindable`1.PostBind(FastenUp.Runtime.Binders.IBinder{`0})
+  id: PostBind(FastenUp.Runtime.Binders.IBinder{`0})
+  parent: FastenUp.Runtime.Bindables.BaseBindable`1
+  langs:
+  - csharp
+  - vb
+  name: PostBind(IBinder<T>)
+  nameWithType: BaseBindable<T>.PostBind(IBinder<T>)
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.PostBind(FastenUp.Runtime.Binders.IBinder<T>)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BaseBindable.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: PostBind
+    path: ../Assets/FastenUp/Runtime/Bindables/BaseBindable.cs
+    startLine: 64
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  syntax:
+    content: protected virtual void PostBind(IBinder<T> binder)
+    parameters:
+    - id: binder
+      type: FastenUp.Runtime.Binders.IBinder{{T}}
+    content.vb: Protected Overridable Sub PostBind(binder As IBinder(Of T))
+  overload: FastenUp.Runtime.Bindables.BaseBindable`1.PostBind*
+  nameWithType.vb: BaseBindable(Of T).PostBind(IBinder(Of T))
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).PostBind(FastenUp.Runtime.Binders.IBinder(Of T))
+  name.vb: PostBind(IBinder(Of T))
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.PostUnbind(FastenUp.Runtime.Binders.IBinder{`0})
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindable`1.PostUnbind(FastenUp.Runtime.Binders.IBinder{`0})
+  id: PostUnbind(FastenUp.Runtime.Binders.IBinder{`0})
+  parent: FastenUp.Runtime.Bindables.BaseBindable`1
+  langs:
+  - csharp
+  - vb
+  name: PostUnbind(IBinder<T>)
+  nameWithType: BaseBindable<T>.PostUnbind(IBinder<T>)
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.PostUnbind(FastenUp.Runtime.Binders.IBinder<T>)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BaseBindable.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: PostUnbind
+    path: ../Assets/FastenUp/Runtime/Bindables/BaseBindable.cs
+    startLine: 68
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  syntax:
+    content: protected virtual void PostUnbind(IBinder<T> binder)
+    parameters:
+    - id: binder
+      type: FastenUp.Runtime.Binders.IBinder{{T}}
+    content.vb: Protected Overridable Sub PostUnbind(binder As IBinder(Of T))
+  overload: FastenUp.Runtime.Bindables.BaseBindable`1.PostUnbind*
+  nameWithType.vb: BaseBindable(Of T).PostUnbind(IBinder(Of T))
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).PostUnbind(FastenUp.Runtime.Binders.IBinder(Of T))
+  name.vb: PostUnbind(IBinder(Of T))
+references:
+- uid: FastenUp.Runtime.Bindables
+  commentId: N:FastenUp.Runtime.Bindables
+  href: FastenUp.html
+  name: FastenUp.Runtime.Bindables
+  nameWithType: FastenUp.Runtime.Bindables
+  fullName: FastenUp.Runtime.Bindables
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Bindables
+    name: Bindables
+    href: FastenUp.Runtime.Bindables.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Bindables
+    name: Bindables
+    href: FastenUp.Runtime.Bindables.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: FastenUp.Runtime.Bindables.IBindable{{T}}
+  commentId: T:FastenUp.Runtime.Bindables.IBindable{`0}
+  parent: FastenUp.Runtime.Bindables
+  definition: FastenUp.Runtime.Bindables.IBindable`1
+  href: FastenUp.Runtime.Bindables.IBindable-1.html
+  name: IBindable<T>
+  nameWithType: IBindable<T>
+  fullName: FastenUp.Runtime.Bindables.IBindable<T>
+  nameWithType.vb: IBindable(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindable(Of T)
+  name.vb: IBindable(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindable`1
+    name: IBindable
+    href: FastenUp.Runtime.Bindables.IBindable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindable`1
+    name: IBindable
+    href: FastenUp.Runtime.Bindables.IBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindable
+  commentId: T:FastenUp.Runtime.Bindables.IBindable
+  parent: FastenUp.Runtime.Bindables
+  href: FastenUp.Runtime.Bindables.IBindable.html
+  name: IBindable
+  nameWithType: IBindable
+  fullName: FastenUp.Runtime.Bindables.IBindable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: FastenUp.Runtime.Bindables.IBindable`1
+  commentId: T:FastenUp.Runtime.Bindables.IBindable`1
+  href: FastenUp.Runtime.Bindables.IBindable-1.html
+  name: IBindable<T>
+  nameWithType: IBindable<T>
+  fullName: FastenUp.Runtime.Bindables.IBindable<T>
+  nameWithType.vb: IBindable(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindable(Of T)
+  name.vb: IBindable(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindable`1
+    name: IBindable
+    href: FastenUp.Runtime.Bindables.IBindable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindable`1
+    name: IBindable
+    href: FastenUp.Runtime.Bindables.IBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.#ctor*
+  commentId: Overload:FastenUp.Runtime.Bindables.BaseBindable`1.#ctor
+  href: FastenUp.Runtime.Bindables.BaseBindable-1.html#FastenUp_Runtime_Bindables_BaseBindable_1__ctor__0_
+  name: BaseBindable
+  nameWithType: BaseBindable<T>.BaseBindable
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.BaseBindable
+  nameWithType.vb: BaseBindable(Of T).New
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).New
+  name.vb: New
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.Value*
+  commentId: Overload:FastenUp.Runtime.Bindables.BaseBindable`1.Value
+  href: FastenUp.Runtime.Bindables.BaseBindable-1.html#FastenUp_Runtime_Bindables_BaseBindable_1_Value
+  name: Value
+  nameWithType: BaseBindable<T>.Value
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.Value
+  nameWithType.vb: BaseBindable(Of T).Value
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).Value
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.UpdateBinders*
+  commentId: Overload:FastenUp.Runtime.Bindables.BaseBindable`1.UpdateBinders
+  href: FastenUp.Runtime.Bindables.BaseBindable-1.html#FastenUp_Runtime_Bindables_BaseBindable_1_UpdateBinders__0_FastenUp_Runtime_Binders_IBinder__0__
+  name: UpdateBinders
+  nameWithType: BaseBindable<T>.UpdateBinders
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.UpdateBinders
+  nameWithType.vb: BaseBindable(Of T).UpdateBinders
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).UpdateBinders
+- uid: FastenUp.Runtime.Binders.IBinder{{T}}
+  commentId: T:FastenUp.Runtime.Binders.IBinder{`0}
+  parent: FastenUp.Runtime.Binders
+  definition: FastenUp.Runtime.Binders.IBinder`1
+  href: FastenUp.Runtime.Binders.IBinder-1.html
+  name: IBinder<T>
+  nameWithType: IBinder<T>
+  fullName: FastenUp.Runtime.Binders.IBinder<T>
+  nameWithType.vb: IBinder(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.IBinder(Of T)
+  name.vb: IBinder(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders.IBinder`1
+  commentId: T:FastenUp.Runtime.Binders.IBinder`1
+  href: FastenUp.Runtime.Binders.IBinder-1.html
+  name: IBinder<T>
+  nameWithType: IBinder<T>
+  fullName: FastenUp.Runtime.Binders.IBinder<T>
+  nameWithType.vb: IBinder(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.IBinder(Of T)
+  name.vb: IBinder(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders
+  commentId: N:FastenUp.Runtime.Binders
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders
+  nameWithType: FastenUp.Runtime.Binders
+  fullName: FastenUp.Runtime.Binders
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.SetValueSilently*
+  commentId: Overload:FastenUp.Runtime.Bindables.BaseBindable`1.SetValueSilently
+  href: FastenUp.Runtime.Bindables.BaseBindable-1.html#FastenUp_Runtime_Bindables_BaseBindable_1_SetValueSilently__0_
+  name: SetValueSilently
+  nameWithType: BaseBindable<T>.SetValueSilently
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.SetValueSilently
+  nameWithType.vb: BaseBindable(Of T).SetValueSilently
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).SetValueSilently
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.PostBind*
+  commentId: Overload:FastenUp.Runtime.Bindables.BaseBindable`1.PostBind
+  href: FastenUp.Runtime.Bindables.BaseBindable-1.html#FastenUp_Runtime_Bindables_BaseBindable_1_PostBind_FastenUp_Runtime_Binders_IBinder__0__
+  name: PostBind
+  nameWithType: BaseBindable<T>.PostBind
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.PostBind
+  nameWithType.vb: BaseBindable(Of T).PostBind
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).PostBind
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.PostUnbind*
+  commentId: Overload:FastenUp.Runtime.Bindables.BaseBindable`1.PostUnbind
+  href: FastenUp.Runtime.Bindables.BaseBindable-1.html#FastenUp_Runtime_Bindables_BaseBindable_1_PostUnbind_FastenUp_Runtime_Binders_IBinder__0__
+  name: PostUnbind
+  nameWithType: BaseBindable<T>.PostUnbind
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.PostUnbind
+  nameWithType.vb: BaseBindable(Of T).PostUnbind
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).PostUnbind

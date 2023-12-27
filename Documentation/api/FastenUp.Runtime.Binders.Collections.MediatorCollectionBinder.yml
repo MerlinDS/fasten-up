@@ -1,0 +1,617 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder
+  commentId: T:FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder
+  id: MediatorCollectionBinder
+  parent: FastenUp.Runtime.Binders.Collections
+  children:
+  - FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Add(FastenUp.Runtime.Mediators.IInternalMediator)
+  - FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnDisable
+  - FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnEnable
+  - FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Remove(FastenUp.Runtime.Mediators.IInternalMediator)
+  langs:
+  - csharp
+  - vb
+  name: MediatorCollectionBinder
+  nameWithType: MediatorCollectionBinder
+  fullName: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder
+  type: Class
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Collections/MediatorCollectionBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: MediatorCollectionBinder
+    path: ../Assets/FastenUp/Runtime/Binders/Collections/MediatorCollectionBinder.cs
+    startLine: 13
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Collections
+  summary: >-
+    Binder that provides the ability to add and remove <xref href="FastenUp.Runtime.Mediators.IInternalMediator" data-throw-if-not-resolved="false"></xref> to the bound collection.
+
+    <xref href="FastenUp.Runtime.Bindables.BindableCollection%601" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: >-
+      [AddComponentMenu("UI/Fasten Up/Collections/Mediator Collection Binder", 0)]
+
+      public sealed class MediatorCollectionBinder : BaseBinder, ICollectionBinder<IInternalMediator>, IBinder
+    content.vb: >-
+      <AddComponentMenu("UI/Fasten Up/Collections/Mediator Collection Binder", 0)>
+
+      Public NotInheritable Class MediatorCollectionBinder Inherits BaseBinder Implements ICollectionBinder(Of IInternalMediator), IBinder
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - FastenUp.Runtime.Binders.BaseBinder
+  implements:
+  - FastenUp.Runtime.Binders.Collections.ICollectionBinder{FastenUp.Runtime.Mediators.IInternalMediator}
+  - FastenUp.Runtime.Binders.IBinder
+  inheritedMembers:
+  - FastenUp.Runtime.Binders.BaseBinder.Name
+  - FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  attributes:
+  - type: UnityEngine.AddComponentMenu
+    ctor: UnityEngine.AddComponentMenu.#ctor(System.String,System.Int32)
+    arguments:
+    - type: System.String
+      value: UI/Fasten Up/Collections/Mediator Collection Binder
+    - type: System.Int32
+      value: 0
+- uid: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Add(FastenUp.Runtime.Mediators.IInternalMediator)
+  commentId: M:FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Add(FastenUp.Runtime.Mediators.IInternalMediator)
+  id: Add(FastenUp.Runtime.Mediators.IInternalMediator)
+  parent: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder
+  langs:
+  - csharp
+  - vb
+  name: Add(IInternalMediator)
+  nameWithType: MediatorCollectionBinder.Add(IInternalMediator)
+  fullName: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Add(FastenUp.Runtime.Mediators.IInternalMediator)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Collections/MediatorCollectionBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: Add
+    path: ../Assets/FastenUp/Runtime/Binders/Collections/MediatorCollectionBinder.cs
+    startLine: 27
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Collections
+  summary: Adds item to the bound collection.
+  example: []
+  syntax:
+    content: public void Add(IInternalMediator item)
+    parameters:
+    - id: item
+      type: FastenUp.Runtime.Mediators.IInternalMediator
+      description: Item to add.
+    content.vb: Public Sub Add(item As IInternalMediator)
+  overload: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Add*
+  implements:
+  - FastenUp.Runtime.Binders.Collections.ICollectionBinder{FastenUp.Runtime.Mediators.IInternalMediator}.Add(FastenUp.Runtime.Mediators.IInternalMediator)
+- uid: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Remove(FastenUp.Runtime.Mediators.IInternalMediator)
+  commentId: M:FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Remove(FastenUp.Runtime.Mediators.IInternalMediator)
+  id: Remove(FastenUp.Runtime.Mediators.IInternalMediator)
+  parent: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder
+  langs:
+  - csharp
+  - vb
+  name: Remove(IInternalMediator)
+  nameWithType: MediatorCollectionBinder.Remove(IInternalMediator)
+  fullName: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Remove(FastenUp.Runtime.Mediators.IInternalMediator)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Collections/MediatorCollectionBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: Remove
+    path: ../Assets/FastenUp/Runtime/Binders/Collections/MediatorCollectionBinder.cs
+    startLine: 35
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Collections
+  summary: Removes item from the bound collection.
+  example: []
+  syntax:
+    content: public void Remove(IInternalMediator item)
+    parameters:
+    - id: item
+      type: FastenUp.Runtime.Mediators.IInternalMediator
+      description: ''
+    content.vb: Public Sub Remove(item As IInternalMediator)
+  overload: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Remove*
+  implements:
+  - FastenUp.Runtime.Binders.Collections.ICollectionBinder{FastenUp.Runtime.Mediators.IInternalMediator}.Remove(FastenUp.Runtime.Mediators.IInternalMediator)
+- uid: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnEnable
+  commentId: M:FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnEnable
+  id: OnEnable
+  parent: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder
+  langs:
+  - csharp
+  - vb
+  name: OnEnable()
+  nameWithType: MediatorCollectionBinder.OnEnable()
+  fullName: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnEnable()
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Collections/MediatorCollectionBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: OnEnable
+    path: ../Assets/FastenUp/Runtime/Binders/Collections/MediatorCollectionBinder.cs
+    startLine: 45
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Collections
+  example: []
+  syntax:
+    content: protected override void OnEnable()
+    content.vb: Protected Overrides Sub OnEnable()
+  overridden: FastenUp.Runtime.Binders.BaseBinder.OnEnable
+  overload: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnEnable*
+- uid: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnDisable
+  commentId: M:FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnDisable
+  id: OnDisable
+  parent: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder
+  langs:
+  - csharp
+  - vb
+  name: OnDisable()
+  nameWithType: MediatorCollectionBinder.OnDisable()
+  fullName: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnDisable()
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Collections/MediatorCollectionBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: OnDisable
+    path: ../Assets/FastenUp/Runtime/Binders/Collections/MediatorCollectionBinder.cs
+    startLine: 54
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Collections
+  example: []
+  syntax:
+    content: protected override void OnDisable()
+    content.vb: Protected Overrides Sub OnDisable()
+  overridden: FastenUp.Runtime.Binders.BaseBinder.OnDisable
+  overload: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnDisable*
+references:
+- uid: FastenUp.Runtime.Mediators.IInternalMediator
+  commentId: T:FastenUp.Runtime.Mediators.IInternalMediator
+  parent: FastenUp.Runtime.Mediators
+  href: FastenUp.Runtime.Mediators.IInternalMediator.html
+  name: IInternalMediator
+  nameWithType: IInternalMediator
+  fullName: FastenUp.Runtime.Mediators.IInternalMediator
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1
+  commentId: T:FastenUp.Runtime.Bindables.BindableCollection`1
+  href: FastenUp.Runtime.Bindables.BindableCollection-1.html
+  name: BindableCollection<T>
+  nameWithType: BindableCollection<T>
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>
+  nameWithType.vb: BindableCollection(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T)
+  name.vb: BindableCollection(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.BindableCollection`1
+    name: BindableCollection
+    href: FastenUp.Runtime.Bindables.BindableCollection-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.BindableCollection`1
+    name: BindableCollection
+    href: FastenUp.Runtime.Bindables.BindableCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders.Collections
+  commentId: N:FastenUp.Runtime.Binders.Collections
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders.Collections
+  nameWithType: FastenUp.Runtime.Binders.Collections
+  fullName: FastenUp.Runtime.Binders.Collections
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.Collections
+    name: Collections
+    href: FastenUp.Runtime.Binders.Collections.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.Collections
+    name: Collections
+    href: FastenUp.Runtime.Binders.Collections.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: FastenUp.Runtime.Binders.BaseBinder
+  commentId: T:FastenUp.Runtime.Binders.BaseBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.BaseBinder.html
+  name: BaseBinder
+  nameWithType: BaseBinder
+  fullName: FastenUp.Runtime.Binders.BaseBinder
+- uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder{FastenUp.Runtime.Mediators.IInternalMediator}
+  commentId: T:FastenUp.Runtime.Binders.Collections.ICollectionBinder{FastenUp.Runtime.Mediators.IInternalMediator}
+  parent: FastenUp.Runtime.Binders.Collections
+  definition: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+  href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html
+  name: ICollectionBinder<IInternalMediator>
+  nameWithType: ICollectionBinder<IInternalMediator>
+  fullName: FastenUp.Runtime.Binders.Collections.ICollectionBinder<FastenUp.Runtime.Mediators.IInternalMediator>
+  nameWithType.vb: ICollectionBinder(Of IInternalMediator)
+  fullName.vb: FastenUp.Runtime.Binders.Collections.ICollectionBinder(Of FastenUp.Runtime.Mediators.IInternalMediator)
+  name.vb: ICollectionBinder(Of IInternalMediator)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+    name: ICollectionBinder
+    href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html
+  - name: <
+  - uid: FastenUp.Runtime.Mediators.IInternalMediator
+    name: IInternalMediator
+    href: FastenUp.Runtime.Mediators.IInternalMediator.html
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+    name: ICollectionBinder
+    href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: FastenUp.Runtime.Mediators.IInternalMediator
+    name: IInternalMediator
+    href: FastenUp.Runtime.Mediators.IInternalMediator.html
+  - name: )
+- uid: FastenUp.Runtime.Binders.IBinder
+  commentId: T:FastenUp.Runtime.Binders.IBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.IBinder.html
+  name: IBinder
+  nameWithType: IBinder
+  fullName: FastenUp.Runtime.Binders.IBinder
+- uid: FastenUp.Runtime.Binders.BaseBinder.Name
+  commentId: P:FastenUp.Runtime.Binders.BaseBinder.Name
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_Name
+  name: Name
+  nameWithType: BaseBinder.Name
+  fullName: FastenUp.Runtime.Binders.BaseBinder.Name
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  commentId: E:FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnBinderChanged
+  name: OnBinderChanged
+  nameWithType: BaseBinder.OnBinderChanged
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+- uid: FastenUp.Runtime.Mediators
+  commentId: N:FastenUp.Runtime.Mediators
+  href: FastenUp.html
+  name: FastenUp.Runtime.Mediators
+  nameWithType: FastenUp.Runtime.Mediators
+  fullName: FastenUp.Runtime.Mediators
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Mediators
+    name: Mediators
+    href: FastenUp.Runtime.Mediators.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Mediators
+    name: Mediators
+    href: FastenUp.Runtime.Mediators.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: FastenUp.Runtime.Binders
+  commentId: N:FastenUp.Runtime.Binders
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders
+  nameWithType: FastenUp.Runtime.Binders
+  fullName: FastenUp.Runtime.Binders
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+- uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+  commentId: T:FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+  href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html
+  name: ICollectionBinder<T>
+  nameWithType: ICollectionBinder<T>
+  fullName: FastenUp.Runtime.Binders.Collections.ICollectionBinder<T>
+  nameWithType.vb: ICollectionBinder(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.Collections.ICollectionBinder(Of T)
+  name.vb: ICollectionBinder(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+    name: ICollectionBinder
+    href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+    name: ICollectionBinder
+    href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Add*
+  commentId: Overload:FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Add
+  href: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.html#FastenUp_Runtime_Binders_Collections_MediatorCollectionBinder_Add_FastenUp_Runtime_Mediators_IInternalMediator_
+  name: Add
+  nameWithType: MediatorCollectionBinder.Add
+  fullName: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Add
+- uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder{FastenUp.Runtime.Mediators.IInternalMediator}.Add(FastenUp.Runtime.Mediators.IInternalMediator)
+  commentId: M:FastenUp.Runtime.Binders.Collections.ICollectionBinder{FastenUp.Runtime.Mediators.IInternalMediator}.Add(FastenUp.Runtime.Mediators.IInternalMediator)
+  parent: FastenUp.Runtime.Binders.Collections.ICollectionBinder{FastenUp.Runtime.Mediators.IInternalMediator}
+  definition: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Add(`0)
+  href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html#FastenUp_Runtime_Binders_Collections_ICollectionBinder_1_Add__0_
+  name: Add(IInternalMediator)
+  nameWithType: ICollectionBinder<IInternalMediator>.Add(IInternalMediator)
+  fullName: FastenUp.Runtime.Binders.Collections.ICollectionBinder<FastenUp.Runtime.Mediators.IInternalMediator>.Add(FastenUp.Runtime.Mediators.IInternalMediator)
+  nameWithType.vb: ICollectionBinder(Of IInternalMediator).Add(IInternalMediator)
+  fullName.vb: FastenUp.Runtime.Binders.Collections.ICollectionBinder(Of FastenUp.Runtime.Mediators.IInternalMediator).Add(FastenUp.Runtime.Mediators.IInternalMediator)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder{FastenUp.Runtime.Mediators.IInternalMediator}.Add(FastenUp.Runtime.Mediators.IInternalMediator)
+    name: Add
+    href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html#FastenUp_Runtime_Binders_Collections_ICollectionBinder_1_Add__0_
+  - name: (
+  - uid: FastenUp.Runtime.Mediators.IInternalMediator
+    name: IInternalMediator
+    href: FastenUp.Runtime.Mediators.IInternalMediator.html
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder{FastenUp.Runtime.Mediators.IInternalMediator}.Add(FastenUp.Runtime.Mediators.IInternalMediator)
+    name: Add
+    href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html#FastenUp_Runtime_Binders_Collections_ICollectionBinder_1_Add__0_
+  - name: (
+  - uid: FastenUp.Runtime.Mediators.IInternalMediator
+    name: IInternalMediator
+    href: FastenUp.Runtime.Mediators.IInternalMediator.html
+  - name: )
+- uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Add(`0)
+  commentId: M:FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Add(`0)
+  href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html#FastenUp_Runtime_Binders_Collections_ICollectionBinder_1_Add__0_
+  name: Add(T)
+  nameWithType: ICollectionBinder<T>.Add(T)
+  fullName: FastenUp.Runtime.Binders.Collections.ICollectionBinder<T>.Add(T)
+  nameWithType.vb: ICollectionBinder(Of T).Add(T)
+  fullName.vb: FastenUp.Runtime.Binders.Collections.ICollectionBinder(Of T).Add(T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Add(`0)
+    name: Add
+    href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html#FastenUp_Runtime_Binders_Collections_ICollectionBinder_1_Add__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Add(`0)
+    name: Add
+    href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html#FastenUp_Runtime_Binders_Collections_ICollectionBinder_1_Add__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Remove*
+  commentId: Overload:FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Remove
+  href: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.html#FastenUp_Runtime_Binders_Collections_MediatorCollectionBinder_Remove_FastenUp_Runtime_Mediators_IInternalMediator_
+  name: Remove
+  nameWithType: MediatorCollectionBinder.Remove
+  fullName: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Remove
+- uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder{FastenUp.Runtime.Mediators.IInternalMediator}.Remove(FastenUp.Runtime.Mediators.IInternalMediator)
+  commentId: M:FastenUp.Runtime.Binders.Collections.ICollectionBinder{FastenUp.Runtime.Mediators.IInternalMediator}.Remove(FastenUp.Runtime.Mediators.IInternalMediator)
+  parent: FastenUp.Runtime.Binders.Collections.ICollectionBinder{FastenUp.Runtime.Mediators.IInternalMediator}
+  definition: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Remove(`0)
+  href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html#FastenUp_Runtime_Binders_Collections_ICollectionBinder_1_Remove__0_
+  name: Remove(IInternalMediator)
+  nameWithType: ICollectionBinder<IInternalMediator>.Remove(IInternalMediator)
+  fullName: FastenUp.Runtime.Binders.Collections.ICollectionBinder<FastenUp.Runtime.Mediators.IInternalMediator>.Remove(FastenUp.Runtime.Mediators.IInternalMediator)
+  nameWithType.vb: ICollectionBinder(Of IInternalMediator).Remove(IInternalMediator)
+  fullName.vb: FastenUp.Runtime.Binders.Collections.ICollectionBinder(Of FastenUp.Runtime.Mediators.IInternalMediator).Remove(FastenUp.Runtime.Mediators.IInternalMediator)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder{FastenUp.Runtime.Mediators.IInternalMediator}.Remove(FastenUp.Runtime.Mediators.IInternalMediator)
+    name: Remove
+    href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html#FastenUp_Runtime_Binders_Collections_ICollectionBinder_1_Remove__0_
+  - name: (
+  - uid: FastenUp.Runtime.Mediators.IInternalMediator
+    name: IInternalMediator
+    href: FastenUp.Runtime.Mediators.IInternalMediator.html
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder{FastenUp.Runtime.Mediators.IInternalMediator}.Remove(FastenUp.Runtime.Mediators.IInternalMediator)
+    name: Remove
+    href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html#FastenUp_Runtime_Binders_Collections_ICollectionBinder_1_Remove__0_
+  - name: (
+  - uid: FastenUp.Runtime.Mediators.IInternalMediator
+    name: IInternalMediator
+    href: FastenUp.Runtime.Mediators.IInternalMediator.html
+  - name: )
+- uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Remove(`0)
+  commentId: M:FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Remove(`0)
+  href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html#FastenUp_Runtime_Binders_Collections_ICollectionBinder_1_Remove__0_
+  name: Remove(T)
+  nameWithType: ICollectionBinder<T>.Remove(T)
+  fullName: FastenUp.Runtime.Binders.Collections.ICollectionBinder<T>.Remove(T)
+  nameWithType.vb: ICollectionBinder(Of T).Remove(T)
+  fullName.vb: FastenUp.Runtime.Binders.Collections.ICollectionBinder(Of T).Remove(T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Remove(`0)
+    name: Remove
+    href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html#FastenUp_Runtime_Binders_Collections_ICollectionBinder_1_Remove__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Remove(`0)
+    name: Remove
+    href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html#FastenUp_Runtime_Binders_Collections_ICollectionBinder_1_Remove__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnEnable
+  commentId: M:FastenUp.Runtime.Binders.BaseBinder.OnEnable
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnEnable
+  name: OnEnable()
+  nameWithType: BaseBinder.OnEnable()
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnEnable()
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.OnEnable
+    name: OnEnable
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnEnable
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.OnEnable
+    name: OnEnable
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnEnable
+  - name: (
+  - name: )
+- uid: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnEnable*
+  commentId: Overload:FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnEnable
+  href: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.html#FastenUp_Runtime_Binders_Collections_MediatorCollectionBinder_OnEnable
+  name: OnEnable
+  nameWithType: MediatorCollectionBinder.OnEnable
+  fullName: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnEnable
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnDisable
+  commentId: M:FastenUp.Runtime.Binders.BaseBinder.OnDisable
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnDisable
+  name: OnDisable()
+  nameWithType: BaseBinder.OnDisable()
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnDisable()
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.OnDisable
+    name: OnDisable
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnDisable
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.OnDisable
+    name: OnDisable
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnDisable
+  - name: (
+  - name: )
+- uid: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnDisable*
+  commentId: Overload:FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnDisable
+  href: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.html#FastenUp_Runtime_Binders_Collections_MediatorCollectionBinder_OnDisable
+  name: OnDisable
+  nameWithType: MediatorCollectionBinder.OnDisable
+  fullName: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnDisable

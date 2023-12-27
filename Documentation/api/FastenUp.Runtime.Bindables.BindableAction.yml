@@ -1,0 +1,245 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Bindables.BindableAction
+  commentId: T:FastenUp.Runtime.Bindables.BindableAction
+  id: BindableAction
+  parent: FastenUp.Runtime.Bindables
+  children:
+  - FastenUp.Runtime.Bindables.BindableAction.Invoke
+  langs:
+  - csharp
+  - vb
+  name: BindableAction
+  nameWithType: BindableAction
+  fullName: FastenUp.Runtime.Bindables.BindableAction
+  type: Class
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BindableAction.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: BindableAction
+    path: ../Assets/FastenUp/Runtime/Bindables/BindableAction.cs
+    startLine: 7
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  summary: Bindable action that provides the ability to invoke the <xref href="UnityEngine.Events.UnityEvent" data-throw-if-not-resolved="false"></xref> in the bind Unity components.
+  example: []
+  syntax:
+    content: 'public sealed class BindableAction : BaseBindableAction<UnityEvent>, IBindableAction<UnityEvent>, IBindable'
+    content.vb: Public NotInheritable Class BindableAction Inherits BaseBindableAction(Of UnityEvent) Implements IBindableAction(Of UnityEvent), IBindable
+  inheritance:
+  - System.Object
+  - FastenUp.Runtime.Bindables.BaseBindableAction{UnityEngine.Events.UnityEvent}
+  implements:
+  - FastenUp.Runtime.Bindables.IBindableAction{UnityEngine.Events.UnityEvent}
+  - FastenUp.Runtime.Bindables.IBindable
+- uid: FastenUp.Runtime.Bindables.BindableAction.Invoke
+  commentId: M:FastenUp.Runtime.Bindables.BindableAction.Invoke
+  id: Invoke
+  parent: FastenUp.Runtime.Bindables.BindableAction
+  langs:
+  - csharp
+  - vb
+  name: Invoke()
+  nameWithType: BindableAction.Invoke()
+  fullName: FastenUp.Runtime.Bindables.BindableAction.Invoke()
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BindableAction.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: Invoke
+    path: ../Assets/FastenUp/Runtime/Bindables/BindableAction.cs
+    startLine: 10
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  summary: <p>Invoke all registered callbacks (runtime and persistent).</p>
+  example: []
+  syntax:
+    content: public void Invoke()
+    content.vb: Public Sub Invoke()
+  overload: FastenUp.Runtime.Bindables.BindableAction.Invoke*
+references:
+- uid: UnityEngine.Events.UnityEvent
+  commentId: T:UnityEngine.Events.UnityEvent
+  isExternal: true
+  name: UnityEvent
+  nameWithType: UnityEvent
+  fullName: UnityEngine.Events.UnityEvent
+- uid: FastenUp.Runtime.Bindables
+  commentId: N:FastenUp.Runtime.Bindables
+  href: FastenUp.html
+  name: FastenUp.Runtime.Bindables
+  nameWithType: FastenUp.Runtime.Bindables
+  fullName: FastenUp.Runtime.Bindables
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Bindables
+    name: Bindables
+    href: FastenUp.Runtime.Bindables.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Bindables
+    name: Bindables
+    href: FastenUp.Runtime.Bindables.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: FastenUp.Runtime.Bindables.BaseBindableAction{UnityEngine.Events.UnityEvent}
+  commentId: T:FastenUp.Runtime.Bindables.BaseBindableAction{UnityEngine.Events.UnityEvent}
+  parent: FastenUp.Runtime.Bindables
+  definition: FastenUp.Runtime.Bindables.BaseBindableAction`1
+  href: FastenUp.Runtime.Bindables.BaseBindableAction-1.html
+  name: BaseBindableAction<UnityEvent>
+  nameWithType: BaseBindableAction<UnityEvent>
+  fullName: FastenUp.Runtime.Bindables.BaseBindableAction<UnityEngine.Events.UnityEvent>
+  nameWithType.vb: BaseBindableAction(Of UnityEvent)
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableAction(Of UnityEngine.Events.UnityEvent)
+  name.vb: BaseBindableAction(Of UnityEvent)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableAction`1
+    name: BaseBindableAction
+    href: FastenUp.Runtime.Bindables.BaseBindableAction-1.html
+  - name: <
+  - uid: UnityEngine.Events.UnityEvent
+    name: UnityEvent
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableAction`1
+    name: BaseBindableAction
+    href: FastenUp.Runtime.Bindables.BaseBindableAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.Events.UnityEvent
+    name: UnityEvent
+    isExternal: true
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindableAction{UnityEngine.Events.UnityEvent}
+  commentId: T:FastenUp.Runtime.Bindables.IBindableAction{UnityEngine.Events.UnityEvent}
+  parent: FastenUp.Runtime.Bindables
+  definition: FastenUp.Runtime.Bindables.IBindableAction`1
+  href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  name: IBindableAction<UnityEvent>
+  nameWithType: IBindableAction<UnityEvent>
+  fullName: FastenUp.Runtime.Bindables.IBindableAction<UnityEngine.Events.UnityEvent>
+  nameWithType.vb: IBindableAction(Of UnityEvent)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableAction(Of UnityEngine.Events.UnityEvent)
+  name.vb: IBindableAction(Of UnityEvent)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindableAction`1
+    name: IBindableAction
+    href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  - name: <
+  - uid: UnityEngine.Events.UnityEvent
+    name: UnityEvent
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindableAction`1
+    name: IBindableAction
+    href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.Events.UnityEvent
+    name: UnityEvent
+    isExternal: true
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindable
+  commentId: T:FastenUp.Runtime.Bindables.IBindable
+  parent: FastenUp.Runtime.Bindables
+  href: FastenUp.Runtime.Bindables.IBindable.html
+  name: IBindable
+  nameWithType: IBindable
+  fullName: FastenUp.Runtime.Bindables.IBindable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: FastenUp.Runtime.Bindables.BaseBindableAction`1
+  commentId: T:FastenUp.Runtime.Bindables.BaseBindableAction`1
+  href: FastenUp.Runtime.Bindables.BaseBindableAction-1.html
+  name: BaseBindableAction<T>
+  nameWithType: BaseBindableAction<T>
+  fullName: FastenUp.Runtime.Bindables.BaseBindableAction<T>
+  nameWithType.vb: BaseBindableAction(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableAction(Of T)
+  name.vb: BaseBindableAction(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableAction`1
+    name: BaseBindableAction
+    href: FastenUp.Runtime.Bindables.BaseBindableAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableAction`1
+    name: BaseBindableAction
+    href: FastenUp.Runtime.Bindables.BaseBindableAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindableAction`1
+  commentId: T:FastenUp.Runtime.Bindables.IBindableAction`1
+  href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  name: IBindableAction<T>
+  nameWithType: IBindableAction<T>
+  fullName: FastenUp.Runtime.Bindables.IBindableAction<T>
+  nameWithType.vb: IBindableAction(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableAction(Of T)
+  name.vb: IBindableAction(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindableAction`1
+    name: IBindableAction
+    href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindableAction`1
+    name: IBindableAction
+    href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.BindableAction.Invoke*
+  commentId: Overload:FastenUp.Runtime.Bindables.BindableAction.Invoke
+  href: FastenUp.Runtime.Bindables.BindableAction.html#FastenUp_Runtime_Bindables_BindableAction_Invoke
+  name: Invoke
+  nameWithType: BindableAction.Invoke
+  fullName: FastenUp.Runtime.Bindables.BindableAction.Invoke

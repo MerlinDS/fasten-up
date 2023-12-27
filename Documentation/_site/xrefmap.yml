@@ -1,0 +1,2003 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: FastenUp.Runtime.Bindables
+  name: FastenUp.Runtime.Bindables
+  href: api/FastenUp.Runtime.Bindables.html
+  commentId: N:FastenUp.Runtime.Bindables
+  fullName: FastenUp.Runtime.Bindables
+  nameWithType: FastenUp.Runtime.Bindables
+- uid: FastenUp.Runtime.Bindables.BaseBindableAction`1
+  name: BaseBindableAction<T>
+  href: api/FastenUp.Runtime.Bindables.BaseBindableAction-1.html
+  commentId: T:FastenUp.Runtime.Bindables.BaseBindableAction`1
+  name.vb: BaseBindableAction(Of T)
+  fullName: FastenUp.Runtime.Bindables.BaseBindableAction<T>
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableAction(Of T)
+  nameWithType: BaseBindableAction<T>
+  nameWithType.vb: BaseBindableAction(Of T)
+- uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1
+  name: BaseBindableEvent<T>
+  href: api/FastenUp.Runtime.Bindables.BaseBindableEvent-1.html
+  commentId: T:FastenUp.Runtime.Bindables.BaseBindableEvent`1
+  name.vb: BaseBindableEvent(Of T)
+  fullName: FastenUp.Runtime.Bindables.BaseBindableEvent<T>
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableEvent(Of T)
+  nameWithType: BaseBindableEvent<T>
+  nameWithType.vb: BaseBindableEvent(Of T)
+- uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1.AddListener(`0)
+  name: AddListener(T)
+  href: api/FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_AddListener__0_
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindableEvent`1.AddListener(`0)
+  fullName: FastenUp.Runtime.Bindables.BaseBindableEvent<T>.AddListener(T)
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableEvent(Of T).AddListener(T)
+  nameWithType: BaseBindableEvent<T>.AddListener(T)
+  nameWithType.vb: BaseBindableEvent(Of T).AddListener(T)
+- uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1.AddListener*
+  name: AddListener
+  href: api/FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_AddListener_
+  commentId: Overload:FastenUp.Runtime.Bindables.BaseBindableEvent`1.AddListener
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BaseBindableEvent<T>.AddListener
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableEvent(Of T).AddListener
+  nameWithType: BaseBindableEvent<T>.AddListener
+  nameWithType.vb: BaseBindableEvent(Of T).AddListener
+- uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1.Dispose
+  name: Dispose()
+  href: api/FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_Dispose
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindableEvent`1.Dispose
+  fullName: FastenUp.Runtime.Bindables.BaseBindableEvent<T>.Dispose()
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableEvent(Of T).Dispose()
+  nameWithType: BaseBindableEvent<T>.Dispose()
+  nameWithType.vb: BaseBindableEvent(Of T).Dispose()
+- uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1.Dispose*
+  name: Dispose
+  href: api/FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_Dispose_
+  commentId: Overload:FastenUp.Runtime.Bindables.BaseBindableEvent`1.Dispose
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BaseBindableEvent<T>.Dispose
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableEvent(Of T).Dispose
+  nameWithType: BaseBindableEvent<T>.Dispose
+  nameWithType.vb: BaseBindableEvent(Of T).Dispose
+- uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1.HasListeners(`0)
+  name: HasListeners(T)
+  href: api/FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_HasListeners__0_
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindableEvent`1.HasListeners(`0)
+  fullName: FastenUp.Runtime.Bindables.BaseBindableEvent<T>.HasListeners(T)
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableEvent(Of T).HasListeners(T)
+  nameWithType: BaseBindableEvent<T>.HasListeners(T)
+  nameWithType.vb: BaseBindableEvent(Of T).HasListeners(T)
+- uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1.HasListeners*
+  name: HasListeners
+  href: api/FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_HasListeners_
+  commentId: Overload:FastenUp.Runtime.Bindables.BaseBindableEvent`1.HasListeners
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BaseBindableEvent<T>.HasListeners
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableEvent(Of T).HasListeners
+  nameWithType: BaseBindableEvent<T>.HasListeners
+  nameWithType.vb: BaseBindableEvent(Of T).HasListeners
+- uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1.RemoveListener(`0)
+  name: RemoveListener(T)
+  href: api/FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_RemoveListener__0_
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindableEvent`1.RemoveListener(`0)
+  fullName: FastenUp.Runtime.Bindables.BaseBindableEvent<T>.RemoveListener(T)
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableEvent(Of T).RemoveListener(T)
+  nameWithType: BaseBindableEvent<T>.RemoveListener(T)
+  nameWithType.vb: BaseBindableEvent(Of T).RemoveListener(T)
+- uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1.RemoveListener*
+  name: RemoveListener
+  href: api/FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_RemoveListener_
+  commentId: Overload:FastenUp.Runtime.Bindables.BaseBindableEvent`1.RemoveListener
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BaseBindableEvent<T>.RemoveListener
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableEvent(Of T).RemoveListener
+  nameWithType: BaseBindableEvent<T>.RemoveListener
+  nameWithType.vb: BaseBindableEvent(Of T).RemoveListener
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1
+  name: BaseBindable<T>
+  href: api/FastenUp.Runtime.Bindables.BaseBindable-1.html
+  commentId: T:FastenUp.Runtime.Bindables.BaseBindable`1
+  name.vb: BaseBindable(Of T)
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T)
+  nameWithType: BaseBindable<T>
+  nameWithType.vb: BaseBindable(Of T)
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.#ctor(`0)
+  name: BaseBindable(T)
+  href: api/FastenUp.Runtime.Bindables.BaseBindable-1.html#FastenUp_Runtime_Bindables_BaseBindable_1__ctor__0_
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindable`1.#ctor(`0)
+  name.vb: New(T)
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.BaseBindable(T)
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).New(T)
+  nameWithType: BaseBindable<T>.BaseBindable(T)
+  nameWithType.vb: BaseBindable(Of T).New(T)
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.#ctor*
+  name: BaseBindable
+  href: api/FastenUp.Runtime.Bindables.BaseBindable-1.html#FastenUp_Runtime_Bindables_BaseBindable_1__ctor_
+  commentId: Overload:FastenUp.Runtime.Bindables.BaseBindable`1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.BaseBindable
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).New
+  nameWithType: BaseBindable<T>.BaseBindable
+  nameWithType.vb: BaseBindable(Of T).New
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.PostBind(FastenUp.Runtime.Binders.IBinder{`0})
+  name: PostBind(IBinder<T>)
+  href: api/FastenUp.Runtime.Bindables.BaseBindable-1.html#FastenUp_Runtime_Bindables_BaseBindable_1_PostBind_FastenUp_Runtime_Binders_IBinder__0__
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindable`1.PostBind(FastenUp.Runtime.Binders.IBinder{`0})
+  name.vb: PostBind(IBinder(Of T))
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.PostBind(FastenUp.Runtime.Binders.IBinder<T>)
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).PostBind(FastenUp.Runtime.Binders.IBinder(Of T))
+  nameWithType: BaseBindable<T>.PostBind(IBinder<T>)
+  nameWithType.vb: BaseBindable(Of T).PostBind(IBinder(Of T))
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.PostBind*
+  name: PostBind
+  href: api/FastenUp.Runtime.Bindables.BaseBindable-1.html#FastenUp_Runtime_Bindables_BaseBindable_1_PostBind_
+  commentId: Overload:FastenUp.Runtime.Bindables.BaseBindable`1.PostBind
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.PostBind
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).PostBind
+  nameWithType: BaseBindable<T>.PostBind
+  nameWithType.vb: BaseBindable(Of T).PostBind
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.PostUnbind(FastenUp.Runtime.Binders.IBinder{`0})
+  name: PostUnbind(IBinder<T>)
+  href: api/FastenUp.Runtime.Bindables.BaseBindable-1.html#FastenUp_Runtime_Bindables_BaseBindable_1_PostUnbind_FastenUp_Runtime_Binders_IBinder__0__
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindable`1.PostUnbind(FastenUp.Runtime.Binders.IBinder{`0})
+  name.vb: PostUnbind(IBinder(Of T))
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.PostUnbind(FastenUp.Runtime.Binders.IBinder<T>)
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).PostUnbind(FastenUp.Runtime.Binders.IBinder(Of T))
+  nameWithType: BaseBindable<T>.PostUnbind(IBinder<T>)
+  nameWithType.vb: BaseBindable(Of T).PostUnbind(IBinder(Of T))
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.PostUnbind*
+  name: PostUnbind
+  href: api/FastenUp.Runtime.Bindables.BaseBindable-1.html#FastenUp_Runtime_Bindables_BaseBindable_1_PostUnbind_
+  commentId: Overload:FastenUp.Runtime.Bindables.BaseBindable`1.PostUnbind
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.PostUnbind
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).PostUnbind
+  nameWithType: BaseBindable<T>.PostUnbind
+  nameWithType.vb: BaseBindable(Of T).PostUnbind
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.SetValueSilently(`0)
+  name: SetValueSilently(T)
+  href: api/FastenUp.Runtime.Bindables.BaseBindable-1.html#FastenUp_Runtime_Bindables_BaseBindable_1_SetValueSilently__0_
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindable`1.SetValueSilently(`0)
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.SetValueSilently(T)
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).SetValueSilently(T)
+  nameWithType: BaseBindable<T>.SetValueSilently(T)
+  nameWithType.vb: BaseBindable(Of T).SetValueSilently(T)
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.SetValueSilently*
+  name: SetValueSilently
+  href: api/FastenUp.Runtime.Bindables.BaseBindable-1.html#FastenUp_Runtime_Bindables_BaseBindable_1_SetValueSilently_
+  commentId: Overload:FastenUp.Runtime.Bindables.BaseBindable`1.SetValueSilently
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.SetValueSilently
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).SetValueSilently
+  nameWithType: BaseBindable<T>.SetValueSilently
+  nameWithType.vb: BaseBindable(Of T).SetValueSilently
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.UpdateBinders(`0,FastenUp.Runtime.Binders.IBinder{`0})
+  name: UpdateBinders(T, IBinder<T>)
+  href: api/FastenUp.Runtime.Bindables.BaseBindable-1.html#FastenUp_Runtime_Bindables_BaseBindable_1_UpdateBinders__0_FastenUp_Runtime_Binders_IBinder__0__
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindable`1.UpdateBinders(`0,FastenUp.Runtime.Binders.IBinder{`0})
+  name.vb: UpdateBinders(T, IBinder(Of T))
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.UpdateBinders(T, FastenUp.Runtime.Binders.IBinder<T>)
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).UpdateBinders(T, FastenUp.Runtime.Binders.IBinder(Of T))
+  nameWithType: BaseBindable<T>.UpdateBinders(T, IBinder<T>)
+  nameWithType.vb: BaseBindable(Of T).UpdateBinders(T, IBinder(Of T))
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.UpdateBinders*
+  name: UpdateBinders
+  href: api/FastenUp.Runtime.Bindables.BaseBindable-1.html#FastenUp_Runtime_Bindables_BaseBindable_1_UpdateBinders_
+  commentId: Overload:FastenUp.Runtime.Bindables.BaseBindable`1.UpdateBinders
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.UpdateBinders
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).UpdateBinders
+  nameWithType: BaseBindable<T>.UpdateBinders
+  nameWithType.vb: BaseBindable(Of T).UpdateBinders
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.Value
+  name: Value
+  href: api/FastenUp.Runtime.Bindables.BaseBindable-1.html#FastenUp_Runtime_Bindables_BaseBindable_1_Value
+  commentId: P:FastenUp.Runtime.Bindables.BaseBindable`1.Value
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.Value
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).Value
+  nameWithType: BaseBindable<T>.Value
+  nameWithType.vb: BaseBindable(Of T).Value
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1.Value*
+  name: Value
+  href: api/FastenUp.Runtime.Bindables.BaseBindable-1.html#FastenUp_Runtime_Bindables_BaseBindable_1_Value_
+  commentId: Overload:FastenUp.Runtime.Bindables.BaseBindable`1.Value
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>.Value
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T).Value
+  nameWithType: BaseBindable<T>.Value
+  nameWithType.vb: BaseBindable(Of T).Value
+- uid: FastenUp.Runtime.Bindables.BindableAction
+  name: BindableAction
+  href: api/FastenUp.Runtime.Bindables.BindableAction.html
+  commentId: T:FastenUp.Runtime.Bindables.BindableAction
+  fullName: FastenUp.Runtime.Bindables.BindableAction
+  nameWithType: BindableAction
+- uid: FastenUp.Runtime.Bindables.BindableAction.Invoke
+  name: Invoke()
+  href: api/FastenUp.Runtime.Bindables.BindableAction.html#FastenUp_Runtime_Bindables_BindableAction_Invoke
+  commentId: M:FastenUp.Runtime.Bindables.BindableAction.Invoke
+  fullName: FastenUp.Runtime.Bindables.BindableAction.Invoke()
+  nameWithType: BindableAction.Invoke()
+- uid: FastenUp.Runtime.Bindables.BindableAction.Invoke*
+  name: Invoke
+  href: api/FastenUp.Runtime.Bindables.BindableAction.html#FastenUp_Runtime_Bindables_BindableAction_Invoke_
+  commentId: Overload:FastenUp.Runtime.Bindables.BindableAction.Invoke
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BindableAction.Invoke
+  nameWithType: BindableAction.Invoke
+- uid: FastenUp.Runtime.Bindables.BindableAction`1
+  name: BindableAction<T>
+  href: api/FastenUp.Runtime.Bindables.BindableAction-1.html
+  commentId: T:FastenUp.Runtime.Bindables.BindableAction`1
+  name.vb: BindableAction(Of T)
+  fullName: FastenUp.Runtime.Bindables.BindableAction<T>
+  fullName.vb: FastenUp.Runtime.Bindables.BindableAction(Of T)
+  nameWithType: BindableAction<T>
+  nameWithType.vb: BindableAction(Of T)
+- uid: FastenUp.Runtime.Bindables.BindableAction`1.Invoke(`0)
+  name: Invoke(T)
+  href: api/FastenUp.Runtime.Bindables.BindableAction-1.html#FastenUp_Runtime_Bindables_BindableAction_1_Invoke__0_
+  commentId: M:FastenUp.Runtime.Bindables.BindableAction`1.Invoke(`0)
+  fullName: FastenUp.Runtime.Bindables.BindableAction<T>.Invoke(T)
+  fullName.vb: FastenUp.Runtime.Bindables.BindableAction(Of T).Invoke(T)
+  nameWithType: BindableAction<T>.Invoke(T)
+  nameWithType.vb: BindableAction(Of T).Invoke(T)
+- uid: FastenUp.Runtime.Bindables.BindableAction`1.Invoke*
+  name: Invoke
+  href: api/FastenUp.Runtime.Bindables.BindableAction-1.html#FastenUp_Runtime_Bindables_BindableAction_1_Invoke_
+  commentId: Overload:FastenUp.Runtime.Bindables.BindableAction`1.Invoke
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BindableAction<T>.Invoke
+  fullName.vb: FastenUp.Runtime.Bindables.BindableAction(Of T).Invoke
+  nameWithType: BindableAction<T>.Invoke
+  nameWithType.vb: BindableAction(Of T).Invoke
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1
+  name: BindableCollection<T>
+  href: api/FastenUp.Runtime.Bindables.BindableCollection-1.html
+  commentId: T:FastenUp.Runtime.Bindables.BindableCollection`1
+  name.vb: BindableCollection(Of T)
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T)
+  nameWithType: BindableCollection<T>
+  nameWithType.vb: BindableCollection(Of T)
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.Add(`0)
+  name: Add(T)
+  href: api/FastenUp.Runtime.Bindables.BindableCollection-1.html#FastenUp_Runtime_Bindables_BindableCollection_1_Add__0_
+  commentId: M:FastenUp.Runtime.Bindables.BindableCollection`1.Add(`0)
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.Add(T)
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).Add(T)
+  nameWithType: BindableCollection<T>.Add(T)
+  nameWithType.vb: BindableCollection(Of T).Add(T)
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.Add*
+  name: Add
+  href: api/FastenUp.Runtime.Bindables.BindableCollection-1.html#FastenUp_Runtime_Bindables_BindableCollection_1_Add_
+  commentId: Overload:FastenUp.Runtime.Bindables.BindableCollection`1.Add
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.Add
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).Add
+  nameWithType: BindableCollection<T>.Add
+  nameWithType.vb: BindableCollection(Of T).Add
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.Clear
+  name: Clear()
+  href: api/FastenUp.Runtime.Bindables.BindableCollection-1.html#FastenUp_Runtime_Bindables_BindableCollection_1_Clear
+  commentId: M:FastenUp.Runtime.Bindables.BindableCollection`1.Clear
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.Clear()
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).Clear()
+  nameWithType: BindableCollection<T>.Clear()
+  nameWithType.vb: BindableCollection(Of T).Clear()
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.Clear*
+  name: Clear
+  href: api/FastenUp.Runtime.Bindables.BindableCollection-1.html#FastenUp_Runtime_Bindables_BindableCollection_1_Clear_
+  commentId: Overload:FastenUp.Runtime.Bindables.BindableCollection`1.Clear
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.Clear
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).Clear
+  nameWithType: BindableCollection<T>.Clear
+  nameWithType.vb: BindableCollection(Of T).Clear
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.Contains(`0)
+  name: Contains(T)
+  href: api/FastenUp.Runtime.Bindables.BindableCollection-1.html#FastenUp_Runtime_Bindables_BindableCollection_1_Contains__0_
+  commentId: M:FastenUp.Runtime.Bindables.BindableCollection`1.Contains(`0)
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.Contains(T)
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).Contains(T)
+  nameWithType: BindableCollection<T>.Contains(T)
+  nameWithType.vb: BindableCollection(Of T).Contains(T)
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.Contains*
+  name: Contains
+  href: api/FastenUp.Runtime.Bindables.BindableCollection-1.html#FastenUp_Runtime_Bindables_BindableCollection_1_Contains_
+  commentId: Overload:FastenUp.Runtime.Bindables.BindableCollection`1.Contains
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.Contains
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).Contains
+  nameWithType: BindableCollection<T>.Contains
+  nameWithType.vb: BindableCollection(Of T).Contains
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.CopyTo(`0[],System.Int32)
+  name: CopyTo(T[], int)
+  href: api/FastenUp.Runtime.Bindables.BindableCollection-1.html#FastenUp_Runtime_Bindables_BindableCollection_1_CopyTo__0___System_Int32_
+  commentId: M:FastenUp.Runtime.Bindables.BindableCollection`1.CopyTo(`0[],System.Int32)
+  name.vb: CopyTo(T(), Integer)
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.CopyTo(T[], int)
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).CopyTo(T(), Integer)
+  nameWithType: BindableCollection<T>.CopyTo(T[], int)
+  nameWithType.vb: BindableCollection(Of T).CopyTo(T(), Integer)
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.CopyTo*
+  name: CopyTo
+  href: api/FastenUp.Runtime.Bindables.BindableCollection-1.html#FastenUp_Runtime_Bindables_BindableCollection_1_CopyTo_
+  commentId: Overload:FastenUp.Runtime.Bindables.BindableCollection`1.CopyTo
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.CopyTo
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).CopyTo
+  nameWithType: BindableCollection<T>.CopyTo
+  nameWithType.vb: BindableCollection(Of T).CopyTo
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.Count
+  name: Count
+  href: api/FastenUp.Runtime.Bindables.BindableCollection-1.html#FastenUp_Runtime_Bindables_BindableCollection_1_Count
+  commentId: P:FastenUp.Runtime.Bindables.BindableCollection`1.Count
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.Count
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).Count
+  nameWithType: BindableCollection<T>.Count
+  nameWithType.vb: BindableCollection(Of T).Count
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.Count*
+  name: Count
+  href: api/FastenUp.Runtime.Bindables.BindableCollection-1.html#FastenUp_Runtime_Bindables_BindableCollection_1_Count_
+  commentId: Overload:FastenUp.Runtime.Bindables.BindableCollection`1.Count
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.Count
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).Count
+  nameWithType: BindableCollection<T>.Count
+  nameWithType.vb: BindableCollection(Of T).Count
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.OnItemAdded
+  name: OnItemAdded
+  href: api/FastenUp.Runtime.Bindables.BindableCollection-1.html#FastenUp_Runtime_Bindables_BindableCollection_1_OnItemAdded
+  commentId: E:FastenUp.Runtime.Bindables.BindableCollection`1.OnItemAdded
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.OnItemAdded
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).OnItemAdded
+  nameWithType: BindableCollection<T>.OnItemAdded
+  nameWithType.vb: BindableCollection(Of T).OnItemAdded
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.OnItemRemoved
+  name: OnItemRemoved
+  href: api/FastenUp.Runtime.Bindables.BindableCollection-1.html#FastenUp_Runtime_Bindables_BindableCollection_1_OnItemRemoved
+  commentId: E:FastenUp.Runtime.Bindables.BindableCollection`1.OnItemRemoved
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.OnItemRemoved
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).OnItemRemoved
+  nameWithType: BindableCollection<T>.OnItemRemoved
+  nameWithType.vb: BindableCollection(Of T).OnItemRemoved
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.Remove(`0)
+  name: Remove(T)
+  href: api/FastenUp.Runtime.Bindables.BindableCollection-1.html#FastenUp_Runtime_Bindables_BindableCollection_1_Remove__0_
+  commentId: M:FastenUp.Runtime.Bindables.BindableCollection`1.Remove(`0)
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.Remove(T)
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).Remove(T)
+  nameWithType: BindableCollection<T>.Remove(T)
+  nameWithType.vb: BindableCollection(Of T).Remove(T)
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.Remove*
+  name: Remove
+  href: api/FastenUp.Runtime.Bindables.BindableCollection-1.html#FastenUp_Runtime_Bindables_BindableCollection_1_Remove_
+  commentId: Overload:FastenUp.Runtime.Bindables.BindableCollection`1.Remove
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.Remove
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).Remove
+  nameWithType: BindableCollection<T>.Remove
+  nameWithType.vb: BindableCollection(Of T).Remove
+- uid: FastenUp.Runtime.Bindables.BindableEvent
+  name: BindableEvent
+  href: api/FastenUp.Runtime.Bindables.BindableEvent.html
+  commentId: T:FastenUp.Runtime.Bindables.BindableEvent
+  fullName: FastenUp.Runtime.Bindables.BindableEvent
+  nameWithType: BindableEvent
+- uid: FastenUp.Runtime.Bindables.BindableEvent`1
+  name: BindableEvent<T>
+  href: api/FastenUp.Runtime.Bindables.BindableEvent-1.html
+  commentId: T:FastenUp.Runtime.Bindables.BindableEvent`1
+  name.vb: BindableEvent(Of T)
+  fullName: FastenUp.Runtime.Bindables.BindableEvent<T>
+  fullName.vb: FastenUp.Runtime.Bindables.BindableEvent(Of T)
+  nameWithType: BindableEvent<T>
+  nameWithType.vb: BindableEvent(Of T)
+- uid: FastenUp.Runtime.Bindables.BindableRef`1
+  name: BindableRef<T>
+  href: api/FastenUp.Runtime.Bindables.BindableRef-1.html
+  commentId: T:FastenUp.Runtime.Bindables.BindableRef`1
+  name.vb: BindableRef(Of T)
+  fullName: FastenUp.Runtime.Bindables.BindableRef<T>
+  fullName.vb: FastenUp.Runtime.Bindables.BindableRef(Of T)
+  nameWithType: BindableRef<T>
+  nameWithType.vb: BindableRef(Of T)
+- uid: FastenUp.Runtime.Bindables.BindableRef`1.OnRefChanged
+  name: OnRefChanged
+  href: api/FastenUp.Runtime.Bindables.BindableRef-1.html#FastenUp_Runtime_Bindables_BindableRef_1_OnRefChanged
+  commentId: E:FastenUp.Runtime.Bindables.BindableRef`1.OnRefChanged
+  fullName: FastenUp.Runtime.Bindables.BindableRef<T>.OnRefChanged
+  fullName.vb: FastenUp.Runtime.Bindables.BindableRef(Of T).OnRefChanged
+  nameWithType: BindableRef<T>.OnRefChanged
+  nameWithType.vb: BindableRef(Of T).OnRefChanged
+- uid: FastenUp.Runtime.Bindables.BindableRef`1.Value
+  name: Value
+  href: api/FastenUp.Runtime.Bindables.BindableRef-1.html#FastenUp_Runtime_Bindables_BindableRef_1_Value
+  commentId: P:FastenUp.Runtime.Bindables.BindableRef`1.Value
+  fullName: FastenUp.Runtime.Bindables.BindableRef<T>.Value
+  fullName.vb: FastenUp.Runtime.Bindables.BindableRef(Of T).Value
+  nameWithType: BindableRef<T>.Value
+  nameWithType.vb: BindableRef(Of T).Value
+- uid: FastenUp.Runtime.Bindables.BindableRef`1.Value*
+  name: Value
+  href: api/FastenUp.Runtime.Bindables.BindableRef-1.html#FastenUp_Runtime_Bindables_BindableRef_1_Value_
+  commentId: Overload:FastenUp.Runtime.Bindables.BindableRef`1.Value
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BindableRef<T>.Value
+  fullName.vb: FastenUp.Runtime.Bindables.BindableRef(Of T).Value
+  nameWithType: BindableRef<T>.Value
+  nameWithType.vb: BindableRef(Of T).Value
+- uid: FastenUp.Runtime.Bindables.BindableSetup`1
+  name: BindableSetup<T>
+  href: api/FastenUp.Runtime.Bindables.BindableSetup-1.html
+  commentId: T:FastenUp.Runtime.Bindables.BindableSetup`1
+  name.vb: BindableSetup(Of T)
+  fullName: FastenUp.Runtime.Bindables.BindableSetup<T>
+  fullName.vb: FastenUp.Runtime.Bindables.BindableSetup(Of T)
+  nameWithType: BindableSetup<T>
+  nameWithType.vb: BindableSetup(Of T)
+- uid: FastenUp.Runtime.Bindables.BindableSetup`1.#ctor(`0)
+  name: BindableSetup(T)
+  href: api/FastenUp.Runtime.Bindables.BindableSetup-1.html#FastenUp_Runtime_Bindables_BindableSetup_1__ctor__0_
+  commentId: M:FastenUp.Runtime.Bindables.BindableSetup`1.#ctor(`0)
+  name.vb: New(T)
+  fullName: FastenUp.Runtime.Bindables.BindableSetup<T>.BindableSetup(T)
+  fullName.vb: FastenUp.Runtime.Bindables.BindableSetup(Of T).New(T)
+  nameWithType: BindableSetup<T>.BindableSetup(T)
+  nameWithType.vb: BindableSetup(Of T).New(T)
+- uid: FastenUp.Runtime.Bindables.BindableSetup`1.#ctor*
+  name: BindableSetup
+  href: api/FastenUp.Runtime.Bindables.BindableSetup-1.html#FastenUp_Runtime_Bindables_BindableSetup_1__ctor_
+  commentId: Overload:FastenUp.Runtime.Bindables.BindableSetup`1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: FastenUp.Runtime.Bindables.BindableSetup<T>.BindableSetup
+  fullName.vb: FastenUp.Runtime.Bindables.BindableSetup(Of T).New
+  nameWithType: BindableSetup<T>.BindableSetup
+  nameWithType.vb: BindableSetup(Of T).New
+- uid: FastenUp.Runtime.Bindables.Bindable`1
+  name: Bindable<T>
+  href: api/FastenUp.Runtime.Bindables.Bindable-1.html
+  commentId: T:FastenUp.Runtime.Bindables.Bindable`1
+  name.vb: Bindable(Of T)
+  fullName: FastenUp.Runtime.Bindables.Bindable<T>
+  fullName.vb: FastenUp.Runtime.Bindables.Bindable(Of T)
+  nameWithType: Bindable<T>
+  nameWithType.vb: Bindable(Of T)
+- uid: FastenUp.Runtime.Bindables.Bindable`1.#ctor(`0)
+  name: Bindable(T)
+  href: api/FastenUp.Runtime.Bindables.Bindable-1.html#FastenUp_Runtime_Bindables_Bindable_1__ctor__0_
+  commentId: M:FastenUp.Runtime.Bindables.Bindable`1.#ctor(`0)
+  name.vb: New(T)
+  fullName: FastenUp.Runtime.Bindables.Bindable<T>.Bindable(T)
+  fullName.vb: FastenUp.Runtime.Bindables.Bindable(Of T).New(T)
+  nameWithType: Bindable<T>.Bindable(T)
+  nameWithType.vb: Bindable(Of T).New(T)
+- uid: FastenUp.Runtime.Bindables.Bindable`1.#ctor*
+  name: Bindable
+  href: api/FastenUp.Runtime.Bindables.Bindable-1.html#FastenUp_Runtime_Bindables_Bindable_1__ctor_
+  commentId: Overload:FastenUp.Runtime.Bindables.Bindable`1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: FastenUp.Runtime.Bindables.Bindable<T>.Bindable
+  fullName.vb: FastenUp.Runtime.Bindables.Bindable(Of T).New
+  nameWithType: Bindable<T>.Bindable
+  nameWithType.vb: Bindable(Of T).New
+- uid: FastenUp.Runtime.Bindables.Bindable`1.OnValueChanged
+  name: OnValueChanged
+  href: api/FastenUp.Runtime.Bindables.Bindable-1.html#FastenUp_Runtime_Bindables_Bindable_1_OnValueChanged
+  commentId: E:FastenUp.Runtime.Bindables.Bindable`1.OnValueChanged
+  fullName: FastenUp.Runtime.Bindables.Bindable<T>.OnValueChanged
+  fullName.vb: FastenUp.Runtime.Bindables.Bindable(Of T).OnValueChanged
+  nameWithType: Bindable<T>.OnValueChanged
+  nameWithType.vb: Bindable(Of T).OnValueChanged
+- uid: FastenUp.Runtime.Bindables.Bindable`1.PostBind(FastenUp.Runtime.Binders.IBinder{`0})
+  name: PostBind(IBinder<T>)
+  href: api/FastenUp.Runtime.Bindables.Bindable-1.html#FastenUp_Runtime_Bindables_Bindable_1_PostBind_FastenUp_Runtime_Binders_IBinder__0__
+  commentId: M:FastenUp.Runtime.Bindables.Bindable`1.PostBind(FastenUp.Runtime.Binders.IBinder{`0})
+  name.vb: PostBind(IBinder(Of T))
+  fullName: FastenUp.Runtime.Bindables.Bindable<T>.PostBind(FastenUp.Runtime.Binders.IBinder<T>)
+  fullName.vb: FastenUp.Runtime.Bindables.Bindable(Of T).PostBind(FastenUp.Runtime.Binders.IBinder(Of T))
+  nameWithType: Bindable<T>.PostBind(IBinder<T>)
+  nameWithType.vb: Bindable(Of T).PostBind(IBinder(Of T))
+- uid: FastenUp.Runtime.Bindables.Bindable`1.PostBind*
+  name: PostBind
+  href: api/FastenUp.Runtime.Bindables.Bindable-1.html#FastenUp_Runtime_Bindables_Bindable_1_PostBind_
+  commentId: Overload:FastenUp.Runtime.Bindables.Bindable`1.PostBind
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.Bindable<T>.PostBind
+  fullName.vb: FastenUp.Runtime.Bindables.Bindable(Of T).PostBind
+  nameWithType: Bindable<T>.PostBind
+  nameWithType.vb: Bindable(Of T).PostBind
+- uid: FastenUp.Runtime.Bindables.Bindable`1.PostUnbind(FastenUp.Runtime.Binders.IBinder{`0})
+  name: PostUnbind(IBinder<T>)
+  href: api/FastenUp.Runtime.Bindables.Bindable-1.html#FastenUp_Runtime_Bindables_Bindable_1_PostUnbind_FastenUp_Runtime_Binders_IBinder__0__
+  commentId: M:FastenUp.Runtime.Bindables.Bindable`1.PostUnbind(FastenUp.Runtime.Binders.IBinder{`0})
+  name.vb: PostUnbind(IBinder(Of T))
+  fullName: FastenUp.Runtime.Bindables.Bindable<T>.PostUnbind(FastenUp.Runtime.Binders.IBinder<T>)
+  fullName.vb: FastenUp.Runtime.Bindables.Bindable(Of T).PostUnbind(FastenUp.Runtime.Binders.IBinder(Of T))
+  nameWithType: Bindable<T>.PostUnbind(IBinder<T>)
+  nameWithType.vb: Bindable(Of T).PostUnbind(IBinder(Of T))
+- uid: FastenUp.Runtime.Bindables.Bindable`1.PostUnbind*
+  name: PostUnbind
+  href: api/FastenUp.Runtime.Bindables.Bindable-1.html#FastenUp_Runtime_Bindables_Bindable_1_PostUnbind_
+  commentId: Overload:FastenUp.Runtime.Bindables.Bindable`1.PostUnbind
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.Bindable<T>.PostUnbind
+  fullName.vb: FastenUp.Runtime.Bindables.Bindable(Of T).PostUnbind
+  nameWithType: Bindable<T>.PostUnbind
+  nameWithType.vb: Bindable(Of T).PostUnbind
+- uid: FastenUp.Runtime.Bindables.Bindable`1.Value
+  name: Value
+  href: api/FastenUp.Runtime.Bindables.Bindable-1.html#FastenUp_Runtime_Bindables_Bindable_1_Value
+  commentId: P:FastenUp.Runtime.Bindables.Bindable`1.Value
+  fullName: FastenUp.Runtime.Bindables.Bindable<T>.Value
+  fullName.vb: FastenUp.Runtime.Bindables.Bindable(Of T).Value
+  nameWithType: Bindable<T>.Value
+  nameWithType.vb: Bindable(Of T).Value
+- uid: FastenUp.Runtime.Bindables.Bindable`1.Value*
+  name: Value
+  href: api/FastenUp.Runtime.Bindables.Bindable-1.html#FastenUp_Runtime_Bindables_Bindable_1_Value_
+  commentId: Overload:FastenUp.Runtime.Bindables.Bindable`1.Value
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.Bindable<T>.Value
+  fullName.vb: FastenUp.Runtime.Bindables.Bindable(Of T).Value
+  nameWithType: Bindable<T>.Value
+  nameWithType.vb: Bindable(Of T).Value
+- uid: FastenUp.Runtime.Bindables.IBindable
+  name: IBindable
+  href: api/FastenUp.Runtime.Bindables.IBindable.html
+  commentId: T:FastenUp.Runtime.Bindables.IBindable
+  fullName: FastenUp.Runtime.Bindables.IBindable
+  nameWithType: IBindable
+- uid: FastenUp.Runtime.Bindables.IBindableAction`1
+  name: IBindableAction<T>
+  href: api/FastenUp.Runtime.Bindables.IBindableAction-1.html
+  commentId: T:FastenUp.Runtime.Bindables.IBindableAction`1
+  name.vb: IBindableAction(Of T)
+  fullName: FastenUp.Runtime.Bindables.IBindableAction<T>
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableAction(Of T)
+  nameWithType: IBindableAction<T>
+  nameWithType.vb: IBindableAction(Of T)
+- uid: FastenUp.Runtime.Bindables.IBindableCollection`1
+  name: IBindableCollection<T>
+  href: api/FastenUp.Runtime.Bindables.IBindableCollection-1.html
+  commentId: T:FastenUp.Runtime.Bindables.IBindableCollection`1
+  name.vb: IBindableCollection(Of T)
+  fullName: FastenUp.Runtime.Bindables.IBindableCollection<T>
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableCollection(Of T)
+  nameWithType: IBindableCollection<T>
+  nameWithType.vb: IBindableCollection(Of T)
+- uid: FastenUp.Runtime.Bindables.IBindableEvent`1
+  name: IBindableEvent<T>
+  href: api/FastenUp.Runtime.Bindables.IBindableEvent-1.html
+  commentId: T:FastenUp.Runtime.Bindables.IBindableEvent`1
+  name.vb: IBindableEvent(Of T)
+  fullName: FastenUp.Runtime.Bindables.IBindableEvent<T>
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableEvent(Of T)
+  nameWithType: IBindableEvent<T>
+  nameWithType.vb: IBindableEvent(Of T)
+- uid: FastenUp.Runtime.Bindables.IBindableRef`1
+  name: IBindableRef<T>
+  href: api/FastenUp.Runtime.Bindables.IBindableRef-1.html
+  commentId: T:FastenUp.Runtime.Bindables.IBindableRef`1
+  name.vb: IBindableRef(Of T)
+  fullName: FastenUp.Runtime.Bindables.IBindableRef<T>
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableRef(Of T)
+  nameWithType: IBindableRef<T>
+  nameWithType.vb: IBindableRef(Of T)
+- uid: FastenUp.Runtime.Bindables.IBindable`1
+  name: IBindable<T>
+  href: api/FastenUp.Runtime.Bindables.IBindable-1.html
+  commentId: T:FastenUp.Runtime.Bindables.IBindable`1
+  name.vb: IBindable(Of T)
+  fullName: FastenUp.Runtime.Bindables.IBindable<T>
+  fullName.vb: FastenUp.Runtime.Bindables.IBindable(Of T)
+  nameWithType: IBindable<T>
+  nameWithType.vb: IBindable(Of T)
+- uid: FastenUp.Runtime.Binders
+  name: FastenUp.Runtime.Binders
+  href: api/FastenUp.Runtime.Binders.html
+  commentId: N:FastenUp.Runtime.Binders
+  fullName: FastenUp.Runtime.Binders
+  nameWithType: FastenUp.Runtime.Binders
+- uid: FastenUp.Runtime.Binders.Actions
+  name: FastenUp.Runtime.Binders.Actions
+  href: api/FastenUp.Runtime.Binders.Actions.html
+  commentId: N:FastenUp.Runtime.Binders.Actions
+  fullName: FastenUp.Runtime.Binders.Actions
+  nameWithType: FastenUp.Runtime.Binders.Actions
+- uid: FastenUp.Runtime.Binders.Actions.ActionBinder
+  name: ActionBinder
+  href: api/FastenUp.Runtime.Binders.Actions.ActionBinder.html
+  commentId: T:FastenUp.Runtime.Binders.Actions.ActionBinder
+  fullName: FastenUp.Runtime.Binders.Actions.ActionBinder
+  nameWithType: ActionBinder
+- uid: FastenUp.Runtime.Binders.Actions.ActionBinder`1
+  name: ActionBinder<T>
+  href: api/FastenUp.Runtime.Binders.Actions.ActionBinder-1.html
+  commentId: T:FastenUp.Runtime.Binders.Actions.ActionBinder`1
+  name.vb: ActionBinder(Of T)
+  fullName: FastenUp.Runtime.Binders.Actions.ActionBinder<T>
+  fullName.vb: FastenUp.Runtime.Binders.Actions.ActionBinder(Of T)
+  nameWithType: ActionBinder<T>
+  nameWithType.vb: ActionBinder(Of T)
+- uid: FastenUp.Runtime.Binders.Actions.BaseActionBinder`1
+  name: BaseActionBinder<T>
+  href: api/FastenUp.Runtime.Binders.Actions.BaseActionBinder-1.html
+  commentId: T:FastenUp.Runtime.Binders.Actions.BaseActionBinder`1
+  name.vb: BaseActionBinder(Of T)
+  fullName: FastenUp.Runtime.Binders.Actions.BaseActionBinder<T>
+  fullName.vb: FastenUp.Runtime.Binders.Actions.BaseActionBinder(Of T)
+  nameWithType: BaseActionBinder<T>
+  nameWithType.vb: BaseActionBinder(Of T)
+- uid: FastenUp.Runtime.Binders.Actions.BaseActionBinder`1.OnAction
+  name: OnAction
+  href: api/FastenUp.Runtime.Binders.Actions.BaseActionBinder-1.html#FastenUp_Runtime_Binders_Actions_BaseActionBinder_1_OnAction
+  commentId: P:FastenUp.Runtime.Binders.Actions.BaseActionBinder`1.OnAction
+  fullName: FastenUp.Runtime.Binders.Actions.BaseActionBinder<T>.OnAction
+  fullName.vb: FastenUp.Runtime.Binders.Actions.BaseActionBinder(Of T).OnAction
+  nameWithType: BaseActionBinder<T>.OnAction
+  nameWithType.vb: BaseActionBinder(Of T).OnAction
+- uid: FastenUp.Runtime.Binders.Actions.BaseActionBinder`1.OnAction*
+  name: OnAction
+  href: api/FastenUp.Runtime.Binders.Actions.BaseActionBinder-1.html#FastenUp_Runtime_Binders_Actions_BaseActionBinder_1_OnAction_
+  commentId: Overload:FastenUp.Runtime.Binders.Actions.BaseActionBinder`1.OnAction
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Actions.BaseActionBinder<T>.OnAction
+  fullName.vb: FastenUp.Runtime.Binders.Actions.BaseActionBinder(Of T).OnAction
+  nameWithType: BaseActionBinder<T>.OnAction
+  nameWithType.vb: BaseActionBinder(Of T).OnAction
+- uid: FastenUp.Runtime.Binders.Actions.BooleanActionBinder
+  name: BooleanActionBinder
+  href: api/FastenUp.Runtime.Binders.Actions.BooleanActionBinder.html
+  commentId: T:FastenUp.Runtime.Binders.Actions.BooleanActionBinder
+  fullName: FastenUp.Runtime.Binders.Actions.BooleanActionBinder
+  nameWithType: BooleanActionBinder
+- uid: FastenUp.Runtime.Binders.Actions.FloatActionBinder
+  name: FloatActionBinder
+  href: api/FastenUp.Runtime.Binders.Actions.FloatActionBinder.html
+  commentId: T:FastenUp.Runtime.Binders.Actions.FloatActionBinder
+  fullName: FastenUp.Runtime.Binders.Actions.FloatActionBinder
+  nameWithType: FloatActionBinder
+- uid: FastenUp.Runtime.Binders.Actions.IActionBinder`1
+  name: IActionBinder<T>
+  href: api/FastenUp.Runtime.Binders.Actions.IActionBinder-1.html
+  commentId: T:FastenUp.Runtime.Binders.Actions.IActionBinder`1
+  name.vb: IActionBinder(Of T)
+  fullName: FastenUp.Runtime.Binders.Actions.IActionBinder<T>
+  fullName.vb: FastenUp.Runtime.Binders.Actions.IActionBinder(Of T)
+  nameWithType: IActionBinder<T>
+  nameWithType.vb: IActionBinder(Of T)
+- uid: FastenUp.Runtime.Binders.Actions.IActionBinder`1.OnAction
+  name: OnAction
+  href: api/FastenUp.Runtime.Binders.Actions.IActionBinder-1.html#FastenUp_Runtime_Binders_Actions_IActionBinder_1_OnAction
+  commentId: P:FastenUp.Runtime.Binders.Actions.IActionBinder`1.OnAction
+  fullName: FastenUp.Runtime.Binders.Actions.IActionBinder<T>.OnAction
+  fullName.vb: FastenUp.Runtime.Binders.Actions.IActionBinder(Of T).OnAction
+  nameWithType: IActionBinder<T>.OnAction
+  nameWithType.vb: IActionBinder(Of T).OnAction
+- uid: FastenUp.Runtime.Binders.Actions.IActionBinder`1.OnAction*
+  name: OnAction
+  href: api/FastenUp.Runtime.Binders.Actions.IActionBinder-1.html#FastenUp_Runtime_Binders_Actions_IActionBinder_1_OnAction_
+  commentId: Overload:FastenUp.Runtime.Binders.Actions.IActionBinder`1.OnAction
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Actions.IActionBinder<T>.OnAction
+  fullName.vb: FastenUp.Runtime.Binders.Actions.IActionBinder(Of T).OnAction
+  nameWithType: IActionBinder<T>.OnAction
+  nameWithType.vb: IActionBinder(Of T).OnAction
+- uid: FastenUp.Runtime.Binders.Actions.IntActionBinder
+  name: IntActionBinder
+  href: api/FastenUp.Runtime.Binders.Actions.IntActionBinder.html
+  commentId: T:FastenUp.Runtime.Binders.Actions.IntActionBinder
+  fullName: FastenUp.Runtime.Binders.Actions.IntActionBinder
+  nameWithType: IntActionBinder
+- uid: FastenUp.Runtime.Binders.BaseBinder
+  name: BaseBinder
+  href: api/FastenUp.Runtime.Binders.BaseBinder.html
+  commentId: T:FastenUp.Runtime.Binders.BaseBinder
+  fullName: FastenUp.Runtime.Binders.BaseBinder
+  nameWithType: BaseBinder
+- uid: FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+  name: IncludeOwnGameObjectInFind
+  href: api/FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_IncludeOwnGameObjectInFind
+  commentId: P:FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+  fullName: FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+  nameWithType: BaseBinder.IncludeOwnGameObjectInFind
+- uid: FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind*
+  name: IncludeOwnGameObjectInFind
+  href: api/FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_IncludeOwnGameObjectInFind_
+  commentId: Overload:FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+  nameWithType: BaseBinder.IncludeOwnGameObjectInFind
+- uid: FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+  name: InvokeOnBinderChanged()
+  href: api/FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_InvokeOnBinderChanged
+  commentId: M:FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+  fullName: FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged()
+  nameWithType: BaseBinder.InvokeOnBinderChanged()
+- uid: FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged*
+  name: InvokeOnBinderChanged
+  href: api/FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_InvokeOnBinderChanged_
+  commentId: Overload:FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+  nameWithType: BaseBinder.InvokeOnBinderChanged
+- uid: FastenUp.Runtime.Binders.BaseBinder.Name
+  name: Name
+  href: api/FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_Name
+  commentId: P:FastenUp.Runtime.Binders.BaseBinder.Name
+  fullName: FastenUp.Runtime.Binders.BaseBinder.Name
+  nameWithType: BaseBinder.Name
+- uid: FastenUp.Runtime.Binders.BaseBinder.Name*
+  name: Name
+  href: api/FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_Name_
+  commentId: Overload:FastenUp.Runtime.Binders.BaseBinder.Name
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.BaseBinder.Name
+  nameWithType: BaseBinder.Name
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  name: OnBinderChanged
+  href: api/FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnBinderChanged
+  commentId: E:FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  nameWithType: BaseBinder.OnBinderChanged
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnDisable
+  name: OnDisable()
+  href: api/FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnDisable
+  commentId: M:FastenUp.Runtime.Binders.BaseBinder.OnDisable
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnDisable()
+  nameWithType: BaseBinder.OnDisable()
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnDisable*
+  name: OnDisable
+  href: api/FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnDisable_
+  commentId: Overload:FastenUp.Runtime.Binders.BaseBinder.OnDisable
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnDisable
+  nameWithType: BaseBinder.OnDisable
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnEnable
+  name: OnEnable()
+  href: api/FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnEnable
+  commentId: M:FastenUp.Runtime.Binders.BaseBinder.OnEnable
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnEnable()
+  nameWithType: BaseBinder.OnEnable()
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnEnable*
+  name: OnEnable
+  href: api/FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnEnable_
+  commentId: Overload:FastenUp.Runtime.Binders.BaseBinder.OnEnable
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnEnable
+  nameWithType: BaseBinder.OnEnable
+- uid: FastenUp.Runtime.Binders.Behaviours
+  name: FastenUp.Runtime.Binders.Behaviours
+  href: api/FastenUp.Runtime.Binders.Behaviours.html
+  commentId: N:FastenUp.Runtime.Binders.Behaviours
+  fullName: FastenUp.Runtime.Binders.Behaviours
+  nameWithType: FastenUp.Runtime.Binders.Behaviours
+- uid: FastenUp.Runtime.Binders.Behaviours.ColorBinder
+  name: ColorBinder
+  href: api/FastenUp.Runtime.Binders.Behaviours.ColorBinder.html
+  commentId: T:FastenUp.Runtime.Binders.Behaviours.ColorBinder
+  fullName: FastenUp.Runtime.Binders.Behaviours.ColorBinder
+  nameWithType: ColorBinder
+- uid: FastenUp.Runtime.Binders.Behaviours.ColorBinder.SetValue(UnityEngine.Color)
+  name: SetValue(Color)
+  href: api/FastenUp.Runtime.Binders.Behaviours.ColorBinder.html#FastenUp_Runtime_Binders_Behaviours_ColorBinder_SetValue_UnityEngine_Color_
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.ColorBinder.SetValue(UnityEngine.Color)
+  fullName: FastenUp.Runtime.Binders.Behaviours.ColorBinder.SetValue(UnityEngine.Color)
+  nameWithType: ColorBinder.SetValue(Color)
+- uid: FastenUp.Runtime.Binders.Behaviours.ColorBinder.SetValue*
+  name: SetValue
+  href: api/FastenUp.Runtime.Binders.Behaviours.ColorBinder.html#FastenUp_Runtime_Binders_Behaviours_ColorBinder_SetValue_
+  commentId: Overload:FastenUp.Runtime.Binders.Behaviours.ColorBinder.SetValue
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Behaviours.ColorBinder.SetValue
+  nameWithType: ColorBinder.SetValue
+- uid: FastenUp.Runtime.Binders.Behaviours.DropdownBinder
+  name: DropdownBinder
+  href: api/FastenUp.Runtime.Binders.Behaviours.DropdownBinder.html
+  commentId: T:FastenUp.Runtime.Binders.Behaviours.DropdownBinder
+  fullName: FastenUp.Runtime.Binders.Behaviours.DropdownBinder
+  nameWithType: DropdownBinder
+- uid: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.GetValue
+  name: GetValue()
+  href: api/FastenUp.Runtime.Binders.Behaviours.DropdownBinder.html#FastenUp_Runtime_Binders_Behaviours_DropdownBinder_GetValue
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.DropdownBinder.GetValue
+  fullName: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.GetValue()
+  nameWithType: DropdownBinder.GetValue()
+- uid: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.GetValue*
+  name: GetValue
+  href: api/FastenUp.Runtime.Binders.Behaviours.DropdownBinder.html#FastenUp_Runtime_Binders_Behaviours_DropdownBinder_GetValue_
+  commentId: Overload:FastenUp.Runtime.Binders.Behaviours.DropdownBinder.GetValue
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.GetValue
+  nameWithType: DropdownBinder.GetValue
+- uid: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.OnDisable
+  name: OnDisable()
+  href: api/FastenUp.Runtime.Binders.Behaviours.DropdownBinder.html#FastenUp_Runtime_Binders_Behaviours_DropdownBinder_OnDisable
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.DropdownBinder.OnDisable
+  fullName: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.OnDisable()
+  nameWithType: DropdownBinder.OnDisable()
+- uid: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.OnDisable*
+  name: OnDisable
+  href: api/FastenUp.Runtime.Binders.Behaviours.DropdownBinder.html#FastenUp_Runtime_Binders_Behaviours_DropdownBinder_OnDisable_
+  commentId: Overload:FastenUp.Runtime.Binders.Behaviours.DropdownBinder.OnDisable
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.OnDisable
+  nameWithType: DropdownBinder.OnDisable
+- uid: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData})
+  name: SetValue(List<OptionData>)
+  href: api/FastenUp.Runtime.Binders.Behaviours.DropdownBinder.html#FastenUp_Runtime_Binders_Behaviours_DropdownBinder_SetValue_System_Collections_Generic_List_TMPro_TMP_Dropdown_OptionData__
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData})
+  name.vb: SetValue(List(Of OptionData))
+  fullName: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(System.Collections.Generic.List<TMPro.TMP_Dropdown.OptionData>)
+  fullName.vb: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(System.Collections.Generic.List(Of TMPro.TMP_Dropdown.OptionData))
+  nameWithType: DropdownBinder.SetValue(List<TMP_Dropdown.OptionData>)
+  nameWithType.vb: DropdownBinder.SetValue(List(Of TMP_Dropdown.OptionData))
+- uid: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(System.Int32)
+  name: SetValue(int)
+  href: api/FastenUp.Runtime.Binders.Behaviours.DropdownBinder.html#FastenUp_Runtime_Binders_Behaviours_DropdownBinder_SetValue_System_Int32_
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(System.Int32)
+  name.vb: SetValue(Integer)
+  fullName: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(int)
+  fullName.vb: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(Integer)
+  nameWithType: DropdownBinder.SetValue(int)
+  nameWithType.vb: DropdownBinder.SetValue(Integer)
+- uid: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(System.String[])
+  name: SetValue(string[])
+  href: api/FastenUp.Runtime.Binders.Behaviours.DropdownBinder.html#FastenUp_Runtime_Binders_Behaviours_DropdownBinder_SetValue_System_String___
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(System.String[])
+  name.vb: SetValue(String())
+  fullName: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(string[])
+  fullName.vb: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(String())
+  nameWithType: DropdownBinder.SetValue(string[])
+  nameWithType.vb: DropdownBinder.SetValue(String())
+- uid: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue*
+  name: SetValue
+  href: api/FastenUp.Runtime.Binders.Behaviours.DropdownBinder.html#FastenUp_Runtime_Binders_Behaviours_DropdownBinder_SetValue_
+  commentId: Overload:FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue
+  nameWithType: DropdownBinder.SetValue
+- uid: FastenUp.Runtime.Binders.Behaviours.InputFieldBinder
+  name: InputFieldBinder
+  href: api/FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.html
+  commentId: T:FastenUp.Runtime.Binders.Behaviours.InputFieldBinder
+  fullName: FastenUp.Runtime.Binders.Behaviours.InputFieldBinder
+  nameWithType: InputFieldBinder
+- uid: FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.GetValue
+  name: GetValue()
+  href: api/FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.html#FastenUp_Runtime_Binders_Behaviours_InputFieldBinder_GetValue
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.GetValue
+  fullName: FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.GetValue()
+  nameWithType: InputFieldBinder.GetValue()
+- uid: FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.GetValue*
+  name: GetValue
+  href: api/FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.html#FastenUp_Runtime_Binders_Behaviours_InputFieldBinder_GetValue_
+  commentId: Overload:FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.GetValue
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.GetValue
+  nameWithType: InputFieldBinder.GetValue
+- uid: FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.OnDisable
+  name: OnDisable()
+  href: api/FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.html#FastenUp_Runtime_Binders_Behaviours_InputFieldBinder_OnDisable
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.OnDisable
+  fullName: FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.OnDisable()
+  nameWithType: InputFieldBinder.OnDisable()
+- uid: FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.OnDisable*
+  name: OnDisable
+  href: api/FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.html#FastenUp_Runtime_Binders_Behaviours_InputFieldBinder_OnDisable_
+  commentId: Overload:FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.OnDisable
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.OnDisable
+  nameWithType: InputFieldBinder.OnDisable
+- uid: FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.SetValue(System.String)
+  name: SetValue(string)
+  href: api/FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.html#FastenUp_Runtime_Binders_Behaviours_InputFieldBinder_SetValue_System_String_
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.SetValue(System.String)
+  name.vb: SetValue(String)
+  fullName: FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.SetValue(string)
+  fullName.vb: FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.SetValue(String)
+  nameWithType: InputFieldBinder.SetValue(string)
+  nameWithType.vb: InputFieldBinder.SetValue(String)
+- uid: FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.SetValue*
+  name: SetValue
+  href: api/FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.html#FastenUp_Runtime_Binders_Behaviours_InputFieldBinder_SetValue_
+  commentId: Overload:FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.SetValue
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.SetValue
+  nameWithType: InputFieldBinder.SetValue
+- uid: FastenUp.Runtime.Binders.Behaviours.SliderBinder
+  name: SliderBinder
+  href: api/FastenUp.Runtime.Binders.Behaviours.SliderBinder.html
+  commentId: T:FastenUp.Runtime.Binders.Behaviours.SliderBinder
+  fullName: FastenUp.Runtime.Binders.Behaviours.SliderBinder
+  nameWithType: SliderBinder
+- uid: FastenUp.Runtime.Binders.Behaviours.SliderBinder.GetValue
+  name: GetValue()
+  href: api/FastenUp.Runtime.Binders.Behaviours.SliderBinder.html#FastenUp_Runtime_Binders_Behaviours_SliderBinder_GetValue
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.SliderBinder.GetValue
+  fullName: FastenUp.Runtime.Binders.Behaviours.SliderBinder.GetValue()
+  nameWithType: SliderBinder.GetValue()
+- uid: FastenUp.Runtime.Binders.Behaviours.SliderBinder.GetValue*
+  name: GetValue
+  href: api/FastenUp.Runtime.Binders.Behaviours.SliderBinder.html#FastenUp_Runtime_Binders_Behaviours_SliderBinder_GetValue_
+  commentId: Overload:FastenUp.Runtime.Binders.Behaviours.SliderBinder.GetValue
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Behaviours.SliderBinder.GetValue
+  nameWithType: SliderBinder.GetValue
+- uid: FastenUp.Runtime.Binders.Behaviours.SliderBinder.OnDisable
+  name: OnDisable()
+  href: api/FastenUp.Runtime.Binders.Behaviours.SliderBinder.html#FastenUp_Runtime_Binders_Behaviours_SliderBinder_OnDisable
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.SliderBinder.OnDisable
+  fullName: FastenUp.Runtime.Binders.Behaviours.SliderBinder.OnDisable()
+  nameWithType: SliderBinder.OnDisable()
+- uid: FastenUp.Runtime.Binders.Behaviours.SliderBinder.OnDisable*
+  name: OnDisable
+  href: api/FastenUp.Runtime.Binders.Behaviours.SliderBinder.html#FastenUp_Runtime_Binders_Behaviours_SliderBinder_OnDisable_
+  commentId: Overload:FastenUp.Runtime.Binders.Behaviours.SliderBinder.OnDisable
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Behaviours.SliderBinder.OnDisable
+  nameWithType: SliderBinder.OnDisable
+- uid: FastenUp.Runtime.Binders.Behaviours.SliderBinder.SetValue(System.Int32)
+  name: SetValue(int)
+  href: api/FastenUp.Runtime.Binders.Behaviours.SliderBinder.html#FastenUp_Runtime_Binders_Behaviours_SliderBinder_SetValue_System_Int32_
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.SliderBinder.SetValue(System.Int32)
+  name.vb: SetValue(Integer)
+  fullName: FastenUp.Runtime.Binders.Behaviours.SliderBinder.SetValue(int)
+  fullName.vb: FastenUp.Runtime.Binders.Behaviours.SliderBinder.SetValue(Integer)
+  nameWithType: SliderBinder.SetValue(int)
+  nameWithType.vb: SliderBinder.SetValue(Integer)
+- uid: FastenUp.Runtime.Binders.Behaviours.SliderBinder.SetValue(System.Single)
+  name: SetValue(float)
+  href: api/FastenUp.Runtime.Binders.Behaviours.SliderBinder.html#FastenUp_Runtime_Binders_Behaviours_SliderBinder_SetValue_System_Single_
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.SliderBinder.SetValue(System.Single)
+  name.vb: SetValue(Single)
+  fullName: FastenUp.Runtime.Binders.Behaviours.SliderBinder.SetValue(float)
+  fullName.vb: FastenUp.Runtime.Binders.Behaviours.SliderBinder.SetValue(Single)
+  nameWithType: SliderBinder.SetValue(float)
+  nameWithType.vb: SliderBinder.SetValue(Single)
+- uid: FastenUp.Runtime.Binders.Behaviours.SliderBinder.SetValue(UnityEngine.Vector2)
+  name: SetValue(Vector2)
+  href: api/FastenUp.Runtime.Binders.Behaviours.SliderBinder.html#FastenUp_Runtime_Binders_Behaviours_SliderBinder_SetValue_UnityEngine_Vector2_
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.SliderBinder.SetValue(UnityEngine.Vector2)
+  fullName: FastenUp.Runtime.Binders.Behaviours.SliderBinder.SetValue(UnityEngine.Vector2)
+  nameWithType: SliderBinder.SetValue(Vector2)
+- uid: FastenUp.Runtime.Binders.Behaviours.SliderBinder.SetValue(UnityEngine.Vector2Int)
+  name: SetValue(Vector2Int)
+  href: api/FastenUp.Runtime.Binders.Behaviours.SliderBinder.html#FastenUp_Runtime_Binders_Behaviours_SliderBinder_SetValue_UnityEngine_Vector2Int_
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.SliderBinder.SetValue(UnityEngine.Vector2Int)
+  fullName: FastenUp.Runtime.Binders.Behaviours.SliderBinder.SetValue(UnityEngine.Vector2Int)
+  nameWithType: SliderBinder.SetValue(Vector2Int)
+- uid: FastenUp.Runtime.Binders.Behaviours.SliderBinder.SetValue*
+  name: SetValue
+  href: api/FastenUp.Runtime.Binders.Behaviours.SliderBinder.html#FastenUp_Runtime_Binders_Behaviours_SliderBinder_SetValue_
+  commentId: Overload:FastenUp.Runtime.Binders.Behaviours.SliderBinder.SetValue
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Behaviours.SliderBinder.SetValue
+  nameWithType: SliderBinder.SetValue
+- uid: FastenUp.Runtime.Binders.Behaviours.SpriteBinder
+  name: SpriteBinder
+  href: api/FastenUp.Runtime.Binders.Behaviours.SpriteBinder.html
+  commentId: T:FastenUp.Runtime.Binders.Behaviours.SpriteBinder
+  fullName: FastenUp.Runtime.Binders.Behaviours.SpriteBinder
+  nameWithType: SpriteBinder
+- uid: FastenUp.Runtime.Binders.Behaviours.SpriteBinder.SetValue(UnityEngine.Sprite)
+  name: SetValue(Sprite)
+  href: api/FastenUp.Runtime.Binders.Behaviours.SpriteBinder.html#FastenUp_Runtime_Binders_Behaviours_SpriteBinder_SetValue_UnityEngine_Sprite_
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.SpriteBinder.SetValue(UnityEngine.Sprite)
+  fullName: FastenUp.Runtime.Binders.Behaviours.SpriteBinder.SetValue(UnityEngine.Sprite)
+  nameWithType: SpriteBinder.SetValue(Sprite)
+- uid: FastenUp.Runtime.Binders.Behaviours.SpriteBinder.SetValue*
+  name: SetValue
+  href: api/FastenUp.Runtime.Binders.Behaviours.SpriteBinder.html#FastenUp_Runtime_Binders_Behaviours_SpriteBinder_SetValue_
+  commentId: Overload:FastenUp.Runtime.Binders.Behaviours.SpriteBinder.SetValue
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Behaviours.SpriteBinder.SetValue
+  nameWithType: SpriteBinder.SetValue
+- uid: FastenUp.Runtime.Binders.Behaviours.TextBinder
+  name: TextBinder
+  href: api/FastenUp.Runtime.Binders.Behaviours.TextBinder.html
+  commentId: T:FastenUp.Runtime.Binders.Behaviours.TextBinder
+  fullName: FastenUp.Runtime.Binders.Behaviours.TextBinder
+  nameWithType: TextBinder
+- uid: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(System.Int32)
+  name: SetValue(int)
+  href: api/FastenUp.Runtime.Binders.Behaviours.TextBinder.html#FastenUp_Runtime_Binders_Behaviours_TextBinder_SetValue_System_Int32_
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(System.Int32)
+  name.vb: SetValue(Integer)
+  fullName: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(int)
+  fullName.vb: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(Integer)
+  nameWithType: TextBinder.SetValue(int)
+  nameWithType.vb: TextBinder.SetValue(Integer)
+- uid: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(System.Single)
+  name: SetValue(float)
+  href: api/FastenUp.Runtime.Binders.Behaviours.TextBinder.html#FastenUp_Runtime_Binders_Behaviours_TextBinder_SetValue_System_Single_
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(System.Single)
+  name.vb: SetValue(Single)
+  fullName: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(float)
+  fullName.vb: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(Single)
+  nameWithType: TextBinder.SetValue(float)
+  nameWithType.vb: TextBinder.SetValue(Single)
+- uid: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(System.String)
+  name: SetValue(string)
+  href: api/FastenUp.Runtime.Binders.Behaviours.TextBinder.html#FastenUp_Runtime_Binders_Behaviours_TextBinder_SetValue_System_String_
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(System.String)
+  name.vb: SetValue(String)
+  fullName: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(string)
+  fullName.vb: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(String)
+  nameWithType: TextBinder.SetValue(string)
+  nameWithType.vb: TextBinder.SetValue(String)
+- uid: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue*
+  name: SetValue
+  href: api/FastenUp.Runtime.Binders.Behaviours.TextBinder.html#FastenUp_Runtime_Binders_Behaviours_TextBinder_SetValue_
+  commentId: Overload:FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue
+  nameWithType: TextBinder.SetValue
+- uid: FastenUp.Runtime.Binders.Behaviours.ToggleBinder
+  name: ToggleBinder
+  href: api/FastenUp.Runtime.Binders.Behaviours.ToggleBinder.html
+  commentId: T:FastenUp.Runtime.Binders.Behaviours.ToggleBinder
+  fullName: FastenUp.Runtime.Binders.Behaviours.ToggleBinder
+  nameWithType: ToggleBinder
+- uid: FastenUp.Runtime.Binders.Behaviours.ToggleBinder.GetValue
+  name: GetValue()
+  href: api/FastenUp.Runtime.Binders.Behaviours.ToggleBinder.html#FastenUp_Runtime_Binders_Behaviours_ToggleBinder_GetValue
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.ToggleBinder.GetValue
+  fullName: FastenUp.Runtime.Binders.Behaviours.ToggleBinder.GetValue()
+  nameWithType: ToggleBinder.GetValue()
+- uid: FastenUp.Runtime.Binders.Behaviours.ToggleBinder.GetValue*
+  name: GetValue
+  href: api/FastenUp.Runtime.Binders.Behaviours.ToggleBinder.html#FastenUp_Runtime_Binders_Behaviours_ToggleBinder_GetValue_
+  commentId: Overload:FastenUp.Runtime.Binders.Behaviours.ToggleBinder.GetValue
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Behaviours.ToggleBinder.GetValue
+  nameWithType: ToggleBinder.GetValue
+- uid: FastenUp.Runtime.Binders.Behaviours.ToggleBinder.OnDisable
+  name: OnDisable()
+  href: api/FastenUp.Runtime.Binders.Behaviours.ToggleBinder.html#FastenUp_Runtime_Binders_Behaviours_ToggleBinder_OnDisable
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.ToggleBinder.OnDisable
+  fullName: FastenUp.Runtime.Binders.Behaviours.ToggleBinder.OnDisable()
+  nameWithType: ToggleBinder.OnDisable()
+- uid: FastenUp.Runtime.Binders.Behaviours.ToggleBinder.OnDisable*
+  name: OnDisable
+  href: api/FastenUp.Runtime.Binders.Behaviours.ToggleBinder.html#FastenUp_Runtime_Binders_Behaviours_ToggleBinder_OnDisable_
+  commentId: Overload:FastenUp.Runtime.Binders.Behaviours.ToggleBinder.OnDisable
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Behaviours.ToggleBinder.OnDisable
+  nameWithType: ToggleBinder.OnDisable
+- uid: FastenUp.Runtime.Binders.Behaviours.ToggleBinder.SetValue(System.Boolean)
+  name: SetValue(bool)
+  href: api/FastenUp.Runtime.Binders.Behaviours.ToggleBinder.html#FastenUp_Runtime_Binders_Behaviours_ToggleBinder_SetValue_System_Boolean_
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.ToggleBinder.SetValue(System.Boolean)
+  name.vb: SetValue(Boolean)
+  fullName: FastenUp.Runtime.Binders.Behaviours.ToggleBinder.SetValue(bool)
+  fullName.vb: FastenUp.Runtime.Binders.Behaviours.ToggleBinder.SetValue(Boolean)
+  nameWithType: ToggleBinder.SetValue(bool)
+  nameWithType.vb: ToggleBinder.SetValue(Boolean)
+- uid: FastenUp.Runtime.Binders.Behaviours.ToggleBinder.SetValue*
+  name: SetValue
+  href: api/FastenUp.Runtime.Binders.Behaviours.ToggleBinder.html#FastenUp_Runtime_Binders_Behaviours_ToggleBinder_SetValue_
+  commentId: Overload:FastenUp.Runtime.Binders.Behaviours.ToggleBinder.SetValue
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Behaviours.ToggleBinder.SetValue
+  nameWithType: ToggleBinder.SetValue
+- uid: FastenUp.Runtime.Binders.Behaviours.VisibilityBinder
+  name: VisibilityBinder
+  href: api/FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.html
+  commentId: T:FastenUp.Runtime.Binders.Behaviours.VisibilityBinder
+  fullName: FastenUp.Runtime.Binders.Behaviours.VisibilityBinder
+  nameWithType: VisibilityBinder
+- uid: FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.GetValue
+  name: GetValue()
+  href: api/FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.html#FastenUp_Runtime_Binders_Behaviours_VisibilityBinder_GetValue
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.GetValue
+  fullName: FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.GetValue()
+  nameWithType: VisibilityBinder.GetValue()
+- uid: FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.GetValue*
+  name: GetValue
+  href: api/FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.html#FastenUp_Runtime_Binders_Behaviours_VisibilityBinder_GetValue_
+  commentId: Overload:FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.GetValue
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.GetValue
+  nameWithType: VisibilityBinder.GetValue
+- uid: FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.RebuildCache
+  name: RebuildCache()
+  href: api/FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.html#FastenUp_Runtime_Binders_Behaviours_VisibilityBinder_RebuildCache
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.RebuildCache
+  fullName: FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.RebuildCache()
+  nameWithType: VisibilityBinder.RebuildCache()
+- uid: FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.RebuildCache*
+  name: RebuildCache
+  href: api/FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.html#FastenUp_Runtime_Binders_Behaviours_VisibilityBinder_RebuildCache_
+  commentId: Overload:FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.RebuildCache
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.RebuildCache
+  nameWithType: VisibilityBinder.RebuildCache
+- uid: FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.SetValue(System.Boolean)
+  name: SetValue(bool)
+  href: api/FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.html#FastenUp_Runtime_Binders_Behaviours_VisibilityBinder_SetValue_System_Boolean_
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.SetValue(System.Boolean)
+  name.vb: SetValue(Boolean)
+  fullName: FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.SetValue(bool)
+  fullName.vb: FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.SetValue(Boolean)
+  nameWithType: VisibilityBinder.SetValue(bool)
+  nameWithType.vb: VisibilityBinder.SetValue(Boolean)
+- uid: FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.SetValue*
+  name: SetValue
+  href: api/FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.html#FastenUp_Runtime_Binders_Behaviours_VisibilityBinder_SetValue_
+  commentId: Overload:FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.SetValue
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.SetValue
+  nameWithType: VisibilityBinder.SetValue
+- uid: FastenUp.Runtime.Binders.Collections
+  name: FastenUp.Runtime.Binders.Collections
+  href: api/FastenUp.Runtime.Binders.Collections.html
+  commentId: N:FastenUp.Runtime.Binders.Collections
+  fullName: FastenUp.Runtime.Binders.Collections
+  nameWithType: FastenUp.Runtime.Binders.Collections
+- uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+  name: ICollectionBinder<T>
+  href: api/FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html
+  commentId: T:FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+  name.vb: ICollectionBinder(Of T)
+  fullName: FastenUp.Runtime.Binders.Collections.ICollectionBinder<T>
+  fullName.vb: FastenUp.Runtime.Binders.Collections.ICollectionBinder(Of T)
+  nameWithType: ICollectionBinder<T>
+  nameWithType.vb: ICollectionBinder(Of T)
+- uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Add(`0)
+  name: Add(T)
+  href: api/FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html#FastenUp_Runtime_Binders_Collections_ICollectionBinder_1_Add__0_
+  commentId: M:FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Add(`0)
+  fullName: FastenUp.Runtime.Binders.Collections.ICollectionBinder<T>.Add(T)
+  fullName.vb: FastenUp.Runtime.Binders.Collections.ICollectionBinder(Of T).Add(T)
+  nameWithType: ICollectionBinder<T>.Add(T)
+  nameWithType.vb: ICollectionBinder(Of T).Add(T)
+- uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Add*
+  name: Add
+  href: api/FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html#FastenUp_Runtime_Binders_Collections_ICollectionBinder_1_Add_
+  commentId: Overload:FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Add
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Collections.ICollectionBinder<T>.Add
+  fullName.vb: FastenUp.Runtime.Binders.Collections.ICollectionBinder(Of T).Add
+  nameWithType: ICollectionBinder<T>.Add
+  nameWithType.vb: ICollectionBinder(Of T).Add
+- uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Remove(`0)
+  name: Remove(T)
+  href: api/FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html#FastenUp_Runtime_Binders_Collections_ICollectionBinder_1_Remove__0_
+  commentId: M:FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Remove(`0)
+  fullName: FastenUp.Runtime.Binders.Collections.ICollectionBinder<T>.Remove(T)
+  fullName.vb: FastenUp.Runtime.Binders.Collections.ICollectionBinder(Of T).Remove(T)
+  nameWithType: ICollectionBinder<T>.Remove(T)
+  nameWithType.vb: ICollectionBinder(Of T).Remove(T)
+- uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Remove*
+  name: Remove
+  href: api/FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html#FastenUp_Runtime_Binders_Collections_ICollectionBinder_1_Remove_
+  commentId: Overload:FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Remove
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Collections.ICollectionBinder<T>.Remove
+  fullName.vb: FastenUp.Runtime.Binders.Collections.ICollectionBinder(Of T).Remove
+  nameWithType: ICollectionBinder<T>.Remove
+  nameWithType.vb: ICollectionBinder(Of T).Remove
+- uid: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder
+  name: MediatorCollectionBinder
+  href: api/FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.html
+  commentId: T:FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder
+  fullName: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder
+  nameWithType: MediatorCollectionBinder
+- uid: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Add(FastenUp.Runtime.Mediators.IInternalMediator)
+  name: Add(IInternalMediator)
+  href: api/FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.html#FastenUp_Runtime_Binders_Collections_MediatorCollectionBinder_Add_FastenUp_Runtime_Mediators_IInternalMediator_
+  commentId: M:FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Add(FastenUp.Runtime.Mediators.IInternalMediator)
+  fullName: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Add(FastenUp.Runtime.Mediators.IInternalMediator)
+  nameWithType: MediatorCollectionBinder.Add(IInternalMediator)
+- uid: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Add*
+  name: Add
+  href: api/FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.html#FastenUp_Runtime_Binders_Collections_MediatorCollectionBinder_Add_
+  commentId: Overload:FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Add
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Add
+  nameWithType: MediatorCollectionBinder.Add
+- uid: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnDisable
+  name: OnDisable()
+  href: api/FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.html#FastenUp_Runtime_Binders_Collections_MediatorCollectionBinder_OnDisable
+  commentId: M:FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnDisable
+  fullName: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnDisable()
+  nameWithType: MediatorCollectionBinder.OnDisable()
+- uid: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnDisable*
+  name: OnDisable
+  href: api/FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.html#FastenUp_Runtime_Binders_Collections_MediatorCollectionBinder_OnDisable_
+  commentId: Overload:FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnDisable
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnDisable
+  nameWithType: MediatorCollectionBinder.OnDisable
+- uid: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnEnable
+  name: OnEnable()
+  href: api/FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.html#FastenUp_Runtime_Binders_Collections_MediatorCollectionBinder_OnEnable
+  commentId: M:FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnEnable
+  fullName: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnEnable()
+  nameWithType: MediatorCollectionBinder.OnEnable()
+- uid: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnEnable*
+  name: OnEnable
+  href: api/FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.html#FastenUp_Runtime_Binders_Collections_MediatorCollectionBinder_OnEnable_
+  commentId: Overload:FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnEnable
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.OnEnable
+  nameWithType: MediatorCollectionBinder.OnEnable
+- uid: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Remove(FastenUp.Runtime.Mediators.IInternalMediator)
+  name: Remove(IInternalMediator)
+  href: api/FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.html#FastenUp_Runtime_Binders_Collections_MediatorCollectionBinder_Remove_FastenUp_Runtime_Mediators_IInternalMediator_
+  commentId: M:FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Remove(FastenUp.Runtime.Mediators.IInternalMediator)
+  fullName: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Remove(FastenUp.Runtime.Mediators.IInternalMediator)
+  nameWithType: MediatorCollectionBinder.Remove(IInternalMediator)
+- uid: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Remove*
+  name: Remove
+  href: api/FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.html#FastenUp_Runtime_Binders_Collections_MediatorCollectionBinder_Remove_
+  commentId: Overload:FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Remove
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.Remove
+  nameWithType: MediatorCollectionBinder.Remove
+- uid: FastenUp.Runtime.Binders.Events
+  name: FastenUp.Runtime.Binders.Events
+  href: api/FastenUp.Runtime.Binders.Events.html
+  commentId: N:FastenUp.Runtime.Binders.Events
+  fullName: FastenUp.Runtime.Binders.Events
+  nameWithType: FastenUp.Runtime.Binders.Events
+- uid: FastenUp.Runtime.Binders.Events.ButtonBinder
+  name: ButtonBinder
+  href: api/FastenUp.Runtime.Binders.Events.ButtonBinder.html
+  commentId: T:FastenUp.Runtime.Binders.Events.ButtonBinder
+  fullName: FastenUp.Runtime.Binders.Events.ButtonBinder
+  nameWithType: ButtonBinder
+- uid: FastenUp.Runtime.Binders.Events.ButtonBinder.AddListener(UnityEngine.Events.UnityAction)
+  name: AddListener(UnityAction)
+  href: api/FastenUp.Runtime.Binders.Events.ButtonBinder.html#FastenUp_Runtime_Binders_Events_ButtonBinder_AddListener_UnityEngine_Events_UnityAction_
+  commentId: M:FastenUp.Runtime.Binders.Events.ButtonBinder.AddListener(UnityEngine.Events.UnityAction)
+  fullName: FastenUp.Runtime.Binders.Events.ButtonBinder.AddListener(UnityEngine.Events.UnityAction)
+  nameWithType: ButtonBinder.AddListener(UnityAction)
+- uid: FastenUp.Runtime.Binders.Events.ButtonBinder.AddListener*
+  name: AddListener
+  href: api/FastenUp.Runtime.Binders.Events.ButtonBinder.html#FastenUp_Runtime_Binders_Events_ButtonBinder_AddListener_
+  commentId: Overload:FastenUp.Runtime.Binders.Events.ButtonBinder.AddListener
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Events.ButtonBinder.AddListener
+  nameWithType: ButtonBinder.AddListener
+- uid: FastenUp.Runtime.Binders.Events.ButtonBinder.OnDisable
+  name: OnDisable()
+  href: api/FastenUp.Runtime.Binders.Events.ButtonBinder.html#FastenUp_Runtime_Binders_Events_ButtonBinder_OnDisable
+  commentId: M:FastenUp.Runtime.Binders.Events.ButtonBinder.OnDisable
+  fullName: FastenUp.Runtime.Binders.Events.ButtonBinder.OnDisable()
+  nameWithType: ButtonBinder.OnDisable()
+- uid: FastenUp.Runtime.Binders.Events.ButtonBinder.OnDisable*
+  name: OnDisable
+  href: api/FastenUp.Runtime.Binders.Events.ButtonBinder.html#FastenUp_Runtime_Binders_Events_ButtonBinder_OnDisable_
+  commentId: Overload:FastenUp.Runtime.Binders.Events.ButtonBinder.OnDisable
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Events.ButtonBinder.OnDisable
+  nameWithType: ButtonBinder.OnDisable
+- uid: FastenUp.Runtime.Binders.Events.ButtonBinder.RemoveListener(UnityEngine.Events.UnityAction)
+  name: RemoveListener(UnityAction)
+  href: api/FastenUp.Runtime.Binders.Events.ButtonBinder.html#FastenUp_Runtime_Binders_Events_ButtonBinder_RemoveListener_UnityEngine_Events_UnityAction_
+  commentId: M:FastenUp.Runtime.Binders.Events.ButtonBinder.RemoveListener(UnityEngine.Events.UnityAction)
+  fullName: FastenUp.Runtime.Binders.Events.ButtonBinder.RemoveListener(UnityEngine.Events.UnityAction)
+  nameWithType: ButtonBinder.RemoveListener(UnityAction)
+- uid: FastenUp.Runtime.Binders.Events.ButtonBinder.RemoveListener*
+  name: RemoveListener
+  href: api/FastenUp.Runtime.Binders.Events.ButtonBinder.html#FastenUp_Runtime_Binders_Events_ButtonBinder_RemoveListener_
+  commentId: Overload:FastenUp.Runtime.Binders.Events.ButtonBinder.RemoveListener
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Events.ButtonBinder.RemoveListener
+  nameWithType: ButtonBinder.RemoveListener
+- uid: FastenUp.Runtime.Binders.Events.IEventBinder`1
+  name: IEventBinder<T>
+  href: api/FastenUp.Runtime.Binders.Events.IEventBinder-1.html
+  commentId: T:FastenUp.Runtime.Binders.Events.IEventBinder`1
+  name.vb: IEventBinder(Of T)
+  fullName: FastenUp.Runtime.Binders.Events.IEventBinder<T>
+  fullName.vb: FastenUp.Runtime.Binders.Events.IEventBinder(Of T)
+  nameWithType: IEventBinder<T>
+  nameWithType.vb: IEventBinder(Of T)
+- uid: FastenUp.Runtime.Binders.Events.IEventBinder`1.AddListener(`0)
+  name: AddListener(T)
+  href: api/FastenUp.Runtime.Binders.Events.IEventBinder-1.html#FastenUp_Runtime_Binders_Events_IEventBinder_1_AddListener__0_
+  commentId: M:FastenUp.Runtime.Binders.Events.IEventBinder`1.AddListener(`0)
+  fullName: FastenUp.Runtime.Binders.Events.IEventBinder<T>.AddListener(T)
+  fullName.vb: FastenUp.Runtime.Binders.Events.IEventBinder(Of T).AddListener(T)
+  nameWithType: IEventBinder<T>.AddListener(T)
+  nameWithType.vb: IEventBinder(Of T).AddListener(T)
+- uid: FastenUp.Runtime.Binders.Events.IEventBinder`1.AddListener*
+  name: AddListener
+  href: api/FastenUp.Runtime.Binders.Events.IEventBinder-1.html#FastenUp_Runtime_Binders_Events_IEventBinder_1_AddListener_
+  commentId: Overload:FastenUp.Runtime.Binders.Events.IEventBinder`1.AddListener
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Events.IEventBinder<T>.AddListener
+  fullName.vb: FastenUp.Runtime.Binders.Events.IEventBinder(Of T).AddListener
+  nameWithType: IEventBinder<T>.AddListener
+  nameWithType.vb: IEventBinder(Of T).AddListener
+- uid: FastenUp.Runtime.Binders.Events.IEventBinder`1.RemoveListener(`0)
+  name: RemoveListener(T)
+  href: api/FastenUp.Runtime.Binders.Events.IEventBinder-1.html#FastenUp_Runtime_Binders_Events_IEventBinder_1_RemoveListener__0_
+  commentId: M:FastenUp.Runtime.Binders.Events.IEventBinder`1.RemoveListener(`0)
+  fullName: FastenUp.Runtime.Binders.Events.IEventBinder<T>.RemoveListener(T)
+  fullName.vb: FastenUp.Runtime.Binders.Events.IEventBinder(Of T).RemoveListener(T)
+  nameWithType: IEventBinder<T>.RemoveListener(T)
+  nameWithType.vb: IEventBinder(Of T).RemoveListener(T)
+- uid: FastenUp.Runtime.Binders.Events.IEventBinder`1.RemoveListener*
+  name: RemoveListener
+  href: api/FastenUp.Runtime.Binders.Events.IEventBinder-1.html#FastenUp_Runtime_Binders_Events_IEventBinder_1_RemoveListener_
+  commentId: Overload:FastenUp.Runtime.Binders.Events.IEventBinder`1.RemoveListener
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Events.IEventBinder<T>.RemoveListener
+  fullName.vb: FastenUp.Runtime.Binders.Events.IEventBinder(Of T).RemoveListener
+  nameWithType: IEventBinder<T>.RemoveListener
+  nameWithType.vb: IEventBinder(Of T).RemoveListener
+- uid: FastenUp.Runtime.Binders.IBinder
+  name: IBinder
+  href: api/FastenUp.Runtime.Binders.IBinder.html
+  commentId: T:FastenUp.Runtime.Binders.IBinder
+  fullName: FastenUp.Runtime.Binders.IBinder
+  nameWithType: IBinder
+- uid: FastenUp.Runtime.Binders.IBinder.Name
+  name: Name
+  href: api/FastenUp.Runtime.Binders.IBinder.html#FastenUp_Runtime_Binders_IBinder_Name
+  commentId: P:FastenUp.Runtime.Binders.IBinder.Name
+  fullName: FastenUp.Runtime.Binders.IBinder.Name
+  nameWithType: IBinder.Name
+- uid: FastenUp.Runtime.Binders.IBinder.Name*
+  name: Name
+  href: api/FastenUp.Runtime.Binders.IBinder.html#FastenUp_Runtime_Binders_IBinder_Name_
+  commentId: Overload:FastenUp.Runtime.Binders.IBinder.Name
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.IBinder.Name
+  nameWithType: IBinder.Name
+- uid: FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+  name: OnBinderChanged
+  href: api/FastenUp.Runtime.Binders.IBinder.html#FastenUp_Runtime_Binders_IBinder_OnBinderChanged
+  commentId: E:FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+  fullName: FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+  nameWithType: IBinder.OnBinderChanged
+- uid: FastenUp.Runtime.Binders.IBinder`1
+  name: IBinder<T>
+  href: api/FastenUp.Runtime.Binders.IBinder-1.html
+  commentId: T:FastenUp.Runtime.Binders.IBinder`1
+  name.vb: IBinder(Of T)
+  fullName: FastenUp.Runtime.Binders.IBinder<T>
+  fullName.vb: FastenUp.Runtime.Binders.IBinder(Of T)
+  nameWithType: IBinder<T>
+  nameWithType.vb: IBinder(Of T)
+- uid: FastenUp.Runtime.Binders.IHierarchyCache
+  name: IHierarchyCache
+  href: api/FastenUp.Runtime.Binders.IHierarchyCache.html
+  commentId: T:FastenUp.Runtime.Binders.IHierarchyCache
+  fullName: FastenUp.Runtime.Binders.IHierarchyCache
+  nameWithType: IHierarchyCache
+- uid: FastenUp.Runtime.Binders.IHierarchyCache.RebuildCache
+  name: RebuildCache()
+  href: api/FastenUp.Runtime.Binders.IHierarchyCache.html#FastenUp_Runtime_Binders_IHierarchyCache_RebuildCache
+  commentId: M:FastenUp.Runtime.Binders.IHierarchyCache.RebuildCache
+  fullName: FastenUp.Runtime.Binders.IHierarchyCache.RebuildCache()
+  nameWithType: IHierarchyCache.RebuildCache()
+- uid: FastenUp.Runtime.Binders.IHierarchyCache.RebuildCache*
+  name: RebuildCache
+  href: api/FastenUp.Runtime.Binders.IHierarchyCache.html#FastenUp_Runtime_Binders_IHierarchyCache_RebuildCache_
+  commentId: Overload:FastenUp.Runtime.Binders.IHierarchyCache.RebuildCache
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.IHierarchyCache.RebuildCache
+  nameWithType: IHierarchyCache.RebuildCache
+- uid: FastenUp.Runtime.Binders.IValueProvider`1
+  name: IValueProvider<T>
+  href: api/FastenUp.Runtime.Binders.IValueProvider-1.html
+  commentId: T:FastenUp.Runtime.Binders.IValueProvider`1
+  name.vb: IValueProvider(Of T)
+  fullName: FastenUp.Runtime.Binders.IValueProvider<T>
+  fullName.vb: FastenUp.Runtime.Binders.IValueProvider(Of T)
+  nameWithType: IValueProvider<T>
+  nameWithType.vb: IValueProvider(Of T)
+- uid: FastenUp.Runtime.Binders.IValueProvider`1.GetValue
+  name: GetValue()
+  href: api/FastenUp.Runtime.Binders.IValueProvider-1.html#FastenUp_Runtime_Binders_IValueProvider_1_GetValue
+  commentId: M:FastenUp.Runtime.Binders.IValueProvider`1.GetValue
+  fullName: FastenUp.Runtime.Binders.IValueProvider<T>.GetValue()
+  fullName.vb: FastenUp.Runtime.Binders.IValueProvider(Of T).GetValue()
+  nameWithType: IValueProvider<T>.GetValue()
+  nameWithType.vb: IValueProvider(Of T).GetValue()
+- uid: FastenUp.Runtime.Binders.IValueProvider`1.GetValue*
+  name: GetValue
+  href: api/FastenUp.Runtime.Binders.IValueProvider-1.html#FastenUp_Runtime_Binders_IValueProvider_1_GetValue_
+  commentId: Overload:FastenUp.Runtime.Binders.IValueProvider`1.GetValue
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.IValueProvider<T>.GetValue
+  fullName.vb: FastenUp.Runtime.Binders.IValueProvider(Of T).GetValue
+  nameWithType: IValueProvider<T>.GetValue
+  nameWithType.vb: IValueProvider(Of T).GetValue
+- uid: FastenUp.Runtime.Binders.IValueReceiver`1
+  name: IValueReceiver<T>
+  href: api/FastenUp.Runtime.Binders.IValueReceiver-1.html
+  commentId: T:FastenUp.Runtime.Binders.IValueReceiver`1
+  name.vb: IValueReceiver(Of T)
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<T>
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of T)
+  nameWithType: IValueReceiver<T>
+  nameWithType.vb: IValueReceiver(Of T)
+- uid: FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+  name: SetValue(T)
+  href: api/FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  commentId: M:FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<T>.SetValue(T)
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of T).SetValue(T)
+  nameWithType: IValueReceiver<T>.SetValue(T)
+  nameWithType.vb: IValueReceiver(Of T).SetValue(T)
+- uid: FastenUp.Runtime.Binders.IValueReceiver`1.SetValue*
+  name: SetValue
+  href: api/FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue_
+  commentId: Overload:FastenUp.Runtime.Binders.IValueReceiver`1.SetValue
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<T>.SetValue
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of T).SetValue
+  nameWithType: IValueReceiver<T>.SetValue
+  nameWithType.vb: IValueReceiver(Of T).SetValue
+- uid: FastenUp.Runtime.Binders.Pointers
+  name: FastenUp.Runtime.Binders.Pointers
+  href: api/FastenUp.Runtime.Binders.Pointers.html
+  commentId: N:FastenUp.Runtime.Binders.Pointers
+  fullName: FastenUp.Runtime.Binders.Pointers
+  nameWithType: FastenUp.Runtime.Binders.Pointers
+- uid: FastenUp.Runtime.Binders.Pointers.PointerBinder
+  name: PointerBinder
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerBinder.html
+  commentId: T:FastenUp.Runtime.Binders.Pointers.PointerBinder
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerBinder
+  nameWithType: PointerBinder
+- uid: FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener(UnityEngine.Events.UnityAction)
+  name: AddListener(UnityAction)
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerBinder.html#FastenUp_Runtime_Binders_Pointers_PointerBinder_AddListener_UnityEngine_Events_UnityAction_
+  commentId: M:FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener(UnityEngine.Events.UnityAction)
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener(UnityEngine.Events.UnityAction)
+  nameWithType: PointerBinder.AddListener(UnityAction)
+- uid: FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})
+  name: AddListener(UnityAction<PointerEventData>)
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerBinder.html#FastenUp_Runtime_Binders_Pointers_PointerBinder_AddListener_UnityEngine_Events_UnityAction_UnityEngine_EventSystems_PointerEventData__
+  commentId: M:FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})
+  name.vb: AddListener(UnityAction(Of PointerEventData))
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener(UnityEngine.Events.UnityAction<UnityEngine.EventSystems.PointerEventData>)
+  fullName.vb: FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener(UnityEngine.Events.UnityAction(Of UnityEngine.EventSystems.PointerEventData))
+  nameWithType: PointerBinder.AddListener(UnityAction<PointerEventData>)
+  nameWithType.vb: PointerBinder.AddListener(UnityAction(Of PointerEventData))
+- uid: FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener*
+  name: AddListener
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerBinder.html#FastenUp_Runtime_Binders_Pointers_PointerBinder_AddListener_
+  commentId: Overload:FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener
+  nameWithType: PointerBinder.AddListener
+- uid: FastenUp.Runtime.Binders.Pointers.PointerBinder.OnDisable
+  name: OnDisable()
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerBinder.html#FastenUp_Runtime_Binders_Pointers_PointerBinder_OnDisable
+  commentId: M:FastenUp.Runtime.Binders.Pointers.PointerBinder.OnDisable
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerBinder.OnDisable()
+  nameWithType: PointerBinder.OnDisable()
+- uid: FastenUp.Runtime.Binders.Pointers.PointerBinder.OnDisable*
+  name: OnDisable
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerBinder.html#FastenUp_Runtime_Binders_Pointers_PointerBinder_OnDisable_
+  commentId: Overload:FastenUp.Runtime.Binders.Pointers.PointerBinder.OnDisable
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerBinder.OnDisable
+  nameWithType: PointerBinder.OnDisable
+- uid: FastenUp.Runtime.Binders.Pointers.PointerBinder.OnPointerEvent(UnityEngine.EventSystems.PointerEventData)
+  name: OnPointerEvent(PointerEventData)
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerBinder.html#FastenUp_Runtime_Binders_Pointers_PointerBinder_OnPointerEvent_UnityEngine_EventSystems_PointerEventData_
+  commentId: M:FastenUp.Runtime.Binders.Pointers.PointerBinder.OnPointerEvent(UnityEngine.EventSystems.PointerEventData)
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerBinder.OnPointerEvent(UnityEngine.EventSystems.PointerEventData)
+  nameWithType: PointerBinder.OnPointerEvent(PointerEventData)
+- uid: FastenUp.Runtime.Binders.Pointers.PointerBinder.OnPointerEvent*
+  name: OnPointerEvent
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerBinder.html#FastenUp_Runtime_Binders_Pointers_PointerBinder_OnPointerEvent_
+  commentId: Overload:FastenUp.Runtime.Binders.Pointers.PointerBinder.OnPointerEvent
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerBinder.OnPointerEvent
+  nameWithType: PointerBinder.OnPointerEvent
+- uid: FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener(UnityEngine.Events.UnityAction)
+  name: RemoveListener(UnityAction)
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerBinder.html#FastenUp_Runtime_Binders_Pointers_PointerBinder_RemoveListener_UnityEngine_Events_UnityAction_
+  commentId: M:FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener(UnityEngine.Events.UnityAction)
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener(UnityEngine.Events.UnityAction)
+  nameWithType: PointerBinder.RemoveListener(UnityAction)
+- uid: FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})
+  name: RemoveListener(UnityAction<PointerEventData>)
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerBinder.html#FastenUp_Runtime_Binders_Pointers_PointerBinder_RemoveListener_UnityEngine_Events_UnityAction_UnityEngine_EventSystems_PointerEventData__
+  commentId: M:FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})
+  name.vb: RemoveListener(UnityAction(Of PointerEventData))
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener(UnityEngine.Events.UnityAction<UnityEngine.EventSystems.PointerEventData>)
+  fullName.vb: FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener(UnityEngine.Events.UnityAction(Of UnityEngine.EventSystems.PointerEventData))
+  nameWithType: PointerBinder.RemoveListener(UnityAction<PointerEventData>)
+  nameWithType.vb: PointerBinder.RemoveListener(UnityAction(Of PointerEventData))
+- uid: FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener*
+  name: RemoveListener
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerBinder.html#FastenUp_Runtime_Binders_Pointers_PointerBinder_RemoveListener_
+  commentId: Overload:FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener
+  nameWithType: PointerBinder.RemoveListener
+- uid: FastenUp.Runtime.Binders.Pointers.PointerClickBinder
+  name: PointerClickBinder
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerClickBinder.html
+  commentId: T:FastenUp.Runtime.Binders.Pointers.PointerClickBinder
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerClickBinder
+  nameWithType: PointerClickBinder
+- uid: FastenUp.Runtime.Binders.Pointers.PointerClickBinder.OnPointerClick(UnityEngine.EventSystems.PointerEventData)
+  name: OnPointerClick(PointerEventData)
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerClickBinder.html#FastenUp_Runtime_Binders_Pointers_PointerClickBinder_OnPointerClick_UnityEngine_EventSystems_PointerEventData_
+  commentId: M:FastenUp.Runtime.Binders.Pointers.PointerClickBinder.OnPointerClick(UnityEngine.EventSystems.PointerEventData)
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerClickBinder.OnPointerClick(UnityEngine.EventSystems.PointerEventData)
+  nameWithType: PointerClickBinder.OnPointerClick(PointerEventData)
+- uid: FastenUp.Runtime.Binders.Pointers.PointerClickBinder.OnPointerClick*
+  name: OnPointerClick
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerClickBinder.html#FastenUp_Runtime_Binders_Pointers_PointerClickBinder_OnPointerClick_
+  commentId: Overload:FastenUp.Runtime.Binders.Pointers.PointerClickBinder.OnPointerClick
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerClickBinder.OnPointerClick
+  nameWithType: PointerClickBinder.OnPointerClick
+- uid: FastenUp.Runtime.Binders.Pointers.PointerDownBinder
+  name: PointerDownBinder
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerDownBinder.html
+  commentId: T:FastenUp.Runtime.Binders.Pointers.PointerDownBinder
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerDownBinder
+  nameWithType: PointerDownBinder
+- uid: FastenUp.Runtime.Binders.Pointers.PointerDownBinder.OnPointerDown(UnityEngine.EventSystems.PointerEventData)
+  name: OnPointerDown(PointerEventData)
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerDownBinder.html#FastenUp_Runtime_Binders_Pointers_PointerDownBinder_OnPointerDown_UnityEngine_EventSystems_PointerEventData_
+  commentId: M:FastenUp.Runtime.Binders.Pointers.PointerDownBinder.OnPointerDown(UnityEngine.EventSystems.PointerEventData)
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerDownBinder.OnPointerDown(UnityEngine.EventSystems.PointerEventData)
+  nameWithType: PointerDownBinder.OnPointerDown(PointerEventData)
+- uid: FastenUp.Runtime.Binders.Pointers.PointerDownBinder.OnPointerDown*
+  name: OnPointerDown
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerDownBinder.html#FastenUp_Runtime_Binders_Pointers_PointerDownBinder_OnPointerDown_
+  commentId: Overload:FastenUp.Runtime.Binders.Pointers.PointerDownBinder.OnPointerDown
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerDownBinder.OnPointerDown
+  nameWithType: PointerDownBinder.OnPointerDown
+- uid: FastenUp.Runtime.Binders.Pointers.PointerEnterBinder
+  name: PointerEnterBinder
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerEnterBinder.html
+  commentId: T:FastenUp.Runtime.Binders.Pointers.PointerEnterBinder
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerEnterBinder
+  nameWithType: PointerEnterBinder
+- uid: FastenUp.Runtime.Binders.Pointers.PointerEnterBinder.OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
+  name: OnPointerEnter(PointerEventData)
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerEnterBinder.html#FastenUp_Runtime_Binders_Pointers_PointerEnterBinder_OnPointerEnter_UnityEngine_EventSystems_PointerEventData_
+  commentId: M:FastenUp.Runtime.Binders.Pointers.PointerEnterBinder.OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerEnterBinder.OnPointerEnter(UnityEngine.EventSystems.PointerEventData)
+  nameWithType: PointerEnterBinder.OnPointerEnter(PointerEventData)
+- uid: FastenUp.Runtime.Binders.Pointers.PointerEnterBinder.OnPointerEnter*
+  name: OnPointerEnter
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerEnterBinder.html#FastenUp_Runtime_Binders_Pointers_PointerEnterBinder_OnPointerEnter_
+  commentId: Overload:FastenUp.Runtime.Binders.Pointers.PointerEnterBinder.OnPointerEnter
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerEnterBinder.OnPointerEnter
+  nameWithType: PointerEnterBinder.OnPointerEnter
+- uid: FastenUp.Runtime.Binders.Pointers.PointerExitBinder
+  name: PointerExitBinder
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerExitBinder.html
+  commentId: T:FastenUp.Runtime.Binders.Pointers.PointerExitBinder
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerExitBinder
+  nameWithType: PointerExitBinder
+- uid: FastenUp.Runtime.Binders.Pointers.PointerExitBinder.OnPointerExit(UnityEngine.EventSystems.PointerEventData)
+  name: OnPointerExit(PointerEventData)
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerExitBinder.html#FastenUp_Runtime_Binders_Pointers_PointerExitBinder_OnPointerExit_UnityEngine_EventSystems_PointerEventData_
+  commentId: M:FastenUp.Runtime.Binders.Pointers.PointerExitBinder.OnPointerExit(UnityEngine.EventSystems.PointerEventData)
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerExitBinder.OnPointerExit(UnityEngine.EventSystems.PointerEventData)
+  nameWithType: PointerExitBinder.OnPointerExit(PointerEventData)
+- uid: FastenUp.Runtime.Binders.Pointers.PointerExitBinder.OnPointerExit*
+  name: OnPointerExit
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerExitBinder.html#FastenUp_Runtime_Binders_Pointers_PointerExitBinder_OnPointerExit_
+  commentId: Overload:FastenUp.Runtime.Binders.Pointers.PointerExitBinder.OnPointerExit
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerExitBinder.OnPointerExit
+  nameWithType: PointerExitBinder.OnPointerExit
+- uid: FastenUp.Runtime.Binders.Pointers.PointerMoveBinder
+  name: PointerMoveBinder
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerMoveBinder.html
+  commentId: T:FastenUp.Runtime.Binders.Pointers.PointerMoveBinder
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerMoveBinder
+  nameWithType: PointerMoveBinder
+- uid: FastenUp.Runtime.Binders.Pointers.PointerMoveBinder.OnPointerMove(UnityEngine.EventSystems.PointerEventData)
+  name: OnPointerMove(PointerEventData)
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerMoveBinder.html#FastenUp_Runtime_Binders_Pointers_PointerMoveBinder_OnPointerMove_UnityEngine_EventSystems_PointerEventData_
+  commentId: M:FastenUp.Runtime.Binders.Pointers.PointerMoveBinder.OnPointerMove(UnityEngine.EventSystems.PointerEventData)
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerMoveBinder.OnPointerMove(UnityEngine.EventSystems.PointerEventData)
+  nameWithType: PointerMoveBinder.OnPointerMove(PointerEventData)
+- uid: FastenUp.Runtime.Binders.Pointers.PointerMoveBinder.OnPointerMove*
+  name: OnPointerMove
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerMoveBinder.html#FastenUp_Runtime_Binders_Pointers_PointerMoveBinder_OnPointerMove_
+  commentId: Overload:FastenUp.Runtime.Binders.Pointers.PointerMoveBinder.OnPointerMove
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerMoveBinder.OnPointerMove
+  nameWithType: PointerMoveBinder.OnPointerMove
+- uid: FastenUp.Runtime.Binders.Pointers.PointerUpBinder
+  name: PointerUpBinder
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerUpBinder.html
+  commentId: T:FastenUp.Runtime.Binders.Pointers.PointerUpBinder
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerUpBinder
+  nameWithType: PointerUpBinder
+- uid: FastenUp.Runtime.Binders.Pointers.PointerUpBinder.OnPointerUp(UnityEngine.EventSystems.PointerEventData)
+  name: OnPointerUp(PointerEventData)
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerUpBinder.html#FastenUp_Runtime_Binders_Pointers_PointerUpBinder_OnPointerUp_UnityEngine_EventSystems_PointerEventData_
+  commentId: M:FastenUp.Runtime.Binders.Pointers.PointerUpBinder.OnPointerUp(UnityEngine.EventSystems.PointerEventData)
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerUpBinder.OnPointerUp(UnityEngine.EventSystems.PointerEventData)
+  nameWithType: PointerUpBinder.OnPointerUp(PointerEventData)
+- uid: FastenUp.Runtime.Binders.Pointers.PointerUpBinder.OnPointerUp*
+  name: OnPointerUp
+  href: api/FastenUp.Runtime.Binders.Pointers.PointerUpBinder.html#FastenUp_Runtime_Binders_Pointers_PointerUpBinder_OnPointerUp_
+  commentId: Overload:FastenUp.Runtime.Binders.Pointers.PointerUpBinder.OnPointerUp
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerUpBinder.OnPointerUp
+  nameWithType: PointerUpBinder.OnPointerUp
+- uid: FastenUp.Runtime.Binders.References
+  name: FastenUp.Runtime.Binders.References
+  href: api/FastenUp.Runtime.Binders.References.html
+  commentId: N:FastenUp.Runtime.Binders.References
+  fullName: FastenUp.Runtime.Binders.References
+  nameWithType: FastenUp.Runtime.Binders.References
+- uid: FastenUp.Runtime.Binders.References.BaseRefBinder`1
+  name: BaseRefBinder<TRef>
+  href: api/FastenUp.Runtime.Binders.References.BaseRefBinder-1.html
+  commentId: T:FastenUp.Runtime.Binders.References.BaseRefBinder`1
+  name.vb: BaseRefBinder(Of TRef)
+  fullName: FastenUp.Runtime.Binders.References.BaseRefBinder<TRef>
+  fullName.vb: FastenUp.Runtime.Binders.References.BaseRefBinder(Of TRef)
+  nameWithType: BaseRefBinder<TRef>
+  nameWithType.vb: BaseRefBinder(Of TRef)
+- uid: FastenUp.Runtime.Binders.References.BaseRefBinder`1.TryGetReference*
+  name: TryGetReference
+  href: api/FastenUp.Runtime.Binders.References.BaseRefBinder-1.html#FastenUp_Runtime_Binders_References_BaseRefBinder_1_TryGetReference_
+  commentId: Overload:FastenUp.Runtime.Binders.References.BaseRefBinder`1.TryGetReference
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.References.BaseRefBinder<TRef>.TryGetReference
+  fullName.vb: FastenUp.Runtime.Binders.References.BaseRefBinder(Of TRef).TryGetReference
+  nameWithType: BaseRefBinder<TRef>.TryGetReference
+  nameWithType.vb: BaseRefBinder(Of TRef).TryGetReference
+- uid: FastenUp.Runtime.Binders.References.BaseRefBinder`1.TryGetReference``1(``0@)
+  name: TryGetReference<T>(out T)
+  href: api/FastenUp.Runtime.Binders.References.BaseRefBinder-1.html#FastenUp_Runtime_Binders_References_BaseRefBinder_1_TryGetReference__1___0__
+  commentId: M:FastenUp.Runtime.Binders.References.BaseRefBinder`1.TryGetReference``1(``0@)
+  name.vb: TryGetReference(Of T)(T)
+  fullName: FastenUp.Runtime.Binders.References.BaseRefBinder<TRef>.TryGetReference<T>(out T)
+  fullName.vb: FastenUp.Runtime.Binders.References.BaseRefBinder(Of TRef).TryGetReference(Of T)(T)
+  nameWithType: BaseRefBinder<TRef>.TryGetReference<T>(out T)
+  nameWithType.vb: BaseRefBinder(Of TRef).TryGetReference(Of T)(T)
+- uid: FastenUp.Runtime.Binders.References.IRefBinder
+  name: IRefBinder
+  href: api/FastenUp.Runtime.Binders.References.IRefBinder.html
+  commentId: T:FastenUp.Runtime.Binders.References.IRefBinder
+  fullName: FastenUp.Runtime.Binders.References.IRefBinder
+  nameWithType: IRefBinder
+- uid: FastenUp.Runtime.Binders.References.IRefBinder.TryGetReference*
+  name: TryGetReference
+  href: api/FastenUp.Runtime.Binders.References.IRefBinder.html#FastenUp_Runtime_Binders_References_IRefBinder_TryGetReference_
+  commentId: Overload:FastenUp.Runtime.Binders.References.IRefBinder.TryGetReference
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.References.IRefBinder.TryGetReference
+  nameWithType: IRefBinder.TryGetReference
+- uid: FastenUp.Runtime.Binders.References.IRefBinder.TryGetReference``1(``0@)
+  name: TryGetReference<T>(out T)
+  href: api/FastenUp.Runtime.Binders.References.IRefBinder.html#FastenUp_Runtime_Binders_References_IRefBinder_TryGetReference__1___0__
+  commentId: M:FastenUp.Runtime.Binders.References.IRefBinder.TryGetReference``1(``0@)
+  name.vb: TryGetReference(Of T)(T)
+  fullName: FastenUp.Runtime.Binders.References.IRefBinder.TryGetReference<T>(out T)
+  fullName.vb: FastenUp.Runtime.Binders.References.IRefBinder.TryGetReference(Of T)(T)
+  nameWithType: IRefBinder.TryGetReference<T>(out T)
+  nameWithType.vb: IRefBinder.TryGetReference(Of T)(T)
+- uid: FastenUp.Runtime.Binders.References.MediatorRefBinder
+  name: MediatorRefBinder
+  href: api/FastenUp.Runtime.Binders.References.MediatorRefBinder.html
+  commentId: T:FastenUp.Runtime.Binders.References.MediatorRefBinder
+  fullName: FastenUp.Runtime.Binders.References.MediatorRefBinder
+  nameWithType: MediatorRefBinder
+- uid: FastenUp.Runtime.Binders.References.MediatorRefBinder.IncludeOwnGameObjectInFind
+  name: IncludeOwnGameObjectInFind
+  href: api/FastenUp.Runtime.Binders.References.MediatorRefBinder.html#FastenUp_Runtime_Binders_References_MediatorRefBinder_IncludeOwnGameObjectInFind
+  commentId: P:FastenUp.Runtime.Binders.References.MediatorRefBinder.IncludeOwnGameObjectInFind
+  fullName: FastenUp.Runtime.Binders.References.MediatorRefBinder.IncludeOwnGameObjectInFind
+  nameWithType: MediatorRefBinder.IncludeOwnGameObjectInFind
+- uid: FastenUp.Runtime.Binders.References.MediatorRefBinder.IncludeOwnGameObjectInFind*
+  name: IncludeOwnGameObjectInFind
+  href: api/FastenUp.Runtime.Binders.References.MediatorRefBinder.html#FastenUp_Runtime_Binders_References_MediatorRefBinder_IncludeOwnGameObjectInFind_
+  commentId: Overload:FastenUp.Runtime.Binders.References.MediatorRefBinder.IncludeOwnGameObjectInFind
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Binders.References.MediatorRefBinder.IncludeOwnGameObjectInFind
+  nameWithType: MediatorRefBinder.IncludeOwnGameObjectInFind
+- uid: FastenUp.Runtime.Delegates
+  name: FastenUp.Runtime.Delegates
+  href: api/FastenUp.Runtime.Delegates.html
+  commentId: N:FastenUp.Runtime.Delegates
+  fullName: FastenUp.Runtime.Delegates
+  nameWithType: FastenUp.Runtime.Delegates
+- uid: FastenUp.Runtime.Delegates.OnBinderChanged
+  name: OnBinderChanged
+  href: api/FastenUp.Runtime.Delegates.OnBinderChanged.html
+  commentId: T:FastenUp.Runtime.Delegates.OnBinderChanged
+  fullName: FastenUp.Runtime.Delegates.OnBinderChanged
+  nameWithType: OnBinderChanged
+- uid: FastenUp.Runtime.Exceptions
+  name: FastenUp.Runtime.Exceptions
+  href: api/FastenUp.Runtime.Exceptions.html
+  commentId: N:FastenUp.Runtime.Exceptions
+  fullName: FastenUp.Runtime.Exceptions
+  nameWithType: FastenUp.Runtime.Exceptions
+- uid: FastenUp.Runtime.Exceptions.FastenUpException
+  name: FastenUpException
+  href: api/FastenUp.Runtime.Exceptions.FastenUpException.html
+  commentId: T:FastenUp.Runtime.Exceptions.FastenUpException
+  fullName: FastenUp.Runtime.Exceptions.FastenUpException
+  nameWithType: FastenUpException
+- uid: FastenUp.Runtime.Exceptions.FastenUpException.#ctor(System.String)
+  name: FastenUpException(string)
+  href: api/FastenUp.Runtime.Exceptions.FastenUpException.html#FastenUp_Runtime_Exceptions_FastenUpException__ctor_System_String_
+  commentId: M:FastenUp.Runtime.Exceptions.FastenUpException.#ctor(System.String)
+  name.vb: New(String)
+  fullName: FastenUp.Runtime.Exceptions.FastenUpException.FastenUpException(string)
+  fullName.vb: FastenUp.Runtime.Exceptions.FastenUpException.New(String)
+  nameWithType: FastenUpException.FastenUpException(string)
+  nameWithType.vb: FastenUpException.New(String)
+- uid: FastenUp.Runtime.Exceptions.FastenUpException.#ctor(System.String,System.Exception)
+  name: FastenUpException(string, Exception)
+  href: api/FastenUp.Runtime.Exceptions.FastenUpException.html#FastenUp_Runtime_Exceptions_FastenUpException__ctor_System_String_System_Exception_
+  commentId: M:FastenUp.Runtime.Exceptions.FastenUpException.#ctor(System.String,System.Exception)
+  name.vb: New(String, Exception)
+  fullName: FastenUp.Runtime.Exceptions.FastenUpException.FastenUpException(string, System.Exception)
+  fullName.vb: FastenUp.Runtime.Exceptions.FastenUpException.New(String, System.Exception)
+  nameWithType: FastenUpException.FastenUpException(string, Exception)
+  nameWithType.vb: FastenUpException.New(String, Exception)
+- uid: FastenUp.Runtime.Exceptions.FastenUpException.#ctor*
+  name: FastenUpException
+  href: api/FastenUp.Runtime.Exceptions.FastenUpException.html#FastenUp_Runtime_Exceptions_FastenUpException__ctor_
+  commentId: Overload:FastenUp.Runtime.Exceptions.FastenUpException.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: FastenUp.Runtime.Exceptions.FastenUpException.FastenUpException
+  fullName.vb: FastenUp.Runtime.Exceptions.FastenUpException.New
+  nameWithType: FastenUpException.FastenUpException
+  nameWithType.vb: FastenUpException.New
+- uid: FastenUp.Runtime.Mediators
+  name: FastenUp.Runtime.Mediators
+  href: api/FastenUp.Runtime.Mediators.html
+  commentId: N:FastenUp.Runtime.Mediators
+  fullName: FastenUp.Runtime.Mediators
+  nameWithType: FastenUp.Runtime.Mediators
+- uid: FastenUp.Runtime.Mediators.IInternalMediator
+  name: IInternalMediator
+  href: api/FastenUp.Runtime.Mediators.IInternalMediator.html
+  commentId: T:FastenUp.Runtime.Mediators.IInternalMediator
+  fullName: FastenUp.Runtime.Mediators.IInternalMediator
+  nameWithType: IInternalMediator
+- uid: FastenUp.Runtime.Mediators.IInternalMediator.Bind(FastenUp.Runtime.Binders.IBinder)
+  name: Bind(IBinder)
+  href: api/FastenUp.Runtime.Mediators.IInternalMediator.html#FastenUp_Runtime_Mediators_IInternalMediator_Bind_FastenUp_Runtime_Binders_IBinder_
+  commentId: M:FastenUp.Runtime.Mediators.IInternalMediator.Bind(FastenUp.Runtime.Binders.IBinder)
+  fullName: FastenUp.Runtime.Mediators.IInternalMediator.Bind(FastenUp.Runtime.Binders.IBinder)
+  nameWithType: IInternalMediator.Bind(IBinder)
+- uid: FastenUp.Runtime.Mediators.IInternalMediator.Bind*
+  name: Bind
+  href: api/FastenUp.Runtime.Mediators.IInternalMediator.html#FastenUp_Runtime_Mediators_IInternalMediator_Bind_
+  commentId: Overload:FastenUp.Runtime.Mediators.IInternalMediator.Bind
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Mediators.IInternalMediator.Bind
+  nameWithType: IInternalMediator.Bind
+- uid: FastenUp.Runtime.Mediators.IInternalMediator.Unbind(FastenUp.Runtime.Binders.IBinder)
+  name: Unbind(IBinder)
+  href: api/FastenUp.Runtime.Mediators.IInternalMediator.html#FastenUp_Runtime_Mediators_IInternalMediator_Unbind_FastenUp_Runtime_Binders_IBinder_
+  commentId: M:FastenUp.Runtime.Mediators.IInternalMediator.Unbind(FastenUp.Runtime.Binders.IBinder)
+  fullName: FastenUp.Runtime.Mediators.IInternalMediator.Unbind(FastenUp.Runtime.Binders.IBinder)
+  nameWithType: IInternalMediator.Unbind(IBinder)
+- uid: FastenUp.Runtime.Mediators.IInternalMediator.Unbind*
+  name: Unbind
+  href: api/FastenUp.Runtime.Mediators.IInternalMediator.html#FastenUp_Runtime_Mediators_IInternalMediator_Unbind_
+  commentId: Overload:FastenUp.Runtime.Mediators.IInternalMediator.Unbind
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Mediators.IInternalMediator.Unbind
+  nameWithType: IInternalMediator.Unbind
+- uid: FastenUp.Runtime.Mediators.IMediator
+  name: IMediator
+  href: api/FastenUp.Runtime.Mediators.IMediator.html
+  commentId: T:FastenUp.Runtime.Mediators.IMediator
+  fullName: FastenUp.Runtime.Mediators.IMediator
+  nameWithType: IMediator
+- uid: FastenUp.Runtime.Mediators.MediatorAssigner
+  name: MediatorAssigner
+  href: api/FastenUp.Runtime.Mediators.MediatorAssigner.html
+  commentId: T:FastenUp.Runtime.Mediators.MediatorAssigner
+  fullName: FastenUp.Runtime.Mediators.MediatorAssigner
+  nameWithType: MediatorAssigner
+- uid: FastenUp.Runtime.Mediators.MediatorAssigner.Assign*
+  name: Assign
+  href: api/FastenUp.Runtime.Mediators.MediatorAssigner.html#FastenUp_Runtime_Mediators_MediatorAssigner_Assign_
+  commentId: Overload:FastenUp.Runtime.Mediators.MediatorAssigner.Assign
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Mediators.MediatorAssigner.Assign
+  nameWithType: MediatorAssigner.Assign
+- uid: FastenUp.Runtime.Mediators.MediatorAssigner.Assign``1(``0)
+  name: Assign<T>(T)
+  href: api/FastenUp.Runtime.Mediators.MediatorAssigner.html#FastenUp_Runtime_Mediators_MediatorAssigner_Assign__1___0_
+  commentId: M:FastenUp.Runtime.Mediators.MediatorAssigner.Assign``1(``0)
+  name.vb: Assign(Of T)(T)
+  fullName: FastenUp.Runtime.Mediators.MediatorAssigner.Assign<T>(T)
+  fullName.vb: FastenUp.Runtime.Mediators.MediatorAssigner.Assign(Of T)(T)
+  nameWithType: MediatorAssigner.Assign<T>(T)
+  nameWithType.vb: MediatorAssigner.Assign(Of T)(T)
+- uid: FastenUp.Runtime.Mediators.MediatorAssigner.Bind(FastenUp.Runtime.Binders.IBinder)
+  name: Bind(IBinder)
+  href: api/FastenUp.Runtime.Mediators.MediatorAssigner.html#FastenUp_Runtime_Mediators_MediatorAssigner_Bind_FastenUp_Runtime_Binders_IBinder_
+  commentId: M:FastenUp.Runtime.Mediators.MediatorAssigner.Bind(FastenUp.Runtime.Binders.IBinder)
+  fullName: FastenUp.Runtime.Mediators.MediatorAssigner.Bind(FastenUp.Runtime.Binders.IBinder)
+  nameWithType: MediatorAssigner.Bind(IBinder)
+- uid: FastenUp.Runtime.Mediators.MediatorAssigner.Bind*
+  name: Bind
+  href: api/FastenUp.Runtime.Mediators.MediatorAssigner.html#FastenUp_Runtime_Mediators_MediatorAssigner_Bind_
+  commentId: Overload:FastenUp.Runtime.Mediators.MediatorAssigner.Bind
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Mediators.MediatorAssigner.Bind
+  nameWithType: MediatorAssigner.Bind
+- uid: FastenUp.Runtime.Mediators.MediatorAssigner.Release
+  name: Release()
+  href: api/FastenUp.Runtime.Mediators.MediatorAssigner.html#FastenUp_Runtime_Mediators_MediatorAssigner_Release
+  commentId: M:FastenUp.Runtime.Mediators.MediatorAssigner.Release
+  fullName: FastenUp.Runtime.Mediators.MediatorAssigner.Release()
+  nameWithType: MediatorAssigner.Release()
+- uid: FastenUp.Runtime.Mediators.MediatorAssigner.Release*
+  name: Release
+  href: api/FastenUp.Runtime.Mediators.MediatorAssigner.html#FastenUp_Runtime_Mediators_MediatorAssigner_Release_
+  commentId: Overload:FastenUp.Runtime.Mediators.MediatorAssigner.Release
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Mediators.MediatorAssigner.Release
+  nameWithType: MediatorAssigner.Release
+- uid: FastenUp.Runtime.Mediators.MediatorAssigner.Unbind(FastenUp.Runtime.Binders.IBinder)
+  name: Unbind(IBinder)
+  href: api/FastenUp.Runtime.Mediators.MediatorAssigner.html#FastenUp_Runtime_Mediators_MediatorAssigner_Unbind_FastenUp_Runtime_Binders_IBinder_
+  commentId: M:FastenUp.Runtime.Mediators.MediatorAssigner.Unbind(FastenUp.Runtime.Binders.IBinder)
+  fullName: FastenUp.Runtime.Mediators.MediatorAssigner.Unbind(FastenUp.Runtime.Binders.IBinder)
+  nameWithType: MediatorAssigner.Unbind(IBinder)
+- uid: FastenUp.Runtime.Mediators.MediatorAssigner.Unbind*
+  name: Unbind
+  href: api/FastenUp.Runtime.Mediators.MediatorAssigner.html#FastenUp_Runtime_Mediators_MediatorAssigner_Unbind_
+  commentId: Overload:FastenUp.Runtime.Mediators.MediatorAssigner.Unbind
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Mediators.MediatorAssigner.Unbind
+  nameWithType: MediatorAssigner.Unbind
+- uid: FastenUp.Runtime.Utils
+  name: FastenUp.Runtime.Utils
+  href: api/FastenUp.Runtime.Utils.html
+  commentId: N:FastenUp.Runtime.Utils
+  fullName: FastenUp.Runtime.Utils
+  nameWithType: FastenUp.Runtime.Utils
+- uid: FastenUp.Runtime.Utils.BindUtilities
+  name: BindUtilities
+  href: api/FastenUp.Runtime.Utils.BindUtilities.html
+  commentId: T:FastenUp.Runtime.Utils.BindUtilities
+  fullName: FastenUp.Runtime.Utils.BindUtilities
+  nameWithType: BindUtilities
+- uid: FastenUp.Runtime.Utils.BindUtilities.NameEquals(System.ReadOnlySpan{System.Char},FastenUp.Runtime.Binders.IBinder)
+  name: NameEquals(ReadOnlySpan<char>, IBinder)
+  href: api/FastenUp.Runtime.Utils.BindUtilities.html#FastenUp_Runtime_Utils_BindUtilities_NameEquals_System_ReadOnlySpan_System_Char__FastenUp_Runtime_Binders_IBinder_
+  commentId: M:FastenUp.Runtime.Utils.BindUtilities.NameEquals(System.ReadOnlySpan{System.Char},FastenUp.Runtime.Binders.IBinder)
+  name.vb: NameEquals(ReadOnlySpan(Of Char), IBinder)
+  fullName: FastenUp.Runtime.Utils.BindUtilities.NameEquals(System.ReadOnlySpan<char>, FastenUp.Runtime.Binders.IBinder)
+  fullName.vb: FastenUp.Runtime.Utils.BindUtilities.NameEquals(System.ReadOnlySpan(Of Char), FastenUp.Runtime.Binders.IBinder)
+  nameWithType: BindUtilities.NameEquals(ReadOnlySpan<char>, IBinder)
+  nameWithType.vb: BindUtilities.NameEquals(ReadOnlySpan(Of Char), IBinder)
+- uid: FastenUp.Runtime.Utils.BindUtilities.NameEquals*
+  name: NameEquals
+  href: api/FastenUp.Runtime.Utils.BindUtilities.html#FastenUp_Runtime_Utils_BindUtilities_NameEquals_
+  commentId: Overload:FastenUp.Runtime.Utils.BindUtilities.NameEquals
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Utils.BindUtilities.NameEquals
+  nameWithType: BindUtilities.NameEquals
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryBind*
+  name: TryBind
+  href: api/FastenUp.Runtime.Utils.BindUtilities.html#FastenUp_Runtime_Utils_BindUtilities_TryBind_
+  commentId: Overload:FastenUp.Runtime.Utils.BindUtilities.TryBind
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryBind
+  nameWithType: BindUtilities.TryBind
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindableAction{``0},FastenUp.Runtime.Binders.IBinder)
+  name: TryBind<T>(IBindableAction<T>, IBinder)
+  href: api/FastenUp.Runtime.Utils.BindUtilities.html#FastenUp_Runtime_Utils_BindUtilities_TryBind__1_FastenUp_Runtime_Bindables_IBindableAction___0__FastenUp_Runtime_Binders_IBinder_
+  commentId: M:FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindableAction{``0},FastenUp.Runtime.Binders.IBinder)
+  name.vb: TryBind(Of T)(IBindableAction(Of T), IBinder)
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryBind<T>(FastenUp.Runtime.Bindables.IBindableAction<T>, FastenUp.Runtime.Binders.IBinder)
+  fullName.vb: FastenUp.Runtime.Utils.BindUtilities.TryBind(Of T)(FastenUp.Runtime.Bindables.IBindableAction(Of T), FastenUp.Runtime.Binders.IBinder)
+  nameWithType: BindUtilities.TryBind<T>(IBindableAction<T>, IBinder)
+  nameWithType.vb: BindUtilities.TryBind(Of T)(IBindableAction(Of T), IBinder)
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindableCollection{``0},FastenUp.Runtime.Binders.IBinder)
+  name: TryBind<T>(IBindableCollection<T>, IBinder)
+  href: api/FastenUp.Runtime.Utils.BindUtilities.html#FastenUp_Runtime_Utils_BindUtilities_TryBind__1_FastenUp_Runtime_Bindables_IBindableCollection___0__FastenUp_Runtime_Binders_IBinder_
+  commentId: M:FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindableCollection{``0},FastenUp.Runtime.Binders.IBinder)
+  name.vb: TryBind(Of T)(IBindableCollection(Of T), IBinder)
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryBind<T>(FastenUp.Runtime.Bindables.IBindableCollection<T>, FastenUp.Runtime.Binders.IBinder)
+  fullName.vb: FastenUp.Runtime.Utils.BindUtilities.TryBind(Of T)(FastenUp.Runtime.Bindables.IBindableCollection(Of T), FastenUp.Runtime.Binders.IBinder)
+  nameWithType: BindUtilities.TryBind<T>(IBindableCollection<T>, IBinder)
+  nameWithType.vb: BindUtilities.TryBind(Of T)(IBindableCollection(Of T), IBinder)
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindableEvent{``0},FastenUp.Runtime.Binders.IBinder)
+  name: TryBind<T>(IBindableEvent<T>, IBinder)
+  href: api/FastenUp.Runtime.Utils.BindUtilities.html#FastenUp_Runtime_Utils_BindUtilities_TryBind__1_FastenUp_Runtime_Bindables_IBindableEvent___0__FastenUp_Runtime_Binders_IBinder_
+  commentId: M:FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindableEvent{``0},FastenUp.Runtime.Binders.IBinder)
+  name.vb: TryBind(Of T)(IBindableEvent(Of T), IBinder)
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryBind<T>(FastenUp.Runtime.Bindables.IBindableEvent<T>, FastenUp.Runtime.Binders.IBinder)
+  fullName.vb: FastenUp.Runtime.Utils.BindUtilities.TryBind(Of T)(FastenUp.Runtime.Bindables.IBindableEvent(Of T), FastenUp.Runtime.Binders.IBinder)
+  nameWithType: BindUtilities.TryBind<T>(IBindableEvent<T>, IBinder)
+  nameWithType.vb: BindUtilities.TryBind(Of T)(IBindableEvent(Of T), IBinder)
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindableRef{``0},FastenUp.Runtime.Binders.IBinder)
+  name: TryBind<T>(IBindableRef<T>, IBinder)
+  href: api/FastenUp.Runtime.Utils.BindUtilities.html#FastenUp_Runtime_Utils_BindUtilities_TryBind__1_FastenUp_Runtime_Bindables_IBindableRef___0__FastenUp_Runtime_Binders_IBinder_
+  commentId: M:FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindableRef{``0},FastenUp.Runtime.Binders.IBinder)
+  name.vb: TryBind(Of T)(IBindableRef(Of T), IBinder)
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryBind<T>(FastenUp.Runtime.Bindables.IBindableRef<T>, FastenUp.Runtime.Binders.IBinder)
+  fullName.vb: FastenUp.Runtime.Utils.BindUtilities.TryBind(Of T)(FastenUp.Runtime.Bindables.IBindableRef(Of T), FastenUp.Runtime.Binders.IBinder)
+  nameWithType: BindUtilities.TryBind<T>(IBindableRef<T>, IBinder)
+  nameWithType.vb: BindUtilities.TryBind(Of T)(IBindableRef(Of T), IBinder)
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindable{``0},FastenUp.Runtime.Binders.IBinder)
+  name: TryBind<T>(IBindable<T>, IBinder)
+  href: api/FastenUp.Runtime.Utils.BindUtilities.html#FastenUp_Runtime_Utils_BindUtilities_TryBind__1_FastenUp_Runtime_Bindables_IBindable___0__FastenUp_Runtime_Binders_IBinder_
+  commentId: M:FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindable{``0},FastenUp.Runtime.Binders.IBinder)
+  name.vb: TryBind(Of T)(IBindable(Of T), IBinder)
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryBind<T>(FastenUp.Runtime.Bindables.IBindable<T>, FastenUp.Runtime.Binders.IBinder)
+  fullName.vb: FastenUp.Runtime.Utils.BindUtilities.TryBind(Of T)(FastenUp.Runtime.Bindables.IBindable(Of T), FastenUp.Runtime.Binders.IBinder)
+  nameWithType: BindUtilities.TryBind<T>(IBindable<T>, IBinder)
+  nameWithType.vb: BindUtilities.TryBind(Of T)(IBindable(Of T), IBinder)
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryUnbind*
+  name: TryUnbind
+  href: api/FastenUp.Runtime.Utils.BindUtilities.html#FastenUp_Runtime_Utils_BindUtilities_TryUnbind_
+  commentId: Overload:FastenUp.Runtime.Utils.BindUtilities.TryUnbind
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryUnbind
+  nameWithType: BindUtilities.TryUnbind
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindableAction{``0},FastenUp.Runtime.Binders.IBinder)
+  name: TryUnbind<T>(IBindableAction<T>, IBinder)
+  href: api/FastenUp.Runtime.Utils.BindUtilities.html#FastenUp_Runtime_Utils_BindUtilities_TryUnbind__1_FastenUp_Runtime_Bindables_IBindableAction___0__FastenUp_Runtime_Binders_IBinder_
+  commentId: M:FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindableAction{``0},FastenUp.Runtime.Binders.IBinder)
+  name.vb: TryUnbind(Of T)(IBindableAction(Of T), IBinder)
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryUnbind<T>(FastenUp.Runtime.Bindables.IBindableAction<T>, FastenUp.Runtime.Binders.IBinder)
+  fullName.vb: FastenUp.Runtime.Utils.BindUtilities.TryUnbind(Of T)(FastenUp.Runtime.Bindables.IBindableAction(Of T), FastenUp.Runtime.Binders.IBinder)
+  nameWithType: BindUtilities.TryUnbind<T>(IBindableAction<T>, IBinder)
+  nameWithType.vb: BindUtilities.TryUnbind(Of T)(IBindableAction(Of T), IBinder)
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindableCollection{``0},FastenUp.Runtime.Binders.IBinder)
+  name: TryUnbind<T>(IBindableCollection<T>, IBinder)
+  href: api/FastenUp.Runtime.Utils.BindUtilities.html#FastenUp_Runtime_Utils_BindUtilities_TryUnbind__1_FastenUp_Runtime_Bindables_IBindableCollection___0__FastenUp_Runtime_Binders_IBinder_
+  commentId: M:FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindableCollection{``0},FastenUp.Runtime.Binders.IBinder)
+  name.vb: TryUnbind(Of T)(IBindableCollection(Of T), IBinder)
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryUnbind<T>(FastenUp.Runtime.Bindables.IBindableCollection<T>, FastenUp.Runtime.Binders.IBinder)
+  fullName.vb: FastenUp.Runtime.Utils.BindUtilities.TryUnbind(Of T)(FastenUp.Runtime.Bindables.IBindableCollection(Of T), FastenUp.Runtime.Binders.IBinder)
+  nameWithType: BindUtilities.TryUnbind<T>(IBindableCollection<T>, IBinder)
+  nameWithType.vb: BindUtilities.TryUnbind(Of T)(IBindableCollection(Of T), IBinder)
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindableEvent{``0},FastenUp.Runtime.Binders.IBinder)
+  name: TryUnbind<T>(IBindableEvent<T>, IBinder)
+  href: api/FastenUp.Runtime.Utils.BindUtilities.html#FastenUp_Runtime_Utils_BindUtilities_TryUnbind__1_FastenUp_Runtime_Bindables_IBindableEvent___0__FastenUp_Runtime_Binders_IBinder_
+  commentId: M:FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindableEvent{``0},FastenUp.Runtime.Binders.IBinder)
+  name.vb: TryUnbind(Of T)(IBindableEvent(Of T), IBinder)
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryUnbind<T>(FastenUp.Runtime.Bindables.IBindableEvent<T>, FastenUp.Runtime.Binders.IBinder)
+  fullName.vb: FastenUp.Runtime.Utils.BindUtilities.TryUnbind(Of T)(FastenUp.Runtime.Bindables.IBindableEvent(Of T), FastenUp.Runtime.Binders.IBinder)
+  nameWithType: BindUtilities.TryUnbind<T>(IBindableEvent<T>, IBinder)
+  nameWithType.vb: BindUtilities.TryUnbind(Of T)(IBindableEvent(Of T), IBinder)
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindableRef{``0},FastenUp.Runtime.Binders.IBinder)
+  name: TryUnbind<T>(IBindableRef<T>, IBinder)
+  href: api/FastenUp.Runtime.Utils.BindUtilities.html#FastenUp_Runtime_Utils_BindUtilities_TryUnbind__1_FastenUp_Runtime_Bindables_IBindableRef___0__FastenUp_Runtime_Binders_IBinder_
+  commentId: M:FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindableRef{``0},FastenUp.Runtime.Binders.IBinder)
+  name.vb: TryUnbind(Of T)(IBindableRef(Of T), IBinder)
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryUnbind<T>(FastenUp.Runtime.Bindables.IBindableRef<T>, FastenUp.Runtime.Binders.IBinder)
+  fullName.vb: FastenUp.Runtime.Utils.BindUtilities.TryUnbind(Of T)(FastenUp.Runtime.Bindables.IBindableRef(Of T), FastenUp.Runtime.Binders.IBinder)
+  nameWithType: BindUtilities.TryUnbind<T>(IBindableRef<T>, IBinder)
+  nameWithType.vb: BindUtilities.TryUnbind(Of T)(IBindableRef(Of T), IBinder)
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindable{``0},FastenUp.Runtime.Binders.IBinder)
+  name: TryUnbind<T>(IBindable<T>, IBinder)
+  href: api/FastenUp.Runtime.Utils.BindUtilities.html#FastenUp_Runtime_Utils_BindUtilities_TryUnbind__1_FastenUp_Runtime_Bindables_IBindable___0__FastenUp_Runtime_Binders_IBinder_
+  commentId: M:FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindable{``0},FastenUp.Runtime.Binders.IBinder)
+  name.vb: TryUnbind(Of T)(IBindable(Of T), IBinder)
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryUnbind<T>(FastenUp.Runtime.Bindables.IBindable<T>, FastenUp.Runtime.Binders.IBinder)
+  fullName.vb: FastenUp.Runtime.Utils.BindUtilities.TryUnbind(Of T)(FastenUp.Runtime.Bindables.IBindable(Of T), FastenUp.Runtime.Binders.IBinder)
+  nameWithType: BindUtilities.TryUnbind<T>(IBindable<T>, IBinder)
+  nameWithType.vb: BindUtilities.TryUnbind(Of T)(IBindable(Of T), IBinder)

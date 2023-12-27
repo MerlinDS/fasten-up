@@ -1,0 +1,475 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Bindables.BindableEvent`1
+  commentId: T:FastenUp.Runtime.Bindables.BindableEvent`1
+  id: BindableEvent`1
+  parent: FastenUp.Runtime.Bindables
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: BindableEvent<T>
+  nameWithType: BindableEvent<T>
+  fullName: FastenUp.Runtime.Bindables.BindableEvent<T>
+  type: Class
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BindableEvent.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: BindableEvent
+    path: ../Assets/FastenUp/Runtime/Bindables/BindableEvent.cs
+    startLine: 8
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  summary: Bindable event that provides the ability to subscribe to the events with one argument in the bind Unity components.
+  example: []
+  syntax:
+    content: 'public sealed class BindableEvent<T> : BaseBindableEvent<UnityAction<T>>, IBindableEvent<UnityAction<T>>, IBindable'
+    typeParameters:
+    - id: T
+      description: Type of the argument of the <xref href="UnityEngine.Events.UnityEvent%601" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public NotInheritable Class BindableEvent(Of T) Inherits BaseBindableEvent(Of UnityAction(Of T)) Implements IBindableEvent(Of UnityAction(Of T)), IBindable
+  inheritance:
+  - System.Object
+  - FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{{T}}}
+  implements:
+  - FastenUp.Runtime.Bindables.IBindableEvent{UnityEngine.Events.UnityAction{{T}}}
+  - FastenUp.Runtime.Bindables.IBindable
+  inheritedMembers:
+  - FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{{T}}}.HasListeners(UnityEngine.Events.UnityAction{{T}})
+  - FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{{T}}}.AddListener(UnityEngine.Events.UnityAction{{T}})
+  - FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{{T}}}.RemoveListener(UnityEngine.Events.UnityAction{{T}})
+  - FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{{T}}}.Dispose
+  nameWithType.vb: BindableEvent(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.BindableEvent(Of T)
+  name.vb: BindableEvent(Of T)
+references:
+- uid: UnityEngine.Events.UnityEvent`1
+  commentId: T:UnityEngine.Events.UnityEvent`1
+  isExternal: true
+  name: UnityEvent<T0>
+  nameWithType: UnityEvent<T0>
+  fullName: UnityEngine.Events.UnityEvent<T0>
+  nameWithType.vb: UnityEvent(Of T0)
+  fullName.vb: UnityEngine.Events.UnityEvent(Of T0)
+  name.vb: UnityEvent(Of T0)
+  spec.csharp:
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: <
+  - name: T0
+  - name: '>'
+  spec.vb:
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T0
+  - name: )
+- uid: FastenUp.Runtime.Bindables
+  commentId: N:FastenUp.Runtime.Bindables
+  href: FastenUp.html
+  name: FastenUp.Runtime.Bindables
+  nameWithType: FastenUp.Runtime.Bindables
+  fullName: FastenUp.Runtime.Bindables
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Bindables
+    name: Bindables
+    href: FastenUp.Runtime.Bindables.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Bindables
+    name: Bindables
+    href: FastenUp.Runtime.Bindables.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{{T}}}
+  commentId: T:FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{`0}}
+  parent: FastenUp.Runtime.Bindables
+  definition: FastenUp.Runtime.Bindables.BaseBindableEvent`1
+  href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html
+  name: BaseBindableEvent<UnityAction<T>>
+  nameWithType: BaseBindableEvent<UnityAction<T>>
+  fullName: FastenUp.Runtime.Bindables.BaseBindableEvent<UnityEngine.Events.UnityAction<T>>
+  nameWithType.vb: BaseBindableEvent(Of UnityAction(Of T))
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableEvent(Of UnityEngine.Events.UnityAction(Of T))
+  name.vb: BaseBindableEvent(Of UnityAction(Of T))
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1
+    name: BaseBindableEvent
+    href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html
+  - name: <
+  - uid: UnityEngine.Events.UnityAction`1
+    name: UnityAction
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1
+    name: BaseBindableEvent
+    href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.Events.UnityAction`1
+    name: UnityAction
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindableEvent{UnityEngine.Events.UnityAction{{T}}}
+  commentId: T:FastenUp.Runtime.Bindables.IBindableEvent{UnityEngine.Events.UnityAction{`0}}
+  parent: FastenUp.Runtime.Bindables
+  definition: FastenUp.Runtime.Bindables.IBindableEvent`1
+  href: FastenUp.Runtime.Bindables.IBindableEvent-1.html
+  name: IBindableEvent<UnityAction<T>>
+  nameWithType: IBindableEvent<UnityAction<T>>
+  fullName: FastenUp.Runtime.Bindables.IBindableEvent<UnityEngine.Events.UnityAction<T>>
+  nameWithType.vb: IBindableEvent(Of UnityAction(Of T))
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableEvent(Of UnityEngine.Events.UnityAction(Of T))
+  name.vb: IBindableEvent(Of UnityAction(Of T))
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindableEvent`1
+    name: IBindableEvent
+    href: FastenUp.Runtime.Bindables.IBindableEvent-1.html
+  - name: <
+  - uid: UnityEngine.Events.UnityAction`1
+    name: UnityAction
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindableEvent`1
+    name: IBindableEvent
+    href: FastenUp.Runtime.Bindables.IBindableEvent-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.Events.UnityAction`1
+    name: UnityAction
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindable
+  commentId: T:FastenUp.Runtime.Bindables.IBindable
+  parent: FastenUp.Runtime.Bindables
+  href: FastenUp.Runtime.Bindables.IBindable.html
+  name: IBindable
+  nameWithType: IBindable
+  fullName: FastenUp.Runtime.Bindables.IBindable
+- uid: FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{{T}}}.HasListeners(UnityEngine.Events.UnityAction{{T}})
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{`0}}.HasListeners(UnityEngine.Events.UnityAction{`0})
+  parent: FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{{T}}}
+  definition: FastenUp.Runtime.Bindables.BaseBindableEvent`1.HasListeners(`0)
+  href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_HasListeners__0_
+  name: HasListeners(UnityAction<T>)
+  nameWithType: BaseBindableEvent<UnityAction<T>>.HasListeners(UnityAction<T>)
+  fullName: FastenUp.Runtime.Bindables.BaseBindableEvent<UnityEngine.Events.UnityAction<T>>.HasListeners(UnityEngine.Events.UnityAction<T>)
+  nameWithType.vb: BaseBindableEvent(Of UnityAction(Of T)).HasListeners(UnityAction(Of T))
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableEvent(Of UnityEngine.Events.UnityAction(Of T)).HasListeners(UnityEngine.Events.UnityAction(Of T))
+  name.vb: HasListeners(UnityAction(Of T))
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{`0}}.HasListeners(UnityEngine.Events.UnityAction{`0})
+    name: HasListeners
+    href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_HasListeners__0_
+  - name: (
+  - uid: UnityEngine.Events.UnityAction`1
+    name: UnityAction
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{`0}}.HasListeners(UnityEngine.Events.UnityAction{`0})
+    name: HasListeners
+    href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_HasListeners__0_
+  - name: (
+  - uid: UnityEngine.Events.UnityAction`1
+    name: UnityAction
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{{T}}}.AddListener(UnityEngine.Events.UnityAction{{T}})
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{`0}}.AddListener(UnityEngine.Events.UnityAction{`0})
+  parent: FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{{T}}}
+  definition: FastenUp.Runtime.Bindables.BaseBindableEvent`1.AddListener(`0)
+  href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_AddListener__0_
+  name: AddListener(UnityAction<T>)
+  nameWithType: BaseBindableEvent<UnityAction<T>>.AddListener(UnityAction<T>)
+  fullName: FastenUp.Runtime.Bindables.BaseBindableEvent<UnityEngine.Events.UnityAction<T>>.AddListener(UnityEngine.Events.UnityAction<T>)
+  nameWithType.vb: BaseBindableEvent(Of UnityAction(Of T)).AddListener(UnityAction(Of T))
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableEvent(Of UnityEngine.Events.UnityAction(Of T)).AddListener(UnityEngine.Events.UnityAction(Of T))
+  name.vb: AddListener(UnityAction(Of T))
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{`0}}.AddListener(UnityEngine.Events.UnityAction{`0})
+    name: AddListener
+    href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_AddListener__0_
+  - name: (
+  - uid: UnityEngine.Events.UnityAction`1
+    name: UnityAction
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{`0}}.AddListener(UnityEngine.Events.UnityAction{`0})
+    name: AddListener
+    href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_AddListener__0_
+  - name: (
+  - uid: UnityEngine.Events.UnityAction`1
+    name: UnityAction
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{{T}}}.RemoveListener(UnityEngine.Events.UnityAction{{T}})
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{`0}}.RemoveListener(UnityEngine.Events.UnityAction{`0})
+  parent: FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{{T}}}
+  definition: FastenUp.Runtime.Bindables.BaseBindableEvent`1.RemoveListener(`0)
+  href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_RemoveListener__0_
+  name: RemoveListener(UnityAction<T>)
+  nameWithType: BaseBindableEvent<UnityAction<T>>.RemoveListener(UnityAction<T>)
+  fullName: FastenUp.Runtime.Bindables.BaseBindableEvent<UnityEngine.Events.UnityAction<T>>.RemoveListener(UnityEngine.Events.UnityAction<T>)
+  nameWithType.vb: BaseBindableEvent(Of UnityAction(Of T)).RemoveListener(UnityAction(Of T))
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableEvent(Of UnityEngine.Events.UnityAction(Of T)).RemoveListener(UnityEngine.Events.UnityAction(Of T))
+  name.vb: RemoveListener(UnityAction(Of T))
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{`0}}.RemoveListener(UnityEngine.Events.UnityAction{`0})
+    name: RemoveListener
+    href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_RemoveListener__0_
+  - name: (
+  - uid: UnityEngine.Events.UnityAction`1
+    name: UnityAction
+    isExternal: true
+  - name: <
+  - name: T
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{`0}}.RemoveListener(UnityEngine.Events.UnityAction{`0})
+    name: RemoveListener
+    href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_RemoveListener__0_
+  - name: (
+  - uid: UnityEngine.Events.UnityAction`1
+    name: UnityAction
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: )
+- uid: FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{{T}}}.Dispose
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{`0}}.Dispose
+  parent: FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{{T}}}
+  definition: FastenUp.Runtime.Bindables.BaseBindableEvent`1.Dispose
+  href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_Dispose
+  name: Dispose()
+  nameWithType: BaseBindableEvent<UnityAction<T>>.Dispose()
+  fullName: FastenUp.Runtime.Bindables.BaseBindableEvent<UnityEngine.Events.UnityAction<T>>.Dispose()
+  nameWithType.vb: BaseBindableEvent(Of UnityAction(Of T)).Dispose()
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableEvent(Of UnityEngine.Events.UnityAction(Of T)).Dispose()
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{`0}}.Dispose
+    name: Dispose
+    href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableEvent{UnityEngine.Events.UnityAction{`0}}.Dispose
+    name: Dispose
+    href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_Dispose
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1
+  commentId: T:FastenUp.Runtime.Bindables.BaseBindableEvent`1
+  href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html
+  name: BaseBindableEvent<T>
+  nameWithType: BaseBindableEvent<T>
+  fullName: FastenUp.Runtime.Bindables.BaseBindableEvent<T>
+  nameWithType.vb: BaseBindableEvent(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableEvent(Of T)
+  name.vb: BaseBindableEvent(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1
+    name: BaseBindableEvent
+    href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1
+    name: BaseBindableEvent
+    href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindableEvent`1
+  commentId: T:FastenUp.Runtime.Bindables.IBindableEvent`1
+  href: FastenUp.Runtime.Bindables.IBindableEvent-1.html
+  name: IBindableEvent<T>
+  nameWithType: IBindableEvent<T>
+  fullName: FastenUp.Runtime.Bindables.IBindableEvent<T>
+  nameWithType.vb: IBindableEvent(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableEvent(Of T)
+  name.vb: IBindableEvent(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindableEvent`1
+    name: IBindableEvent
+    href: FastenUp.Runtime.Bindables.IBindableEvent-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindableEvent`1
+    name: IBindableEvent
+    href: FastenUp.Runtime.Bindables.IBindableEvent-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1.HasListeners(`0)
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindableEvent`1.HasListeners(`0)
+  href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_HasListeners__0_
+  name: HasListeners(T)
+  nameWithType: BaseBindableEvent<T>.HasListeners(T)
+  fullName: FastenUp.Runtime.Bindables.BaseBindableEvent<T>.HasListeners(T)
+  nameWithType.vb: BaseBindableEvent(Of T).HasListeners(T)
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableEvent(Of T).HasListeners(T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1.HasListeners(`0)
+    name: HasListeners
+    href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_HasListeners__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1.HasListeners(`0)
+    name: HasListeners
+    href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_HasListeners__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1.AddListener(`0)
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindableEvent`1.AddListener(`0)
+  href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_AddListener__0_
+  name: AddListener(T)
+  nameWithType: BaseBindableEvent<T>.AddListener(T)
+  fullName: FastenUp.Runtime.Bindables.BaseBindableEvent<T>.AddListener(T)
+  nameWithType.vb: BaseBindableEvent(Of T).AddListener(T)
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableEvent(Of T).AddListener(T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1.AddListener(`0)
+    name: AddListener
+    href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_AddListener__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1.AddListener(`0)
+    name: AddListener
+    href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_AddListener__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1.RemoveListener(`0)
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindableEvent`1.RemoveListener(`0)
+  href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_RemoveListener__0_
+  name: RemoveListener(T)
+  nameWithType: BaseBindableEvent<T>.RemoveListener(T)
+  fullName: FastenUp.Runtime.Bindables.BaseBindableEvent<T>.RemoveListener(T)
+  nameWithType.vb: BaseBindableEvent(Of T).RemoveListener(T)
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableEvent(Of T).RemoveListener(T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1.RemoveListener(`0)
+    name: RemoveListener
+    href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_RemoveListener__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1.RemoveListener(`0)
+    name: RemoveListener
+    href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_RemoveListener__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1.Dispose
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindableEvent`1.Dispose
+  href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_Dispose
+  name: Dispose()
+  nameWithType: BaseBindableEvent<T>.Dispose()
+  fullName: FastenUp.Runtime.Bindables.BaseBindableEvent<T>.Dispose()
+  nameWithType.vb: BaseBindableEvent(Of T).Dispose()
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableEvent(Of T).Dispose()
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1.Dispose
+    name: Dispose
+    href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_Dispose
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1.Dispose
+    name: Dispose
+    href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html#FastenUp_Runtime_Bindables_BaseBindableEvent_1_Dispose
+  - name: (
+  - name: )
