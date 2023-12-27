@@ -6,6 +6,7 @@ namespace FastenUp.Examples.Runtime
 {
     internal partial class GraphicsOverviewMediator : MonoBehaviour, IMediator
     {
+        public Bindable<bool> Visibility { get; } = new();
         private Bindable<Color> Color { get; } = new() { Value = UnityEngine.Color.white };
 
         private Bindable<Sprite> Sprite { get; } = new();

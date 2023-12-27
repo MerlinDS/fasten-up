@@ -6,7 +6,11 @@ namespace FastenUp.Examples.Runtime
 {
     internal partial class TextOverviewMediator : MonoBehaviour, IMediator
     {
-        private Bindable<string> Text { get; } = new() { Value = $"This text is set by {nameof(TextOverviewMediator)}" };
+        public Bindable<bool> Visibility { get; } = new();
+
+        private Bindable<string> Text { get; } =
+            new() { Value = $"This text is set by {nameof(TextOverviewMediator)}" };
+
         private Bindable<int> IntValue { get; } = new() { Value = 42 };
         private Bindable<float> FloatValue { get; } = new() { Value = 3.14f };
 
@@ -14,8 +18,8 @@ namespace FastenUp.Examples.Runtime
 
         private Bindable<string> OutputText { get; } = new();
 
-        private Bindable<string[]> DropDownOptions { get; } =
-            new() { Value = new[] { "Cat", "Dog", "Parrot", "Fish" } };
+        private BindableSetup<string[]> DropDownOptions { get; } =
+            new( new[] { "Cat", "Dog", "Parrot", "Fish" } );
 
         private Bindable<int> DropDownSelectedIndex { get; } = new();
 
