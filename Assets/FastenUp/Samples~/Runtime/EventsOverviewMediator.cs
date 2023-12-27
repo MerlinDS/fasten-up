@@ -7,6 +7,7 @@ namespace FastenUp.Examples.Runtime
 {
     internal partial class EventsOverviewMediator : MonoBehaviour, IMediator
     {
+        public Bindable<bool> Visibility { get; } = new();
         private BindableEvent Button { get; } = new();
 
         private Bindable<int> PressedCount { get; } = new();

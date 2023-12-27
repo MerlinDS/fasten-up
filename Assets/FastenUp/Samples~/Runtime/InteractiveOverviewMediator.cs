@@ -6,15 +6,16 @@ namespace FastenUp.Examples.Runtime
 {
     internal partial class InteractiveOverviewMediator : MonoBehaviour, IMediator
     {
+        public Bindable<bool> Visibility { get; } = new();
         private Bindable<bool> ToggleValue { get; } = new();
 
         private Bindable<string> ToggleState { get; } = new();
         
-        private Bindable<Vector2> FloatSliderInit { get; } = new() { Value = new Vector2(-1, 1) };
+        private BindableSetup<Vector2> FloatSliderInit { get; } = new(new Vector2(-1, 1));
         
         private Bindable<float> FloatSlider { get; } = new();
         
-        private Bindable<Vector2Int> IntSliderInit { get; } = new() { Value = new Vector2Int(-5, 5) };
+        private Bindable<Vector2Int> IntSliderInit { get; } = new(new Vector2Int(-5, 5));
         private Bindable<int> IntSlider { get; } = new();
 
         private void Awake()
