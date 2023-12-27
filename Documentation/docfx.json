@@ -21,6 +21,13 @@
           "_site/**",
           "filterConfig.yml"
         ]
+      },
+      {
+        "src": "api",
+        "files": [
+          "*.yml"
+        ],
+        "dest": "api"
       }
     ],
     "resource": [
@@ -30,7 +37,6 @@
         ]
       }
     ],
-    "output": "_site",
     "template": [
       "default",
       "modern"
@@ -46,6 +52,7 @@
     ],
     "xrefService": [
       "https://xref.docs.microsoft.com/query?uid={uid}"
-    ]
+    ],
+    "dest": "../_site"
   }
 }
