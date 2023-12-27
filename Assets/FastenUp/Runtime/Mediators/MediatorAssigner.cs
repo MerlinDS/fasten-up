@@ -19,7 +19,7 @@ namespace FastenUp.Runtime.Mediators
         /// </summary>
         /// <param name="mediator">Object that implements <see cref="IMediator"/> interface.</param>
         /// <typeparam name="T">Type of the mediator.</typeparam>
-        public void Assign<T>(T mediator) where T : IMediator, IInternalMediator
+        public void Assign<T>(T mediator) where T : IInternalMediator
         {
             if (mediator is null)
                 throw new ArgumentNullException(nameof(mediator), "Mediator cannot be null.");
@@ -47,6 +47,9 @@ namespace FastenUp.Runtime.Mediators
             
             foreach (var binder in _binders)
                 _mediator.Unbind(binder);
+            
+            if(_mediator is IDisposable disposable)
+                disposable.Dispose();
             _mediator = null;
         }
 

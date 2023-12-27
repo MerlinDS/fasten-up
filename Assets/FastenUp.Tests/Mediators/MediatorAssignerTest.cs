@@ -24,7 +24,7 @@ namespace FastenUp.Tests.Mediators
             // Act & Assert
             act.Should().Throw<ArgumentNullException>();
         }
-        
+
         [Test]
         public void Assign_When_mediator_is_not_null_Should_not_throw_exception()
         {
@@ -34,7 +34,7 @@ namespace FastenUp.Tests.Mediators
             // Act & Assert
             act.Should().NotThrow();
         }
-        
+
         [Test]
         public void Assign_When_has_binders_Should_bind_mediator()
         {
@@ -48,7 +48,7 @@ namespace FastenUp.Tests.Mediators
             // Assert
             actual.Received(1).Bind(binder);
         }
-        
+
         [Test]
         public void Assign_When_has_no_binders_Should_not_bind_mediator()
         {
@@ -60,7 +60,7 @@ namespace FastenUp.Tests.Mediators
             // Assert
             actual.DidNotReceive().Bind(Arg.Any<IBinder>());
         }
-        
+
         [Test]
         public void Assign_When_has_binders_and_mediator_is_already_assigned_Should_unbind_mediator()
         {
@@ -75,7 +75,7 @@ namespace FastenUp.Tests.Mediators
             // Assert
             actual.Received(1).Unbind(binder);
         }
-        
+
         [Test]
         public void Assign_When_has_no_binders_and_mediator_is_already_assigned_Should_unbind_mediator()
         {
@@ -88,7 +88,7 @@ namespace FastenUp.Tests.Mediators
             // Assert
             actual.DidNotReceive().Unbind(Arg.Any<IBinder>());
         }
-        
+
         [Test]
         public void Release_When_has_binders_and_mediator_is_assigned_Should_unbind_mediator()
         {
@@ -103,7 +103,7 @@ namespace FastenUp.Tests.Mediators
             // Assert
             actual.Received(1).Unbind(binder);
         }
-        
+
         [Test]
         public void Release_When_has_no_binders_and_mediator_is_assigned_Should_unbind_mediator()
         {
@@ -116,7 +116,7 @@ namespace FastenUp.Tests.Mediators
             // Assert
             actual.DidNotReceive().Unbind(Arg.Any<IBinder>());
         }
-        
+
         [Test]
         public void Release_When_has_binders_and_mediator_is_not_assigned_Should_not_throw_exception()
         {
@@ -129,7 +129,7 @@ namespace FastenUp.Tests.Mediators
             // Assert
             act.Should().NotThrow();
         }
-        
+
         [Test]
         public void Release_When_has_no_binders_and_mediator_is_not_assigned_Should_not_throw_exception()
         {
@@ -140,7 +140,7 @@ namespace FastenUp.Tests.Mediators
             // Assert
             act.Should().NotThrow();
         }
-        
+
         [Test]
         public void Bind_When_has_assigned_mediator_Should_bind_mediator()
         {
@@ -154,7 +154,7 @@ namespace FastenUp.Tests.Mediators
             // Assert
             actual.Received(1).Bind(binder);
         }
-        
+
         [Test]
         public void Bind_When_has_no_assigned_mediator_Should_not_throw_exception()
         {
@@ -166,7 +166,7 @@ namespace FastenUp.Tests.Mediators
             // Assert
             act.Should().NotThrow();
         }
-        
+
         [Test]
         public void Unbind_When_has_assigned_mediator_Should_unbind_mediator()
         {
@@ -180,7 +180,7 @@ namespace FastenUp.Tests.Mediators
             // Assert
             actual.Received(1).Unbind(binder);
         }
-        
+
         [Test]
         public void Unbind_When_has_no_assigned_mediator_Should_not_throw_exception()
         {
@@ -192,7 +192,7 @@ namespace FastenUp.Tests.Mediators
             // Assert
             act.Should().NotThrow();
         }
-        
+
         [Test]
         public void OnDestroy_When_has_assigned_mediator_Should_unbind_mediator()
         {
@@ -207,7 +207,7 @@ namespace FastenUp.Tests.Mediators
             // Assert
             actual.Received(1).Unbind(binder);
         }
-        
+
         [Test]
         public void OnDestroy_When_has_no_assigned_mediator_Should_not_throw_exception()
         {
@@ -217,6 +217,19 @@ namespace FastenUp.Tests.Mediators
             Action act = () => sut.ExecuteOnDestroy();
             // Assert
             act.Should().NotThrow();
+        }
+
+        [Test]
+        public void OnDestroy_When_mediator_is_disposable_Should_dispose_mediator()
+        {
+            // Arrange
+            var sut = TestBehavior.CreateSut();
+            var actual = Substitute.For<TestMediator, IDisposable>();
+            sut.Assign(actual);
+            // Act
+            sut.ExecuteOnDestroy();
+            // Assert
+            actual.As<IDisposable>().Received(1).Dispose();
         }
 
         private sealed class TestBehavior : MonoBehaviour, IMonoBehaviourTest
