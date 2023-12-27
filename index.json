@@ -107,7 +107,7 @@
   "api/FastenUp.Runtime.Binders.Actions.BooleanActionBinder.html": {
     "href": "api/FastenUp.Runtime.Binders.Actions.BooleanActionBinder.html",
     "title": "Class BooleanActionBinder | FastenUp",
-    "keywords": "Class BooleanActionBinder ActionBinder<T> for Boolean type. Inheritance Object BaseBinder BaseActionBinder < UnityEvent < Boolean >> ActionBinder < Boolean > BooleanActionBinder Implements IActionBinder < UnityEvent < Boolean >> IBinder Inherited Members BaseActionBinder<UnityEvent<Boolean>>.OnAction BaseBinder.Name BaseBinder.OnBinderChanged BaseBinder.IncludeOwnGameObjectInFind BaseBinder.InvokeOnBinderChanged() BaseBinder.OnEnable() BaseBinder.OnDisable() Namespace : FastenUp.Runtime.Binders.Actions Assembly : cs.temp.dll.dll Syntax public class BooleanActionBinder : ActionBinder<bool>, IActionBinder<UnityEvent<bool>>, IBinder Implements IActionBinder<T> IBinder"
+    "keywords": "Class BooleanActionBinder ActionBinder<T> for bool type. Inheritance Object BaseBinder BaseActionBinder < UnityEvent < Boolean >> ActionBinder < Boolean > BooleanActionBinder Implements IActionBinder < UnityEvent < Boolean >> IBinder Inherited Members BaseActionBinder<UnityEvent<Boolean>>.OnAction BaseBinder.Name BaseBinder.OnBinderChanged BaseBinder.IncludeOwnGameObjectInFind BaseBinder.InvokeOnBinderChanged() BaseBinder.OnEnable() BaseBinder.OnDisable() Namespace : FastenUp.Runtime.Binders.Actions Assembly : cs.temp.dll.dll Syntax public class BooleanActionBinder : ActionBinder<bool>, IActionBinder<UnityEvent<bool>>, IBinder Implements IActionBinder<T> IBinder"
   },
   "api/FastenUp.Runtime.Binders.Actions.FloatActionBinder.html": {
     "href": "api/FastenUp.Runtime.Binders.Actions.FloatActionBinder.html",
@@ -117,7 +117,7 @@
   "api/FastenUp.Runtime.Binders.Actions.html": {
     "href": "api/FastenUp.Runtime.Binders.Actions.html",
     "title": "Namespace FastenUp.Runtime.Binders.Actions | FastenUp",
-    "keywords": "Namespace FastenUp.Runtime.Binders.Actions Classes ActionBinder Binders that provides the ability to invoke the in the bind Unity components through the BindableAction ActionBinder<T> Binders that provides the ability to invoke the in the bind Unity components through the BindableAction<T> BaseActionBinder<T> Base class for all action binders. BooleanActionBinder ActionBinder<T> for Boolean type. FloatActionBinder ActionBinder<T> for Single type. IntActionBinder ActionBinder<T> for Int32 type. Interfaces IActionBinder<T> Implementation of this interface will be bound to an IBindableAction<T> . It provides the ability to invoke the in the bind Unity components."
+    "keywords": "Namespace FastenUp.Runtime.Binders.Actions Classes ActionBinder Binders that provides the ability to invoke the in the bind Unity components through the BindableAction ActionBinder<T> Binders that provides the ability to invoke the in the bind Unity components through the BindableAction<T> BaseActionBinder<T> Base class for all action binders. BooleanActionBinder ActionBinder<T> for bool type. FloatActionBinder ActionBinder<T> for Single type. IntActionBinder ActionBinder<T> for Int32 type. Interfaces IActionBinder<T> Implementation of this interface will be bound to an IBindableAction<T> . It provides the ability to invoke the in the bind Unity components."
   },
   "api/FastenUp.Runtime.Binders.Actions.IActionBinder-1.html": {
     "href": "api/FastenUp.Runtime.Binders.Actions.IActionBinder-1.html",
@@ -357,11 +357,11 @@
   "docs/introduction.html": {
     "href": "docs/introduction.html",
     "title": "Introduction | FastenUp",
-    "keywords": "Introduction"
+    "keywords": "Introduction Fasten Up is the minimalist UI data binding framework for Unity . The main goal of Fasten Up is to provide a simple and fast way to bind game data to the UI components without reflections and with minimal overhead. Source generator is used to generate the binding code, so there is no runtime overhead. Key features: Runtime data-binding for Unity components. No reflections. Multiple-properties binding. Mono & IL2CPP support."
   },
   "index.html": {
     "href": "index.html",
     "title": "Fasten Up | FastenUp",
-    "keywords": "Fasten Up Minimalist UI data binding framework for Unity . Work in progress! 👷 💾 Installation You can install Fasten Up using any of the following methods: Unity Package Manager https://github.com/merlinds/fasten-up.git?path=/Assets/FastenUp#v0.1.0 In Unity, open Window → Package Manager . Press the + button, choose \" Add package from git URL... \" Enter url above and press Add . 🚀 Getting Started Install Fasten Up ..."
+    "keywords": "Fasten Up Minimalist UI data binding framework for Unity . 💾 Installation You can install Fasten Up using any of the following methods: Unity Package Manager https://github.com/merlinds/fasten-up.git?path=/Assets/FastenUp#v1.0.0 In Unity, open Window → Package Manager . Press the + button, choose \" Add package from git URL... \" Enter url above and press Add . Open Unity Package Manager openupm install com.merlinds.fasten-up Unity Package Download the .unitypackage from releases page. Import FastenUp.X.X.X.unitypackage 📦 Dependencies TextMeshPro - for Text components binding. Usage example Mediator class is a bridge between the game data and the UI components. Create a mediator class that inherits from IMediator interface, like this: using FastenUp.Runtime.Bindables; using FastenUp.Runtime.Mediators; using UnityEngine; public partial class MyMediator : MonoBehaviour, IMediator { public Bindable<string> Text { get; } = new(); public void Awake() { Text.Value = \"Hello World!\"; } } Note: The partial keyword must be used for the sake of the source generator. Add the MyMediator component to the GameObject. Then add the TextMeshPro component with the TextBinder component to the child GameObject. Now the TextMeshPro component will be bound to the Text property of the MyMediator class, and the text will be updated when the Text property changes. More examples can be found in the Samples~ folder. 📚 Documentation Manual Scripting API 📜 License Fasten Up is distributed under the terms of the MIT License. A complete version of the license is available in the LICENSE file in this repository. Any contribution made to this project will be licensed under the MIT License."
   }
 }

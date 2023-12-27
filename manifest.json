@@ -270,7 +270,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FastenUp.Runtime.Binders.Actions.BooleanActionBinder.html",
-          "hash": "iTszp+nlXyJHNcdsgHlOpnLsLFte3kObZkhURfdiHoA="
+          "hash": "/5IJ5+DsHuy+zXGLgeVgabGRMZ5VuaZpnnQHSIw73Ks="
         }
       },
       "is_incremental": false,
@@ -318,7 +318,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FastenUp.Runtime.Binders.Actions.html",
-          "hash": "f0O4gCxYVDRcizTn0YF++eUyFJwQtEblKR7qEgGQbGo="
+          "hash": "SQhPnt1eNDyVctGrA40B0UJjdNDxYPehI0DLR+16ifo="
         }
       },
       "is_incremental": false,
@@ -882,7 +882,7 @@
       "output": {
         ".html": {
           "relative_path": "docs/introduction.html",
-          "hash": "12BYLh/jrkG+5rAXRIi5jsgcPNTODmL01xULa3Jz7KI="
+          "hash": "+pA/M86bTwdE1O3A/T/qFuk9bzbsDX+H/VhPqWlCQ74="
         }
       },
       "is_incremental": false,
@@ -901,12 +901,48 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "Rjv7eHuaH/L0sA0oGZYq5MnYH0T/RpDlTMHYaK9ZkOo="
+          "hash": "2C4DG8vRBxTC2oypFcS4oCGbeZMqt02+9g0Lbz1SFaE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/samples_installation.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/samples_installation.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/smaples_screen.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/smaples_screen.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/text_binder_example.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/text_binder_example.png"
         }
       },
       "is_incremental": false,
@@ -918,7 +954,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "IipwWRqs5V7b7oenB68CZqpMSrFdmr9j+i/cS8KYNj8="
+          "hash": "JppH2XyZWUJxJpliEw8y2YeKJwOPd9n8++Cga0RAkdc="
         }
       },
       "is_incremental": false,
@@ -946,6 +982,13 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 70,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
