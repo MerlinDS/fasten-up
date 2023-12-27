@@ -1,0 +1,977 @@
+{
+  "homepages": [],
+  "source_base_path": "D:/a/fasten-up/fasten-up/Documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Bindables.BaseBindable-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Bindables.BaseBindable-1.html",
+          "hash": "B9e/CEerrktM8HEuuktTcFaQL5zGL1lGn8nObwcehos="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Bindables.BaseBindableAction-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Bindables.BaseBindableAction-1.html",
+          "hash": "+EYHfPvItekv3+pOSLFmAtGcvjpKXax53skqUZgMn4E="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Bindables.BaseBindableEvent-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Bindables.BaseBindableEvent-1.html",
+          "hash": "d1iXPN1UyG9x7fjtokgdpIB97hH7N0dcYDTs4X/k1OA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Bindables.Bindable-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Bindables.Bindable-1.html",
+          "hash": "bvKeGBeQ0z2c6okHPVj2WXfcGhSADEANJ2OiWfP+9N8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Bindables.BindableAction-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Bindables.BindableAction-1.html",
+          "hash": "9eKC+hl5aNFYpHI8ZBUnmUSL7ySBmBlzP6fXd8zcQRA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Bindables.BindableAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Bindables.BindableAction.html",
+          "hash": "jPsVE9TmNMl3LyRCW8O6EqR/m/dAraBshn8Ah1tz/js="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Bindables.BindableCollection-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Bindables.BindableCollection-1.html",
+          "hash": "J+of7rDAxl17edim1FxA9zoTNe7bXPPzbbcMW0Gh5ZI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Bindables.BindableEvent-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Bindables.BindableEvent-1.html",
+          "hash": "Ddh1+lkQx6aumDv/7n7WyZBddvM05JCTX7NjcpYtuMM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Bindables.BindableEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Bindables.BindableEvent.html",
+          "hash": "3OR/PjAVymA/AZlAFhFCt4qKjBrfzsahL7fPKm8xggk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Bindables.BindableRef-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Bindables.BindableRef-1.html",
+          "hash": "BCjikXCpsXZF1HmyI0gdOLIPQy9YIVn/D+F32ikxQH4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Bindables.BindableSetup-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Bindables.BindableSetup-1.html",
+          "hash": "rshyowRtHtjX6eM6eMyzefRGVJXV7pBwVTr5Ciwfr3M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Bindables.IBindable-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Bindables.IBindable-1.html",
+          "hash": "Uyvhwpon1RZXioOdrdpRlcRcDhHRvd4sJguxbevPeJE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Bindables.IBindable.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Bindables.IBindable.html",
+          "hash": "2Ds+wpDHVQgcjuKAmrwRwyy9pROK561OstCS8X05cDI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Bindables.IBindableAction-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Bindables.IBindableAction-1.html",
+          "hash": "MBNK8ZlkjvlbL8nAD4ehiU7MI8OC0+K/uhYy+9+dEnw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Bindables.IBindableCollection-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Bindables.IBindableCollection-1.html",
+          "hash": "ZMYMnxEEFKpYNCB9N1ZhH57iADHc7nXjLp/ilsknLCg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Bindables.IBindableEvent-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Bindables.IBindableEvent-1.html",
+          "hash": "fmIML6DiggWxfieMmozmit03bzdInUuiNYa3tfderRc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Bindables.IBindableRef-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Bindables.IBindableRef-1.html",
+          "hash": "ZzrCFY+KY9R88k1YigTw0ZGqQTu9/JUQ9entrAH0dOA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Bindables.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Bindables.html",
+          "hash": "yprhj+r0D13PE9RnWSzYBPPKksI/MooBTPxc1ZajCpI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Actions.ActionBinder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Actions.ActionBinder-1.html",
+          "hash": "LMOrBVtMn6hZ9ZrXMJWPy4jcnlO94DPA1+gOL2jUWOs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Actions.ActionBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Actions.ActionBinder.html",
+          "hash": "MzsA2FcSDEgz5VznBINTo9cztx9Hj/DtkD7HHTPdYho="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Actions.BaseActionBinder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Actions.BaseActionBinder-1.html",
+          "hash": "XFbITAPUKfJ/IcMFzeeIACk4Jcu8vmSsiJ87m/qU+7c="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Actions.BooleanActionBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Actions.BooleanActionBinder.html",
+          "hash": "iTszp+nlXyJHNcdsgHlOpnLsLFte3kObZkhURfdiHoA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Actions.FloatActionBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Actions.FloatActionBinder.html",
+          "hash": "J2hNc7BMs+dsrYj1CDbE2794i6MO+GoWagt4mT2mWy8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Actions.IActionBinder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Actions.IActionBinder-1.html",
+          "hash": "FPO2E9fQsnURzmJCEgSriO4xGg9MKufJ936hy9wBJq8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Actions.IntActionBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Actions.IntActionBinder.html",
+          "hash": "SzUeTR+XARYyWZWLKz8egzbXIbe9s4SRE7eGnlkeevU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Actions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Actions.html",
+          "hash": "f0O4gCxYVDRcizTn0YF++eUyFJwQtEblKR7qEgGQbGo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.BaseBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.BaseBinder.html",
+          "hash": "6Lvs0k8+/Bkg4YJeWpverXtEM3ZafgMIRqzr+PhyzIM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Behaviours.ColorBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Behaviours.ColorBinder.html",
+          "hash": "nKZ6ZH6hNuTbhWdFOjOb7plX7N/4w7ngKIYZoX6ccDQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Behaviours.DropdownBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Behaviours.DropdownBinder.html",
+          "hash": "vJe4qZoaEAEqkUYfOvESnTGJgJqmvf6nKfO3L5ZXVXI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.html",
+          "hash": "o8Y65eFnEfYxIuoxZnoSnVZV5lp40oeGMXWUFDXOAHE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Behaviours.SliderBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Behaviours.SliderBinder.html",
+          "hash": "nBZITkyVUMPGCunW7IvS41zDQt+w6uJlpFZ0fZCbkwk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Behaviours.SpriteBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Behaviours.SpriteBinder.html",
+          "hash": "V3KIhHMH0Crrmp+O4f11l8wBQT+xMYUPHicprKgWQv0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Behaviours.TextBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Behaviours.TextBinder.html",
+          "hash": "R+11IBXMkX3XUTPuwmmJ4P46H5/JBNp+JN26pvWhvYs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Behaviours.ToggleBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Behaviours.ToggleBinder.html",
+          "hash": "egvl6zmHviGCDznWdPB8JqA+vBAfTu67whCYLBvWQ5Y="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.html",
+          "hash": "ENbJvvFsmygzQyDfFqdCHCUpFB8Sq1Wxy6PTaLyoA28="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Behaviours.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Behaviours.html",
+          "hash": "UMiILYQO1XBiXsE8WKTTNJKHNJKEnGeIb/qDLXGd0nQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html",
+          "hash": "xQEq9tGtXE0afwprQ4wjEe/2agg27hkuHRnYiJgmarU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.html",
+          "hash": "OFF239wnZhkWZ8fL0t46I8SIzU6xR/9J+sg5YO2JrA4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Collections.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Collections.html",
+          "hash": "9b0trZCzqzm7YYLKr51bR2y24qJg4JQhpRCDQWMYXYQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Events.ButtonBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Events.ButtonBinder.html",
+          "hash": "kVS8km67nkuiQK30ccS6DeZzaBto9pWtPNgrF8d1yrQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Events.IEventBinder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Events.IEventBinder-1.html",
+          "hash": "c4gi7LC346Cg7R0Tu+cVYB2gZxDc5ThVz8Pej5xizno="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Events.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Events.html",
+          "hash": "34j/6Npp7w2GzqGv2klo5eQWxR6a2UAiILmP4tsfzJE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.IBinder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.IBinder-1.html",
+          "hash": "u/Q2//L/wr4RqKHZ7Qi7/ziU1iEMYBoZr+cNlCjs6hw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.IBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.IBinder.html",
+          "hash": "0372OrQKdQtJXnwjuGhoXirM6upK/ERLyE1YTytbySE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.IHierarchyCache.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.IHierarchyCache.html",
+          "hash": "3b+s+unqeoBzdzDytcHdNEkonmQx3/IUqwBH4XIse48="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.IValueProvider-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.IValueProvider-1.html",
+          "hash": "WnGnHRw4BBY/nsfVvv7lDjFkxHJqGO25Kca2w7Q0yUM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.IValueReceiver-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.IValueReceiver-1.html",
+          "hash": "V4msIG6FP12nXftgl2SRs2ieAwRUrNnCW2yqPKDem3A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Pointers.PointerBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Pointers.PointerBinder.html",
+          "hash": "GKiTKS9cVb6Yfh8PQNrwPSBEu5WY4Ka/uABHO2QPT0Q="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Pointers.PointerClickBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Pointers.PointerClickBinder.html",
+          "hash": "al/n1EstKJPGZgPAdpHyinJkYOTksuTRJbdtgyaX+yM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Pointers.PointerDownBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Pointers.PointerDownBinder.html",
+          "hash": "1a7VpwZilmk9EoUN9FevaoWQWgrCCvMVWn9MzCi1ti0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Pointers.PointerEnterBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Pointers.PointerEnterBinder.html",
+          "hash": "R969zy8/IueeqKMQgMmJ0UqE2xOr0xmVxL5nYd3sR08="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Pointers.PointerExitBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Pointers.PointerExitBinder.html",
+          "hash": "pcPOycdvVFnx/i9qjw/GkwR9yVaFEtsXsqKQRJHM5bw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Pointers.PointerMoveBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Pointers.PointerMoveBinder.html",
+          "hash": "eUm5Vyb3qO5NNhW8bkYHlcLPoXnZJIXDeRetuLP3Gi4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Pointers.PointerUpBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Pointers.PointerUpBinder.html",
+          "hash": "k+Aymu14ObGyU+U7sxXOjM7i3XCbInoJqYq6dDWL9hE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.Pointers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.Pointers.html",
+          "hash": "3Z+/lr7FgiiIGfLz8fO6doZOOpYu/q1M+NlEjoqgNCc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.References.BaseRefBinder-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.References.BaseRefBinder-1.html",
+          "hash": "iY0hR2F1s2h0b2HNNbLElbyV76e6TkQQ7bO/oDPzBfM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.References.IRefBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.References.IRefBinder.html",
+          "hash": "TQqIsnk61775bckkxtHolS1WVFtWztcUBwVql7302BQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.References.MediatorRefBinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.References.MediatorRefBinder.html",
+          "hash": "DOd7IGl6MmVK2wXgi3nM4/bPvXeeEMgmMho2HkBUnJo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.References.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.References.html",
+          "hash": "g9xXpPtDsLLW1nNmZwC9CKEED4e7UHnQsCRMcbPGjpY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Binders.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Binders.html",
+          "hash": "OjAEvSxEq1sFH/kLjqjHSNJDfGMCk+Tgd0F40Mebt6o="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Delegates.OnBinderChanged.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Delegates.OnBinderChanged.html",
+          "hash": "XXh1wGOes2IuosNHRPzud8mslgX3zb8hDTgKF+Z5mNU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Delegates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Delegates.html",
+          "hash": "Xjy7CyuKxiyE0fCgV0H79lQdk03vN31cGKDcPH56IRc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Exceptions.FastenUpException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Exceptions.FastenUpException.html",
+          "hash": "0N3duPJ4Y2cQaXIqV1/vb5molE0/JNSlxOdKbZytOt0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Exceptions.html",
+          "hash": "Rev8Mygup5D9K4OGLIhUj0wmIqsgQN+JCOJ+s7sm5tI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Mediators.IInternalMediator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Mediators.IInternalMediator.html",
+          "hash": "atK1yH7ztwuuShgm3ny5rGFC5OWB2xs4vUBKfEF9WVc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Mediators.IMediator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Mediators.IMediator.html",
+          "hash": "BnUByZ7aARPUAtb9pIvZjOxXIr12uEfRldRez1HlfF8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Mediators.MediatorAssigner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Mediators.MediatorAssigner.html",
+          "hash": "VMHNWXjhG9rXts4OO4P3FoPCITyST11yllsSrbmfXGQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Mediators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Mediators.html",
+          "hash": "Pb9vIvCS9u2Ksk19bbADIPYGccSdoT58FZvEBwPeiUA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Utils.BindUtilities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Utils.BindUtilities.html",
+          "hash": "4cAmxAtBdV3w1GvIS89bXnzer57xMX1gqN66fOu2y3A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/FastenUp.Runtime.Utils.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/FastenUp.Runtime.Utils.html",
+          "hash": "9e3nB9EbtGrNS7kj1svYWlChiAYcMKkWT57c3jJXsqA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "uRSgvV+e5rGoPwLfWEpmh4iw5Q7y4cpx+7m3qbjnY0g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html",
+          "hash": "0BYm5kepeBXjQF/9NVGo4z/LIMV+eS8+prLY3IU221U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html",
+          "hash": "12BYLh/jrkG+5rAXRIi5jsgcPNTODmL01xULa3Jz7KI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html",
+          "hash": "9XAWFIglQANS5iqvMCZYhs45Hnu8F5WZgoy4I/Y0E7g="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "Rjv7eHuaH/L0sA0oGZYq5MnYH0T/RpDlTMHYaK9ZkOo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "IipwWRqs5V7b7oenB68CZqpMSrFdmr9j+i/cS8KYNj8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 70,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
