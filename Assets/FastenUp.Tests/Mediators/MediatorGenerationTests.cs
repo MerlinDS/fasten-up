@@ -27,7 +27,7 @@ namespace FastenUp.Tests.Mediators
                 CreateBinder<IEventBinder<UnityAction>>("Event"),
                 CreateBinder<IActionBinder<UnityEvent>>("Action"),
                 CreateBinder<IValueReceiver<float>>("Setup"),
-                CreateBinder<ICollectionBinder<object>>("Collection")
+                CreateBinder<ICollectionBinder<IInternalMediator>>("Collection")
             };
 
             var testReference = Substitute.For<TestReference>();
@@ -48,13 +48,13 @@ namespace FastenUp.Tests.Mediators
             mediator.Setup.Value = 1F;
             mediator.Event.AddListener(mockAction);
             mediator.Action.Invoke();
-            mediator.Collection.Add(new object());
+            mediator.Collection.Add(Substitute.For<TestReference>());
             //Assert
             mediator.Reference.Value.Should().Be(testReference, "Reference should provided by binder");
             binders[0].As<IValueReceiver<int>>().Received().SetValue(1);
             binders[4].As<IValueReceiver<float>>().Received().SetValue(1F);
             binders[2].As<IEventBinder<UnityAction>>().Received().AddListener(mockAction);
-            binders[5].As<ICollectionBinder<object>>().Received().Add(Arg.Any<object>());
+            binders[5].As<ICollectionBinder<IInternalMediator>>().Received().Add(Arg.Any<TestReference>());
             mockEvent.Received().Invoke();
         }
 
@@ -77,10 +77,10 @@ namespace FastenUp.Tests.Mediators
 
         public BindableAction Action { get; } = new();
         
-        public BindableCollection<object> Collection { get; } = new(); 
+        public BindableCollection<TestReference> Collection { get; } = new(); 
     }
 
-    internal abstract class TestReference
+    internal abstract partial class TestReference : IMediator
     {
     }
 }
