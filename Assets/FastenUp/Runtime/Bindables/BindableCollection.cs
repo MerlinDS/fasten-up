@@ -1,19 +1,22 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using FastenUp.Runtime.Binders.Collections;
 
 namespace FastenUp.Runtime.Bindables
 {
-    /// <inheritdoc />
-    public sealed class BindableCollection<T> : IBindableCollection<T>
-    // , ICollection<T> - we don't need this interface, because we want to avoid the boxing of the GetEnumerator method.
+    /// <inheritdoc cref="FastenUp.Runtime.Bindables.IBindableCollection{T}" />
+    public sealed class BindableCollection<T> : IBindableCollection<T>, ICollection<T>
     {
         private readonly List<T> _items = new();
         private readonly BinderSet<ICollectionBinder<T>> _binders = new();
 
         /// <inheritdoc />
         public int Count => _items.Count;
+
+        public event Action<T> OnItemAdded;
+        public event Action<T> OnItemRemoved;
 
         /// <inheritdoc />
         public void Add(T item)
@@ -24,6 +27,8 @@ namespace FastenUp.Runtime.Bindables
             _items.Add(item);
             foreach (var binder in _binders)
                 binder.Add(item);
+            
+            OnItemAdded?.Invoke(item);
         }
         /// <inheritdoc />
         public bool Remove(T item)
@@ -37,6 +42,7 @@ namespace FastenUp.Runtime.Bindables
             foreach (var binder in _binders)
                 binder.Remove(item);
 
+            OnItemRemoved?.Invoke(item);
             return true;
         }
 
@@ -54,15 +60,36 @@ namespace FastenUp.Runtime.Bindables
             
             foreach (var binder in _binders)
                 ClearBinder(binder);
+
+            if (OnItemRemoved is not null)
+            {
+                foreach (var item in _items) 
+                    OnItemRemoved.Invoke(item);
+            }
+            
             _items.Clear();
         }
 
-        //This method is used by the foreach statement without boxing.
         /// <inheritdoc />
-        public List<T>.Enumerator GetEnumerator()
+        IEnumerator<T> IEnumerable<T>.GetEnumerator()
         {
             return _items.GetEnumerator();
         }
+        
+        /// <inheritdoc />
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return ((IEnumerable) _items).GetEnumerator();
+        }
+
+        /// <inheritdoc />
+        public void CopyTo(T[] array, int arrayIndex)
+        {
+            _items.CopyTo(array, arrayIndex);
+        }
+
+        /// <inheritdoc />
+        bool ICollection<T>.IsReadOnly => false;
 
         /// <inheritdoc />
         void IBindableCollection<T>.Bind(ICollectionBinder<T> binder)
