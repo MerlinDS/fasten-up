@@ -49,6 +49,7 @@ namespace FastenUp.Runtime.Bindables
             var value = valueProvider.GetValue();
             UpdateBinders(value, valueProvider);
             SetValueSilently(value);
+            OnValueChanged?.Invoke(value);
         }
     }
 }

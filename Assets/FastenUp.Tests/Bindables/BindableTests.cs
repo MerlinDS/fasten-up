@@ -14,7 +14,7 @@ namespace FastenUp.Tests.Bindables
     public class BindableTests
     {
         [Test]
-        public void Bind_When_bindable_was_not_bind_Should_set_value()
+        public void Bind_When_binder_was_not_bind_Should_set_value()
         {
             //Arrange
             var binder = Substitute.For<IValueReceiver<bool>>();
@@ -25,7 +25,7 @@ namespace FastenUp.Tests.Bindables
         }
 
         [Test]
-        public void Bind_When_gettable_bindable_was_not_bind_Should_set_value_and_subscribe_to_bindable()
+        public void Bind_When_value_provider_was_not_bind_Should_set_value_and_subscribe_to_bindable()
         {
             //Arrange
             var binder = Substitute.For<IValueProvider<bool>, IValueReceiver<bool>>();
@@ -37,7 +37,7 @@ namespace FastenUp.Tests.Bindables
         }
 
         [Test]
-        public void Bind_When_bindable_already_was_bind_Should_throw_exception()
+        public void Bind_When_binder_already_was_bind_Should_throw_exception()
         {
             //Arrange
             var binder = Substitute.For<IBinder<bool>>();
@@ -49,7 +49,7 @@ namespace FastenUp.Tests.Bindables
         }
 
         [Test]
-        public void Unbind_When_bindable_was_bind_Should_not_throw_exception()
+        public void Unbind_When_binder_was_bind_Should_not_throw_exception()
         {
             //Arrange
             var binder = Substitute.For<IBinder<bool>>();
@@ -61,7 +61,7 @@ namespace FastenUp.Tests.Bindables
         }
 
         [Test]
-        public void Unbind_When_gettable_bindable_was_bind_Should_unsubscribe_from_bindable()
+        public void Unbind_When_value_provider_was_bind_Should_unsubscribe_from_bindable()
         {
             //Arrange
             var binder = Substitute.For<IValueProvider<bool>>();
@@ -74,7 +74,7 @@ namespace FastenUp.Tests.Bindables
         }
 
         [Test]
-        public void Unbind_When_bindable_was_not_bind_Should_throw_exception()
+        public void Unbind_When_binder_was_not_bind_Should_throw_exception()
         {
             //Arrange
             var binder = Substitute.For<IBinder<bool>>();
@@ -85,7 +85,7 @@ namespace FastenUp.Tests.Bindables
         }
 
         [Test]
-        public void Value_When_set_Should_notify_all_bindables()
+        public void Value_When_set_Should_notify_all_value_receivers()
         {
             //Arrange
             var binder1 = Substitute.For<IValueReceiver<bool>>();
@@ -101,7 +101,7 @@ namespace FastenUp.Tests.Bindables
         }
 
         [Test]
-        public void OnValueChanged_When_gettable_bindable_value_changed_Should_update_value_and_invoke_event()
+        public void OnValueChanged_When_value_provider_value_changed_Should_update_value_and_invoke_event()
         {
             //Arrange
             var binder = Substitute.For<IValueProvider<bool>>();
@@ -117,7 +117,7 @@ namespace FastenUp.Tests.Bindables
 
         [Test]
         public void
-            OnValueChanged_When_gettable_bindable_value_changed_but_sent_invalid_date_Should_not_update_value_and_invoke_event()
+            OnValueChanged_When_value_provider_value_changed_but_sent_invalid_date_Should_not_update_value_and_invoke_event()
         {
             //Arrange
             var binder = Substitute.For<IValueProvider<bool>>();
@@ -133,7 +133,7 @@ namespace FastenUp.Tests.Bindables
         }
 
         [Test]
-        public void OnValueChanged_When_gettable_bindable_value_changed_Should_notify_other_binders()
+        public void OnValueChanged_When_value_provider_value_changed_Should_notify_other_binders()
         {
             //Arrange
             var other = Substitute.For<IValueReceiver<bool>>();
@@ -148,6 +148,23 @@ namespace FastenUp.Tests.Bindables
             //Assert
             binder.As<IValueReceiver<bool>>().DidNotReceive().SetValue(true);
             other.Received(1).SetValue(true);
+        }
+        
+        [Test]
+        public void OnValueChanged_When_binder_value_changed_Should_Invoke_OnValueChanged()
+        {
+            //Arrange
+            var binder = Substitute.For<IValueProvider<bool>>();
+            binder.GetValue().Returns(true);
+
+            var sut = new Bindable<bool>();
+            sut.As<IBindable<bool>>().Bind(binder);
+            var onValueChanged = Substitute.For<Action<bool>>();
+            sut.OnValueChanged += onValueChanged;
+            //Act
+            binder.OnBinderChanged += Raise.Event<OnBinderChanged>(binder);
+            //Assert
+            onValueChanged.Received(1).Invoke(true);
         }
     }
 }
