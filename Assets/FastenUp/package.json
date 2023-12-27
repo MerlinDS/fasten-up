@@ -1,14 +1,14 @@
 {
   "name": "com.merlinds.fasten-up",
   "displayName": "Fasten Up",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "unity": "2022.3",
   "type": "library",
   "description": "Minimalist UI data binding framework for Unity.",
   "samples": [
     {
-      "displayName": "Faster Up Example",
-      "description": "Example code showing use of the Faster Up.",
+      "displayName": "Faster Up components overview",
+      "description": "Full overview of Fasten Up components with examples and code snippets.",
       "path": "Samples~"
     }
   ],
