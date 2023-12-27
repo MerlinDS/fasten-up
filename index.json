@@ -107,7 +107,7 @@
   "api/FastenUp.Runtime.Binders.Actions.BooleanActionBinder.html": {
     "href": "api/FastenUp.Runtime.Binders.Actions.BooleanActionBinder.html",
     "title": "Class BooleanActionBinder | FastenUp",
-    "keywords": "Class BooleanActionBinder ActionBinder<T> for bool type. Inheritance Object BaseBinder BaseActionBinder < UnityEvent < Boolean >> ActionBinder < Boolean > BooleanActionBinder Implements IActionBinder < UnityEvent < Boolean >> IBinder Inherited Members BaseActionBinder<UnityEvent<Boolean>>.OnAction BaseBinder.Name BaseBinder.OnBinderChanged BaseBinder.IncludeOwnGameObjectInFind BaseBinder.InvokeOnBinderChanged() BaseBinder.OnEnable() BaseBinder.OnDisable() Namespace : FastenUp.Runtime.Binders.Actions Assembly : cs.temp.dll.dll Syntax public class BooleanActionBinder : ActionBinder<bool>, IActionBinder<UnityEvent<bool>>, IBinder Implements IActionBinder<T> IBinder"
+    "keywords": "Class BooleanActionBinder ActionBinder<T> for Boolean type. Inheritance Object BaseBinder BaseActionBinder < UnityEvent < Boolean >> ActionBinder < Boolean > BooleanActionBinder Implements IActionBinder < UnityEvent < Boolean >> IBinder Inherited Members BaseActionBinder<UnityEvent<Boolean>>.OnAction BaseBinder.Name BaseBinder.OnBinderChanged BaseBinder.IncludeOwnGameObjectInFind BaseBinder.InvokeOnBinderChanged() BaseBinder.OnEnable() BaseBinder.OnDisable() Namespace : FastenUp.Runtime.Binders.Actions Assembly : cs.temp.dll.dll Syntax public class BooleanActionBinder : ActionBinder<bool>, IActionBinder<UnityEvent<bool>>, IBinder Implements IActionBinder<T> IBinder"
   },
   "api/FastenUp.Runtime.Binders.Actions.FloatActionBinder.html": {
     "href": "api/FastenUp.Runtime.Binders.Actions.FloatActionBinder.html",
@@ -117,7 +117,7 @@
   "api/FastenUp.Runtime.Binders.Actions.html": {
     "href": "api/FastenUp.Runtime.Binders.Actions.html",
     "title": "Namespace FastenUp.Runtime.Binders.Actions | FastenUp",
-    "keywords": "Namespace FastenUp.Runtime.Binders.Actions Classes ActionBinder Binders that provides the ability to invoke the in the bind Unity components through the BindableAction ActionBinder<T> Binders that provides the ability to invoke the in the bind Unity components through the BindableAction<T> BaseActionBinder<T> Base class for all action binders. BooleanActionBinder ActionBinder<T> for bool type. FloatActionBinder ActionBinder<T> for Single type. IntActionBinder ActionBinder<T> for Int32 type. Interfaces IActionBinder<T> Implementation of this interface will be bound to an IBindableAction<T> . It provides the ability to invoke the in the bind Unity components."
+    "keywords": "Namespace FastenUp.Runtime.Binders.Actions Classes ActionBinder Binders that provides the ability to invoke the in the bind Unity components through the BindableAction ActionBinder<T> Binders that provides the ability to invoke the in the bind Unity components through the BindableAction<T> BaseActionBinder<T> Base class for all action binders. BooleanActionBinder ActionBinder<T> for Boolean type. FloatActionBinder ActionBinder<T> for Single type. IntActionBinder ActionBinder<T> for Int32 type. Interfaces IActionBinder<T> Implementation of this interface will be bound to an IBindableAction<T> . It provides the ability to invoke the in the bind Unity components."
   },
   "api/FastenUp.Runtime.Binders.Actions.IActionBinder-1.html": {
     "href": "api/FastenUp.Runtime.Binders.Actions.IActionBinder-1.html",
