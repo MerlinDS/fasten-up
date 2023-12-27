@@ -1,0 +1,233 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+  commentId: T:FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+  id: ICollectionBinder`1
+  parent: FastenUp.Runtime.Binders.Collections
+  children:
+  - FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Add(`0)
+  - FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Remove(`0)
+  langs:
+  - csharp
+  - vb
+  name: ICollectionBinder<T>
+  nameWithType: ICollectionBinder<T>
+  fullName: FastenUp.Runtime.Binders.Collections.ICollectionBinder<T>
+  type: Interface
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Collections/ICollectionBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: ICollectionBinder
+    path: ../Assets/FastenUp/Runtime/Binders/Collections/ICollectionBinder.cs
+    startLine: 8
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Collections
+  summary: <xref href="FastenUp.Runtime.Binders.IBinder" data-throw-if-not-resolved="false"></xref> that provides the ability to bind the collection of items.
+  example: []
+  syntax:
+    content: 'public interface ICollectionBinder<in T> : IBinder'
+    typeParameters:
+    - id: T
+      description: Type of the item.
+    content.vb: Public Interface ICollectionBinder(Of In T) Inherits IBinder
+  inheritedMembers:
+  - FastenUp.Runtime.Binders.IBinder.Name
+  - FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+  nameWithType.vb: ICollectionBinder(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.Collections.ICollectionBinder(Of T)
+  name.vb: ICollectionBinder(Of T)
+- uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Add(`0)
+  commentId: M:FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Add(`0)
+  id: Add(`0)
+  parent: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+  langs:
+  - csharp
+  - vb
+  name: Add(T)
+  nameWithType: ICollectionBinder<T>.Add(T)
+  fullName: FastenUp.Runtime.Binders.Collections.ICollectionBinder<T>.Add(T)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Collections/ICollectionBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: Add
+    path: ../Assets/FastenUp/Runtime/Binders/Collections/ICollectionBinder.cs
+    startLine: 14
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Collections
+  summary: Adds item to the bound collection.
+  example: []
+  syntax:
+    content: void Add(T item)
+    parameters:
+    - id: item
+      type: '{T}'
+      description: Item to add.
+      attributes:
+      - type: JetBrains.Annotations.NotNullAttribute
+        ctor: JetBrains.Annotations.NotNullAttribute.#ctor
+        arguments: []
+    content.vb: Sub Add(item As T)
+  overload: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Add*
+  nameWithType.vb: ICollectionBinder(Of T).Add(T)
+  fullName.vb: FastenUp.Runtime.Binders.Collections.ICollectionBinder(Of T).Add(T)
+- uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Remove(`0)
+  commentId: M:FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Remove(`0)
+  id: Remove(`0)
+  parent: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+  langs:
+  - csharp
+  - vb
+  name: Remove(T)
+  nameWithType: ICollectionBinder<T>.Remove(T)
+  fullName: FastenUp.Runtime.Binders.Collections.ICollectionBinder<T>.Remove(T)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Collections/ICollectionBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: Remove
+    path: ../Assets/FastenUp/Runtime/Binders/Collections/ICollectionBinder.cs
+    startLine: 20
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Collections
+  summary: Removes item from the bound collection.
+  example: []
+  syntax:
+    content: void Remove(T item)
+    parameters:
+    - id: item
+      type: '{T}'
+      description: ''
+      attributes:
+      - type: JetBrains.Annotations.NotNullAttribute
+        ctor: JetBrains.Annotations.NotNullAttribute.#ctor
+        arguments: []
+    content.vb: Sub Remove(item As T)
+  overload: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Remove*
+  nameWithType.vb: ICollectionBinder(Of T).Remove(T)
+  fullName.vb: FastenUp.Runtime.Binders.Collections.ICollectionBinder(Of T).Remove(T)
+references:
+- uid: FastenUp.Runtime.Binders.IBinder
+  commentId: T:FastenUp.Runtime.Binders.IBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.IBinder.html
+  name: IBinder
+  nameWithType: IBinder
+  fullName: FastenUp.Runtime.Binders.IBinder
+- uid: FastenUp.Runtime.Binders.Collections
+  commentId: N:FastenUp.Runtime.Binders.Collections
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders.Collections
+  nameWithType: FastenUp.Runtime.Binders.Collections
+  fullName: FastenUp.Runtime.Binders.Collections
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.Collections
+    name: Collections
+    href: FastenUp.Runtime.Binders.Collections.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.Collections
+    name: Collections
+    href: FastenUp.Runtime.Binders.Collections.html
+- uid: FastenUp.Runtime.Binders.IBinder.Name
+  commentId: P:FastenUp.Runtime.Binders.IBinder.Name
+  parent: FastenUp.Runtime.Binders.IBinder
+  href: FastenUp.Runtime.Binders.IBinder.html#FastenUp_Runtime_Binders_IBinder_Name
+  name: Name
+  nameWithType: IBinder.Name
+  fullName: FastenUp.Runtime.Binders.IBinder.Name
+- uid: FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+  commentId: E:FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+  parent: FastenUp.Runtime.Binders.IBinder
+  href: FastenUp.Runtime.Binders.IBinder.html#FastenUp_Runtime_Binders_IBinder_OnBinderChanged
+  name: OnBinderChanged
+  nameWithType: IBinder.OnBinderChanged
+  fullName: FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+- uid: FastenUp.Runtime.Binders
+  commentId: N:FastenUp.Runtime.Binders
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders
+  nameWithType: FastenUp.Runtime.Binders
+  fullName: FastenUp.Runtime.Binders
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+- uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Add*
+  commentId: Overload:FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Add
+  href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html#FastenUp_Runtime_Binders_Collections_ICollectionBinder_1_Add__0_
+  name: Add
+  nameWithType: ICollectionBinder<T>.Add
+  fullName: FastenUp.Runtime.Binders.Collections.ICollectionBinder<T>.Add
+  nameWithType.vb: ICollectionBinder(Of T).Add
+  fullName.vb: FastenUp.Runtime.Binders.Collections.ICollectionBinder(Of T).Add
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Remove*
+  commentId: Overload:FastenUp.Runtime.Binders.Collections.ICollectionBinder`1.Remove
+  href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html#FastenUp_Runtime_Binders_Collections_ICollectionBinder_1_Remove__0_
+  name: Remove
+  nameWithType: ICollectionBinder<T>.Remove
+  fullName: FastenUp.Runtime.Binders.Collections.ICollectionBinder<T>.Remove
+  nameWithType.vb: ICollectionBinder(Of T).Remove
+  fullName.vb: FastenUp.Runtime.Binders.Collections.ICollectionBinder(Of T).Remove

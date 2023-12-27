@@ -1,0 +1,452 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Binders.BaseBinder
+  commentId: T:FastenUp.Runtime.Binders.BaseBinder
+  id: BaseBinder
+  parent: FastenUp.Runtime.Binders
+  children:
+  - FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+  - FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+  - FastenUp.Runtime.Binders.BaseBinder.Name
+  - FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  - FastenUp.Runtime.Binders.BaseBinder.OnDisable
+  - FastenUp.Runtime.Binders.BaseBinder.OnEnable
+  langs:
+  - csharp
+  - vb
+  name: BaseBinder
+  nameWithType: BaseBinder
+  fullName: FastenUp.Runtime.Binders.BaseBinder
+  type: Class
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/BaseBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: BaseBinder
+    path: ../Assets/FastenUp/Runtime/Binders/BaseBinder.cs
+    startLine: 15
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders
+  summary: Base class for all binders.
+  remarks: This class is provide basic functionality for all binders, like name validation and binding to mediators.
+  example: []
+  syntax:
+    content: >-
+      [Serializable]
+
+      public abstract class BaseBinder : MonoBehaviour, IBinder
+    content.vb: >-
+      <Serializable>
+
+      Public MustInherit Class BaseBinder Inherits MonoBehaviour Implements IBinder
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  derivedClasses:
+  - FastenUp.Runtime.Binders.Actions.BaseActionBinder`1
+  - FastenUp.Runtime.Binders.Behaviours.ColorBinder
+  - FastenUp.Runtime.Binders.Behaviours.DropdownBinder
+  - FastenUp.Runtime.Binders.Behaviours.InputFieldBinder
+  - FastenUp.Runtime.Binders.Behaviours.SliderBinder
+  - FastenUp.Runtime.Binders.Behaviours.SpriteBinder
+  - FastenUp.Runtime.Binders.Behaviours.TextBinder
+  - FastenUp.Runtime.Binders.Behaviours.ToggleBinder
+  - FastenUp.Runtime.Binders.Behaviours.VisibilityBinder
+  - FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder
+  - FastenUp.Runtime.Binders.Events.ButtonBinder
+  - FastenUp.Runtime.Binders.Pointers.PointerBinder
+  - FastenUp.Runtime.Binders.References.BaseRefBinder`1
+  implements:
+  - FastenUp.Runtime.Binders.IBinder
+  attributes:
+  - type: System.SerializableAttribute
+    ctor: System.SerializableAttribute.#ctor
+    arguments: []
+- uid: FastenUp.Runtime.Binders.BaseBinder.Name
+  commentId: P:FastenUp.Runtime.Binders.BaseBinder.Name
+  id: Name
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: BaseBinder.Name
+  fullName: FastenUp.Runtime.Binders.BaseBinder.Name
+  type: Property
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/BaseBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: Name
+    path: ../Assets/FastenUp/Runtime/Binders/BaseBinder.cs
+    startLine: 20
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders
+  summary: The name of the bindable property in the <xref href="FastenUp.Runtime.Mediators.IMediator" data-throw-if-not-resolved="false"></xref>.
+  remarks: >-
+    If the name is empty, the binder will ignore the binding and log an error.
+
+    To ignore the binding without logging an error, set the name that starts with the # symbol.
+  example: []
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: FastenUp.Runtime.Binders.BaseBinder.Name*
+  implements:
+  - FastenUp.Runtime.Binders.IBinder.Name
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  commentId: E:FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  id: OnBinderChanged
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  langs:
+  - csharp
+  - vb
+  name: OnBinderChanged
+  nameWithType: BaseBinder.OnBinderChanged
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  type: Event
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/BaseBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: OnBinderChanged
+    path: ../Assets/FastenUp/Runtime/Binders/BaseBinder.cs
+    startLine: 22
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders
+  summary: >-
+    The event will be invoked when the binder is changed somehow (For example, when the value is changed).
+
+    Value in the event is the binder that was changed.
+  example: []
+  syntax:
+    content: public event OnBinderChanged OnBinderChanged
+    return:
+      type: FastenUp.Runtime.Delegates.OnBinderChanged
+    content.vb: Public Event OnBinderChanged As OnBinderChanged
+  implements:
+  - FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+- uid: FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+  commentId: P:FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+  id: IncludeOwnGameObjectInFind
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  langs:
+  - csharp
+  - vb
+  name: IncludeOwnGameObjectInFind
+  nameWithType: BaseBinder.IncludeOwnGameObjectInFind
+  fullName: FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+  type: Property
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/BaseBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: IncludeOwnGameObjectInFind
+    path: ../Assets/FastenUp/Runtime/Binders/BaseBinder.cs
+    startLine: 31
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders
+  summary: >-
+    Checks if game object of this binder should be included in search for <xref href="FastenUp.Runtime.Mediators.IMediator" data-throw-if-not-resolved="false"></xref>.
+
+    True by default.
+  remarks: To prevent search for <xref href="FastenUp.Runtime.Mediators.IMediator" data-throw-if-not-resolved="false"></xref> in game object of this binder, override this property and return <a href="https://learn.microsoft.com/dotnet/csharp/language-reference/builtin-types/bool">false</a>.
+  example: []
+  syntax:
+    content: protected virtual bool IncludeOwnGameObjectInFind { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Protected Overridable ReadOnly Property IncludeOwnGameObjectInFind As Boolean
+  overload: FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind*
+- uid: FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+  commentId: M:FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+  id: InvokeOnBinderChanged
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  langs:
+  - csharp
+  - vb
+  name: InvokeOnBinderChanged()
+  nameWithType: BaseBinder.InvokeOnBinderChanged()
+  fullName: FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged()
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/BaseBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: InvokeOnBinderChanged
+    path: ../Assets/FastenUp/Runtime/Binders/BaseBinder.cs
+    startLine: 34
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders
+  syntax:
+    content: protected void InvokeOnBinderChanged()
+    content.vb: Protected Sub InvokeOnBinderChanged()
+  overload: FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged*
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnEnable
+  commentId: M:FastenUp.Runtime.Binders.BaseBinder.OnEnable
+  id: OnEnable
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  langs:
+  - csharp
+  - vb
+  name: OnEnable()
+  nameWithType: BaseBinder.OnEnable()
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnEnable()
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/BaseBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: OnEnable
+    path: ../Assets/FastenUp/Runtime/Binders/BaseBinder.cs
+    startLine: 37
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders
+  syntax:
+    content: protected virtual void OnEnable()
+    content.vb: Protected Overridable Sub OnEnable()
+  overload: FastenUp.Runtime.Binders.BaseBinder.OnEnable*
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnDisable
+  commentId: M:FastenUp.Runtime.Binders.BaseBinder.OnDisable
+  id: OnDisable
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  langs:
+  - csharp
+  - vb
+  name: OnDisable()
+  nameWithType: BaseBinder.OnDisable()
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnDisable()
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/BaseBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: OnDisable
+    path: ../Assets/FastenUp/Runtime/Binders/BaseBinder.cs
+    startLine: 49
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders
+  syntax:
+    content: protected virtual void OnDisable()
+    content.vb: Protected Overridable Sub OnDisable()
+  overload: FastenUp.Runtime.Binders.BaseBinder.OnDisable*
+references:
+- uid: FastenUp.Runtime.Binders
+  commentId: N:FastenUp.Runtime.Binders
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders
+  nameWithType: FastenUp.Runtime.Binders
+  fullName: FastenUp.Runtime.Binders
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: FastenUp.Runtime.Binders.IBinder
+  commentId: T:FastenUp.Runtime.Binders.IBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.IBinder.html
+  name: IBinder
+  nameWithType: IBinder
+  fullName: FastenUp.Runtime.Binders.IBinder
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: FastenUp.Runtime.Mediators.IMediator
+  commentId: T:FastenUp.Runtime.Mediators.IMediator
+  href: FastenUp.Runtime.Mediators.IMediator.html
+  name: IMediator
+  nameWithType: IMediator
+  fullName: FastenUp.Runtime.Mediators.IMediator
+- uid: FastenUp.Runtime.Binders.BaseBinder.Name*
+  commentId: Overload:FastenUp.Runtime.Binders.BaseBinder.Name
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_Name
+  name: Name
+  nameWithType: BaseBinder.Name
+  fullName: FastenUp.Runtime.Binders.BaseBinder.Name
+- uid: FastenUp.Runtime.Binders.IBinder.Name
+  commentId: P:FastenUp.Runtime.Binders.IBinder.Name
+  parent: FastenUp.Runtime.Binders.IBinder
+  href: FastenUp.Runtime.Binders.IBinder.html#FastenUp_Runtime_Binders_IBinder_Name
+  name: Name
+  nameWithType: IBinder.Name
+  fullName: FastenUp.Runtime.Binders.IBinder.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+  commentId: E:FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+  parent: FastenUp.Runtime.Binders.IBinder
+  href: FastenUp.Runtime.Binders.IBinder.html#FastenUp_Runtime_Binders_IBinder_OnBinderChanged
+  name: OnBinderChanged
+  nameWithType: IBinder.OnBinderChanged
+  fullName: FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+- uid: FastenUp.Runtime.Delegates.OnBinderChanged
+  commentId: T:FastenUp.Runtime.Delegates.OnBinderChanged
+  parent: FastenUp.Runtime.Delegates
+  href: FastenUp.Runtime.Delegates.OnBinderChanged.html
+  name: OnBinderChanged
+  nameWithType: OnBinderChanged
+  fullName: FastenUp.Runtime.Delegates.OnBinderChanged
+- uid: FastenUp.Runtime.Delegates
+  commentId: N:FastenUp.Runtime.Delegates
+  href: FastenUp.html
+  name: FastenUp.Runtime.Delegates
+  nameWithType: FastenUp.Runtime.Delegates
+  fullName: FastenUp.Runtime.Delegates
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Delegates
+    name: Delegates
+    href: FastenUp.Runtime.Delegates.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Delegates
+    name: Delegates
+    href: FastenUp.Runtime.Delegates.html
+- uid: FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind*
+  commentId: Overload:FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_IncludeOwnGameObjectInFind
+  name: IncludeOwnGameObjectInFind
+  nameWithType: BaseBinder.IncludeOwnGameObjectInFind
+  fullName: FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged*
+  commentId: Overload:FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_InvokeOnBinderChanged
+  name: InvokeOnBinderChanged
+  nameWithType: BaseBinder.InvokeOnBinderChanged
+  fullName: FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnEnable*
+  commentId: Overload:FastenUp.Runtime.Binders.BaseBinder.OnEnable
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnEnable
+  name: OnEnable
+  nameWithType: BaseBinder.OnEnable
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnEnable
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnDisable*
+  commentId: Overload:FastenUp.Runtime.Binders.BaseBinder.OnDisable
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnDisable
+  name: OnDisable
+  nameWithType: BaseBinder.OnDisable
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnDisable

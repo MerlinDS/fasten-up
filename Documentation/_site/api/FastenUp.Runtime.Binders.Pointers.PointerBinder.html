@@ -1,0 +1,381 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Class PointerBinder
+ | FastenUp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Class PointerBinder
+ | FastenUp ">
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/MerlinDS/fasten-up/new/develop/apiSpec/new?filename=FastenUp_Runtime_Binders_Pointers_PointerBinder.md&amp;value=---%0Auid%3A%20FastenUp.Runtime.Binders.Pointers.PointerBinder%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+  </head>
+
+  <script type="module" src="./../public/docfx.min.js"></script>
+
+  <script>
+    const theme = localStorage.getItem('theme') || 'auto'
+    document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+  </script>
+
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="FastenUp">
+            FastenUp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled="" placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" style="margin-top: -.65em; margin-left: -.8em" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="FastenUp.Runtime.Binders.Pointers.PointerBinder">
+
+
+
+  <h1 id="FastenUp_Runtime_Binders_Pointers_PointerBinder" data-uid="FastenUp.Runtime.Binders.Pointers.PointerBinder" class="text-break">
+    Class PointerBinder
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MerlinDS/fasten-up/blob/develop/Assets/FastenUp/Runtime/Binders/Pointers/PointerBinder.cs/#L7"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="FastenUp.html">FastenUp</a>.<a class="xref" href="FastenUp.Runtime.html">Runtime</a>.<a class="xref" href="FastenUp.Runtime.Binders.html">Binders</a>.<a class="xref" href="FastenUp.Runtime.Binders.Pointers.html">Pointers</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>FastenUp.Runtime.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"></div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class PointerBinder : BaseBinder, IEventBinder&lt;UnityAction&gt;, IEventBinder&lt;UnityAction&lt;PointerEventData&gt;&gt;, IBinder</code></pre>
+  </div>
+
+
+
+
+  <dl class="typelist inheritance">
+    <dt>Inheritance</dt>
+    <dd>
+      <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Object.html">Object</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Component.html">Component</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/Behaviour.html">Behaviour</a></div>
+      <div><a class="xref" href="https://docs.unity3d.com/ScriptReference/MonoBehaviour.html">MonoBehaviour</a></div>
+      <div><a class="xref" href="FastenUp.Runtime.Binders.BaseBinder.html">BaseBinder</a></div>
+      <div><span class="xref">PointerBinder</span></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist implements">
+    <dt>Implements</dt>
+    <dd>
+      <div><a class="xref" href="FastenUp.Runtime.Binders.Events.IEventBinder-1.html">IEventBinder</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Events.UnityAction.html">UnityAction</a>&gt;</div>
+      <div><a class="xref" href="FastenUp.Runtime.Binders.Events.IEventBinder-1.html">IEventBinder</a>&lt;<a class="xref" href="https://docs.unity3d.com/ScriptReference/Events.UnityAction_1.html">UnityAction</a>&lt;<span class="xref">PointerEventData</span>&gt;&gt;</div>
+      <div><a class="xref" href="FastenUp.Runtime.Binders.IBinder.html">IBinder</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Derived</dt>
+    <dd>
+      <div><a class="xref" href="FastenUp.Runtime.Binders.Pointers.PointerClickBinder.html">PointerClickBinder</a></div>
+      <div><a class="xref" href="FastenUp.Runtime.Binders.Pointers.PointerDownBinder.html">PointerDownBinder</a></div>
+      <div><a class="xref" href="FastenUp.Runtime.Binders.Pointers.PointerEnterBinder.html">PointerEnterBinder</a></div>
+      <div><a class="xref" href="FastenUp.Runtime.Binders.Pointers.PointerExitBinder.html">PointerExitBinder</a></div>
+      <div><a class="xref" href="FastenUp.Runtime.Binders.Pointers.PointerMoveBinder.html">PointerMoveBinder</a></div>
+      <div><a class="xref" href="FastenUp.Runtime.Binders.Pointers.PointerUpBinder.html">PointerUpBinder</a></div>
+    </dd>
+  </dl>
+
+  <dl class="typelist derived">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_Name">BaseBinder.Name</a>
+    </div>
+    <div>
+      <a class="xref" href="FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnBinderChanged">BaseBinder.OnBinderChanged</a>
+    </div>
+    <div>
+      <a class="xref" href="FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_IncludeOwnGameObjectInFind">BaseBinder.IncludeOwnGameObjectInFind</a>
+    </div>
+    <div>
+      <a class="xref" href="FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_InvokeOnBinderChanged">BaseBinder.InvokeOnBinderChanged()</a>
+    </div>
+    <div>
+      <a class="xref" href="FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnEnable">BaseBinder.OnEnable()</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="FastenUp_Runtime_Binders_Pointers_PointerBinder_AddListener_" data-uid="FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener*"></a>
+
+  <h3 id="FastenUp_Runtime_Binders_Pointers_PointerBinder_AddListener_UnityEngine_Events_UnityAction_" data-uid="FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener(UnityEngine.Events.UnityAction)">
+  AddListener(UnityAction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MerlinDS/fasten-up/blob/develop/Assets/FastenUp/Runtime/Binders/Pointers/PointerBinder.cs/#L21"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddListener(UnityAction action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Events.UnityAction.html">UnityAction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FastenUp_Runtime_Binders_Pointers_PointerBinder_AddListener_" data-uid="FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener*"></a>
+
+  <h3 id="FastenUp_Runtime_Binders_Pointers_PointerBinder_AddListener_UnityEngine_Events_UnityAction_UnityEngine_EventSystems_PointerEventData__" data-uid="FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})">
+  AddListener(UnityAction&lt;PointerEventData&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MerlinDS/fasten-up/blob/develop/Assets/FastenUp/Runtime/Binders/Pointers/PointerBinder.cs/#L35"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void AddListener(UnityAction&lt;PointerEventData&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Events.UnityAction_1.html">UnityAction</a>&lt;<span class="xref">PointerEventData</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FastenUp_Runtime_Binders_Pointers_PointerBinder_OnDisable_" data-uid="FastenUp.Runtime.Binders.Pointers.PointerBinder.OnDisable*"></a>
+
+  <h3 id="FastenUp_Runtime_Binders_Pointers_PointerBinder_OnDisable" data-uid="FastenUp.Runtime.Binders.Pointers.PointerBinder.OnDisable">
+  OnDisable()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MerlinDS/fasten-up/blob/develop/Assets/FastenUp/Runtime/Binders/Pointers/PointerBinder.cs/#L49"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected override void OnDisable()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FastenUp_Runtime_Binders_Pointers_PointerBinder_OnPointerEvent_" data-uid="FastenUp.Runtime.Binders.Pointers.PointerBinder.OnPointerEvent*"></a>
+
+  <h3 id="FastenUp_Runtime_Binders_Pointers_PointerBinder_OnPointerEvent_UnityEngine_EventSystems_PointerEventData_" data-uid="FastenUp.Runtime.Binders.Pointers.PointerBinder.OnPointerEvent(UnityEngine.EventSystems.PointerEventData)">
+  OnPointerEvent(PointerEventData)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MerlinDS/fasten-up/blob/develop/Assets/FastenUp/Runtime/Binders/Pointers/PointerBinder.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void OnPointerEvent(PointerEventData eventData)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>eventData</code> <span class="xref">PointerEventData</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FastenUp_Runtime_Binders_Pointers_PointerBinder_RemoveListener_" data-uid="FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener*"></a>
+
+  <h3 id="FastenUp_Runtime_Binders_Pointers_PointerBinder_RemoveListener_UnityEngine_Events_UnityAction_" data-uid="FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener(UnityEngine.Events.UnityAction)">
+  RemoveListener(UnityAction)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MerlinDS/fasten-up/blob/develop/Assets/FastenUp/Runtime/Binders/Pointers/PointerBinder.cs/#L28"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveListener(UnityAction action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Events.UnityAction.html">UnityAction</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="FastenUp_Runtime_Binders_Pointers_PointerBinder_RemoveListener_" data-uid="FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener*"></a>
+
+  <h3 id="FastenUp_Runtime_Binders_Pointers_PointerBinder_RemoveListener_UnityEngine_Events_UnityAction_UnityEngine_EventSystems_PointerEventData__" data-uid="FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})">
+  RemoveListener(UnityAction&lt;PointerEventData&gt;)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/MerlinDS/fasten-up/blob/develop/Assets/FastenUp/Runtime/Binders/Pointers/PointerBinder.cs/#L42"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RemoveListener(UnityAction&lt;PointerEventData&gt; action)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>action</code> <a class="xref" href="https://docs.unity3d.com/ScriptReference/Events.UnityAction_1.html">UnityAction</a>&lt;<span class="xref">PointerEventData</span>&gt;</dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/MerlinDS/fasten-up/blob/develop/Assets/FastenUp/Runtime/Binders/Pointers/PointerBinder.cs/#L7" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

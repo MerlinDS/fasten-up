@@ -1,0 +1,367 @@
+{
+  "api/FastenUp.Runtime.Bindables.BaseBindable-1.html": {
+    "href": "api/FastenUp.Runtime.Bindables.BaseBindable-1.html",
+    "title": "Class BaseBindable<T> | FastenUp",
+    "keywords": "Class BaseBindable<T> Namespace FastenUp.Runtime.Bindables Assembly FastenUp.Runtime.dll Base class for the bindable. public abstract class BaseBindable<T> : IBindable<T>, IBindable Type Parameters T Type of the value Inheritance object BaseBindable<T> Implements IBindable<T> IBindable Derived BindableSetup<T> Bindable<T> Constructors BaseBindable(T) protected BaseBindable(T value) Parameters value T Properties Value The value that will be bind to the Unity components. public virtual T Value { get; set; } Property Value T Methods PostBind(IBinder<T>) protected virtual void PostBind(IBinder<T> binder) Parameters binder IBinder<T> PostUnbind(IBinder<T>) protected virtual void PostUnbind(IBinder<T> binder) Parameters binder IBinder<T> SetValueSilently(T) protected void SetValueSilently(T value) Parameters value T UpdateBinders(T, IBinder<T>) protected void UpdateBinders(T value, IBinder<T> ignored = null) Parameters value T ignored IBinder<T>"
+  },
+  "api/FastenUp.Runtime.Bindables.BaseBindableAction-1.html": {
+    "href": "api/FastenUp.Runtime.Bindables.BaseBindableAction-1.html",
+    "title": "Class BaseBindableAction<T> | FastenUp",
+    "keywords": "Class BaseBindableAction<T> Namespace FastenUp.Runtime.Bindables Assembly FastenUp.Runtime.dll Base class for bindable actions that provides the ability to invoke the UnityEngine.Events.UnityEventBase in the bind Unity components. public abstract class BaseBindableAction<T> : IBindableAction<T>, IBindable where T : UnityEventBase, new() Type Parameters T Type of the argument of the UnityEngine.Events.UnityEventBase Inheritance object BaseBindableAction<T> Implements IBindableAction<T> IBindable Derived BindableAction BindableAction<T>"
+  },
+  "api/FastenUp.Runtime.Bindables.BaseBindableEvent-1.html": {
+    "href": "api/FastenUp.Runtime.Bindables.BaseBindableEvent-1.html",
+    "title": "Class BaseBindableEvent<T> | FastenUp",
+    "keywords": "Class BaseBindableEvent<T> Namespace FastenUp.Runtime.Bindables Assembly FastenUp.Runtime.dll Base class for bindable events that provides the ability to subscribe to the event in the bind Unity components. public abstract class BaseBindableEvent<T> : IBindableEvent<T>, IBindable Type Parameters T Type of the delegate to subscribe that is used in the bind Unity components. Inheritance object BaseBindableEvent<T> Implements IBindableEvent<T> IBindable Derived BindableEvent BindableEvent<T> Methods AddListener(T) Subscribes the listener to the event. public void AddListener(T action) Parameters action T The action to subscribe to the event. Dispose() public void Dispose() HasListeners(T) Checks if the event has any listeners. public bool HasListeners(T action) Parameters action T The action to check for listeners. Returns bool True if the listener was subscribed to the event. False otherwise. RemoveListener(T) Unsubscribes the listener from the event. public void RemoveListener(T action) Parameters action T The action to unsubscribe from the event."
+  },
+  "api/FastenUp.Runtime.Bindables.Bindable-1.html": {
+    "href": "api/FastenUp.Runtime.Bindables.Bindable-1.html",
+    "title": "Class Bindable<T> | FastenUp",
+    "keywords": "Class Bindable<T> Namespace FastenUp.Runtime.Bindables Assembly FastenUp.Runtime.dll Bindable that provides the ability to bind values in the Unity components. public sealed class Bindable<T> : BaseBindable<T>, IBindable<T>, IBindable Type Parameters T Type of the value Inheritance object BaseBindable<T> Bindable<T> Implements IBindable<T> IBindable Constructors Bindable(T) public Bindable(T value = default) Parameters value T Properties Value The value that will be bind to the Unity components. public override T Value { get; set; } Property Value T Methods PostBind(IBinder<T>) protected override void PostBind(IBinder<T> binder) Parameters binder IBinder<T> PostUnbind(IBinder<T>) protected override void PostUnbind(IBinder<T> binder) Parameters binder IBinder<T> Events OnValueChanged The event that will be invoked when the value is changed. public event Action<T> OnValueChanged Event Type Action<T>"
+  },
+  "api/FastenUp.Runtime.Bindables.BindableAction-1.html": {
+    "href": "api/FastenUp.Runtime.Bindables.BindableAction-1.html",
+    "title": "Class BindableAction<T> | FastenUp",
+    "keywords": "Class BindableAction<T> Namespace FastenUp.Runtime.Bindables Assembly FastenUp.Runtime.dll Bindable action that provides the ability to invoke the UnityEvent<T0> in the bind Unity components. public sealed class BindableAction<T> : BaseBindableAction<UnityEvent<T>>, IBindableAction<UnityEvent<T>>, IBindable Type Parameters T Inheritance object BaseBindableAction<UnityEvent<T>> BindableAction<T> Implements IBindableAction<UnityEvent<T>> IBindable Methods Invoke(T) public void Invoke(T arg) Parameters arg T"
+  },
+  "api/FastenUp.Runtime.Bindables.BindableAction.html": {
+    "href": "api/FastenUp.Runtime.Bindables.BindableAction.html",
+    "title": "Class BindableAction | FastenUp",
+    "keywords": "Class BindableAction Namespace FastenUp.Runtime.Bindables Assembly FastenUp.Runtime.dll Bindable action that provides the ability to invoke the UnityEvent in the bind Unity components. public sealed class BindableAction : BaseBindableAction<UnityEvent>, IBindableAction<UnityEvent>, IBindable Inheritance object BaseBindableAction<UnityEvent> BindableAction Implements IBindableAction<UnityEvent> IBindable Methods Invoke() Invoke all registered callbacks (runtime and persistent). public void Invoke()"
+  },
+  "api/FastenUp.Runtime.Bindables.BindableCollection-1.html": {
+    "href": "api/FastenUp.Runtime.Bindables.BindableCollection-1.html",
+    "title": "Class BindableCollection<T> | FastenUp",
+    "keywords": "Class BindableCollection<T> Namespace FastenUp.Runtime.Bindables Assembly FastenUp.Runtime.dll Represents a collection of objects that can be individually bound to a ICollectionBinder<T>. public sealed class BindableCollection<T> : IBindableCollection<T>, IBindable Type Parameters T The type of elements in the collection. Inheritance object BindableCollection<T> Implements IBindableCollection<T> IBindable Properties Count public int Count { get; } Property Value int Methods Add(T) public void Add(T item) Parameters item T Clear() public void Clear() Contains(T) public bool Contains(T item) Parameters item T Returns bool CopyTo(T[], int) public void CopyTo(T[] array, int arrayIndex) Parameters array T[] arrayIndex int Remove(T) public bool Remove(T item) Parameters item T Returns bool Events OnItemAdded public event Action<T> OnItemAdded Event Type Action<T> OnItemRemoved public event Action<T> OnItemRemoved Event Type Action<T>"
+  },
+  "api/FastenUp.Runtime.Bindables.BindableEvent-1.html": {
+    "href": "api/FastenUp.Runtime.Bindables.BindableEvent-1.html",
+    "title": "Class BindableEvent<T> | FastenUp",
+    "keywords": "Class BindableEvent<T> Namespace FastenUp.Runtime.Bindables Assembly FastenUp.Runtime.dll Bindable event that provides the ability to subscribe to the events with one argument in the bind Unity components. public sealed class BindableEvent<T> : BaseBindableEvent<UnityAction<T>>, IBindableEvent<UnityAction<T>>, IBindable Type Parameters T Type of the argument of the UnityEvent<T0> Inheritance object BaseBindableEvent<UnityAction<T>> BindableEvent<T> Implements IBindableEvent<UnityAction<T>> IBindable Inherited Members BaseBindableEvent<UnityAction<T>>.HasListeners(UnityAction<T>) BaseBindableEvent<UnityAction<T>>.AddListener(UnityAction<T>) BaseBindableEvent<UnityAction<T>>.RemoveListener(UnityAction<T>) BaseBindableEvent<UnityAction<T>>.Dispose()"
+  },
+  "api/FastenUp.Runtime.Bindables.BindableEvent.html": {
+    "href": "api/FastenUp.Runtime.Bindables.BindableEvent.html",
+    "title": "Class BindableEvent | FastenUp",
+    "keywords": "Class BindableEvent Namespace FastenUp.Runtime.Bindables Assembly FastenUp.Runtime.dll Bindable event that provides the ability to subscribe to the events without any arguments in the bind Unity components. public sealed class BindableEvent : BaseBindableEvent<UnityAction>, IBindableEvent<UnityAction>, IBindable Inheritance object BaseBindableEvent<UnityAction> BindableEvent Implements IBindableEvent<UnityAction> IBindable Inherited Members BaseBindableEvent<UnityAction>.HasListeners(UnityAction) BaseBindableEvent<UnityAction>.AddListener(UnityAction) BaseBindableEvent<UnityAction>.RemoveListener(UnityAction) BaseBindableEvent<UnityAction>.Dispose()"
+  },
+  "api/FastenUp.Runtime.Bindables.BindableRef-1.html": {
+    "href": "api/FastenUp.Runtime.Bindables.BindableRef-1.html",
+    "title": "Class BindableRef<T> | FastenUp",
+    "keywords": "Class BindableRef<T> Namespace FastenUp.Runtime.Bindables Assembly FastenUp.Runtime.dll Bindable reference is used to bind the reference of the specific type to the mediator. It can be used, for example, to bind the reference of one mediator to another mediator. public sealed class BindableRef<T> : IBindableRef<T>, IBindable where T : class Type Parameters T The type of the referenced object. Inheritance object BindableRef<T> Implements IBindableRef<T> IBindable Properties Value The referenced object. public T Value { get; } Property Value T Events OnRefChanged This event will be invoked when the referenced object is changed. public event Action OnRefChanged Event Type Action"
+  },
+  "api/FastenUp.Runtime.Bindables.BindableSetup-1.html": {
+    "href": "api/FastenUp.Runtime.Bindables.BindableSetup-1.html",
+    "title": "Class BindableSetup<T> | FastenUp",
+    "keywords": "Class BindableSetup<T> Namespace FastenUp.Runtime.Bindables Assembly FastenUp.Runtime.dll Used to setup the binder during runtime. public sealed class BindableSetup<T> : BaseBindable<T>, IBindable<T>, IBindable Type Parameters T Type of the setup value Inheritance object BaseBindable<T> BindableSetup<T> Implements IBindable<T> IBindable Inherited Members BaseBindable<T>.Value Constructors BindableSetup(T) public BindableSetup(T value = default) Parameters value T"
+  },
+  "api/FastenUp.Runtime.Bindables.IBindable-1.html": {
+    "href": "api/FastenUp.Runtime.Bindables.IBindable-1.html",
+    "title": "Interface IBindable<T> | FastenUp",
+    "keywords": "Interface IBindable<T> Namespace FastenUp.Runtime.Bindables Assembly FastenUp.Runtime.dll Used to bind IBinder<T>s to a IMediator. public interface IBindable<T> : IBindable Type Parameters T Type of the value that will be set by the binder component"
+  },
+  "api/FastenUp.Runtime.Bindables.IBindable.html": {
+    "href": "api/FastenUp.Runtime.Bindables.IBindable.html",
+    "title": "Interface IBindable | FastenUp",
+    "keywords": "Interface IBindable Namespace FastenUp.Runtime.Bindables Assembly FastenUp.Runtime.dll Main interface for all bindables. public interface IBindable Remarks Used by source code generator to determine bindable properties."
+  },
+  "api/FastenUp.Runtime.Bindables.IBindableAction-1.html": {
+    "href": "api/FastenUp.Runtime.Bindables.IBindableAction-1.html",
+    "title": "Interface IBindableAction<T> | FastenUp",
+    "keywords": "Interface IBindableAction<T> Namespace FastenUp.Runtime.Bindables Assembly FastenUp.Runtime.dll Implementations of this interface can be bound to IActionBinder<T>s. It provides ability to invoke the UnityEngine.Events.UnityEventBase in the bind Unity components. public interface IBindableAction<in T> : IBindable where T : UnityEventBase, new() Type Parameters T Type of the event, must be a subclass of UnityEngine.Events.UnityEventBase"
+  },
+  "api/FastenUp.Runtime.Bindables.IBindableCollection-1.html": {
+    "href": "api/FastenUp.Runtime.Bindables.IBindableCollection-1.html",
+    "title": "Interface IBindableCollection<T> | FastenUp",
+    "keywords": "Interface IBindableCollection<T> Namespace FastenUp.Runtime.Bindables Assembly FastenUp.Runtime.dll Represents a collection of objects that can be individually bound to a ICollectionBinder<T>. public interface IBindableCollection<out T> : IBindable Type Parameters T The type of elements in the collection."
+  },
+  "api/FastenUp.Runtime.Bindables.IBindableEvent-1.html": {
+    "href": "api/FastenUp.Runtime.Bindables.IBindableEvent-1.html",
+    "title": "Interface IBindableEvent<T> | FastenUp",
+    "keywords": "Interface IBindableEvent<T> Namespace FastenUp.Runtime.Bindables Assembly FastenUp.Runtime.dll Used to bind IEventBinder<T>s to a IMediator. public interface IBindableEvent<out T> : IBindable Type Parameters T"
+  },
+  "api/FastenUp.Runtime.Bindables.IBindableRef-1.html": {
+    "href": "api/FastenUp.Runtime.Bindables.IBindableRef-1.html",
+    "title": "Interface IBindableRef<T> | FastenUp",
+    "keywords": "Interface IBindableRef<T> Namespace FastenUp.Runtime.Bindables Assembly FastenUp.Runtime.dll Implementation of this interface provides the ability to bind object references to a IMediator. public interface IBindableRef<in T> : IBindable Type Parameters T Type of the reference"
+  },
+  "api/FastenUp.Runtime.Bindables.html": {
+    "href": "api/FastenUp.Runtime.Bindables.html",
+    "title": "Namespace FastenUp.Runtime.Bindables | FastenUp",
+    "keywords": "Namespace FastenUp.Runtime.Bindables Classes BaseBindableAction<T> Base class for bindable actions that provides the ability to invoke the UnityEngine.Events.UnityEventBase in the bind Unity components. BaseBindableEvent<T> Base class for bindable events that provides the ability to subscribe to the event in the bind Unity components. BaseBindable<T> Base class for the bindable. BindableAction Bindable action that provides the ability to invoke the UnityEvent in the bind Unity components. BindableAction<T> Bindable action that provides the ability to invoke the UnityEvent<T0> in the bind Unity components. BindableCollection<T> Represents a collection of objects that can be individually bound to a ICollectionBinder<T>. BindableEvent Bindable event that provides the ability to subscribe to the events without any arguments in the bind Unity components. BindableEvent<T> Bindable event that provides the ability to subscribe to the events with one argument in the bind Unity components. BindableRef<T> Bindable reference is used to bind the reference of the specific type to the mediator. It can be used, for example, to bind the reference of one mediator to another mediator. BindableSetup<T> Used to setup the binder during runtime. Bindable<T> Bindable that provides the ability to bind values in the Unity components. Interfaces IBindable Main interface for all bindables. IBindableAction<T> Implementations of this interface can be bound to IActionBinder<T>s. It provides ability to invoke the UnityEngine.Events.UnityEventBase in the bind Unity components. IBindableCollection<T> Represents a collection of objects that can be individually bound to a ICollectionBinder<T>. IBindableEvent<T> Used to bind IEventBinder<T>s to a IMediator. IBindableRef<T> Implementation of this interface provides the ability to bind object references to a IMediator. IBindable<T> Used to bind IBinder<T>s to a IMediator."
+  },
+  "api/FastenUp.Runtime.Binders.Actions.ActionBinder-1.html": {
+    "href": "api/FastenUp.Runtime.Binders.Actions.ActionBinder-1.html",
+    "title": "Class ActionBinder<T> | FastenUp",
+    "keywords": "Class ActionBinder<T> Namespace FastenUp.Runtime.Binders.Actions Assembly FastenUp.Runtime.dll Binders that provides the ability to invoke the UnityEvent<T0> in the bind Unity components through the BindableAction<T> public abstract class ActionBinder<T> : BaseActionBinder<UnityEvent<T>>, IActionBinder<UnityEvent<T>>, IBinder Type Parameters T Type of the argument of the UnityEvent<T0> Inheritance object Object Component Behaviour MonoBehaviour BaseBinder BaseActionBinder<UnityEvent<T>> ActionBinder<T> Implements IActionBinder<UnityEvent<T>> IBinder Derived BooleanActionBinder FloatActionBinder IntActionBinder Inherited Members BaseActionBinder<UnityEvent<T>>.OnAction BaseBinder.Name BaseBinder.OnBinderChanged BaseBinder.IncludeOwnGameObjectInFind BaseBinder.InvokeOnBinderChanged() BaseBinder.OnEnable() BaseBinder.OnDisable()"
+  },
+  "api/FastenUp.Runtime.Binders.Actions.ActionBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.Actions.ActionBinder.html",
+    "title": "Class ActionBinder | FastenUp",
+    "keywords": "Class ActionBinder Namespace FastenUp.Runtime.Binders.Actions Assembly FastenUp.Runtime.dll Binders that provides the ability to invoke the UnityEvent in the bind Unity components through the BindableAction [AddComponentMenu(\"UI/Fasten Up/Actions/Action Binder\", 0)] [HelpURL(\"https://github.com/MerlinDS/fasten-up/wiki/Actions#action\")] public sealed class ActionBinder : BaseActionBinder<UnityEvent>, IActionBinder<UnityEvent>, IBinder Inheritance object Object Component Behaviour MonoBehaviour BaseBinder BaseActionBinder<UnityEvent> ActionBinder Implements IActionBinder<UnityEvent> IBinder Inherited Members BaseActionBinder<UnityEvent>.OnAction BaseBinder.Name BaseBinder.OnBinderChanged"
+  },
+  "api/FastenUp.Runtime.Binders.Actions.BaseActionBinder-1.html": {
+    "href": "api/FastenUp.Runtime.Binders.Actions.BaseActionBinder-1.html",
+    "title": "Class BaseActionBinder<T> | FastenUp",
+    "keywords": "Class BaseActionBinder<T> Namespace FastenUp.Runtime.Binders.Actions Assembly FastenUp.Runtime.dll Base class for all action binders. public abstract class BaseActionBinder<T> : BaseBinder, IActionBinder<T>, IBinder where T : UnityEventBase, new() Type Parameters T Type of the event, must be a subclass of UnityEngine.Events.UnityEventBase Inheritance object Object Component Behaviour MonoBehaviour BaseBinder BaseActionBinder<T> Implements IActionBinder<T> IBinder Derived ActionBinder ActionBinder<T> Inherited Members BaseBinder.Name BaseBinder.OnBinderChanged BaseBinder.IncludeOwnGameObjectInFind BaseBinder.InvokeOnBinderChanged() BaseBinder.OnEnable() BaseBinder.OnDisable() Properties OnAction The UnityEngine.Events.UnityEventBase that will be invoked in the bind Unity components. public T OnAction { get; } Property Value T"
+  },
+  "api/FastenUp.Runtime.Binders.Actions.BooleanActionBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.Actions.BooleanActionBinder.html",
+    "title": "Class BooleanActionBinder | FastenUp",
+    "keywords": "Class BooleanActionBinder Namespace FastenUp.Runtime.Binders.Actions Assembly FastenUp.Runtime.dll ActionBinder<T> for bool type. [AddComponentMenu(\"UI/Fasten Up/Actions/Boolean Action Binder\", 0)] public class BooleanActionBinder : ActionBinder<bool>, IActionBinder<UnityEvent<bool>>, IBinder Inheritance object Object Component Behaviour MonoBehaviour BaseBinder BaseActionBinder<UnityEvent<bool>> ActionBinder<bool> BooleanActionBinder Implements IActionBinder<UnityEvent<bool>> IBinder Inherited Members BaseActionBinder<UnityEvent<bool>>.OnAction BaseBinder.Name BaseBinder.OnBinderChanged BaseBinder.IncludeOwnGameObjectInFind BaseBinder.InvokeOnBinderChanged() BaseBinder.OnEnable() BaseBinder.OnDisable()"
+  },
+  "api/FastenUp.Runtime.Binders.Actions.FloatActionBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.Actions.FloatActionBinder.html",
+    "title": "Class FloatActionBinder | FastenUp",
+    "keywords": "Class FloatActionBinder Namespace FastenUp.Runtime.Binders.Actions Assembly FastenUp.Runtime.dll ActionBinder<T> for float type. [AddComponentMenu(\"UI/Fasten Up/Actions/Float Action Binder\", 0)] public class FloatActionBinder : ActionBinder<float>, IActionBinder<UnityEvent<float>>, IBinder Inheritance object Object Component Behaviour MonoBehaviour BaseBinder BaseActionBinder<UnityEvent<float>> ActionBinder<float> FloatActionBinder Implements IActionBinder<UnityEvent<float>> IBinder Inherited Members BaseActionBinder<UnityEvent<float>>.OnAction BaseBinder.Name BaseBinder.OnBinderChanged BaseBinder.IncludeOwnGameObjectInFind BaseBinder.InvokeOnBinderChanged() BaseBinder.OnEnable() BaseBinder.OnDisable()"
+  },
+  "api/FastenUp.Runtime.Binders.Actions.IActionBinder-1.html": {
+    "href": "api/FastenUp.Runtime.Binders.Actions.IActionBinder-1.html",
+    "title": "Interface IActionBinder<T> | FastenUp",
+    "keywords": "Interface IActionBinder<T> Namespace FastenUp.Runtime.Binders.Actions Assembly FastenUp.Runtime.dll Implementation of this interface will be bound to an IBindableAction<T>. It provides the ability to invoke the UnityEngine.Events.UnityEventBase in the bind Unity components. public interface IActionBinder<out T> : IBinder where T : UnityEventBase, new() Type Parameters T Type of the event, must be a subclass of UnityEngine.Events.UnityEventBase Inherited Members IBinder.Name IBinder.OnBinderChanged Properties OnAction The UnityEngine.Events.UnityEventBase that will be invoked in the bind Unity components. T OnAction { get; } Property Value T"
+  },
+  "api/FastenUp.Runtime.Binders.Actions.IntActionBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.Actions.IntActionBinder.html",
+    "title": "Class IntActionBinder | FastenUp",
+    "keywords": "Class IntActionBinder Namespace FastenUp.Runtime.Binders.Actions Assembly FastenUp.Runtime.dll ActionBinder<T> for int type. [AddComponentMenu(\"UI/Fasten Up/Actions/Integer Action Binder\", 0)] public class IntActionBinder : ActionBinder<int>, IActionBinder<UnityEvent<int>>, IBinder Inheritance object Object Component Behaviour MonoBehaviour BaseBinder BaseActionBinder<UnityEvent<int>> ActionBinder<int> IntActionBinder Implements IActionBinder<UnityEvent<int>> IBinder Inherited Members BaseActionBinder<UnityEvent<int>>.OnAction BaseBinder.Name BaseBinder.OnBinderChanged BaseBinder.IncludeOwnGameObjectInFind BaseBinder.InvokeOnBinderChanged() BaseBinder.OnEnable() BaseBinder.OnDisable()"
+  },
+  "api/FastenUp.Runtime.Binders.Actions.html": {
+    "href": "api/FastenUp.Runtime.Binders.Actions.html",
+    "title": "Namespace FastenUp.Runtime.Binders.Actions | FastenUp",
+    "keywords": "Namespace FastenUp.Runtime.Binders.Actions Classes ActionBinder Binders that provides the ability to invoke the UnityEvent in the bind Unity components through the BindableAction ActionBinder<T> Binders that provides the ability to invoke the UnityEvent<T0> in the bind Unity components through the BindableAction<T> BaseActionBinder<T> Base class for all action binders. BooleanActionBinder ActionBinder<T> for bool type. FloatActionBinder ActionBinder<T> for float type. IntActionBinder ActionBinder<T> for int type. Interfaces IActionBinder<T> Implementation of this interface will be bound to an IBindableAction<T>. It provides the ability to invoke the UnityEngine.Events.UnityEventBase in the bind Unity components."
+  },
+  "api/FastenUp.Runtime.Binders.BaseBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.BaseBinder.html",
+    "title": "Class BaseBinder | FastenUp",
+    "keywords": "Class BaseBinder Namespace FastenUp.Runtime.Binders Assembly FastenUp.Runtime.dll Base class for all binders. [Serializable] public abstract class BaseBinder : MonoBehaviour, IBinder Inheritance object Object Component Behaviour MonoBehaviour BaseBinder Implements IBinder Derived BaseActionBinder<T> ColorBinder DropdownBinder InputFieldBinder SliderBinder SpriteBinder TextBinder ToggleBinder VisibilityBinder MediatorCollectionBinder ButtonBinder PointerBinder BaseRefBinder<TRef> Remarks This class is provide basic functionality for all binders, like name validation and binding to mediators. Properties IncludeOwnGameObjectInFind Checks if game object of this binder should be included in search for IMediator. True by default. protected virtual bool IncludeOwnGameObjectInFind { get; } Property Value bool Remarks To prevent search for IMediator in game object of this binder, override this property and return false. Name The name of the bindable property in the IMediator. public string Name { get; } Property Value string Remarks If the name is empty, the binder will ignore the binding and log an error. To ignore the binding without logging an error, set the name that starts with the # symbol. Methods InvokeOnBinderChanged() protected void InvokeOnBinderChanged() OnDisable() protected virtual void OnDisable() OnEnable() protected virtual void OnEnable() Events OnBinderChanged The event will be invoked when the binder is changed somehow (For example, when the value is changed). Value in the event is the binder that was changed. public event OnBinderChanged OnBinderChanged Event Type OnBinderChanged"
+  },
+  "api/FastenUp.Runtime.Binders.Behaviours.ColorBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.Behaviours.ColorBinder.html",
+    "title": "Class ColorBinder | FastenUp",
+    "keywords": "Class ColorBinder Namespace FastenUp.Runtime.Binders.Behaviours Assembly FastenUp.Runtime.dll The one-way IBinder binds a value to the component with Color field. [RequireComponent(typeof(Graphic))] [AddComponentMenu(\"UI/Fasten Up/Color Binder\", 3)] [HelpURL(\"https://github.com/MerlinDS/fasten-up/wiki/Binders#color\")] public class ColorBinder : BaseBinder, IValueReceiver<Color>, IBinder<Color>, IBinder Inheritance object Object Component Behaviour MonoBehaviour BaseBinder ColorBinder Implements IValueReceiver<Color> IBinder<Color> IBinder Inherited Members BaseBinder.Name BaseBinder.OnBinderChanged BaseBinder.IncludeOwnGameObjectInFind BaseBinder.InvokeOnBinderChanged() BaseBinder.OnEnable() BaseBinder.OnDisable() Methods SetValue(Color) Sets the value to the binder. public void SetValue(Color value) Parameters value Color The value that will be set to the binder."
+  },
+  "api/FastenUp.Runtime.Binders.Behaviours.DropdownBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.Behaviours.DropdownBinder.html",
+    "title": "Class DropdownBinder | FastenUp",
+    "keywords": "Class DropdownBinder Namespace FastenUp.Runtime.Binders.Behaviours Assembly FastenUp.Runtime.dll The two-way IBinder binds a value to the component with TMPro.TMP_Dropdown field. [RequireComponent(typeof(TMP_Dropdown))] [AddComponentMenu(\"UI/Fasten Up/Dropdown Binder\", 6)] [HelpURL(\"https://github.com/MerlinDS/fasten-up/wiki/Binders#dropdown\")] public sealed class DropdownBinder : BaseBinder, IValueReceiver<int>, IValueProvider<int>, IBinder<int>, IValueReceiver<string[]>, IBinder<string[]>, IValueReceiver<List<TMP_Dropdown.OptionData>>, IBinder<List<TMP_Dropdown.OptionData>>, IBinder Inheritance object Object Component Behaviour MonoBehaviour BaseBinder DropdownBinder Implements IValueReceiver<int> IValueProvider<int> IBinder<int> IValueReceiver<string[]> IBinder<string[]> IValueReceiver<List<TMP_Dropdown.OptionData>> IBinder<List<TMP_Dropdown.OptionData>> IBinder Inherited Members BaseBinder.Name BaseBinder.OnBinderChanged Methods GetValue() Gets the value from the binder. public int GetValue() Returns int The value that was provided by the binder. OnDisable() protected override void OnDisable() SetValue(List<OptionData>) Sets the value to the binder. public void SetValue(List<TMP_Dropdown.OptionData> value) Parameters value List<TMP_Dropdown.OptionData> The value that will be set to the binder. SetValue(int) Sets the value to the binder. public void SetValue(int value) Parameters value int The value that will be set to the binder. SetValue(string[]) Sets the value to the binder. public void SetValue(string[] value) Parameters value string[] The value that will be set to the binder."
+  },
+  "api/FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.html",
+    "title": "Class InputFieldBinder | FastenUp",
+    "keywords": "Class InputFieldBinder Namespace FastenUp.Runtime.Binders.Behaviours Assembly FastenUp.Runtime.dll The two-way IBinder binds a value to the component with TMPro.TMP_InputField field. [RequireComponent(typeof(TMP_InputField))] [AddComponentMenu(\"UI/Fasten Up/Input Field Binder\", 7)] [HelpURL(\"https://github.com/MerlinDS/fasten-up/wiki/Binders#input-field\")] public class InputFieldBinder : BaseBinder, IValueReceiver<string>, IValueProvider<string>, IBinder<string>, IBinder Inheritance object Object Component Behaviour MonoBehaviour BaseBinder InputFieldBinder Implements IValueReceiver<string> IValueProvider<string> IBinder<string> IBinder Inherited Members BaseBinder.Name BaseBinder.OnBinderChanged BaseBinder.IncludeOwnGameObjectInFind BaseBinder.InvokeOnBinderChanged() BaseBinder.OnEnable() Methods GetValue() Gets the value from the binder. public string GetValue() Returns string The value that was provided by the binder. OnDisable() protected override void OnDisable() SetValue(string) Sets the value to the binder. public void SetValue(string value) Parameters value string The value that will be set to the binder."
+  },
+  "api/FastenUp.Runtime.Binders.Behaviours.SliderBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.Behaviours.SliderBinder.html",
+    "title": "Class SliderBinder | FastenUp",
+    "keywords": "Class SliderBinder Namespace FastenUp.Runtime.Binders.Behaviours Assembly FastenUp.Runtime.dll The two-way IBinder binds a value to the component with UnityEngine.UI.Slider component. [RequireComponent(typeof(Slider))] [AddComponentMenu(\"UI/Fasten Up/Slider Binder\", 5)] [HelpURL(\"https://github.com/MerlinDS/fasten-up/wiki/Binders#slider\")] public sealed class SliderBinder : BaseBinder, IValueReceiver<float>, IValueProvider<float>, IBinder<float>, IValueReceiver<Vector2>, IBinder<Vector2>, IValueReceiver<int>, IValueProvider<int>, IBinder<int>, IValueReceiver<Vector2Int>, IBinder<Vector2Int>, IBinder Inheritance object Object Component Behaviour MonoBehaviour BaseBinder SliderBinder Implements IValueReceiver<float> IValueProvider<float> IBinder<float> IValueReceiver<Vector2> IBinder<Vector2> IValueReceiver<int> IValueProvider<int> IBinder<int> IValueReceiver<Vector2Int> IBinder<Vector2Int> IBinder Inherited Members BaseBinder.Name BaseBinder.OnBinderChanged Methods GetValue() Gets the value from the binder. public float GetValue() Returns float The value that was provided by the binder. OnDisable() protected override void OnDisable() SetValue(int) Sets the value to the binder. public void SetValue(int value) Parameters value int The value that will be set to the binder. SetValue(float) Sets the value to the binder. public void SetValue(float value) Parameters value float The value that will be set to the binder. SetValue(Vector2) Sets the value to the binder. public void SetValue(Vector2 value) Parameters value Vector2 The value that will be set to the binder. SetValue(Vector2Int) Sets the value to the binder. public void SetValue(Vector2Int value) Parameters value Vector2Int The value that will be set to the binder."
+  },
+  "api/FastenUp.Runtime.Binders.Behaviours.SpriteBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.Behaviours.SpriteBinder.html",
+    "title": "Class SpriteBinder | FastenUp",
+    "keywords": "Class SpriteBinder Namespace FastenUp.Runtime.Binders.Behaviours Assembly FastenUp.Runtime.dll The one-way IBinder binds a value to the component with Sprite field. [RequireComponent(typeof(Image))] [AddComponentMenu(\"UI/Fasten Up/Sprite Binder\", 2)] [HelpURL(\"https://github.com/MerlinDS/fasten-up/wiki/Binders#sprite\")] public sealed class SpriteBinder : BaseBinder, IValueReceiver<Sprite>, IBinder<Sprite>, IBinder Inheritance object Object Component Behaviour MonoBehaviour BaseBinder SpriteBinder Implements IValueReceiver<Sprite> IBinder<Sprite> IBinder Inherited Members BaseBinder.Name BaseBinder.OnBinderChanged Methods SetValue(Sprite) Sets the value to the binder. public void SetValue(Sprite value) Parameters value Sprite The value that will be set to the binder."
+  },
+  "api/FastenUp.Runtime.Binders.Behaviours.TextBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.Behaviours.TextBinder.html",
+    "title": "Class TextBinder | FastenUp",
+    "keywords": "Class TextBinder Namespace FastenUp.Runtime.Binders.Behaviours Assembly FastenUp.Runtime.dll The one-way IBinder binds a value to the text component. [RequireComponent(typeof(TextMeshProUGUI))] [AddComponentMenu(\"UI/Fasten Up/Text Binder\", 1)] [HelpURL(\"https://github.com/MerlinDS/fasten-up/wiki/Binders#text\")] public sealed class TextBinder : BaseBinder, IValueReceiver<int>, IBinder<int>, IValueReceiver<float>, IBinder<float>, IValueReceiver<string>, IBinder<string>, IBinder Inheritance object Object Component Behaviour MonoBehaviour BaseBinder TextBinder Implements IValueReceiver<int> IBinder<int> IValueReceiver<float> IBinder<float> IValueReceiver<string> IBinder<string> IBinder Inherited Members BaseBinder.Name BaseBinder.OnBinderChanged Methods SetValue(int) Sets the value to the binder. public void SetValue(int value) Parameters value int The value that will be set to the binder. SetValue(float) Sets the value to the binder. public void SetValue(float value) Parameters value float The value that will be set to the binder. SetValue(string) Sets the value to the binder. public void SetValue(string value) Parameters value string The value that will be set to the binder."
+  },
+  "api/FastenUp.Runtime.Binders.Behaviours.ToggleBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.Behaviours.ToggleBinder.html",
+    "title": "Class ToggleBinder | FastenUp",
+    "keywords": "Class ToggleBinder Namespace FastenUp.Runtime.Binders.Behaviours Assembly FastenUp.Runtime.dll The two-way IBinder binds a value to the component with UnityEngine.UI.Toggle component. [RequireComponent(typeof(Toggle))] [AddComponentMenu(\"UI/Fasten Up/Toggle Binder\", 4)] [HelpURL(\"https://github.com/MerlinDS/fasten-up/wiki/Binders#toggle\")] public sealed class ToggleBinder : BaseBinder, IValueReceiver<bool>, IValueProvider<bool>, IBinder<bool>, IBinder Inheritance object Object Component Behaviour MonoBehaviour BaseBinder ToggleBinder Implements IValueReceiver<bool> IValueProvider<bool> IBinder<bool> IBinder Inherited Members BaseBinder.Name BaseBinder.OnBinderChanged Methods GetValue() Gets the value from the binder. public bool GetValue() Returns bool The value that was provided by the binder. OnDisable() protected override void OnDisable() SetValue(bool) Sets the value to the binder. public void SetValue(bool value) Parameters value bool The value that will be set to the binder."
+  },
+  "api/FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.html",
+    "title": "Class VisibilityBinder | FastenUp",
+    "keywords": "Class VisibilityBinder Namespace FastenUp.Runtime.Binders.Behaviours Assembly FastenUp.Runtime.dll The two-way IBinder that controls visibility of UI components. [DisallowMultipleComponent] [AddComponentMenu(\"UI/Fasten Up/Visibility Binder\", 1)] [HelpURL(\"https://github.com/MerlinDS/fasten-up/wiki/Binders#visibility\")] public sealed class VisibilityBinder : BaseBinder, IValueReceiver<bool>, IValueProvider<bool>, IBinder<bool>, IBinder, IHierarchyCache Inheritance object Object Component Behaviour MonoBehaviour BaseBinder VisibilityBinder Implements IValueReceiver<bool> IValueProvider<bool> IBinder<bool> IBinder IHierarchyCache Inherited Members BaseBinder.Name BaseBinder.OnBinderChanged Methods GetValue() Gets the value from the binder. public bool GetValue() Returns bool The value that was provided by the binder. RebuildCache() Rebuilds hierarchy cache. MUST be called after hierarchy was changed. public void RebuildCache() SetValue(bool) Sets the value to the binder. public void SetValue(bool value) Parameters value bool The value that will be set to the binder."
+  },
+  "api/FastenUp.Runtime.Binders.Behaviours.html": {
+    "href": "api/FastenUp.Runtime.Binders.Behaviours.html",
+    "title": "Namespace FastenUp.Runtime.Binders.Behaviours | FastenUp",
+    "keywords": "Namespace FastenUp.Runtime.Binders.Behaviours Classes ColorBinder The one-way IBinder binds a value to the component with Color field. DropdownBinder The two-way IBinder binds a value to the component with TMPro.TMP_Dropdown field. InputFieldBinder The two-way IBinder binds a value to the component with TMPro.TMP_InputField field. SliderBinder The two-way IBinder binds a value to the component with UnityEngine.UI.Slider component. SpriteBinder The one-way IBinder binds a value to the component with Sprite field. TextBinder The one-way IBinder binds a value to the text component. ToggleBinder The two-way IBinder binds a value to the component with UnityEngine.UI.Toggle component. VisibilityBinder The two-way IBinder that controls visibility of UI components."
+  },
+  "api/FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html": {
+    "href": "api/FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html",
+    "title": "Interface ICollectionBinder<T> | FastenUp",
+    "keywords": "Interface ICollectionBinder<T> Namespace FastenUp.Runtime.Binders.Collections Assembly FastenUp.Runtime.dll IBinder that provides the ability to bind the collection of items. public interface ICollectionBinder<in T> : IBinder Type Parameters T Type of the item. Inherited Members IBinder.Name IBinder.OnBinderChanged Methods Add(T) Adds item to the bound collection. void Add(T item) Parameters item T Item to add. Remove(T) Removes item from the bound collection. void Remove(T item) Parameters item T"
+  },
+  "api/FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.Collections.MediatorCollectionBinder.html",
+    "title": "Class MediatorCollectionBinder | FastenUp",
+    "keywords": "Class MediatorCollectionBinder Namespace FastenUp.Runtime.Binders.Collections Assembly FastenUp.Runtime.dll Binder that provides the ability to add and remove IInternalMediator to the bound collection. BindableCollection<T> [AddComponentMenu(\"UI/Fasten Up/Collections/Mediator Collection Binder\", 0)] public sealed class MediatorCollectionBinder : BaseBinder, ICollectionBinder<IInternalMediator>, IBinder Inheritance object Object Component Behaviour MonoBehaviour BaseBinder MediatorCollectionBinder Implements ICollectionBinder<IInternalMediator> IBinder Inherited Members BaseBinder.Name BaseBinder.OnBinderChanged Methods Add(IInternalMediator) Adds item to the bound collection. public void Add(IInternalMediator item) Parameters item IInternalMediator Item to add. OnDisable() protected override void OnDisable() OnEnable() protected override void OnEnable() Remove(IInternalMediator) Removes item from the bound collection. public void Remove(IInternalMediator item) Parameters item IInternalMediator"
+  },
+  "api/FastenUp.Runtime.Binders.Collections.html": {
+    "href": "api/FastenUp.Runtime.Binders.Collections.html",
+    "title": "Namespace FastenUp.Runtime.Binders.Collections | FastenUp",
+    "keywords": "Namespace FastenUp.Runtime.Binders.Collections Classes MediatorCollectionBinder Binder that provides the ability to add and remove IInternalMediator to the bound collection. BindableCollection<T> Interfaces ICollectionBinder<T> IBinder that provides the ability to bind the collection of items."
+  },
+  "api/FastenUp.Runtime.Binders.Events.ButtonBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.Events.ButtonBinder.html",
+    "title": "Class ButtonBinder | FastenUp",
+    "keywords": "Class ButtonBinder Namespace FastenUp.Runtime.Binders.Events Assembly FastenUp.Runtime.dll The one-way IBinder binds a value to the component with UnityAction field. [RequireComponent(typeof(Button))] [AddComponentMenu(\"UI/Fasten Up/Button Binder\", 0)] [HelpURL(\"https://github.com/MerlinDS/fasten-up/wiki/Binders#button\")] public class ButtonBinder : BaseBinder, IEventBinder<UnityAction>, IBinder Inheritance object Object Component Behaviour MonoBehaviour BaseBinder ButtonBinder Implements IEventBinder<UnityAction> IBinder Inherited Members BaseBinder.Name BaseBinder.OnBinderChanged BaseBinder.IncludeOwnGameObjectInFind BaseBinder.InvokeOnBinderChanged() BaseBinder.OnEnable() Methods AddListener(UnityAction) public void AddListener(UnityAction action) Parameters action UnityAction OnDisable() protected override void OnDisable() RemoveListener(UnityAction) public void RemoveListener(UnityAction action) Parameters action UnityAction"
+  },
+  "api/FastenUp.Runtime.Binders.Events.IEventBinder-1.html": {
+    "href": "api/FastenUp.Runtime.Binders.Events.IEventBinder-1.html",
+    "title": "Interface IEventBinder<T> | FastenUp",
+    "keywords": "Interface IEventBinder<T> Namespace FastenUp.Runtime.Binders.Events Assembly FastenUp.Runtime.dll Implementations of this interface will be bound to an IBindableEvent<T>. It provides communication between the unity components and bindable event in a IMediator. public interface IEventBinder<in T> : IBinder Type Parameters T Inherited Members IBinder.Name IBinder.OnBinderChanged Methods AddListener(T) void AddListener(T action) Parameters action T RemoveListener(T) void RemoveListener(T action) Parameters action T"
+  },
+  "api/FastenUp.Runtime.Binders.Events.html": {
+    "href": "api/FastenUp.Runtime.Binders.Events.html",
+    "title": "Namespace FastenUp.Runtime.Binders.Events | FastenUp",
+    "keywords": "Namespace FastenUp.Runtime.Binders.Events Classes ButtonBinder The one-way IBinder binds a value to the component with UnityAction field. Interfaces IEventBinder<T> Implementations of this interface will be bound to an IBindableEvent<T>. It provides communication between the unity components and bindable event in a IMediator."
+  },
+  "api/FastenUp.Runtime.Binders.IBinder-1.html": {
+    "href": "api/FastenUp.Runtime.Binders.IBinder-1.html",
+    "title": "Interface IBinder<T> | FastenUp",
+    "keywords": "Interface IBinder<T> Namespace FastenUp.Runtime.Binders Assembly FastenUp.Runtime.dll Binder is a component that can be bind to the bindable property in the IMediator. public interface IBinder<T> : IBinder Type Parameters T The type of the bindable property in the IMediator. Inherited Members IBinder.Name IBinder.OnBinderChanged"
+  },
+  "api/FastenUp.Runtime.Binders.IBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.IBinder.html",
+    "title": "Interface IBinder | FastenUp",
+    "keywords": "Interface IBinder Namespace FastenUp.Runtime.Binders Assembly FastenUp.Runtime.dll Binder is a component that can be bind to the bindable property in the IMediator. public interface IBinder Properties Name The name of the bindable property in the IMediator. string Name { get; } Property Value string Remarks If the name is empty, the binder will ignore the binding and log an error. To ignore the binding without logging an error, set the name that starts with the # symbol. Events OnBinderChanged The event will be invoked when the binder is changed somehow (For example, when the value is changed). Value in the event is the binder that was changed. event OnBinderChanged OnBinderChanged Event Type OnBinderChanged"
+  },
+  "api/FastenUp.Runtime.Binders.IHierarchyCache.html": {
+    "href": "api/FastenUp.Runtime.Binders.IHierarchyCache.html",
+    "title": "Interface IHierarchyCache | FastenUp",
+    "keywords": "Interface IHierarchyCache Namespace FastenUp.Runtime.Binders Assembly FastenUp.Runtime.dll public interface IHierarchyCache Methods RebuildCache() Rebuilds hierarchy cache. MUST be called after hierarchy was changed. void RebuildCache()"
+  },
+  "api/FastenUp.Runtime.Binders.IValueProvider-1.html": {
+    "href": "api/FastenUp.Runtime.Binders.IValueProvider-1.html",
+    "title": "Interface IValueProvider<T> | FastenUp",
+    "keywords": "Interface IValueProvider<T> Namespace FastenUp.Runtime.Binders Assembly FastenUp.Runtime.dll Binder that can provide a value. public interface IValueProvider<T> : IBinder<T>, IBinder Type Parameters T Type of the value that will be provided by the binder component Inherited Members IBinder.Name IBinder.OnBinderChanged Methods GetValue() Gets the value from the binder. T GetValue() Returns T The value that was provided by the binder."
+  },
+  "api/FastenUp.Runtime.Binders.IValueReceiver-1.html": {
+    "href": "api/FastenUp.Runtime.Binders.IValueReceiver-1.html",
+    "title": "Interface IValueReceiver<T> | FastenUp",
+    "keywords": "Interface IValueReceiver<T> Namespace FastenUp.Runtime.Binders Assembly FastenUp.Runtime.dll Binder that can receive a value. public interface IValueReceiver<T> : IBinder<T>, IBinder Type Parameters T Type of the value that will be set by the binder component Inherited Members IBinder.Name IBinder.OnBinderChanged Methods SetValue(T) Sets the value to the binder. void SetValue(T value) Parameters value T The value that will be set to the binder."
+  },
+  "api/FastenUp.Runtime.Binders.Pointers.PointerBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.Pointers.PointerBinder.html",
+    "title": "Class PointerBinder | FastenUp",
+    "keywords": "Class PointerBinder Namespace FastenUp.Runtime.Binders.Pointers Assembly FastenUp.Runtime.dll public abstract class PointerBinder : BaseBinder, IEventBinder<UnityAction>, IEventBinder<UnityAction<PointerEventData>>, IBinder Inheritance object Object Component Behaviour MonoBehaviour BaseBinder PointerBinder Implements IEventBinder<UnityAction> IEventBinder<UnityAction<PointerEventData>> IBinder Derived PointerClickBinder PointerDownBinder PointerEnterBinder PointerExitBinder PointerMoveBinder PointerUpBinder Inherited Members BaseBinder.Name BaseBinder.OnBinderChanged BaseBinder.IncludeOwnGameObjectInFind BaseBinder.InvokeOnBinderChanged() BaseBinder.OnEnable() Methods AddListener(UnityAction) public void AddListener(UnityAction action) Parameters action UnityAction AddListener(UnityAction<PointerEventData>) public void AddListener(UnityAction<PointerEventData> action) Parameters action UnityAction<PointerEventData> OnDisable() protected override void OnDisable() OnPointerEvent(PointerEventData) protected void OnPointerEvent(PointerEventData eventData) Parameters eventData PointerEventData RemoveListener(UnityAction) public void RemoveListener(UnityAction action) Parameters action UnityAction RemoveListener(UnityAction<PointerEventData>) public void RemoveListener(UnityAction<PointerEventData> action) Parameters action UnityAction<PointerEventData>"
+  },
+  "api/FastenUp.Runtime.Binders.Pointers.PointerClickBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.Pointers.PointerClickBinder.html",
+    "title": "Class PointerClickBinder | FastenUp",
+    "keywords": "Class PointerClickBinder Namespace FastenUp.Runtime.Binders.Pointers Assembly FastenUp.Runtime.dll This class is used to bind to the UnityEngine.EventSystems.IPointerClickHandler interface. [AddComponentMenu(\"UI/Fasten Up/Event System Handlers/Pointer Click Binder\", 0)] [HelpURL(\"https://github.com/MerlinDS/fasten-up/wiki/Binders#pointer-click\")] public sealed class PointerClickBinder : PointerBinder, IEventBinder<UnityAction>, IEventBinder<UnityAction<PointerEventData>>, IBinder Inheritance object Object Component Behaviour MonoBehaviour BaseBinder PointerBinder PointerClickBinder Implements IEventBinder<UnityAction> IEventBinder<UnityAction<PointerEventData>> IBinder Inherited Members PointerBinder.AddListener(UnityAction) PointerBinder.RemoveListener(UnityAction) PointerBinder.AddListener(UnityAction<PointerEventData>) PointerBinder.RemoveListener(UnityAction<PointerEventData>) BaseBinder.Name BaseBinder.OnBinderChanged Methods OnPointerClick(PointerEventData) public void OnPointerClick(PointerEventData eventData) Parameters eventData PointerEventData"
+  },
+  "api/FastenUp.Runtime.Binders.Pointers.PointerDownBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.Pointers.PointerDownBinder.html",
+    "title": "Class PointerDownBinder | FastenUp",
+    "keywords": "Class PointerDownBinder Namespace FastenUp.Runtime.Binders.Pointers Assembly FastenUp.Runtime.dll This class is used to bind to the UnityEngine.EventSystems.IPointerDownHandler interface. [AddComponentMenu(\"UI/Fasten Up/Event System Handlers/Pointer Down Binder\", 4)] [HelpURL(\"https://github.com/MerlinDS/fasten-up/wiki/Binders#pointer-down\")] public sealed class PointerDownBinder : PointerBinder, IEventBinder<UnityAction>, IEventBinder<UnityAction<PointerEventData>>, IBinder Inheritance object Object Component Behaviour MonoBehaviour BaseBinder PointerBinder PointerDownBinder Implements IEventBinder<UnityAction> IEventBinder<UnityAction<PointerEventData>> IBinder Inherited Members PointerBinder.AddListener(UnityAction) PointerBinder.RemoveListener(UnityAction) PointerBinder.AddListener(UnityAction<PointerEventData>) PointerBinder.RemoveListener(UnityAction<PointerEventData>) BaseBinder.Name BaseBinder.OnBinderChanged Methods OnPointerDown(PointerEventData) public void OnPointerDown(PointerEventData eventData) Parameters eventData PointerEventData"
+  },
+  "api/FastenUp.Runtime.Binders.Pointers.PointerEnterBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.Pointers.PointerEnterBinder.html",
+    "title": "Class PointerEnterBinder | FastenUp",
+    "keywords": "Class PointerEnterBinder Namespace FastenUp.Runtime.Binders.Pointers Assembly FastenUp.Runtime.dll This class is used to bind to the UnityEngine.EventSystems.IPointerEnterHandler interface. [AddComponentMenu(\"UI/Fasten Up/Event System Handlers/Pointer Enter Binder\", 1)] [HelpURL(\"https://github.com/MerlinDS/fasten-up/wiki/Binders#pointer-enter\")] public sealed class PointerEnterBinder : PointerBinder, IEventBinder<UnityAction>, IEventBinder<UnityAction<PointerEventData>>, IBinder Inheritance object Object Component Behaviour MonoBehaviour BaseBinder PointerBinder PointerEnterBinder Implements IEventBinder<UnityAction> IEventBinder<UnityAction<PointerEventData>> IBinder Inherited Members PointerBinder.AddListener(UnityAction) PointerBinder.RemoveListener(UnityAction) PointerBinder.AddListener(UnityAction<PointerEventData>) PointerBinder.RemoveListener(UnityAction<PointerEventData>) BaseBinder.Name BaseBinder.OnBinderChanged Methods OnPointerEnter(PointerEventData) public void OnPointerEnter(PointerEventData eventData) Parameters eventData PointerEventData"
+  },
+  "api/FastenUp.Runtime.Binders.Pointers.PointerExitBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.Pointers.PointerExitBinder.html",
+    "title": "Class PointerExitBinder | FastenUp",
+    "keywords": "Class PointerExitBinder Namespace FastenUp.Runtime.Binders.Pointers Assembly FastenUp.Runtime.dll This class is used to bind to the UnityEngine.EventSystems.IPointerExitHandler interface. [AddComponentMenu(\"UI/Fasten Up/Event System Handlers/Pointer Exit Binder\", 2)] [HelpURL(\"https://github.com/MerlinDS/fasten-up/wiki/Binders#pointer-exit\")] public sealed class PointerExitBinder : PointerBinder, IEventBinder<UnityAction>, IEventBinder<UnityAction<PointerEventData>>, IBinder Inheritance object Object Component Behaviour MonoBehaviour BaseBinder PointerBinder PointerExitBinder Implements IEventBinder<UnityAction> IEventBinder<UnityAction<PointerEventData>> IBinder Inherited Members PointerBinder.AddListener(UnityAction) PointerBinder.RemoveListener(UnityAction) PointerBinder.AddListener(UnityAction<PointerEventData>) PointerBinder.RemoveListener(UnityAction<PointerEventData>) BaseBinder.Name BaseBinder.OnBinderChanged Methods OnPointerExit(PointerEventData) public void OnPointerExit(PointerEventData eventData) Parameters eventData PointerEventData"
+  },
+  "api/FastenUp.Runtime.Binders.Pointers.PointerMoveBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.Pointers.PointerMoveBinder.html",
+    "title": "Class PointerMoveBinder | FastenUp",
+    "keywords": "Class PointerMoveBinder Namespace FastenUp.Runtime.Binders.Pointers Assembly FastenUp.Runtime.dll This class is used to bind to the UnityEngine.EventSystems.IPointerUpHandler interface. [AddComponentMenu(\"UI/Fasten Up/Event System Handlers/Pointer Move Binder\", 3)] [HelpURL(\"https://github.com/MerlinDS/fasten-up/wiki/Binders#pointer-move\")] public sealed class PointerMoveBinder : PointerBinder, IEventBinder<UnityAction>, IEventBinder<UnityAction<PointerEventData>>, IBinder Inheritance object Object Component Behaviour MonoBehaviour BaseBinder PointerBinder PointerMoveBinder Implements IEventBinder<UnityAction> IEventBinder<UnityAction<PointerEventData>> IBinder Inherited Members PointerBinder.AddListener(UnityAction) PointerBinder.RemoveListener(UnityAction) PointerBinder.AddListener(UnityAction<PointerEventData>) PointerBinder.RemoveListener(UnityAction<PointerEventData>) BaseBinder.Name BaseBinder.OnBinderChanged Methods OnPointerMove(PointerEventData) public void OnPointerMove(PointerEventData eventData) Parameters eventData PointerEventData"
+  },
+  "api/FastenUp.Runtime.Binders.Pointers.PointerUpBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.Pointers.PointerUpBinder.html",
+    "title": "Class PointerUpBinder | FastenUp",
+    "keywords": "Class PointerUpBinder Namespace FastenUp.Runtime.Binders.Pointers Assembly FastenUp.Runtime.dll This class is used to bind to the UnityEngine.EventSystems.IPointerUpHandler interface. [RequireComponent(typeof(PointerDownBinder))] [AddComponentMenu(\"UI/Fasten Up/Event System Handlers/Pointer Up Binder\", 5)] [HelpURL(\"https://github.com/MerlinDS/fasten-up/wiki/Binders#pointerup\")] public sealed class PointerUpBinder : PointerBinder, IEventBinder<UnityAction>, IEventBinder<UnityAction<PointerEventData>>, IBinder Inheritance object Object Component Behaviour MonoBehaviour BaseBinder PointerBinder PointerUpBinder Implements IEventBinder<UnityAction> IEventBinder<UnityAction<PointerEventData>> IBinder Inherited Members PointerBinder.AddListener(UnityAction) PointerBinder.RemoveListener(UnityAction) PointerBinder.AddListener(UnityAction<PointerEventData>) PointerBinder.RemoveListener(UnityAction<PointerEventData>) BaseBinder.Name BaseBinder.OnBinderChanged Methods OnPointerUp(PointerEventData) public void OnPointerUp(PointerEventData eventData) Parameters eventData PointerEventData"
+  },
+  "api/FastenUp.Runtime.Binders.Pointers.html": {
+    "href": "api/FastenUp.Runtime.Binders.Pointers.html",
+    "title": "Namespace FastenUp.Runtime.Binders.Pointers | FastenUp",
+    "keywords": "Namespace FastenUp.Runtime.Binders.Pointers Classes PointerBinder PointerClickBinder This class is used to bind to the UnityEngine.EventSystems.IPointerClickHandler interface. PointerDownBinder This class is used to bind to the UnityEngine.EventSystems.IPointerDownHandler interface. PointerEnterBinder This class is used to bind to the UnityEngine.EventSystems.IPointerEnterHandler interface. PointerExitBinder This class is used to bind to the UnityEngine.EventSystems.IPointerExitHandler interface. PointerMoveBinder This class is used to bind to the UnityEngine.EventSystems.IPointerUpHandler interface. PointerUpBinder This class is used to bind to the UnityEngine.EventSystems.IPointerUpHandler interface."
+  },
+  "api/FastenUp.Runtime.Binders.References.BaseRefBinder-1.html": {
+    "href": "api/FastenUp.Runtime.Binders.References.BaseRefBinder-1.html",
+    "title": "Class BaseRefBinder<TRef> | FastenUp",
+    "keywords": "Class BaseRefBinder<TRef> Namespace FastenUp.Runtime.Binders.References Assembly FastenUp.Runtime.dll public abstract class BaseRefBinder<TRef> : BaseBinder, IRefBinder, IBinder Type Parameters TRef Inheritance object Object Component Behaviour MonoBehaviour BaseBinder BaseRefBinder<TRef> Implements IRefBinder IBinder Derived MediatorRefBinder Inherited Members BaseBinder.Name BaseBinder.OnBinderChanged BaseBinder.IncludeOwnGameObjectInFind BaseBinder.InvokeOnBinderChanged() BaseBinder.OnEnable() BaseBinder.OnDisable() Methods TryGetReference<T>(out T) Tries to get the reference of type T from the binder. public bool TryGetReference<T>(out T reference) Parameters reference T The reference of type T if found, otherwise null. Returns bool True if the reference was found, otherwise false. Type Parameters T Type of the reference"
+  },
+  "api/FastenUp.Runtime.Binders.References.IRefBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.References.IRefBinder.html",
+    "title": "Interface IRefBinder | FastenUp",
+    "keywords": "Interface IRefBinder Namespace FastenUp.Runtime.Binders.References Assembly FastenUp.Runtime.dll Implementation of this interface provides the ability to bind object references to a IMediator public interface IRefBinder : IBinder Inherited Members IBinder.Name IBinder.OnBinderChanged Methods TryGetReference<T>(out T) Tries to get the reference of type T from the binder. bool TryGetReference<T>(out T reference) Parameters reference T The reference of type T if found, otherwise null. Returns bool True if the reference was found, otherwise false. Type Parameters T Type of the reference"
+  },
+  "api/FastenUp.Runtime.Binders.References.MediatorRefBinder.html": {
+    "href": "api/FastenUp.Runtime.Binders.References.MediatorRefBinder.html",
+    "title": "Class MediatorRefBinder | FastenUp",
+    "keywords": "Class MediatorRefBinder Namespace FastenUp.Runtime.Binders.References Assembly FastenUp.Runtime.dll Binds object references of type IMediator to a parent IMediator. [AddComponentMenu(\"UI/Fasten Up/References/Mediator Reference Binder\", 0)] public sealed class MediatorRefBinder : BaseRefBinder<IMediator>, IRefBinder, IBinder Inheritance object Object Component Behaviour MonoBehaviour BaseBinder BaseRefBinder<IMediator> MediatorRefBinder Implements IRefBinder IBinder Inherited Members BaseRefBinder<IMediator>.TryGetReference<T>(out T) BaseBinder.Name BaseBinder.OnBinderChanged Properties IncludeOwnGameObjectInFind Checks if game object of this binder should be included in search for IMediator. True by default. protected override bool IncludeOwnGameObjectInFind { get; } Property Value bool Remarks To prevent search for IMediator in game object of this binder, override this property and return false."
+  },
+  "api/FastenUp.Runtime.Binders.References.html": {
+    "href": "api/FastenUp.Runtime.Binders.References.html",
+    "title": "Namespace FastenUp.Runtime.Binders.References | FastenUp",
+    "keywords": "Namespace FastenUp.Runtime.Binders.References Classes BaseRefBinder<TRef> MediatorRefBinder Binds object references of type IMediator to a parent IMediator. Interfaces IRefBinder Implementation of this interface provides the ability to bind object references to a IMediator"
+  },
+  "api/FastenUp.Runtime.Binders.html": {
+    "href": "api/FastenUp.Runtime.Binders.html",
+    "title": "Namespace FastenUp.Runtime.Binders | FastenUp",
+    "keywords": "Namespace FastenUp.Runtime.Binders Classes BaseBinder Base class for all binders. Interfaces IBinder Binder is a component that can be bind to the bindable property in the IMediator. IBinder<T> Binder is a component that can be bind to the bindable property in the IMediator. IHierarchyCache IValueProvider<T> Binder that can provide a value. IValueReceiver<T> Binder that can receive a value."
+  },
+  "api/FastenUp.Runtime.Delegates.OnBinderChanged.html": {
+    "href": "api/FastenUp.Runtime.Delegates.OnBinderChanged.html",
+    "title": "Delegate OnBinderChanged | FastenUp",
+    "keywords": "Delegate OnBinderChanged Namespace FastenUp.Runtime.Delegates Assembly FastenUp.Runtime.dll public delegate void OnBinderChanged(IBinder binder) Parameters binder IBinder"
+  },
+  "api/FastenUp.Runtime.Delegates.html": {
+    "href": "api/FastenUp.Runtime.Delegates.html",
+    "title": "Namespace FastenUp.Runtime.Delegates | FastenUp",
+    "keywords": "Namespace FastenUp.Runtime.Delegates Delegates OnBinderChanged"
+  },
+  "api/FastenUp.Runtime.Exceptions.FastenUpException.html": {
+    "href": "api/FastenUp.Runtime.Exceptions.FastenUpException.html",
+    "title": "Class FastenUpException | FastenUp",
+    "keywords": "Class FastenUpException Namespace FastenUp.Runtime.Exceptions Assembly FastenUp.Runtime.dll public class FastenUpException : Exception Inheritance object Exception FastenUpException Constructors FastenUpException(string) public FastenUpException(string message) Parameters message string FastenUpException(string, Exception) public FastenUpException(string message, Exception innerException) Parameters message string innerException Exception"
+  },
+  "api/FastenUp.Runtime.Exceptions.html": {
+    "href": "api/FastenUp.Runtime.Exceptions.html",
+    "title": "Namespace FastenUp.Runtime.Exceptions | FastenUp",
+    "keywords": "Namespace FastenUp.Runtime.Exceptions Classes FastenUpException"
+  },
+  "api/FastenUp.Runtime.Mediators.IInternalMediator.html": {
+    "href": "api/FastenUp.Runtime.Mediators.IInternalMediator.html",
+    "title": "Interface IInternalMediator | FastenUp",
+    "keywords": "Interface IInternalMediator Namespace FastenUp.Runtime.Mediators Assembly FastenUp.Runtime.dll Internal mediator interface for internal use only. Source code generator will generate implementation for this interface. public interface IInternalMediator Methods Bind(IBinder) void Bind(IBinder binder) Parameters binder IBinder Unbind(IBinder) void Unbind(IBinder binder) Parameters binder IBinder"
+  },
+  "api/FastenUp.Runtime.Mediators.IMediator.html": {
+    "href": "api/FastenUp.Runtime.Mediators.IMediator.html",
+    "title": "Interface IMediator | FastenUp",
+    "keywords": "Interface IMediator Namespace FastenUp.Runtime.Mediators Assembly FastenUp.Runtime.dll The IMediator interface is the base interface for ViewModels. It is a marker for Binders that the class contains bindable properties. public interface IMediator Examples This example shows how to implement a mediator that can be used to bind values. public partial class MyMediator : MonoBehaviour, IMediator { public Bindable{string} Text = new (); public BindableEvent OnClick = new (); private void Awake() { Text.Value = \"Hello World!\"; OnClick.AddListener(() => Debug.Log(\"Clicked!\")); } } Remarks For the sake of code generation, the implementation of this interface must marked as partial. See Also IBinder"
+  },
+  "api/FastenUp.Runtime.Mediators.MediatorAssigner.html": {
+    "href": "api/FastenUp.Runtime.Mediators.MediatorAssigner.html",
+    "title": "Class MediatorAssigner | FastenUp",
+    "keywords": "Class MediatorAssigner Namespace FastenUp.Runtime.Mediators Assembly FastenUp.Runtime.dll Used to bind external IMediator to the binders. public sealed class MediatorAssigner : MonoBehaviour, IInternalMediator Inheritance object Object Component Behaviour MonoBehaviour MediatorAssigner Implements IInternalMediator Methods Assign<T>(T) Binds external mediator to the binders. public void Assign<T>(T mediator) where T : IInternalMediator Parameters mediator T Object that implements IMediator interface. Type Parameters T Type of the mediator. Bind(IBinder) public void Bind(IBinder binder) Parameters binder IBinder Release() Unbinds all binders from the external mediator. public void Release() Unbind(IBinder) public void Unbind(IBinder binder) Parameters binder IBinder"
+  },
+  "api/FastenUp.Runtime.Mediators.html": {
+    "href": "api/FastenUp.Runtime.Mediators.html",
+    "title": "Namespace FastenUp.Runtime.Mediators | FastenUp",
+    "keywords": "Namespace FastenUp.Runtime.Mediators Classes MediatorAssigner Used to bind external IMediator to the binders. Interfaces IInternalMediator Internal mediator interface for internal use only. Source code generator will generate implementation for this interface. IMediator The IMediator interface is the base interface for ViewModels. It is a marker for Binders that the class contains bindable properties."
+  },
+  "api/FastenUp.Runtime.Utils.BindUtilities.html": {
+    "href": "api/FastenUp.Runtime.Utils.BindUtilities.html",
+    "title": "Class BindUtilities | FastenUp",
+    "keywords": "Class BindUtilities Namespace FastenUp.Runtime.Utils Assembly FastenUp.Runtime.dll public static class BindUtilities Inheritance object BindUtilities Methods NameEquals(ReadOnlySpan<char>, IBinder) public static bool NameEquals(ReadOnlySpan<char> name, IBinder binder) Parameters name ReadOnlySpan<char> binder IBinder Returns bool TryBind<T>(IBindableAction<T>, IBinder) public static void TryBind<T>(IBindableAction<T> bindableAction, IBinder binder) where T : UnityEventBase, new() Parameters bindableAction IBindableAction<T> binder IBinder Type Parameters T TryBind<T>(IBindableCollection<T>, IBinder) public static void TryBind<T>(IBindableCollection<T> bindableCollection, IBinder binder) Parameters bindableCollection IBindableCollection<T> binder IBinder Type Parameters T TryBind<T>(IBindableEvent<T>, IBinder) public static void TryBind<T>(IBindableEvent<T> bindableEvent, IBinder binder) Parameters bindableEvent IBindableEvent<T> binder IBinder Type Parameters T TryBind<T>(IBindableRef<T>, IBinder) public static void TryBind<T>(IBindableRef<T> bindableRef, IBinder binder) Parameters bindableRef IBindableRef<T> binder IBinder Type Parameters T TryBind<T>(IBindable<T>, IBinder) public static void TryBind<T>(IBindable<T> bindable, IBinder binder) Parameters bindable IBindable<T> binder IBinder Type Parameters T TryUnbind<T>(IBindableAction<T>, IBinder) public static void TryUnbind<T>(IBindableAction<T> bindableAction, IBinder binder) where T : UnityEventBase, new() Parameters bindableAction IBindableAction<T> binder IBinder Type Parameters T TryUnbind<T>(IBindableCollection<T>, IBinder) public static void TryUnbind<T>(IBindableCollection<T> bindableCollection, IBinder binder) Parameters bindableCollection IBindableCollection<T> binder IBinder Type Parameters T TryUnbind<T>(IBindableEvent<T>, IBinder) public static void TryUnbind<T>(IBindableEvent<T> bindableEvent, IBinder binder) Parameters bindableEvent IBindableEvent<T> binder IBinder Type Parameters T TryUnbind<T>(IBindableRef<T>, IBinder) public static void TryUnbind<T>(IBindableRef<T> bindableRef, IBinder binder) Parameters bindableRef IBindableRef<T> binder IBinder Type Parameters T TryUnbind<T>(IBindable<T>, IBinder) public static void TryUnbind<T>(IBindable<T> bindable, IBinder binder) Parameters bindable IBindable<T> binder IBinder Type Parameters T"
+  },
+  "api/FastenUp.Runtime.Utils.html": {
+    "href": "api/FastenUp.Runtime.Utils.html",
+    "title": "Namespace FastenUp.Runtime.Utils | FastenUp",
+    "keywords": "Namespace FastenUp.Runtime.Utils Classes BindUtilities"
+  },
+  "docs/getting-started.html": {
+    "href": "docs/getting-started.html",
+    "title": "Getting Started | FastenUp",
+    "keywords": "Getting Started"
+  },
+  "docs/introduction.html": {
+    "href": "docs/introduction.html",
+    "title": "Introduction | FastenUp",
+    "keywords": "Introduction"
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "This is the HOMEPAGE. | FastenUp",
+    "keywords": "This is the HOMEPAGE. Refer to Markdown for how to write markdown files. Quick Start Notes: Add images to the images folder if the file is referencing an image."
+  }
+}

@@ -1,0 +1,105 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Binders.Pointers
+  commentId: N:FastenUp.Runtime.Binders.Pointers
+  id: FastenUp.Runtime.Binders.Pointers
+  children:
+  - FastenUp.Runtime.Binders.Pointers.PointerBinder
+  - FastenUp.Runtime.Binders.Pointers.PointerClickBinder
+  - FastenUp.Runtime.Binders.Pointers.PointerDownBinder
+  - FastenUp.Runtime.Binders.Pointers.PointerEnterBinder
+  - FastenUp.Runtime.Binders.Pointers.PointerExitBinder
+  - FastenUp.Runtime.Binders.Pointers.PointerMoveBinder
+  - FastenUp.Runtime.Binders.Pointers.PointerUpBinder
+  langs:
+  - csharp
+  - vb
+  name: FastenUp.Runtime.Binders.Pointers
+  nameWithType: FastenUp.Runtime.Binders.Pointers
+  fullName: FastenUp.Runtime.Binders.Pointers
+  type: Namespace
+  assemblies:
+  - FastenUp.Runtime
+references:
+- uid: FastenUp.Runtime.Binders.Pointers.PointerExitBinder
+  commentId: T:FastenUp.Runtime.Binders.Pointers.PointerExitBinder
+  href: FastenUp.Runtime.Binders.Pointers.PointerExitBinder.html
+  name: PointerExitBinder
+  nameWithType: PointerExitBinder
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerExitBinder
+- uid: FastenUp.Runtime.Binders.Pointers.PointerClickBinder
+  commentId: T:FastenUp.Runtime.Binders.Pointers.PointerClickBinder
+  href: FastenUp.Runtime.Binders.Pointers.PointerClickBinder.html
+  name: PointerClickBinder
+  nameWithType: PointerClickBinder
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerClickBinder
+- uid: FastenUp.Runtime.Binders.Pointers.PointerDownBinder
+  commentId: T:FastenUp.Runtime.Binders.Pointers.PointerDownBinder
+  parent: FastenUp.Runtime.Binders.Pointers
+  href: FastenUp.Runtime.Binders.Pointers.PointerDownBinder.html
+  name: PointerDownBinder
+  nameWithType: PointerDownBinder
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerDownBinder
+- uid: FastenUp.Runtime.Binders.Pointers.PointerEnterBinder
+  commentId: T:FastenUp.Runtime.Binders.Pointers.PointerEnterBinder
+  href: FastenUp.Runtime.Binders.Pointers.PointerEnterBinder.html
+  name: PointerEnterBinder
+  nameWithType: PointerEnterBinder
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerEnterBinder
+- uid: FastenUp.Runtime.Binders.Pointers.PointerUpBinder
+  commentId: T:FastenUp.Runtime.Binders.Pointers.PointerUpBinder
+  href: FastenUp.Runtime.Binders.Pointers.PointerUpBinder.html
+  name: PointerUpBinder
+  nameWithType: PointerUpBinder
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerUpBinder
+- uid: FastenUp.Runtime.Binders.Pointers.PointerBinder
+  commentId: T:FastenUp.Runtime.Binders.Pointers.PointerBinder
+  parent: FastenUp.Runtime.Binders.Pointers
+  href: FastenUp.Runtime.Binders.Pointers.PointerBinder.html
+  name: PointerBinder
+  nameWithType: PointerBinder
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerBinder
+- uid: FastenUp.Runtime.Binders.Pointers.PointerMoveBinder
+  commentId: T:FastenUp.Runtime.Binders.Pointers.PointerMoveBinder
+  href: FastenUp.Runtime.Binders.Pointers.PointerMoveBinder.html
+  name: PointerMoveBinder
+  nameWithType: PointerMoveBinder
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerMoveBinder
+- uid: FastenUp.Runtime.Binders.Pointers
+  commentId: N:FastenUp.Runtime.Binders.Pointers
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders.Pointers
+  nameWithType: FastenUp.Runtime.Binders.Pointers
+  fullName: FastenUp.Runtime.Binders.Pointers
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.Pointers
+    name: Pointers
+    href: FastenUp.Runtime.Binders.Pointers.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.Pointers
+    name: Pointers
+    href: FastenUp.Runtime.Binders.Pointers.html

@@ -1,0 +1,740 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Binders.Behaviours.TextBinder
+  commentId: T:FastenUp.Runtime.Binders.Behaviours.TextBinder
+  id: TextBinder
+  parent: FastenUp.Runtime.Binders.Behaviours
+  children:
+  - FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(System.Int32)
+  - FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(System.Single)
+  - FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(System.String)
+  langs:
+  - csharp
+  - vb
+  name: TextBinder
+  nameWithType: TextBinder
+  fullName: FastenUp.Runtime.Binders.Behaviours.TextBinder
+  type: Class
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Behaviours/TextBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: TextBinder
+    path: ../Assets/FastenUp/Runtime/Binders/Behaviours/TextBinder.cs
+    startLine: 9
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Behaviours
+  summary: The one-way <xref href="FastenUp.Runtime.Binders.IBinder" data-throw-if-not-resolved="false"></xref> binds a value to the text component.
+  example: []
+  syntax:
+    content: >-
+      [RequireComponent(typeof(TextMeshProUGUI))]
+
+      [AddComponentMenu("UI/Fasten Up/Text Binder", 1)]
+
+      [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#text")]
+
+      public sealed class TextBinder : BaseBinder, IValueReceiver<int>, IBinder<int>, IValueReceiver<float>, IBinder<float>, IValueReceiver<string>, IBinder<string>, IBinder
+    content.vb: >-
+      <RequireComponent(GetType(TextMeshProUGUI))>
+
+      <AddComponentMenu("UI/Fasten Up/Text Binder", 1)>
+
+      <HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#text")>
+
+      Public NotInheritable Class TextBinder Inherits BaseBinder Implements IValueReceiver(Of Integer), IBinder(Of Integer), IValueReceiver(Of Single), IBinder(Of Single), IValueReceiver(Of String), IBinder(Of String), IBinder
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - FastenUp.Runtime.Binders.BaseBinder
+  implements:
+  - FastenUp.Runtime.Binders.IValueReceiver{System.Int32}
+  - FastenUp.Runtime.Binders.IBinder{System.Int32}
+  - FastenUp.Runtime.Binders.IValueReceiver{System.Single}
+  - FastenUp.Runtime.Binders.IBinder{System.Single}
+  - FastenUp.Runtime.Binders.IValueReceiver{System.String}
+  - FastenUp.Runtime.Binders.IBinder{System.String}
+  - FastenUp.Runtime.Binders.IBinder
+  inheritedMembers:
+  - FastenUp.Runtime.Binders.BaseBinder.Name
+  - FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  attributes:
+  - type: UnityEngine.AddComponentMenu
+    ctor: UnityEngine.AddComponentMenu.#ctor(System.String,System.Int32)
+    arguments:
+    - type: System.String
+      value: UI/Fasten Up/Text Binder
+    - type: System.Int32
+      value: 1
+  - type: UnityEngine.HelpURLAttribute
+    ctor: UnityEngine.HelpURLAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: https://github.com/MerlinDS/fasten-up/wiki/Binders#text
+- uid: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(System.Int32)
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(System.Int32)
+  id: SetValue(System.Int32)
+  parent: FastenUp.Runtime.Binders.Behaviours.TextBinder
+  langs:
+  - csharp
+  - vb
+  name: SetValue(int)
+  nameWithType: TextBinder.SetValue(int)
+  fullName: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(int)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Behaviours/TextBinder.Conversions.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: SetValue
+    path: ../Assets/FastenUp/Runtime/Binders/Behaviours/TextBinder.Conversions.cs
+    startLine: 7
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Behaviours
+  summary: Sets the value to the binder.
+  example: []
+  syntax:
+    content: public void SetValue(int value)
+    parameters:
+    - id: value
+      type: System.Int32
+      description: The value that will be set to the binder.
+    content.vb: Public Sub SetValue(value As Integer)
+  overload: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue*
+  implements:
+  - FastenUp.Runtime.Binders.IValueReceiver{System.Int32}.SetValue(System.Int32)
+  nameWithType.vb: TextBinder.SetValue(Integer)
+  fullName.vb: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(Integer)
+  name.vb: SetValue(Integer)
+- uid: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(System.Single)
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(System.Single)
+  id: SetValue(System.Single)
+  parent: FastenUp.Runtime.Binders.Behaviours.TextBinder
+  langs:
+  - csharp
+  - vb
+  name: SetValue(float)
+  nameWithType: TextBinder.SetValue(float)
+  fullName: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(float)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Behaviours/TextBinder.Conversions.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: SetValue
+    path: ../Assets/FastenUp/Runtime/Binders/Behaviours/TextBinder.Conversions.cs
+    startLine: 13
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Behaviours
+  summary: Sets the value to the binder.
+  example: []
+  syntax:
+    content: public void SetValue(float value)
+    parameters:
+    - id: value
+      type: System.Single
+      description: The value that will be set to the binder.
+    content.vb: Public Sub SetValue(value As Single)
+  overload: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue*
+  implements:
+  - FastenUp.Runtime.Binders.IValueReceiver{System.Single}.SetValue(System.Single)
+  nameWithType.vb: TextBinder.SetValue(Single)
+  fullName.vb: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(Single)
+  name.vb: SetValue(Single)
+- uid: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(System.String)
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(System.String)
+  id: SetValue(System.String)
+  parent: FastenUp.Runtime.Binders.Behaviours.TextBinder
+  langs:
+  - csharp
+  - vb
+  name: SetValue(string)
+  nameWithType: TextBinder.SetValue(string)
+  fullName: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(string)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Behaviours/TextBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: SetValue
+    path: ../Assets/FastenUp/Runtime/Binders/Behaviours/TextBinder.cs
+    startLine: 22
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Behaviours
+  summary: Sets the value to the binder.
+  example: []
+  syntax:
+    content: public void SetValue(string value)
+    parameters:
+    - id: value
+      type: System.String
+      description: The value that will be set to the binder.
+    content.vb: Public Sub SetValue(value As String)
+  overload: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue*
+  implements:
+  - FastenUp.Runtime.Binders.IValueReceiver{System.String}.SetValue(System.String)
+  nameWithType.vb: TextBinder.SetValue(String)
+  fullName.vb: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue(String)
+  name.vb: SetValue(String)
+references:
+- uid: FastenUp.Runtime.Binders.IBinder
+  commentId: T:FastenUp.Runtime.Binders.IBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.IBinder.html
+  name: IBinder
+  nameWithType: IBinder
+  fullName: FastenUp.Runtime.Binders.IBinder
+- uid: FastenUp.Runtime.Binders.Behaviours
+  commentId: N:FastenUp.Runtime.Binders.Behaviours
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders.Behaviours
+  nameWithType: FastenUp.Runtime.Binders.Behaviours
+  fullName: FastenUp.Runtime.Binders.Behaviours
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.Behaviours
+    name: Behaviours
+    href: FastenUp.Runtime.Binders.Behaviours.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.Behaviours
+    name: Behaviours
+    href: FastenUp.Runtime.Binders.Behaviours.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: FastenUp.Runtime.Binders.BaseBinder
+  commentId: T:FastenUp.Runtime.Binders.BaseBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.BaseBinder.html
+  name: BaseBinder
+  nameWithType: BaseBinder
+  fullName: FastenUp.Runtime.Binders.BaseBinder
+- uid: FastenUp.Runtime.Binders.IValueReceiver{System.Int32}
+  commentId: T:FastenUp.Runtime.Binders.IValueReceiver{System.Int32}
+  parent: FastenUp.Runtime.Binders
+  definition: FastenUp.Runtime.Binders.IValueReceiver`1
+  href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  name: IValueReceiver<int>
+  nameWithType: IValueReceiver<int>
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<int>
+  nameWithType.vb: IValueReceiver(Of Integer)
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of Integer)
+  name.vb: IValueReceiver(Of Integer)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1
+    name: IValueReceiver
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1
+    name: IValueReceiver
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: FastenUp.Runtime.Binders.IBinder{System.Int32}
+  commentId: T:FastenUp.Runtime.Binders.IBinder{System.Int32}
+  parent: FastenUp.Runtime.Binders
+  definition: FastenUp.Runtime.Binders.IBinder`1
+  href: FastenUp.Runtime.Binders.IBinder-1.html
+  name: IBinder<int>
+  nameWithType: IBinder<int>
+  fullName: FastenUp.Runtime.Binders.IBinder<int>
+  nameWithType.vb: IBinder(Of Integer)
+  fullName.vb: FastenUp.Runtime.Binders.IBinder(Of Integer)
+  name.vb: IBinder(Of Integer)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: FastenUp.Runtime.Binders.IValueReceiver{System.Single}
+  commentId: T:FastenUp.Runtime.Binders.IValueReceiver{System.Single}
+  parent: FastenUp.Runtime.Binders
+  definition: FastenUp.Runtime.Binders.IValueReceiver`1
+  href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  name: IValueReceiver<float>
+  nameWithType: IValueReceiver<float>
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<float>
+  nameWithType.vb: IValueReceiver(Of Single)
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of Single)
+  name.vb: IValueReceiver(Of Single)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1
+    name: IValueReceiver
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1
+    name: IValueReceiver
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: FastenUp.Runtime.Binders.IBinder{System.Single}
+  commentId: T:FastenUp.Runtime.Binders.IBinder{System.Single}
+  parent: FastenUp.Runtime.Binders
+  definition: FastenUp.Runtime.Binders.IBinder`1
+  href: FastenUp.Runtime.Binders.IBinder-1.html
+  name: IBinder<float>
+  nameWithType: IBinder<float>
+  fullName: FastenUp.Runtime.Binders.IBinder<float>
+  nameWithType.vb: IBinder(Of Single)
+  fullName.vb: FastenUp.Runtime.Binders.IBinder(Of Single)
+  name.vb: IBinder(Of Single)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: FastenUp.Runtime.Binders.IValueReceiver{System.String}
+  commentId: T:FastenUp.Runtime.Binders.IValueReceiver{System.String}
+  parent: FastenUp.Runtime.Binders
+  definition: FastenUp.Runtime.Binders.IValueReceiver`1
+  href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  name: IValueReceiver<string>
+  nameWithType: IValueReceiver<string>
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<string>
+  nameWithType.vb: IValueReceiver(Of String)
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of String)
+  name.vb: IValueReceiver(Of String)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1
+    name: IValueReceiver
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1
+    name: IValueReceiver
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: FastenUp.Runtime.Binders.IBinder{System.String}
+  commentId: T:FastenUp.Runtime.Binders.IBinder{System.String}
+  parent: FastenUp.Runtime.Binders
+  definition: FastenUp.Runtime.Binders.IBinder`1
+  href: FastenUp.Runtime.Binders.IBinder-1.html
+  name: IBinder<string>
+  nameWithType: IBinder<string>
+  fullName: FastenUp.Runtime.Binders.IBinder<string>
+  nameWithType.vb: IBinder(Of String)
+  fullName.vb: FastenUp.Runtime.Binders.IBinder(Of String)
+  name.vb: IBinder(Of String)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: FastenUp.Runtime.Binders.BaseBinder.Name
+  commentId: P:FastenUp.Runtime.Binders.BaseBinder.Name
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_Name
+  name: Name
+  nameWithType: BaseBinder.Name
+  fullName: FastenUp.Runtime.Binders.BaseBinder.Name
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  commentId: E:FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnBinderChanged
+  name: OnBinderChanged
+  nameWithType: BaseBinder.OnBinderChanged
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+- uid: FastenUp.Runtime.Binders
+  commentId: N:FastenUp.Runtime.Binders
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders
+  nameWithType: FastenUp.Runtime.Binders
+  fullName: FastenUp.Runtime.Binders
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: FastenUp.Runtime.Binders.IValueReceiver`1
+  commentId: T:FastenUp.Runtime.Binders.IValueReceiver`1
+  href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  name: IValueReceiver<T>
+  nameWithType: IValueReceiver<T>
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<T>
+  nameWithType.vb: IValueReceiver(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of T)
+  name.vb: IValueReceiver(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1
+    name: IValueReceiver
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1
+    name: IValueReceiver
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders.IBinder`1
+  commentId: T:FastenUp.Runtime.Binders.IBinder`1
+  href: FastenUp.Runtime.Binders.IBinder-1.html
+  name: IBinder<T>
+  nameWithType: IBinder<T>
+  fullName: FastenUp.Runtime.Binders.IBinder<T>
+  nameWithType.vb: IBinder(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.IBinder(Of T)
+  name.vb: IBinder(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue*
+  commentId: Overload:FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue
+  href: FastenUp.Runtime.Binders.Behaviours.TextBinder.html#FastenUp_Runtime_Binders_Behaviours_TextBinder_SetValue_System_Int32_
+  name: SetValue
+  nameWithType: TextBinder.SetValue
+  fullName: FastenUp.Runtime.Binders.Behaviours.TextBinder.SetValue
+- uid: FastenUp.Runtime.Binders.IValueReceiver{System.Int32}.SetValue(System.Int32)
+  commentId: M:FastenUp.Runtime.Binders.IValueReceiver{System.Int32}.SetValue(System.Int32)
+  parent: FastenUp.Runtime.Binders.IValueReceiver{System.Int32}
+  definition: FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+  href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  name: SetValue(int)
+  nameWithType: IValueReceiver<int>.SetValue(int)
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<int>.SetValue(int)
+  nameWithType.vb: IValueReceiver(Of Integer).SetValue(Integer)
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of Integer).SetValue(Integer)
+  name.vb: SetValue(Integer)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver{System.Int32}.SetValue(System.Int32)
+    name: SetValue
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver{System.Int32}.SetValue(System.Int32)
+    name: SetValue
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+  commentId: M:FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+  href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  name: SetValue(T)
+  nameWithType: IValueReceiver<T>.SetValue(T)
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<T>.SetValue(T)
+  nameWithType.vb: IValueReceiver(Of T).SetValue(T)
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of T).SetValue(T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+    name: SetValue
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+    name: SetValue
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders.IValueReceiver{System.Single}.SetValue(System.Single)
+  commentId: M:FastenUp.Runtime.Binders.IValueReceiver{System.Single}.SetValue(System.Single)
+  parent: FastenUp.Runtime.Binders.IValueReceiver{System.Single}
+  definition: FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+  href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  name: SetValue(float)
+  nameWithType: IValueReceiver<float>.SetValue(float)
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<float>.SetValue(float)
+  nameWithType.vb: IValueReceiver(Of Single).SetValue(Single)
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of Single).SetValue(Single)
+  name.vb: SetValue(Single)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver{System.Single}.SetValue(System.Single)
+    name: SetValue
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver{System.Single}.SetValue(System.Single)
+    name: SetValue
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: FastenUp.Runtime.Binders.IValueReceiver{System.String}.SetValue(System.String)
+  commentId: M:FastenUp.Runtime.Binders.IValueReceiver{System.String}.SetValue(System.String)
+  parent: FastenUp.Runtime.Binders.IValueReceiver{System.String}
+  definition: FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+  href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  name: SetValue(string)
+  nameWithType: IValueReceiver<string>.SetValue(string)
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<string>.SetValue(string)
+  nameWithType.vb: IValueReceiver(Of String).SetValue(String)
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of String).SetValue(String)
+  name.vb: SetValue(String)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver{System.String}.SetValue(System.String)
+    name: SetValue
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver{System.String}.SetValue(System.String)
+    name: SetValue
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

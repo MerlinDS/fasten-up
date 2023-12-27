@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Utils
+  commentId: N:FastenUp.Runtime.Utils
+  id: FastenUp.Runtime.Utils
+  children:
+  - FastenUp.Runtime.Utils.BindUtilities
+  langs:
+  - csharp
+  - vb
+  name: FastenUp.Runtime.Utils
+  nameWithType: FastenUp.Runtime.Utils
+  fullName: FastenUp.Runtime.Utils
+  type: Namespace
+  assemblies:
+  - FastenUp.Runtime
+references:
+- uid: FastenUp.Runtime.Utils.BindUtilities
+  commentId: T:FastenUp.Runtime.Utils.BindUtilities
+  href: FastenUp.Runtime.Utils.BindUtilities.html
+  name: BindUtilities
+  nameWithType: BindUtilities
+  fullName: FastenUp.Runtime.Utils.BindUtilities

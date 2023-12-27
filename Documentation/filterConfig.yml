@@ -1,0 +1,14 @@
+﻿### YamlMime:ManagedReference
+apiRules:
+  - include:
+      uidRegex: ^FastenUp
+      type: Namespace
+  - exclude:
+      uidRegex: BindUtilities
+      type: Class
+  - exclude:
+      uidRegex: OnBinderChanged
+      type: Delegate
+  - exclude:
+      uidRegex: .*
+      type: Namespace

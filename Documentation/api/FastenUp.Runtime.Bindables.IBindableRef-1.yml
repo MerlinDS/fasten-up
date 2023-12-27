@@ -1,0 +1,76 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Bindables.IBindableRef`1
+  commentId: T:FastenUp.Runtime.Bindables.IBindableRef`1
+  id: IBindableRef`1
+  parent: FastenUp.Runtime.Bindables
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IBindableRef<T>
+  nameWithType: IBindableRef<T>
+  fullName: FastenUp.Runtime.Bindables.IBindableRef<T>
+  type: Interface
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/IBindableRef.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: IBindableRef
+    path: ../Assets/FastenUp/Runtime/Bindables/IBindableRef.cs
+    startLine: 7
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  summary: >-
+    Implementation of this interface provides the ability to bind object references to a
+
+    <xref href="FastenUp.Runtime.Mediators.IMediator" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public interface IBindableRef<in T> : IBindable'
+    typeParameters:
+    - id: T
+      description: Type of the reference
+    content.vb: Public Interface IBindableRef(Of In T) Inherits IBindable
+  nameWithType.vb: IBindableRef(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableRef(Of T)
+  name.vb: IBindableRef(Of T)
+references:
+- uid: FastenUp.Runtime.Mediators.IMediator
+  commentId: T:FastenUp.Runtime.Mediators.IMediator
+  href: FastenUp.Runtime.Mediators.IMediator.html
+  name: IMediator
+  nameWithType: IMediator
+  fullName: FastenUp.Runtime.Mediators.IMediator
+- uid: FastenUp.Runtime.Bindables
+  commentId: N:FastenUp.Runtime.Bindables
+  href: FastenUp.html
+  name: FastenUp.Runtime.Bindables
+  nameWithType: FastenUp.Runtime.Bindables
+  fullName: FastenUp.Runtime.Bindables
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Bindables
+    name: Bindables
+    href: FastenUp.Runtime.Bindables.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Bindables
+    name: Bindables
+    href: FastenUp.Runtime.Bindables.html

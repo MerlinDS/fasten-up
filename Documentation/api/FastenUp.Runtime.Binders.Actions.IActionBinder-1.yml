@@ -1,0 +1,215 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Binders.Actions.IActionBinder`1
+  commentId: T:FastenUp.Runtime.Binders.Actions.IActionBinder`1
+  id: IActionBinder`1
+  parent: FastenUp.Runtime.Binders.Actions
+  children:
+  - FastenUp.Runtime.Binders.Actions.IActionBinder`1.OnAction
+  langs:
+  - csharp
+  - vb
+  name: IActionBinder<T>
+  nameWithType: IActionBinder<T>
+  fullName: FastenUp.Runtime.Binders.Actions.IActionBinder<T>
+  type: Interface
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Actions/IActionBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: IActionBinder
+    path: ../Assets/FastenUp/Runtime/Binders/Actions/IActionBinder.cs
+    startLine: 9
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Actions
+  summary: >-
+    Implementation of this interface will be bound to an <xref href="FastenUp.Runtime.Bindables.IBindableAction%601" data-throw-if-not-resolved="false"></xref>.
+
+    It provides the ability to invoke the <xref href="UnityEngine.Events.UnityEventBase" data-throw-if-not-resolved="false"></xref> in the bind Unity components.
+  example: []
+  syntax:
+    content: 'public interface IActionBinder<out T> : IBinder where T : UnityEventBase, new()'
+    typeParameters:
+    - id: T
+      description: Type of the event, must be a subclass of <xref href="UnityEngine.Events.UnityEventBase" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Interface IActionBinder(Of Out T As {UnityEventBase, New}) Inherits IBinder
+  inheritedMembers:
+  - FastenUp.Runtime.Binders.IBinder.Name
+  - FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+  nameWithType.vb: IActionBinder(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.Actions.IActionBinder(Of T)
+  name.vb: IActionBinder(Of T)
+- uid: FastenUp.Runtime.Binders.Actions.IActionBinder`1.OnAction
+  commentId: P:FastenUp.Runtime.Binders.Actions.IActionBinder`1.OnAction
+  id: OnAction
+  parent: FastenUp.Runtime.Binders.Actions.IActionBinder`1
+  langs:
+  - csharp
+  - vb
+  name: OnAction
+  nameWithType: IActionBinder<T>.OnAction
+  fullName: FastenUp.Runtime.Binders.Actions.IActionBinder<T>.OnAction
+  type: Property
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Actions/IActionBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: OnAction
+    path: ../Assets/FastenUp/Runtime/Binders/Actions/IActionBinder.cs
+    startLine: 15
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Actions
+  summary: The <xref href="UnityEngine.Events.UnityEventBase" data-throw-if-not-resolved="false"></xref> that will be invoked in the bind Unity components.
+  example: []
+  syntax:
+    content: T OnAction { get; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: ReadOnly Property OnAction As T
+  overload: FastenUp.Runtime.Binders.Actions.IActionBinder`1.OnAction*
+  nameWithType.vb: IActionBinder(Of T).OnAction
+  fullName.vb: FastenUp.Runtime.Binders.Actions.IActionBinder(Of T).OnAction
+references:
+- uid: FastenUp.Runtime.Bindables.IBindableAction`1
+  commentId: T:FastenUp.Runtime.Bindables.IBindableAction`1
+  href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  name: IBindableAction<T>
+  nameWithType: IBindableAction<T>
+  fullName: FastenUp.Runtime.Bindables.IBindableAction<T>
+  nameWithType.vb: IBindableAction(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableAction(Of T)
+  name.vb: IBindableAction(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindableAction`1
+    name: IBindableAction
+    href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindableAction`1
+    name: IBindableAction
+    href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: UnityEngine.Events.UnityEventBase
+  commentId: T:UnityEngine.Events.UnityEventBase
+  isExternal: true
+  name: UnityEventBase
+  nameWithType: UnityEventBase
+  fullName: UnityEngine.Events.UnityEventBase
+- uid: FastenUp.Runtime.Binders.Actions
+  commentId: N:FastenUp.Runtime.Binders.Actions
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders.Actions
+  nameWithType: FastenUp.Runtime.Binders.Actions
+  fullName: FastenUp.Runtime.Binders.Actions
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.Actions
+    name: Actions
+    href: FastenUp.Runtime.Binders.Actions.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.Actions
+    name: Actions
+    href: FastenUp.Runtime.Binders.Actions.html
+- uid: FastenUp.Runtime.Binders.IBinder.Name
+  commentId: P:FastenUp.Runtime.Binders.IBinder.Name
+  parent: FastenUp.Runtime.Binders.IBinder
+  href: FastenUp.Runtime.Binders.IBinder.html#FastenUp_Runtime_Binders_IBinder_Name
+  name: Name
+  nameWithType: IBinder.Name
+  fullName: FastenUp.Runtime.Binders.IBinder.Name
+- uid: FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+  commentId: E:FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+  parent: FastenUp.Runtime.Binders.IBinder
+  href: FastenUp.Runtime.Binders.IBinder.html#FastenUp_Runtime_Binders_IBinder_OnBinderChanged
+  name: OnBinderChanged
+  nameWithType: IBinder.OnBinderChanged
+  fullName: FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+- uid: FastenUp.Runtime.Binders.IBinder
+  commentId: T:FastenUp.Runtime.Binders.IBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.IBinder.html
+  name: IBinder
+  nameWithType: IBinder
+  fullName: FastenUp.Runtime.Binders.IBinder
+- uid: FastenUp.Runtime.Binders
+  commentId: N:FastenUp.Runtime.Binders
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders
+  nameWithType: FastenUp.Runtime.Binders
+  fullName: FastenUp.Runtime.Binders
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+- uid: FastenUp.Runtime.Binders.Actions.IActionBinder`1.OnAction*
+  commentId: Overload:FastenUp.Runtime.Binders.Actions.IActionBinder`1.OnAction
+  href: FastenUp.Runtime.Binders.Actions.IActionBinder-1.html#FastenUp_Runtime_Binders_Actions_IActionBinder_1_OnAction
+  name: OnAction
+  nameWithType: IActionBinder<T>.OnAction
+  fullName: FastenUp.Runtime.Binders.Actions.IActionBinder<T>.OnAction
+  nameWithType.vb: IActionBinder(Of T).OnAction
+  fullName.vb: FastenUp.Runtime.Binders.Actions.IActionBinder(Of T).OnAction
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

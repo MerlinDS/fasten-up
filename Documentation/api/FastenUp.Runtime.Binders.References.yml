@@ -1,0 +1,95 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Binders.References
+  commentId: N:FastenUp.Runtime.Binders.References
+  id: FastenUp.Runtime.Binders.References
+  children:
+  - FastenUp.Runtime.Binders.References.BaseRefBinder`1
+  - FastenUp.Runtime.Binders.References.IRefBinder
+  - FastenUp.Runtime.Binders.References.MediatorRefBinder
+  langs:
+  - csharp
+  - vb
+  name: FastenUp.Runtime.Binders.References
+  nameWithType: FastenUp.Runtime.Binders.References
+  fullName: FastenUp.Runtime.Binders.References
+  type: Namespace
+  assemblies:
+  - FastenUp.Runtime
+references:
+- uid: FastenUp.Runtime.Binders.References.IRefBinder
+  commentId: T:FastenUp.Runtime.Binders.References.IRefBinder
+  parent: FastenUp.Runtime.Binders.References
+  href: FastenUp.Runtime.Binders.References.IRefBinder.html
+  name: IRefBinder
+  nameWithType: IRefBinder
+  fullName: FastenUp.Runtime.Binders.References.IRefBinder
+- uid: FastenUp.Runtime.Binders.References.BaseRefBinder`1
+  commentId: T:FastenUp.Runtime.Binders.References.BaseRefBinder`1
+  href: FastenUp.Runtime.Binders.References.BaseRefBinder-1.html
+  name: BaseRefBinder<TRef>
+  nameWithType: BaseRefBinder<TRef>
+  fullName: FastenUp.Runtime.Binders.References.BaseRefBinder<TRef>
+  nameWithType.vb: BaseRefBinder(Of TRef)
+  fullName.vb: FastenUp.Runtime.Binders.References.BaseRefBinder(Of TRef)
+  name.vb: BaseRefBinder(Of TRef)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.References.BaseRefBinder`1
+    name: BaseRefBinder
+    href: FastenUp.Runtime.Binders.References.BaseRefBinder-1.html
+  - name: <
+  - name: TRef
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.References.BaseRefBinder`1
+    name: BaseRefBinder
+    href: FastenUp.Runtime.Binders.References.BaseRefBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TRef
+  - name: )
+- uid: FastenUp.Runtime.Binders.References.MediatorRefBinder
+  commentId: T:FastenUp.Runtime.Binders.References.MediatorRefBinder
+  href: FastenUp.Runtime.Binders.References.MediatorRefBinder.html
+  name: MediatorRefBinder
+  nameWithType: MediatorRefBinder
+  fullName: FastenUp.Runtime.Binders.References.MediatorRefBinder
+- uid: FastenUp.Runtime.Binders.References
+  commentId: N:FastenUp.Runtime.Binders.References
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders.References
+  nameWithType: FastenUp.Runtime.Binders.References
+  fullName: FastenUp.Runtime.Binders.References
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.References
+    name: References
+    href: FastenUp.Runtime.Binders.References.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.References
+    name: References
+    href: FastenUp.Runtime.Binders.References.html

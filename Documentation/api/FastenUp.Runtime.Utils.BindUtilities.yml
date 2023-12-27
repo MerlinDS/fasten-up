@@ -1,0 +1,905 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Utils.BindUtilities
+  commentId: T:FastenUp.Runtime.Utils.BindUtilities
+  id: BindUtilities
+  parent: FastenUp.Runtime.Utils
+  children:
+  - FastenUp.Runtime.Utils.BindUtilities.NameEquals(System.ReadOnlySpan{System.Char},FastenUp.Runtime.Binders.IBinder)
+  - FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindableAction{``0},FastenUp.Runtime.Binders.IBinder)
+  - FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindableCollection{``0},FastenUp.Runtime.Binders.IBinder)
+  - FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindableEvent{``0},FastenUp.Runtime.Binders.IBinder)
+  - FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindableRef{``0},FastenUp.Runtime.Binders.IBinder)
+  - FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindable{``0},FastenUp.Runtime.Binders.IBinder)
+  - FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindableAction{``0},FastenUp.Runtime.Binders.IBinder)
+  - FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindableCollection{``0},FastenUp.Runtime.Binders.IBinder)
+  - FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindableEvent{``0},FastenUp.Runtime.Binders.IBinder)
+  - FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindableRef{``0},FastenUp.Runtime.Binders.IBinder)
+  - FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindable{``0},FastenUp.Runtime.Binders.IBinder)
+  langs:
+  - csharp
+  - vb
+  name: BindUtilities
+  nameWithType: BindUtilities
+  fullName: FastenUp.Runtime.Utils.BindUtilities
+  type: Class
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: BindUtilities
+    path: ../Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+    startLine: 11
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Utils
+  syntax:
+    content: public static class BindUtilities
+    content.vb: Public Module BindUtilities
+  inheritance:
+  - System.Object
+- uid: FastenUp.Runtime.Utils.BindUtilities.NameEquals(System.ReadOnlySpan{System.Char},FastenUp.Runtime.Binders.IBinder)
+  commentId: M:FastenUp.Runtime.Utils.BindUtilities.NameEquals(System.ReadOnlySpan{System.Char},FastenUp.Runtime.Binders.IBinder)
+  id: NameEquals(System.ReadOnlySpan{System.Char},FastenUp.Runtime.Binders.IBinder)
+  parent: FastenUp.Runtime.Utils.BindUtilities
+  langs:
+  - csharp
+  - vb
+  name: NameEquals(ReadOnlySpan<char>, IBinder)
+  nameWithType: BindUtilities.NameEquals(ReadOnlySpan<char>, IBinder)
+  fullName: FastenUp.Runtime.Utils.BindUtilities.NameEquals(System.ReadOnlySpan<char>, FastenUp.Runtime.Binders.IBinder)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: NameEquals
+    path: ../Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+    startLine: 13
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Utils
+  syntax:
+    content: public static bool NameEquals(ReadOnlySpan<char> name, IBinder binder)
+    parameters:
+    - id: name
+      type: System.ReadOnlySpan{System.Char}
+    - id: binder
+      type: FastenUp.Runtime.Binders.IBinder
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function NameEquals(name As ReadOnlySpan(Of Char), binder As IBinder) As Boolean
+  overload: FastenUp.Runtime.Utils.BindUtilities.NameEquals*
+  nameWithType.vb: BindUtilities.NameEquals(ReadOnlySpan(Of Char), IBinder)
+  fullName.vb: FastenUp.Runtime.Utils.BindUtilities.NameEquals(System.ReadOnlySpan(Of Char), FastenUp.Runtime.Binders.IBinder)
+  name.vb: NameEquals(ReadOnlySpan(Of Char), IBinder)
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindable{``0},FastenUp.Runtime.Binders.IBinder)
+  commentId: M:FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindable{``0},FastenUp.Runtime.Binders.IBinder)
+  id: TryBind``1(FastenUp.Runtime.Bindables.IBindable{``0},FastenUp.Runtime.Binders.IBinder)
+  parent: FastenUp.Runtime.Utils.BindUtilities
+  langs:
+  - csharp
+  - vb
+  name: TryBind<T>(IBindable<T>, IBinder)
+  nameWithType: BindUtilities.TryBind<T>(IBindable<T>, IBinder)
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryBind<T>(FastenUp.Runtime.Bindables.IBindable<T>, FastenUp.Runtime.Binders.IBinder)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: TryBind
+    path: ../Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+    startLine: 17
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Utils
+  syntax:
+    content: public static void TryBind<T>(IBindable<T> bindable, IBinder binder)
+    parameters:
+    - id: bindable
+      type: FastenUp.Runtime.Bindables.IBindable{{T}}
+    - id: binder
+      type: FastenUp.Runtime.Binders.IBinder
+    typeParameters:
+    - id: T
+    content.vb: Public Shared Sub TryBind(Of T)(bindable As IBindable(Of T), binder As IBinder)
+  overload: FastenUp.Runtime.Utils.BindUtilities.TryBind*
+  nameWithType.vb: BindUtilities.TryBind(Of T)(IBindable(Of T), IBinder)
+  fullName.vb: FastenUp.Runtime.Utils.BindUtilities.TryBind(Of T)(FastenUp.Runtime.Bindables.IBindable(Of T), FastenUp.Runtime.Binders.IBinder)
+  name.vb: TryBind(Of T)(IBindable(Of T), IBinder)
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindable{``0},FastenUp.Runtime.Binders.IBinder)
+  commentId: M:FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindable{``0},FastenUp.Runtime.Binders.IBinder)
+  id: TryUnbind``1(FastenUp.Runtime.Bindables.IBindable{``0},FastenUp.Runtime.Binders.IBinder)
+  parent: FastenUp.Runtime.Utils.BindUtilities
+  langs:
+  - csharp
+  - vb
+  name: TryUnbind<T>(IBindable<T>, IBinder)
+  nameWithType: BindUtilities.TryUnbind<T>(IBindable<T>, IBinder)
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryUnbind<T>(FastenUp.Runtime.Bindables.IBindable<T>, FastenUp.Runtime.Binders.IBinder)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: TryUnbind
+    path: ../Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+    startLine: 24
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Utils
+  syntax:
+    content: public static void TryUnbind<T>(IBindable<T> bindable, IBinder binder)
+    parameters:
+    - id: bindable
+      type: FastenUp.Runtime.Bindables.IBindable{{T}}
+    - id: binder
+      type: FastenUp.Runtime.Binders.IBinder
+    typeParameters:
+    - id: T
+    content.vb: Public Shared Sub TryUnbind(Of T)(bindable As IBindable(Of T), binder As IBinder)
+  overload: FastenUp.Runtime.Utils.BindUtilities.TryUnbind*
+  nameWithType.vb: BindUtilities.TryUnbind(Of T)(IBindable(Of T), IBinder)
+  fullName.vb: FastenUp.Runtime.Utils.BindUtilities.TryUnbind(Of T)(FastenUp.Runtime.Bindables.IBindable(Of T), FastenUp.Runtime.Binders.IBinder)
+  name.vb: TryUnbind(Of T)(IBindable(Of T), IBinder)
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindableEvent{``0},FastenUp.Runtime.Binders.IBinder)
+  commentId: M:FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindableEvent{``0},FastenUp.Runtime.Binders.IBinder)
+  id: TryBind``1(FastenUp.Runtime.Bindables.IBindableEvent{``0},FastenUp.Runtime.Binders.IBinder)
+  parent: FastenUp.Runtime.Utils.BindUtilities
+  langs:
+  - csharp
+  - vb
+  name: TryBind<T>(IBindableEvent<T>, IBinder)
+  nameWithType: BindUtilities.TryBind<T>(IBindableEvent<T>, IBinder)
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryBind<T>(FastenUp.Runtime.Bindables.IBindableEvent<T>, FastenUp.Runtime.Binders.IBinder)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: TryBind
+    path: ../Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+    startLine: 31
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Utils
+  syntax:
+    content: public static void TryBind<T>(IBindableEvent<T> bindableEvent, IBinder binder)
+    parameters:
+    - id: bindableEvent
+      type: FastenUp.Runtime.Bindables.IBindableEvent{{T}}
+    - id: binder
+      type: FastenUp.Runtime.Binders.IBinder
+    typeParameters:
+    - id: T
+    content.vb: Public Shared Sub TryBind(Of T)(bindableEvent As IBindableEvent(Of T), binder As IBinder)
+  overload: FastenUp.Runtime.Utils.BindUtilities.TryBind*
+  nameWithType.vb: BindUtilities.TryBind(Of T)(IBindableEvent(Of T), IBinder)
+  fullName.vb: FastenUp.Runtime.Utils.BindUtilities.TryBind(Of T)(FastenUp.Runtime.Bindables.IBindableEvent(Of T), FastenUp.Runtime.Binders.IBinder)
+  name.vb: TryBind(Of T)(IBindableEvent(Of T), IBinder)
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindableEvent{``0},FastenUp.Runtime.Binders.IBinder)
+  commentId: M:FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindableEvent{``0},FastenUp.Runtime.Binders.IBinder)
+  id: TryUnbind``1(FastenUp.Runtime.Bindables.IBindableEvent{``0},FastenUp.Runtime.Binders.IBinder)
+  parent: FastenUp.Runtime.Utils.BindUtilities
+  langs:
+  - csharp
+  - vb
+  name: TryUnbind<T>(IBindableEvent<T>, IBinder)
+  nameWithType: BindUtilities.TryUnbind<T>(IBindableEvent<T>, IBinder)
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryUnbind<T>(FastenUp.Runtime.Bindables.IBindableEvent<T>, FastenUp.Runtime.Binders.IBinder)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: TryUnbind
+    path: ../Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+    startLine: 38
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Utils
+  syntax:
+    content: public static void TryUnbind<T>(IBindableEvent<T> bindableEvent, IBinder binder)
+    parameters:
+    - id: bindableEvent
+      type: FastenUp.Runtime.Bindables.IBindableEvent{{T}}
+    - id: binder
+      type: FastenUp.Runtime.Binders.IBinder
+    typeParameters:
+    - id: T
+    content.vb: Public Shared Sub TryUnbind(Of T)(bindableEvent As IBindableEvent(Of T), binder As IBinder)
+  overload: FastenUp.Runtime.Utils.BindUtilities.TryUnbind*
+  nameWithType.vb: BindUtilities.TryUnbind(Of T)(IBindableEvent(Of T), IBinder)
+  fullName.vb: FastenUp.Runtime.Utils.BindUtilities.TryUnbind(Of T)(FastenUp.Runtime.Bindables.IBindableEvent(Of T), FastenUp.Runtime.Binders.IBinder)
+  name.vb: TryUnbind(Of T)(IBindableEvent(Of T), IBinder)
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindableAction{``0},FastenUp.Runtime.Binders.IBinder)
+  commentId: M:FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindableAction{``0},FastenUp.Runtime.Binders.IBinder)
+  id: TryBind``1(FastenUp.Runtime.Bindables.IBindableAction{``0},FastenUp.Runtime.Binders.IBinder)
+  parent: FastenUp.Runtime.Utils.BindUtilities
+  langs:
+  - csharp
+  - vb
+  name: TryBind<T>(IBindableAction<T>, IBinder)
+  nameWithType: BindUtilities.TryBind<T>(IBindableAction<T>, IBinder)
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryBind<T>(FastenUp.Runtime.Bindables.IBindableAction<T>, FastenUp.Runtime.Binders.IBinder)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: TryBind
+    path: ../Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+    startLine: 45
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Utils
+  syntax:
+    content: 'public static void TryBind<T>(IBindableAction<T> bindableAction, IBinder binder) where T : UnityEventBase, new()'
+    parameters:
+    - id: bindableAction
+      type: FastenUp.Runtime.Bindables.IBindableAction{{T}}
+    - id: binder
+      type: FastenUp.Runtime.Binders.IBinder
+    typeParameters:
+    - id: T
+    content.vb: Public Shared Sub TryBind(Of T As {UnityEventBase, New})(bindableAction As IBindableAction(Of T), binder As IBinder)
+  overload: FastenUp.Runtime.Utils.BindUtilities.TryBind*
+  nameWithType.vb: BindUtilities.TryBind(Of T)(IBindableAction(Of T), IBinder)
+  fullName.vb: FastenUp.Runtime.Utils.BindUtilities.TryBind(Of T)(FastenUp.Runtime.Bindables.IBindableAction(Of T), FastenUp.Runtime.Binders.IBinder)
+  name.vb: TryBind(Of T)(IBindableAction(Of T), IBinder)
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindableAction{``0},FastenUp.Runtime.Binders.IBinder)
+  commentId: M:FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindableAction{``0},FastenUp.Runtime.Binders.IBinder)
+  id: TryUnbind``1(FastenUp.Runtime.Bindables.IBindableAction{``0},FastenUp.Runtime.Binders.IBinder)
+  parent: FastenUp.Runtime.Utils.BindUtilities
+  langs:
+  - csharp
+  - vb
+  name: TryUnbind<T>(IBindableAction<T>, IBinder)
+  nameWithType: BindUtilities.TryUnbind<T>(IBindableAction<T>, IBinder)
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryUnbind<T>(FastenUp.Runtime.Bindables.IBindableAction<T>, FastenUp.Runtime.Binders.IBinder)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: TryUnbind
+    path: ../Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+    startLine: 53
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Utils
+  syntax:
+    content: 'public static void TryUnbind<T>(IBindableAction<T> bindableAction, IBinder binder) where T : UnityEventBase, new()'
+    parameters:
+    - id: bindableAction
+      type: FastenUp.Runtime.Bindables.IBindableAction{{T}}
+    - id: binder
+      type: FastenUp.Runtime.Binders.IBinder
+    typeParameters:
+    - id: T
+    content.vb: Public Shared Sub TryUnbind(Of T As {UnityEventBase, New})(bindableAction As IBindableAction(Of T), binder As IBinder)
+  overload: FastenUp.Runtime.Utils.BindUtilities.TryUnbind*
+  nameWithType.vb: BindUtilities.TryUnbind(Of T)(IBindableAction(Of T), IBinder)
+  fullName.vb: FastenUp.Runtime.Utils.BindUtilities.TryUnbind(Of T)(FastenUp.Runtime.Bindables.IBindableAction(Of T), FastenUp.Runtime.Binders.IBinder)
+  name.vb: TryUnbind(Of T)(IBindableAction(Of T), IBinder)
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindableRef{``0},FastenUp.Runtime.Binders.IBinder)
+  commentId: M:FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindableRef{``0},FastenUp.Runtime.Binders.IBinder)
+  id: TryBind``1(FastenUp.Runtime.Bindables.IBindableRef{``0},FastenUp.Runtime.Binders.IBinder)
+  parent: FastenUp.Runtime.Utils.BindUtilities
+  langs:
+  - csharp
+  - vb
+  name: TryBind<T>(IBindableRef<T>, IBinder)
+  nameWithType: BindUtilities.TryBind<T>(IBindableRef<T>, IBinder)
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryBind<T>(FastenUp.Runtime.Bindables.IBindableRef<T>, FastenUp.Runtime.Binders.IBinder)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: TryBind
+    path: ../Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+    startLine: 61
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Utils
+  syntax:
+    content: public static void TryBind<T>(IBindableRef<T> bindableRef, IBinder binder)
+    parameters:
+    - id: bindableRef
+      type: FastenUp.Runtime.Bindables.IBindableRef{{T}}
+    - id: binder
+      type: FastenUp.Runtime.Binders.IBinder
+    typeParameters:
+    - id: T
+    content.vb: Public Shared Sub TryBind(Of T)(bindableRef As IBindableRef(Of T), binder As IBinder)
+  overload: FastenUp.Runtime.Utils.BindUtilities.TryBind*
+  nameWithType.vb: BindUtilities.TryBind(Of T)(IBindableRef(Of T), IBinder)
+  fullName.vb: FastenUp.Runtime.Utils.BindUtilities.TryBind(Of T)(FastenUp.Runtime.Bindables.IBindableRef(Of T), FastenUp.Runtime.Binders.IBinder)
+  name.vb: TryBind(Of T)(IBindableRef(Of T), IBinder)
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindableRef{``0},FastenUp.Runtime.Binders.IBinder)
+  commentId: M:FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindableRef{``0},FastenUp.Runtime.Binders.IBinder)
+  id: TryUnbind``1(FastenUp.Runtime.Bindables.IBindableRef{``0},FastenUp.Runtime.Binders.IBinder)
+  parent: FastenUp.Runtime.Utils.BindUtilities
+  langs:
+  - csharp
+  - vb
+  name: TryUnbind<T>(IBindableRef<T>, IBinder)
+  nameWithType: BindUtilities.TryUnbind<T>(IBindableRef<T>, IBinder)
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryUnbind<T>(FastenUp.Runtime.Bindables.IBindableRef<T>, FastenUp.Runtime.Binders.IBinder)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: TryUnbind
+    path: ../Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+    startLine: 68
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Utils
+  syntax:
+    content: public static void TryUnbind<T>(IBindableRef<T> bindableRef, IBinder binder)
+    parameters:
+    - id: bindableRef
+      type: FastenUp.Runtime.Bindables.IBindableRef{{T}}
+    - id: binder
+      type: FastenUp.Runtime.Binders.IBinder
+    typeParameters:
+    - id: T
+    content.vb: Public Shared Sub TryUnbind(Of T)(bindableRef As IBindableRef(Of T), binder As IBinder)
+  overload: FastenUp.Runtime.Utils.BindUtilities.TryUnbind*
+  nameWithType.vb: BindUtilities.TryUnbind(Of T)(IBindableRef(Of T), IBinder)
+  fullName.vb: FastenUp.Runtime.Utils.BindUtilities.TryUnbind(Of T)(FastenUp.Runtime.Bindables.IBindableRef(Of T), FastenUp.Runtime.Binders.IBinder)
+  name.vb: TryUnbind(Of T)(IBindableRef(Of T), IBinder)
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindableCollection{``0},FastenUp.Runtime.Binders.IBinder)
+  commentId: M:FastenUp.Runtime.Utils.BindUtilities.TryBind``1(FastenUp.Runtime.Bindables.IBindableCollection{``0},FastenUp.Runtime.Binders.IBinder)
+  id: TryBind``1(FastenUp.Runtime.Bindables.IBindableCollection{``0},FastenUp.Runtime.Binders.IBinder)
+  parent: FastenUp.Runtime.Utils.BindUtilities
+  langs:
+  - csharp
+  - vb
+  name: TryBind<T>(IBindableCollection<T>, IBinder)
+  nameWithType: BindUtilities.TryBind<T>(IBindableCollection<T>, IBinder)
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryBind<T>(FastenUp.Runtime.Bindables.IBindableCollection<T>, FastenUp.Runtime.Binders.IBinder)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: TryBind
+    path: ../Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+    startLine: 75
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Utils
+  syntax:
+    content: public static void TryBind<T>(IBindableCollection<T> bindableCollection, IBinder binder)
+    parameters:
+    - id: bindableCollection
+      type: FastenUp.Runtime.Bindables.IBindableCollection{{T}}
+    - id: binder
+      type: FastenUp.Runtime.Binders.IBinder
+    typeParameters:
+    - id: T
+    content.vb: Public Shared Sub TryBind(Of T)(bindableCollection As IBindableCollection(Of T), binder As IBinder)
+  overload: FastenUp.Runtime.Utils.BindUtilities.TryBind*
+  nameWithType.vb: BindUtilities.TryBind(Of T)(IBindableCollection(Of T), IBinder)
+  fullName.vb: FastenUp.Runtime.Utils.BindUtilities.TryBind(Of T)(FastenUp.Runtime.Bindables.IBindableCollection(Of T), FastenUp.Runtime.Binders.IBinder)
+  name.vb: TryBind(Of T)(IBindableCollection(Of T), IBinder)
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindableCollection{``0},FastenUp.Runtime.Binders.IBinder)
+  commentId: M:FastenUp.Runtime.Utils.BindUtilities.TryUnbind``1(FastenUp.Runtime.Bindables.IBindableCollection{``0},FastenUp.Runtime.Binders.IBinder)
+  id: TryUnbind``1(FastenUp.Runtime.Bindables.IBindableCollection{``0},FastenUp.Runtime.Binders.IBinder)
+  parent: FastenUp.Runtime.Utils.BindUtilities
+  langs:
+  - csharp
+  - vb
+  name: TryUnbind<T>(IBindableCollection<T>, IBinder)
+  nameWithType: BindUtilities.TryUnbind<T>(IBindableCollection<T>, IBinder)
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryUnbind<T>(FastenUp.Runtime.Bindables.IBindableCollection<T>, FastenUp.Runtime.Binders.IBinder)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: TryUnbind
+    path: ../Assets/FastenUp/Runtime/Utils/BindUtilities.cs
+    startLine: 82
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Utils
+  syntax:
+    content: public static void TryUnbind<T>(IBindableCollection<T> bindableCollection, IBinder binder)
+    parameters:
+    - id: bindableCollection
+      type: FastenUp.Runtime.Bindables.IBindableCollection{{T}}
+    - id: binder
+      type: FastenUp.Runtime.Binders.IBinder
+    typeParameters:
+    - id: T
+    content.vb: Public Shared Sub TryUnbind(Of T)(bindableCollection As IBindableCollection(Of T), binder As IBinder)
+  overload: FastenUp.Runtime.Utils.BindUtilities.TryUnbind*
+  nameWithType.vb: BindUtilities.TryUnbind(Of T)(IBindableCollection(Of T), IBinder)
+  fullName.vb: FastenUp.Runtime.Utils.BindUtilities.TryUnbind(Of T)(FastenUp.Runtime.Bindables.IBindableCollection(Of T), FastenUp.Runtime.Binders.IBinder)
+  name.vb: TryUnbind(Of T)(IBindableCollection(Of T), IBinder)
+references:
+- uid: FastenUp.Runtime.Utils
+  commentId: N:FastenUp.Runtime.Utils
+  href: FastenUp.html
+  name: FastenUp.Runtime.Utils
+  nameWithType: FastenUp.Runtime.Utils
+  fullName: FastenUp.Runtime.Utils
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Utils
+    name: Utils
+    href: FastenUp.Runtime.Utils.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Utils
+    name: Utils
+    href: FastenUp.Runtime.Utils.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: FastenUp.Runtime.Utils.BindUtilities.NameEquals*
+  commentId: Overload:FastenUp.Runtime.Utils.BindUtilities.NameEquals
+  href: FastenUp.Runtime.Utils.BindUtilities.html#FastenUp_Runtime_Utils_BindUtilities_NameEquals_System_ReadOnlySpan_System_Char__FastenUp_Runtime_Binders_IBinder_
+  name: NameEquals
+  nameWithType: BindUtilities.NameEquals
+  fullName: FastenUp.Runtime.Utils.BindUtilities.NameEquals
+- uid: System.ReadOnlySpan{System.Char}
+  commentId: T:System.ReadOnlySpan{System.Char}
+  parent: System
+  definition: System.ReadOnlySpan`1
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<char>
+  nameWithType: ReadOnlySpan<char>
+  fullName: System.ReadOnlySpan<char>
+  nameWithType.vb: ReadOnlySpan(Of Char)
+  fullName.vb: System.ReadOnlySpan(Of Char)
+  name.vb: ReadOnlySpan(Of Char)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - uid: System.Char
+    name: char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Char
+    name: Char
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.char
+  - name: )
+- uid: FastenUp.Runtime.Binders.IBinder
+  commentId: T:FastenUp.Runtime.Binders.IBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.IBinder.html
+  name: IBinder
+  nameWithType: IBinder
+  fullName: FastenUp.Runtime.Binders.IBinder
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.ReadOnlySpan`1
+  commentId: T:System.ReadOnlySpan`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  name: ReadOnlySpan<T>
+  nameWithType: ReadOnlySpan<T>
+  fullName: System.ReadOnlySpan<T>
+  nameWithType.vb: ReadOnlySpan(Of T)
+  fullName.vb: System.ReadOnlySpan(Of T)
+  name.vb: ReadOnlySpan(Of T)
+  spec.csharp:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.ReadOnlySpan`1
+    name: ReadOnlySpan
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.readonlyspan-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders
+  commentId: N:FastenUp.Runtime.Binders
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders
+  nameWithType: FastenUp.Runtime.Binders
+  fullName: FastenUp.Runtime.Binders
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryBind*
+  commentId: Overload:FastenUp.Runtime.Utils.BindUtilities.TryBind
+  href: FastenUp.Runtime.Utils.BindUtilities.html#FastenUp_Runtime_Utils_BindUtilities_TryBind__1_FastenUp_Runtime_Bindables_IBindable___0__FastenUp_Runtime_Binders_IBinder_
+  name: TryBind
+  nameWithType: BindUtilities.TryBind
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryBind
+- uid: FastenUp.Runtime.Bindables.IBindable{{T}}
+  commentId: T:FastenUp.Runtime.Bindables.IBindable{`0}
+  parent: FastenUp.Runtime.Bindables
+  definition: FastenUp.Runtime.Bindables.IBindable`1
+  href: FastenUp.Runtime.Bindables.IBindable-1.html
+  name: IBindable<T>
+  nameWithType: IBindable<T>
+  fullName: FastenUp.Runtime.Bindables.IBindable<T>
+  nameWithType.vb: IBindable(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindable(Of T)
+  name.vb: IBindable(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindable`1
+    name: IBindable
+    href: FastenUp.Runtime.Bindables.IBindable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindable`1
+    name: IBindable
+    href: FastenUp.Runtime.Bindables.IBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindable`1
+  commentId: T:FastenUp.Runtime.Bindables.IBindable`1
+  href: FastenUp.Runtime.Bindables.IBindable-1.html
+  name: IBindable<T>
+  nameWithType: IBindable<T>
+  fullName: FastenUp.Runtime.Bindables.IBindable<T>
+  nameWithType.vb: IBindable(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindable(Of T)
+  name.vb: IBindable(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindable`1
+    name: IBindable
+    href: FastenUp.Runtime.Bindables.IBindable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindable`1
+    name: IBindable
+    href: FastenUp.Runtime.Bindables.IBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables
+  commentId: N:FastenUp.Runtime.Bindables
+  href: FastenUp.html
+  name: FastenUp.Runtime.Bindables
+  nameWithType: FastenUp.Runtime.Bindables
+  fullName: FastenUp.Runtime.Bindables
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Bindables
+    name: Bindables
+    href: FastenUp.Runtime.Bindables.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Bindables
+    name: Bindables
+    href: FastenUp.Runtime.Bindables.html
+- uid: FastenUp.Runtime.Utils.BindUtilities.TryUnbind*
+  commentId: Overload:FastenUp.Runtime.Utils.BindUtilities.TryUnbind
+  href: FastenUp.Runtime.Utils.BindUtilities.html#FastenUp_Runtime_Utils_BindUtilities_TryUnbind__1_FastenUp_Runtime_Bindables_IBindable___0__FastenUp_Runtime_Binders_IBinder_
+  name: TryUnbind
+  nameWithType: BindUtilities.TryUnbind
+  fullName: FastenUp.Runtime.Utils.BindUtilities.TryUnbind
+- uid: FastenUp.Runtime.Bindables.IBindableEvent{{T}}
+  commentId: T:FastenUp.Runtime.Bindables.IBindableEvent{`0}
+  parent: FastenUp.Runtime.Bindables
+  definition: FastenUp.Runtime.Bindables.IBindableEvent`1
+  href: FastenUp.Runtime.Bindables.IBindableEvent-1.html
+  name: IBindableEvent<T>
+  nameWithType: IBindableEvent<T>
+  fullName: FastenUp.Runtime.Bindables.IBindableEvent<T>
+  nameWithType.vb: IBindableEvent(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableEvent(Of T)
+  name.vb: IBindableEvent(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindableEvent`1
+    name: IBindableEvent
+    href: FastenUp.Runtime.Bindables.IBindableEvent-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindableEvent`1
+    name: IBindableEvent
+    href: FastenUp.Runtime.Bindables.IBindableEvent-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindableEvent`1
+  commentId: T:FastenUp.Runtime.Bindables.IBindableEvent`1
+  href: FastenUp.Runtime.Bindables.IBindableEvent-1.html
+  name: IBindableEvent<T>
+  nameWithType: IBindableEvent<T>
+  fullName: FastenUp.Runtime.Bindables.IBindableEvent<T>
+  nameWithType.vb: IBindableEvent(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableEvent(Of T)
+  name.vb: IBindableEvent(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindableEvent`1
+    name: IBindableEvent
+    href: FastenUp.Runtime.Bindables.IBindableEvent-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindableEvent`1
+    name: IBindableEvent
+    href: FastenUp.Runtime.Bindables.IBindableEvent-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindableAction{{T}}
+  commentId: T:FastenUp.Runtime.Bindables.IBindableAction{`0}
+  parent: FastenUp.Runtime.Bindables
+  definition: FastenUp.Runtime.Bindables.IBindableAction`1
+  href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  name: IBindableAction<T>
+  nameWithType: IBindableAction<T>
+  fullName: FastenUp.Runtime.Bindables.IBindableAction<T>
+  nameWithType.vb: IBindableAction(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableAction(Of T)
+  name.vb: IBindableAction(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindableAction`1
+    name: IBindableAction
+    href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindableAction`1
+    name: IBindableAction
+    href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindableAction`1
+  commentId: T:FastenUp.Runtime.Bindables.IBindableAction`1
+  href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  name: IBindableAction<T>
+  nameWithType: IBindableAction<T>
+  fullName: FastenUp.Runtime.Bindables.IBindableAction<T>
+  nameWithType.vb: IBindableAction(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableAction(Of T)
+  name.vb: IBindableAction(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindableAction`1
+    name: IBindableAction
+    href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindableAction`1
+    name: IBindableAction
+    href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindableRef{{T}}
+  commentId: T:FastenUp.Runtime.Bindables.IBindableRef{`0}
+  parent: FastenUp.Runtime.Bindables
+  definition: FastenUp.Runtime.Bindables.IBindableRef`1
+  href: FastenUp.Runtime.Bindables.IBindableRef-1.html
+  name: IBindableRef<T>
+  nameWithType: IBindableRef<T>
+  fullName: FastenUp.Runtime.Bindables.IBindableRef<T>
+  nameWithType.vb: IBindableRef(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableRef(Of T)
+  name.vb: IBindableRef(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindableRef`1
+    name: IBindableRef
+    href: FastenUp.Runtime.Bindables.IBindableRef-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindableRef`1
+    name: IBindableRef
+    href: FastenUp.Runtime.Bindables.IBindableRef-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindableRef`1
+  commentId: T:FastenUp.Runtime.Bindables.IBindableRef`1
+  href: FastenUp.Runtime.Bindables.IBindableRef-1.html
+  name: IBindableRef<T>
+  nameWithType: IBindableRef<T>
+  fullName: FastenUp.Runtime.Bindables.IBindableRef<T>
+  nameWithType.vb: IBindableRef(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableRef(Of T)
+  name.vb: IBindableRef(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindableRef`1
+    name: IBindableRef
+    href: FastenUp.Runtime.Bindables.IBindableRef-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindableRef`1
+    name: IBindableRef
+    href: FastenUp.Runtime.Bindables.IBindableRef-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindableCollection{{T}}
+  commentId: T:FastenUp.Runtime.Bindables.IBindableCollection{`0}
+  parent: FastenUp.Runtime.Bindables
+  definition: FastenUp.Runtime.Bindables.IBindableCollection`1
+  href: FastenUp.Runtime.Bindables.IBindableCollection-1.html
+  name: IBindableCollection<T>
+  nameWithType: IBindableCollection<T>
+  fullName: FastenUp.Runtime.Bindables.IBindableCollection<T>
+  nameWithType.vb: IBindableCollection(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableCollection(Of T)
+  name.vb: IBindableCollection(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindableCollection`1
+    name: IBindableCollection
+    href: FastenUp.Runtime.Bindables.IBindableCollection-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindableCollection`1
+    name: IBindableCollection
+    href: FastenUp.Runtime.Bindables.IBindableCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindableCollection`1
+  commentId: T:FastenUp.Runtime.Bindables.IBindableCollection`1
+  href: FastenUp.Runtime.Bindables.IBindableCollection-1.html
+  name: IBindableCollection<T>
+  nameWithType: IBindableCollection<T>
+  fullName: FastenUp.Runtime.Bindables.IBindableCollection<T>
+  nameWithType.vb: IBindableCollection(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableCollection(Of T)
+  name.vb: IBindableCollection(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindableCollection`1
+    name: IBindableCollection
+    href: FastenUp.Runtime.Bindables.IBindableCollection-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindableCollection`1
+    name: IBindableCollection
+    href: FastenUp.Runtime.Bindables.IBindableCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

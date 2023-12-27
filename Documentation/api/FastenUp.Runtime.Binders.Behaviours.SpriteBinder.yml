@@ -1,0 +1,430 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Binders.Behaviours.SpriteBinder
+  commentId: T:FastenUp.Runtime.Binders.Behaviours.SpriteBinder
+  id: SpriteBinder
+  parent: FastenUp.Runtime.Binders.Behaviours
+  children:
+  - FastenUp.Runtime.Binders.Behaviours.SpriteBinder.SetValue(UnityEngine.Sprite)
+  langs:
+  - csharp
+  - vb
+  name: SpriteBinder
+  nameWithType: SpriteBinder
+  fullName: FastenUp.Runtime.Binders.Behaviours.SpriteBinder
+  type: Class
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Behaviours/SpriteBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: SpriteBinder
+    path: ../Assets/FastenUp/Runtime/Binders/Behaviours/SpriteBinder.cs
+    startLine: 9
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Behaviours
+  summary: The one-way <xref href="FastenUp.Runtime.Binders.IBinder" data-throw-if-not-resolved="false"></xref> binds a value to the component with <xref href="UnityEngine.Sprite" data-throw-if-not-resolved="false"></xref> field.
+  example: []
+  syntax:
+    content: >-
+      [RequireComponent(typeof(Image))]
+
+      [AddComponentMenu("UI/Fasten Up/Sprite Binder", 2)]
+
+      [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#sprite")]
+
+      public sealed class SpriteBinder : BaseBinder, IValueReceiver<Sprite>, IBinder<Sprite>, IBinder
+    content.vb: >-
+      <RequireComponent(GetType(Image))>
+
+      <AddComponentMenu("UI/Fasten Up/Sprite Binder", 2)>
+
+      <HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#sprite")>
+
+      Public NotInheritable Class SpriteBinder Inherits BaseBinder Implements IValueReceiver(Of Sprite), IBinder(Of Sprite), IBinder
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - FastenUp.Runtime.Binders.BaseBinder
+  implements:
+  - FastenUp.Runtime.Binders.IValueReceiver{UnityEngine.Sprite}
+  - FastenUp.Runtime.Binders.IBinder{UnityEngine.Sprite}
+  - FastenUp.Runtime.Binders.IBinder
+  inheritedMembers:
+  - FastenUp.Runtime.Binders.BaseBinder.Name
+  - FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  attributes:
+  - type: UnityEngine.AddComponentMenu
+    ctor: UnityEngine.AddComponentMenu.#ctor(System.String,System.Int32)
+    arguments:
+    - type: System.String
+      value: UI/Fasten Up/Sprite Binder
+    - type: System.Int32
+      value: 2
+  - type: UnityEngine.HelpURLAttribute
+    ctor: UnityEngine.HelpURLAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: https://github.com/MerlinDS/fasten-up/wiki/Binders#sprite
+- uid: FastenUp.Runtime.Binders.Behaviours.SpriteBinder.SetValue(UnityEngine.Sprite)
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.SpriteBinder.SetValue(UnityEngine.Sprite)
+  id: SetValue(UnityEngine.Sprite)
+  parent: FastenUp.Runtime.Binders.Behaviours.SpriteBinder
+  langs:
+  - csharp
+  - vb
+  name: SetValue(Sprite)
+  nameWithType: SpriteBinder.SetValue(Sprite)
+  fullName: FastenUp.Runtime.Binders.Behaviours.SpriteBinder.SetValue(UnityEngine.Sprite)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Behaviours/SpriteBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: SetValue
+    path: ../Assets/FastenUp/Runtime/Binders/Behaviours/SpriteBinder.cs
+    startLine: 21
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Behaviours
+  summary: Sets the value to the binder.
+  example: []
+  syntax:
+    content: public void SetValue(Sprite value)
+    parameters:
+    - id: value
+      type: UnityEngine.Sprite
+      description: The value that will be set to the binder.
+    content.vb: Public Sub SetValue(value As Sprite)
+  overload: FastenUp.Runtime.Binders.Behaviours.SpriteBinder.SetValue*
+  implements:
+  - FastenUp.Runtime.Binders.IValueReceiver{UnityEngine.Sprite}.SetValue(UnityEngine.Sprite)
+references:
+- uid: FastenUp.Runtime.Binders.IBinder
+  commentId: T:FastenUp.Runtime.Binders.IBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.IBinder.html
+  name: IBinder
+  nameWithType: IBinder
+  fullName: FastenUp.Runtime.Binders.IBinder
+- uid: UnityEngine.Sprite
+  commentId: T:UnityEngine.Sprite
+  parent: UnityEngine
+  isExternal: true
+  name: Sprite
+  nameWithType: Sprite
+  fullName: UnityEngine.Sprite
+- uid: FastenUp.Runtime.Binders.Behaviours
+  commentId: N:FastenUp.Runtime.Binders.Behaviours
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders.Behaviours
+  nameWithType: FastenUp.Runtime.Binders.Behaviours
+  fullName: FastenUp.Runtime.Binders.Behaviours
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.Behaviours
+    name: Behaviours
+    href: FastenUp.Runtime.Binders.Behaviours.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.Behaviours
+    name: Behaviours
+    href: FastenUp.Runtime.Binders.Behaviours.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: FastenUp.Runtime.Binders.BaseBinder
+  commentId: T:FastenUp.Runtime.Binders.BaseBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.BaseBinder.html
+  name: BaseBinder
+  nameWithType: BaseBinder
+  fullName: FastenUp.Runtime.Binders.BaseBinder
+- uid: FastenUp.Runtime.Binders.IValueReceiver{UnityEngine.Sprite}
+  commentId: T:FastenUp.Runtime.Binders.IValueReceiver{UnityEngine.Sprite}
+  parent: FastenUp.Runtime.Binders
+  definition: FastenUp.Runtime.Binders.IValueReceiver`1
+  href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  name: IValueReceiver<Sprite>
+  nameWithType: IValueReceiver<Sprite>
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<UnityEngine.Sprite>
+  nameWithType.vb: IValueReceiver(Of Sprite)
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of UnityEngine.Sprite)
+  name.vb: IValueReceiver(Of Sprite)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1
+    name: IValueReceiver
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  - name: <
+  - uid: UnityEngine.Sprite
+    name: Sprite
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1
+    name: IValueReceiver
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.Sprite
+    name: Sprite
+    isExternal: true
+  - name: )
+- uid: FastenUp.Runtime.Binders.IBinder{UnityEngine.Sprite}
+  commentId: T:FastenUp.Runtime.Binders.IBinder{UnityEngine.Sprite}
+  parent: FastenUp.Runtime.Binders
+  definition: FastenUp.Runtime.Binders.IBinder`1
+  href: FastenUp.Runtime.Binders.IBinder-1.html
+  name: IBinder<Sprite>
+  nameWithType: IBinder<Sprite>
+  fullName: FastenUp.Runtime.Binders.IBinder<UnityEngine.Sprite>
+  nameWithType.vb: IBinder(Of Sprite)
+  fullName.vb: FastenUp.Runtime.Binders.IBinder(Of UnityEngine.Sprite)
+  name.vb: IBinder(Of Sprite)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: <
+  - uid: UnityEngine.Sprite
+    name: Sprite
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.Sprite
+    name: Sprite
+    isExternal: true
+  - name: )
+- uid: FastenUp.Runtime.Binders.BaseBinder.Name
+  commentId: P:FastenUp.Runtime.Binders.BaseBinder.Name
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_Name
+  name: Name
+  nameWithType: BaseBinder.Name
+  fullName: FastenUp.Runtime.Binders.BaseBinder.Name
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  commentId: E:FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnBinderChanged
+  name: OnBinderChanged
+  nameWithType: BaseBinder.OnBinderChanged
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+- uid: FastenUp.Runtime.Binders
+  commentId: N:FastenUp.Runtime.Binders
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders
+  nameWithType: FastenUp.Runtime.Binders
+  fullName: FastenUp.Runtime.Binders
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: FastenUp.Runtime.Binders.IValueReceiver`1
+  commentId: T:FastenUp.Runtime.Binders.IValueReceiver`1
+  href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  name: IValueReceiver<T>
+  nameWithType: IValueReceiver<T>
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<T>
+  nameWithType.vb: IValueReceiver(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of T)
+  name.vb: IValueReceiver(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1
+    name: IValueReceiver
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1
+    name: IValueReceiver
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders.IBinder`1
+  commentId: T:FastenUp.Runtime.Binders.IBinder`1
+  href: FastenUp.Runtime.Binders.IBinder-1.html
+  name: IBinder<T>
+  nameWithType: IBinder<T>
+  fullName: FastenUp.Runtime.Binders.IBinder<T>
+  nameWithType.vb: IBinder(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.IBinder(Of T)
+  name.vb: IBinder(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders.Behaviours.SpriteBinder.SetValue*
+  commentId: Overload:FastenUp.Runtime.Binders.Behaviours.SpriteBinder.SetValue
+  href: FastenUp.Runtime.Binders.Behaviours.SpriteBinder.html#FastenUp_Runtime_Binders_Behaviours_SpriteBinder_SetValue_UnityEngine_Sprite_
+  name: SetValue
+  nameWithType: SpriteBinder.SetValue
+  fullName: FastenUp.Runtime.Binders.Behaviours.SpriteBinder.SetValue
+- uid: FastenUp.Runtime.Binders.IValueReceiver{UnityEngine.Sprite}.SetValue(UnityEngine.Sprite)
+  commentId: M:FastenUp.Runtime.Binders.IValueReceiver{UnityEngine.Sprite}.SetValue(UnityEngine.Sprite)
+  parent: FastenUp.Runtime.Binders.IValueReceiver{UnityEngine.Sprite}
+  definition: FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+  href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  name: SetValue(Sprite)
+  nameWithType: IValueReceiver<Sprite>.SetValue(Sprite)
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<UnityEngine.Sprite>.SetValue(UnityEngine.Sprite)
+  nameWithType.vb: IValueReceiver(Of Sprite).SetValue(Sprite)
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of UnityEngine.Sprite).SetValue(UnityEngine.Sprite)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver{UnityEngine.Sprite}.SetValue(UnityEngine.Sprite)
+    name: SetValue
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  - name: (
+  - uid: UnityEngine.Sprite
+    name: Sprite
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver{UnityEngine.Sprite}.SetValue(UnityEngine.Sprite)
+    name: SetValue
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  - name: (
+  - uid: UnityEngine.Sprite
+    name: Sprite
+    isExternal: true
+  - name: )
+- uid: FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+  commentId: M:FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+  href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  name: SetValue(T)
+  nameWithType: IValueReceiver<T>.SetValue(T)
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<T>.SetValue(T)
+  nameWithType.vb: IValueReceiver(Of T).SetValue(T)
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of T).SetValue(T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+    name: SetValue
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+    name: SetValue
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  - name: (
+  - name: T
+  - name: )

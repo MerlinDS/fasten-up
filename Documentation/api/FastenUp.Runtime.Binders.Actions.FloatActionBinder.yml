@@ -1,0 +1,504 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Binders.Actions.FloatActionBinder
+  commentId: T:FastenUp.Runtime.Binders.Actions.FloatActionBinder
+  id: FloatActionBinder
+  parent: FastenUp.Runtime.Binders.Actions
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: FloatActionBinder
+  nameWithType: FloatActionBinder
+  fullName: FastenUp.Runtime.Binders.Actions.FloatActionBinder
+  type: Class
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Actions/FloatActionBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: FloatActionBinder
+    path: ../Assets/FastenUp/Runtime/Binders/Actions/FloatActionBinder.cs
+    startLine: 8
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Actions
+  summary: <xref href="FastenUp.Runtime.Binders.Actions.ActionBinder%601" data-throw-if-not-resolved="false"></xref> for <xref href="System.Single" data-throw-if-not-resolved="false"></xref> type.
+  example: []
+  syntax:
+    content: >-
+      [AddComponentMenu("UI/Fasten Up/Actions/Float Action Binder", 0)]
+
+      public class FloatActionBinder : ActionBinder<float>, IActionBinder<UnityEvent<float>>, IBinder
+    content.vb: >-
+      <AddComponentMenu("UI/Fasten Up/Actions/Float Action Binder", 0)>
+
+      Public Class FloatActionBinder Inherits ActionBinder(Of Single) Implements IActionBinder(Of UnityEvent(Of Single)), IBinder
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - FastenUp.Runtime.Binders.BaseBinder
+  - FastenUp.Runtime.Binders.Actions.BaseActionBinder{UnityEngine.Events.UnityEvent{System.Single}}
+  - FastenUp.Runtime.Binders.Actions.ActionBinder{System.Single}
+  implements:
+  - FastenUp.Runtime.Binders.Actions.IActionBinder{UnityEngine.Events.UnityEvent{System.Single}}
+  - FastenUp.Runtime.Binders.IBinder
+  inheritedMembers:
+  - FastenUp.Runtime.Binders.Actions.BaseActionBinder{UnityEngine.Events.UnityEvent{System.Single}}.OnAction
+  - FastenUp.Runtime.Binders.BaseBinder.Name
+  - FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  - FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+  - FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+  - FastenUp.Runtime.Binders.BaseBinder.OnEnable
+  - FastenUp.Runtime.Binders.BaseBinder.OnDisable
+  attributes:
+  - type: UnityEngine.AddComponentMenu
+    ctor: UnityEngine.AddComponentMenu.#ctor(System.String,System.Int32)
+    arguments:
+    - type: System.String
+      value: UI/Fasten Up/Actions/Float Action Binder
+    - type: System.Int32
+      value: 0
+references:
+- uid: FastenUp.Runtime.Binders.Actions.ActionBinder`1
+  commentId: T:FastenUp.Runtime.Binders.Actions.ActionBinder`1
+  href: FastenUp.Runtime.Binders.Actions.ActionBinder-1.html
+  name: ActionBinder<T>
+  nameWithType: ActionBinder<T>
+  fullName: FastenUp.Runtime.Binders.Actions.ActionBinder<T>
+  nameWithType.vb: ActionBinder(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.Actions.ActionBinder(Of T)
+  name.vb: ActionBinder(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Actions.ActionBinder`1
+    name: ActionBinder
+    href: FastenUp.Runtime.Binders.Actions.ActionBinder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Actions.ActionBinder`1
+    name: ActionBinder
+    href: FastenUp.Runtime.Binders.Actions.ActionBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: FastenUp.Runtime.Binders.Actions
+  commentId: N:FastenUp.Runtime.Binders.Actions
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders.Actions
+  nameWithType: FastenUp.Runtime.Binders.Actions
+  fullName: FastenUp.Runtime.Binders.Actions
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.Actions
+    name: Actions
+    href: FastenUp.Runtime.Binders.Actions.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.Actions
+    name: Actions
+    href: FastenUp.Runtime.Binders.Actions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: FastenUp.Runtime.Binders.BaseBinder
+  commentId: T:FastenUp.Runtime.Binders.BaseBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.BaseBinder.html
+  name: BaseBinder
+  nameWithType: BaseBinder
+  fullName: FastenUp.Runtime.Binders.BaseBinder
+- uid: FastenUp.Runtime.Binders.Actions.BaseActionBinder{UnityEngine.Events.UnityEvent{System.Single}}
+  commentId: T:FastenUp.Runtime.Binders.Actions.BaseActionBinder{UnityEngine.Events.UnityEvent{System.Single}}
+  parent: FastenUp.Runtime.Binders.Actions
+  definition: FastenUp.Runtime.Binders.Actions.BaseActionBinder`1
+  href: FastenUp.Runtime.Binders.Actions.BaseActionBinder-1.html
+  name: BaseActionBinder<UnityEvent<float>>
+  nameWithType: BaseActionBinder<UnityEvent<float>>
+  fullName: FastenUp.Runtime.Binders.Actions.BaseActionBinder<UnityEngine.Events.UnityEvent<float>>
+  nameWithType.vb: BaseActionBinder(Of UnityEvent(Of Single))
+  fullName.vb: FastenUp.Runtime.Binders.Actions.BaseActionBinder(Of UnityEngine.Events.UnityEvent(Of Single))
+  name.vb: BaseActionBinder(Of UnityEvent(Of Single))
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Actions.BaseActionBinder`1
+    name: BaseActionBinder
+    href: FastenUp.Runtime.Binders.Actions.BaseActionBinder-1.html
+  - name: <
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Actions.BaseActionBinder`1
+    name: BaseActionBinder
+    href: FastenUp.Runtime.Binders.Actions.BaseActionBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  - name: )
+- uid: FastenUp.Runtime.Binders.Actions.ActionBinder{System.Single}
+  commentId: T:FastenUp.Runtime.Binders.Actions.ActionBinder{System.Single}
+  parent: FastenUp.Runtime.Binders.Actions
+  definition: FastenUp.Runtime.Binders.Actions.ActionBinder`1
+  href: FastenUp.Runtime.Binders.Actions.ActionBinder-1.html
+  name: ActionBinder<float>
+  nameWithType: ActionBinder<float>
+  fullName: FastenUp.Runtime.Binders.Actions.ActionBinder<float>
+  nameWithType.vb: ActionBinder(Of Single)
+  fullName.vb: FastenUp.Runtime.Binders.Actions.ActionBinder(Of Single)
+  name.vb: ActionBinder(Of Single)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Actions.ActionBinder`1
+    name: ActionBinder
+    href: FastenUp.Runtime.Binders.Actions.ActionBinder-1.html
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Actions.ActionBinder`1
+    name: ActionBinder
+    href: FastenUp.Runtime.Binders.Actions.ActionBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: FastenUp.Runtime.Binders.Actions.IActionBinder{UnityEngine.Events.UnityEvent{System.Single}}
+  commentId: T:FastenUp.Runtime.Binders.Actions.IActionBinder{UnityEngine.Events.UnityEvent{System.Single}}
+  parent: FastenUp.Runtime.Binders.Actions
+  definition: FastenUp.Runtime.Binders.Actions.IActionBinder`1
+  href: FastenUp.Runtime.Binders.Actions.IActionBinder-1.html
+  name: IActionBinder<UnityEvent<float>>
+  nameWithType: IActionBinder<UnityEvent<float>>
+  fullName: FastenUp.Runtime.Binders.Actions.IActionBinder<UnityEngine.Events.UnityEvent<float>>
+  nameWithType.vb: IActionBinder(Of UnityEvent(Of Single))
+  fullName.vb: FastenUp.Runtime.Binders.Actions.IActionBinder(Of UnityEngine.Events.UnityEvent(Of Single))
+  name.vb: IActionBinder(Of UnityEvent(Of Single))
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Actions.IActionBinder`1
+    name: IActionBinder
+    href: FastenUp.Runtime.Binders.Actions.IActionBinder-1.html
+  - name: <
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: <
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Actions.IActionBinder`1
+    name: IActionBinder
+    href: FastenUp.Runtime.Binders.Actions.IActionBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.Events.UnityEvent`1
+    name: UnityEvent
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  - name: )
+- uid: FastenUp.Runtime.Binders.IBinder
+  commentId: T:FastenUp.Runtime.Binders.IBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.IBinder.html
+  name: IBinder
+  nameWithType: IBinder
+  fullName: FastenUp.Runtime.Binders.IBinder
+- uid: FastenUp.Runtime.Binders.Actions.BaseActionBinder{UnityEngine.Events.UnityEvent{System.Single}}.OnAction
+  commentId: P:FastenUp.Runtime.Binders.Actions.BaseActionBinder{UnityEngine.Events.UnityEvent{System.Single}}.OnAction
+  parent: FastenUp.Runtime.Binders.Actions.BaseActionBinder{UnityEngine.Events.UnityEvent{System.Single}}
+  definition: FastenUp.Runtime.Binders.Actions.BaseActionBinder`1.OnAction
+  href: FastenUp.Runtime.Binders.Actions.BaseActionBinder-1.html#FastenUp_Runtime_Binders_Actions_BaseActionBinder_1_OnAction
+  name: OnAction
+  nameWithType: BaseActionBinder<UnityEvent<float>>.OnAction
+  fullName: FastenUp.Runtime.Binders.Actions.BaseActionBinder<UnityEngine.Events.UnityEvent<float>>.OnAction
+  nameWithType.vb: BaseActionBinder(Of UnityEvent(Of Single)).OnAction
+  fullName.vb: FastenUp.Runtime.Binders.Actions.BaseActionBinder(Of UnityEngine.Events.UnityEvent(Of Single)).OnAction
+- uid: FastenUp.Runtime.Binders.BaseBinder.Name
+  commentId: P:FastenUp.Runtime.Binders.BaseBinder.Name
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_Name
+  name: Name
+  nameWithType: BaseBinder.Name
+  fullName: FastenUp.Runtime.Binders.BaseBinder.Name
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  commentId: E:FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnBinderChanged
+  name: OnBinderChanged
+  nameWithType: BaseBinder.OnBinderChanged
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+- uid: FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+  commentId: P:FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_IncludeOwnGameObjectInFind
+  name: IncludeOwnGameObjectInFind
+  nameWithType: BaseBinder.IncludeOwnGameObjectInFind
+  fullName: FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+- uid: FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+  commentId: M:FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_InvokeOnBinderChanged
+  name: InvokeOnBinderChanged()
+  nameWithType: BaseBinder.InvokeOnBinderChanged()
+  fullName: FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged()
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+    name: InvokeOnBinderChanged
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_InvokeOnBinderChanged
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+    name: InvokeOnBinderChanged
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_InvokeOnBinderChanged
+  - name: (
+  - name: )
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnEnable
+  commentId: M:FastenUp.Runtime.Binders.BaseBinder.OnEnable
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnEnable
+  name: OnEnable()
+  nameWithType: BaseBinder.OnEnable()
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnEnable()
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.OnEnable
+    name: OnEnable
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnEnable
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.OnEnable
+    name: OnEnable
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnEnable
+  - name: (
+  - name: )
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnDisable
+  commentId: M:FastenUp.Runtime.Binders.BaseBinder.OnDisable
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnDisable
+  name: OnDisable()
+  nameWithType: BaseBinder.OnDisable()
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnDisable()
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.OnDisable
+    name: OnDisable
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnDisable
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.OnDisable
+    name: OnDisable
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnDisable
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: FastenUp.Runtime.Binders
+  commentId: N:FastenUp.Runtime.Binders
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders
+  nameWithType: FastenUp.Runtime.Binders
+  fullName: FastenUp.Runtime.Binders
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+- uid: FastenUp.Runtime.Binders.Actions.BaseActionBinder`1
+  commentId: T:FastenUp.Runtime.Binders.Actions.BaseActionBinder`1
+  href: FastenUp.Runtime.Binders.Actions.BaseActionBinder-1.html
+  name: BaseActionBinder<T>
+  nameWithType: BaseActionBinder<T>
+  fullName: FastenUp.Runtime.Binders.Actions.BaseActionBinder<T>
+  nameWithType.vb: BaseActionBinder(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.Actions.BaseActionBinder(Of T)
+  name.vb: BaseActionBinder(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Actions.BaseActionBinder`1
+    name: BaseActionBinder
+    href: FastenUp.Runtime.Binders.Actions.BaseActionBinder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Actions.BaseActionBinder`1
+    name: BaseActionBinder
+    href: FastenUp.Runtime.Binders.Actions.BaseActionBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders.Actions.IActionBinder`1
+  commentId: T:FastenUp.Runtime.Binders.Actions.IActionBinder`1
+  href: FastenUp.Runtime.Binders.Actions.IActionBinder-1.html
+  name: IActionBinder<T>
+  nameWithType: IActionBinder<T>
+  fullName: FastenUp.Runtime.Binders.Actions.IActionBinder<T>
+  nameWithType.vb: IActionBinder(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.Actions.IActionBinder(Of T)
+  name.vb: IActionBinder(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Actions.IActionBinder`1
+    name: IActionBinder
+    href: FastenUp.Runtime.Binders.Actions.IActionBinder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Actions.IActionBinder`1
+    name: IActionBinder
+    href: FastenUp.Runtime.Binders.Actions.IActionBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders.Actions.BaseActionBinder`1.OnAction
+  commentId: P:FastenUp.Runtime.Binders.Actions.BaseActionBinder`1.OnAction
+  href: FastenUp.Runtime.Binders.Actions.BaseActionBinder-1.html#FastenUp_Runtime_Binders_Actions_BaseActionBinder_1_OnAction
+  name: OnAction
+  nameWithType: BaseActionBinder<T>.OnAction
+  fullName: FastenUp.Runtime.Binders.Actions.BaseActionBinder<T>.OnAction
+  nameWithType.vb: BaseActionBinder(Of T).OnAction
+  fullName.vb: FastenUp.Runtime.Binders.Actions.BaseActionBinder(Of T).OnAction

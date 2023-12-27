@@ -1,0 +1,98 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Bindables.IBindable`1
+  commentId: T:FastenUp.Runtime.Bindables.IBindable`1
+  id: IBindable`1
+  parent: FastenUp.Runtime.Bindables
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IBindable<T>
+  nameWithType: IBindable<T>
+  fullName: FastenUp.Runtime.Bindables.IBindable<T>
+  type: Interface
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/IBindable.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: IBindable
+    path: ../Assets/FastenUp/Runtime/Bindables/IBindable.cs
+    startLine: 19
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  summary: Used to bind <xref href="FastenUp.Runtime.Binders.IBinder%601" data-throw-if-not-resolved="false"></xref>s to a <xref href="FastenUp.Runtime.Mediators.IMediator" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public interface IBindable<T> : IBindable'
+    typeParameters:
+    - id: T
+      description: Type of the value that will be set by the binder component
+    content.vb: Public Interface IBindable(Of T) Inherits IBindable
+  nameWithType.vb: IBindable(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindable(Of T)
+  name.vb: IBindable(Of T)
+references:
+- uid: FastenUp.Runtime.Binders.IBinder`1
+  commentId: T:FastenUp.Runtime.Binders.IBinder`1
+  href: FastenUp.Runtime.Binders.IBinder-1.html
+  name: IBinder<T>
+  nameWithType: IBinder<T>
+  fullName: FastenUp.Runtime.Binders.IBinder<T>
+  nameWithType.vb: IBinder(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.IBinder(Of T)
+  name.vb: IBinder(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Mediators.IMediator
+  commentId: T:FastenUp.Runtime.Mediators.IMediator
+  href: FastenUp.Runtime.Mediators.IMediator.html
+  name: IMediator
+  nameWithType: IMediator
+  fullName: FastenUp.Runtime.Mediators.IMediator
+- uid: FastenUp.Runtime.Bindables
+  commentId: N:FastenUp.Runtime.Bindables
+  href: FastenUp.html
+  name: FastenUp.Runtime.Bindables
+  nameWithType: FastenUp.Runtime.Bindables
+  fullName: FastenUp.Runtime.Bindables
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Bindables
+    name: Bindables
+    href: FastenUp.Runtime.Bindables.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Bindables
+    name: Bindables
+    href: FastenUp.Runtime.Bindables.html

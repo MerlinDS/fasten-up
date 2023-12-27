@@ -1,0 +1,173 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Mediators.IInternalMediator
+  commentId: T:FastenUp.Runtime.Mediators.IInternalMediator
+  id: IInternalMediator
+  parent: FastenUp.Runtime.Mediators
+  children:
+  - FastenUp.Runtime.Mediators.IInternalMediator.Bind(FastenUp.Runtime.Binders.IBinder)
+  - FastenUp.Runtime.Mediators.IInternalMediator.Unbind(FastenUp.Runtime.Binders.IBinder)
+  langs:
+  - csharp
+  - vb
+  name: IInternalMediator
+  nameWithType: IInternalMediator
+  fullName: FastenUp.Runtime.Mediators.IInternalMediator
+  type: Interface
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Mediators/IInternalMediator.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: IInternalMediator
+    path: ../Assets/FastenUp/Runtime/Mediators/IInternalMediator.cs
+    startLine: 8
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Mediators
+  summary: >-
+    Internal mediator interface for internal use only.
+
+    Source code generator will generate implementation for this interface.
+  example: []
+  syntax:
+    content: public interface IInternalMediator
+    content.vb: Public Interface IInternalMediator
+- uid: FastenUp.Runtime.Mediators.IInternalMediator.Bind(FastenUp.Runtime.Binders.IBinder)
+  commentId: M:FastenUp.Runtime.Mediators.IInternalMediator.Bind(FastenUp.Runtime.Binders.IBinder)
+  id: Bind(FastenUp.Runtime.Binders.IBinder)
+  parent: FastenUp.Runtime.Mediators.IInternalMediator
+  langs:
+  - csharp
+  - vb
+  name: Bind(IBinder)
+  nameWithType: IInternalMediator.Bind(IBinder)
+  fullName: FastenUp.Runtime.Mediators.IInternalMediator.Bind(FastenUp.Runtime.Binders.IBinder)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Mediators/IInternalMediator.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: Bind
+    path: ../Assets/FastenUp/Runtime/Mediators/IInternalMediator.cs
+    startLine: 10
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Mediators
+  syntax:
+    content: void Bind(IBinder binder)
+    parameters:
+    - id: binder
+      type: FastenUp.Runtime.Binders.IBinder
+    content.vb: Sub Bind(binder As IBinder)
+  overload: FastenUp.Runtime.Mediators.IInternalMediator.Bind*
+- uid: FastenUp.Runtime.Mediators.IInternalMediator.Unbind(FastenUp.Runtime.Binders.IBinder)
+  commentId: M:FastenUp.Runtime.Mediators.IInternalMediator.Unbind(FastenUp.Runtime.Binders.IBinder)
+  id: Unbind(FastenUp.Runtime.Binders.IBinder)
+  parent: FastenUp.Runtime.Mediators.IInternalMediator
+  langs:
+  - csharp
+  - vb
+  name: Unbind(IBinder)
+  nameWithType: IInternalMediator.Unbind(IBinder)
+  fullName: FastenUp.Runtime.Mediators.IInternalMediator.Unbind(FastenUp.Runtime.Binders.IBinder)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Mediators/IInternalMediator.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: Unbind
+    path: ../Assets/FastenUp/Runtime/Mediators/IInternalMediator.cs
+    startLine: 11
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Mediators
+  syntax:
+    content: void Unbind(IBinder binder)
+    parameters:
+    - id: binder
+      type: FastenUp.Runtime.Binders.IBinder
+    content.vb: Sub Unbind(binder As IBinder)
+  overload: FastenUp.Runtime.Mediators.IInternalMediator.Unbind*
+references:
+- uid: FastenUp.Runtime.Mediators
+  commentId: N:FastenUp.Runtime.Mediators
+  href: FastenUp.html
+  name: FastenUp.Runtime.Mediators
+  nameWithType: FastenUp.Runtime.Mediators
+  fullName: FastenUp.Runtime.Mediators
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Mediators
+    name: Mediators
+    href: FastenUp.Runtime.Mediators.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Mediators
+    name: Mediators
+    href: FastenUp.Runtime.Mediators.html
+- uid: FastenUp.Runtime.Mediators.IInternalMediator.Bind*
+  commentId: Overload:FastenUp.Runtime.Mediators.IInternalMediator.Bind
+  href: FastenUp.Runtime.Mediators.IInternalMediator.html#FastenUp_Runtime_Mediators_IInternalMediator_Bind_FastenUp_Runtime_Binders_IBinder_
+  name: Bind
+  nameWithType: IInternalMediator.Bind
+  fullName: FastenUp.Runtime.Mediators.IInternalMediator.Bind
+- uid: FastenUp.Runtime.Binders.IBinder
+  commentId: T:FastenUp.Runtime.Binders.IBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.IBinder.html
+  name: IBinder
+  nameWithType: IBinder
+  fullName: FastenUp.Runtime.Binders.IBinder
+- uid: FastenUp.Runtime.Binders
+  commentId: N:FastenUp.Runtime.Binders
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders
+  nameWithType: FastenUp.Runtime.Binders
+  fullName: FastenUp.Runtime.Binders
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+- uid: FastenUp.Runtime.Mediators.IInternalMediator.Unbind*
+  commentId: Overload:FastenUp.Runtime.Mediators.IInternalMediator.Unbind
+  href: FastenUp.Runtime.Mediators.IInternalMediator.html#FastenUp_Runtime_Mediators_IInternalMediator_Unbind_FastenUp_Runtime_Binders_IBinder_
+  name: Unbind
+  nameWithType: IInternalMediator.Unbind
+  fullName: FastenUp.Runtime.Mediators.IInternalMediator.Unbind

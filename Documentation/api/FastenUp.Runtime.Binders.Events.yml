@@ -1,0 +1,49 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Binders.Events
+  commentId: N:FastenUp.Runtime.Binders.Events
+  id: FastenUp.Runtime.Binders.Events
+  children:
+  - FastenUp.Runtime.Binders.Events.ButtonBinder
+  - FastenUp.Runtime.Binders.Events.IEventBinder`1
+  langs:
+  - csharp
+  - vb
+  name: FastenUp.Runtime.Binders.Events
+  nameWithType: FastenUp.Runtime.Binders.Events
+  fullName: FastenUp.Runtime.Binders.Events
+  type: Namespace
+  assemblies:
+  - FastenUp.Runtime
+references:
+- uid: FastenUp.Runtime.Binders.Events.IEventBinder`1
+  commentId: T:FastenUp.Runtime.Binders.Events.IEventBinder`1
+  href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html
+  name: IEventBinder<T>
+  nameWithType: IEventBinder<T>
+  fullName: FastenUp.Runtime.Binders.Events.IEventBinder<T>
+  nameWithType.vb: IEventBinder(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.Events.IEventBinder(Of T)
+  name.vb: IEventBinder(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Events.IEventBinder`1
+    name: IEventBinder
+    href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Events.IEventBinder`1
+    name: IEventBinder
+    href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders.Events.ButtonBinder
+  commentId: T:FastenUp.Runtime.Binders.Events.ButtonBinder
+  href: FastenUp.Runtime.Binders.Events.ButtonBinder.html
+  name: ButtonBinder
+  nameWithType: ButtonBinder
+  fullName: FastenUp.Runtime.Binders.Events.ButtonBinder

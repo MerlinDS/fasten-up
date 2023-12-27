@@ -1,0 +1,92 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Bindables.IBindableCollection`1
+  commentId: T:FastenUp.Runtime.Bindables.IBindableCollection`1
+  id: IBindableCollection`1
+  parent: FastenUp.Runtime.Bindables
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IBindableCollection<T>
+  nameWithType: IBindableCollection<T>
+  fullName: FastenUp.Runtime.Bindables.IBindableCollection<T>
+  type: Interface
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/IBindableCollection.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: IBindableCollection
+    path: ../Assets/FastenUp/Runtime/Bindables/IBindableCollection.cs
+    startLine: 8
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  summary: Represents a collection of objects that can be individually bound to a <xref href="FastenUp.Runtime.Binders.Collections.ICollectionBinder%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public interface IBindableCollection<out T> : IBindable'
+    typeParameters:
+    - id: T
+      description: The type of elements in the collection.
+    content.vb: Public Interface IBindableCollection(Of Out T) Inherits IBindable
+  nameWithType.vb: IBindableCollection(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableCollection(Of T)
+  name.vb: IBindableCollection(Of T)
+references:
+- uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+  commentId: T:FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+  href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html
+  name: ICollectionBinder<T>
+  nameWithType: ICollectionBinder<T>
+  fullName: FastenUp.Runtime.Binders.Collections.ICollectionBinder<T>
+  nameWithType.vb: ICollectionBinder(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.Collections.ICollectionBinder(Of T)
+  name.vb: ICollectionBinder(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+    name: ICollectionBinder
+    href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+    name: ICollectionBinder
+    href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables
+  commentId: N:FastenUp.Runtime.Bindables
+  href: FastenUp.html
+  name: FastenUp.Runtime.Bindables
+  nameWithType: FastenUp.Runtime.Bindables
+  fullName: FastenUp.Runtime.Bindables
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Bindables
+    name: Bindables
+    href: FastenUp.Runtime.Bindables.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Bindables
+    name: Bindables
+    href: FastenUp.Runtime.Bindables.html

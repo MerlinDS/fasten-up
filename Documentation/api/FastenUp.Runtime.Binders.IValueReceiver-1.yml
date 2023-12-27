@@ -1,0 +1,144 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Binders.IValueReceiver`1
+  commentId: T:FastenUp.Runtime.Binders.IValueReceiver`1
+  id: IValueReceiver`1
+  parent: FastenUp.Runtime.Binders
+  children:
+  - FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+  langs:
+  - csharp
+  - vb
+  name: IValueReceiver<T>
+  nameWithType: IValueReceiver<T>
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<T>
+  type: Interface
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/IValueReceiver.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: IValueReceiver
+    path: ../Assets/FastenUp/Runtime/Binders/IValueReceiver.cs
+    startLine: 6
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders
+  summary: Binder that can receive a value.
+  example: []
+  syntax:
+    content: 'public interface IValueReceiver<T> : IBinder<T>, IBinder'
+    typeParameters:
+    - id: T
+      description: Type of the value that will be set by the binder component
+    content.vb: Public Interface IValueReceiver(Of T) Inherits IBinder(Of T), IBinder
+  inheritedMembers:
+  - FastenUp.Runtime.Binders.IBinder.Name
+  - FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+  nameWithType.vb: IValueReceiver(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of T)
+  name.vb: IValueReceiver(Of T)
+- uid: FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+  commentId: M:FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+  id: SetValue(`0)
+  parent: FastenUp.Runtime.Binders.IValueReceiver`1
+  langs:
+  - csharp
+  - vb
+  name: SetValue(T)
+  nameWithType: IValueReceiver<T>.SetValue(T)
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<T>.SetValue(T)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/IValueReceiver.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: SetValue
+    path: ../Assets/FastenUp/Runtime/Binders/IValueReceiver.cs
+    startLine: 12
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders
+  summary: Sets the value to the binder.
+  example: []
+  syntax:
+    content: void SetValue(T value)
+    parameters:
+    - id: value
+      type: '{T}'
+      description: The value that will be set to the binder.
+    content.vb: Sub SetValue(value As T)
+  overload: FastenUp.Runtime.Binders.IValueReceiver`1.SetValue*
+  nameWithType.vb: IValueReceiver(Of T).SetValue(T)
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of T).SetValue(T)
+references:
+- uid: FastenUp.Runtime.Binders
+  commentId: N:FastenUp.Runtime.Binders
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders
+  nameWithType: FastenUp.Runtime.Binders
+  fullName: FastenUp.Runtime.Binders
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+- uid: FastenUp.Runtime.Binders.IBinder.Name
+  commentId: P:FastenUp.Runtime.Binders.IBinder.Name
+  parent: FastenUp.Runtime.Binders.IBinder
+  href: FastenUp.Runtime.Binders.IBinder.html#FastenUp_Runtime_Binders_IBinder_Name
+  name: Name
+  nameWithType: IBinder.Name
+  fullName: FastenUp.Runtime.Binders.IBinder.Name
+- uid: FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+  commentId: E:FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+  parent: FastenUp.Runtime.Binders.IBinder
+  href: FastenUp.Runtime.Binders.IBinder.html#FastenUp_Runtime_Binders_IBinder_OnBinderChanged
+  name: OnBinderChanged
+  nameWithType: IBinder.OnBinderChanged
+  fullName: FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+- uid: FastenUp.Runtime.Binders.IBinder
+  commentId: T:FastenUp.Runtime.Binders.IBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.IBinder.html
+  name: IBinder
+  nameWithType: IBinder
+  fullName: FastenUp.Runtime.Binders.IBinder
+- uid: FastenUp.Runtime.Binders.IValueReceiver`1.SetValue*
+  commentId: Overload:FastenUp.Runtime.Binders.IValueReceiver`1.SetValue
+  href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  name: SetValue
+  nameWithType: IValueReceiver<T>.SetValue
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<T>.SetValue
+  nameWithType.vb: IValueReceiver(Of T).SetValue
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of T).SetValue
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

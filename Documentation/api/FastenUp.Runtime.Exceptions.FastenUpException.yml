@@ -1,0 +1,178 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Exceptions.FastenUpException
+  commentId: T:FastenUp.Runtime.Exceptions.FastenUpException
+  id: FastenUpException
+  parent: FastenUp.Runtime.Exceptions
+  children:
+  - FastenUp.Runtime.Exceptions.FastenUpException.#ctor(System.String)
+  - FastenUp.Runtime.Exceptions.FastenUpException.#ctor(System.String,System.Exception)
+  langs:
+  - csharp
+  - vb
+  name: FastenUpException
+  nameWithType: FastenUpException
+  fullName: FastenUp.Runtime.Exceptions.FastenUpException
+  type: Class
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Exceptions/FastenUpException.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: FastenUpException
+    path: ../Assets/FastenUp/Runtime/Exceptions/FastenUpException.cs
+    startLine: 4
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Exceptions
+  syntax:
+    content: 'public class FastenUpException : Exception'
+    content.vb: Public Class FastenUpException Inherits Exception
+  inheritance:
+  - System.Object
+  - System.Exception
+- uid: FastenUp.Runtime.Exceptions.FastenUpException.#ctor(System.String)
+  commentId: M:FastenUp.Runtime.Exceptions.FastenUpException.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: FastenUp.Runtime.Exceptions.FastenUpException
+  langs:
+  - csharp
+  - vb
+  name: FastenUpException(string)
+  nameWithType: FastenUpException.FastenUpException(string)
+  fullName: FastenUp.Runtime.Exceptions.FastenUpException.FastenUpException(string)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Exceptions/FastenUpException.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: .ctor
+    path: ../Assets/FastenUp/Runtime/Exceptions/FastenUpException.cs
+    startLine: 7
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Exceptions
+  example: []
+  syntax:
+    content: public FastenUpException(string message)
+    parameters:
+    - id: message
+      type: System.String
+    content.vb: Public Sub New(message As String)
+  overload: FastenUp.Runtime.Exceptions.FastenUpException.#ctor*
+  nameWithType.vb: FastenUpException.New(String)
+  fullName.vb: FastenUp.Runtime.Exceptions.FastenUpException.New(String)
+  name.vb: New(String)
+- uid: FastenUp.Runtime.Exceptions.FastenUpException.#ctor(System.String,System.Exception)
+  commentId: M:FastenUp.Runtime.Exceptions.FastenUpException.#ctor(System.String,System.Exception)
+  id: '#ctor(System.String,System.Exception)'
+  parent: FastenUp.Runtime.Exceptions.FastenUpException
+  langs:
+  - csharp
+  - vb
+  name: FastenUpException(string, Exception)
+  nameWithType: FastenUpException.FastenUpException(string, Exception)
+  fullName: FastenUp.Runtime.Exceptions.FastenUpException.FastenUpException(string, System.Exception)
+  type: Constructor
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Exceptions/FastenUpException.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: .ctor
+    path: ../Assets/FastenUp/Runtime/Exceptions/FastenUpException.cs
+    startLine: 12
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Exceptions
+  example: []
+  syntax:
+    content: public FastenUpException(string message, Exception innerException)
+    parameters:
+    - id: message
+      type: System.String
+    - id: innerException
+      type: System.Exception
+    content.vb: Public Sub New(message As String, innerException As Exception)
+  overload: FastenUp.Runtime.Exceptions.FastenUpException.#ctor*
+  nameWithType.vb: FastenUpException.New(String, Exception)
+  fullName.vb: FastenUp.Runtime.Exceptions.FastenUpException.New(String, System.Exception)
+  name.vb: New(String, Exception)
+references:
+- uid: FastenUp.Runtime.Exceptions
+  commentId: N:FastenUp.Runtime.Exceptions
+  href: FastenUp.html
+  name: FastenUp.Runtime.Exceptions
+  nameWithType: FastenUp.Runtime.Exceptions
+  fullName: FastenUp.Runtime.Exceptions
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Exceptions
+    name: Exceptions
+    href: FastenUp.Runtime.Exceptions.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Exceptions
+    name: Exceptions
+    href: FastenUp.Runtime.Exceptions.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: FastenUp.Runtime.Exceptions.FastenUpException.#ctor*
+  commentId: Overload:FastenUp.Runtime.Exceptions.FastenUpException.#ctor
+  href: FastenUp.Runtime.Exceptions.FastenUpException.html#FastenUp_Runtime_Exceptions_FastenUpException__ctor_System_String_
+  name: FastenUpException
+  nameWithType: FastenUpException.FastenUpException
+  fullName: FastenUp.Runtime.Exceptions.FastenUpException.FastenUpException
+  nameWithType.vb: FastenUpException.New
+  fullName.vb: FastenUp.Runtime.Exceptions.FastenUpException.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

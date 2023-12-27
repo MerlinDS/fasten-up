@@ -1,0 +1,197 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Binders.IBinder
+  commentId: T:FastenUp.Runtime.Binders.IBinder
+  id: IBinder
+  parent: FastenUp.Runtime.Binders
+  children:
+  - FastenUp.Runtime.Binders.IBinder.Name
+  - FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+  langs:
+  - csharp
+  - vb
+  name: IBinder
+  nameWithType: IBinder
+  fullName: FastenUp.Runtime.Binders.IBinder
+  type: Interface
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/IBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: IBinder
+    path: ../Assets/FastenUp/Runtime/Binders/IBinder.cs
+    startLine: 8
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders
+  summary: Binder is a component that can be bind to the bindable property in the <xref href="FastenUp.Runtime.Mediators.IMediator" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: public interface IBinder
+    content.vb: Public Interface IBinder
+- uid: FastenUp.Runtime.Binders.IBinder.Name
+  commentId: P:FastenUp.Runtime.Binders.IBinder.Name
+  id: Name
+  parent: FastenUp.Runtime.Binders.IBinder
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: IBinder.Name
+  fullName: FastenUp.Runtime.Binders.IBinder.Name
+  type: Property
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/IBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: Name
+    path: ../Assets/FastenUp/Runtime/Binders/IBinder.cs
+    startLine: 17
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders
+  summary: The name of the bindable property in the <xref href="FastenUp.Runtime.Mediators.IMediator" data-throw-if-not-resolved="false"></xref>.
+  remarks: >-
+    If the name is empty, the binder will ignore the binding and log an error.
+
+    To ignore the binding without logging an error, set the name that starts with the # symbol.
+  example: []
+  syntax:
+    content: string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: ReadOnly Property Name As String
+  overload: FastenUp.Runtime.Binders.IBinder.Name*
+- uid: FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+  commentId: E:FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+  id: OnBinderChanged
+  parent: FastenUp.Runtime.Binders.IBinder
+  langs:
+  - csharp
+  - vb
+  name: OnBinderChanged
+  nameWithType: IBinder.OnBinderChanged
+  fullName: FastenUp.Runtime.Binders.IBinder.OnBinderChanged
+  type: Event
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/IBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: OnBinderChanged
+    path: ../Assets/FastenUp/Runtime/Binders/IBinder.cs
+    startLine: 23
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders
+  summary: >-
+    The event will be invoked when the binder is changed somehow (For example, when the value is changed).
+
+    Value in the event is the binder that was changed.
+  example: []
+  syntax:
+    content: event OnBinderChanged OnBinderChanged
+    return:
+      type: FastenUp.Runtime.Delegates.OnBinderChanged
+    content.vb: Event OnBinderChanged As OnBinderChanged
+references:
+- uid: FastenUp.Runtime.Mediators.IMediator
+  commentId: T:FastenUp.Runtime.Mediators.IMediator
+  href: FastenUp.Runtime.Mediators.IMediator.html
+  name: IMediator
+  nameWithType: IMediator
+  fullName: FastenUp.Runtime.Mediators.IMediator
+- uid: FastenUp.Runtime.Binders
+  commentId: N:FastenUp.Runtime.Binders
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders
+  nameWithType: FastenUp.Runtime.Binders
+  fullName: FastenUp.Runtime.Binders
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+- uid: FastenUp.Runtime.Binders.IBinder.Name*
+  commentId: Overload:FastenUp.Runtime.Binders.IBinder.Name
+  href: FastenUp.Runtime.Binders.IBinder.html#FastenUp_Runtime_Binders_IBinder_Name
+  name: Name
+  nameWithType: IBinder.Name
+  fullName: FastenUp.Runtime.Binders.IBinder.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: FastenUp.Runtime.Delegates.OnBinderChanged
+  commentId: T:FastenUp.Runtime.Delegates.OnBinderChanged
+  parent: FastenUp.Runtime.Delegates
+  href: FastenUp.Runtime.Delegates.OnBinderChanged.html
+  name: OnBinderChanged
+  nameWithType: OnBinderChanged
+  fullName: FastenUp.Runtime.Delegates.OnBinderChanged
+- uid: FastenUp.Runtime.Delegates
+  commentId: N:FastenUp.Runtime.Delegates
+  href: FastenUp.html
+  name: FastenUp.Runtime.Delegates
+  nameWithType: FastenUp.Runtime.Delegates
+  fullName: FastenUp.Runtime.Delegates
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Delegates
+    name: Delegates
+    href: FastenUp.Runtime.Delegates.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Delegates
+    name: Delegates
+    href: FastenUp.Runtime.Delegates.html

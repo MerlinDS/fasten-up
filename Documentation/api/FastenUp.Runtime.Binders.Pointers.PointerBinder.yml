@@ -1,0 +1,918 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Binders.Pointers.PointerBinder
+  commentId: T:FastenUp.Runtime.Binders.Pointers.PointerBinder
+  id: PointerBinder
+  parent: FastenUp.Runtime.Binders.Pointers
+  children:
+  - FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener(UnityEngine.Events.UnityAction)
+  - FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})
+  - FastenUp.Runtime.Binders.Pointers.PointerBinder.OnDisable
+  - FastenUp.Runtime.Binders.Pointers.PointerBinder.OnPointerEvent(UnityEngine.EventSystems.PointerEventData)
+  - FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener(UnityEngine.Events.UnityAction)
+  - FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})
+  langs:
+  - csharp
+  - vb
+  name: PointerBinder
+  nameWithType: PointerBinder
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerBinder
+  type: Class
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Pointers/PointerBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: PointerBinder
+    path: ../Assets/FastenUp/Runtime/Binders/Pointers/PointerBinder.cs
+    startLine: 6
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Pointers
+  syntax:
+    content: 'public abstract class PointerBinder : BaseBinder, IEventBinder<UnityAction>, IEventBinder<UnityAction<PointerEventData>>, IBinder'
+    content.vb: Public MustInherit Class PointerBinder Inherits BaseBinder Implements IEventBinder(Of UnityAction), IEventBinder(Of UnityAction(Of PointerEventData)), IBinder
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - FastenUp.Runtime.Binders.BaseBinder
+  derivedClasses:
+  - FastenUp.Runtime.Binders.Pointers.PointerClickBinder
+  - FastenUp.Runtime.Binders.Pointers.PointerDownBinder
+  - FastenUp.Runtime.Binders.Pointers.PointerEnterBinder
+  - FastenUp.Runtime.Binders.Pointers.PointerExitBinder
+  - FastenUp.Runtime.Binders.Pointers.PointerMoveBinder
+  - FastenUp.Runtime.Binders.Pointers.PointerUpBinder
+  implements:
+  - FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction}
+  - FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData}}
+  - FastenUp.Runtime.Binders.IBinder
+  inheritedMembers:
+  - FastenUp.Runtime.Binders.BaseBinder.Name
+  - FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  - FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+  - FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+  - FastenUp.Runtime.Binders.BaseBinder.OnEnable
+- uid: FastenUp.Runtime.Binders.Pointers.PointerBinder.OnPointerEvent(UnityEngine.EventSystems.PointerEventData)
+  commentId: M:FastenUp.Runtime.Binders.Pointers.PointerBinder.OnPointerEvent(UnityEngine.EventSystems.PointerEventData)
+  id: OnPointerEvent(UnityEngine.EventSystems.PointerEventData)
+  parent: FastenUp.Runtime.Binders.Pointers.PointerBinder
+  langs:
+  - csharp
+  - vb
+  name: OnPointerEvent(PointerEventData)
+  nameWithType: PointerBinder.OnPointerEvent(PointerEventData)
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerBinder.OnPointerEvent(UnityEngine.EventSystems.PointerEventData)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Pointers/PointerBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: OnPointerEvent
+    path: ../Assets/FastenUp/Runtime/Binders/Pointers/PointerBinder.cs
+    startLine: 13
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Pointers
+  syntax:
+    content: protected void OnPointerEvent(PointerEventData eventData)
+    parameters:
+    - id: eventData
+      type: UnityEngine.EventSystems.PointerEventData
+    content.vb: Protected Sub OnPointerEvent(eventData As PointerEventData)
+  overload: FastenUp.Runtime.Binders.Pointers.PointerBinder.OnPointerEvent*
+- uid: FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener(UnityEngine.Events.UnityAction)
+  commentId: M:FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener(UnityEngine.Events.UnityAction)
+  id: AddListener(UnityEngine.Events.UnityAction)
+  parent: FastenUp.Runtime.Binders.Pointers.PointerBinder
+  langs:
+  - csharp
+  - vb
+  name: AddListener(UnityAction)
+  nameWithType: PointerBinder.AddListener(UnityAction)
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener(UnityEngine.Events.UnityAction)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Pointers/PointerBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: AddListener
+    path: ../Assets/FastenUp/Runtime/Binders/Pointers/PointerBinder.cs
+    startLine: 20
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Pointers
+  example: []
+  syntax:
+    content: public void AddListener(UnityAction action)
+    parameters:
+    - id: action
+      type: UnityEngine.Events.UnityAction
+    content.vb: Public Sub AddListener(action As UnityAction)
+  overload: FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener*
+  implements:
+  - FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction}.AddListener(UnityEngine.Events.UnityAction)
+- uid: FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener(UnityEngine.Events.UnityAction)
+  commentId: M:FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener(UnityEngine.Events.UnityAction)
+  id: RemoveListener(UnityEngine.Events.UnityAction)
+  parent: FastenUp.Runtime.Binders.Pointers.PointerBinder
+  langs:
+  - csharp
+  - vb
+  name: RemoveListener(UnityAction)
+  nameWithType: PointerBinder.RemoveListener(UnityAction)
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener(UnityEngine.Events.UnityAction)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Pointers/PointerBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: RemoveListener
+    path: ../Assets/FastenUp/Runtime/Binders/Pointers/PointerBinder.cs
+    startLine: 27
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Pointers
+  example: []
+  syntax:
+    content: public void RemoveListener(UnityAction action)
+    parameters:
+    - id: action
+      type: UnityEngine.Events.UnityAction
+    content.vb: Public Sub RemoveListener(action As UnityAction)
+  overload: FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener*
+  implements:
+  - FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction}.RemoveListener(UnityEngine.Events.UnityAction)
+- uid: FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})
+  commentId: M:FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})
+  id: AddListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})
+  parent: FastenUp.Runtime.Binders.Pointers.PointerBinder
+  langs:
+  - csharp
+  - vb
+  name: AddListener(UnityAction<PointerEventData>)
+  nameWithType: PointerBinder.AddListener(UnityAction<PointerEventData>)
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener(UnityEngine.Events.UnityAction<UnityEngine.EventSystems.PointerEventData>)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Pointers/PointerBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: AddListener
+    path: ../Assets/FastenUp/Runtime/Binders/Pointers/PointerBinder.cs
+    startLine: 34
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Pointers
+  example: []
+  syntax:
+    content: public void AddListener(UnityAction<PointerEventData> action)
+    parameters:
+    - id: action
+      type: UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData}
+    content.vb: Public Sub AddListener(action As UnityAction(Of PointerEventData))
+  overload: FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener*
+  implements:
+  - FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData}}.AddListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})
+  nameWithType.vb: PointerBinder.AddListener(UnityAction(Of PointerEventData))
+  fullName.vb: FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener(UnityEngine.Events.UnityAction(Of UnityEngine.EventSystems.PointerEventData))
+  name.vb: AddListener(UnityAction(Of PointerEventData))
+- uid: FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})
+  commentId: M:FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})
+  id: RemoveListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})
+  parent: FastenUp.Runtime.Binders.Pointers.PointerBinder
+  langs:
+  - csharp
+  - vb
+  name: RemoveListener(UnityAction<PointerEventData>)
+  nameWithType: PointerBinder.RemoveListener(UnityAction<PointerEventData>)
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener(UnityEngine.Events.UnityAction<UnityEngine.EventSystems.PointerEventData>)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Pointers/PointerBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: RemoveListener
+    path: ../Assets/FastenUp/Runtime/Binders/Pointers/PointerBinder.cs
+    startLine: 41
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Pointers
+  example: []
+  syntax:
+    content: public void RemoveListener(UnityAction<PointerEventData> action)
+    parameters:
+    - id: action
+      type: UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData}
+    content.vb: Public Sub RemoveListener(action As UnityAction(Of PointerEventData))
+  overload: FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener*
+  implements:
+  - FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData}}.RemoveListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})
+  nameWithType.vb: PointerBinder.RemoveListener(UnityAction(Of PointerEventData))
+  fullName.vb: FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener(UnityEngine.Events.UnityAction(Of UnityEngine.EventSystems.PointerEventData))
+  name.vb: RemoveListener(UnityAction(Of PointerEventData))
+- uid: FastenUp.Runtime.Binders.Pointers.PointerBinder.OnDisable
+  commentId: M:FastenUp.Runtime.Binders.Pointers.PointerBinder.OnDisable
+  id: OnDisable
+  parent: FastenUp.Runtime.Binders.Pointers.PointerBinder
+  langs:
+  - csharp
+  - vb
+  name: OnDisable()
+  nameWithType: PointerBinder.OnDisable()
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerBinder.OnDisable()
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Pointers/PointerBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: OnDisable
+    path: ../Assets/FastenUp/Runtime/Binders/Pointers/PointerBinder.cs
+    startLine: 48
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Pointers
+  example: []
+  syntax:
+    content: protected override void OnDisable()
+    content.vb: Protected Overrides Sub OnDisable()
+  overridden: FastenUp.Runtime.Binders.BaseBinder.OnDisable
+  overload: FastenUp.Runtime.Binders.Pointers.PointerBinder.OnDisable*
+references:
+- uid: FastenUp.Runtime.Binders.Pointers
+  commentId: N:FastenUp.Runtime.Binders.Pointers
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders.Pointers
+  nameWithType: FastenUp.Runtime.Binders.Pointers
+  fullName: FastenUp.Runtime.Binders.Pointers
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.Pointers
+    name: Pointers
+    href: FastenUp.Runtime.Binders.Pointers.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.Pointers
+    name: Pointers
+    href: FastenUp.Runtime.Binders.Pointers.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: FastenUp.Runtime.Binders.BaseBinder
+  commentId: T:FastenUp.Runtime.Binders.BaseBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.BaseBinder.html
+  name: BaseBinder
+  nameWithType: BaseBinder
+  fullName: FastenUp.Runtime.Binders.BaseBinder
+- uid: FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction}
+  commentId: T:FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction}
+  parent: FastenUp.Runtime.Binders.Events
+  definition: FastenUp.Runtime.Binders.Events.IEventBinder`1
+  href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html
+  name: IEventBinder<UnityAction>
+  nameWithType: IEventBinder<UnityAction>
+  fullName: FastenUp.Runtime.Binders.Events.IEventBinder<UnityEngine.Events.UnityAction>
+  nameWithType.vb: IEventBinder(Of UnityAction)
+  fullName.vb: FastenUp.Runtime.Binders.Events.IEventBinder(Of UnityEngine.Events.UnityAction)
+  name.vb: IEventBinder(Of UnityAction)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Events.IEventBinder`1
+    name: IEventBinder
+    href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html
+  - name: <
+  - uid: UnityEngine.Events.UnityAction
+    name: UnityAction
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Events.IEventBinder`1
+    name: IEventBinder
+    href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.Events.UnityAction
+    name: UnityAction
+    isExternal: true
+  - name: )
+- uid: FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData}}
+  commentId: T:FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData}}
+  parent: FastenUp.Runtime.Binders.Events
+  definition: FastenUp.Runtime.Binders.Events.IEventBinder`1
+  href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html
+  name: IEventBinder<UnityAction<PointerEventData>>
+  nameWithType: IEventBinder<UnityAction<PointerEventData>>
+  fullName: FastenUp.Runtime.Binders.Events.IEventBinder<UnityEngine.Events.UnityAction<UnityEngine.EventSystems.PointerEventData>>
+  nameWithType.vb: IEventBinder(Of UnityAction(Of PointerEventData))
+  fullName.vb: FastenUp.Runtime.Binders.Events.IEventBinder(Of UnityEngine.Events.UnityAction(Of UnityEngine.EventSystems.PointerEventData))
+  name.vb: IEventBinder(Of UnityAction(Of PointerEventData))
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Events.IEventBinder`1
+    name: IEventBinder
+    href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html
+  - name: <
+  - uid: UnityEngine.Events.UnityAction`1
+    name: UnityAction
+    isExternal: true
+  - name: <
+  - uid: UnityEngine.EventSystems.PointerEventData
+    name: PointerEventData
+    isExternal: true
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Events.IEventBinder`1
+    name: IEventBinder
+    href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.Events.UnityAction`1
+    name: UnityAction
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.EventSystems.PointerEventData
+    name: PointerEventData
+    isExternal: true
+  - name: )
+  - name: )
+- uid: FastenUp.Runtime.Binders.IBinder
+  commentId: T:FastenUp.Runtime.Binders.IBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.IBinder.html
+  name: IBinder
+  nameWithType: IBinder
+  fullName: FastenUp.Runtime.Binders.IBinder
+- uid: FastenUp.Runtime.Binders.BaseBinder.Name
+  commentId: P:FastenUp.Runtime.Binders.BaseBinder.Name
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_Name
+  name: Name
+  nameWithType: BaseBinder.Name
+  fullName: FastenUp.Runtime.Binders.BaseBinder.Name
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  commentId: E:FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnBinderChanged
+  name: OnBinderChanged
+  nameWithType: BaseBinder.OnBinderChanged
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+- uid: FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+  commentId: P:FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_IncludeOwnGameObjectInFind
+  name: IncludeOwnGameObjectInFind
+  nameWithType: BaseBinder.IncludeOwnGameObjectInFind
+  fullName: FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+- uid: FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+  commentId: M:FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_InvokeOnBinderChanged
+  name: InvokeOnBinderChanged()
+  nameWithType: BaseBinder.InvokeOnBinderChanged()
+  fullName: FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged()
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+    name: InvokeOnBinderChanged
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_InvokeOnBinderChanged
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+    name: InvokeOnBinderChanged
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_InvokeOnBinderChanged
+  - name: (
+  - name: )
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnEnable
+  commentId: M:FastenUp.Runtime.Binders.BaseBinder.OnEnable
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnEnable
+  name: OnEnable()
+  nameWithType: BaseBinder.OnEnable()
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnEnable()
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.OnEnable
+    name: OnEnable
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnEnable
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.OnEnable
+    name: OnEnable
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnEnable
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: FastenUp.Runtime.Binders
+  commentId: N:FastenUp.Runtime.Binders
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders
+  nameWithType: FastenUp.Runtime.Binders
+  fullName: FastenUp.Runtime.Binders
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+- uid: FastenUp.Runtime.Binders.Events.IEventBinder`1
+  commentId: T:FastenUp.Runtime.Binders.Events.IEventBinder`1
+  href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html
+  name: IEventBinder<T>
+  nameWithType: IEventBinder<T>
+  fullName: FastenUp.Runtime.Binders.Events.IEventBinder<T>
+  nameWithType.vb: IEventBinder(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.Events.IEventBinder(Of T)
+  name.vb: IEventBinder(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Events.IEventBinder`1
+    name: IEventBinder
+    href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Events.IEventBinder`1
+    name: IEventBinder
+    href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders.Events
+  commentId: N:FastenUp.Runtime.Binders.Events
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders.Events
+  nameWithType: FastenUp.Runtime.Binders.Events
+  fullName: FastenUp.Runtime.Binders.Events
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.Events
+    name: Events
+    href: FastenUp.Runtime.Binders.Events.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.Events
+    name: Events
+    href: FastenUp.Runtime.Binders.Events.html
+- uid: FastenUp.Runtime.Binders.Pointers.PointerBinder.OnPointerEvent*
+  commentId: Overload:FastenUp.Runtime.Binders.Pointers.PointerBinder.OnPointerEvent
+  href: FastenUp.Runtime.Binders.Pointers.PointerBinder.html#FastenUp_Runtime_Binders_Pointers_PointerBinder_OnPointerEvent_UnityEngine_EventSystems_PointerEventData_
+  name: OnPointerEvent
+  nameWithType: PointerBinder.OnPointerEvent
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerBinder.OnPointerEvent
+- uid: UnityEngine.EventSystems.PointerEventData
+  commentId: T:UnityEngine.EventSystems.PointerEventData
+  parent: UnityEngine.EventSystems
+  isExternal: true
+  name: PointerEventData
+  nameWithType: PointerEventData
+  fullName: UnityEngine.EventSystems.PointerEventData
+- uid: UnityEngine.EventSystems
+  commentId: N:UnityEngine.EventSystems
+  isExternal: true
+  name: UnityEngine.EventSystems
+  nameWithType: UnityEngine.EventSystems
+  fullName: UnityEngine.EventSystems
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.EventSystems
+    name: EventSystems
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.EventSystems
+    name: EventSystems
+    isExternal: true
+- uid: FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener*
+  commentId: Overload:FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener
+  href: FastenUp.Runtime.Binders.Pointers.PointerBinder.html#FastenUp_Runtime_Binders_Pointers_PointerBinder_AddListener_UnityEngine_Events_UnityAction_
+  name: AddListener
+  nameWithType: PointerBinder.AddListener
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerBinder.AddListener
+- uid: FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction}.AddListener(UnityEngine.Events.UnityAction)
+  commentId: M:FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction}.AddListener(UnityEngine.Events.UnityAction)
+  parent: FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction}
+  definition: FastenUp.Runtime.Binders.Events.IEventBinder`1.AddListener(`0)
+  href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html#FastenUp_Runtime_Binders_Events_IEventBinder_1_AddListener__0_
+  name: AddListener(UnityAction)
+  nameWithType: IEventBinder<UnityAction>.AddListener(UnityAction)
+  fullName: FastenUp.Runtime.Binders.Events.IEventBinder<UnityEngine.Events.UnityAction>.AddListener(UnityEngine.Events.UnityAction)
+  nameWithType.vb: IEventBinder(Of UnityAction).AddListener(UnityAction)
+  fullName.vb: FastenUp.Runtime.Binders.Events.IEventBinder(Of UnityEngine.Events.UnityAction).AddListener(UnityEngine.Events.UnityAction)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction}.AddListener(UnityEngine.Events.UnityAction)
+    name: AddListener
+    href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html#FastenUp_Runtime_Binders_Events_IEventBinder_1_AddListener__0_
+  - name: (
+  - uid: UnityEngine.Events.UnityAction
+    name: UnityAction
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction}.AddListener(UnityEngine.Events.UnityAction)
+    name: AddListener
+    href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html#FastenUp_Runtime_Binders_Events_IEventBinder_1_AddListener__0_
+  - name: (
+  - uid: UnityEngine.Events.UnityAction
+    name: UnityAction
+    isExternal: true
+  - name: )
+- uid: UnityEngine.Events.UnityAction
+  commentId: T:UnityEngine.Events.UnityAction
+  parent: UnityEngine.Events
+  isExternal: true
+  name: UnityAction
+  nameWithType: UnityAction
+  fullName: UnityEngine.Events.UnityAction
+- uid: FastenUp.Runtime.Binders.Events.IEventBinder`1.AddListener(`0)
+  commentId: M:FastenUp.Runtime.Binders.Events.IEventBinder`1.AddListener(`0)
+  href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html#FastenUp_Runtime_Binders_Events_IEventBinder_1_AddListener__0_
+  name: AddListener(T)
+  nameWithType: IEventBinder<T>.AddListener(T)
+  fullName: FastenUp.Runtime.Binders.Events.IEventBinder<T>.AddListener(T)
+  nameWithType.vb: IEventBinder(Of T).AddListener(T)
+  fullName.vb: FastenUp.Runtime.Binders.Events.IEventBinder(Of T).AddListener(T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Events.IEventBinder`1.AddListener(`0)
+    name: AddListener
+    href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html#FastenUp_Runtime_Binders_Events_IEventBinder_1_AddListener__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Events.IEventBinder`1.AddListener(`0)
+    name: AddListener
+    href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html#FastenUp_Runtime_Binders_Events_IEventBinder_1_AddListener__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: UnityEngine.Events
+  commentId: N:UnityEngine.Events
+  isExternal: true
+  name: UnityEngine.Events
+  nameWithType: UnityEngine.Events
+  fullName: UnityEngine.Events
+  spec.csharp:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Events
+    name: Events
+    isExternal: true
+  spec.vb:
+  - uid: UnityEngine
+    name: UnityEngine
+    isExternal: true
+  - name: .
+  - uid: UnityEngine.Events
+    name: Events
+    isExternal: true
+- uid: FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener*
+  commentId: Overload:FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener
+  href: FastenUp.Runtime.Binders.Pointers.PointerBinder.html#FastenUp_Runtime_Binders_Pointers_PointerBinder_RemoveListener_UnityEngine_Events_UnityAction_
+  name: RemoveListener
+  nameWithType: PointerBinder.RemoveListener
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerBinder.RemoveListener
+- uid: FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction}.RemoveListener(UnityEngine.Events.UnityAction)
+  commentId: M:FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction}.RemoveListener(UnityEngine.Events.UnityAction)
+  parent: FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction}
+  definition: FastenUp.Runtime.Binders.Events.IEventBinder`1.RemoveListener(`0)
+  href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html#FastenUp_Runtime_Binders_Events_IEventBinder_1_RemoveListener__0_
+  name: RemoveListener(UnityAction)
+  nameWithType: IEventBinder<UnityAction>.RemoveListener(UnityAction)
+  fullName: FastenUp.Runtime.Binders.Events.IEventBinder<UnityEngine.Events.UnityAction>.RemoveListener(UnityEngine.Events.UnityAction)
+  nameWithType.vb: IEventBinder(Of UnityAction).RemoveListener(UnityAction)
+  fullName.vb: FastenUp.Runtime.Binders.Events.IEventBinder(Of UnityEngine.Events.UnityAction).RemoveListener(UnityEngine.Events.UnityAction)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction}.RemoveListener(UnityEngine.Events.UnityAction)
+    name: RemoveListener
+    href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html#FastenUp_Runtime_Binders_Events_IEventBinder_1_RemoveListener__0_
+  - name: (
+  - uid: UnityEngine.Events.UnityAction
+    name: UnityAction
+    isExternal: true
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction}.RemoveListener(UnityEngine.Events.UnityAction)
+    name: RemoveListener
+    href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html#FastenUp_Runtime_Binders_Events_IEventBinder_1_RemoveListener__0_
+  - name: (
+  - uid: UnityEngine.Events.UnityAction
+    name: UnityAction
+    isExternal: true
+  - name: )
+- uid: FastenUp.Runtime.Binders.Events.IEventBinder`1.RemoveListener(`0)
+  commentId: M:FastenUp.Runtime.Binders.Events.IEventBinder`1.RemoveListener(`0)
+  href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html#FastenUp_Runtime_Binders_Events_IEventBinder_1_RemoveListener__0_
+  name: RemoveListener(T)
+  nameWithType: IEventBinder<T>.RemoveListener(T)
+  fullName: FastenUp.Runtime.Binders.Events.IEventBinder<T>.RemoveListener(T)
+  nameWithType.vb: IEventBinder(Of T).RemoveListener(T)
+  fullName.vb: FastenUp.Runtime.Binders.Events.IEventBinder(Of T).RemoveListener(T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Events.IEventBinder`1.RemoveListener(`0)
+    name: RemoveListener
+    href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html#FastenUp_Runtime_Binders_Events_IEventBinder_1_RemoveListener__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Events.IEventBinder`1.RemoveListener(`0)
+    name: RemoveListener
+    href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html#FastenUp_Runtime_Binders_Events_IEventBinder_1_RemoveListener__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData}}.AddListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})
+  commentId: M:FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData}}.AddListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})
+  parent: FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData}}
+  definition: FastenUp.Runtime.Binders.Events.IEventBinder`1.AddListener(`0)
+  href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html#FastenUp_Runtime_Binders_Events_IEventBinder_1_AddListener__0_
+  name: AddListener(UnityAction<PointerEventData>)
+  nameWithType: IEventBinder<UnityAction<PointerEventData>>.AddListener(UnityAction<PointerEventData>)
+  fullName: FastenUp.Runtime.Binders.Events.IEventBinder<UnityEngine.Events.UnityAction<UnityEngine.EventSystems.PointerEventData>>.AddListener(UnityEngine.Events.UnityAction<UnityEngine.EventSystems.PointerEventData>)
+  nameWithType.vb: IEventBinder(Of UnityAction(Of PointerEventData)).AddListener(UnityAction(Of PointerEventData))
+  fullName.vb: FastenUp.Runtime.Binders.Events.IEventBinder(Of UnityEngine.Events.UnityAction(Of UnityEngine.EventSystems.PointerEventData)).AddListener(UnityEngine.Events.UnityAction(Of UnityEngine.EventSystems.PointerEventData))
+  name.vb: AddListener(UnityAction(Of PointerEventData))
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData}}.AddListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})
+    name: AddListener
+    href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html#FastenUp_Runtime_Binders_Events_IEventBinder_1_AddListener__0_
+  - name: (
+  - uid: UnityEngine.Events.UnityAction`1
+    name: UnityAction
+    isExternal: true
+  - name: <
+  - uid: UnityEngine.EventSystems.PointerEventData
+    name: PointerEventData
+    isExternal: true
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData}}.AddListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})
+    name: AddListener
+    href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html#FastenUp_Runtime_Binders_Events_IEventBinder_1_AddListener__0_
+  - name: (
+  - uid: UnityEngine.Events.UnityAction`1
+    name: UnityAction
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.EventSystems.PointerEventData
+    name: PointerEventData
+    isExternal: true
+  - name: )
+  - name: )
+- uid: UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData}
+  commentId: T:UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData}
+  parent: UnityEngine.Events
+  definition: UnityEngine.Events.UnityAction`1
+  name: UnityAction<PointerEventData>
+  nameWithType: UnityAction<PointerEventData>
+  fullName: UnityEngine.Events.UnityAction<UnityEngine.EventSystems.PointerEventData>
+  nameWithType.vb: UnityAction(Of PointerEventData)
+  fullName.vb: UnityEngine.Events.UnityAction(Of UnityEngine.EventSystems.PointerEventData)
+  name.vb: UnityAction(Of PointerEventData)
+  spec.csharp:
+  - uid: UnityEngine.Events.UnityAction`1
+    name: UnityAction
+    isExternal: true
+  - name: <
+  - uid: UnityEngine.EventSystems.PointerEventData
+    name: PointerEventData
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: UnityEngine.Events.UnityAction`1
+    name: UnityAction
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.EventSystems.PointerEventData
+    name: PointerEventData
+    isExternal: true
+  - name: )
+- uid: UnityEngine.Events.UnityAction`1
+  commentId: T:UnityEngine.Events.UnityAction`1
+  isExternal: true
+  name: UnityAction<T0>
+  nameWithType: UnityAction<T0>
+  fullName: UnityEngine.Events.UnityAction<T0>
+  nameWithType.vb: UnityAction(Of T0)
+  fullName.vb: UnityEngine.Events.UnityAction(Of T0)
+  name.vb: UnityAction(Of T0)
+  spec.csharp:
+  - uid: UnityEngine.Events.UnityAction`1
+    name: UnityAction
+    isExternal: true
+  - name: <
+  - name: T0
+  - name: '>'
+  spec.vb:
+  - uid: UnityEngine.Events.UnityAction`1
+    name: UnityAction
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T0
+  - name: )
+- uid: FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData}}.RemoveListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})
+  commentId: M:FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData}}.RemoveListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})
+  parent: FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData}}
+  definition: FastenUp.Runtime.Binders.Events.IEventBinder`1.RemoveListener(`0)
+  href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html#FastenUp_Runtime_Binders_Events_IEventBinder_1_RemoveListener__0_
+  name: RemoveListener(UnityAction<PointerEventData>)
+  nameWithType: IEventBinder<UnityAction<PointerEventData>>.RemoveListener(UnityAction<PointerEventData>)
+  fullName: FastenUp.Runtime.Binders.Events.IEventBinder<UnityEngine.Events.UnityAction<UnityEngine.EventSystems.PointerEventData>>.RemoveListener(UnityEngine.Events.UnityAction<UnityEngine.EventSystems.PointerEventData>)
+  nameWithType.vb: IEventBinder(Of UnityAction(Of PointerEventData)).RemoveListener(UnityAction(Of PointerEventData))
+  fullName.vb: FastenUp.Runtime.Binders.Events.IEventBinder(Of UnityEngine.Events.UnityAction(Of UnityEngine.EventSystems.PointerEventData)).RemoveListener(UnityEngine.Events.UnityAction(Of UnityEngine.EventSystems.PointerEventData))
+  name.vb: RemoveListener(UnityAction(Of PointerEventData))
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData}}.RemoveListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})
+    name: RemoveListener
+    href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html#FastenUp_Runtime_Binders_Events_IEventBinder_1_RemoveListener__0_
+  - name: (
+  - uid: UnityEngine.Events.UnityAction`1
+    name: UnityAction
+    isExternal: true
+  - name: <
+  - uid: UnityEngine.EventSystems.PointerEventData
+    name: PointerEventData
+    isExternal: true
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Events.IEventBinder{UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData}}.RemoveListener(UnityEngine.Events.UnityAction{UnityEngine.EventSystems.PointerEventData})
+    name: RemoveListener
+    href: FastenUp.Runtime.Binders.Events.IEventBinder-1.html#FastenUp_Runtime_Binders_Events_IEventBinder_1_RemoveListener__0_
+  - name: (
+  - uid: UnityEngine.Events.UnityAction`1
+    name: UnityAction
+    isExternal: true
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: UnityEngine.EventSystems.PointerEventData
+    name: PointerEventData
+    isExternal: true
+  - name: )
+  - name: )
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnDisable
+  commentId: M:FastenUp.Runtime.Binders.BaseBinder.OnDisable
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnDisable
+  name: OnDisable()
+  nameWithType: BaseBinder.OnDisable()
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnDisable()
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.OnDisable
+    name: OnDisable
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnDisable
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.OnDisable
+    name: OnDisable
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnDisable
+  - name: (
+  - name: )
+- uid: FastenUp.Runtime.Binders.Pointers.PointerBinder.OnDisable*
+  commentId: Overload:FastenUp.Runtime.Binders.Pointers.PointerBinder.OnDisable
+  href: FastenUp.Runtime.Binders.Pointers.PointerBinder.html#FastenUp_Runtime_Binders_Pointers_PointerBinder_OnDisable
+  name: OnDisable
+  nameWithType: PointerBinder.OnDisable
+  fullName: FastenUp.Runtime.Binders.Pointers.PointerBinder.OnDisable

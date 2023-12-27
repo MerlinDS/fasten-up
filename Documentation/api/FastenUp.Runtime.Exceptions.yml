@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Exceptions
+  commentId: N:FastenUp.Runtime.Exceptions
+  id: FastenUp.Runtime.Exceptions
+  children:
+  - FastenUp.Runtime.Exceptions.FastenUpException
+  langs:
+  - csharp
+  - vb
+  name: FastenUp.Runtime.Exceptions
+  nameWithType: FastenUp.Runtime.Exceptions
+  fullName: FastenUp.Runtime.Exceptions
+  type: Namespace
+  assemblies:
+  - FastenUp.Runtime
+references:
+- uid: FastenUp.Runtime.Exceptions.FastenUpException
+  commentId: T:FastenUp.Runtime.Exceptions.FastenUpException
+  href: FastenUp.Runtime.Exceptions.FastenUpException.html
+  name: FastenUpException
+  nameWithType: FastenUpException
+  fullName: FastenUp.Runtime.Exceptions.FastenUpException

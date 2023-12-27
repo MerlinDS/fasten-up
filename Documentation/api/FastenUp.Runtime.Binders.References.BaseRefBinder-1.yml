@@ -1,0 +1,413 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Binders.References.BaseRefBinder`1
+  commentId: T:FastenUp.Runtime.Binders.References.BaseRefBinder`1
+  id: BaseRefBinder`1
+  parent: FastenUp.Runtime.Binders.References
+  children:
+  - FastenUp.Runtime.Binders.References.BaseRefBinder`1.TryGetReference``1(``0@)
+  langs:
+  - csharp
+  - vb
+  name: BaseRefBinder<TRef>
+  nameWithType: BaseRefBinder<TRef>
+  fullName: FastenUp.Runtime.Binders.References.BaseRefBinder<TRef>
+  type: Class
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/References/BaseRefBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: BaseRefBinder
+    path: ../Assets/FastenUp/Runtime/Binders/References/BaseRefBinder.cs
+    startLine: 4
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.References
+  syntax:
+    content: 'public abstract class BaseRefBinder<TRef> : BaseBinder, IRefBinder, IBinder'
+    typeParameters:
+    - id: TRef
+    content.vb: Public MustInherit Class BaseRefBinder(Of TRef) Inherits BaseBinder Implements IRefBinder, IBinder
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - FastenUp.Runtime.Binders.BaseBinder
+  derivedClasses:
+  - FastenUp.Runtime.Binders.References.MediatorRefBinder
+  implements:
+  - FastenUp.Runtime.Binders.References.IRefBinder
+  - FastenUp.Runtime.Binders.IBinder
+  inheritedMembers:
+  - FastenUp.Runtime.Binders.BaseBinder.Name
+  - FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  - FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+  - FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+  - FastenUp.Runtime.Binders.BaseBinder.OnEnable
+  - FastenUp.Runtime.Binders.BaseBinder.OnDisable
+  nameWithType.vb: BaseRefBinder(Of TRef)
+  fullName.vb: FastenUp.Runtime.Binders.References.BaseRefBinder(Of TRef)
+  name.vb: BaseRefBinder(Of TRef)
+- uid: FastenUp.Runtime.Binders.References.BaseRefBinder`1.TryGetReference``1(``0@)
+  commentId: M:FastenUp.Runtime.Binders.References.BaseRefBinder`1.TryGetReference``1(``0@)
+  id: TryGetReference``1(``0@)
+  parent: FastenUp.Runtime.Binders.References.BaseRefBinder`1
+  langs:
+  - csharp
+  - vb
+  name: TryGetReference<T>(out T)
+  nameWithType: BaseRefBinder<TRef>.TryGetReference<T>(out T)
+  fullName: FastenUp.Runtime.Binders.References.BaseRefBinder<TRef>.TryGetReference<T>(out T)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/References/BaseRefBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: TryGetReference
+    path: ../Assets/FastenUp/Runtime/Binders/References/BaseRefBinder.cs
+    startLine: 38
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.References
+  summary: Tries to get the reference of type T from the binder.
+  example: []
+  syntax:
+    content: public bool TryGetReference<T>(out T reference)
+    parameters:
+    - id: reference
+      type: '{T}'
+      description: The reference of type T if found, otherwise null.
+    typeParameters:
+    - id: T
+      description: Type of the reference
+    return:
+      type: System.Boolean
+      description: True if the reference was found, otherwise false.
+    content.vb: Public Function TryGetReference(Of T)(reference As T) As Boolean
+  overload: FastenUp.Runtime.Binders.References.BaseRefBinder`1.TryGetReference*
+  implements:
+  - FastenUp.Runtime.Binders.References.IRefBinder.TryGetReference``1({T}@)
+  nameWithType.vb: BaseRefBinder(Of TRef).TryGetReference(Of T)(T)
+  fullName.vb: FastenUp.Runtime.Binders.References.BaseRefBinder(Of TRef).TryGetReference(Of T)(T)
+  name.vb: TryGetReference(Of T)(T)
+references:
+- uid: FastenUp.Runtime.Binders.References
+  commentId: N:FastenUp.Runtime.Binders.References
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders.References
+  nameWithType: FastenUp.Runtime.Binders.References
+  fullName: FastenUp.Runtime.Binders.References
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.References
+    name: References
+    href: FastenUp.Runtime.Binders.References.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.References
+    name: References
+    href: FastenUp.Runtime.Binders.References.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: FastenUp.Runtime.Binders.BaseBinder
+  commentId: T:FastenUp.Runtime.Binders.BaseBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.BaseBinder.html
+  name: BaseBinder
+  nameWithType: BaseBinder
+  fullName: FastenUp.Runtime.Binders.BaseBinder
+- uid: FastenUp.Runtime.Binders.References.IRefBinder
+  commentId: T:FastenUp.Runtime.Binders.References.IRefBinder
+  parent: FastenUp.Runtime.Binders.References
+  href: FastenUp.Runtime.Binders.References.IRefBinder.html
+  name: IRefBinder
+  nameWithType: IRefBinder
+  fullName: FastenUp.Runtime.Binders.References.IRefBinder
+- uid: FastenUp.Runtime.Binders.IBinder
+  commentId: T:FastenUp.Runtime.Binders.IBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.IBinder.html
+  name: IBinder
+  nameWithType: IBinder
+  fullName: FastenUp.Runtime.Binders.IBinder
+- uid: FastenUp.Runtime.Binders.BaseBinder.Name
+  commentId: P:FastenUp.Runtime.Binders.BaseBinder.Name
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_Name
+  name: Name
+  nameWithType: BaseBinder.Name
+  fullName: FastenUp.Runtime.Binders.BaseBinder.Name
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  commentId: E:FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnBinderChanged
+  name: OnBinderChanged
+  nameWithType: BaseBinder.OnBinderChanged
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+- uid: FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+  commentId: P:FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_IncludeOwnGameObjectInFind
+  name: IncludeOwnGameObjectInFind
+  nameWithType: BaseBinder.IncludeOwnGameObjectInFind
+  fullName: FastenUp.Runtime.Binders.BaseBinder.IncludeOwnGameObjectInFind
+- uid: FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+  commentId: M:FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_InvokeOnBinderChanged
+  name: InvokeOnBinderChanged()
+  nameWithType: BaseBinder.InvokeOnBinderChanged()
+  fullName: FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged()
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+    name: InvokeOnBinderChanged
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_InvokeOnBinderChanged
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.InvokeOnBinderChanged
+    name: InvokeOnBinderChanged
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_InvokeOnBinderChanged
+  - name: (
+  - name: )
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnEnable
+  commentId: M:FastenUp.Runtime.Binders.BaseBinder.OnEnable
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnEnable
+  name: OnEnable()
+  nameWithType: BaseBinder.OnEnable()
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnEnable()
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.OnEnable
+    name: OnEnable
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnEnable
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.OnEnable
+    name: OnEnable
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnEnable
+  - name: (
+  - name: )
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnDisable
+  commentId: M:FastenUp.Runtime.Binders.BaseBinder.OnDisable
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnDisable
+  name: OnDisable()
+  nameWithType: BaseBinder.OnDisable()
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnDisable()
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.OnDisable
+    name: OnDisable
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnDisable
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.OnDisable
+    name: OnDisable
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnDisable
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: FastenUp.Runtime.Binders
+  commentId: N:FastenUp.Runtime.Binders
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders
+  nameWithType: FastenUp.Runtime.Binders
+  fullName: FastenUp.Runtime.Binders
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+- uid: FastenUp.Runtime.Binders.References.BaseRefBinder`1.TryGetReference*
+  commentId: Overload:FastenUp.Runtime.Binders.References.BaseRefBinder`1.TryGetReference
+  href: FastenUp.Runtime.Binders.References.BaseRefBinder-1.html#FastenUp_Runtime_Binders_References_BaseRefBinder_1_TryGetReference__1___0__
+  name: TryGetReference
+  nameWithType: BaseRefBinder<TRef>.TryGetReference
+  fullName: FastenUp.Runtime.Binders.References.BaseRefBinder<TRef>.TryGetReference
+  nameWithType.vb: BaseRefBinder(Of TRef).TryGetReference
+  fullName.vb: FastenUp.Runtime.Binders.References.BaseRefBinder(Of TRef).TryGetReference
+- uid: FastenUp.Runtime.Binders.References.IRefBinder.TryGetReference``1({T}@)
+  commentId: M:FastenUp.Runtime.Binders.References.IRefBinder.TryGetReference``1(``0@)
+  parent: FastenUp.Runtime.Binders.References.IRefBinder
+  definition: FastenUp.Runtime.Binders.References.IRefBinder.TryGetReference``1(``0@)
+  href: FastenUp.Runtime.Binders.References.IRefBinder.html#FastenUp_Runtime_Binders_References_IRefBinder_TryGetReference__1___0__
+  name: TryGetReference<T>(out T)
+  nameWithType: IRefBinder.TryGetReference<T>(out T)
+  fullName: FastenUp.Runtime.Binders.References.IRefBinder.TryGetReference<T>(out T)
+  nameWithType.vb: IRefBinder.TryGetReference(Of T)(T)
+  fullName.vb: FastenUp.Runtime.Binders.References.IRefBinder.TryGetReference(Of T)(T)
+  name.vb: TryGetReference(Of T)(T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.References.IRefBinder.TryGetReference``1(``0@)
+    name: TryGetReference
+    href: FastenUp.Runtime.Binders.References.IRefBinder.html#FastenUp_Runtime_Binders_References_IRefBinder_TryGetReference__1___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: out
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.References.IRefBinder.TryGetReference``1(``0@)
+    name: TryGetReference
+    href: FastenUp.Runtime.Binders.References.IRefBinder.html#FastenUp_Runtime_Binders_References_IRefBinder_TryGetReference__1___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: FastenUp.Runtime.Binders.References.IRefBinder.TryGetReference``1(``0@)
+  commentId: M:FastenUp.Runtime.Binders.References.IRefBinder.TryGetReference``1(``0@)
+  href: FastenUp.Runtime.Binders.References.IRefBinder.html#FastenUp_Runtime_Binders_References_IRefBinder_TryGetReference__1___0__
+  name: TryGetReference<T>(out T)
+  nameWithType: IRefBinder.TryGetReference<T>(out T)
+  fullName: FastenUp.Runtime.Binders.References.IRefBinder.TryGetReference<T>(out T)
+  nameWithType.vb: IRefBinder.TryGetReference(Of T)(T)
+  fullName.vb: FastenUp.Runtime.Binders.References.IRefBinder.TryGetReference(Of T)(T)
+  name.vb: TryGetReference(Of T)(T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.References.IRefBinder.TryGetReference``1(``0@)
+    name: TryGetReference
+    href: FastenUp.Runtime.Binders.References.IRefBinder.html#FastenUp_Runtime_Binders_References_IRefBinder_TryGetReference__1___0__
+  - name: <
+  - name: T
+  - name: '>'
+  - name: (
+  - name: out
+  - name: " "
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.References.IRefBinder.TryGetReference``1(``0@)
+    name: TryGetReference
+    href: FastenUp.Runtime.Binders.References.IRefBinder.html#FastenUp_Runtime_Binders_References_IRefBinder_TryGetReference__1___0__
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+  - name: (
+  - name: T
+  - name: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

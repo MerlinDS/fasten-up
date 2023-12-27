@@ -1,0 +1,1112 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Binders.Behaviours.DropdownBinder
+  commentId: T:FastenUp.Runtime.Binders.Behaviours.DropdownBinder
+  id: DropdownBinder
+  parent: FastenUp.Runtime.Binders.Behaviours
+  children:
+  - FastenUp.Runtime.Binders.Behaviours.DropdownBinder.GetValue
+  - FastenUp.Runtime.Binders.Behaviours.DropdownBinder.OnDisable
+  - FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData})
+  - FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(System.Int32)
+  - FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(System.String[])
+  langs:
+  - csharp
+  - vb
+  name: DropdownBinder
+  nameWithType: DropdownBinder
+  fullName: FastenUp.Runtime.Binders.Behaviours.DropdownBinder
+  type: Class
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Behaviours/DropdownBinder.Conversions.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: DropdownBinder
+    path: ../Assets/FastenUp/Runtime/Binders/Behaviours/DropdownBinder.Conversions.cs
+    startLine: 6
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Behaviours
+  summary: The two-way <xref href="FastenUp.Runtime.Binders.IBinder" data-throw-if-not-resolved="false"></xref> binds a value to the component with <xref href="TMPro.TMP_Dropdown" data-throw-if-not-resolved="false"></xref> field.
+  example: []
+  syntax:
+    content: >-
+      [RequireComponent(typeof(TMP_Dropdown))]
+
+      [AddComponentMenu("UI/Fasten Up/Dropdown Binder", 6)]
+
+      [HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#dropdown")]
+
+      public sealed class DropdownBinder : BaseBinder, IValueReceiver<int>, IValueProvider<int>, IBinder<int>, IValueReceiver<string[]>, IBinder<string[]>, IValueReceiver<List<TMP_Dropdown.OptionData>>, IBinder<List<TMP_Dropdown.OptionData>>, IBinder
+    content.vb: >-
+      <RequireComponent(GetType(TMP_Dropdown))>
+
+      <AddComponentMenu("UI/Fasten Up/Dropdown Binder", 6)>
+
+      <HelpURL("https://github.com/MerlinDS/fasten-up/wiki/Binders#dropdown")>
+
+      Public NotInheritable Class DropdownBinder Inherits BaseBinder Implements IValueReceiver(Of Integer), IValueProvider(Of Integer), IBinder(Of Integer), IValueReceiver(Of String()), IBinder(Of String()), IValueReceiver(Of List(Of TMP_Dropdown.OptionData)), IBinder(Of List(Of TMP_Dropdown.OptionData)), IBinder
+  inheritance:
+  - System.Object
+  - UnityEngine.Object
+  - UnityEngine.Component
+  - UnityEngine.Behaviour
+  - UnityEngine.MonoBehaviour
+  - FastenUp.Runtime.Binders.BaseBinder
+  implements:
+  - FastenUp.Runtime.Binders.IValueReceiver{System.Int32}
+  - FastenUp.Runtime.Binders.IValueProvider{System.Int32}
+  - FastenUp.Runtime.Binders.IBinder{System.Int32}
+  - FastenUp.Runtime.Binders.IValueReceiver{System.String[]}
+  - FastenUp.Runtime.Binders.IBinder{System.String[]}
+  - FastenUp.Runtime.Binders.IValueReceiver{System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData}}
+  - FastenUp.Runtime.Binders.IBinder{System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData}}
+  - FastenUp.Runtime.Binders.IBinder
+  inheritedMembers:
+  - FastenUp.Runtime.Binders.BaseBinder.Name
+  - FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  attributes:
+  - type: UnityEngine.AddComponentMenu
+    ctor: UnityEngine.AddComponentMenu.#ctor(System.String,System.Int32)
+    arguments:
+    - type: System.String
+      value: UI/Fasten Up/Dropdown Binder
+    - type: System.Int32
+      value: 6
+  - type: UnityEngine.HelpURLAttribute
+    ctor: UnityEngine.HelpURLAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: https://github.com/MerlinDS/fasten-up/wiki/Binders#dropdown
+- uid: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.OnDisable
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.DropdownBinder.OnDisable
+  id: OnDisable
+  parent: FastenUp.Runtime.Binders.Behaviours.DropdownBinder
+  langs:
+  - csharp
+  - vb
+  name: OnDisable()
+  nameWithType: DropdownBinder.OnDisable()
+  fullName: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.OnDisable()
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Behaviours/DropdownBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: OnDisable
+    path: ../Assets/FastenUp/Runtime/Binders/Behaviours/DropdownBinder.cs
+    startLine: 22
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Behaviours
+  example: []
+  syntax:
+    content: protected override void OnDisable()
+    content.vb: Protected Overrides Sub OnDisable()
+  overridden: FastenUp.Runtime.Binders.BaseBinder.OnDisable
+  overload: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.OnDisable*
+- uid: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(System.Int32)
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(System.Int32)
+  id: SetValue(System.Int32)
+  parent: FastenUp.Runtime.Binders.Behaviours.DropdownBinder
+  langs:
+  - csharp
+  - vb
+  name: SetValue(int)
+  nameWithType: DropdownBinder.SetValue(int)
+  fullName: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(int)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Behaviours/DropdownBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: SetValue
+    path: ../Assets/FastenUp/Runtime/Binders/Behaviours/DropdownBinder.cs
+    startLine: 29
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Behaviours
+  summary: Sets the value to the binder.
+  example: []
+  syntax:
+    content: public void SetValue(int value)
+    parameters:
+    - id: value
+      type: System.Int32
+      description: The value that will be set to the binder.
+    content.vb: Public Sub SetValue(value As Integer)
+  overload: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue*
+  implements:
+  - FastenUp.Runtime.Binders.IValueReceiver{System.Int32}.SetValue(System.Int32)
+  nameWithType.vb: DropdownBinder.SetValue(Integer)
+  fullName.vb: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(Integer)
+  name.vb: SetValue(Integer)
+- uid: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.GetValue
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.DropdownBinder.GetValue
+  id: GetValue
+  parent: FastenUp.Runtime.Binders.Behaviours.DropdownBinder
+  langs:
+  - csharp
+  - vb
+  name: GetValue()
+  nameWithType: DropdownBinder.GetValue()
+  fullName: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.GetValue()
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Behaviours/DropdownBinder.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: GetValue
+    path: ../Assets/FastenUp/Runtime/Binders/Behaviours/DropdownBinder.cs
+    startLine: 35
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Behaviours
+  summary: Gets the value from the binder.
+  example: []
+  syntax:
+    content: public int GetValue()
+    return:
+      type: System.Int32
+      description: The value that was provided by the binder.
+    content.vb: Public Function GetValue() As Integer
+  overload: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.GetValue*
+  implements:
+  - FastenUp.Runtime.Binders.IValueProvider{System.Int32}.GetValue
+- uid: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(System.String[])
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(System.String[])
+  id: SetValue(System.String[])
+  parent: FastenUp.Runtime.Binders.Behaviours.DropdownBinder
+  langs:
+  - csharp
+  - vb
+  name: SetValue(string[])
+  nameWithType: DropdownBinder.SetValue(string[])
+  fullName: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(string[])
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Behaviours/DropdownBinder.Conversions.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: SetValue
+    path: ../Assets/FastenUp/Runtime/Binders/Behaviours/DropdownBinder.Conversions.cs
+    startLine: 10
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Behaviours
+  summary: Sets the value to the binder.
+  example: []
+  syntax:
+    content: public void SetValue(string[] value)
+    parameters:
+    - id: value
+      type: System.String[]
+      description: The value that will be set to the binder.
+    content.vb: Public Sub SetValue(value As String())
+  overload: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue*
+  implements:
+  - FastenUp.Runtime.Binders.IValueReceiver{System.String[]}.SetValue(System.String[])
+  nameWithType.vb: DropdownBinder.SetValue(String())
+  fullName.vb: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(String())
+  name.vb: SetValue(String())
+- uid: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData})
+  commentId: M:FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData})
+  id: SetValue(System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData})
+  parent: FastenUp.Runtime.Binders.Behaviours.DropdownBinder
+  langs:
+  - csharp
+  - vb
+  name: SetValue(List<OptionData>)
+  nameWithType: DropdownBinder.SetValue(List<TMP_Dropdown.OptionData>)
+  fullName: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(System.Collections.Generic.List<TMPro.TMP_Dropdown.OptionData>)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Binders/Behaviours/DropdownBinder.Conversions.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: SetValue
+    path: ../Assets/FastenUp/Runtime/Binders/Behaviours/DropdownBinder.Conversions.cs
+    startLine: 22
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Binders.Behaviours
+  summary: Sets the value to the binder.
+  example: []
+  syntax:
+    content: public void SetValue(List<TMP_Dropdown.OptionData> value)
+    parameters:
+    - id: value
+      type: System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData}
+      description: The value that will be set to the binder.
+    content.vb: Public Sub SetValue(value As List(Of TMP_Dropdown.OptionData))
+  overload: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue*
+  implements:
+  - FastenUp.Runtime.Binders.IValueReceiver{System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData}}.SetValue(System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData})
+  nameWithType.vb: DropdownBinder.SetValue(List(Of TMP_Dropdown.OptionData))
+  fullName.vb: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue(System.Collections.Generic.List(Of TMPro.TMP_Dropdown.OptionData))
+  name.vb: SetValue(List(Of OptionData))
+references:
+- uid: FastenUp.Runtime.Binders.IBinder
+  commentId: T:FastenUp.Runtime.Binders.IBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.IBinder.html
+  name: IBinder
+  nameWithType: IBinder
+  fullName: FastenUp.Runtime.Binders.IBinder
+- uid: TMPro.TMP_Dropdown
+  commentId: T:TMPro.TMP_Dropdown
+  isExternal: true
+  name: TMP_Dropdown
+  nameWithType: TMP_Dropdown
+  fullName: TMPro.TMP_Dropdown
+- uid: FastenUp.Runtime.Binders.Behaviours
+  commentId: N:FastenUp.Runtime.Binders.Behaviours
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders.Behaviours
+  nameWithType: FastenUp.Runtime.Binders.Behaviours
+  fullName: FastenUp.Runtime.Binders.Behaviours
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.Behaviours
+    name: Behaviours
+    href: FastenUp.Runtime.Binders.Behaviours.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders.Behaviours
+    name: Behaviours
+    href: FastenUp.Runtime.Binders.Behaviours.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: UnityEngine.Object
+  commentId: T:UnityEngine.Object
+  parent: UnityEngine
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: UnityEngine.Object
+- uid: UnityEngine.Component
+  commentId: T:UnityEngine.Component
+  parent: UnityEngine
+  isExternal: true
+  name: Component
+  nameWithType: Component
+  fullName: UnityEngine.Component
+- uid: UnityEngine.Behaviour
+  commentId: T:UnityEngine.Behaviour
+  parent: UnityEngine
+  isExternal: true
+  name: Behaviour
+  nameWithType: Behaviour
+  fullName: UnityEngine.Behaviour
+- uid: UnityEngine.MonoBehaviour
+  commentId: T:UnityEngine.MonoBehaviour
+  parent: UnityEngine
+  isExternal: true
+  name: MonoBehaviour
+  nameWithType: MonoBehaviour
+  fullName: UnityEngine.MonoBehaviour
+- uid: FastenUp.Runtime.Binders.BaseBinder
+  commentId: T:FastenUp.Runtime.Binders.BaseBinder
+  parent: FastenUp.Runtime.Binders
+  href: FastenUp.Runtime.Binders.BaseBinder.html
+  name: BaseBinder
+  nameWithType: BaseBinder
+  fullName: FastenUp.Runtime.Binders.BaseBinder
+- uid: FastenUp.Runtime.Binders.IValueReceiver{System.Int32}
+  commentId: T:FastenUp.Runtime.Binders.IValueReceiver{System.Int32}
+  parent: FastenUp.Runtime.Binders
+  definition: FastenUp.Runtime.Binders.IValueReceiver`1
+  href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  name: IValueReceiver<int>
+  nameWithType: IValueReceiver<int>
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<int>
+  nameWithType.vb: IValueReceiver(Of Integer)
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of Integer)
+  name.vb: IValueReceiver(Of Integer)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1
+    name: IValueReceiver
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1
+    name: IValueReceiver
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: FastenUp.Runtime.Binders.IValueProvider{System.Int32}
+  commentId: T:FastenUp.Runtime.Binders.IValueProvider{System.Int32}
+  parent: FastenUp.Runtime.Binders
+  definition: FastenUp.Runtime.Binders.IValueProvider`1
+  href: FastenUp.Runtime.Binders.IValueProvider-1.html
+  name: IValueProvider<int>
+  nameWithType: IValueProvider<int>
+  fullName: FastenUp.Runtime.Binders.IValueProvider<int>
+  nameWithType.vb: IValueProvider(Of Integer)
+  fullName.vb: FastenUp.Runtime.Binders.IValueProvider(Of Integer)
+  name.vb: IValueProvider(Of Integer)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueProvider`1
+    name: IValueProvider
+    href: FastenUp.Runtime.Binders.IValueProvider-1.html
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueProvider`1
+    name: IValueProvider
+    href: FastenUp.Runtime.Binders.IValueProvider-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: FastenUp.Runtime.Binders.IBinder{System.Int32}
+  commentId: T:FastenUp.Runtime.Binders.IBinder{System.Int32}
+  parent: FastenUp.Runtime.Binders
+  definition: FastenUp.Runtime.Binders.IBinder`1
+  href: FastenUp.Runtime.Binders.IBinder-1.html
+  name: IBinder<int>
+  nameWithType: IBinder<int>
+  fullName: FastenUp.Runtime.Binders.IBinder<int>
+  nameWithType.vb: IBinder(Of Integer)
+  fullName.vb: FastenUp.Runtime.Binders.IBinder(Of Integer)
+  name.vb: IBinder(Of Integer)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: FastenUp.Runtime.Binders.IValueReceiver{System.String[]}
+  commentId: T:FastenUp.Runtime.Binders.IValueReceiver{System.String[]}
+  parent: FastenUp.Runtime.Binders
+  definition: FastenUp.Runtime.Binders.IValueReceiver`1
+  href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  name: IValueReceiver<string[]>
+  nameWithType: IValueReceiver<string[]>
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<string[]>
+  nameWithType.vb: IValueReceiver(Of String())
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of String())
+  name.vb: IValueReceiver(Of String())
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1
+    name: IValueReceiver
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1
+    name: IValueReceiver
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+  - name: )
+- uid: FastenUp.Runtime.Binders.IBinder{System.String[]}
+  commentId: T:FastenUp.Runtime.Binders.IBinder{System.String[]}
+  parent: FastenUp.Runtime.Binders
+  definition: FastenUp.Runtime.Binders.IBinder`1
+  href: FastenUp.Runtime.Binders.IBinder-1.html
+  name: IBinder<string[]>
+  nameWithType: IBinder<string[]>
+  fullName: FastenUp.Runtime.Binders.IBinder<string[]>
+  nameWithType.vb: IBinder(Of String())
+  fullName.vb: FastenUp.Runtime.Binders.IBinder(Of String())
+  name.vb: IBinder(Of String())
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+  - name: )
+- uid: FastenUp.Runtime.Binders.IValueReceiver{System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData}}
+  commentId: T:FastenUp.Runtime.Binders.IValueReceiver{System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData}}
+  parent: FastenUp.Runtime.Binders
+  definition: FastenUp.Runtime.Binders.IValueReceiver`1
+  href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  name: IValueReceiver<List<TMP_Dropdown.OptionData>>
+  nameWithType: IValueReceiver<List<TMP_Dropdown.OptionData>>
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<System.Collections.Generic.List<TMPro.TMP_Dropdown.OptionData>>
+  nameWithType.vb: IValueReceiver(Of List(Of TMP_Dropdown.OptionData))
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of System.Collections.Generic.List(Of TMPro.TMP_Dropdown.OptionData))
+  name.vb: IValueReceiver(Of List(Of TMP_Dropdown.OptionData))
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1
+    name: IValueReceiver
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TMPro.TMP_Dropdown
+    name: TMP_Dropdown
+    isExternal: true
+  - name: .
+  - uid: TMPro.TMP_Dropdown.OptionData
+    name: OptionData
+    isExternal: true
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1
+    name: IValueReceiver
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: TMPro.TMP_Dropdown
+    name: TMP_Dropdown
+    isExternal: true
+  - name: .
+  - uid: TMPro.TMP_Dropdown.OptionData
+    name: OptionData
+    isExternal: true
+  - name: )
+  - name: )
+- uid: FastenUp.Runtime.Binders.IBinder{System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData}}
+  commentId: T:FastenUp.Runtime.Binders.IBinder{System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData}}
+  parent: FastenUp.Runtime.Binders
+  definition: FastenUp.Runtime.Binders.IBinder`1
+  href: FastenUp.Runtime.Binders.IBinder-1.html
+  name: IBinder<List<TMP_Dropdown.OptionData>>
+  nameWithType: IBinder<List<TMP_Dropdown.OptionData>>
+  fullName: FastenUp.Runtime.Binders.IBinder<System.Collections.Generic.List<TMPro.TMP_Dropdown.OptionData>>
+  nameWithType.vb: IBinder(Of List(Of TMP_Dropdown.OptionData))
+  fullName.vb: FastenUp.Runtime.Binders.IBinder(Of System.Collections.Generic.List(Of TMPro.TMP_Dropdown.OptionData))
+  name.vb: IBinder(Of List(Of TMP_Dropdown.OptionData))
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: <
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TMPro.TMP_Dropdown
+    name: TMP_Dropdown
+    isExternal: true
+  - name: .
+  - uid: TMPro.TMP_Dropdown.OptionData
+    name: OptionData
+    isExternal: true
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: TMPro.TMP_Dropdown
+    name: TMP_Dropdown
+    isExternal: true
+  - name: .
+  - uid: TMPro.TMP_Dropdown.OptionData
+    name: OptionData
+    isExternal: true
+  - name: )
+  - name: )
+- uid: FastenUp.Runtime.Binders.BaseBinder.Name
+  commentId: P:FastenUp.Runtime.Binders.BaseBinder.Name
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_Name
+  name: Name
+  nameWithType: BaseBinder.Name
+  fullName: FastenUp.Runtime.Binders.BaseBinder.Name
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  commentId: E:FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnBinderChanged
+  name: OnBinderChanged
+  nameWithType: BaseBinder.OnBinderChanged
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnBinderChanged
+- uid: FastenUp.Runtime.Binders
+  commentId: N:FastenUp.Runtime.Binders
+  href: FastenUp.html
+  name: FastenUp.Runtime.Binders
+  nameWithType: FastenUp.Runtime.Binders
+  fullName: FastenUp.Runtime.Binders
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Binders
+    name: Binders
+    href: FastenUp.Runtime.Binders.html
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: UnityEngine
+  commentId: N:UnityEngine
+  isExternal: true
+  name: UnityEngine
+  nameWithType: UnityEngine
+  fullName: UnityEngine
+- uid: FastenUp.Runtime.Binders.IValueReceiver`1
+  commentId: T:FastenUp.Runtime.Binders.IValueReceiver`1
+  href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  name: IValueReceiver<T>
+  nameWithType: IValueReceiver<T>
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<T>
+  nameWithType.vb: IValueReceiver(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of T)
+  name.vb: IValueReceiver(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1
+    name: IValueReceiver
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1
+    name: IValueReceiver
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders.IValueProvider`1
+  commentId: T:FastenUp.Runtime.Binders.IValueProvider`1
+  href: FastenUp.Runtime.Binders.IValueProvider-1.html
+  name: IValueProvider<T>
+  nameWithType: IValueProvider<T>
+  fullName: FastenUp.Runtime.Binders.IValueProvider<T>
+  nameWithType.vb: IValueProvider(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.IValueProvider(Of T)
+  name.vb: IValueProvider(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueProvider`1
+    name: IValueProvider
+    href: FastenUp.Runtime.Binders.IValueProvider-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueProvider`1
+    name: IValueProvider
+    href: FastenUp.Runtime.Binders.IValueProvider-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders.IBinder`1
+  commentId: T:FastenUp.Runtime.Binders.IBinder`1
+  href: FastenUp.Runtime.Binders.IBinder-1.html
+  name: IBinder<T>
+  nameWithType: IBinder<T>
+  fullName: FastenUp.Runtime.Binders.IBinder<T>
+  nameWithType.vb: IBinder(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.IBinder(Of T)
+  name.vb: IBinder(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IBinder`1
+    name: IBinder
+    href: FastenUp.Runtime.Binders.IBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders.BaseBinder.OnDisable
+  commentId: M:FastenUp.Runtime.Binders.BaseBinder.OnDisable
+  parent: FastenUp.Runtime.Binders.BaseBinder
+  href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnDisable
+  name: OnDisable()
+  nameWithType: BaseBinder.OnDisable()
+  fullName: FastenUp.Runtime.Binders.BaseBinder.OnDisable()
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.OnDisable
+    name: OnDisable
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnDisable
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.BaseBinder.OnDisable
+    name: OnDisable
+    href: FastenUp.Runtime.Binders.BaseBinder.html#FastenUp_Runtime_Binders_BaseBinder_OnDisable
+  - name: (
+  - name: )
+- uid: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.OnDisable*
+  commentId: Overload:FastenUp.Runtime.Binders.Behaviours.DropdownBinder.OnDisable
+  href: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.html#FastenUp_Runtime_Binders_Behaviours_DropdownBinder_OnDisable
+  name: OnDisable
+  nameWithType: DropdownBinder.OnDisable
+  fullName: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.OnDisable
+- uid: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue*
+  commentId: Overload:FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue
+  href: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.html#FastenUp_Runtime_Binders_Behaviours_DropdownBinder_SetValue_System_Int32_
+  name: SetValue
+  nameWithType: DropdownBinder.SetValue
+  fullName: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.SetValue
+- uid: FastenUp.Runtime.Binders.IValueReceiver{System.Int32}.SetValue(System.Int32)
+  commentId: M:FastenUp.Runtime.Binders.IValueReceiver{System.Int32}.SetValue(System.Int32)
+  parent: FastenUp.Runtime.Binders.IValueReceiver{System.Int32}
+  definition: FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+  href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  name: SetValue(int)
+  nameWithType: IValueReceiver<int>.SetValue(int)
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<int>.SetValue(int)
+  nameWithType.vb: IValueReceiver(Of Integer).SetValue(Integer)
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of Integer).SetValue(Integer)
+  name.vb: SetValue(Integer)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver{System.Int32}.SetValue(System.Int32)
+    name: SetValue
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver{System.Int32}.SetValue(System.Int32)
+    name: SetValue
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+  commentId: M:FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+  href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  name: SetValue(T)
+  nameWithType: IValueReceiver<T>.SetValue(T)
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<T>.SetValue(T)
+  nameWithType.vb: IValueReceiver(Of T).SetValue(T)
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of T).SetValue(T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+    name: SetValue
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  - name: (
+  - name: T
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+    name: SetValue
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  - name: (
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.GetValue*
+  commentId: Overload:FastenUp.Runtime.Binders.Behaviours.DropdownBinder.GetValue
+  href: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.html#FastenUp_Runtime_Binders_Behaviours_DropdownBinder_GetValue
+  name: GetValue
+  nameWithType: DropdownBinder.GetValue
+  fullName: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.GetValue
+- uid: FastenUp.Runtime.Binders.IValueProvider{System.Int32}.GetValue
+  commentId: M:FastenUp.Runtime.Binders.IValueProvider{System.Int32}.GetValue
+  parent: FastenUp.Runtime.Binders.IValueProvider{System.Int32}
+  definition: FastenUp.Runtime.Binders.IValueProvider`1.GetValue
+  href: FastenUp.Runtime.Binders.IValueProvider-1.html#FastenUp_Runtime_Binders_IValueProvider_1_GetValue
+  name: GetValue()
+  nameWithType: IValueProvider<int>.GetValue()
+  fullName: FastenUp.Runtime.Binders.IValueProvider<int>.GetValue()
+  nameWithType.vb: IValueProvider(Of Integer).GetValue()
+  fullName.vb: FastenUp.Runtime.Binders.IValueProvider(Of Integer).GetValue()
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueProvider{System.Int32}.GetValue
+    name: GetValue
+    href: FastenUp.Runtime.Binders.IValueProvider-1.html#FastenUp_Runtime_Binders_IValueProvider_1_GetValue
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueProvider{System.Int32}.GetValue
+    name: GetValue
+    href: FastenUp.Runtime.Binders.IValueProvider-1.html#FastenUp_Runtime_Binders_IValueProvider_1_GetValue
+  - name: (
+  - name: )
+- uid: FastenUp.Runtime.Binders.IValueProvider`1.GetValue
+  commentId: M:FastenUp.Runtime.Binders.IValueProvider`1.GetValue
+  href: FastenUp.Runtime.Binders.IValueProvider-1.html#FastenUp_Runtime_Binders_IValueProvider_1_GetValue
+  name: GetValue()
+  nameWithType: IValueProvider<T>.GetValue()
+  fullName: FastenUp.Runtime.Binders.IValueProvider<T>.GetValue()
+  nameWithType.vb: IValueProvider(Of T).GetValue()
+  fullName.vb: FastenUp.Runtime.Binders.IValueProvider(Of T).GetValue()
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueProvider`1.GetValue
+    name: GetValue
+    href: FastenUp.Runtime.Binders.IValueProvider-1.html#FastenUp_Runtime_Binders_IValueProvider_1_GetValue
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueProvider`1.GetValue
+    name: GetValue
+    href: FastenUp.Runtime.Binders.IValueProvider-1.html#FastenUp_Runtime_Binders_IValueProvider_1_GetValue
+  - name: (
+  - name: )
+- uid: FastenUp.Runtime.Binders.IValueReceiver{System.String[]}.SetValue(System.String[])
+  commentId: M:FastenUp.Runtime.Binders.IValueReceiver{System.String[]}.SetValue(System.String[])
+  parent: FastenUp.Runtime.Binders.IValueReceiver{System.String[]}
+  definition: FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+  href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  name: SetValue(string[])
+  nameWithType: IValueReceiver<string[]>.SetValue(string[])
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<string[]>.SetValue(string[])
+  nameWithType.vb: IValueReceiver(Of String()).SetValue(String())
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of String()).SetValue(String())
+  name.vb: SetValue(String())
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver{System.String[]}.SetValue(System.String[])
+    name: SetValue
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver{System.String[]}.SetValue(System.String[])
+    name: SetValue
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+  - name: )
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: FastenUp.Runtime.Binders.IValueReceiver{System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData}}.SetValue(System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData})
+  commentId: M:FastenUp.Runtime.Binders.IValueReceiver{System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData}}.SetValue(System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData})
+  parent: FastenUp.Runtime.Binders.IValueReceiver{System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData}}
+  definition: FastenUp.Runtime.Binders.IValueReceiver`1.SetValue(`0)
+  href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  name: SetValue(List<OptionData>)
+  nameWithType: IValueReceiver<List<TMP_Dropdown.OptionData>>.SetValue(List<TMP_Dropdown.OptionData>)
+  fullName: FastenUp.Runtime.Binders.IValueReceiver<System.Collections.Generic.List<TMPro.TMP_Dropdown.OptionData>>.SetValue(System.Collections.Generic.List<TMPro.TMP_Dropdown.OptionData>)
+  nameWithType.vb: IValueReceiver(Of List(Of TMP_Dropdown.OptionData)).SetValue(List(Of TMP_Dropdown.OptionData))
+  fullName.vb: FastenUp.Runtime.Binders.IValueReceiver(Of System.Collections.Generic.List(Of TMPro.TMP_Dropdown.OptionData)).SetValue(System.Collections.Generic.List(Of TMPro.TMP_Dropdown.OptionData))
+  name.vb: SetValue(List(Of OptionData))
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver{System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData}}.SetValue(System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData})
+    name: SetValue
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TMPro.TMP_Dropdown.OptionData
+    name: OptionData
+    isExternal: true
+  - name: '>'
+  - name: )
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.IValueReceiver{System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData}}.SetValue(System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData})
+    name: SetValue
+    href: FastenUp.Runtime.Binders.IValueReceiver-1.html#FastenUp_Runtime_Binders_IValueReceiver_1_SetValue__0_
+  - name: (
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: TMPro.TMP_Dropdown.OptionData
+    name: OptionData
+    isExternal: true
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData}
+  commentId: T:System.Collections.Generic.List{TMPro.TMP_Dropdown.OptionData}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<TMP_Dropdown.OptionData>
+  nameWithType: List<TMP_Dropdown.OptionData>
+  fullName: System.Collections.Generic.List<TMPro.TMP_Dropdown.OptionData>
+  nameWithType.vb: List(Of TMP_Dropdown.OptionData)
+  fullName.vb: System.Collections.Generic.List(Of TMPro.TMP_Dropdown.OptionData)
+  name.vb: List(Of TMP_Dropdown.OptionData)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TMPro.TMP_Dropdown
+    name: TMP_Dropdown
+    isExternal: true
+  - name: .
+  - uid: TMPro.TMP_Dropdown.OptionData
+    name: OptionData
+    isExternal: true
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: TMPro.TMP_Dropdown
+    name: TMP_Dropdown
+    isExternal: true
+  - name: .
+  - uid: TMPro.TMP_Dropdown.OptionData
+    name: OptionData
+    isExternal: true
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

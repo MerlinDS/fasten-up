@@ -1,0 +1,589 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1
+  commentId: T:FastenUp.Runtime.Bindables.BindableCollection`1
+  id: BindableCollection`1
+  parent: FastenUp.Runtime.Bindables
+  children:
+  - FastenUp.Runtime.Bindables.BindableCollection`1.Add(`0)
+  - FastenUp.Runtime.Bindables.BindableCollection`1.Clear
+  - FastenUp.Runtime.Bindables.BindableCollection`1.Contains(`0)
+  - FastenUp.Runtime.Bindables.BindableCollection`1.CopyTo(`0[],System.Int32)
+  - FastenUp.Runtime.Bindables.BindableCollection`1.Count
+  - FastenUp.Runtime.Bindables.BindableCollection`1.OnItemAdded
+  - FastenUp.Runtime.Bindables.BindableCollection`1.OnItemRemoved
+  - FastenUp.Runtime.Bindables.BindableCollection`1.Remove(`0)
+  langs:
+  - csharp
+  - vb
+  name: BindableCollection<T>
+  nameWithType: BindableCollection<T>
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>
+  type: Class
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BindableCollection.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: BindableCollection
+    path: ../Assets/FastenUp/Runtime/Bindables/BindableCollection.cs
+    startLine: 9
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  summary: Represents a collection of objects that can be individually bound to a <xref href="FastenUp.Runtime.Binders.Collections.ICollectionBinder%601" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public sealed class BindableCollection<T> : IBindableCollection<T>, IBindable'
+    typeParameters:
+    - id: T
+      description: The type of elements in the collection.
+    content.vb: Public NotInheritable Class BindableCollection(Of T) Implements IBindableCollection(Of T), IBindable
+  inheritance:
+  - System.Object
+  implements:
+  - FastenUp.Runtime.Bindables.IBindableCollection{{T}}
+  - FastenUp.Runtime.Bindables.IBindable
+  nameWithType.vb: BindableCollection(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T)
+  name.vb: BindableCollection(Of T)
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.Count
+  commentId: P:FastenUp.Runtime.Bindables.BindableCollection`1.Count
+  id: Count
+  parent: FastenUp.Runtime.Bindables.BindableCollection`1
+  langs:
+  - csharp
+  - vb
+  name: Count
+  nameWithType: BindableCollection<T>.Count
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.Count
+  type: Property
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BindableCollection.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: Count
+    path: ../Assets/FastenUp/Runtime/Bindables/BindableCollection.cs
+    startLine: 15
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  example: []
+  syntax:
+    content: public int Count { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property Count As Integer
+  overload: FastenUp.Runtime.Bindables.BindableCollection`1.Count*
+  nameWithType.vb: BindableCollection(Of T).Count
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).Count
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.OnItemAdded
+  commentId: E:FastenUp.Runtime.Bindables.BindableCollection`1.OnItemAdded
+  id: OnItemAdded
+  parent: FastenUp.Runtime.Bindables.BindableCollection`1
+  langs:
+  - csharp
+  - vb
+  name: OnItemAdded
+  nameWithType: BindableCollection<T>.OnItemAdded
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.OnItemAdded
+  type: Event
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BindableCollection.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: OnItemAdded
+    path: ../Assets/FastenUp/Runtime/Bindables/BindableCollection.cs
+    startLine: 17
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  syntax:
+    content: public event Action<T> OnItemAdded
+    return:
+      type: System.Action{{T}}
+    content.vb: Public Event OnItemAdded As Action(Of T)
+  nameWithType.vb: BindableCollection(Of T).OnItemAdded
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).OnItemAdded
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.OnItemRemoved
+  commentId: E:FastenUp.Runtime.Bindables.BindableCollection`1.OnItemRemoved
+  id: OnItemRemoved
+  parent: FastenUp.Runtime.Bindables.BindableCollection`1
+  langs:
+  - csharp
+  - vb
+  name: OnItemRemoved
+  nameWithType: BindableCollection<T>.OnItemRemoved
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.OnItemRemoved
+  type: Event
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BindableCollection.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: OnItemRemoved
+    path: ../Assets/FastenUp/Runtime/Bindables/BindableCollection.cs
+    startLine: 18
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  syntax:
+    content: public event Action<T> OnItemRemoved
+    return:
+      type: System.Action{{T}}
+    content.vb: Public Event OnItemRemoved As Action(Of T)
+  nameWithType.vb: BindableCollection(Of T).OnItemRemoved
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).OnItemRemoved
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.Add(`0)
+  commentId: M:FastenUp.Runtime.Bindables.BindableCollection`1.Add(`0)
+  id: Add(`0)
+  parent: FastenUp.Runtime.Bindables.BindableCollection`1
+  langs:
+  - csharp
+  - vb
+  name: Add(T)
+  nameWithType: BindableCollection<T>.Add(T)
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.Add(T)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BindableCollection.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: Add
+    path: ../Assets/FastenUp/Runtime/Bindables/BindableCollection.cs
+    startLine: 21
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  example: []
+  syntax:
+    content: public void Add(T item)
+    parameters:
+    - id: item
+      type: '{T}'
+    content.vb: Public Sub Add(item As T)
+  overload: FastenUp.Runtime.Bindables.BindableCollection`1.Add*
+  nameWithType.vb: BindableCollection(Of T).Add(T)
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).Add(T)
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.Remove(`0)
+  commentId: M:FastenUp.Runtime.Bindables.BindableCollection`1.Remove(`0)
+  id: Remove(`0)
+  parent: FastenUp.Runtime.Bindables.BindableCollection`1
+  langs:
+  - csharp
+  - vb
+  name: Remove(T)
+  nameWithType: BindableCollection<T>.Remove(T)
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.Remove(T)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BindableCollection.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: Remove
+    path: ../Assets/FastenUp/Runtime/Bindables/BindableCollection.cs
+    startLine: 33
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  example: []
+  syntax:
+    content: public bool Remove(T item)
+    parameters:
+    - id: item
+      type: '{T}'
+    return:
+      type: System.Boolean
+    content.vb: Public Function Remove(item As T) As Boolean
+  overload: FastenUp.Runtime.Bindables.BindableCollection`1.Remove*
+  nameWithType.vb: BindableCollection(Of T).Remove(T)
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).Remove(T)
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.Contains(`0)
+  commentId: M:FastenUp.Runtime.Bindables.BindableCollection`1.Contains(`0)
+  id: Contains(`0)
+  parent: FastenUp.Runtime.Bindables.BindableCollection`1
+  langs:
+  - csharp
+  - vb
+  name: Contains(T)
+  nameWithType: BindableCollection<T>.Contains(T)
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.Contains(T)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BindableCollection.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: Contains
+    path: ../Assets/FastenUp/Runtime/Bindables/BindableCollection.cs
+    startLine: 49
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  example: []
+  syntax:
+    content: public bool Contains(T item)
+    parameters:
+    - id: item
+      type: '{T}'
+    return:
+      type: System.Boolean
+    content.vb: Public Function Contains(item As T) As Boolean
+  overload: FastenUp.Runtime.Bindables.BindableCollection`1.Contains*
+  nameWithType.vb: BindableCollection(Of T).Contains(T)
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).Contains(T)
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.Clear
+  commentId: M:FastenUp.Runtime.Bindables.BindableCollection`1.Clear
+  id: Clear
+  parent: FastenUp.Runtime.Bindables.BindableCollection`1
+  langs:
+  - csharp
+  - vb
+  name: Clear()
+  nameWithType: BindableCollection<T>.Clear()
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.Clear()
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BindableCollection.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: Clear
+    path: ../Assets/FastenUp/Runtime/Bindables/BindableCollection.cs
+    startLine: 55
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  example: []
+  syntax:
+    content: public void Clear()
+    content.vb: Public Sub Clear()
+  overload: FastenUp.Runtime.Bindables.BindableCollection`1.Clear*
+  nameWithType.vb: BindableCollection(Of T).Clear()
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).Clear()
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.CopyTo(`0[],System.Int32)
+  commentId: M:FastenUp.Runtime.Bindables.BindableCollection`1.CopyTo(`0[],System.Int32)
+  id: CopyTo(`0[],System.Int32)
+  parent: FastenUp.Runtime.Bindables.BindableCollection`1
+  langs:
+  - csharp
+  - vb
+  name: CopyTo(T[], int)
+  nameWithType: BindableCollection<T>.CopyTo(T[], int)
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.CopyTo(T[], int)
+  type: Method
+  source:
+    remote:
+      path: Assets/FastenUp/Runtime/Bindables/BindableCollection.cs
+      branch: develop
+      repo: https://github.com/MerlinDS/fasten-up.git
+    id: CopyTo
+    path: ../Assets/FastenUp/Runtime/Bindables/BindableCollection.cs
+    startLine: 85
+  assemblies:
+  - FastenUp.Runtime
+  namespace: FastenUp.Runtime.Bindables
+  example: []
+  syntax:
+    content: public void CopyTo(T[] array, int arrayIndex)
+    parameters:
+    - id: array
+      type: '{T}[]'
+    - id: arrayIndex
+      type: System.Int32
+    content.vb: Public Sub CopyTo(array As T(), arrayIndex As Integer)
+  overload: FastenUp.Runtime.Bindables.BindableCollection`1.CopyTo*
+  nameWithType.vb: BindableCollection(Of T).CopyTo(T(), Integer)
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).CopyTo(T(), Integer)
+  name.vb: CopyTo(T(), Integer)
+references:
+- uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+  commentId: T:FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+  href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html
+  name: ICollectionBinder<T>
+  nameWithType: ICollectionBinder<T>
+  fullName: FastenUp.Runtime.Binders.Collections.ICollectionBinder<T>
+  nameWithType.vb: ICollectionBinder(Of T)
+  fullName.vb: FastenUp.Runtime.Binders.Collections.ICollectionBinder(Of T)
+  name.vb: ICollectionBinder(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+    name: ICollectionBinder
+    href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Binders.Collections.ICollectionBinder`1
+    name: ICollectionBinder
+    href: FastenUp.Runtime.Binders.Collections.ICollectionBinder-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables
+  commentId: N:FastenUp.Runtime.Bindables
+  href: FastenUp.html
+  name: FastenUp.Runtime.Bindables
+  nameWithType: FastenUp.Runtime.Bindables
+  fullName: FastenUp.Runtime.Bindables
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Bindables
+    name: Bindables
+    href: FastenUp.Runtime.Bindables.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Bindables
+    name: Bindables
+    href: FastenUp.Runtime.Bindables.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: FastenUp.Runtime.Bindables.IBindableCollection{{T}}
+  commentId: T:FastenUp.Runtime.Bindables.IBindableCollection{`0}
+  parent: FastenUp.Runtime.Bindables
+  definition: FastenUp.Runtime.Bindables.IBindableCollection`1
+  href: FastenUp.Runtime.Bindables.IBindableCollection-1.html
+  name: IBindableCollection<T>
+  nameWithType: IBindableCollection<T>
+  fullName: FastenUp.Runtime.Bindables.IBindableCollection<T>
+  nameWithType.vb: IBindableCollection(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableCollection(Of T)
+  name.vb: IBindableCollection(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindableCollection`1
+    name: IBindableCollection
+    href: FastenUp.Runtime.Bindables.IBindableCollection-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindableCollection`1
+    name: IBindableCollection
+    href: FastenUp.Runtime.Bindables.IBindableCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindable
+  commentId: T:FastenUp.Runtime.Bindables.IBindable
+  parent: FastenUp.Runtime.Bindables
+  href: FastenUp.Runtime.Bindables.IBindable.html
+  name: IBindable
+  nameWithType: IBindable
+  fullName: FastenUp.Runtime.Bindables.IBindable
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: FastenUp.Runtime.Bindables.IBindableCollection`1
+  commentId: T:FastenUp.Runtime.Bindables.IBindableCollection`1
+  href: FastenUp.Runtime.Bindables.IBindableCollection-1.html
+  name: IBindableCollection<T>
+  nameWithType: IBindableCollection<T>
+  fullName: FastenUp.Runtime.Bindables.IBindableCollection<T>
+  nameWithType.vb: IBindableCollection(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableCollection(Of T)
+  name.vb: IBindableCollection(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindableCollection`1
+    name: IBindableCollection
+    href: FastenUp.Runtime.Bindables.IBindableCollection-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindableCollection`1
+    name: IBindableCollection
+    href: FastenUp.Runtime.Bindables.IBindableCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.Count*
+  commentId: Overload:FastenUp.Runtime.Bindables.BindableCollection`1.Count
+  href: FastenUp.Runtime.Bindables.BindableCollection-1.html#FastenUp_Runtime_Bindables_BindableCollection_1_Count
+  name: Count
+  nameWithType: BindableCollection<T>.Count
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.Count
+  nameWithType.vb: BindableCollection(Of T).Count
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).Count
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Action{{T}}
+  commentId: T:System.Action{`0}
+  parent: System
+  definition: System.Action`1
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Action`1
+  commentId: T:System.Action`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.action-1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: System.Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: System.Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Action`1
+    name: Action
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.action-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.Add*
+  commentId: Overload:FastenUp.Runtime.Bindables.BindableCollection`1.Add
+  href: FastenUp.Runtime.Bindables.BindableCollection-1.html#FastenUp_Runtime_Bindables_BindableCollection_1_Add__0_
+  name: Add
+  nameWithType: BindableCollection<T>.Add
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.Add
+  nameWithType.vb: BindableCollection(Of T).Add
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).Add
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.Remove*
+  commentId: Overload:FastenUp.Runtime.Bindables.BindableCollection`1.Remove
+  href: FastenUp.Runtime.Bindables.BindableCollection-1.html#FastenUp_Runtime_Bindables_BindableCollection_1_Remove__0_
+  name: Remove
+  nameWithType: BindableCollection<T>.Remove
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.Remove
+  nameWithType.vb: BindableCollection(Of T).Remove
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).Remove
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.Contains*
+  commentId: Overload:FastenUp.Runtime.Bindables.BindableCollection`1.Contains
+  href: FastenUp.Runtime.Bindables.BindableCollection-1.html#FastenUp_Runtime_Bindables_BindableCollection_1_Contains__0_
+  name: Contains
+  nameWithType: BindableCollection<T>.Contains
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.Contains
+  nameWithType.vb: BindableCollection(Of T).Contains
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).Contains
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.Clear*
+  commentId: Overload:FastenUp.Runtime.Bindables.BindableCollection`1.Clear
+  href: FastenUp.Runtime.Bindables.BindableCollection-1.html#FastenUp_Runtime_Bindables_BindableCollection_1_Clear
+  name: Clear
+  nameWithType: BindableCollection<T>.Clear
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.Clear
+  nameWithType.vb: BindableCollection(Of T).Clear
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).Clear
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1.CopyTo*
+  commentId: Overload:FastenUp.Runtime.Bindables.BindableCollection`1.CopyTo
+  href: FastenUp.Runtime.Bindables.BindableCollection-1.html#FastenUp_Runtime_Bindables_BindableCollection_1_CopyTo__0___System_Int32_
+  name: CopyTo
+  nameWithType: BindableCollection<T>.CopyTo
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>.CopyTo
+  nameWithType.vb: BindableCollection(Of T).CopyTo
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T).CopyTo
+- uid: '{T}[]'
+  isExternal: true
+  name: T[]
+  nameWithType: T[]
+  fullName: T[]
+  nameWithType.vb: T()
+  fullName.vb: T()
+  name.vb: T()
+  spec.csharp:
+  - name: T
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - name: T
+  - name: (
+  - name: )

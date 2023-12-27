@@ -1,0 +1,72 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Binders.Behaviours
+  commentId: N:FastenUp.Runtime.Binders.Behaviours
+  id: FastenUp.Runtime.Binders.Behaviours
+  children:
+  - FastenUp.Runtime.Binders.Behaviours.ColorBinder
+  - FastenUp.Runtime.Binders.Behaviours.DropdownBinder
+  - FastenUp.Runtime.Binders.Behaviours.InputFieldBinder
+  - FastenUp.Runtime.Binders.Behaviours.SliderBinder
+  - FastenUp.Runtime.Binders.Behaviours.SpriteBinder
+  - FastenUp.Runtime.Binders.Behaviours.TextBinder
+  - FastenUp.Runtime.Binders.Behaviours.ToggleBinder
+  - FastenUp.Runtime.Binders.Behaviours.VisibilityBinder
+  langs:
+  - csharp
+  - vb
+  name: FastenUp.Runtime.Binders.Behaviours
+  nameWithType: FastenUp.Runtime.Binders.Behaviours
+  fullName: FastenUp.Runtime.Binders.Behaviours
+  type: Namespace
+  assemblies:
+  - FastenUp.Runtime
+references:
+- uid: FastenUp.Runtime.Binders.Behaviours.ColorBinder
+  commentId: T:FastenUp.Runtime.Binders.Behaviours.ColorBinder
+  href: FastenUp.Runtime.Binders.Behaviours.ColorBinder.html
+  name: ColorBinder
+  nameWithType: ColorBinder
+  fullName: FastenUp.Runtime.Binders.Behaviours.ColorBinder
+- uid: FastenUp.Runtime.Binders.Behaviours.VisibilityBinder
+  commentId: T:FastenUp.Runtime.Binders.Behaviours.VisibilityBinder
+  href: FastenUp.Runtime.Binders.Behaviours.VisibilityBinder.html
+  name: VisibilityBinder
+  nameWithType: VisibilityBinder
+  fullName: FastenUp.Runtime.Binders.Behaviours.VisibilityBinder
+- uid: FastenUp.Runtime.Binders.Behaviours.ToggleBinder
+  commentId: T:FastenUp.Runtime.Binders.Behaviours.ToggleBinder
+  href: FastenUp.Runtime.Binders.Behaviours.ToggleBinder.html
+  name: ToggleBinder
+  nameWithType: ToggleBinder
+  fullName: FastenUp.Runtime.Binders.Behaviours.ToggleBinder
+- uid: FastenUp.Runtime.Binders.Behaviours.TextBinder
+  commentId: T:FastenUp.Runtime.Binders.Behaviours.TextBinder
+  href: FastenUp.Runtime.Binders.Behaviours.TextBinder.html
+  name: TextBinder
+  nameWithType: TextBinder
+  fullName: FastenUp.Runtime.Binders.Behaviours.TextBinder
+- uid: FastenUp.Runtime.Binders.Behaviours.SliderBinder
+  commentId: T:FastenUp.Runtime.Binders.Behaviours.SliderBinder
+  href: FastenUp.Runtime.Binders.Behaviours.SliderBinder.html
+  name: SliderBinder
+  nameWithType: SliderBinder
+  fullName: FastenUp.Runtime.Binders.Behaviours.SliderBinder
+- uid: FastenUp.Runtime.Binders.Behaviours.DropdownBinder
+  commentId: T:FastenUp.Runtime.Binders.Behaviours.DropdownBinder
+  href: FastenUp.Runtime.Binders.Behaviours.DropdownBinder.html
+  name: DropdownBinder
+  nameWithType: DropdownBinder
+  fullName: FastenUp.Runtime.Binders.Behaviours.DropdownBinder
+- uid: FastenUp.Runtime.Binders.Behaviours.SpriteBinder
+  commentId: T:FastenUp.Runtime.Binders.Behaviours.SpriteBinder
+  href: FastenUp.Runtime.Binders.Behaviours.SpriteBinder.html
+  name: SpriteBinder
+  nameWithType: SpriteBinder
+  fullName: FastenUp.Runtime.Binders.Behaviours.SpriteBinder
+- uid: FastenUp.Runtime.Binders.Behaviours.InputFieldBinder
+  commentId: T:FastenUp.Runtime.Binders.Behaviours.InputFieldBinder
+  href: FastenUp.Runtime.Binders.Behaviours.InputFieldBinder.html
+  name: InputFieldBinder
+  nameWithType: InputFieldBinder
+  fullName: FastenUp.Runtime.Binders.Behaviours.InputFieldBinder

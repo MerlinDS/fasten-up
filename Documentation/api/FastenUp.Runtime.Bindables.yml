@@ -1,0 +1,432 @@
+### YamlMime:ManagedReference
+items:
+- uid: FastenUp.Runtime.Bindables
+  commentId: N:FastenUp.Runtime.Bindables
+  id: FastenUp.Runtime.Bindables
+  children:
+  - FastenUp.Runtime.Bindables.BaseBindableAction`1
+  - FastenUp.Runtime.Bindables.BaseBindableEvent`1
+  - FastenUp.Runtime.Bindables.BaseBindable`1
+  - FastenUp.Runtime.Bindables.BindableAction
+  - FastenUp.Runtime.Bindables.BindableAction`1
+  - FastenUp.Runtime.Bindables.BindableCollection`1
+  - FastenUp.Runtime.Bindables.BindableEvent
+  - FastenUp.Runtime.Bindables.BindableEvent`1
+  - FastenUp.Runtime.Bindables.BindableRef`1
+  - FastenUp.Runtime.Bindables.BindableSetup`1
+  - FastenUp.Runtime.Bindables.Bindable`1
+  - FastenUp.Runtime.Bindables.IBindable
+  - FastenUp.Runtime.Bindables.IBindableAction`1
+  - FastenUp.Runtime.Bindables.IBindableCollection`1
+  - FastenUp.Runtime.Bindables.IBindableEvent`1
+  - FastenUp.Runtime.Bindables.IBindableRef`1
+  - FastenUp.Runtime.Bindables.IBindable`1
+  langs:
+  - csharp
+  - vb
+  name: FastenUp.Runtime.Bindables
+  nameWithType: FastenUp.Runtime.Bindables
+  fullName: FastenUp.Runtime.Bindables
+  type: Namespace
+  assemblies:
+  - FastenUp.Runtime
+references:
+- uid: FastenUp.Runtime.Bindables.BindableRef`1
+  commentId: T:FastenUp.Runtime.Bindables.BindableRef`1
+  href: FastenUp.Runtime.Bindables.BindableRef-1.html
+  name: BindableRef<T>
+  nameWithType: BindableRef<T>
+  fullName: FastenUp.Runtime.Bindables.BindableRef<T>
+  nameWithType.vb: BindableRef(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.BindableRef(Of T)
+  name.vb: BindableRef(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.BindableRef`1
+    name: BindableRef
+    href: FastenUp.Runtime.Bindables.BindableRef-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.BindableRef`1
+    name: BindableRef
+    href: FastenUp.Runtime.Bindables.BindableRef-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindable
+  commentId: T:FastenUp.Runtime.Bindables.IBindable
+  parent: FastenUp.Runtime.Bindables
+  href: FastenUp.Runtime.Bindables.IBindable.html
+  name: IBindable
+  nameWithType: IBindable
+  fullName: FastenUp.Runtime.Bindables.IBindable
+- uid: FastenUp.Runtime.Bindables.IBindable`1
+  commentId: T:FastenUp.Runtime.Bindables.IBindable`1
+  href: FastenUp.Runtime.Bindables.IBindable-1.html
+  name: IBindable<T>
+  nameWithType: IBindable<T>
+  fullName: FastenUp.Runtime.Bindables.IBindable<T>
+  nameWithType.vb: IBindable(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindable(Of T)
+  name.vb: IBindable(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindable`1
+    name: IBindable
+    href: FastenUp.Runtime.Bindables.IBindable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindable`1
+    name: IBindable
+    href: FastenUp.Runtime.Bindables.IBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindableRef`1
+  commentId: T:FastenUp.Runtime.Bindables.IBindableRef`1
+  href: FastenUp.Runtime.Bindables.IBindableRef-1.html
+  name: IBindableRef<T>
+  nameWithType: IBindableRef<T>
+  fullName: FastenUp.Runtime.Bindables.IBindableRef<T>
+  nameWithType.vb: IBindableRef(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableRef(Of T)
+  name.vb: IBindableRef(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindableRef`1
+    name: IBindableRef
+    href: FastenUp.Runtime.Bindables.IBindableRef-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindableRef`1
+    name: IBindableRef
+    href: FastenUp.Runtime.Bindables.IBindableRef-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.BindableEvent`1
+  commentId: T:FastenUp.Runtime.Bindables.BindableEvent`1
+  href: FastenUp.Runtime.Bindables.BindableEvent-1.html
+  name: BindableEvent<T>
+  nameWithType: BindableEvent<T>
+  fullName: FastenUp.Runtime.Bindables.BindableEvent<T>
+  nameWithType.vb: BindableEvent(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.BindableEvent(Of T)
+  name.vb: BindableEvent(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.BindableEvent`1
+    name: BindableEvent
+    href: FastenUp.Runtime.Bindables.BindableEvent-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.BindableEvent`1
+    name: BindableEvent
+    href: FastenUp.Runtime.Bindables.BindableEvent-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.BindableEvent
+  commentId: T:FastenUp.Runtime.Bindables.BindableEvent
+  href: FastenUp.Runtime.Bindables.BindableEvent.html
+  name: BindableEvent
+  nameWithType: BindableEvent
+  fullName: FastenUp.Runtime.Bindables.BindableEvent
+- uid: FastenUp.Runtime.Bindables.BaseBindable`1
+  commentId: T:FastenUp.Runtime.Bindables.BaseBindable`1
+  href: FastenUp.Runtime.Bindables.BaseBindable-1.html
+  name: BaseBindable<T>
+  nameWithType: BaseBindable<T>
+  fullName: FastenUp.Runtime.Bindables.BaseBindable<T>
+  nameWithType.vb: BaseBindable(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindable(Of T)
+  name.vb: BaseBindable(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.BaseBindable`1
+    name: BaseBindable
+    href: FastenUp.Runtime.Bindables.BaseBindable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.BaseBindable`1
+    name: BaseBindable
+    href: FastenUp.Runtime.Bindables.BaseBindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1
+  commentId: T:FastenUp.Runtime.Bindables.BaseBindableEvent`1
+  href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html
+  name: BaseBindableEvent<T>
+  nameWithType: BaseBindableEvent<T>
+  fullName: FastenUp.Runtime.Bindables.BaseBindableEvent<T>
+  nameWithType.vb: BaseBindableEvent(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableEvent(Of T)
+  name.vb: BaseBindableEvent(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1
+    name: BaseBindableEvent
+    href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1
+    name: BaseBindableEvent
+    href: FastenUp.Runtime.Bindables.BaseBindableEvent-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindableAction`1
+  commentId: T:FastenUp.Runtime.Bindables.IBindableAction`1
+  href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  name: IBindableAction<T>
+  nameWithType: IBindableAction<T>
+  fullName: FastenUp.Runtime.Bindables.IBindableAction<T>
+  nameWithType.vb: IBindableAction(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableAction(Of T)
+  name.vb: IBindableAction(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindableAction`1
+    name: IBindableAction
+    href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindableAction`1
+    name: IBindableAction
+    href: FastenUp.Runtime.Bindables.IBindableAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindableEvent`1
+  commentId: T:FastenUp.Runtime.Bindables.IBindableEvent`1
+  href: FastenUp.Runtime.Bindables.IBindableEvent-1.html
+  name: IBindableEvent<T>
+  nameWithType: IBindableEvent<T>
+  fullName: FastenUp.Runtime.Bindables.IBindableEvent<T>
+  nameWithType.vb: IBindableEvent(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableEvent(Of T)
+  name.vb: IBindableEvent(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindableEvent`1
+    name: IBindableEvent
+    href: FastenUp.Runtime.Bindables.IBindableEvent-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindableEvent`1
+    name: IBindableEvent
+    href: FastenUp.Runtime.Bindables.IBindableEvent-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.Bindable`1
+  commentId: T:FastenUp.Runtime.Bindables.Bindable`1
+  href: FastenUp.Runtime.Bindables.Bindable-1.html
+  name: Bindable<T>
+  nameWithType: Bindable<T>
+  fullName: FastenUp.Runtime.Bindables.Bindable<T>
+  nameWithType.vb: Bindable(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.Bindable(Of T)
+  name.vb: Bindable(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.Bindable`1
+    name: Bindable
+    href: FastenUp.Runtime.Bindables.Bindable-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.Bindable`1
+    name: Bindable
+    href: FastenUp.Runtime.Bindables.Bindable-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.IBindableCollection`1
+  commentId: T:FastenUp.Runtime.Bindables.IBindableCollection`1
+  href: FastenUp.Runtime.Bindables.IBindableCollection-1.html
+  name: IBindableCollection<T>
+  nameWithType: IBindableCollection<T>
+  fullName: FastenUp.Runtime.Bindables.IBindableCollection<T>
+  nameWithType.vb: IBindableCollection(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.IBindableCollection(Of T)
+  name.vb: IBindableCollection(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.IBindableCollection`1
+    name: IBindableCollection
+    href: FastenUp.Runtime.Bindables.IBindableCollection-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.IBindableCollection`1
+    name: IBindableCollection
+    href: FastenUp.Runtime.Bindables.IBindableCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.BindableSetup`1
+  commentId: T:FastenUp.Runtime.Bindables.BindableSetup`1
+  href: FastenUp.Runtime.Bindables.BindableSetup-1.html
+  name: BindableSetup<T>
+  nameWithType: BindableSetup<T>
+  fullName: FastenUp.Runtime.Bindables.BindableSetup<T>
+  nameWithType.vb: BindableSetup(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.BindableSetup(Of T)
+  name.vb: BindableSetup(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.BindableSetup`1
+    name: BindableSetup
+    href: FastenUp.Runtime.Bindables.BindableSetup-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.BindableSetup`1
+    name: BindableSetup
+    href: FastenUp.Runtime.Bindables.BindableSetup-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.BindableAction
+  commentId: T:FastenUp.Runtime.Bindables.BindableAction
+  href: FastenUp.Runtime.Bindables.BindableAction.html
+  name: BindableAction
+  nameWithType: BindableAction
+  fullName: FastenUp.Runtime.Bindables.BindableAction
+- uid: FastenUp.Runtime.Bindables.BindableAction`1
+  commentId: T:FastenUp.Runtime.Bindables.BindableAction`1
+  href: FastenUp.Runtime.Bindables.BindableAction-1.html
+  name: BindableAction<T>
+  nameWithType: BindableAction<T>
+  fullName: FastenUp.Runtime.Bindables.BindableAction<T>
+  nameWithType.vb: BindableAction(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.BindableAction(Of T)
+  name.vb: BindableAction(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.BindableAction`1
+    name: BindableAction
+    href: FastenUp.Runtime.Bindables.BindableAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.BindableAction`1
+    name: BindableAction
+    href: FastenUp.Runtime.Bindables.BindableAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.BaseBindableAction`1
+  commentId: T:FastenUp.Runtime.Bindables.BaseBindableAction`1
+  href: FastenUp.Runtime.Bindables.BaseBindableAction-1.html
+  name: BaseBindableAction<T>
+  nameWithType: BaseBindableAction<T>
+  fullName: FastenUp.Runtime.Bindables.BaseBindableAction<T>
+  nameWithType.vb: BaseBindableAction(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableAction(Of T)
+  name.vb: BaseBindableAction(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableAction`1
+    name: BaseBindableAction
+    href: FastenUp.Runtime.Bindables.BaseBindableAction-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.BaseBindableAction`1
+    name: BaseBindableAction
+    href: FastenUp.Runtime.Bindables.BaseBindableAction-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables.BindableCollection`1
+  commentId: T:FastenUp.Runtime.Bindables.BindableCollection`1
+  href: FastenUp.Runtime.Bindables.BindableCollection-1.html
+  name: BindableCollection<T>
+  nameWithType: BindableCollection<T>
+  fullName: FastenUp.Runtime.Bindables.BindableCollection<T>
+  nameWithType.vb: BindableCollection(Of T)
+  fullName.vb: FastenUp.Runtime.Bindables.BindableCollection(Of T)
+  name.vb: BindableCollection(Of T)
+  spec.csharp:
+  - uid: FastenUp.Runtime.Bindables.BindableCollection`1
+    name: BindableCollection
+    href: FastenUp.Runtime.Bindables.BindableCollection-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: FastenUp.Runtime.Bindables.BindableCollection`1
+    name: BindableCollection
+    href: FastenUp.Runtime.Bindables.BindableCollection-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: FastenUp.Runtime.Bindables
+  commentId: N:FastenUp.Runtime.Bindables
+  href: FastenUp.html
+  name: FastenUp.Runtime.Bindables
+  nameWithType: FastenUp.Runtime.Bindables
+  fullName: FastenUp.Runtime.Bindables
+  spec.csharp:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Bindables
+    name: Bindables
+    href: FastenUp.Runtime.Bindables.html
+  spec.vb:
+  - uid: FastenUp
+    name: FastenUp
+    href: FastenUp.html
+  - name: .
+  - uid: FastenUp.Runtime
+    name: Runtime
+    href: FastenUp.Runtime.html
+  - name: .
+  - uid: FastenUp.Runtime.Bindables
+    name: Bindables
+    href: FastenUp.Runtime.Bindables.html
