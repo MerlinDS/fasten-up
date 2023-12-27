@@ -4,7 +4,7 @@
       "src": [
         {
           "src": "../",
-          "files": [ "FastenUp.Runtime.csproj" ]
+          "files": [ "Assets/FastenUp/Runtime/**/*.cs" ]
         }
       ],
       "filter": "filterConfig.yml",
