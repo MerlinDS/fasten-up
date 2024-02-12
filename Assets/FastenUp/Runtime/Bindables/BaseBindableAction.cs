@@ -22,6 +22,7 @@ namespace FastenUp.Runtime.Bindables
                 return;
 
             Binders.Add(actionBinder);
+            PostBind(actionBinder);
         }
         
         /// <inheritdoc />
@@ -29,5 +30,8 @@ namespace FastenUp.Runtime.Bindables
         {
             Binders.Remove(actionBinder);
         }
+
+        protected abstract void PostBind(IActionBinder<T> actionBinder);
+        protected abstract void PostUnBind();
     }
 }
