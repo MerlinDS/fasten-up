@@ -25,7 +25,7 @@ namespace FastenUp.Tests.Binders.Behaviours
                 ITestCaseBuilder builder;
                 builder = CreateBuilder((sut, container) =>
                 {
-                    var children = new[]
+                    IBehaviourDelegate[] children =
                     {
                         CreateGameObject(nameof(TestGraphic), container).AddComponent<TestGraphic>().Delegate,
                         CreateGameObject(nameof(TestLayoutElement), container).AddComponent<TestLayoutElement>()
@@ -37,15 +37,19 @@ namespace FastenUp.Tests.Binders.Behaviours
 
                 yield return new TestCaseData(builder, false, (Action<ITestCaseSut>)(sut =>
                 {
-                    foreach (var child in sut.BehaviourChildren)
+                    foreach (IBehaviourDelegate child in sut.BehaviourChildren)
+                    {
                         child.Received().OnDisable();
+                    }
                 })).SetName(
                     "When_value_is_false_root_has_no_canvas_and_children_with_behaviours_Should_set_value_to_false_and_disable_children");
 
                 yield return new TestCaseData(builder, true, (Action<ITestCaseSut>)(sut =>
                 {
-                    foreach (var child in sut.BehaviourChildren)
+                    foreach (IBehaviourDelegate child in sut.BehaviourChildren)
+                    {
                         child.Received().OnEnable();
+                    }
                 })).SetName(
                     "When_value_is_true_root_has_no_canvas_and_children_with_behaviours_Should_set_value_to_true_and_enable_children");
 
@@ -53,7 +57,7 @@ namespace FastenUp.Tests.Binders.Behaviours
                 builder = CreateBuilder((sut, container) =>
                 {
                     var canvas = container.AddComponent<Canvas>();
-                    var children = new[]
+                    IBehaviourDelegate[] children = new[]
                     {
                         CreateGameObject(nameof(TestGraphic), container).AddComponent<TestGraphic>().Delegate,
                         CreateGameObject(nameof(TestLayoutElement), container).AddComponent<TestLayoutElement>()
@@ -67,8 +71,10 @@ namespace FastenUp.Tests.Binders.Behaviours
                 yield return new TestCaseData(builder, false, (Action<ITestCaseSut>)(sut =>
                 {
                     sut.Canvas.enabled.Should().BeFalse();
-                    foreach (var child in sut.BehaviourChildren)
+                    foreach (IBehaviourDelegate child in sut.BehaviourChildren)
+                    {
                         child.DidNotReceive().OnDisable(); //Canvas is responsible for its children visibility
+                    }
                 })).SetName(
                     "When_value_is_false_root_has_canvas_and_children_with_behaviours_Should_set_value_to_false_disable_canvas_but_ignore_children");
 
@@ -76,14 +82,16 @@ namespace FastenUp.Tests.Binders.Behaviours
                     (Action<ITestCaseSut>)(sut =>
                     {
                         sut.Canvas.enabled.Should().BeTrue();
-                        foreach (var child in sut.BehaviourChildren)
+                        foreach (IBehaviourDelegate child in sut.BehaviourChildren)
+                        {
                             child.DidNotReceive().OnDisable(); //Canvas is responsible for its children visibility
+                        }
                     })).SetName(
                     "When_value_is_true_root_has_canvas_and_children_with_behaviours_Should_set_value_to_true_enable_canvas_but_ignore_children");
 
                 builder = CreateBuilder((sut, container) =>
                 {
-                    var behaviours = new[]
+                    IBehaviourDelegate[] behaviours = new[]
                     {
                         CreateGameObject(nameof(TestGraphic), container).AddComponent<TestGraphic>().Delegate,
                         CreateGameObject(nameof(TestLayoutElement), container).AddComponent<TestLayoutElement>()
@@ -92,15 +100,15 @@ namespace FastenUp.Tests.Binders.Behaviours
 
                     sut.BehaviourChildren.Returns(behaviours);
 
-                    var childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", container);
-                    var childVisibilityBehaviours = new[]
+                    GameObject childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", container);
+                    IBehaviourDelegate[] childVisibilityBehaviours = new[]
                     {
                         CreateGameObject(nameof(TestGraphic), childGameObject)
                             .AddComponent<TestGraphic>().Delegate,
                         CreateGameObject(nameof(TestLayoutElement), childGameObject)
                             .AddComponent<TestLayoutElement>().Delegate
                     };
-                    var childVisibility = CreateBinder(childGameObject);
+                    VisibilityBinder childVisibility = CreateBinder(childGameObject);
 
                     var child = Substitute.For<ITestCaseSut>();
                     child.VisibilityBinder.Returns(childVisibility);
@@ -111,37 +119,45 @@ namespace FastenUp.Tests.Binders.Behaviours
                 });
                 yield return new TestCaseData(builder, false, (Action<ITestCaseSut>)(sut =>
                 {
-                    foreach (var behaviour in sut.BehaviourChildren)
+                    foreach (IBehaviourDelegate behaviour in sut.BehaviourChildren)
+                    {
                         behaviour.Received().OnDisable();
+                    }
 
-                    foreach (var child in sut.Children)
+                    foreach (ITestCaseSut child in sut.Children)
                     {
                         child.VisibilityBinder.GetValue().Should()
                             .BeTrue("child visibility value should not be changed by parent");
-                        foreach (var childBehaviour in child.BehaviourChildren)
+                        foreach (IBehaviourDelegate childBehaviour in child.BehaviourChildren)
+                        {
                             childBehaviour.Received().OnDisable();
+                        }
                     }
                 })).SetName(
                     "When_value_is_false_root_has_children_with_behaviours_and_visibility_Should_set_value_to_false_and_disable_all_children_but_not_change_visibility_value_of_children");
 
                 yield return new TestCaseData(builder, true, (Action<ITestCaseSut>)(sut =>
                 {
-                    foreach (var behaviour in sut.BehaviourChildren)
+                    foreach (IBehaviourDelegate behaviour in sut.BehaviourChildren)
+                    {
                         behaviour.Received().OnEnable();
+                    }
 
-                    foreach (var child in sut.Children)
+                    foreach (ITestCaseSut child in sut.Children)
                     {
                         child.VisibilityBinder.GetValue().Should()
                             .BeTrue("child visibility value should not be changed by parent");
-                        foreach (var childBehaviour in child.BehaviourChildren)
+                        foreach (IBehaviourDelegate childBehaviour in child.BehaviourChildren)
+                        {
                             childBehaviour.Received().OnEnable();
+                        }
                     }
                 })).SetName(
                     "When_value_is_true_root_has_children_with_behaviours_and_visibility_Should_set_value_to_true_and_enable_all_children_but_not_change_visibility_value_of_children");
 
                 builder = CreateBuilder((sut, container) =>
                 {
-                    var behaviours = new[]
+                    IBehaviourDelegate[] behaviours = new[]
                     {
                         CreateGameObject(nameof(TestGraphic), container).AddComponent<TestGraphic>().Delegate,
                         CreateGameObject(nameof(TestLayoutElement), container).AddComponent<TestLayoutElement>()
@@ -150,19 +166,21 @@ namespace FastenUp.Tests.Binders.Behaviours
 
                     sut.BehaviourChildren.Returns(behaviours);
 
-                    var childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", container);
-                    var childVisibilityBehaviours = new[]
+                    GameObject childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", container);
+                    IBehaviourDelegate[] childVisibilityBehaviours = new[]
                     {
                         CreateGameObject(nameof(TestGraphic), childGameObject)
                             .AddComponent<TestGraphic>().Delegate,
                         CreateGameObject(nameof(TestLayoutElement), childGameObject)
                             .AddComponent<TestLayoutElement>().Delegate
                     };
-                    var childVisibility = CreateBinder(childGameObject);
+                    VisibilityBinder childVisibility = CreateBinder(childGameObject);
                     childVisibility.SetValue(false);
 
-                    foreach (var behaviour in childVisibilityBehaviours)
+                    foreach (IBehaviourDelegate behaviour in childVisibilityBehaviours)
+                    {
                         behaviour.ClearReceivedCalls();
+                    }
 
                     var child = Substitute.For<ITestCaseSut>();
                     child.VisibilityBinder.Returns(childVisibility);
@@ -174,30 +192,38 @@ namespace FastenUp.Tests.Binders.Behaviours
 
                 yield return new TestCaseData(builder, false, (Action<ITestCaseSut>)(sut =>
                 {
-                    foreach (var behaviour in sut.BehaviourChildren)
+                    foreach (IBehaviourDelegate behaviour in sut.BehaviourChildren)
+                    {
                         behaviour.Received().OnDisable();
+                    }
 
-                    foreach (var child in sut.Children)
+                    foreach (ITestCaseSut child in sut.Children)
                     {
                         child.VisibilityBinder.GetValue().Should()
                             .BeFalse("child visibility value should not be changed by parent");
-                        foreach (var childBehaviour in child.BehaviourChildren)
+                        foreach (IBehaviourDelegate childBehaviour in child.BehaviourChildren)
+                        {
                             childBehaviour.DidNotReceive().OnDisable();
+                        }
                     }
                 })).SetName(
                     "When_value_is_false_root_has_children_with_behaviours_and_visibility_with_default_false_Should_set_value_to_false_and_disable_own_behaviours_and_ignore_children");
 
                 yield return new TestCaseData(builder, true, (Action<ITestCaseSut>)(sut =>
                 {
-                    foreach (var behaviour in sut.BehaviourChildren)
+                    foreach (IBehaviourDelegate behaviour in sut.BehaviourChildren)
+                    {
                         behaviour.Received().OnEnable();
+                    }
 
-                    foreach (var child in sut.Children)
+                    foreach (ITestCaseSut child in sut.Children)
                     {
                         child.VisibilityBinder.GetValue().Should()
                             .BeFalse("child visibility value should not be changed by parent");
-                        foreach (var childBehaviour in child.BehaviourChildren)
+                        foreach (IBehaviourDelegate childBehaviour in child.BehaviourChildren)
+                        {
                             childBehaviour.DidNotReceive().OnEnable();
+                        }
                     }
                 })).SetName(
                     "When_value_is_true_root_has_children_with_behaviours_and_visibility_with_default_false_Should_set_value_to_true_and_enable_own_behaviours_and_ignore_children");
@@ -208,14 +234,18 @@ namespace FastenUp.Tests.Binders.Behaviours
         public void SetValue(ITestCaseBuilder builder, bool value, Action<ITestCaseSut> assert)
         {
             //Arrange
-            var sut = builder.Build();
+            ITestCaseSut sut = builder.Build();
             if (value)
+            {
                 sut.VisibilityBinder.SetValue(false);
+            }
 
             if (sut.BehaviourChildren != null)
             {
-                foreach (var child in sut.BehaviourChildren)
+                foreach (IBehaviourDelegate child in sut.BehaviourChildren)
+                {
                     child.ClearReceivedCalls();
+                }
             }
 
             //Act
@@ -229,62 +259,72 @@ namespace FastenUp.Tests.Binders.Behaviours
         public void SetValue_When_value_true_and_parent_not_visible_Should_not_enable_children()
         {
             //Arrange
-            var parent = CreateBinder(CreateGameObject(nameof(VisibilityBinderTest)));
+            VisibilityBinder parent = CreateBinder(CreateGameObject(nameof(VisibilityBinderTest)));
             parent.SetValue(false);
-            var childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", parent.gameObject);
-            var childVisibilityBehaviours = new[]
+            GameObject childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", parent.gameObject);
+            IBehaviourDelegate[] childVisibilityBehaviours = new[]
             {
                 CreateGameObject(nameof(TestGraphic), childGameObject)
                     .AddComponent<TestGraphic>().Delegate,
                 CreateGameObject(nameof(TestLayoutElement), childGameObject)
                     .AddComponent<TestLayoutElement>().Delegate
             };
-            var sut = CreateBinder(childGameObject);
+            VisibilityBinder sut = CreateBinder(childGameObject);
             sut.SetValue(false);
 
-            foreach (var behaviour in childVisibilityBehaviours)
+            foreach (IBehaviourDelegate behaviour in childVisibilityBehaviours)
+            {
                 behaviour.ClearReceivedCalls();
+            }
+
             //Act
             sut.SetValue(true);
             //Assert
             sut.GetValue().Should().BeTrue();
-            foreach (var behaviour in childVisibilityBehaviours)
+            foreach (IBehaviourDelegate behaviour in childVisibilityBehaviours)
+            {
                 behaviour.DidNotReceive().OnEnable();
+            }
         }
 
         [Test]
         public void SetValue_When_value_false_and_children_gameObjects_disabled_Should_not_enable_children()
         {
             //Arrange
-            var gameObject = CreateGameObject(nameof(VisibilityBinderTest));
-            var childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", gameObject);
+            GameObject gameObject = CreateGameObject(nameof(VisibilityBinderTest));
+            GameObject childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", gameObject);
 
-            var behaviours = new[]
+            IBehaviourDelegate[] behaviours = new[]
             {
                 childGameObject.AddComponent<TestGraphic>().Delegate,
                 childGameObject.AddComponent<TestLayoutElement>().Delegate
             };
             childGameObject.SetActive(false);
-            var sut = CreateBinder(gameObject);
+            VisibilityBinder sut = CreateBinder(gameObject);
 
-            foreach (var behaviour in behaviours)
+            foreach (IBehaviourDelegate behaviour in behaviours)
+            {
                 behaviour.ClearReceivedCalls();
+            }
+
             //Act
             sut.SetValue(false);
             //Assert
             sut.GetValue().Should().BeFalse();
-            foreach (var behaviour in behaviours)
+            foreach (IBehaviourDelegate behaviour in behaviours)
+            {
                 behaviour.DidNotReceive().OnDisable();
+            }
         }
 
         [Test]
         public void SetValue_When_child_gameObject_with_behaviour_was_destroyed_and_cache_not_rebuilt_Should_log_error()
         {
             //Arrange
-            var gameObject = CreateGameObject(nameof(VisibilityBinderTest));
-            var childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", gameObject);
+            GameObject gameObject = CreateGameObject(nameof(VisibilityBinderTest));
+            GameObject childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", gameObject);
             childGameObject.AddComponent<TestGraphic>();
-            var sut = CreateBinder(gameObject);
+            VisibilityBinder sut = CreateBinder(gameObject);
             //Act
             Object.DestroyImmediate(childGameObject);
             sut.SetValue(false);
@@ -297,10 +337,10 @@ namespace FastenUp.Tests.Binders.Behaviours
             SetValue_When_child_gameObject_with_visibility_was_destroyed_and_cache_not_rebuilt_Should_log_error()
         {
             //Arrange
-            var gameObject = CreateGameObject(nameof(VisibilityBinderTest));
-            var childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", gameObject);
+            GameObject gameObject = CreateGameObject(nameof(VisibilityBinderTest));
+            GameObject childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", gameObject);
             childGameObject.AddComponent<VisibilityBinder>();
-            var sut = CreateBinder(gameObject);
+            VisibilityBinder sut = CreateBinder(gameObject);
             //Act
             Object.DestroyImmediate(childGameObject);
             sut.SetValue(false);
@@ -312,10 +352,10 @@ namespace FastenUp.Tests.Binders.Behaviours
         public void SetValue_When_child_gameObject_with_behaviour_was_destroyed_and_cache_rebuilt_Should_not_log_error()
         {
             //Arrange
-            var gameObject = CreateGameObject(nameof(VisibilityBinderTest));
-            var childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", gameObject);
+            GameObject gameObject = CreateGameObject(nameof(VisibilityBinderTest));
+            GameObject childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", gameObject);
             childGameObject.AddComponent<TestGraphic>();
-            var sut = CreateBinder(gameObject);
+            VisibilityBinder sut = CreateBinder(gameObject);
             //Act
             Object.DestroyImmediate(childGameObject);
             sut.RebuildCache();
@@ -329,10 +369,10 @@ namespace FastenUp.Tests.Binders.Behaviours
             SetValue_When_child_gameObject_with_visibility_was_destroyed_and_cache_rebuilt_Should_not_log_error()
         {
             //Arrange
-            var gameObject = CreateGameObject(nameof(VisibilityBinderTest));
-            var childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", gameObject);
+            GameObject gameObject = CreateGameObject(nameof(VisibilityBinderTest));
+            GameObject childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", gameObject);
             childGameObject.AddComponent<VisibilityBinder>();
-            var sut = CreateBinder(gameObject);
+            VisibilityBinder sut = CreateBinder(gameObject);
             //Act
             Object.DestroyImmediate(childGameObject);
             sut.RebuildCache();
@@ -346,9 +386,9 @@ namespace FastenUp.Tests.Binders.Behaviours
         {
             //Arrange
             var gameObject = new GameObject(nameof(VisibilityBinderTest));
-            var childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", gameObject);
-            var sut = CreateBinder(childGameObject);
-            var parent = CreateBinder(gameObject);
+            GameObject childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", gameObject);
+            VisibilityBinder sut = CreateBinder(childGameObject);
+            VisibilityBinder parent = CreateBinder(gameObject);
             var handler = Substitute.For<OnBinderChanged>();
             sut.OnBinderChanged += handler;
             //Act
@@ -362,9 +402,9 @@ namespace FastenUp.Tests.Binders.Behaviours
         {
             //Arrange
             var gameObject = new GameObject(nameof(VisibilityBinderTest));
-            var childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", gameObject);
-            var sut = CreateBinder(childGameObject);
-            var parent = CreateBinder(gameObject);
+            GameObject childGameObject = CreateGameObject(nameof(VisibilityBinderTest) + "Child", gameObject);
+            VisibilityBinder sut = CreateBinder(childGameObject);
+            VisibilityBinder parent = CreateBinder(gameObject);
             var handler = Substitute.For<OnBinderChanged>();
             sut.OnBinderChanged += handler;
             //Act
@@ -379,9 +419,9 @@ namespace FastenUp.Tests.Binders.Behaviours
             builder.Build().Returns(_ =>
             {
                 var sut = Substitute.For<ITestCaseSut>();
-                var container = CreateGameObject(nameof(VisibilityBinderTest));
+                GameObject container = CreateGameObject(nameof(VisibilityBinderTest));
                 build(sut, container);
-                var visibility = CreateBinder(container);
+                VisibilityBinder visibility = CreateBinder(container);
                 sut.VisibilityBinder.Returns(visibility);
                 return sut;
             });
@@ -399,7 +439,10 @@ namespace FastenUp.Tests.Binders.Behaviours
         {
             var gameObject = new GameObject(name);
             if (parent != null)
+            {
                 gameObject.transform.SetParent(parent.transform);
+            }
+
             return gameObject;
         }
 

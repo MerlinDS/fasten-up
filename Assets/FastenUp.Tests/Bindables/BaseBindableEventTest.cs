@@ -160,7 +160,7 @@ namespace FastenUp.Tests.Bindables
             var sut = Substitute.ForPartsOf<BaseBindableEvent<UnityAction>>();
             var listener = Substitute.For<UnityAction>();
             //Act
-            var result = sut.HasListeners(listener);
+            bool result = sut.HasListeners(listener);
             //Assert
             result.Should().BeFalse();
         }
@@ -173,7 +173,7 @@ namespace FastenUp.Tests.Bindables
             var listener = Substitute.For<UnityAction>();
             sut.AddListener(listener);
             //Act
-            var result = sut.HasListeners(listener);
+            bool result = sut.HasListeners(listener);
             //Assert
             result.Should().BeTrue();
         }

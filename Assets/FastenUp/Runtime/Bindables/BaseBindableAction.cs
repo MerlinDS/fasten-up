@@ -17,9 +17,10 @@ namespace FastenUp.Runtime.Bindables
         /// <inheritdoc />
         void IBindableAction<T>.Bind(IActionBinder<T> actionBinder)
         {
-            
             if(actionBinder.OnAction == null)
+            {
                 return;
+            }
 
             Binders.Add(actionBinder);
             PostBind(actionBinder);

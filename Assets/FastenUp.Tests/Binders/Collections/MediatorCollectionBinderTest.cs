@@ -22,8 +22,8 @@ namespace FastenUp.Tests.Binders.Collections
             Add_When_prefab_has_no_mediator_assigner_Should_add_mediator_to_collection_and_attach_mediator_assigner()
         {
             // Arrange
-            var prefab = CreatePrefab();
-            var sut = TestBehavior.Create(prefab);
+            GameObject prefab = CreatePrefab();
+            MediatorCollectionBinder sut = TestBehavior.Create(prefab);
             var mediator = Substitute.For<IInternalMediator>();
             sut.ExecuteOnEnable();
             // Act
@@ -38,8 +38,8 @@ namespace FastenUp.Tests.Binders.Collections
         public void Add_When_prefab_has_mediator_assigner_Should_add_mediator_to_collection()
         {
             // Arrange
-            var prefab = CreatePrefab(true);
-            var sut = TestBehavior.Create(prefab);
+            GameObject prefab = CreatePrefab(true);
+            MediatorCollectionBinder sut = TestBehavior.Create(prefab);
             var mediator = Substitute.For<IInternalMediator>();
             sut.ExecuteOnEnable();
             // Act
@@ -54,8 +54,8 @@ namespace FastenUp.Tests.Binders.Collections
         public void Remove_When_mediator_is_not_in_collection_Should_not_throw_exception()
         {
             // Arrange
-            var prefab = CreatePrefab();
-            var sut = TestBehavior.Create(prefab);
+            GameObject prefab = CreatePrefab();
+            MediatorCollectionBinder sut = TestBehavior.Create(prefab);
             var mediator = Substitute.For<IInternalMediator>();
             sut.ExecuteOnEnable();
             // Act
@@ -68,8 +68,8 @@ namespace FastenUp.Tests.Binders.Collections
         public void Remove_When_mediator_is_in_collection_Should_release_mediator_assigner()
         {
             // Arrange
-            var prefab = CreatePrefab();
-            var sut = TestBehavior.Create(prefab);
+            GameObject prefab = CreatePrefab();
+            MediatorCollectionBinder sut = TestBehavior.Create(prefab);
             var mediator = Substitute.For<IInternalMediator>();
             sut.ExecuteOnEnable();
             sut.Add(mediator);
@@ -82,8 +82,8 @@ namespace FastenUp.Tests.Binders.Collections
         [Test] public void Remove_When_called_twice_on_same_mediator_Should_release_mediator_assigner_once()
         {
             // Arrange
-            var prefab = CreatePrefab();
-            var sut = TestBehavior.Create(prefab);
+            GameObject prefab = CreatePrefab();
+            MediatorCollectionBinder sut = TestBehavior.Create(prefab);
             var mediator = Substitute.For<IInternalMediator>();
             sut.ExecuteOnEnable();
             sut.Add(mediator);
@@ -98,8 +98,8 @@ namespace FastenUp.Tests.Binders.Collections
         public void OnEnable_When_prefab_is_not_null_Should_disable_prefab()
         {
             // Arrange
-            var prefab = CreatePrefab();
-            var sut = TestBehavior.Create(prefab);
+            GameObject prefab = CreatePrefab();
+            MediatorCollectionBinder sut = TestBehavior.Create(prefab);
             // Act
             sut.ExecuteOnEnable();
             // Assert
@@ -110,7 +110,7 @@ namespace FastenUp.Tests.Binders.Collections
         public void OnEnable_When_prefab_is_null_Should_throw_exception()
         {
             // Arrange
-            var sut = TestBehavior.Create(null);
+            MediatorCollectionBinder sut = TestBehavior.Create(null);
             // Act
             Action act = () => sut.ExecuteOnEnable();
             // Assert
@@ -121,11 +121,11 @@ namespace FastenUp.Tests.Binders.Collections
         public void OnDisable_When_called_Should_clear_pool()
         {
             // Arrange
-            var prefab = CreatePrefab();
-            var sut = TestBehavior.Create(prefab);
+            GameObject prefab = CreatePrefab();
+            MediatorCollectionBinder sut = TestBehavior.Create(prefab);
             sut.ExecuteOnEnable();
             sut.Add(Substitute.For<IInternalMediator>());
-            var actual = sut.gameObject.transform.GetChild(0).gameObject;
+            GameObject actual = sut.gameObject.transform.GetChild(0).gameObject;
             // Act
             sut.ExecuteOnDisable();
             // Assert
@@ -153,7 +153,10 @@ namespace FastenUp.Tests.Binders.Collections
         {
             var prefab = new GameObject(nameof(TestBehavior) + "Prefab");
             if (hasAssigner)
+            {
                 prefab.AddComponent<MediatorAssigner>();
+            }
+
             return prefab;
         }
 

@@ -26,7 +26,9 @@ namespace FastenUp.Runtime.Binders.Events
         public void AddListener(UnityAction action)
         {
             if (action is null)
+            {
                 return;
+            }
 
             _component.onClick.AddListener(action);
             _component.interactable = ++_listenerCount > 0;
@@ -36,7 +38,9 @@ namespace FastenUp.Runtime.Binders.Events
         public void RemoveListener(UnityAction action)
         {
             if (action is null)
+            {
                 return;
+            }
 
             _component.onClick.RemoveListener(action);
             _component.interactable = --_listenerCount > 0;

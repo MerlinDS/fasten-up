@@ -19,7 +19,7 @@ namespace FastenUp.Tests.Binders.Behaviours
         {
             // Arrange
             const string expected = "Test";
-            var sut = CreateSut();
+            InputFieldBinder sut = CreateSut();
             // Act
             sut.SetValue(expected);
             // Assert
@@ -31,10 +31,10 @@ namespace FastenUp.Tests.Binders.Behaviours
         {
             // Arrange
             const string expected = "Test";
-            var sut = CreateSut();
+            InputFieldBinder sut = CreateSut();
             sut.GetComponent<TMP_InputField>().text = expected;
             // Act
-            var result = sut.GetValue();
+            string result = sut.GetValue();
             // Assert
             result.Should().Be(expected);
         }
@@ -44,7 +44,7 @@ namespace FastenUp.Tests.Binders.Behaviours
         {
             // Arrange
             const string expected = "Test";
-            var sut = CreateSut();
+            InputFieldBinder sut = CreateSut();
             var onValueChanged = Substitute.For<OnBinderChanged>();
             sut.OnBinderChanged += onValueChanged;
             // Act
@@ -58,7 +58,7 @@ namespace FastenUp.Tests.Binders.Behaviours
         {
             // Arrange
             const string expected = "Test";
-            var sut = CreateSut();
+            InputFieldBinder sut = CreateSut();
             var onValueChanged = Substitute.For<OnBinderChanged>();
             sut.OnBinderChanged += onValueChanged;
             sut.ExecuteOnDisable();

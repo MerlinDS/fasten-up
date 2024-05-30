@@ -23,13 +23,17 @@ namespace FastenUp.Runtime.Mediators
         public void Assign<T>(T mediator) where T : IInternalMediator
         {
             if (mediator is null)
+            {
                 throw new ArgumentNullException(nameof(mediator), "Mediator cannot be null.");
+            }
 
             Release();
 
             _mediator = mediator;
-            foreach (var binder in _binders)
+            foreach (IBinder binder in _binders)
+            {
                 _mediator.Bind(binder);
+            }
         }
 
         private void OnDestroy()
@@ -44,13 +48,20 @@ namespace FastenUp.Runtime.Mediators
         public void Release()
         {
             if (_mediator is null)
+            {
                 return;
+            }
 
-            foreach (var binder in _binders)
+            foreach (IBinder binder in _binders)
+            {
                 _mediator.Unbind(binder);
+            }
 
             if (_mediator is IDisposable disposable)
+            {
                 disposable.Dispose();
+            }
+
             _mediator = null;
         }
 

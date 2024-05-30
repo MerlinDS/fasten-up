@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using FastenUp.Runtime.Bindables;
 using FastenUp.Runtime.Binders;
 using FastenUp.Runtime.Exceptions;
@@ -21,8 +22,7 @@ namespace FastenUp.Tests.Bindables
             // Act
             sut.Add(binder);
             // Assert
-            var enumerator = sut.GetEnumerator();
-            using var disposable = enumerator as IDisposable;
+            using HashSet<IBinder>.Enumerator enumerator = sut.GetEnumerator();
             enumerator.MoveNext().Should().BeTrue();
             enumerator.Current.Should().Be(binder);
         }
@@ -50,8 +50,7 @@ namespace FastenUp.Tests.Bindables
             // Act
             sut.Remove(binder);
             // Assert
-            var enumerator = sut.GetEnumerator();
-            using var disposable = enumerator as IDisposable;
+            using HashSet<IBinder>.Enumerator enumerator = sut.GetEnumerator();
             enumerator.MoveNext().Should().BeFalse();
         }
 
@@ -77,8 +76,7 @@ namespace FastenUp.Tests.Bindables
             // Act
             sut.Clear();
             // Assert
-            var enumerator = sut.GetEnumerator();
-            using var disposable = enumerator as IDisposable;
+            using HashSet<IBinder>.Enumerator enumerator = sut.GetEnumerator();
             enumerator.MoveNext().Should().BeFalse();
         }
     }

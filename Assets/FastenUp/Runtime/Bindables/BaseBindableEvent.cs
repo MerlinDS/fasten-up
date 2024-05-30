@@ -29,8 +29,10 @@ namespace FastenUp.Runtime.Bindables
         public void AddListener(T action)
         {
             _actions.Add(action);
-            foreach (var listener in _binders)
+            foreach (IEventBinder<T> listener in _binders)
+            {
                 listener.AddListener(action);
+            }
         }
 
         /// <summary>
@@ -40,33 +42,41 @@ namespace FastenUp.Runtime.Bindables
         public void RemoveListener(T action)
         {
             _actions.Remove(action);
-            foreach (var listener in _binders)
+            foreach (IEventBinder<T> listener in _binders)
+            {
                 listener.RemoveListener(action);
+            }
         }
 
         /// <inheritdoc />
         void IBindableEvent<T>.Bind(IEventBinder<T> eventBinder)
         {
             _binders.Add(eventBinder);
-            foreach (var action in _actions)
+            foreach (T action in _actions)
+            {
                 eventBinder.AddListener(action);
+            }
         }
 
         /// <inheritdoc />
         void IBindableEvent<T>.Unbind(IEventBinder<T> eventBinder)
         {
             _binders.Remove(eventBinder);
-            foreach (var action in _actions)
+            foreach (T action in _actions)
+            {
                 eventBinder.RemoveListener(action);
+            }
         }
 
         /// <inheritdoc />
         public void Dispose()
         {
-            foreach (var binder in _binders)
+            foreach (IEventBinder<T> binder in _binders)
             {
-                foreach (var action in _actions)
+                foreach (T action in _actions)
+                {
                     binder.RemoveListener(action);
+                }
             }
 
             _actions.Clear();

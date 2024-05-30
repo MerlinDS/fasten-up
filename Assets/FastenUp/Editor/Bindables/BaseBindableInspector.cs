@@ -34,14 +34,19 @@ namespace FastenUp.Editor.Bindables
                 "Name used for binding. It must be the same as the name of the property in the Mediator.");
 
             if (EditorGUILayout.PropertyField(_nameProperty, content))
+            {
                 _nameProperty.stringValue = _nameProperty.stringValue.Trim();
+            }
 
             if (string.IsNullOrEmpty(_nameProperty.stringValue))
+            {
                 EditorGUILayout.HelpBox("This binder will be ignored! Name must be set!", MessageType.Warning);
+            }
 
-            if (_nameProperty.stringValue.StartsWith("#")) 
+            if (_nameProperty.stringValue.StartsWith("#"))
+            {
                 EditorGUILayout.HelpBox("This binder will be ignored without any errors.", MessageType.Info);
-
+            }
         }
     }
 }

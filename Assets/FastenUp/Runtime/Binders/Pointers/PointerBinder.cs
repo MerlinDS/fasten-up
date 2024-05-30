@@ -21,28 +21,36 @@ namespace FastenUp.Runtime.Binders.Pointers
         public void AddListener(UnityAction action)
         {
             if (action is not null)
+            {
                 _event.AddListener(action);
+            }
         }
 
         /// <inheritdoc />
         public void RemoveListener(UnityAction action)
         {
             if (action is not null)
+            {
                 _event.RemoveListener(action);
+            }
         }
 
         /// <inheritdoc />
         public void AddListener(UnityAction<PointerEventData> action)
         {
             if (action is not null)
+            {
                 _eventWithData.AddListener(action);
+            }
         }
 
         /// <inheritdoc />
         public void RemoveListener(UnityAction<PointerEventData> action)
         {
             if (action is not null)
+            {
                 _eventWithData.RemoveListener(action);
+            }
         }
 
         /// <inheritdoc />

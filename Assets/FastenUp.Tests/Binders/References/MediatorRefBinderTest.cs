@@ -21,7 +21,7 @@ namespace FastenUp.Tests.Binders.References
             var sut = gameObject.AddComponent<MediatorRefBinder>();
             sut.ExecuteAwake();
             //Act
-            var result = sut.TryGetReference(out IMediator reference);
+            bool result = sut.TryGetReference(out IMediator reference);
             //Assert
             result.Should().BeFalse();
             reference.Should().BeNull();
@@ -36,7 +36,7 @@ namespace FastenUp.Tests.Binders.References
             var sut = gameObject.AddComponent<MediatorRefBinder>();
             sut.ExecuteAwake();
             //Act
-            var result = sut.TryGetReference(out IMediator reference);
+            bool result = sut.TryGetReference(out IMediator reference);
             //Assert
             result.Should().BeTrue();
             reference.Should().Be(mediator);

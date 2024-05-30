@@ -15,8 +15,8 @@ namespace FastenUp.Tests.Binders.Behaviours
         public void SetValue_When_gameObject_has_Image_Should_set_color_to_Image()
         {
             //Arrange
-            var expected = Color.red;
-            var sut = CreateSut();
+            Color expected = Color.red;
+            ColorBinder sut = CreateSut();
             //Act
             sut.SetValue(expected);
             //Assert

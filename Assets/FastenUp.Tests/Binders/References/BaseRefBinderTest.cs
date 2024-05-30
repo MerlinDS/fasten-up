@@ -19,7 +19,7 @@ namespace FastenUp.Tests.Binders.References
             //Arrange
             var sut = TestRefBinder.Create();
             //Act
-            var result = sut.TryGetReference(out BaseRefBinderTest reference);
+            bool result = sut.TryGetReference(out BaseRefBinderTest reference);
             //Assert
             result.Should().BeFalse();
             reference.Should().BeNull();
@@ -30,9 +30,9 @@ namespace FastenUp.Tests.Binders.References
         {
             //Arrange
             var sut = TestRefBinder.Create();
-            var expected = sut.transform;
+            Transform expected = sut.transform;
             //Act
-            var result = sut.TryGetReference(out Transform reference);
+            bool result = sut.TryGetReference(out Transform reference);
             //Assert
             result.Should().BeTrue();
             reference.Should().Be(expected);
@@ -49,7 +49,7 @@ namespace FastenUp.Tests.Binders.References
                 .Apply();
             sut.ExecuteAwake();
             //Act
-            var result = sut.TryGetReference(out Image reference);
+            bool result = sut.TryGetReference(out Image reference);
             //Assert
             result.Should().BeTrue();
             reference.Should().Be(expected);
@@ -63,7 +63,7 @@ namespace FastenUp.Tests.Binders.References
             var expected = sut.gameObject.GetComponent<Image>();
             sut.ExecuteAwake();
             //Act
-            var result = sut.TryGetReference(out Image reference);
+            bool result = sut.TryGetReference(out Image reference);
             //Assert
             result.Should().BeTrue();
             reference.Should().Be(expected);
@@ -80,7 +80,7 @@ namespace FastenUp.Tests.Binders.References
                 .Apply();
             sut.ExecuteAwake();
             //Act
-            var result = sut.TryGetReference(out Image reference);
+            bool result = sut.TryGetReference(out Image reference);
             //Assert
             result.Should().BeTrue();
             reference.Should().Be(expected);
@@ -100,7 +100,7 @@ namespace FastenUp.Tests.Binders.References
                 .Apply();
             sut.ExecuteAwake();
             //Act
-            var result = sut.TryGetReference(out Image reference);
+            bool result = sut.TryGetReference(out Image reference);
             //Assert
             result.Should().BeFalse();
             reference.Should().BeNull();

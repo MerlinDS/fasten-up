@@ -16,7 +16,7 @@ namespace FastenUp.Tests.Binders.Pointers
         {
             // Arrange
             var actual = Substitute.For<UnityAction<PointerEventData>>();
-            var sut = CreateSut();
+            PointerClickBinder sut = CreateSut();
             sut.AddListener(actual);
             // Act
             sut.OnPointerClick(new PointerEventData(EventSystem.current));

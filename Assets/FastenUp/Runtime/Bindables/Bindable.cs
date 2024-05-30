@@ -44,9 +44,11 @@ namespace FastenUp.Runtime.Bindables
         private void OnValueChangedHandler(IBinder binder)
         {
             if (binder is not IValueProvider<T> valueProvider)
+            {
                 return;
+            }
 
-            var value = valueProvider.GetValue();
+            T value = valueProvider.GetValue();
             UpdateBinders(value, valueProvider);
             SetValueSilently(value);
             OnValueChanged?.Invoke(value);

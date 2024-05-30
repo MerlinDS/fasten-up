@@ -38,25 +38,35 @@ namespace FastenUp.Runtime.Binders
         protected virtual void OnEnable()
         {
             if (!ValidateName())
+            {
                 return;
+            }
 
             if (!TryCacheMediator())
+            {
                 return;
+            }
 
-            foreach (var mediator in _mediators)
+            foreach (IInternalMediator mediator in _mediators)
+            {
                 mediator.Bind(this);
+            }
         }
 
         protected virtual void OnDisable()
         {
-            foreach (var mediator in _mediators)
+            foreach (IInternalMediator mediator in _mediators)
+            {
                 mediator.Unbind(this);
+            }
         }
 
         private bool ValidateName()
         {
             if (!string.IsNullOrEmpty(Name))
+            {
                 return !Name.StartsWith('#'); //Name that starts with '#' must be ignored
+            }
 
             Debug.LogError($"{name} will be ignored: name for binding was not set!", gameObject);
             return false;
@@ -65,11 +75,15 @@ namespace FastenUp.Runtime.Binders
         private bool TryCacheMediator()
         {
             if (_mediators.Count > 0) //Already cached
+            {
                 return true;
+            }
 
             _mediators.AddRange(FindMediators());
             if (_mediators.Count > 0)
+            {
                 return true;
+            }
 
             Debug.LogError($"{name} will be ignored: {nameof(IMediator)} was not found!", gameObject);
             return false;
@@ -78,18 +92,20 @@ namespace FastenUp.Runtime.Binders
         private IEnumerable<IInternalMediator> FindMediators()
         {
             //Traversal up the hierarchy to find mediators
-            var transforms = IncludeOwnGameObjectInFind ? transform : transform.parent;
+            Transform transforms = IncludeOwnGameObjectInFind ? transform : transform.parent;
             while (transforms != null)
             {
                 var mediatorsFound = false;
-                foreach (var mediator in transforms.GetComponents<IInternalMediator>())
+                foreach (IInternalMediator mediator in transforms.GetComponents<IInternalMediator>())
                 {
                     mediatorsFound = true;
                     yield return mediator;
                 }
                 
                 if (mediatorsFound)//Stop traversal if mediators found
+                {
                     break;
+                }
 
                 transforms = transforms.parent;
             }

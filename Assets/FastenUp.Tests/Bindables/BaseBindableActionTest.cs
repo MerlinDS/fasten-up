@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using FastenUp.Runtime.Bindables;
 using FastenUp.Runtime.Binders.Actions;
 using FastenUp.Runtime.Exceptions;
@@ -24,7 +25,7 @@ namespace FastenUp.Tests.Bindables
             //Act
             sut.As<IBindableAction<UnityEvent>>().Bind(actionBinder);
             //Assert
-            var enumerator = sut.Binders.GetEnumerator();
+            HashSet<IActionBinder<UnityEvent>>.Enumerator enumerator = sut.Binders.GetEnumerator();
             using var disposable = enumerator as IDisposable;
             enumerator.MoveNext().Should().BeTrue();
             enumerator.Current.Should().Be(actionBinder);
@@ -39,7 +40,7 @@ namespace FastenUp.Tests.Bindables
             //Act
             sut.As<IBindableAction<UnityEvent>>().Bind(actionBinder);
             //Assert
-            var enumerator = sut.Binders.GetEnumerator();
+            HashSet<IActionBinder<UnityEvent>>.Enumerator enumerator = sut.Binders.GetEnumerator();
             using var disposable = enumerator as IDisposable;
             enumerator.MoveNext().Should().BeFalse();
         }
@@ -69,7 +70,7 @@ namespace FastenUp.Tests.Bindables
             //Act
             sut.As<IBindableAction<UnityEvent>>().Unbind(actionBinder);
             //Assert
-            var enumerator = sut.Binders.GetEnumerator();
+            HashSet<IActionBinder<UnityEvent>>.Enumerator enumerator = sut.Binders.GetEnumerator();
             using var disposable = enumerator as IDisposable;
             enumerator.MoveNext().Should().BeFalse();
         }

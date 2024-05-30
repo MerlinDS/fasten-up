@@ -19,7 +19,7 @@ namespace FastenUp.Tests.Binders.Behaviours
         {
             // Arrange
             const float expected = 0.5f;
-            var sut = CreateSut();
+            SliderBinder sut = CreateSut();
             var onValueChanged = Substitute.For<OnBinderChanged>();
             sut.OnBinderChanged += onValueChanged;
             // Act
@@ -34,7 +34,7 @@ namespace FastenUp.Tests.Binders.Behaviours
         {
             // Arrange
             const int expected = 5;
-            var sut = CreateSut();
+            SliderBinder sut = CreateSut();
             var slider = sut.GetComponent<Slider>();
             slider.maxValue = 10;
             slider.wholeNumbers = true;
@@ -52,7 +52,7 @@ namespace FastenUp.Tests.Binders.Behaviours
         {
             // Arrange
             var expected = new Vector2(-0.5f, 0.5f);
-            var sut = CreateSut();
+            SliderBinder sut = CreateSut();
             var slider = sut.GetComponent<Slider>();
             // Act
             sut.SetValue(expected);
@@ -67,7 +67,7 @@ namespace FastenUp.Tests.Binders.Behaviours
         {
             // Arrange
             var expected = new Vector2Int(-5, 5);
-            var sut = CreateSut();
+            SliderBinder sut = CreateSut();
             var slider = sut.GetComponent<Slider>();
             slider.wholeNumbers = true;
             // Act
@@ -83,10 +83,10 @@ namespace FastenUp.Tests.Binders.Behaviours
         {
             // Arrange
             const float expected = 0.5f;
-            var sut = CreateSut();
+            SliderBinder sut = CreateSut();
             sut.GetComponent<Slider>().SetValueWithoutNotify(expected);
             // Act
-            var actual = sut.GetValue();
+            float actual = sut.GetValue();
             // Assert
             actual.Should().Be(expected);
         }
@@ -96,13 +96,13 @@ namespace FastenUp.Tests.Binders.Behaviours
         {
             // Arrange
             const int expected = 5;
-            var sut = CreateSut();
+            SliderBinder sut = CreateSut();
             var slider = sut.GetComponent<Slider>();
             slider.maxValue = 10;
             slider.wholeNumbers = true;
             slider.SetValueWithoutNotify(expected);
             // Act
-            var actual = sut.As<IValueProvider<int>>().GetValue();
+            int actual = sut.As<IValueProvider<int>>().GetValue();
             // Assert
             actual.Should().Be(expected);
         }
@@ -111,7 +111,7 @@ namespace FastenUp.Tests.Binders.Behaviours
         public void OnValueChanged_When_slider_value_changed_Should_invoke_OnBinderChanged()
         {
             // Arrange
-            var sut = CreateSut();
+            SliderBinder sut = CreateSut();
             var onBinderChanged = Substitute.For<OnBinderChanged>();
             sut.OnBinderChanged += onBinderChanged;
             // Act
@@ -124,7 +124,7 @@ namespace FastenUp.Tests.Binders.Behaviours
         public void OnValueChanged_When_slider_value_changed_Should_not_invoke_OnBinderChanged_if_disabled()
         {
             // Arrange
-            var sut = CreateSut();
+            SliderBinder sut = CreateSut();
             var onBinderChanged = Substitute.For<OnBinderChanged>();
             sut.OnBinderChanged += onBinderChanged;
             sut.ExecuteOnDisable();

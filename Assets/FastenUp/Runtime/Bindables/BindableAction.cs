@@ -13,15 +13,19 @@ namespace FastenUp.Runtime.Bindables
         /// <inheritdoc cref="UnityEvent.Invoke"/>
         public void Invoke()
         {
-            foreach (var binder in Binders)
+            foreach (IActionBinder<UnityEvent> binder in Binders)
+            {
                 binder.OnAction.Invoke();
+            }
         }
 
         /// <inheritdoc />
         protected override void PostBind(IActionBinder<UnityEvent> actionBinder)
         {
             if (_wasInvoked)
+            {
                 actionBinder.OnAction.Invoke();
+            }
         }
         
         protected override void PostUnBind()
@@ -41,8 +45,10 @@ namespace FastenUp.Runtime.Bindables
         /// <inheritdoc cref="UnityEvent{T}.Invoke(T)"/>
         public void Invoke(T arg)
         {
-            foreach (var binder in Binders)
+            foreach (IActionBinder<UnityEvent<T>> binder in Binders)
+            {
                 binder.OnAction.Invoke(arg);
+            }
 
             _previousArg = arg;
             _wasInvoked = true;
@@ -52,7 +58,9 @@ namespace FastenUp.Runtime.Bindables
         protected override void PostBind(IActionBinder<UnityEvent<T>> actionBinder)
         {
             if (_wasInvoked)
+            {
                 actionBinder.OnAction.Invoke(_previousArg);
+            }
         }
 
         /// <inheritdoc />

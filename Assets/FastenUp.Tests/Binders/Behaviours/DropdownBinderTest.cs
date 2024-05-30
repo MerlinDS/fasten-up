@@ -20,7 +20,7 @@ namespace FastenUp.Tests.Binders.Behaviours
         {
             // Arrange
             const int expected = 4;
-            var sut = CreateSut();
+            DropdownBinder sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
             dropdown.AddOptions(new List<string> { "1", "2", "3", "4", "5" });
             var onValueChanged = Substitute.For<OnBinderChanged>();
@@ -37,7 +37,7 @@ namespace FastenUp.Tests.Binders.Behaviours
         {
             // Arrange
             var expected = new[] { "1", "2", "3", "4", "5" };
-            var sut = CreateSut();
+            DropdownBinder sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
             var onValueChanged = Substitute.For<OnBinderChanged>();
             sut.OnBinderChanged += onValueChanged;
@@ -45,8 +45,11 @@ namespace FastenUp.Tests.Binders.Behaviours
             sut.SetValue(expected);
             // Assert
             dropdown.options.Should().HaveCount(expected.Length);
-            foreach (var option in dropdown.options)
+            foreach (TMP_Dropdown.OptionData option in dropdown.options)
+            {
                 expected.Should().Contain(option.text);
+            }
+
             onValueChanged.DidNotReceive().Invoke(sut);
         }
 
@@ -54,7 +57,7 @@ namespace FastenUp.Tests.Binders.Behaviours
         public void SetValue_When_type_is_array_of_strings_but_value_is_null_Should_clear_options()
         {
             // Arrange
-            var sut = CreateSut();
+            DropdownBinder sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
             dropdown.AddOptions(new List<string> { "1", "2", "3", "4", "5" });
             var onValueChanged = Substitute.For<OnBinderChanged>();
@@ -70,7 +73,7 @@ namespace FastenUp.Tests.Binders.Behaviours
         public void SetValue_When_type_is_array_of_strings_but_value_is_empty_Should_clean_options()
         {
             // Arrange
-            var sut = CreateSut();
+            DropdownBinder sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
             dropdown.AddOptions(new List<string> { "1", "2", "3", "4", "5" });
             var onValueChanged = Substitute.For<OnBinderChanged>();
@@ -94,7 +97,7 @@ namespace FastenUp.Tests.Binders.Behaviours
                 new("4"),
                 new("5")
             };
-            var sut = CreateSut();
+            DropdownBinder sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
             var onValueChanged = Substitute.For<OnBinderChanged>();
             sut.OnBinderChanged += onValueChanged;
@@ -109,7 +112,7 @@ namespace FastenUp.Tests.Binders.Behaviours
         public void SetValue_When_type_is_list_of_option_data_but_value_is_null_Should_clear_options()
         {
             // Arrange
-            var sut = CreateSut();
+            DropdownBinder sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
             dropdown.AddOptions(new List<string> { "1", "2", "3", "4", "5" });
             var onValueChanged = Substitute.For<OnBinderChanged>();
@@ -125,7 +128,7 @@ namespace FastenUp.Tests.Binders.Behaviours
         public void SetValue_When_type_is_list_of_option_data_but_value_is_empty_Should_clear_options()
         {
             // Arrange
-            var sut = CreateSut();
+            DropdownBinder sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
             dropdown.AddOptions(new List<string> { "1", "2", "3", "4", "5" });
             var onValueChanged = Substitute.For<OnBinderChanged>();
@@ -142,12 +145,12 @@ namespace FastenUp.Tests.Binders.Behaviours
         {
             // Arrange
             const int expected = 4;
-            var sut = CreateSut();
+            DropdownBinder sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
             dropdown.AddOptions(new List<string> { "1", "2", "3", "4", "5" });
             dropdown.SetValueWithoutNotify(5);
             // Act
-            var result = sut.GetValue();
+            int result = sut.GetValue();
             // Assert
             result.Should().Be(expected);
         }
@@ -156,7 +159,7 @@ namespace FastenUp.Tests.Binders.Behaviours
         public void OnBinderChanged_When_dropdown_value_changed_Should_invoke_OnBinderChanged()
         {
             // Arrange
-            var sut = CreateSut();
+            DropdownBinder sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
             dropdown.AddOptions(new List<string> { "1", "2", "3", "4", "5" });
             var onValueChanged = Substitute.For<OnBinderChanged>();
@@ -171,7 +174,7 @@ namespace FastenUp.Tests.Binders.Behaviours
         public void OnBinderChanged_When_disabled_Should_not_invoke_OnBinderChanged()
         {
             // Arrange
-            var sut = CreateSut();
+            DropdownBinder sut = CreateSut();
             var dropdown = sut.GetComponent<TMP_Dropdown>();
             dropdown.AddOptions(new List<string> { "1", "2", "3", "4", "5" });
             var onValueChanged = Substitute.For<OnBinderChanged>();

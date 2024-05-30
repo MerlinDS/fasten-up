@@ -22,25 +22,35 @@ namespace FastenUp.Runtime.Bindables
         public void Add(T item)
         {
             if (item is null)
+            {
                 throw new ArgumentNullException(nameof(item), "Item cannot be null.");
+            }
 
             _items.Add(item);
-            foreach (var binder in _binders)
+            foreach (ICollectionBinder<T> binder in _binders)
+            {
                 binder.Add(item);
-            
+            }
+
             OnItemAdded?.Invoke(item);
         }
         /// <inheritdoc />
         public bool Remove(T item)
         {
             if (item is null)
+            {
                 return false;
+            }
 
             if (!_items.Remove(item))
+            {
                 return false;
+            }
 
-            foreach (var binder in _binders)
+            foreach (ICollectionBinder<T> binder in _binders)
+            {
                 binder.Remove(item);
+            }
 
             OnItemRemoved?.Invoke(item);
             return true;
@@ -56,15 +66,21 @@ namespace FastenUp.Runtime.Bindables
         public void Clear()
         {
             if(_items.Count == 0)
+            {
                 return;
-            
-            foreach (var binder in _binders)
+            }
+
+            foreach (ICollectionBinder<T> binder in _binders)
+            {
                 ClearBinder(binder);
+            }
 
             if (OnItemRemoved is not null)
             {
-                foreach (var item in _items) 
+                foreach (T item in _items)
+                {
                     OnItemRemoved.Invoke(item);
+                }
             }
             
             _items.Clear();
@@ -95,8 +111,10 @@ namespace FastenUp.Runtime.Bindables
         void IBindableCollection<T>.Bind(ICollectionBinder<T> binder)
         {
             _binders.Add(binder);
-            foreach (var item in _items)
+            foreach (T item in _items)
+            {
                 binder.Add(item);
+            }
         }
 
         /// <inheritdoc />
@@ -109,8 +127,10 @@ namespace FastenUp.Runtime.Bindables
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private void ClearBinder(ICollectionBinder<T> binder)
         {
-            foreach (var item in _items)
+            foreach (T item in _items)
+            {
                 binder.Remove(item);
+            }
         }
     }
 }

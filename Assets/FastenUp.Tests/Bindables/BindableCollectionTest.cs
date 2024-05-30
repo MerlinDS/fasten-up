@@ -137,7 +137,7 @@ namespace FastenUp.Tests.Bindables
             // ReSharper disable once CollectionNeverUpdated.Local
             var sut = new BindableCollection<object>();
             // Act
-            var actual = sut.Remove(null);
+            bool actual = sut.Remove(null);
             // Assert
             actual.Should().BeFalse();
         }
@@ -150,7 +150,7 @@ namespace FastenUp.Tests.Bindables
             var sut = new BindableCollection<object>();
             var expected = new object();
             // Act
-            var actual = sut.Remove(expected);
+            bool actual = sut.Remove(expected);
             // Assert
             actual.Should().BeFalse();
         }
@@ -163,7 +163,7 @@ namespace FastenUp.Tests.Bindables
             var expected = new object();
             sut.Add(expected);
             // Act
-            var actual = sut.Remove(expected);
+            bool actual = sut.Remove(expected);
             // Assert
             actual.Should().BeTrue();
         }
@@ -203,7 +203,7 @@ namespace FastenUp.Tests.Bindables
             // ReSharper disable once CollectionNeverUpdated.Local
             var sut = new BindableCollection<object>();
             // Act
-            var actual = sut.Contains(null);
+            bool actual = sut.Contains(null);
             // Assert
             actual.Should().BeFalse();
         }
@@ -216,7 +216,7 @@ namespace FastenUp.Tests.Bindables
             var sut = new BindableCollection<object>();
             var expected = new object();
             // Act
-            var actual = sut.Contains(expected);
+            bool actual = sut.Contains(expected);
             // Assert
             actual.Should().BeFalse();
         }
@@ -229,7 +229,7 @@ namespace FastenUp.Tests.Bindables
             var expected = new object();
             sut.Add(expected);
             // Act
-            var actual = sut.Contains(expected);
+            bool actual = sut.Contains(expected);
             // Assert
             actual.Should().BeTrue();
         }
@@ -252,7 +252,7 @@ namespace FastenUp.Tests.Bindables
             sut.Add(new object());
             sut.Add(new object());
             // Act
-            var actual = sut.Count;
+            int actual = sut.Count;
             // Assert
             actual.Should().Be(2);
         }
@@ -314,7 +314,7 @@ namespace FastenUp.Tests.Bindables
             // Arrange
             IEnumerable sut = new BindableCollection<object> { new(), new() };
             // Act
-            var actual = sut.GetEnumerator();
+            IEnumerator actual = sut.GetEnumerator();
             using var unknown = actual as IDisposable;
             // Assert 
             actual.Should().NotBeNull();
@@ -339,7 +339,7 @@ namespace FastenUp.Tests.Bindables
             // Arrange
             var sut = new BindableCollection<object>();
             // Act
-            var actual = sut.As<ICollection<object>>().IsReadOnly;
+            bool actual = sut.As<ICollection<object>>().IsReadOnly;
             // Assert
             actual.Should().BeFalse();
         }

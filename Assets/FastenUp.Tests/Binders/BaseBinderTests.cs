@@ -22,7 +22,7 @@ namespace FastenUp.Tests.Binders
         {
             //Arrange
             var mockMediator = Substitute.For<IInternalMediator>();
-            var test = TestingBehaviour.Create();
+            MonoBehaviourTest<TestingBehaviour> test = TestingBehaviour.Create();
             test.component.gameObject.AddComponent<MockMediator>().Set(mockMediator);
             test.component.SetName("Test");
             //Act
@@ -37,7 +37,7 @@ namespace FastenUp.Tests.Binders
             //Arrange
             var mockMediatorA = Substitute.For<IInternalMediator>();
             var mockMediatorB = Substitute.For<IInternalMediator>();
-            var test = TestingBehaviour.Create();
+            MonoBehaviourTest<TestingBehaviour> test = TestingBehaviour.Create();
             test.component.gameObject.AddComponent<MockMediator>().Set(mockMediatorA);
             test.component.gameObject.AddComponent<MockMediator>().Set(mockMediatorB);
             test.component.SetName("Test");
@@ -53,7 +53,7 @@ namespace FastenUp.Tests.Binders
         {
             //Arrange
             var mockMediator = Substitute.For<IInternalMediator>();
-            var test = TestingBehaviour.Create();
+            MonoBehaviourTest<TestingBehaviour> test = TestingBehaviour.Create();
             var mediatorComponent = test.component.gameObject.AddComponent<MockMediator>();
             mediatorComponent.Set(mockMediator);
             test.component.SetName("Test");
@@ -71,7 +71,7 @@ namespace FastenUp.Tests.Binders
         {
             //Arrange
             var mockMediator = Substitute.For<IInternalMediator>();
-            var test = TestingBehaviour.Create();
+            MonoBehaviourTest<TestingBehaviour> test = TestingBehaviour.Create();
             var parent = new GameObject(nameof(BaseBinderTests));
             parent.AddComponent<MockMediator>().Set(mockMediator);
             test.component.SetParent(parent);
@@ -89,7 +89,7 @@ namespace FastenUp.Tests.Binders
             //Arrange
             var parentMediator = Substitute.For<IInternalMediator>();
             var ownMediator = Substitute.For<IInternalMediator>();
-            var test = TestingBehaviour.Create();
+            MonoBehaviourTest<TestingBehaviour> test = TestingBehaviour.Create();
             var parent = new GameObject(nameof(BaseBinderTests));
             parent.AddComponent<MockMediator>().Set(parentMediator);
             test.component.SetParent(parent);
@@ -107,7 +107,7 @@ namespace FastenUp.Tests.Binders
         public void OnEnable_When_has_no_mediators_Should_log_error()
         {
             //Arrange
-            var test = TestingBehaviour.Create();
+            MonoBehaviourTest<TestingBehaviour> test = TestingBehaviour.Create();
             test.component.SetName("Test");
             //Act
             test.component.ExecuteOnEnable();
@@ -120,7 +120,7 @@ namespace FastenUp.Tests.Binders
         public void OnEnable_When_name_was_not_set_Should_log_error()
         {
             //Arrange
-            var test = TestingBehaviour.Create();
+            MonoBehaviourTest<TestingBehaviour> test = TestingBehaviour.Create();
             //Act
             test.component.ExecuteOnEnable();
             //Assert
@@ -133,7 +133,7 @@ namespace FastenUp.Tests.Binders
         {
             //Arrange
             var mockMediator = Substitute.For<IInternalMediator>();
-            var test = TestingBehaviour.Create();
+            MonoBehaviourTest<TestingBehaviour> test = TestingBehaviour.Create();
             test.component.SetName("#Test");
             test.component.gameObject.AddComponent<MockMediator>().Set(mockMediator);
             //Act
@@ -148,7 +148,7 @@ namespace FastenUp.Tests.Binders
         {
             //Arrange
             var mockMediator = Substitute.For<IInternalMediator>();
-            var test = TestingBehaviour.Create();
+            MonoBehaviourTest<TestingBehaviour> test = TestingBehaviour.Create();
             test.component.gameObject.AddComponent<MockMediator>().Set(mockMediator);
             test.component.SetName("Test");
             test.component.ExecuteOnEnable();
@@ -163,7 +163,7 @@ namespace FastenUp.Tests.Binders
         {
             //Arrange
             var mockMediator = Substitute.For<IInternalMediator>();
-            var test = TestingBehaviour.Create();
+            MonoBehaviourTest<TestingBehaviour> test = TestingBehaviour.Create();
             var parent = new GameObject(nameof(BaseBinderTests));
             parent.AddComponent<MockMediator>().Set(mockMediator);
             test.component.SetName("Test");
@@ -179,7 +179,7 @@ namespace FastenUp.Tests.Binders
         public void OnDisable_When_has_no_mediators_Should_not_throw_exception()
         {
             //Arrange
-            var test = TestingBehaviour.Create();
+            MonoBehaviourTest<TestingBehaviour> test = TestingBehaviour.Create();
             Action act = () => test.component.ExecuteOnDisable();
             //Act & Assert
             act.Should().NotThrow<Exception>();
@@ -189,7 +189,7 @@ namespace FastenUp.Tests.Binders
         public void InvokeValueChanged_When_has_no_subscribers_Should_not_throw_exception()
         {
             //Arrange
-            var test = TestingBehaviour.Create();
+            MonoBehaviourTest<TestingBehaviour> test = TestingBehaviour.Create();
             Action act = () => test.component.InvokeOnBinderChanged();
             //Act & Assert
             act.Should().NotThrow<Exception>();
@@ -199,7 +199,7 @@ namespace FastenUp.Tests.Binders
         public void InvokeValueChanged_When_has_subscribers_Should_invoke_subscribers()
         {
             //Arrange
-            var test = TestingBehaviour.Create();
+            MonoBehaviourTest<TestingBehaviour> test = TestingBehaviour.Create();
             var subscriber = Substitute.For<OnBinderChanged>();
             test.component.OnBinderChanged += subscriber;
             //Act
@@ -213,7 +213,7 @@ namespace FastenUp.Tests.Binders
         {
             //Arrange
             const string expected = nameof(TestingBehaviour);
-            var test = TestingBehaviour.Create();
+            MonoBehaviourTest<TestingBehaviour> test = TestingBehaviour.Create();
             test.component.EditSerializable()
                 .Field(nameof(test.component.Name), expected)
                 .Apply();
@@ -226,7 +226,7 @@ namespace FastenUp.Tests.Binders
         public void IncludeOwnGameObjectInFind_getter_When_has_default_Should_return_true()
         {
             //Arrange
-            var test = TestingBehaviour.Create();
+            MonoBehaviourTest<TestingBehaviour> test = TestingBehaviour.Create();
             //Act & Assert
             test.component.DefaultIncludeOwnGameObjectInFind.Should().BeTrue();
         }

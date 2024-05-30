@@ -35,7 +35,10 @@ namespace FastenUp.Runtime.Bindables
         {
             _binders.Add(binder);
             if (binder is IValueReceiver<T> valueReceiver)
+            {
                 valueReceiver.SetValue(_value);
+            }
+
             PostBind(binder);
         }
 
@@ -48,10 +51,12 @@ namespace FastenUp.Runtime.Bindables
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected void UpdateBinders(T value, IBinder<T> ignored = null)
         {
-            foreach (var bindable in _binders)
+            foreach (IBinder<T> bindable in _binders)
             {
                 if (bindable == ignored || bindable is not IValueReceiver<T> valueReceiver)
+                {
                     continue;
+                }
 
                 valueReceiver.SetValue(value);
             }

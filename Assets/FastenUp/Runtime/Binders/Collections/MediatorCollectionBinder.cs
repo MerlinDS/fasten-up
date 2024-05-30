@@ -27,7 +27,7 @@ namespace FastenUp.Runtime.Binders.Collections
         /// <inheritdoc />
         public void Add(IInternalMediator item)
         {
-            var assigner = Pool.Get();
+            MediatorAssigner assigner = Pool.Get();
             assigner.Assign(item);
             _assigners.Add(item, assigner);
         }
@@ -35,8 +35,10 @@ namespace FastenUp.Runtime.Binders.Collections
         /// <inheritdoc />
         public void Remove(IInternalMediator item)
         {
-            if (!_assigners.TryGetValue(item, out var assigner))
+            if (!_assigners.TryGetValue(item, out MediatorAssigner assigner))
+            {
                 return;
+            }
 
             Pool.Release(assigner);
             _assigners.Remove(item);
@@ -46,7 +48,10 @@ namespace FastenUp.Runtime.Binders.Collections
         protected override void OnEnable()
         {
             if (_prefab == null)
+            {
                 throw new NullReferenceException("Prefab cannot be null.");
+            }
+
             _prefab.SetActive(false);
             base.OnEnable();
         }
@@ -54,18 +59,21 @@ namespace FastenUp.Runtime.Binders.Collections
         /// <inheritdoc />
         protected override void OnDisable()
         {
-            foreach (var assigner in _assigners.Values)
+            foreach (MediatorAssigner assigner in _assigners.Values)
+            {
                 Pool.Release(assigner);
+            }
+
             _assigners.Clear();
             base.OnDisable();
         }
 
         private MediatorAssigner Create()
         {
-            var instance = Instantiate(_prefab, transform);
+            GameObject instance = Instantiate(_prefab, transform);
             instance.SetActive(false);
 
-            var hasAssigner = instance.TryGetComponent<MediatorAssigner>(out var assigner);
+            bool hasAssigner = instance.TryGetComponent(out MediatorAssigner assigner);
             return hasAssigner ? assigner : instance.AddComponent<MediatorAssigner>();
         }
 

@@ -16,7 +16,7 @@ namespace FastenUp.Tests.Binders.Actions
         public void OnAction_Should_return_UnityEvent()
         {
             //Arrange
-            var sut = TestBehaviour.Create();
+            ActionBinder<int> sut = TestBehaviour.Create();
             //Act & Assert
             sut.OnAction.Should().NotBeNull();
             sut.OnAction.Should().BeOfType<UnityEvent<int>>();

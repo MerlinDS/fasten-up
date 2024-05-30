@@ -36,7 +36,7 @@ namespace FastenUp.Tests.Binders.Behaviours
         public void SetValue(Action<TextBinder> setAction, string expected)
         {
             //Arrange
-            var sut = CreateSut();
+            TextBinder sut = CreateSut();
             //Act
             setAction(sut);
             //Assert

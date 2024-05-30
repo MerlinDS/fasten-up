@@ -28,7 +28,9 @@ namespace FastenUp.Runtime.Bindables
         public void Add([NotNull] T binder)
         {
             if(!_binder.Add(binder))
+            {
                 throw new FastenUpException($"{binder} already bind to the {nameof(IBindable)}.");
+            }
         }
         
         /// <summary>
@@ -39,7 +41,9 @@ namespace FastenUp.Runtime.Bindables
         public void Remove([NotNull] T binder)
         {
             if(!_binder.Remove(binder))
+            {
                 throw new FastenUpException($"{binder} not bind to the {nameof(IBindable)}.");
+            }
         }
 
         /// <summary>

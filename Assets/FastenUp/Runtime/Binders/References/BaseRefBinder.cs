@@ -27,9 +27,11 @@ namespace FastenUp.Runtime.Binders.References
 
         private void ValidateReferenceType()
         {
-            if (Reference == null) 
+            if (Reference == null)
+            {
                 return;
-            
+            }
+
             Debug.LogWarningFormat(
                 "Reference {0} is not of type {1}. Instead, will try to find it as a component on the same GameObject.",
                 Reference, typeof(TRef).Name);
@@ -40,7 +42,9 @@ namespace FastenUp.Runtime.Binders.References
         {
             reference = default;
             if (_reference is not T @ref)
+            {
                 return false;
+            }
 
             reference = @ref;
             return true;

@@ -18,7 +18,7 @@ namespace FastenUp.Tests.Binders.Events
         public void AddListener_When_listener_is_null_Should_not_throw_exception()
         {
             // Arrange
-            var sut = CreateSut();
+            ButtonBinder sut = CreateSut();
             Action act = () => sut.AddListener(null);
             // Act & Assert
             act.Should().NotThrow<Exception>();
@@ -30,7 +30,7 @@ namespace FastenUp.Tests.Binders.Events
         {
             // Arrange
             var actual = Substitute.For<UnityAction>();
-            var sut = CreateSut();
+            ButtonBinder sut = CreateSut();
             sut.AddListener(actual);
             // Act
             sut.GetComponent<Button>().onClick.Invoke();
@@ -42,7 +42,7 @@ namespace FastenUp.Tests.Binders.Events
         public void RemoveListener_When_listener_is_null_Should_not_throw_exception()
         {
             // Arrange
-            var sut = CreateSut();
+            ButtonBinder sut = CreateSut();
             Action act = () => sut.RemoveListener(null);
             // Act & Assert
             act.Should().NotThrow<Exception>();
@@ -53,7 +53,7 @@ namespace FastenUp.Tests.Binders.Events
         {
             // Arrange
             var actual = Substitute.For<UnityAction>();
-            var sut = CreateSut();
+            ButtonBinder sut = CreateSut();
             sut.AddListener(actual);
             // Act
             sut.RemoveListener(actual);
@@ -67,7 +67,7 @@ namespace FastenUp.Tests.Binders.Events
         {
             // Arrange
             var actual = Substitute.For<UnityAction>();
-            var sut = CreateSut();
+            ButtonBinder sut = CreateSut();
             sut.AddListener(actual);
             // Act
             sut.ExecuteOnDisable();
@@ -81,7 +81,7 @@ namespace FastenUp.Tests.Binders.Events
         {
             // Arrange
             var actual = Substitute.For<UnityAction>();
-            var sut = CreateSut();
+            ButtonBinder sut = CreateSut();
             // Act
             sut.RemoveListener(actual);
             // Assert
@@ -92,7 +92,7 @@ namespace FastenUp.Tests.Binders.Events
         public void Awake_When_called_Should_set_component_interactable_to_false()
         {
             // Arrange
-            var sut = CreateSut();
+            ButtonBinder sut = CreateSut();
             // Act
             sut.ExecuteAwake();
             // Assert
@@ -103,7 +103,7 @@ namespace FastenUp.Tests.Binders.Events
         public void AddListener_When_called_Should_set_component_interactable_to_true()
         {
             // Arrange
-            var sut = CreateSut();
+            ButtonBinder sut = CreateSut();
             // Act
             sut.AddListener(Substitute.For<UnityAction>());
             // Assert
@@ -114,7 +114,7 @@ namespace FastenUp.Tests.Binders.Events
         public void RemoveListener_When_called_Should_set_component_interactable_to_false()
         {
             // Arrange
-            var sut = CreateSut();
+            ButtonBinder sut = CreateSut();
             var actual = Substitute.For<UnityAction>();
             sut.AddListener(actual);
             // Act

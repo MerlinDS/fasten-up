@@ -19,7 +19,7 @@ namespace FastenUp.Tests.Mediators
         public void Assign_When_mediator_is_null_Should_throw_exception()
         {
             // Arrange
-            var sut = TestBehavior.CreateSut();
+            MediatorAssigner sut = TestBehavior.CreateSut();
             Action act = () => sut.Assign<TestMediator>(null);
             // Act & Assert
             act.Should().Throw<ArgumentNullException>();
@@ -29,7 +29,7 @@ namespace FastenUp.Tests.Mediators
         public void Assign_When_mediator_is_not_null_Should_not_throw_exception()
         {
             // Arrange
-            var sut = TestBehavior.CreateSut();
+            MediatorAssigner sut = TestBehavior.CreateSut();
             Action act = () => sut.Assign(Substitute.For<TestMediator>());
             // Act & Assert
             act.Should().NotThrow();
@@ -39,7 +39,7 @@ namespace FastenUp.Tests.Mediators
         public void Assign_When_has_binders_Should_bind_mediator()
         {
             // Arrange
-            var sut = TestBehavior.CreateSut();
+            MediatorAssigner sut = TestBehavior.CreateSut();
             var binder = Substitute.For<IBinder>();
             sut.Bind(binder);
             var actual = Substitute.For<TestMediator>();
@@ -53,7 +53,7 @@ namespace FastenUp.Tests.Mediators
         public void Assign_When_has_no_binders_Should_not_bind_mediator()
         {
             // Arrange
-            var sut = TestBehavior.CreateSut();
+            MediatorAssigner sut = TestBehavior.CreateSut();
             var actual = Substitute.For<TestMediator>();
             // Act
             sut.Assign(actual);
@@ -65,7 +65,7 @@ namespace FastenUp.Tests.Mediators
         public void Assign_When_has_binders_and_mediator_is_already_assigned_Should_unbind_mediator()
         {
             // Arrange
-            var sut = TestBehavior.CreateSut();
+            MediatorAssigner sut = TestBehavior.CreateSut();
             var binder = Substitute.For<IBinder>();
             sut.Bind(binder);
             var actual = Substitute.For<TestMediator>();
@@ -80,7 +80,7 @@ namespace FastenUp.Tests.Mediators
         public void Assign_When_has_no_binders_and_mediator_is_already_assigned_Should_unbind_mediator()
         {
             // Arrange
-            var sut = TestBehavior.CreateSut();
+            MediatorAssigner sut = TestBehavior.CreateSut();
             var actual = Substitute.For<TestMediator>();
             sut.Assign(actual);
             // Act
@@ -93,7 +93,7 @@ namespace FastenUp.Tests.Mediators
         public void Release_When_has_binders_and_mediator_is_assigned_Should_unbind_mediator()
         {
             // Arrange
-            var sut = TestBehavior.CreateSut();
+            MediatorAssigner sut = TestBehavior.CreateSut();
             var binder = Substitute.For<IBinder>();
             sut.Bind(binder);
             var actual = Substitute.For<TestMediator>();
@@ -108,7 +108,7 @@ namespace FastenUp.Tests.Mediators
         public void Release_When_has_no_binders_and_mediator_is_assigned_Should_unbind_mediator()
         {
             // Arrange
-            var sut = TestBehavior.CreateSut();
+            MediatorAssigner sut = TestBehavior.CreateSut();
             var actual = Substitute.For<TestMediator>();
             sut.Assign(actual);
             // Act
@@ -121,7 +121,7 @@ namespace FastenUp.Tests.Mediators
         public void Release_When_has_binders_and_mediator_is_not_assigned_Should_not_throw_exception()
         {
             // Arrange
-            var sut = TestBehavior.CreateSut();
+            MediatorAssigner sut = TestBehavior.CreateSut();
             var binder = Substitute.For<IBinder>();
             sut.Bind(binder);
             // Act
@@ -134,7 +134,7 @@ namespace FastenUp.Tests.Mediators
         public void Release_When_has_no_binders_and_mediator_is_not_assigned_Should_not_throw_exception()
         {
             // Arrange
-            var sut = TestBehavior.CreateSut();
+            MediatorAssigner sut = TestBehavior.CreateSut();
             // Act
             Action act = () => sut.Release();
             // Assert
@@ -145,7 +145,7 @@ namespace FastenUp.Tests.Mediators
         public void Bind_When_has_assigned_mediator_Should_bind_mediator()
         {
             // Arrange
-            var sut = TestBehavior.CreateSut();
+            MediatorAssigner sut = TestBehavior.CreateSut();
             var binder = Substitute.For<IBinder>();
             var actual = Substitute.For<TestMediator>();
             sut.Assign(actual);
@@ -159,7 +159,7 @@ namespace FastenUp.Tests.Mediators
         public void Bind_When_has_no_assigned_mediator_Should_not_throw_exception()
         {
             // Arrange
-            var sut = TestBehavior.CreateSut();
+            MediatorAssigner sut = TestBehavior.CreateSut();
             var binder = Substitute.For<IBinder>();
             // Act
             Action act = () => sut.Bind(binder);
@@ -171,7 +171,7 @@ namespace FastenUp.Tests.Mediators
         public void Unbind_When_has_assigned_mediator_Should_unbind_mediator()
         {
             // Arrange
-            var sut = TestBehavior.CreateSut();
+            MediatorAssigner sut = TestBehavior.CreateSut();
             var binder = Substitute.For<IBinder>();
             var actual = Substitute.For<TestMediator>();
             sut.Assign(actual);
@@ -185,7 +185,7 @@ namespace FastenUp.Tests.Mediators
         public void Unbind_When_has_no_assigned_mediator_Should_not_throw_exception()
         {
             // Arrange
-            var sut = TestBehavior.CreateSut();
+            MediatorAssigner sut = TestBehavior.CreateSut();
             var binder = Substitute.For<IBinder>();
             // Act
             Action act = () => sut.Unbind(binder);
@@ -197,7 +197,7 @@ namespace FastenUp.Tests.Mediators
         public void OnDestroy_When_has_assigned_mediator_Should_unbind_mediator()
         {
             // Arrange
-            var sut = TestBehavior.CreateSut();
+            MediatorAssigner sut = TestBehavior.CreateSut();
             var binder = Substitute.For<IBinder>();
             var actual = Substitute.For<TestMediator>();
             sut.Bind(binder);
@@ -212,7 +212,7 @@ namespace FastenUp.Tests.Mediators
         public void OnDestroy_When_has_no_assigned_mediator_Should_not_throw_exception()
         {
             // Arrange
-            var sut = TestBehavior.CreateSut();
+            MediatorAssigner sut = TestBehavior.CreateSut();
             // Act
             Action act = () => sut.ExecuteOnDestroy();
             // Assert
@@ -223,8 +223,8 @@ namespace FastenUp.Tests.Mediators
         public void OnDestroy_When_mediator_is_disposable_Should_dispose_mediator()
         {
             // Arrange
-            var sut = TestBehavior.CreateSut();
-            var actual = Substitute.For<TestMediator, IDisposable>();
+            MediatorAssigner sut = TestBehavior.CreateSut();
+            TestMediator actual = Substitute.For<TestMediator, IDisposable>();
             sut.Assign(actual);
             // Act
             sut.ExecuteOnDestroy();

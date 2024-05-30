@@ -28,7 +28,7 @@ namespace FastenUp.Tests.Bindables
         public void Bind_When_value_provider_was_not_bind_Should_set_value_and_subscribe_to_bindable()
         {
             //Arrange
-            var binder = Substitute.For<IValueProvider<bool>, IValueReceiver<bool>>();
+            IValueProvider<bool> binder = Substitute.For<IValueProvider<bool>, IValueReceiver<bool>>();
             var sut = new Bindable<bool>();
             //Act & Assert
             sut.As<IBindable<bool>>().Bind(binder);
@@ -137,7 +137,7 @@ namespace FastenUp.Tests.Bindables
         {
             //Arrange
             var other = Substitute.For<IValueReceiver<bool>>();
-            var binder = Substitute.For<IValueProvider<bool>, IValueReceiver<bool>>();
+            IValueProvider<bool> binder = Substitute.For<IValueProvider<bool>, IValueReceiver<bool>>();
             binder.GetValue().Returns(true);
 
             var sut = new Bindable<bool>();

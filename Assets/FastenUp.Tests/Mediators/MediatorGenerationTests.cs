@@ -20,8 +20,7 @@ namespace FastenUp.Tests.Mediators
         public void Bind()
         {
             //Arrange
-            var binders = new[]
-            {
+            IBinder[] binders = {
                 CreateBinder<IValueReceiver<int>>("Property"),
                 CreateBinder<IRefBinder>("Reference"),
                 CreateBinder<IEventBinder<UnityAction>>("Event"),
@@ -41,8 +40,10 @@ namespace FastenUp.Tests.Mediators
             binders[3].As<IActionBinder<UnityEvent>>().OnAction.Returns(mockEvent);
             var mediator = new IntegrationTestMediator();
             //Act
-            foreach (var binder in binders)
+            foreach (IBinder binder in binders)
+            {
                 mediator.Bind(binder);
+            }
 
             mediator.Property.Value = 1;
             mediator.Setup.Value = 1F;

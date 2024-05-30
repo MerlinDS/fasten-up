@@ -23,7 +23,7 @@ namespace FastenUp.Tests.Utils
             var binder = Substitute.For<IBinder>();
             binder.Name.Returns("Test");
             //Act
-            var result = BindUtilities.NameEquals("Test", binder);
+            bool result = BindUtilities.NameEquals("Test", binder);
             //Assert
             result.Should().BeTrue();
         }
@@ -35,7 +35,7 @@ namespace FastenUp.Tests.Utils
             var binder = Substitute.For<IBinder>();
             binder.Name.Returns("Test");
             //Act
-            var result = BindUtilities.NameEquals("Test2", binder);
+            bool result = BindUtilities.NameEquals("Test2", binder);
             //Assert
             result.Should().BeFalse();
         }
@@ -44,7 +44,7 @@ namespace FastenUp.Tests.Utils
         public void NameEquals_When_binder_is_null_Should_return_false()
         {
             //Act
-            var result = BindUtilities.NameEquals("Test", null);
+            bool result = BindUtilities.NameEquals("Test", null);
             //Assert
             result.Should().BeFalse();
         }
@@ -53,7 +53,7 @@ namespace FastenUp.Tests.Utils
         public void TryBind_When_binder_has_valid_type_Should_bind()
         {
             //Arrange
-            var binder = Substitute.For<IBinder, IBinder<bool>>();
+            IBinder binder = Substitute.For<IBinder, IBinder<bool>>();
             var bindable = Substitute.For<IBindable<bool>>();
             //Act
             BindUtilities.TryBind(bindable, binder);
@@ -65,7 +65,7 @@ namespace FastenUp.Tests.Utils
         public void TryBind_When_binder_has_invalid_type_Should_not_bind()
         {
             //Arrange
-            var binder = Substitute.For<IBinder, IBinder<bool>>();
+            IBinder binder = Substitute.For<IBinder, IBinder<bool>>();
             var bindable = Substitute.For<IBindable<int>>();
             //Act
             BindUtilities.TryBind(bindable, binder);
@@ -88,7 +88,7 @@ namespace FastenUp.Tests.Utils
         public void TryUnbind_When_binder_has_valid_type_Should_unbind()
         {
             //Arrange
-            var binder = Substitute.For<IBinder, IBinder<bool>>();
+            IBinder binder = Substitute.For<IBinder, IBinder<bool>>();
             var bindable = Substitute.For<IBindable<bool>>();
             //Act
             BindUtilities.TryUnbind(bindable, binder);
@@ -100,7 +100,7 @@ namespace FastenUp.Tests.Utils
         public void TryUnbind_When_binder_has_invalid_type_Should_not_unbind()
         {
             //Arrange
-            var binder = Substitute.For<IBinder, IBinder<bool>>();
+            IBinder binder = Substitute.For<IBinder, IBinder<bool>>();
             var bindable = Substitute.For<IBindable<int>>();
             //Act
             BindUtilities.TryBind(bindable, binder);
@@ -123,7 +123,7 @@ namespace FastenUp.Tests.Utils
         public void TryBind_When_eventBinder_has_valid_type_Should_bind()
         {
             //Arrange
-            var eventBinder = Substitute.For<IBinder, IEventBinder<bool>>();
+            IBinder eventBinder = Substitute.For<IBinder, IEventBinder<bool>>();
             var bindableEvent = Substitute.For<IBindableEvent<bool>>();
             //Act
             BindUtilities.TryBind(bindableEvent, eventBinder);
@@ -135,7 +135,7 @@ namespace FastenUp.Tests.Utils
         public void TryBind_When_eventBinder_has_invalid_type_Should_not_bind()
         {
             //Arrange
-            var eventBinder = Substitute.For<IBinder, IEventBinder<bool>>();
+            IBinder eventBinder = Substitute.For<IBinder, IEventBinder<bool>>();
             var bindableEvent = Substitute.For<IBindableEvent<int>>();
             //Act
             BindUtilities.TryBind(bindableEvent, eventBinder);
@@ -158,7 +158,7 @@ namespace FastenUp.Tests.Utils
         public void TryUnbind_When_eventBinder_has_valid_type_Should_unbind()
         {
             //Arrange
-            var eventBinder = Substitute.For<IBinder, IEventBinder<bool>>();
+            IBinder eventBinder = Substitute.For<IBinder, IEventBinder<bool>>();
             var bindableEvent = Substitute.For<IBindableEvent<bool>>();
             //Act
             BindUtilities.TryUnbind(bindableEvent, eventBinder);
@@ -170,7 +170,7 @@ namespace FastenUp.Tests.Utils
         public void TryUnbind_When_eventBinder_has_invalid_type_Should_not_unbind()
         {
             //Arrange
-            var eventBinder = Substitute.For<IBinder, IEventBinder<bool>>();
+            IBinder eventBinder = Substitute.For<IBinder, IEventBinder<bool>>();
             var bindableEvent = Substitute.For<IBindableEvent<int>>();
             //Act
             BindUtilities.TryBind(bindableEvent, eventBinder);
@@ -193,7 +193,7 @@ namespace FastenUp.Tests.Utils
         public void TryBind_When_actionBinder_has_valid_type_Should_bind()
         {
             //Arrange
-            var actionBinder = Substitute.For<IBinder, IActionBinder<UnityEvent>>();
+            IBinder actionBinder = Substitute.For<IBinder, IActionBinder<UnityEvent>>();
             var bindableAction = Substitute.For<IBindableAction<UnityEvent>>();
             //Act
             BindUtilities.TryBind(bindableAction, actionBinder);
@@ -205,7 +205,7 @@ namespace FastenUp.Tests.Utils
         public void TryBind_When_actionBinder_has_invalid_type_Should_not_bind()
         {
             //Arrange
-            var actionBinder = Substitute.For<IBinder, IActionBinder<UnityEvent<int>>>();
+            IBinder actionBinder = Substitute.For<IBinder, IActionBinder<UnityEvent<int>>>();
             var bindableAction = Substitute.For<IBindableAction<UnityEvent>>();
             //Act
             BindUtilities.TryBind(bindableAction, actionBinder);
@@ -228,7 +228,7 @@ namespace FastenUp.Tests.Utils
         public void TryUnbind_When_actionBinder_has_valid_type_Should_unbind()
         {
             //Arrange
-            var actionBinder = Substitute.For<IBinder, IActionBinder<UnityEvent>>();
+            IBinder actionBinder = Substitute.For<IBinder, IActionBinder<UnityEvent>>();
             var bindableAction = Substitute.For<IBindableAction<UnityEvent>>();
             //Act
             BindUtilities.TryUnbind(bindableAction, actionBinder);
@@ -240,7 +240,7 @@ namespace FastenUp.Tests.Utils
         public void TryUnbind_When_actionBinder_has_invalid_type_Should_not_unbind()
         {
             //Arrange
-            var actionBinder = Substitute.For<IBinder, IActionBinder<UnityEvent<int>>>();
+            IBinder actionBinder = Substitute.For<IBinder, IActionBinder<UnityEvent<int>>>();
             var bindableAction = Substitute.For<IBindableAction<UnityEvent>>();
             //Act
             BindUtilities.TryBind(bindableAction, actionBinder);
@@ -263,7 +263,7 @@ namespace FastenUp.Tests.Utils
         public void TryBind_When_actionBinder_has_valid_generic_type_Should_bind()
         {
             //Arrange
-            var actionBinder = Substitute.For<IBinder, IActionBinder<UnityEvent<bool>>>();
+            IBinder actionBinder = Substitute.For<IBinder, IActionBinder<UnityEvent<bool>>>();
             var bindableAction = Substitute.For<IBindableAction<UnityEvent<bool>>>();
             //Act
             BindUtilities.TryBind(bindableAction, actionBinder);
@@ -275,7 +275,7 @@ namespace FastenUp.Tests.Utils
         public void TryBind_When_actionBinder_has_invalid_generic_type_Should_not_bind()
         {
             //Arrange
-            var actionBinder = Substitute.For<IBinder, IActionBinder<UnityEvent<int>>>();
+            IBinder actionBinder = Substitute.For<IBinder, IActionBinder<UnityEvent<int>>>();
             var bindableAction = Substitute.For<IBindableAction<UnityEvent<bool>>>();
             //Act
             BindUtilities.TryBind(bindableAction, actionBinder);
@@ -287,7 +287,7 @@ namespace FastenUp.Tests.Utils
         public void TryBind_When_refBinder_has_valid_type_Should_bind()
         {
             //Arrange
-            var refBinder = Substitute.For<IBinder, IRefBinder>();
+            IBinder refBinder = Substitute.For<IBinder, IRefBinder>();
             var bindableRef = Substitute.For<IBindableRef<TestReference>>();
             refBinder.As<IRefBinder>().TryGetReference(out Arg.Any<TestReference>()).Returns(x =>
             {
@@ -304,7 +304,7 @@ namespace FastenUp.Tests.Utils
         public void TryBind_When_refBinder_has_invalid_type_Should_not_bind()
         {
             //Arrange
-            var refBinder = Substitute.For<IBinder, IRefBinder>();
+            IBinder refBinder = Substitute.For<IBinder, IRefBinder>();
             var bindableRef = Substitute.For<IBindableRef<TestReference>>();
             refBinder.As<IRefBinder>().TryGetReference(out Arg.Any<TestReference>()).Returns(false);
             //Act
@@ -328,7 +328,7 @@ namespace FastenUp.Tests.Utils
         public void TryUnbind_When_refBinder_has_valid_type_Should_unbind()
         {
             //Arrange
-            var refBinder = Substitute.For<IBinder, IRefBinder>();
+            IBinder refBinder = Substitute.For<IBinder, IRefBinder>();
             var bindableRef = Substitute.For<IBindableRef<TestReference>>();
             refBinder.As<IRefBinder>().TryGetReference(out Arg.Any<TestReference>()).Returns(x =>
             {
@@ -345,7 +345,7 @@ namespace FastenUp.Tests.Utils
         public void TryBind_When_collectionBinder_has_valid_type_Should_bind()
         {
             //Arrange
-            var collectionBinder = Substitute.For<IBinder, ICollectionBinder<TestReference>>();
+            IBinder collectionBinder = Substitute.For<IBinder, ICollectionBinder<TestReference>>();
             var bindableCollection = Substitute.For<IBindableCollection<TestReference>>();
             //Act
             BindUtilities.TryBind(bindableCollection, collectionBinder);
@@ -357,7 +357,7 @@ namespace FastenUp.Tests.Utils
         public void TryBind_When_collectionBinder_has_invalid_type_Should_not_bind()
         {
             //Arrange
-            var collectionBinder = Substitute.For<IBinder, ICollectionBinder<TestReference>>();
+            IBinder collectionBinder = Substitute.For<IBinder, ICollectionBinder<TestReference>>();
             var bindableCollection = Substitute.For<IBindableCollection<int>>();
             //Act
             BindUtilities.TryBind(bindableCollection, collectionBinder);
@@ -380,7 +380,7 @@ namespace FastenUp.Tests.Utils
         public void TryUnbind_When_collectionBinder_has_valid_type_Should_unbind()
         {
             //Arrange
-            var collectionBinder = Substitute.For<IBinder, ICollectionBinder<TestReference>>();
+            IBinder collectionBinder = Substitute.For<IBinder, ICollectionBinder<TestReference>>();
             var bindableCollection = Substitute.For<IBindableCollection<TestReference>>();
             //Act
             BindUtilities.TryUnbind(bindableCollection, collectionBinder);
@@ -392,7 +392,7 @@ namespace FastenUp.Tests.Utils
         public void TryUnbind_When_collectionBinder_has_invalid_type_Should_not_unbind()
         {
             //Arrange
-            var collectionBinder = Substitute.For<IBinder, ICollectionBinder<TestReference>>();
+            IBinder collectionBinder = Substitute.For<IBinder, ICollectionBinder<TestReference>>();
             var bindableCollection = Substitute.For<IBindableCollection<int>>();
             //Act
             BindUtilities.TryBind(bindableCollection, collectionBinder);

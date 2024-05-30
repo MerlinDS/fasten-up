@@ -46,7 +46,9 @@ namespace FastenUp.Runtime.Binders.Behaviours
         public void SetValue(bool value)
         {
             if (_value == value)
+            {
                 return;
+            }
 
             _value = value;
             SetVisibility(value);
@@ -61,7 +63,9 @@ namespace FastenUp.Runtime.Binders.Behaviours
         private void SetVisibility(bool value)
         {
             if (value && !CanBeVisible)
+            {
                 return;
+            }
 
             SetBehaviourVisibility(value);
             SetChildrenVisibility(value);
@@ -70,10 +74,12 @@ namespace FastenUp.Runtime.Binders.Behaviours
 
         private void SetBehaviourVisibility(bool value)
         {
-            foreach (var behaviour in _behaviourCache)
+            foreach (Behaviour behaviour in _behaviourCache)
             {
                 if (!Validate(behaviour))
+                {
                     continue;
+                }
 
                 behaviour.enabled = value;
             }
@@ -81,10 +87,12 @@ namespace FastenUp.Runtime.Binders.Behaviours
 
         private void SetChildrenVisibility(bool value)
         {
-            foreach (var child in _childrenCache)
+            foreach (VisibilityBinder child in _childrenCache)
             {
                 if (!Validate(child))
+                {
                     continue;
+                }
 
                 child.SetVisibility(value);
             }
@@ -93,7 +101,9 @@ namespace FastenUp.Runtime.Binders.Behaviours
         private bool Validate(Object @object)
         {
             if (@object != null)
+            {
                 return true;
+            }
 
             Debug.LogError("Hierarchy was changed. But RefreshCache was not called.", this);
             return false;
@@ -102,9 +112,9 @@ namespace FastenUp.Runtime.Binders.Behaviours
         private void UpdateCache()
         {
             _transformQueue.Enqueue(transform);
-            while (_transformQueue.TryDequeue(out var source))
+            while (_transformQueue.TryDequeue(out Transform source))
             {
-                var hasCanvas = source.TryGetComponent<Canvas>(out var canvas);
+                bool hasCanvas = source.TryGetComponent(out Canvas canvas);
                 //If source has Canvas, then ignore its children except visibilities
                 EnqueueChildrenOf(source, hasCanvas);
                 if (hasCanvas)
@@ -122,26 +132,32 @@ namespace FastenUp.Runtime.Binders.Behaviours
             }
 
             if (transform.parent != null)
+            {
                 _parent = transform.parent.GetComponentInParent<VisibilityBinder>();
+            }
         }
 
         private void EnqueueChildrenOf(Transform source, bool onlyVisibilities = false)
         {
-            var length = source.childCount;
+            int length = source.childCount;
             for (var i = 0; i < length; i++)
             {
-                var child = source.GetChild(i);
+                Transform child = source.GetChild(i);
                 if (!child.gameObject.activeInHierarchy) //Do not touch disabled objects
+                {
                     continue;
+                }
 
-                if (child.TryGetComponent<VisibilityBinder>(out var childVisibility))
+                if (child.TryGetComponent(out VisibilityBinder childVisibility))
                 {
                     _childrenCache.Add(childVisibility);
                     continue;
                 }
 
                 if (onlyVisibilities)
+                {
                     continue;
+                }
 
                 _transformQueue.Enqueue(child);
             }
@@ -150,10 +166,12 @@ namespace FastenUp.Runtime.Binders.Behaviours
         private void CollectBehavioursFrom<T>(Component source)
         {
             source.GetComponents(typeof(T), _componentBuffer);
-            foreach (var component in _componentBuffer)
+            foreach (Component component in _componentBuffer)
             {
                 if (component is Behaviour behaviour)
+                {
                     _behaviourCache.Add(behaviour);
+                }
             }
 
             _componentBuffer.Clear();

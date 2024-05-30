@@ -18,7 +18,7 @@ namespace FastenUp.Tests.Binders.Pointers
         public void AddListener_When_type_not_generic_listener_is_null_Should_not_throw_exception()
         {
             // Arrange
-            var sut = CreateSut();
+            TestPointerBinder sut = CreateSut();
             Action act = () => sut.AddListener((UnityAction)null);
             // Act & Assert
             act.Should().NotThrow<Exception>();
@@ -29,7 +29,7 @@ namespace FastenUp.Tests.Binders.Pointers
         {
             // Arrange
             var actual = Substitute.For<UnityAction>();
-            var sut = CreateSut();
+            TestPointerBinder sut = CreateSut();
             sut.AddListener(actual);
             // Act
             sut.OnPointerEvent(new PointerEventData(EventSystem.current));
@@ -41,7 +41,7 @@ namespace FastenUp.Tests.Binders.Pointers
         public void AddListener_When_type_is_generic_listener_is_null_Should_not_throw_exception()
         {
             // Arrange
-            var sut = CreateSut();
+            TestPointerBinder sut = CreateSut();
             Action act = () => sut.AddListener((UnityAction<PointerEventData>)null);
             // Act & Assert
             act.Should().NotThrow<Exception>();
@@ -52,7 +52,7 @@ namespace FastenUp.Tests.Binders.Pointers
         {
             // Arrange
             var actual = Substitute.For<UnityAction<PointerEventData>>();
-            var sut = CreateSut();
+            TestPointerBinder sut = CreateSut();
             sut.AddListener(actual);
             // Act
             sut.OnPointerEvent(new PointerEventData(EventSystem.current));
@@ -64,7 +64,7 @@ namespace FastenUp.Tests.Binders.Pointers
         public void RemoveListener_When_type_not_generic_listener_is_null_Should_not_throw_exception()
         {
             // Arrange
-            var sut = CreateSut();
+            TestPointerBinder sut = CreateSut();
             Action act = () => sut.RemoveListener((UnityAction)null);
             // Act & Assert
             act.Should().NotThrow<Exception>();
@@ -75,7 +75,7 @@ namespace FastenUp.Tests.Binders.Pointers
         {
             // Arrange
             var actual = Substitute.For<UnityAction>();
-            var sut = CreateSut();
+            TestPointerBinder sut = CreateSut();
             sut.AddListener(actual);
             // Act
             sut.RemoveListener(actual);
@@ -88,7 +88,7 @@ namespace FastenUp.Tests.Binders.Pointers
         public void RemoveListener_When_type_is_generic_listener_is_null_Should_not_throw_exception()
         {
             // Arrange
-            var sut = CreateSut();
+            TestPointerBinder sut = CreateSut();
             Action act = () => sut.RemoveListener((UnityAction<PointerEventData>)null);
             // Act & Assert
             act.Should().NotThrow<Exception>();
@@ -99,7 +99,7 @@ namespace FastenUp.Tests.Binders.Pointers
         {
             // Arrange
             var actual = Substitute.For<UnityAction<PointerEventData>>();
-            var sut = CreateSut();
+            TestPointerBinder sut = CreateSut();
             sut.AddListener(actual);
             // Act
             sut.RemoveListener(actual);
@@ -113,7 +113,7 @@ namespace FastenUp.Tests.Binders.Pointers
         {
             // Arrange
             var actual = Substitute.For<UnityAction<PointerEventData>>();
-            var sut = CreateSut();
+            TestPointerBinder sut = CreateSut();
             sut.AddListener(actual);
             // Act
             sut.ExecuteOnDisable();

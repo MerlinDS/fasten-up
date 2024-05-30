@@ -17,7 +17,7 @@ namespace FastenUp.Tests.Binders.Behaviours
         public void Set_Value_When_called_Should_set_isOn_and_not_invoke_onValueChanged()
         {
             //Arrange
-            var sut = CreateSut();
+            ToggleBinder sut = CreateSut();
             var toggle = sut.GetComponent<Toggle>();
             var onValueChanged = Substitute.For<OnBinderChanged>();
             sut.OnBinderChanged += onValueChanged;
@@ -31,7 +31,7 @@ namespace FastenUp.Tests.Binders.Behaviours
         public void Get_Value_When_called_Should_return_isOn()
         {
             //Arrange
-            var sut = CreateSut();
+            ToggleBinder sut = CreateSut();
             var toggle = sut.GetComponent<Toggle>();
             //Act
             toggle.isOn = true;
@@ -43,7 +43,7 @@ namespace FastenUp.Tests.Binders.Behaviours
         public void OnBinderChanged_When_toggle_change_isOn_Should_invoke_event()
         {
             //Arrange
-            var sut = CreateSut();
+            ToggleBinder sut = CreateSut();
             var toggle = sut.GetComponent<Toggle>();
             var onBinderChanged = Substitute.For<OnBinderChanged>();
             sut.OnBinderChanged += onBinderChanged;
@@ -57,7 +57,7 @@ namespace FastenUp.Tests.Binders.Behaviours
         public void OnDisable_When_called_Should_remove_listeners()
         {
             //Arrange
-            var sut = CreateSut();
+            ToggleBinder sut = CreateSut();
             var toggle = sut.GetComponent<Toggle>();
             var onValueChanged = Substitute.For<OnBinderChanged>();
             sut.OnBinderChanged += onValueChanged;

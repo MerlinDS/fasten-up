@@ -17,7 +17,7 @@ namespace FastenUp.Tests.Binders.Behaviours
         {
             // Arrange
             var expected = Sprite.Create(new Texture2D(1, 1), new Rect(0, 0, 1, 1), Vector2.one);
-            var sut = CreateSut();
+            SpriteBinder sut = CreateSut();
             // Act
             sut.SetValue(expected);
             // Assert
