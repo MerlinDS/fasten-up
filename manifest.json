@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FastenUp.Runtime.Bindables.BaseBindableAction-1.html",
-          "hash": "+EYHfPvItekv3+pOSLFmAtGcvjpKXax53skqUZgMn4E="
+          "hash": "c2M6MTv8qVNh3mxm6x1pLRxkLvH6KKtTLkK8vZauOrY="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FastenUp.Runtime.Bindables.BindableAction-1.html",
-          "hash": "9eKC+hl5aNFYpHI8ZBUnmUSL7ySBmBlzP6fXd8zcQRA="
+          "hash": "29SfLKZCJ0nNGX7kL+4IUJV5oGuLsdld4VADcDvInKY="
         }
       },
       "is_incremental": false,
@@ -78,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "api/FastenUp.Runtime.Bindables.BindableAction.html",
-          "hash": "jPsVE9TmNMl3LyRCW8O6EqR/m/dAraBshn8Ah1tz/js="
+          "hash": "4JwwUXUwPmFhXCpb8/EdJT+M6UizmzNs8aJwqPGM9F4="
         }
       },
       "is_incremental": false,
@@ -865,6 +865,21 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "docs/bindables.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/bindables.html",
+          "hash": "5JKVLsOhwur3IHQI83yRviwjCvmoIy6/Y9A+qZDfw0U="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "docs/getting-started.md",
       "output": {
@@ -882,7 +897,7 @@
       "output": {
         ".html": {
           "relative_path": "docs/introduction.html",
-          "hash": "+pA/M86bTwdE1O3A/T/qFuk9bzbsDX+H/VhPqWlCQ74="
+          "hash": "G+WL2RQLtcmrcPOeYli7NW6d2yDD0cItB6xG7bXZFR0="
         }
       },
       "is_incremental": false,
@@ -909,7 +924,29 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "MsZVgKgMjYOppWS3iYh28nx8sxSQigTpUtyjL34KgSw="
+          "hash": "QkwntB0EAhvHuIEE1FC2sLyp7eIT3Qo1N2rzTchpKMM="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/MVVM_diagramm.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/MVVM_diagramm.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/MVVM_usage_example.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/MVVM_usage_example.png"
         }
       },
       "is_incremental": false,
@@ -975,7 +1012,7 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 3,
+          "total_file_count": 4,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {

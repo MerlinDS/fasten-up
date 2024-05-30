@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Introduction | FastenUp </title>
+    <title>Bindables | FastenUp </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Introduction | FastenUp ">
+    <meta name="title" content="Bindables | FastenUp ">
     <meta name="generator" content="docfx 2.59.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -77,33 +77,63 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="introduction">Introduction</h1>
+<h1 id="bindables">Bindables</h1>
 
-<p>Fasten Up is the minimalist UI data binding framework for <a href="https://unity.com/">Unity</a>.</p>
-<p>The main goal of Fasten Up is to provide a simple and fast way to bind game data to the UI components
-without reflections and with minimal overhead. Source generator is used to generate the binding code,
-so there is no runtime overhead.</p>
-<h2 id="key-features">Key features</h2>
+<p>The main way to communicate between the <code>Mediator</code> and the UI elements is to use the <code>Bindables</code>.
+<code>Bindable</code> is a data wrapper that binds data to the <code>Binder</code> components in the UI.</p>
+<h3 id="requirements">Requirements</h3>
+<p><code>Bindable</code> must be declared as properties and must be initialized during the declaration.</p>
+<p>There are several types of <code>Bindables</code>.</p>
+<pre><code class="lang-csharp">private Bindable&lt;int&gt; Health { get; } = new(100);
+</code></pre><h2 id="bindable">Bindable</h2>
+<p>The <code>Bindable&lt;T&gt;</code> is a property wrapper that binds property between a <code>Mediator</code> and UI elements.
+It is used to bind simple properties like <code>int</code>, <code>float</code>, <code>string</code>, <code>Color</code>, <code>Sprite</code> etc.</p>
+<p>Key features:</p>
 <ul>
-<li>Runtime data-binding for Unity components.</li>
-<li>No reflections.</li>
-<li>Multiple-properties binding.</li>
-<li>Mono &amp; IL2CPP support.</li>
+<li>Binds property between a <code>Mediator</code> and UI elements by name.</li>
+<li>One <code>Bindable</code> can be bound to multiple <code>Binders</code>.</li>
+<li>Provides a <code>OnValueChanged</code> event that can be used to subscribe to value changes from the UI elements.</li>
+<li>The value will be automatically assigned to the UI elements when the <code>Binder</code> is bound to the <code>Bindable</code>.</li>
+<li>Provides cross notification between <code>Binders</code> - when the value is changed in one <code>Binder</code> it will be automatically
+updated in all other <code>Binders</code> that are bound to the same <code>Bindable</code>.</li>
 </ul>
-<h2 id="main-concepts">Main concepts</h2>
-<p>Fasten Up is based on the MVVM pattern. The main idea is to separate the UI from the data and logic.
-The mediator is the main class that binds the data to the UI. It is responsible for the data synchronization between the model and the view.</p>
-<p><img src="../resources/MVVM_diagramm.png" alt="MVVM_diagramm.png"></p>
-<p>Let&#39;s take a look at the simple example:</p>
-<p>The player visits the shop. The shop has a list of items that can be bought. 
-Each item has a price and an icon. The player has a certain amount of money. The player can buy an item if he has enough money.</p>
-<ol>
-<li>The model is the data that we want to display in the UI. In our case, it is the list of items.</li>
-<li>The view is the UI that displays the list of items.</li>
-<li>The view model is the mediator that binds the model to the view. It is responsible for the download item icons, and preparing the data for the UI.</li>
-<li>After the player buys an item, the data is validated, and the model is updated with the new item in inventory.</li>
-</ol>
-<p><img src="../resources/MVVM_usage_example.png" alt="MVVM_usage_example.png"></p>
+<p>See <a href="binders.md">Binders</a> for more information about available binder types.</p>
+<h4 id="example">Example</h4>
+<pre><code class="lang-csharp">public partial class MyMediator : MonoBehaviour, IMediator
+{
+    private Bindable&lt;string&gt; Text { get; } = new(&quot;Hello World!&quot;);
+}
+</code></pre><h4 id="property-with-value-change-event">Property with value change event</h4>
+<pre><code class="lang-csharp">public partial class MyMediator : MonoBehaviour, IMediator
+{
+    private Bindable&lt;string&gt; Text { get; } = new();
+
+    private void Awake()
+    {
+        Text.OnValueChanged += OnTextChanged;
+    }
+
+    private void OnTextChanged(string text)
+    {
+        Debug.Log($&quot;Text changed to: {text}&quot;);
+    }
+
+    private void OnDestroy()
+    {
+        Text.OnValueChanged -= OnTextChanged;
+    }
+}
+</code></pre><h2 id="bindablesetup">BindableSetup</h2>
+<p>The <code>BindableSetup&lt;T&gt;</code> used to setup the UI components in runtime. 
+For example, you can use it to setup the slider or provides a list of options for the dropdown.</p>
+<pre><code class="lang-csharp">public partial class MyMediator : MonoBehaviour, IMediator
+{
+    private Bindable&lt;Vector2Int&gt; SliderSetup { get; } = new(new Vector2Int(0, 100));
+}
+</code></pre><h2 id="bindableevent">BindableEvent</h2>
+<h2 id="bindableaction">BindableAction</h2>
+<h2 id="bindableref">BindableRef</h2>
+<h2 id="bindablecollection">BindableCollection</h2>
 </article>
           </div>
           
@@ -112,7 +142,7 @@ Each item has a price and an icon. The player has a certain amount of money. The
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/MerlinDS/fasten-up/blob/master/Documentation/docs/introduction.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/MerlinDS/fasten-up/blob/master/Documentation/docs/bindables.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

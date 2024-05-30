@@ -130,6 +130,41 @@ references:
   fullName.vb: FastenUp.Runtime.Bindables.BaseBindableAction(Of T)
   nameWithType: BaseBindableAction<T>
   nameWithType.vb: BaseBindableAction(Of T)
+- uid: FastenUp.Runtime.Bindables.BaseBindableAction`1.PostBind(IActionBinder{`0})
+  name: PostBind(IActionBinder<T>)
+  href: api/FastenUp.Runtime.Bindables.BaseBindableAction-1.html#FastenUp_Runtime_Bindables_BaseBindableAction_1_PostBind_IActionBinder__0__
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindableAction`1.PostBind(IActionBinder{`0})
+  name.vb: PostBind(IActionBinder(Of T))
+  fullName: FastenUp.Runtime.Bindables.BaseBindableAction<T>.PostBind(IActionBinder<T>)
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableAction(Of T).PostBind(IActionBinder(Of T))
+  nameWithType: BaseBindableAction<T>.PostBind(IActionBinder<T>)
+  nameWithType.vb: BaseBindableAction(Of T).PostBind(IActionBinder(Of T))
+- uid: FastenUp.Runtime.Bindables.BaseBindableAction`1.PostBind*
+  name: PostBind
+  href: api/FastenUp.Runtime.Bindables.BaseBindableAction-1.html#FastenUp_Runtime_Bindables_BaseBindableAction_1_PostBind_
+  commentId: Overload:FastenUp.Runtime.Bindables.BaseBindableAction`1.PostBind
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BaseBindableAction<T>.PostBind
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableAction(Of T).PostBind
+  nameWithType: BaseBindableAction<T>.PostBind
+  nameWithType.vb: BaseBindableAction(Of T).PostBind
+- uid: FastenUp.Runtime.Bindables.BaseBindableAction`1.PostUnBind
+  name: PostUnBind()
+  href: api/FastenUp.Runtime.Bindables.BaseBindableAction-1.html#FastenUp_Runtime_Bindables_BaseBindableAction_1_PostUnBind
+  commentId: M:FastenUp.Runtime.Bindables.BaseBindableAction`1.PostUnBind
+  fullName: FastenUp.Runtime.Bindables.BaseBindableAction<T>.PostUnBind()
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableAction(Of T).PostUnBind()
+  nameWithType: BaseBindableAction<T>.PostUnBind()
+  nameWithType.vb: BaseBindableAction(Of T).PostUnBind()
+- uid: FastenUp.Runtime.Bindables.BaseBindableAction`1.PostUnBind*
+  name: PostUnBind
+  href: api/FastenUp.Runtime.Bindables.BaseBindableAction-1.html#FastenUp_Runtime_Bindables_BaseBindableAction_1_PostUnBind_
+  commentId: Overload:FastenUp.Runtime.Bindables.BaseBindableAction`1.PostUnBind
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BaseBindableAction<T>.PostUnBind
+  fullName.vb: FastenUp.Runtime.Bindables.BaseBindableAction(Of T).PostUnBind
+  nameWithType: BaseBindableAction<T>.PostUnBind
+  nameWithType.vb: BaseBindableAction(Of T).PostUnBind
 - uid: FastenUp.Runtime.Bindables.BaseBindableEvent`1
   name: BaseBindableEvent<T>
   href: api/FastenUp.Runtime.Bindables.BaseBindableEvent-1.html
@@ -313,6 +348,35 @@ references:
   isSpec: "True"
   fullName: FastenUp.Runtime.Bindables.BindableAction.Invoke
   nameWithType: BindableAction.Invoke
+- uid: FastenUp.Runtime.Bindables.BindableAction.PostBind(IActionBinder{UnityEvent})
+  name: PostBind(IActionBinder<UnityEvent>)
+  href: api/FastenUp.Runtime.Bindables.BindableAction.html#FastenUp_Runtime_Bindables_BindableAction_PostBind_IActionBinder_UnityEvent__
+  commentId: M:FastenUp.Runtime.Bindables.BindableAction.PostBind(IActionBinder{UnityEvent})
+  name.vb: PostBind(IActionBinder(Of UnityEvent))
+  fullName: FastenUp.Runtime.Bindables.BindableAction.PostBind(IActionBinder<UnityEvent>)
+  fullName.vb: FastenUp.Runtime.Bindables.BindableAction.PostBind(IActionBinder(Of UnityEvent))
+  nameWithType: BindableAction.PostBind(IActionBinder<UnityEvent>)
+  nameWithType.vb: BindableAction.PostBind(IActionBinder(Of UnityEvent))
+- uid: FastenUp.Runtime.Bindables.BindableAction.PostBind*
+  name: PostBind
+  href: api/FastenUp.Runtime.Bindables.BindableAction.html#FastenUp_Runtime_Bindables_BindableAction_PostBind_
+  commentId: Overload:FastenUp.Runtime.Bindables.BindableAction.PostBind
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BindableAction.PostBind
+  nameWithType: BindableAction.PostBind
+- uid: FastenUp.Runtime.Bindables.BindableAction.PostUnBind
+  name: PostUnBind()
+  href: api/FastenUp.Runtime.Bindables.BindableAction.html#FastenUp_Runtime_Bindables_BindableAction_PostUnBind
+  commentId: M:FastenUp.Runtime.Bindables.BindableAction.PostUnBind
+  fullName: FastenUp.Runtime.Bindables.BindableAction.PostUnBind()
+  nameWithType: BindableAction.PostUnBind()
+- uid: FastenUp.Runtime.Bindables.BindableAction.PostUnBind*
+  name: PostUnBind
+  href: api/FastenUp.Runtime.Bindables.BindableAction.html#FastenUp_Runtime_Bindables_BindableAction_PostUnBind_
+  commentId: Overload:FastenUp.Runtime.Bindables.BindableAction.PostUnBind
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BindableAction.PostUnBind
+  nameWithType: BindableAction.PostUnBind
 - uid: FastenUp.Runtime.Bindables.BindableAction`1
   name: BindableAction<T>
   href: api/FastenUp.Runtime.Bindables.BindableAction-1.html
@@ -339,6 +403,41 @@ references:
   fullName.vb: FastenUp.Runtime.Bindables.BindableAction(Of T).Invoke
   nameWithType: BindableAction<T>.Invoke
   nameWithType.vb: BindableAction(Of T).Invoke
+- uid: FastenUp.Runtime.Bindables.BindableAction`1.PostBind(IActionBinder{UnityEvent{`0}})
+  name: PostBind(IActionBinder<UnityEvent<T>>)
+  href: api/FastenUp.Runtime.Bindables.BindableAction-1.html#FastenUp_Runtime_Bindables_BindableAction_1_PostBind_IActionBinder_UnityEvent__0___
+  commentId: M:FastenUp.Runtime.Bindables.BindableAction`1.PostBind(IActionBinder{UnityEvent{`0}})
+  name.vb: PostBind(IActionBinder(Of UnityEvent(Of T)))
+  fullName: FastenUp.Runtime.Bindables.BindableAction<T>.PostBind(IActionBinder<UnityEvent<T>>)
+  fullName.vb: FastenUp.Runtime.Bindables.BindableAction(Of T).PostBind(IActionBinder(Of UnityEvent(Of T)))
+  nameWithType: BindableAction<T>.PostBind(IActionBinder<UnityEvent<T>>)
+  nameWithType.vb: BindableAction(Of T).PostBind(IActionBinder(Of UnityEvent(Of T)))
+- uid: FastenUp.Runtime.Bindables.BindableAction`1.PostBind*
+  name: PostBind
+  href: api/FastenUp.Runtime.Bindables.BindableAction-1.html#FastenUp_Runtime_Bindables_BindableAction_1_PostBind_
+  commentId: Overload:FastenUp.Runtime.Bindables.BindableAction`1.PostBind
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BindableAction<T>.PostBind
+  fullName.vb: FastenUp.Runtime.Bindables.BindableAction(Of T).PostBind
+  nameWithType: BindableAction<T>.PostBind
+  nameWithType.vb: BindableAction(Of T).PostBind
+- uid: FastenUp.Runtime.Bindables.BindableAction`1.PostUnBind
+  name: PostUnBind()
+  href: api/FastenUp.Runtime.Bindables.BindableAction-1.html#FastenUp_Runtime_Bindables_BindableAction_1_PostUnBind
+  commentId: M:FastenUp.Runtime.Bindables.BindableAction`1.PostUnBind
+  fullName: FastenUp.Runtime.Bindables.BindableAction<T>.PostUnBind()
+  fullName.vb: FastenUp.Runtime.Bindables.BindableAction(Of T).PostUnBind()
+  nameWithType: BindableAction<T>.PostUnBind()
+  nameWithType.vb: BindableAction(Of T).PostUnBind()
+- uid: FastenUp.Runtime.Bindables.BindableAction`1.PostUnBind*
+  name: PostUnBind
+  href: api/FastenUp.Runtime.Bindables.BindableAction-1.html#FastenUp_Runtime_Bindables_BindableAction_1_PostUnBind_
+  commentId: Overload:FastenUp.Runtime.Bindables.BindableAction`1.PostUnBind
+  isSpec: "True"
+  fullName: FastenUp.Runtime.Bindables.BindableAction<T>.PostUnBind
+  fullName.vb: FastenUp.Runtime.Bindables.BindableAction(Of T).PostUnBind
+  nameWithType: BindableAction<T>.PostUnBind
+  nameWithType.vb: BindableAction(Of T).PostUnBind
 - uid: FastenUp.Runtime.Bindables.BindableCollection`1
   name: BindableCollection<T>
   href: api/FastenUp.Runtime.Bindables.BindableCollection-1.html
