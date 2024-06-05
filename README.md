@@ -19,7 +19,7 @@ You can install Fasten Up using any of the following methods:
 ### Unity Package Manager
 
 ```
-https://github.com/merlinds/fasten-up.git?path=/Assets/FastenUp#v1.0.0
+https://github.com/merlinds/fasten-up.git?path=/Assets/FastenUp#v0.1.0
 ```
 
 1. In Unity, open **Window** → **Package Manager**.
